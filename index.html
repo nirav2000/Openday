@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>School Open Days</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div><p class="eyebrow">Sai · 2028 entry planning</p><h1>Open days</h1></div>
+    <button id="installBtn" class="icon-btn" hidden aria-label="Install app">＋</button>
+  </header>
+  <main>
+    <section class="summary" aria-label="Summary">
+      <div><strong id="upcomingCount">—</strong><span>upcoming</span></div>
+      <div><strong id="savedCount">0</strong><span>saved</span></div>
+      <div><strong id="bookedCount">0</strong><span>booked</span></div>
+    </section>
+    <section class="controls" aria-label="Find schools">
+      <label class="search"><span>⌕</span><input id="search" type="search" placeholder="School, area or event…" autocomplete="off"></label>
+      <div class="chips" id="chips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="upcoming">Upcoming</button>
+        <button class="chip" data-filter="saved">Saved</button>
+        <button class="chip" data-filter="state">State</button>
+        <button class="chip" data-filter="grammar">Grammar</button>
+        <button class="chip" data-filter="independent">Independent</button>
+        <button class="chip" data-filter="tbc">Dates TBC</button>
+      </div>
+      <div class="toolbar"><span id="resultCount">Loading…</span><select id="sort" aria-label="Sort"><option value="date">Soonest</option><option value="priority">Priority</option><option value="distance">Journey</option><option value="name">Name</option></select></div>
+    </section>
+    <section id="notice" class="notice" hidden></section>
+    <section id="list" class="list" aria-live="polite"></section>
+  </main>
+  <dialog id="detail"><div id="detailBody"></div><button class="close" data-close aria-label="Close">×</button></dialog>
+  <template id="cardTemplate"><article class="card"><button class="save" aria-label="Save school">♡</button><div class="datebox"><b></b><span></span></div><div class="cardmain"><div class="badges"></div><h2></h2><p class="meta"></p><p class="event"></p><div class="actions"><button class="primary details">View visit</button><a class="book" target="_blank" rel="noopener">Book ↗</a></div></div></article></template>
+  <script src="app.js" defer></script>
+</body>
+</html>
