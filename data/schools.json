@@ -2,16 +2,297 @@
   "meta": {
     "updated": "2026-09-12",
     "entryYear": 2028,
-    "home": "Harrow",
     "note": "Times and booking availability can change. Always re-check the school page before travelling.",
-    "child": {
-      "name": "Sai",
+    "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page.",
+    "linkReview": {
+      "date": "2026-09-16",
+      "originalUrlsChecked": 61,
+      "replacements": 9,
+      "note": "Retrieved = page text accessible through web lookup, not a completed booking. Unverified may mean robots blocking, fetch failure or broken URL; not asserted to be 404.",
+      "results": {
+        "https://www.rooksheath.harrow.sch.uk/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.rgshw.com/admissions/open-events": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.rgshw.com/page/?pid=36&title=Admissions+Policies": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.jfs.brent.sch.uk/events": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.habselstree.org.uk/boys/admissions/book-a-visit/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.challoners.com/Open-Events/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.challoners.com/admissions/year-7-admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.parkhighstanmore.org.uk/admissions": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.claremont-high.org.uk/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.berkhamsted.com/joining-berkhamsted-boys/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/important-dates/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.stmargarets-school.org.uk/admissions/visit-us": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.stmargarets-school.org.uk/book-a-tourbook-an-open-day": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.stmargarets-school.org.uk/admissions/senior-school-admissions": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://hamptonschool.org.uk/admissions/open-events/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://hamptonschool.org.uk/admissions/registration/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.harrowhigh.com/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.suttongrammar.sutton.sch.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        },
+        "https://www.wilsons.school/admissions-faqs/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.alperton.brent.sch.uk/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.preston-manor.com/open-days-for-sept-2027-start": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.mtsn.org.uk/admissions/book-a-visit/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.mtsn.org.uk/admissions/joining-at-11/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.millhill.org.uk/admissions/open-days/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.millhill.org.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.johnlyon.org/admissions/open-days-visits/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.johnlyon.org/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://arkacademy.org/admissions/secondary": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.salvatoriancollege.com/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.pinnerhighschool.org/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.winchestercollege.org/admissions/joining-in-year-9-13/": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        },
+        "https://aldenham.com/the-school/visit-us/open-mornings/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://aldenham.com/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://damealiceowens.herts.sch.uk/admissions/secondary-transfer/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.westminster.org.uk/admissions/open-days/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.westminster.org.uk/admissions/13-entry-westminster-school/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.harrowschool.org.uk/admissions": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.harrowschool.org.uk/admissions/book-an-open-morning": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.harrowschool.org.uk/admissions/year-9-entry": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://michaela.education/home/secondary-school-wembley/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://michaela.education/home/secondary-school-wembley/visit-michaela-community-school-wembley/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.whtc.co.uk/admissions": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.nowerhill.org.uk/admissions": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.qebarnet.co.uk/open-day-2026-booking/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.qebarnet.co.uk/admissions-information/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.parmiters.herts.sch.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.swhertsschools.org.uk/calendar/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.watfordboys.org/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.queens.herts.sch.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.stclementdanes.org.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.rickmansworth.herts.sch.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.wilsons.school/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.wcgs-sutton.co.uk/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.saintolaves.net/admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.saintolaves.net/admissions/year-7-admissions": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://www.beths.bexley.sch.uk/year-7-admissions/": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "https://beths.bexley.sch.uk/year-7-admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.challoners.com/admissions/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.rgshw.com/page/?pid=205&title=Year+7+Admissions+and+Open+Events": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.stmargarets-school.org.uk/admissions/the-senior-school": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.millhill.org.uk/admissions/open-days-and-visits": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.johnlyon.org/admissions/visit-us/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://www.parmiters.herts.sch.uk/page/?pid=28&title=Admissions": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "https://damealiceowens.herts.sch.uk/sixth-form/admissions/secondary-transfer/application-information/": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      }
+    },
+    "scoreNote": "CAT4, STT, QE combined scores and consortium test scores are different measures. No validated conversion or admission-probability percentage is implied. Historical entry scores and qualifying thresholds are distinct.",
+    "planningProfile": {
       "currentYear": "Year 5",
       "academicYear": "2026/27",
       "entry11Plus": "September 2028",
       "entry13Plus": "September 2030"
     },
-    "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page."
+    "searchOrigin": "Harrow",
+    "privacyNote": "Anonymous example profile: Year 5 in 2026/27. Harrow is the search origin, not a stored residential address. No child name or current school is stored."
   },
   "schools": [
     {
@@ -37,6 +318,24 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -52,8 +351,8 @@
       "end": "2026-09-15T20:00:00+01:00",
       "status": "reported",
       "bookingRequired": null,
-      "infoUrl": "https://www.rgshw.com/admissions/open-events",
-      "bookingUrl": "https://www.rgshw.com/admissions/open-events",
+      "infoUrl": "https://www.rgshw.com/page/?pid=205&title=Year+7+Admissions+and+Open+Events",
+      "bookingUrl": "https://www.rgshw.com/page/?pid=205&title=Year+7+Admissions+and+Open+Events",
       "note": "Bucks residence priorities matter; verify realistic admission route.",
       "admission": {
         "route": "11+ · September 2028 entry",
@@ -61,12 +360,34 @@
         "summary": "STT registration: 2028-entry date not published; expect June 2027",
         "status": "not-published",
         "url": "https://www.rgshw.com/page/?pid=36&title=Admissions+Policies",
-        "note": "As a non-Buckinghamshire pupil, Sai must be registered for the Secondary Transfer Test. Under the current policy, live in catchment by 1 Sep 2027 to receive catchment priority.",
+        "note": "As a non-Buckinghamshire pupil, the applicant must be registered for the Secondary Transfer Test. Under the current policy, live in catchment by 1 Sep 2027 to receive catchment priority.",
         "secondary": {
           "date": "2027-10-31",
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "121 STT — qualifying score, not CAT",
+        "kind": "published threshold",
+        "cycle": "2027 entry policy",
+        "detail": "Standard Buckinghamshire qualification threshold is 121. Qualification does not guarantee a place; higher scores do not override residence/oversubscription priorities. Check policy for review/appeal and special-priority routes.",
+        "sourceUrl": "https://www.rgshw.com/page/?pid=36&title=Admissions+Policies",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -92,6 +413,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027. A school Supplementary Information Form is also required; its September 2028-entry deadline is not yet published."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -116,8 +459,30 @@
         "summary": "2030-entry deadline not published; expect early Nov 2027",
         "status": "not-published",
         "url": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
-        "note": "Because Orley Farm continues to Year 8, Habs recommends its 11+ deferred route; Sai applies while in Year 6.",
+        "note": "Because the current prep school continues to Year 8, Habs recommends its 11+ deferred route; the applicant applies while in Year 6.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -131,23 +496,41 @@
       "event": "Open Evening",
       "start": "2026-09-17T17:00:00+01:00",
       "end": "2026-09-17T20:00:00+01:00",
-      "status": "reported",
+      "status": "confirmed",
       "bookingRequired": false,
-      "infoUrl": "https://www.challoners.com/Open-Events/",
-      "bookingUrl": "",
+      "infoUrl": "https://www.challoners.com/admissions/",
+      "bookingUrl": "https://www.challoners.com/Open-Events/",
       "note": "Head talks reported at 17:00, 17:30, 18:30 and 19:00. Bucks priority rules matter.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": null,
         "summary": "STT registration: 2028-entry date not published; expect June 2027",
         "status": "not-published",
-        "url": "https://www.challoners.com/admissions/year-7-admissions/",
+        "url": "https://www.challoners.com/admissions/",
         "note": "Non-Buckinghamshire pupils must register for the Secondary Transfer Test; check the 2028 policy when published.",
         "secondary": {
           "date": "2027-10-31",
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "121 STT — qualifying score, not CAT",
+        "kind": "published threshold",
+        "cycle": "2027 entry policy",
+        "detail": "Standard Buckinghamshire qualification threshold is 121. Qualification does not guarantee a place; higher scores do not override residence/oversubscription priorities. Check policy for review/appeal and special-priority routes.",
+        "sourceUrl": "https://www.challoners.com/docs/Key_Information/Admissions/Admissions_Policy_2027.pdf",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -173,6 +556,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -198,6 +603,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -219,11 +646,33 @@
       "admission": {
         "route": "11+ or 13+ · September 2028/2030",
         "deadline": null,
-        "summary": "Sai’s entry-cycle deadline not yet published",
+        "summary": "the selected cohort’s entry-cycle deadline not yet published",
         "status": "not-published",
         "url": "https://www.berkhamsted.com/joining-berkhamsted-boys/",
         "note": "The school has not yet published the relevant cycle’s closing date.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.berkhamsted.com/joining-berkhamsted-boys/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -250,6 +699,28 @@
         "url": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/important-dates/",
         "note": "Registration normally takes place in Year 5 or early Year 6. The linked page currently shows the earlier 2029-entry cycle.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/important-dates/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -271,11 +742,33 @@
       "admission": {
         "route": "11+ or 13+ · September 2028/2030",
         "deadline": null,
-        "summary": "Sai’s entry-cycle deadline not yet published",
+        "summary": "the selected cohort’s entry-cycle deadline not yet published",
         "status": "not-published",
-        "url": "https://www.stmargarets-school.org.uk/admissions/senior-school-admissions",
-        "note": "Decide whether to leave Orley Farm after Year 6 or Year 8, then use the matching entry route.",
+        "url": "https://www.stmargarets-school.org.uk/admissions/the-senior-school",
+        "note": "Decide whether to leave the current prep school after Year 6 or Year 8, then use the matching entry route.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.stmargarets-school.org.uk/admissions/the-senior-school",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -297,11 +790,33 @@
       "admission": {
         "route": "11+ or 13+ · September 2028/2030",
         "deadline": null,
-        "summary": "Sai’s entry-cycle deadline not yet published",
+        "summary": "the selected cohort’s entry-cycle deadline not yet published",
         "status": "not-published",
         "url": "https://hamptonschool.org.uk/admissions/registration/",
-        "note": "Choose the 11+ or 13+ route according to the planned Orley Farm leaving year.",
+        "note": "Choose the 11+ or 13+ route according to the planned the current prep school leaving year.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://hamptonschool.org.uk/admissions/registration/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -326,8 +841,30 @@
         "summary": "2030-entry deadline not published; expect early Nov 2027",
         "status": "not-published",
         "url": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
-        "note": "Because Orley Farm continues to Year 8, Habs recommends its 11+ deferred route; Sai applies while in Year 6.",
+        "note": "Because the current prep school continues to Year 8, Habs recommends its 11+ deferred route; the applicant applies while in Year 6.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -353,6 +890,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -383,6 +942,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "Competitive test ranking and the school’s oversubscription policy apply. A numerical cutoff for the selected cohort’s cycle is not verified. Do not treat a previous cohort’s score or a CAT result as a guaranteed offer.",
+        "sourceUrl": "https://www.wilsons.school/admissions-faqs/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -408,6 +989,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -433,6 +1036,24 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -458,6 +1079,28 @@
         "status": "published-rule",
         "url": "https://www.mtsn.org.uk/admissions/joining-at-11/",
         "note": "The school states that 11+ applicants must register by 31 October while the child is in Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.mtsn.org.uk/admissions/joining-at-11/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -473,8 +1116,8 @@
       "end": null,
       "status": "time-tbc",
       "bookingRequired": true,
-      "infoUrl": "https://www.millhill.org.uk/admissions/open-days/",
-      "bookingUrl": "https://www.millhill.org.uk/admissions/open-days/",
+      "infoUrl": "https://www.millhill.org.uk/admissions/open-days-and-visits",
+      "bookingUrl": "https://www.millhill.org.uk/admissions/open-days-and-visits",
       "note": "Practical geographically; exact time to confirm.",
       "admission": {
         "route": "13+ · September 2030 entry",
@@ -484,6 +1127,28 @@
         "url": "https://www.millhill.org.uk/admissions/",
         "note": "Monitor the school’s admissions page during Year 5 and Year 6.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.millhill.org.uk/admissions/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -499,17 +1164,39 @@
       "end": null,
       "status": "time-tbc",
       "bookingRequired": true,
-      "infoUrl": "https://www.johnlyon.org/admissions/open-days-visits/",
-      "bookingUrl": "https://www.johnlyon.org/admissions/open-days-visits/",
+      "infoUrl": "https://www.johnlyon.org/admissions/visit-us/",
+      "bookingUrl": "https://www.johnlyon.org/admissions/visit-us/",
       "note": "Very convenient local independent option; check available sessions.",
       "admission": {
         "route": "11+ or 13+ · September 2028/2030",
         "deadline": null,
-        "summary": "Sai’s entry-cycle deadline not yet published",
+        "summary": "the selected cohort’s entry-cycle deadline not yet published",
         "status": "not-published",
         "url": "https://www.johnlyon.org/admissions/",
-        "note": "Choose the 11+ or 13+ route according to the planned Orley Farm leaving year.",
+        "note": "Choose the 11+ or 13+ route according to the planned the current prep school leaving year.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.johnlyon.org/admissions/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -535,6 +1222,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -560,6 +1269,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027. A school Supplementary Information Form may also be required; check the school’s 2028-entry arrangements."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -585,6 +1316,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -610,6 +1363,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -635,6 +1410,28 @@
         "status": "published-rule",
         "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
         "note": "Winchester encourages families to register before 1 October of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -656,11 +1453,33 @@
       "admission": {
         "route": "11+ or 13+ · September 2028/2030",
         "deadline": null,
-        "summary": "Sai’s entry-cycle deadline not yet published",
+        "summary": "the selected cohort’s entry-cycle deadline not yet published",
         "status": "not-published",
         "url": "https://aldenham.com/admissions/",
         "note": "The relevant cycle is not yet published.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://aldenham.com/admissions/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -685,8 +1504,30 @@
         "summary": "2030-entry deadline not published; expect early Nov 2027",
         "status": "not-published",
         "url": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
-        "note": "Because Orley Farm continues to Year 8, Habs recommends its 11+ deferred route; Sai applies while in Year 6.",
+        "note": "Because the current prep school continues to Year 8, Habs recommends its 11+ deferred route; the applicant applies while in Year 6.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -702,21 +1543,43 @@
       "end": "2026-10-15T12:00:00+01:00",
       "status": "time-tbc",
       "bookingRequired": true,
-      "infoUrl": "https://damealiceowens.herts.sch.uk/admissions/secondary-transfer/",
-      "bookingUrl": "https://damealiceowens.herts.sch.uk/admissions/secondary-transfer/",
+      "infoUrl": "https://damealiceowens.herts.sch.uk/sixth-form/admissions/secondary-transfer/application-information/",
+      "bookingUrl": "https://damealiceowens.herts.sch.uk/sixth-form/admissions/secondary-transfer/application-information/",
       "note": "Academic and music selection routes. Select one session; exact times to confirm.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": null,
         "summary": "Entrance-test registration: 2028 date not published; expect spring 2027",
         "status": "not-published",
-        "url": "https://damealiceowens.herts.sch.uk/admissions/secondary-transfer/",
+        "url": "https://damealiceowens.herts.sch.uk/sixth-form/admissions/secondary-transfer/application-information/",
         "note": "Register for the school’s test as well as submitting the Harrow secondary application.",
         "secondary": {
           "date": "2027-10-31",
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "Competitive test ranking and the school’s oversubscription policy apply. A numerical cutoff for the selected cohort’s cycle is not verified. Do not treat a previous cohort’s score or a CAT result as a guaranteed offer.",
+        "sourceUrl": "https://damealiceowens.herts.sch.uk/sixth-form/admissions/secondary-transfer/application-information/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -742,6 +1605,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027. A school Supplementary Information Form is also required; its September 2028-entry deadline is not yet published."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -766,8 +1651,30 @@
         "summary": "2030-entry deadline not published; expect early Nov 2027",
         "status": "not-published",
         "url": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
-        "note": "Because Orley Farm continues to Year 8, Habs recommends its 11+ deferred route; Sai applies while in Year 6.",
+        "note": "Because the current prep school continues to Year 8, Habs recommends its 11+ deferred route; the applicant applies while in Year 6.",
         "secondary": null
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/admissions-process/?tab=5",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -793,6 +1700,28 @@
         "status": "published-rule",
         "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
         "note": "Winchester encourages families to register before 1 October of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -818,6 +1747,28 @@
         "status": "published-rule",
         "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
         "note": "Winchester encourages families to register before 1 October of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -835,7 +1786,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.westminster.org.uk/admissions/open-days/",
       "bookingUrl": "https://www.westminster.org.uk/admissions/open-days/",
-      "note": "Visit in Year 5. Registration for Sai's likely 2030 entry is expected to open 1 October 2026; verify directly.",
+      "note": "Visit in Year 5. Registration for the selected cohort’s likely 2030 entry is expected to open 1 October 2026; verify directly.",
       "admission": {
         "route": "13+ · September 2030 entry",
         "deadline": "2027-09-30",
@@ -844,6 +1795,28 @@
         "status": "published-rule",
         "url": "https://www.westminster.org.uk/admissions/13-entry-westminster-school/",
         "note": "Westminster says registration opens on 1 October of Year 5 and closes on 30 September of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.westminster.org.uk/admissions/13-entry-westminster-school/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -859,9 +1832,9 @@
       "end": null,
       "status": "tbc",
       "bookingRequired": true,
-      "infoUrl": "https://www.harrowschool.org.uk/admissions",
+      "infoUrl": "https://www.harrowschool.org.uk/admissions/year-9-entry",
       "bookingUrl": "https://www.harrowschool.org.uk/admissions/book-an-open-morning",
-      "note": "Open mornings are normally 09:00–13:00. Register by 1 July of Year 5 for standard 13+ route; for Sai, check 1 July 2027.",
+      "note": "Open mornings are normally 09:00–13:00. Register by 1 July of Year 5 for standard 13+ route; for the applicant, check 1 July 2027.",
       "admission": {
         "route": "13+ · September 2030 entry",
         "deadline": "2027-07-01",
@@ -869,6 +1842,28 @@
         "status": "published-rule",
         "url": "https://www.harrowschool.org.uk/admissions/year-9-entry",
         "note": "Harrow’s normal Year 9 route requires registration by 1 July of Year 5."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.harrowschool.org.uk/admissions/year-9-entry",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -894,6 +1889,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -919,6 +1936,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -944,6 +1983,28 @@
         "status": "rule-based",
         "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
         "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -961,7 +2022,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.qebarnet.co.uk/open-day-2026-booking/",
       "bookingUrl": "https://www.qebarnet.co.uk/open-day-2026-booking/",
-      "note": "Genuine no-catchment selection by test score. Watch from May 2027 for Sai's important cycle.",
+      "note": "Genuine no-catchment selection by test score. Watch from May 2027 for the selected cohort’s important cycle.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": null,
@@ -974,6 +2035,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "225 combined test score — minimum eligibility",
+        "kind": "published threshold",
+        "cycle": "Current FAQ checked September 2026",
+        "detail": "QE’s current FAQ specifies 225 combined age-standardised English and maths score. This is eligibility, not the lowest offer score. Places are ranked; a higher score may be needed. Not a CAT score.",
+        "sourceUrl": "https://www.qebarnet.co.uk/admissions-information/secondary-transfer-entrance-test-faqs/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -989,8 +2072,8 @@
       "end": "2026-06-25T20:00:00+01:00",
       "status": "past",
       "bookingRequired": null,
-      "infoUrl": "https://www.parmiters.herts.sch.uk/admissions/",
-      "bookingUrl": "https://www.parmiters.herts.sch.uk/admissions/",
+      "infoUrl": "https://www.parmiters.herts.sch.uk/page/?pid=28&title=Admissions",
+      "bookingUrl": "https://www.parmiters.herts.sch.uk/page/?pid=28&title=Admissions",
       "note": "SW Herts academic/music selection. Watch June 2027.",
       "admission": {
         "route": "11+ · September 2028 entry",
@@ -1004,6 +2087,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "2026 academic lowest entry: 216 priority / 245 other postcodes",
+        "kind": "historical entry score",
+        "cycle": "2026 entry — NOT the selected cohort’s 2028 cutoff",
+        "detail": "Official consortium historical scores, not pass marks or future guarantees. Check address eligibility: an area’s score cannot be applied to a Harrow address unless it qualifies for that category. Music routes have separate scoring.",
+        "sourceUrl": "https://www.swhertsschools.org.uk/wp-content/uploads/2026/03/HISTORICAL-TEST-SCORE-INFORMATION-FOR-CONSORTIUM-SCHOOLS-2026.docx.pdf",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1034,6 +2139,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "2026 academic lowest entry: 200 Area A / 214 Area B",
+        "kind": "historical entry score",
+        "cycle": "2026 entry — NOT the selected cohort’s 2028 cutoff",
+        "detail": "Official consortium historical scores, not pass marks or future guarantees. Check address eligibility: an area’s score cannot be applied to a Harrow address unless it qualifies for that category. Music routes have separate scoring.",
+        "sourceUrl": "https://www.swhertsschools.org.uk/wp-content/uploads/2026/03/HISTORICAL-TEST-SCORE-INFORMATION-FOR-CONSORTIUM-SCHOOLS-2026.docx.pdf",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1064,6 +2191,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "2026 academic lowest entry: 186 admission area",
+        "kind": "historical entry score",
+        "cycle": "2026 entry — NOT the selected cohort’s 2028 cutoff",
+        "detail": "Official consortium historical scores, not pass marks or future guarantees. Check address eligibility: an area’s score cannot be applied to a Harrow address unless it qualifies for that category. Music routes have separate scoring.",
+        "sourceUrl": "https://www.swhertsschools.org.uk/wp-content/uploads/2026/03/HISTORICAL-TEST-SCORE-INFORMATION-FOR-CONSORTIUM-SCHOOLS-2026.docx.pdf",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1094,6 +2243,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "2026 academic lowest entry: 215 priority area",
+        "kind": "historical entry score",
+        "cycle": "2026 entry — NOT the selected cohort’s 2028 cutoff",
+        "detail": "Official consortium historical scores, not pass marks or future guarantees. Check address eligibility: an area’s score cannot be applied to a Harrow address unless it qualifies for that category. Music routes have separate scoring.",
+        "sourceUrl": "https://www.swhertsschools.org.uk/wp-content/uploads/2026/03/HISTORICAL-TEST-SCORE-INFORMATION-FOR-CONSORTIUM-SCHOOLS-2026.docx.pdf",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1124,6 +2295,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "2026 academic lowest entry: 195 priority area",
+        "kind": "historical entry score",
+        "cycle": "2026 entry — NOT the selected cohort’s 2028 cutoff",
+        "detail": "Official consortium historical scores, not pass marks or future guarantees. Check address eligibility: an area’s score cannot be applied to a Harrow address unless it qualifies for that category. Music routes have separate scoring.",
+        "sourceUrl": "https://www.swhertsschools.org.uk/wp-content/uploads/2026/03/HISTORICAL-TEST-SCORE-INFORMATION-FOR-CONSORTIUM-SCHOOLS-2026.docx.pdf",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1154,6 +2347,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "Pass SET + both second-stage papers + overall threshold",
+        "kind": "ranked selection",
+        "cycle": "2027 entry process",
+        "detail": "Must pass English, maths and the overall threshold. Ranking weights SET:English:maths at 1:2:2. No fixed CAT equivalent or guaranteed percentage is supplied.",
+        "sourceUrl": "https://www.wilsons.school/admissions-process/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1184,6 +2399,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "Competitive test ranking and the school’s oversubscription policy apply. A numerical cutoff for the selected cohort’s cycle is not verified. Do not treat a previous cohort’s score or a CAT result as a guaranteed offer.",
+        "sourceUrl": "https://www.wilsons.school/admissions-faqs/",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1214,6 +2451,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "unverified"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "Competitive test ranking and the school’s oversubscription policy apply. A numerical cutoff for the selected cohort’s cycle is not verified. Do not treat a previous cohort’s score or a CAT result as a guaranteed offer.",
+        "sourceUrl": "https://www.saintolaves.net/admissions/year-7-admissions",
+        "checked": "2026-09-16"
       }
     },
     {
@@ -1229,8 +2488,8 @@
       "end": null,
       "status": "tbc",
       "bookingRequired": null,
-      "infoUrl": "https://www.beths.bexley.sch.uk/year-7-admissions/",
-      "bookingUrl": "https://www.beths.bexley.sch.uk/year-7-admissions/",
+      "infoUrl": "https://beths.bexley.sch.uk/year-7-admissions/",
+      "bookingUrl": "https://beths.bexley.sch.uk/year-7-admissions/",
       "note": "Top-180 Bexley route can override distance; journey is likely impractical.",
       "admission": {
         "route": "11+ · September 2028 entry",
@@ -1244,6 +2503,28 @@
           "label": "31 Oct 2027 — submit Harrow secondary application",
           "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place"
         }
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "Competitive test ranking and the school’s oversubscription policy apply. A numerical cutoff for the selected cohort’s cycle is not verified. Do not treat a previous cohort’s score or a CAT result as a guaranteed offer.",
+        "sourceUrl": "https://beths.bexley.sch.uk/year-7-admissions/",
+        "checked": "2026-09-16"
       }
     }
   ]
