@@ -1,6 +1,6 @@
 # School Open Days
 
-A mobile-first, installable tracker for Sai's secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes stay privately in the browser's local storage.
+A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes stay privately in the browser's local storage.
 
 ## Features
 
@@ -12,3 +12,5 @@ A mobile-first, installable tracker for Sai's secondary-school open days and vis
 
 Dates can change. Each listing exposes its verification status and links back to the school.
 School open days
+
+Public content uses an anonymous Year-5 (2026/27) planning profile. Do not commit child names, current schools, private visit notes, or household details. Harrow is a search origin, not a stored home address.
