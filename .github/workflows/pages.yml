@@ -19,6 +19,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Validate JavaScript
+        run: |
+          node --check app.js
+          node --check integrations.js
+          node --check plugins/app-platform.js
+          node --check plugins/autosave.js
+          node --check plugins/shared-token-sync.js
+          node --check plugins/developer-notes.js
+          node --check plugins/version-lab.js
+          node --check plugins/firebase-auth.js
       - name: Generate subscribable calendar
         run: node scripts/generate-calendar.mjs
       - uses: actions/upload-pages-artifact@v3
