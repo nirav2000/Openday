@@ -27,16 +27,15 @@
 
   function ensureSyncDialog(){
     let d=document.querySelector('#syncDialog');if(d)return d;
-    d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync across your devices</h2><p>Enter the same memorable token on each device. There is no visible account or login screen.</p><label for="syncToken"><b>Memorable token</b></label><input id="syncToken" type="password" autocomplete="current-password" spellcheck="false" placeholder="e.g. four-unrelated-words-27"><p class="token-help">The token is the password for one dedicated Firebase Authentication account used only by Openday. The app signs in directly to Firebase and Firestore rules restrict the private Openday document to that account. No Firebase Function is used.</p><div class="modal-actions"><button id="connectToken" class="primary" type="button">Connect & sync</button><button id="showToken" type="button">Show</button><button id="copySetupLink" type="button">Copy setup link</button><button id="forgetToken" type="button">Forget token</button></div><p id="syncMessage" class="sync-message"></p><p class="sources">Use the same token on another device, or paste it manually here. A setup link can carry it in the URL fragment, which is removed after the app reads it.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;document.body.appendChild(d);
+    d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync across your devices</h2><p>Enter the same memorable token on each device. There is no visible account or login screen.</p><label for="syncToken"><b>Memorable token</b></label><input id="syncToken" type="text" autocomplete="off" spellcheck="false" placeholder="Enter token"><p class="token-help">The token is shown as you type. Openday does not impose its own length or format rules.</p><div class="modal-actions"><button id="connectToken" class="primary" type="button">Connect & sync</button><button id="copySetupLink" type="button">Copy setup link</button><button id="forgetToken" type="button">Forget token</button></div><p id="syncMessage" class="sync-message"></p><p class="sources">Use the same token on another device, or paste it manually here. A setup link can carry it in the URL fragment, which is removed after the app reads it.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;document.body.appendChild(d);
     const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage');
-    d.querySelector('#showToken').onclick=e=>{input.type=input.type==='password'?'text':'password';e.currentTarget.textContent=input.type==='password'?'Show':'Hide'};
     d.querySelector('#connectToken').onclick=async()=>{
       message.className='sync-message';message.textContent='Connecting…';
       try{await sync.connect(input.value);message.className='sync-message ok';message.textContent='Connected. Changes will sync automatically.'}
       catch(error){message.className='sync-message error';message.textContent=error.message}
     };
     d.querySelector('#copySetupLink').onclick=async e=>{
-      const typed=input.value.trim();const link=sync?.setupLink?.(typed);if(!link){message.className='sync-message error';message.textContent='Enter your token first.';return}
+      const link=sync?.setupLink?.(input.value);if(!link){message.className='sync-message error';message.textContent='Enter your token first.';return}
       try{await navigator.clipboard.writeText(link);e.currentTarget.textContent='Copied ✓';message.className='sync-message ok';message.textContent='Private setup link copied.'}catch{message.className='sync-message error';message.textContent='Could not copy the link on this browser.'}
     };
     d.querySelector('#forgetToken').onclick=()=>{sync?.disconnect?.();input.value='';message.className='sync-message';message.textContent='Firebase session removed from this device.'};
@@ -51,57 +50,22 @@
     const message=document.querySelector('#syncMessage');if(message&&document.querySelector('#syncDialog')?.open&&!message.textContent)message.textContent=detail.text||'';
   }
   window.addEventListener('openday:sync-status',e=>updateSyncStatus(e.detail));
-  window.addEventListener('openday:cloud-state',e=>{
-    if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));nativeRender?.()}
-  });
+  window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));nativeRender?.()}});
 
-  function identifyOpenSchool(){
-    const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;
-    const dateText=document.querySelector('#detailBody .bigdate')?.textContent;
-    return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null;
-  }
+  function identifyOpenSchool(){const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;const dateText=document.querySelector('#detailBody .bigdate')?.textContent;return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null}
   function enhanceDetail(){
-    const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;
-    const school=identifyOpenSchool();if(!school)return;note.dataset.autosave='1';
-    document.querySelector('#detailBody #saveNote')?.remove();
-    const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved automatically · sync connected':'Saved automatically on this device';note.after(status);
-    const persist=()=>{
-      state.notes[school.id]=note.value;saveState();status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved locally · syncing…':'Saved on this device';sync?.schedule?.();
-    };
-    note.addEventListener('input',()=>{status.className='autosave-status';status.textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(persist,350)});
-    note.addEventListener('blur',()=>{clearTimeout(noteTimer);persist()});
+    const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;const school=identifyOpenSchool();if(!school)return;note.dataset.autosave='1';document.querySelector('#detailBody #saveNote')?.remove();const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved automatically · sync connected':'Saved automatically on this device';note.after(status);
+    const persist=()=>{state.notes[school.id]=note.value;saveState();status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved locally · syncing…':'Saved on this device';sync?.schedule?.()};note.addEventListener('input',()=>{status.className='autosave-status';status.textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(persist,350)});note.addEventListener('blur',()=>{clearTimeout(noteTimer);persist()});
     const cal=document.querySelector('#detailBody #calendar');if(cal){cal.classList.add('calendar-action');cal.innerHTML='<span class="calendar-glyph" aria-hidden="true">📅</span> Add to calendar';cal.setAttribute('aria-label','Add this visit to calendar')}
   }
   const detailBody=document.querySelector('#detailBody');if(detailBody)new MutationObserver(enhanceDetail).observe(detailBody,{childList:true,subtree:true});
 
-  function enhanceTravelCards(){
-    document.querySelectorAll('.card').forEach(card=>{
-      const meta=card.querySelector('.meta');if(!meta||meta.dataset.travelLabelled)return;
-      meta.textContent=meta.textContent.replace(/Approx\. ([^·;]+?) drive from HA1 3PU(?: · check live traffic|; check live traffic)?/g,'🚗 Car est. $1 from HA1 3PU');meta.dataset.travelLabelled='1';
-    });
-  }
+  function enhanceTravelCards(){document.querySelectorAll('.card').forEach(card=>{const meta=card.querySelector('.meta');if(!meta||meta.dataset.travelLabelled)return;meta.textContent=meta.textContent.replace(/Approx\. ([^·;]+?) drive from HA1 3PU(?: · check live traffic|; check live traffic)?/g,'🚗 Car est. $1 from HA1 3PU');meta.dataset.travelLabelled='1'})}
   const list=document.querySelector('#list');if(list)new MutationObserver(enhanceTravelCards).observe(list,{childList:true,subtree:true});enhanceTravelCards();
 
-  function installCalendarSubscriptionFix(){
-    const button=document.querySelector('#subscribeBtn');if(!button)return;
-    const feed='https://nirav2000.github.io/Openday/calendar.ics';
-    const copy=document.querySelector('#copyFeedBtn');if(copy)copy.onclick=async e=>{try{await navigator.clipboard.writeText(feed);e.currentTarget.textContent='Copied ✓'}catch{const input=document.querySelector('#feedUrl');input.focus();input.select();document.execCommand('copy')}};
-    button.onclick=()=>{
-      document.querySelector('#icsLink').href=feed;document.querySelector('#feedUrl').value=feed;
-      const apple=document.querySelector('#webcalLink'),webcal=`webcal://${feed.replace(/^https?:\/\//,'')}`;apple.href=webcal;
-      apple.onclick=e=>{e.preventDefault();window.location.assign(webcal)};
-      document.querySelector('#subscribeDialog').showModal();
-    };
-  }
+  function installCalendarSubscriptionFix(){const button=document.querySelector('#subscribeBtn');if(!button)return;const feed='https://nirav2000.github.io/Openday/calendar.ics';const copy=document.querySelector('#copyFeedBtn');if(copy)copy.onclick=async e=>{try{await navigator.clipboard.writeText(feed);e.currentTarget.textContent='Copied ✓'}catch{const input=document.querySelector('#feedUrl');input.focus();input.select();document.execCommand('copy')}};button.onclick=()=>{document.querySelector('#icsLink').href=feed;document.querySelector('#feedUrl').value=feed;const apple=document.querySelector('#webcalLink'),webcal=`webcal://${feed.replace(/^https?:\/\//,'')}`;apple.href=webcal;apple.onclick=e=>{e.preventDefault();window.location.assign(webcal)};document.querySelector('#subscribeDialog').showModal()}}
 
-  async function initialiseVersion(){
-    try{
-      const release=await fetch('version.json',{cache:'no-store'}).then(r=>r.json());
-      const el=document.querySelector('#appVersion');if(el)el.textContent=`v${release.version}`;
-      const lab=window.createVersionLab?.({appId:'openday',currentVersion:release.version});
-      lab?.recordRelease?.({version:release.version,date:release.released,summary:release.summary,areas:['sync','autosave','calendar','card-density','developer-notes']});
-    }catch{}
-  }
+  async function initialiseVersion(){try{const release=await fetch('version.json',{cache:'no-store'}).then(r=>r.json());const el=document.querySelector('#appVersion');if(el)el.textContent=`v${release.version}`;const lab=window.createVersionLab?.({appId:'openday',currentVersion:release.version});lab?.recordRelease?.({version:release.version,date:release.released,summary:release.summary,areas:['sync','autosave','calendar','card-density','developer-notes']})}catch{}}
 
   enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
