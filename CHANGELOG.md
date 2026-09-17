@@ -6,6 +6,12 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 1.4.1 — 2026-09-17
+
+- Memorable token is visible while entering it.
+- Removed Openday's token length and format validation.
+- Preserves the exact token entered rather than trimming it.
+
 ## 1.4.0 — 2026-09-17
 
 - Replaced the proposed Firebase Functions token gateway with direct Firebase Authentication + Firestore sync.
