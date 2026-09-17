@@ -21,6 +21,15 @@
       <div><strong id="savedCount">0</strong><span>saved</span></div>
       <div><strong id="bookedCount">0</strong><span>booked</span></div>
     </section>
+
+    <section class="viewbar" aria-label="View and calendar controls">
+      <div class="segmented" role="group" aria-label="Choose view">
+        <button id="listViewBtn" class="active" type="button">List</button>
+        <button id="calendarViewBtn" type="button">Calendar</button>
+      </div>
+      <button id="subscribeBtn" class="subscribe" type="button">Subscribe to calendar</button>
+    </section>
+
     <section class="controls" aria-label="Find schools">
       <label class="search"><span>⌕</span><input id="search" type="search" placeholder="School, area or event…" autocomplete="off"></label>
       <div class="chips" id="chips">
@@ -34,11 +43,25 @@
       </div>
       <div class="toolbar"><span id="resultCount">Loading…</span><select id="sort" aria-label="Sort"><option value="date">Soonest</option><option value="priority">Priority</option><option value="distance">Journey</option><option value="name">Name</option></select></div>
     </section>
+
     <section id="notice" class="notice" hidden></section>
     <section id="list" class="list" aria-live="polite"></section>
+    <section id="calendarView" class="calendar-view" hidden aria-live="polite">
+      <div class="calendar-nav">
+        <button id="prevMonth" type="button" aria-label="Previous month">‹</button>
+        <h2 id="calendarTitle"></h2>
+        <button id="nextMonth" type="button" aria-label="Next month">›</button>
+      </div>
+      <div class="calendar-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+      <div id="calendarGrid" class="calendar-grid"></div>
+      <p class="calendar-help">Tap an event to see booking, travel, other available dates and notes.</p>
+    </section>
   </main>
+
   <dialog id="detail"><div id="detailBody"></div><button class="close" data-close aria-label="Close">×</button></dialog>
-  <template id="cardTemplate"><article class="card"><button class="save" aria-label="Save school">♡</button><div class="datebox"><b></b><span></span></div><div class="cardmain"><div class="badges"></div><h2></h2><p class="meta"></p><p class="event"></p><div class="actions"><button class="primary details">View visit</button><a class="book" target="_blank" rel="noopener">Book ↗</a></div></div></article></template>
+  <dialog id="subscribeDialog" class="subscribe-dialog"><div class="detail-inner"><h2>Subscribe to all open days</h2><p>On iPhone, subscription keeps the calendar linked to this feed. When the site data is updated, subscribed calendars can refresh automatically.</p><div class="modal-actions"><a id="webcalLink" class="primary" href="#">Subscribe on iPhone</a><a id="icsLink" href="calendar.ics" target="_blank" rel="noopener">Open .ics feed</a></div><p class="sources">Calendar apps decide how frequently to refresh subscribed feeds. Individual visits can still be added with their own one-day reminder.</p></div><button class="close" data-close-subscribe aria-label="Close">×</button></dialog>
+
+  <template id="cardTemplate"><article class="card"><button class="save" aria-label="Save school">♡</button><div class="datebox"><span class="dow"></span><b></b><span class="mon"></span></div><div class="cardmain"><div class="badges"></div><h2></h2><p class="meta"></p><p class="event"></p><div class="actions"><button class="primary details">View visit</button><a class="book" target="_blank" rel="noopener">Book ↗</a></div></div></article></template>
   <script src="app.js" defer></script>
 </body>
 </html>
