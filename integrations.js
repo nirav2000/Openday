@@ -7,6 +7,8 @@
     .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}
     .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 0;min-height:1.1em}.autosave-status.saved{color:#15805d}.autosave-status.error{color:#b94444}
     .calendar-action{gap:7px}.calendar-action .calendar-glyph{font-size:1.05rem}
+    .feed-label{display:block;margin:14px 0 6px;font-size:.76rem;font-weight:800;color:#61758a;text-transform:uppercase;letter-spacing:.06em}
+    .feed-copy{display:grid;grid-template-columns:1fr auto;gap:7px}.feed-copy input{min-width:0;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit;color:#102a43;background:#f8fafb}.feed-copy button{border:1px solid #dce5ed;border-radius:10px;background:white;color:#1769aa;font-weight:750;padding:8px 12px}
     .sync-dialog{max-width:480px}.sync-dialog .detail-inner{padding:24px}.sync-dialog input{width:100%;border:1px solid #dce5ed;border-radius:10px;padding:11px 12px;font:inherit;margin:8px 0}.sync-dialog .token-help{font-size:.82rem;color:#61758a;line-height:1.45}.sync-dialog .sync-message{min-height:1.2em;font-size:.82rem;color:#61758a}.sync-dialog .sync-message.error{color:#b94444}.sync-dialog .sync-message.ok{color:#15805d}
     @media(max-width:600px){.sync-pill .sync-label{display:none}.sync-pill{width:38px;height:38px;justify-content:center;padding:0}}
   `;
@@ -46,6 +48,7 @@
 
   function updateSyncStatus(detail={}){
     const b=document.querySelector('#syncPill');if(!b)return;b.dataset.state=detail.state||'local';const label=b.querySelector('.sync-label');if(label)label.textContent=detail.state==='synced'?'Synced':detail.state==='syncing'?'Saving':'Sync';b.title=detail.text||'Sync settings';
+    const openStatus=document.querySelector('#detailBody .autosave-status');if(openStatus&&detail.state==='synced'){openStatus.className='autosave-status saved';openStatus.textContent='Saved & synced'}else if(openStatus&&detail.state==='error'){openStatus.className='autosave-status error';openStatus.textContent='Saved locally · sync unavailable'}
     const message=document.querySelector('#syncMessage');if(message&&document.querySelector('#syncDialog')?.open&&!message.textContent)message.textContent=detail.text||'';
   }
   window.addEventListener('openday:sync-status',e=>updateSyncStatus(e.detail));
@@ -62,7 +65,7 @@
     const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;
     const school=identifyOpenSchool();if(!school)return;note.dataset.autosave='1';
     document.querySelector('#detailBody #saveNote')?.remove();
-    const status=document.createElement('p');status.className='autosave-status saved';status.textContent='Saved automatically';note.after(status);
+    const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved automatically · sync connected':'Saved automatically on this device';note.after(status);
     const persist=()=>{
       state.notes[school.id]=note.value;saveState();status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved locally · syncing…':'Saved on this device';sync?.schedule?.();
     };
@@ -82,15 +85,17 @@
 
   function installCalendarSubscriptionFix(){
     const button=document.querySelector('#subscribeBtn');if(!button)return;
+    const feed='https://nirav2000.github.io/Openday/calendar.ics';
+    const copy=document.querySelector('#copyFeedBtn');if(copy)copy.onclick=async e=>{try{await navigator.clipboard.writeText(feed);e.currentTarget.textContent='Copied ✓'}catch{const input=document.querySelector('#feedUrl');input.focus();input.select();document.execCommand('copy')}};
     button.onclick=()=>{
-      const feed='https://nirav2000.github.io/Openday/calendar.ics';
       document.querySelector('#icsLink').href=feed;document.querySelector('#feedUrl').value=feed;
-      const apple=document.querySelector('#webcalLink');apple.href=`webcal://${feed.replace(/^https?:\/\//,'')}`;
-      apple.onclick=e=>{e.preventDefault();window.location.href=`webcal://${feed.replace(/^https?:\/\//,'')}`};
+      const apple=document.querySelector('#webcalLink'),webcal=`webcal://${feed.replace(/^https?:\/\//,'')}`;apple.href=webcal;
+      apple.onclick=e=>{e.preventDefault();window.location.assign(webcal)};
       document.querySelector('#subscribeDialog').showModal();
     };
   }
 
   enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();
+  try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
   updateSyncStatus({state:sync?.hasToken?.()?'syncing':'local',text:sync?.hasToken?.()?'Checking cloud…':'Local only'});
 })();
