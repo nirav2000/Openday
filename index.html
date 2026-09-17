@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>School Open Days</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <header>
@@ -59,9 +59,10 @@
   </main>
 
   <dialog id="detail"><div id="detailBody"></div><button class="close" data-close aria-label="Close">×</button></dialog>
-  <dialog id="subscribeDialog" class="subscribe-dialog"><div class="detail-inner"><h2>Subscribe to all open days</h2><p>On iPhone, subscription keeps the calendar linked to this feed. When the site data is updated, subscribed calendars can refresh automatically.</p><div class="modal-actions"><a id="webcalLink" class="primary" href="#">Subscribe on iPhone</a><a id="icsLink" href="calendar.ics" target="_blank" rel="noopener">Open .ics feed</a></div><p class="sources">Calendar apps decide how frequently to refresh subscribed feeds. Individual visits can still be added with their own one-day reminder.</p></div><button class="close" data-close-subscribe aria-label="Close">×</button></dialog>
+  <dialog id="subscribeDialog" class="subscribe-dialog"><div class="detail-inner"><h2>Subscribe to all open days</h2><p>On iPhone, subscription keeps the calendar linked to this feed. When the site data is updated, subscribed calendars can refresh automatically.</p><div class="modal-actions"><a id="webcalLink" class="primary" href="#">Subscribe on iPhone</a><a id="icsLink" href="calendar.ics" target="_blank" rel="noopener">Open .ics feed</a></div><label class="feed-label" for="feedUrl">Subscription URL</label><div class="feed-copy"><input id="feedUrl" type="url" readonly><button id="copyFeedBtn" type="button">Copy</button></div><p class="sources">If iPhone subscription does not open automatically, copy the HTTPS URL above into Add Subscription Calendar. Calendar apps decide how frequently to refresh subscribed feeds.</p></div><button class="close" data-close-subscribe aria-label="Close">×</button></dialog>
 
   <template id="cardTemplate"><article class="card"><button class="save" aria-label="Save school">♡</button><div class="datebox"><span class="dow"></span><b></b><span class="mon"></span></div><div class="cardmain"><div class="badges"></div><h2></h2><p class="meta"></p><p class="event"></p><div class="actions"><button class="primary details">View visit</button><a class="book" target="_blank" rel="noopener">Book ↗</a></div></div></article></template>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=4" defer></script>
+  <script src="hotfix.js?v=1" defer></script>
 </body>
 </html>
