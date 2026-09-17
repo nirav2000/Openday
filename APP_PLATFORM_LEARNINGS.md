@@ -1,235 +1,196 @@
 # Reusable app platform learnings
 
-This document pulls together the patterns that have worked best across the small web apps in this account, especially LearnLatin, Beyond 100, Kk-syllabus and Openday. The aim is to stop rebuilding login, sync, notes and versioning differently in every app.
+This document pulls together patterns from LearnLatin, Beyond 100, Kk-syllabus, Snag and Openday so login, sync, notes, versioning and developer feedback are not rebuilt differently in every app.
 
 ## 1. Local first, cloud second
 
-Every user action should save locally immediately. Cloud sync is a replication layer, not a prerequisite for using the app.
-
-Why:
-- the UI stays fast;
-- temporary network failure does not lose notes;
-- GitHub Pages apps remain useful offline;
-- a cloud outage does not block the app.
-
-Recommended flow:
+Every user action should save locally immediately. Cloud sync is replication, not a prerequisite for using the app.
 
 ```text
 user edit
   -> local state immediately
-  -> autosave debounce (300-600 ms)
+  -> debounce 300-600 ms
   -> cloud sync in background
-  -> visible small status: Saving / Synced / Local only
+  -> quiet status: Saving / Synced / Local only
 ```
 
-Never require a separate Save button for ordinary notes unless the user needs an explicit draft/publish distinction.
+Do not require a Save button for ordinary notes unless there is a real draft/publish distinction.
 
-## 2. Authentication modes should be pluggable
+## 2. Authentication and sync modes should be pluggable
 
-Different apps need different identity models. Do not hard-wire one login scheme into app logic.
+### Normal account mode
 
-### Account mode
-
-Use Firebase Authentication for apps with multiple users, parents/children, roles, private learner data or anything that needs a durable identity. Firebase browser config is public configuration; security comes from Auth plus Firestore rules, not from hiding the API key.
+Use Firebase Authentication for multi-user apps, roles, parent/child accounts or sensitive learner data. Firebase browser configuration is public; protection comes from Authentication and Firestore Security Rules.
 
 Reusable adapter: `plugins/firebase-auth.js`.
 
-### Shared-token mode
+### Memorable-token personal mode
 
-For a personal single-user app where login friction is undesirable, use a memorable shared token checked by a server-side endpoint.
+Openday is currently a one-user app, so the UI should not show an email/password login form or require each device to be individually approved.
 
-Rules:
-- never put the expected token in GitHub Pages JavaScript;
-- store the expected token as a backend secret;
-- transmit it only over HTTPS;
-- use a long memorable phrase, preferably four or more unrelated words plus digits;
-- store the entered token locally on each browser;
-- optionally pass it to another device in a URL fragment (`#sync=...`) because the fragment is not sent in the HTTP request;
-- remove the fragment immediately after capture;
-- provide a manual token-entry screen in case the setup link is unavailable.
-
-Reusable adapter: `plugins/shared-token-sync.js`.
-
-Openday uses this model.
-
-## 3. Openday shared-token backend
-
-The backend implementation lives in the shared Firebase project:
-
-- repository: `nirav2000/Kk-syllabus`
-- function: `functions/openday-sync.js`
-- exported as: `opendaySync`
-- Firestore document: `app_private_state/openday`
-
-The browser sends `X-OpenDay-Token`. The function compares it with the Firebase secret `OPENDAY_SYNC_TOKEN` and uses the Admin SDK to read/write the private state document.
-
-The token itself must never be committed.
-
-One-time setup/deploy:
-
-```bash
-npx firebase-tools functions:secrets:set OPENDAY_SYNC_TOKEN --project kk-syllabus
-npx firebase-tools deploy --only functions:opendaySync --project kk-syllabus
-```
-
-Choose a memorable token when prompted, e.g. a pattern like four unrelated words plus two digits. Do not use the example phrase from the app UI as the real token.
-
-After deployment, Openday can accept the token under **Sync**, store it locally and sync favourites, booked state, watch state and visit notes without a visible account login.
-
-## 4. Firestore rules remain strict
-
-Do not make Firestore anonymously writable simply because an app has only one current user. A public GitHub Pages app can be inspected and its Firebase config copied.
-
-Existing owner-only learner/progress rules should stay owner-only. The shared-token function is the narrow write gateway for Openday; it sanitises the allowed state shape and caps note/state size before using the Admin SDK.
-
-This separation is useful:
+The no-Functions pattern is:
 
 ```text
-public app
-   -> narrow authenticated function
-      -> private Firestore document
+memorable token entered in Openday
+        -> Firebase Email/Password Authentication
+           using a fixed internal Openday email
+        -> authenticated Firebase session persists on the device
+        -> Firestore rules permit only that dedicated account
+        -> app_private_state/openday
 ```
 
-rather than:
+The memorable token is therefore the password for one dedicated Firebase Authentication user. The internal email is fixed in the app and not shown to the user.
 
-```text
-public app
-   -> anonymously writable Firestore
-```
+Benefits:
+- no Firebase Functions;
+- no per-device approval;
+- no visible email/login flow;
+- the same token works on iPhone, iPad and Mac;
+- Firebase handles authenticated session persistence;
+- Firestore is not anonymously writable.
+
+Trade-off: the memorable token is a real password. It should be a long passphrase (ideally four or more unrelated words plus digits), not a short PIN.
+
+Reusable adapter: `plugins/firebase-token-sync.js`.
+
+## 3. One-time Firebase setup for token sync
+
+In Firebase Console:
+
+1. Enable **Authentication -> Sign-in method -> Email/Password**.
+2. Under **Authentication -> Users**, create one user with email:
+   `openday-sync@nirav2000.github.io`
+3. Set its password to the memorable token you want to type into Openday.
+4. Publish Firestore rules containing the dedicated Openday rule from `nirav2000/Kk-syllabus/firestore.rules`.
+
+No Cloud Function, Secret Manager value or server deployment is required for Openday sync.
+
+The relevant Firestore rule permits only the authenticated Openday account to read/create/update `app_private_state/openday`; deletes remain disabled.
+
+## 4. Do not use a token baked into public JavaScript
+
+A literal secret inside GitHub Pages source is not secret. Anybody can inspect it.
+
+A fixed internal email is acceptable because it is an identifier, not a credential. The memorable token/password must be supplied by the user and handled by Firebase Authentication.
+
+Likewise, do not make a public collection writable merely because there is currently one user.
 
 ## 5. Autosave is a reusable capability
 
-`plugins/autosave.js` provides debounced input saving with status callbacks.
+`plugins/autosave.js` provides debounced input saving.
 
 Recommended UX:
-- save locally on typing;
+- save locally while typing;
 - debounce network writes;
 - save immediately on blur/navigation;
-- show a quiet status such as `Saved automatically`;
-- never make users wonder whether closing a panel loses their note.
+- display a quiet `Saved automatically`, `Saved & synced`, or `Saved locally` message;
+- never make the user wonder whether closing a panel loses a note.
 
-Openday visit notes use this pattern.
+Openday visit notes follow this pattern.
 
 ## 6. Developer notes should be contextual
 
-LearnLatin and Beyond 100 showed that a free-floating feedback box is less useful than a note attached to context.
-
-A useful developer note should carry:
+A useful developer note should include:
 - stable note ID;
 - app ID;
-- app version;
+- semantic app version;
 - page/route;
 - optional anchor/element ID;
 - selected text if relevant;
 - note text;
 - status (`open`, `implemented`, `archived`);
-- whether it should enter a review queue;
+- review flag;
 - created/updated timestamps.
 
 Reusable base: `plugins/developer-notes.js`.
 
-The plugin deliberately separates note storage from the UI so each app can present notes differently while preserving a common data contract.
+Separate storage from UI so the same note contract can be reused by different apps.
 
-### Automated developer-note processing
+Automated processing should never blindly implement every note. A review bridge can sanitize private data, classify bounded changes, create an issue/development brief, run tests, commit a coherent change, and link the implemented app version.
 
-A safe automated workflow should never blindly execute every note. A review bridge can:
-1. fetch notes explicitly marked for review;
-2. sanitise private/user data;
-3. classify a note as bounded/safe or requiring human review;
-4. create a GitHub issue or development brief;
-5. run tests;
-6. commit a small coherent change;
-7. update the note with the implementation version.
+## 7. Semantic versioning and Version Lab are different things
 
-The LearnLatin GitHub feedback workflow is a useful pattern, but it needs an API key/billing if AI is invoked automatically. The Beyond 100 review-feed pattern is useful for exposing only deliberately selected review notes.
+Git commits, semantic releases and Version Lab serve different purposes.
 
-## 7. Version Lab: human checkpoints, not every commit
+### Semantic app version
 
-Git history should contain every technical change. A Version Lab should contain only meaningful human-comparison checkpoints.
+Openday now uses `MAJOR.MINOR.PATCH`:
 
-From Beyond 100, the important rule is **selective rollback**.
+- **MAJOR**: incompatible app/data/workflow change;
+- **MINOR**: backwards-compatible feature release;
+- **PATCH**: backwards-compatible bug or data correction.
 
-Each named release should contain separable change areas, for example:
-- card density;
-- calendar workflow;
-- note autosave;
-- cloud sync;
-- admissions data layout.
+The canonical source is `version.json`.
 
-For each area the reviewer can mark:
-- KEEP
-- REVERT
-- REWORK
-- UNSURE
+For every release, keep these aligned:
+- `version.json`;
+- visible app version;
+- cache-busting query values;
+- service-worker cache name;
+- `CHANGELOG.md`.
 
-Do not roll back a whole app because one feature became worse.
+The deployment workflow checks that the value is valid SemVer and that `index.html` matches it.
+
+Do **not** treat arbitrary asset counters such as `app.js?v=6` as application versions. That was the earlier mistake.
+
+### Version Lab
+
+Version Lab is for human comparison checkpoints, not every technical commit. A release may contain separable areas such as card density, calendar workflow, note autosave, sync and admissions layout. Each area can be KEEP / REVERT / REWORK / UNSURE.
 
 Reusable base: `plugins/version-lab.js`.
 
 ## 8. Stable plug-in contract
 
-`plugins/app-platform.js` is the minimal registry/event bus. Reusable capabilities register by name rather than assuming a particular app.
+`plugins/app-platform.js` is the minimal registry/event bus.
 
 Current modules:
 
 ```text
 plugins/
-  app-platform.js        registry/event bus
-  autosave.js            debounced local/UI autosave helper
-  firebase-auth.js       optional Firebase account-auth adapter
-  shared-token-sync.js   no-login personal sync adapter
-  developer-notes.js     common note data contract
-  version-lab.js         release/decision/development-brief data contract
+  app-platform.js         registry/event bus
+  autosave.js             debounced autosave helper
+  firebase-auth.js        conventional Firebase account adapter
+  firebase-token-sync.js  no-visible-login personal sync adapter
+  developer-notes.js      common developer-note contract
+  version-lab.js          release/decision/development-brief contract
 ```
 
-An app should depend on the smallest possible interface. For example, a notes UI should call a generic `sync.schedule()` rather than import Firestore directly.
+An app should depend on the smallest interface possible. A notes UI should call `sync.schedule()` rather than know how Firestore works.
 
-## 9. Suggested future extraction
+Once the same module has survived use in at least two apps, extract it to a dedicated `app-kit` repository and version it independently.
 
-Once two or more apps use the same module successfully, move the modules into a dedicated repository, for example:
+## 9. Calendar lessons from Openday
 
-```text
-nirav2000/app-kit
-  /core
-  /autosave
-  /auth-firebase
-  /sync-shared-token
-  /developer-notes
-  /version-lab
-  /calendar
-```
+- Visible dates should include weekdays (`Thu 17 Sep`).
+- List and month views should operate on the same event data.
+- `[hidden]` must override layout CSS or switching views can appear to do nothing.
+- A subscribable calendar must be a stable public `.ics` URL.
+- Apple Calendar hand-off should use `webcal://...` with the HTTPS feed exposed as a copy/paste fallback.
+- Individual event actions should say `📅 Add to calendar`; subscribing to the whole feed is a separate action.
 
-Each module can then be versioned independently and pulled into an app by a pinned release, submodule, package/CDN build or a small copy/update script.
-
-Do not prematurely publish an npm package while the interfaces are still changing quickly. Stabilise the contracts in two real apps first.
-
-## 10. Calendar lessons from Openday
-
-- A visible date should include the weekday (`Thu 17 Sep`) because availability is often weekday-driven.
-- A list view and month view solve different problems; both should operate on the same event data.
-- `hidden` must win over layout CSS (`[hidden]{display:none!important}`), otherwise a view can appear selected but not actually replace the list.
-- A subscribable feed must be a real public `.ics` file, not only a build artifact that can disappear depending on the Pages deployment path.
-- For Apple Calendar, use `webcal://host/path/calendar.ics` for the hand-off and always expose the HTTPS feed URL as a copy/paste fallback.
-- Individual-event buttons should say `📅 Add to calendar`; subscription is a different action and should stay labelled separately.
-
-## 11. Privacy rule for public repositories
-
-Public app source/data should contain only what is necessary to run the app.
+## 10. Privacy rule for public repositories
 
 Do not commit:
 - child names;
-- current school plus child identity;
-- household/private notes;
-- memorable sync tokens;
-- passwords/service-account keys;
-- private review capability URLs.
+- child identity plus current school;
+- private household notes;
+- memorable sync tokens/passwords;
+- service-account keys;
+- private review capability links.
 
-Public planning context can be anonymous, e.g. `Year 5 / September 2028 entry`.
+Public planning context can remain anonymous, e.g. `Year 5 / September 2028 entry`.
 
-## 12. Openday next steps
+## 11. Current Openday setup
 
-1. Deploy `opendaySync` after setting `OPENDAY_SYNC_TOKEN` privately.
-2. Enter the same memorable token on each device, or use the private setup link.
-3. Verify cross-device note/favourite/booked sync.
-4. If the plug-in contracts survive use in Openday plus another app, extract them to a dedicated app-kit repository.
-5. Add a real Version Lab UI only after the next meaningful Openday layout iteration, rather than versioning every small fix.
+Openday release **1.4.0** removes the proposed Cloud Function sync gateway. The app signs directly into Firebase Authentication with the hidden dedicated email and user-entered memorable token, then uses Firestore under restrictive rules.
+
+Current user-state flow:
+
+```text
+edit note / save school / mark booked
+        -> localStorage immediately
+        -> autosave debounce
+        -> Firebase authenticated Firestore sync when connected
+```
+
+The app remains usable locally if Firebase is unavailable.
