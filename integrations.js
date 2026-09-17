@@ -27,20 +27,19 @@
 
   function ensureSyncDialog(){
     let d=document.querySelector('#syncDialog');if(d)return d;
-    d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync across your devices</h2><p>Enter the same memorable token on each device. There is no account or login screen.</p><label for="syncToken"><b>Memorable token</b></label><input id="syncToken" type="password" autocomplete="off" spellcheck="false" placeholder="e.g. four-unrelated-words-27"><p class="token-help">Use at least four unrelated words plus digits (20+ characters is better). The token is stored only in this browser and sent over HTTPS to the private sync endpoint; it is not committed to GitHub.</p><div class="modal-actions"><button id="connectToken" class="primary" type="button">Connect & sync</button><button id="showToken" type="button">Show</button><button id="copySetupLink" type="button">Copy setup link</button><button id="forgetToken" type="button">Forget token</button></div><p id="syncMessage" class="sync-message"></p><p class="sources">A setup link carries the token only in the URL fragment. Opening it on another device stores the token locally and removes it from the visible URL.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;document.body.appendChild(d);
+    d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync across your devices</h2><p>Enter the same memorable token on each device. There is no visible account or login screen.</p><label for="syncToken"><b>Memorable token</b></label><input id="syncToken" type="password" autocomplete="current-password" spellcheck="false" placeholder="e.g. four-unrelated-words-27"><p class="token-help">The token is the password for one dedicated Firebase Authentication account used only by Openday. The app signs in directly to Firebase and Firestore rules restrict the private Openday document to that account. No Firebase Function is used.</p><div class="modal-actions"><button id="connectToken" class="primary" type="button">Connect & sync</button><button id="showToken" type="button">Show</button><button id="copySetupLink" type="button">Copy setup link</button><button id="forgetToken" type="button">Forget token</button></div><p id="syncMessage" class="sync-message"></p><p class="sources">Use the same token on another device, or paste it manually here. A setup link can carry it in the URL fragment, which is removed after the app reads it.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;document.body.appendChild(d);
     const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage');
-    if(sync?.hasToken?.())input.value=sync.getToken();
     d.querySelector('#showToken').onclick=e=>{input.type=input.type==='password'?'text':'password';e.currentTarget.textContent=input.type==='password'?'Show':'Hide'};
     d.querySelector('#connectToken').onclick=async()=>{
       message.className='sync-message';message.textContent='Connecting…';
       try{await sync.connect(input.value);message.className='sync-message ok';message.textContent='Connected. Changes will sync automatically.'}
-      catch(error){message.className='sync-message error';message.textContent=error.message.includes('unavailable')?'Token saved, but the sync backend still needs to be deployed.':error.message}
+      catch(error){message.className='sync-message error';message.textContent=error.message}
     };
     d.querySelector('#copySetupLink').onclick=async e=>{
-      const link=sync?.setupLink?.();if(!link){message.className='sync-message error';message.textContent='Enter and connect a token first.';return}
+      const typed=input.value.trim();const link=sync?.setupLink?.(typed);if(!link){message.className='sync-message error';message.textContent='Enter your token first.';return}
       try{await navigator.clipboard.writeText(link);e.currentTarget.textContent='Copied ✓';message.className='sync-message ok';message.textContent='Private setup link copied.'}catch{message.className='sync-message error';message.textContent='Could not copy the link on this browser.'}
     };
-    d.querySelector('#forgetToken').onclick=()=>{sync?.disconnect?.();input.value='';message.className='sync-message';message.textContent='Token forgotten on this device.'};
+    d.querySelector('#forgetToken').onclick=()=>{sync?.disconnect?.();input.value='';message.className='sync-message';message.textContent='Firebase session removed from this device.'};
     d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};
     return d;
   }
@@ -95,7 +94,16 @@
     };
   }
 
-  enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();
+  async function initialiseVersion(){
+    try{
+      const release=await fetch('version.json',{cache:'no-store'}).then(r=>r.json());
+      const el=document.querySelector('#appVersion');if(el)el.textContent=`v${release.version}`;
+      const lab=window.createVersionLab?.({appId:'openday',currentVersion:release.version});
+      lab?.recordRelease?.({version:release.version,date:release.released,summary:release.summary,areas:['sync','autosave','calendar','card-density','developer-notes']});
+    }catch{}
+  }
+
+  enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
   updateSyncStatus({state:sync?.hasToken?.()?'syncing':'local',text:sync?.hasToken?.()?'Checking cloud…':'Local only'});
 })();
