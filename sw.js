@@ -1,7 +1,7 @@
-const CACHE='open-days-v6';
+const CACHE='open-days-v1.4.0';
 const ASSETS=[
-  './','./index.html','./styles.css','./app.js','./integrations.js',
-  './plugins/app-platform.js','./plugins/autosave.js','./plugins/shared-token-sync.js','./plugins/developer-notes.js','./plugins/version-lab.js',
+  './','./index.html','./styles.css','./app.js','./integrations.js','./version.json',
+  './plugins/app-platform.js','./plugins/autosave.js','./plugins/firebase-token-sync.js','./plugins/developer-notes.js','./plugins/version-lab.js',
   './data/schools.json','./data/enhancements.json','./calendar.ics','./manifest.webmanifest','./icon.svg'
 ];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
