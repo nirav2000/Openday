@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "updated": "2026-09-17",
+    "travelOrigin": "HA1 3PU",
+    "travelNote": "Drive times are planning estimates and can vary materially with traffic. Open the live route before travelling. Rail times shown are service journey times and exclude travel to/from stations unless stated."
+  },
+  "schools": {
+    "berkhamsted": {
+      "destination": "Berkhamsted Boys, Castle Campus, Castle Street, Berkhamsted HP4 2BB",
+      "travel": {
+        "driveText": "Approx. 45–55 min drive from HA1 3PU; check live traffic",
+        "transitText": "Harrow & Wealdstone → Berkhamsted is direct, about 22 min by train on average, plus station access and the walk/taxi to school",
+        "railUrl": "https://www.nationalrail.co.uk/journey-planner/?origin=HRW&destination=BKM",
+        "sourceUrl": "https://live-departures.info/rail/timetable/Harrow-Wealdstone/Berkhamsted/",
+        "extra": "Berkhamsted says its school-coach network serves Ruislip, Northwood, Eastcote and Pinner among other areas."
+      },
+      "bookingWatch": {
+        "status": "user-reported-unavailable",
+        "label": "Watch for a returned place / new senior date",
+        "message": "The 18 September Boys Senior Open Event was reported as unavailable. Keep this school on the watch list; the school also offers personal tours.",
+        "url": "https://www.berkhamsted.com/boys/open-events/"
+      },
+      "alternateVisits": [
+        {
+          "event": "Personal tour",
+          "start": null,
+          "end": null,
+          "status": "flexible",
+          "note": "Admissions says personal tours can be requested if an Open Event is unavailable.",
+          "bookingUrl": "https://www.berkhamsted.com/joining-berkhamsted-boys/"
+        }
+      ]
+    },
+    "st-margarets": {
+      "destination": "St Margaret's School, Merry Hill Road, Bushey, Hertfordshire WD23 1DT",
+      "travel": {
+        "driveText": "Approx. 15–25 min drive from HA1 3PU in light/moderate traffic; check live traffic",
+        "transitText": "From Harrow-on-the-Hill, public transport to the school is roughly 45–50 min; a 258 bus route is one option",
+        "sourceUrl": "https://www.rome2rio.com/s/Harrow-on-the-Hill/St-Margaret-s-School-England"
+      },
+      "alternateVisits": [
+        {
+          "event": "One-to-one school tour",
+          "start": null,
+          "end": null,
+          "status": "flexible",
+          "note": "The school explicitly offers one-to-one tours if the whole-school Open Day does not suit.",
+          "bookingUrl": "https://www.stmargarets-school.org.uk/book-a-tourbook-an-open-day"
+        }
+      ]
+    }
+  }
+}
