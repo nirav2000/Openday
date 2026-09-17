@@ -17,7 +17,7 @@
   const feed='https://nirav2000.github.io/Openday/calendar.ics';
   const wireFeed=()=>setTimeout(()=>{
     const webcal=$('#webcalLink'),ics=$('#icsLink'),input=$('#feedUrl');
-    if(webcal)webcal.href=feed.replace('https:','webcal:');
+    if(webcal)webcal.href=feed.replace(/^https:/,'webcals:');
     if(ics)ics.href=feed;
     if(input)input.value=feed;
   },0);
