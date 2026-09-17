@@ -15,6 +15,7 @@
   const readLocal=()=>{try{return JSON.parse(localStorage.getItem(cfg.stateKey)||'{}')}catch{return{}}};
   const writeLocal=value=>localStorage.setItem(cfg.stateKey,JSON.stringify(value||{}));
   const localJSON=()=>JSON.stringify(readLocal());
+  const stamp=value=>({...value,updatedAt:new Date().toISOString()});
 
   function consumeSetupLink(){
     const raw=location.hash.startsWith('#')?location.hash.slice(1):'';
@@ -42,30 +43,40 @@
     return res.status===204?{}:res.json();
   }
 
+  async function postLocal({restamp=true}={}){
+    let state=readLocal();
+    if(restamp){state=stamp(state);writeLocal(state)}
+    const json=JSON.stringify(state);
+    await request('POST',state);
+    lastLocal=json;lastRemote=json;
+    return state;
+  }
+
   async function pull(){
     if(!token||busy)return false;busy=true;emit('syncing','Checking cloud…');
     try{
-      const body=await request('GET');
-      const remote=body?.state||null;
-      if(remote){
-        const remoteJSON=JSON.stringify(remote),local=readLocal();
-        const remoteTime=Date.parse(remote.updatedAt||0),localTime=Date.parse(local.updatedAt||0);
-        lastRemote=remoteJSON;
-        if(remoteTime>localTime){writeLocal(remote);lastLocal=remoteJSON;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:remote}));}
-        else if(localJSON()!==remoteJSON)await push();
-      }else await push();
+      const body=await request('GET'),remote=body?.state||null;
+      if(!remote){await postLocal();emit('synced','Synced');return true}
+      const remoteJSON=JSON.stringify(remote),local=readLocal();
+      const remoteTime=Date.parse(remote.updatedAt||0),localTime=Date.parse(local.updatedAt||0);
+      lastRemote=remoteJSON;
+      if(remoteTime>localTime){
+        writeLocal(remote);lastLocal=remoteJSON;
+        window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:remote}));
+      }else if(JSON.stringify(local)!==remoteJSON){
+        await postLocal();
+      }else lastLocal=remoteJSON;
       emit('synced','Synced');return true;
     }catch(error){emit('error',error.message);return false}finally{busy=false}
   }
 
   async function push(){
     if(!token||busy)return false;
-    const state=readLocal(),json=JSON.stringify(state);
-    if(json===lastRemote)return true;
+    const current=localJSON();if(current===lastRemote)return true;
     busy=true;emit('syncing','Saving…');
-    try{
-      await request('POST',state);lastLocal=json;lastRemote=json;emit('synced','Synced');return true;
-    }catch(error){emit('error',error.message);return false}finally{busy=false}
+    try{await postLocal();emit('synced','Synced');return true}
+    catch(error){emit('error',error.message);return false}
+    finally{busy=false}
   }
   function schedule(){clearTimeout(timer);timer=setTimeout(push,500)}
   async function connect(value){
