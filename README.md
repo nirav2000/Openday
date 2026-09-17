@@ -2,6 +2,8 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
+Current app version: **1.4.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+
 ## Features
 
 - filters for date status and school type
@@ -11,7 +13,8 @@ A mobile-first, installable tracker for secondary-school open days and visits. S
 - notes autosave while typing
 - iPhone-friendly individual `.ics` downloads with a one-day reminder
 - subscribable `calendar.ics` feed
-- optional no-login cross-device sync using a memorable shared token checked by a private Firebase HTTPS function
+- optional no-visible-login cross-device sync using a memorable token with Firebase Authentication + Firestore directly
+- no Firebase Function required for Openday sync
 - offline-capable progressive web app
 
 ## Reusable app modules
@@ -20,12 +23,24 @@ Reusable integration code lives in `plugins/`:
 
 - `app-platform.js` — plugin registry/event bus
 - `autosave.js` — debounced autosave helper
-- `firebase-auth.js` — optional account-auth adapter for apps that need users/roles
-- `shared-token-sync.js` — no-login personal sync adapter
+- `firebase-auth.js` — conventional account-auth adapter for apps that need users/roles
+- `firebase-token-sync.js` — memorable-token Firebase Auth + Firestore sync without a visible login form
 - `developer-notes.js` — common developer-note data model
 - `version-lab.js` — release decisions and development briefs
 
-See [`APP_PLATFORM_LEARNINGS.md`](APP_PLATFORM_LEARNINGS.md) for the architecture, lessons from LearnLatin/Beyond 100 and the one-time Firebase token setup.
+See [`APP_PLATFORM_LEARNINGS.md`](APP_PLATFORM_LEARNINGS.md) for the architecture and one-time Firebase setup.
+
+## One-time sync setup
+
+In Firebase Console for `kk-syllabus`:
+
+1. Enable **Authentication → Sign-in method → Email/Password**.
+2. Create the user `openday-sync@nirav2000.github.io`.
+3. Use your memorable token as that user's password.
+4. Publish the Firestore rules from `nirav2000/Kk-syllabus/firestore.rules`.
+5. In Openday, tap **Sync** and enter the same memorable token.
+
+The app hides the internal email and only asks for the token. Firebase persists the authenticated session on each device, so the token is not required every time.
 
 Dates can change. Each listing exposes its verification status and links back to the school.
 
