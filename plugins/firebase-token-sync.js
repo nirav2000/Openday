@@ -24,13 +24,13 @@
 
   async function startRealtime(){
     unsubscribe?.();unsubscribe=null;
-    const snap=await FStore.getDoc(ref),local=normalise(readLocal());
+    window.FirebaseUsageMonitor?.read(1,'state-read','openday');const snap=await FStore.getDoc(ref),local=normalise(readLocal());
     if(snap.exists()&&snap.data()?.state){const remote=normalise(snap.data().state),json=JSON.stringify(remote);lastRemote=json;if(Date.parse(remote.updatedAt||0)>Date.parse(local.updatedAt||0)){writeLocal(remote);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:remote}))}else if(localJSON()!==json)await push()}else await push();
-    unsubscribe=FStore.onSnapshot(ref,s=>{const remote=s.data()?.state;if(!remote)return;const n=normalise(remote),json=JSON.stringify(n);lastRemote=json;const localNow=normalise(readLocal());if(Date.parse(n.updatedAt||0)>Date.parse(localNow.updatedAt||0)){writeLocal(n);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:n}))}emit('synced','Synced')},error=>emit('error',friendly(error)));
+    window.FirebaseUsageMonitor?.listener(1,'state-listener','openday');unsubscribe=FStore.onSnapshot(ref,s=>{const remote=s.data()?.state;if(!remote)return;const n=normalise(remote),json=JSON.stringify(n);lastRemote=json;const localNow=normalise(readLocal());if(Date.parse(n.updatedAt||0)>Date.parse(localNow.updatedAt||0)){writeLocal(n);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:n}))}emit('synced','Synced')},error=>emit('error',friendly(error)));
     emit('synced','Synced');
   }
 
-  async function push(){await loadFirebase();if(!auth.currentUser)return false;const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);const json=JSON.stringify(state);if(json===lastRemote)return true;emit('syncing','Saving…');try{await FStore.setDoc(ref,{app:'openday',state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});lastLocal=json;lastRemote=json;emit('synced','Synced');return true}catch(error){emit('error',friendly(error));return false}}
+  async function push(){await loadFirebase();if(!auth.currentUser)return false;const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);const json=JSON.stringify(state);if(json===lastRemote)return true;emit('syncing','Saving…');try{window.FirebaseUsageMonitor?.write(1,'state-write','openday');await FStore.setDoc(ref,{app:'openday',state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});lastLocal=json;lastRemote=json;emit('synced','Synced');return true}catch(error){emit('error',friendly(error));return false}}
   const schedule=()=>{clearTimeout(timer);timer=setTimeout(push,450)};
   async function connect(token){const password=String(token??'');await loadFirebase();lastToken=password;emit('syncing','Connecting…');try{await FAuth.signInWithEmailAndPassword(auth,cfg.loginEmail,password);await startRealtime();return true}catch(error){emit('error',friendly(error));throw new Error(friendly(error))}}
   async function disconnect(){await loadFirebase();unsubscribe?.();unsubscribe=null;lastToken='';await FAuth.signOut(auth);emit('local','Local only')}
