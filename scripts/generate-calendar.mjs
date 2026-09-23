@@ -91,8 +91,8 @@ for(const event of unique){
     const end=`${d.getUTCFullYear()}${String(d.getUTCMonth()+1).padStart(2,'0')}${String(d.getUTCDate()).padStart(2,'0')}`;
     timing.push(`DTSTART;VALUE=DATE:${start}`,`DTEND;VALUE=DATE:${end}`);
   }else{
-    const end=event.end||new Date(new Date(event.start).getTime()+2*60*60*1000).toISOString();
-    timing.push(`DTSTART:${dt(event.start)}`,`DTEND:${dt(end)}`);
+    timing.push(`DTSTART:${dt(event.start)}`);
+    if(event.end)timing.push(`DTEND:${dt(event.end)}`);
   }
   lines.push(
     'BEGIN:VEVENT',
