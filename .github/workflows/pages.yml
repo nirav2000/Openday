@@ -29,6 +29,7 @@ jobs:
           node --check plugins/developer-notes.js
           node --check plugins/version-lab.js
           node --check plugins/firebase-auth.js
+          node --check plugins/personal-updates.js
           node --check scripts/sync-firestore.mjs
           node -e "JSON.parse(require('fs').readFileSync('data/schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/primary-schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/enhancements.json','utf8'));"
       - name: Validate semantic version
