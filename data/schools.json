@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-09-12",
+    "updated": "2026-09-23",
     "entryYear": 2028,
     "note": "Times and booking availability can change. Always re-check the school page before travelling.",
     "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page.",
@@ -1874,14 +1874,14 @@
       "journey": 25,
       "priority": 5,
       "entry": "11+",
-      "event": "School-day visit / open event",
-      "start": null,
+      "event": "Year 7 Open Event",
+      "start": "2026-09-28",
       "end": null,
-      "status": "tbc",
+      "status": "reported",
       "bookingRequired": true,
       "infoUrl": "https://michaela.education/home/secondary-school-wembley/",
       "bookingUrl": "https://michaela.education/home/secondary-school-wembley/visit-michaela-community-school-wembley/",
-      "note": "Distinctive academic culture. School-day visits have previously started 11:15 and lasted 2–2½ hours; confirm current availability.",
+      "note": "Monday 28 September 2026 has been reported for the Year 7 open event. Michaela's official site confirms Year 7 open-event registration, but the indexed page does not expose the exact current event date/time; recheck the booking page before travelling.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": "2027-10-31",
@@ -1896,8 +1896,8 @@
           "status": "unverified"
         },
         "bookingUrl": {
-          "checked": "2026-09-16",
-          "status": "unverified"
+          "checked": "2026-09-23",
+          "status": "official-registration-page-date-not-indexed"
         },
         "admission": {
           "checked": "2026-09-16",
@@ -2223,14 +2223,14 @@
       "journey": 35,
       "priority": 4,
       "entry": "11+",
-      "event": "Open events",
-      "start": null,
+      "event": "Open Day",
+      "start": "2026-09-26",
       "end": null,
-      "status": "tbc",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": false,
       "infoUrl": "https://www.stclementdanes.org.uk/admissions/",
-      "bookingUrl": "https://www.stclementdanes.org.uk/admissions/",
-      "note": "SW Herts academic/music selection route.",
+      "bookingUrl": "https://www.stclementdanes.org.uk/197/calendar",
+      "note": "Open Day date taken from the school's current calendar. Exact event time is not stored yet; check the calendar before travelling. SW Herts academic/music selection route.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": null,
@@ -2250,8 +2250,8 @@
           "status": "unverified"
         },
         "bookingUrl": {
-          "checked": "2026-09-16",
-          "status": "unverified"
+          "checked": "2026-09-23",
+          "status": "official-calendar"
         },
         "admission": {
           "checked": "2026-09-16",
