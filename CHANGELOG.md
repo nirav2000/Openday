@@ -6,6 +6,13 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.0.3 — 2026-09-23
+
+- Changed first sync after the authentication migration from winner-takes-all to a safe merge of device and cloud Openday state.
+- Saved schools and booking-watch lists are unioned.
+- Notes, booked flags and personal event overrides are merged without dropping keys that exist only on one side.
+- The merged result is written back to the existing `kk-syllabus / app_private_state/openday` document only when it differs from the cloud copy.
+
 ## 2.0.2 — 2026-09-23
 
 - Added recovery for the obsolete Openday Firebase sign-in used by earlier builds.
