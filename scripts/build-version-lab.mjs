@@ -16,7 +16,8 @@ const releases=[
   {version:'2.0.1',commit:'7aaa734c074415b3bb4bef069755ba524d27cc2f',kind:'release',label:'Kk-syllabus catalogue publisher'},
   {version:'2.0.2',commit:'81de550dd7fe76fb2c29c3ae2713ea069fa2b5d3',kind:'release',label:'Legacy auth-session recovery'},
   {version:'2.0.3',commit:'95674845ddf58bac5ac797aa66c019cb7777c253',kind:'release',label:'Safe local/cloud state merge'},
-  {version:'2.1.0',commit:'beb6d21921fe5d12d85dc48ebad297e7f0646413',kind:'release',label:'Memorable-token restoration'}
+  {version:'2.1.0',commit:'beb6d21921fe5d12d85dc48ebad297e7f0646413',kind:'release',label:'Memorable-token restoration'},
+  {version:'2.2.0',commit:'88311e2f919a9dad36f5f259ec62a7ede626785a',kind:'release',label:'Exact Version Lab, global date/time reports and subscribed-calendar refresh'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
