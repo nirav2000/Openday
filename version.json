@@ -1,6 +1,6 @@
 {
-  "version": "2.2.0",
+  "version": "2.2.1",
   "released": "2026-09-23",
   "channel": "main",
-  "summary": "Add an exact Git-backed Version Lab, make user-reported date/time corrections global with stable pseudonymous attribution, and refresh subscribed calendars from global reports."
+  "summary": "Stop inventing end times in shared and individual calendar events when a school only publishes a start time."
 }
