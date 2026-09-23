@@ -1874,14 +1874,14 @@
       "journey": 25,
       "priority": 5,
       "entry": "11+",
-      "event": "Year 7 Open Event",
-      "start": "2026-09-28",
+      "event": "Year 7 Open Evening",
+      "start": "2026-09-28T17:00:00+01:00",
       "end": null,
       "status": "reported",
       "bookingRequired": true,
       "infoUrl": "https://michaela.education/home/secondary-school-wembley/",
       "bookingUrl": "https://michaela.education/home/secondary-school-wembley/visit-michaela-community-school-wembley/",
-      "note": "Monday 28 September 2026 has been reported for the Year 7 open event. Michaela's official site confirms Year 7 open-event registration, but the indexed page does not expose the exact current event date/time; recheck the booking page before travelling.",
+      "note": "Monday 28 September 2026 at 17:00 has been reported for the Year 7 Open Evening. Treat as reported until the exact current event listing is independently verified on the school's official site.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": "2027-10-31",
@@ -1897,7 +1897,7 @@
         },
         "bookingUrl": {
           "checked": "2026-09-23",
-          "status": "official-registration-page-date-not-indexed"
+          "status": "reported-time-user-supplied"
         },
         "admission": {
           "checked": "2026-09-16",
