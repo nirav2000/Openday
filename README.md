@@ -51,7 +51,7 @@ Public content uses an anonymous Year-5 (2026/27) planning profile. Do not commi
 
 ## Version Lab
 
-The deployed app includes **Version Lab** at `/Openday/version-lab/`. Each historical release opens an exact snapshot created with `git archive <commit>` during deployment. The old app files are therefore taken from the historical commit tree itself, not rebuilt from today's files or today's `version.json`.
+The deployed app includes **Version Lab** at `/Openday/version-lab/`. Each historical release opens an exact snapshot created with `git archive <commit>` during deployment. The old app files are therefore taken from the historical commit tree itself, not rebuilt from today's files or today's `version.json`. The historical front end is exact, but external cloud services are not versioned with it; retired sync endpoints/auth users/rules may therefore no longer function.
 
 Versions 1.0.0–1.3.0 pre-date semantic version metadata; the version labels for those milestones are reconstructed, but the files shown are the original files from the selected commits.
 
@@ -61,4 +61,4 @@ School date and time corrections entered through Openday are public reported dat
 
 Personal visit notes, saved schools and booking state remain private.
 
-The public calendar feed is rebuilt hourly and on every deployment. Official catalogue changes and global date/time reports therefore flow into the subscribed `calendar.ics` feed without changing the subscription URL.
+The public calendar feed is no longer rebuilt on a timer or on unrelated app deployments. A dedicated workflow regenerates `calendar.ics` only when calendar-source files change and commits the feed only when its contents actually differ. Verified catalogue changes therefore update existing subscribers without needless hourly rewrites. Public reported corrections remain visible in the app immediately; they enter the subscribed feed when they are verified/promoted into the calendar-source data or the calendar publisher is explicitly run.
