@@ -218,7 +218,15 @@
     const hash=await deriveTokenHash(value);
     const ownerSnap=await FStore.getDoc(ref),ownerData=ownerSnap.exists()?ownerSnap.data():{};
     const existingHash=ownerData.activeTokenHash||activeTokenHash||'';
-    const merged=mergeStates(readLocal(),ownerData.state||{});merged.updatedAt=new Date().toISOString();writeLocal(merged);
+    let merged=mergeStates(readLocal(),ownerData.state||{});
+    if(existingHash){
+      try{
+        window.FirebaseUsageMonitor?.read(1,'token-state-reset-read','openday','kk-syllabus','(default)');
+        const prior=await FStore.getDoc(FStore.doc(db,cfg.tokenCollection,existingHash));
+        if(prior.exists())merged=mergeStates(merged,prior.data()?.state||{});
+      }catch(error){console.warn('Could not merge prior memorable-token state before reset',error)}
+    }
+    merged.updatedAt=new Date().toISOString();writeLocal(merged);
     if(rotate&&existingHash&&existingHash!==hash){
       try{
         const oldRef=FStore.doc(db,cfg.tokenCollection,existingHash);
