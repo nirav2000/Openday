@@ -6,6 +6,13 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.2.2 — 2026-09-23
+
+- Removed the hourly Pages schedule and stopped rebuilding the subscribed calendar on unrelated app deployments.
+- Added a dedicated calendar publisher that runs only when calendar-source files change (or when explicitly dispatched) and commits `calendar.ics` only if its contents actually differ.
+- Clarified Version Lab compatibility: historical front-end files are exact, but retired cloud endpoints, Firebase Auth users and Firestore rules are not time-travelled and may no longer work.
+- Historical snapshots remain useful for inspecting original UI, static data, local-storage behaviour and the exact sync code that existed at each commit.
+
 ## 2.2.1 — 2026-09-23
 
 - Calendar events with a known start but unknown finish now omit `DTEND` instead of assuming a two-hour duration.
