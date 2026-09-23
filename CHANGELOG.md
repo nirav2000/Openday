@@ -6,6 +6,12 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.2.1 — 2026-09-23
+
+- Calendar events with a known start but unknown finish now omit `DTEND` instead of assuming a two-hour duration.
+- Applies to both the shared subscribed calendar and individual Add-to-calendar exports.
+- Keeps date-only events as proper all-day events.
+
 ## 2.2.0 — 2026-09-23
 
 - Added a **Version Lab** that deploys exact historical app trees from their original Git commits rather than reconstructing old versions from current files.
