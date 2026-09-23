@@ -6,6 +6,15 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 1.6.0 — 2026-09-23
+
+- Added a private **My update** panel near the top of each school visit for personal date, start-time, end-time and note corrections.
+- Personal corrections autosave locally and are included in Openday private cross-device state sync.
+- Personal corrections affect list ordering, Upcoming counts, calendar placement and individual calendar export while leaving the school's source-verification status intact.
+- Added Michaela Community School's reported Monday 28 September 2026 Open Evening start time of 17:00.
+- Tagged Firebase usage explicitly as `kk-syllabus → (default) → openday` for the shared Apps Firebase usage monitor.
+- Added listener-snapshot read accounting so Openday's observed Firestore reads/writes are broken down by operation in the monitor.
+
 ## 1.5.1 — 2026-09-23
 
 - Fixed a JavaScript syntax error in the Firebase catalogue reader discovered by deployment validation.
