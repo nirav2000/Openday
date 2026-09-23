@@ -2,7 +2,7 @@
   const style=document.createElement('style');
   style.textContent=`
     [hidden]{display:none!important}
-    .header-actions{display:flex;align-items:center;gap:8px}
+    .header-actions{display:flex;align-items:center;gap:8px}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}
     .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px}
     .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}
     .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 0;min-height:1.1em}.autosave-status.saved{color:#15805d}.autosave-status.error{color:#b94444}
@@ -22,7 +22,8 @@
     const header=document.querySelector('header');if(!header||document.querySelector('#syncPill'))return;
     let actions=header.querySelector('.header-actions');
     if(!actions){actions=document.createElement('div');actions.className='header-actions';const install=document.querySelector('#installBtn');if(install)actions.appendChild(install);header.appendChild(actions)}
-    const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.isConnected?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,actions.firstChild);button.onclick=openSyncDialog;
+    const history=document.createElement('a');history.className='version-link';history.href='version-lab/';history.textContent='Versions';history.setAttribute('aria-label','Open Version Lab');actions.insertBefore(history,actions.firstChild);
+    const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.isConnected?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,history);button.onclick=openSyncDialog;
   }
 
   function ensureSyncDialog(){
@@ -42,10 +43,9 @@
       </div>
       <hr style="border:0;border-top:1px solid #e5ebf0;margin:18px 0">
       <h3>Forgotten token?</h3>
-      <p class="token-help">A forgotten token cannot be recovered from the cloud because only a derived capability ID is stored there. If you are signed in to Kk-syllabus as the parent, you can replace it without losing your saved schools, notes or bookings.</p>
+      <p class="token-help">A forgotten token cannot be reconstructed from the cloud because the plaintext is never stored there. First try <b>Show saved token</b> on any device that used Openday before. If no device remembers it, the token can be administratively replaced while keeping the existing Openday data.</p>
       <div class="modal-actions">
-        <button id="replaceToken" type="button">Set / replace token</button>
-        <a href="${sync?.loginUrl||'https://nirav2000.github.io/Kk-syllabus/'}" target="_blank" rel="noopener">Open Kk-syllabus ↗</a>
+        <button id="replaceToken" type="button" hidden>Set / replace token</button>
         <button id="forgetToken" type="button">Forget on this device</button>
       </div>
       <p id="syncMessage" class="sync-message"></p>
@@ -69,14 +69,14 @@
       try{await navigator.clipboard.writeText(link);e.currentTarget.textContent='Copied ✓';setMessage('Private setup link copied.','ok')}
       catch{setMessage('Could not copy the setup link on this browser.','error')}
     };
-    d.querySelector('#replaceToken').onclick=async()=>{
+    const replace=d.querySelector('#replaceToken');
+    if(replace&&sync?.ownerConnected?.()){replace.hidden=false;replace.onclick=async()=>{
       const token=input.value;
       if(!token){setMessage('Enter the new memorable token you want to use first.','error');return}
-      if(!sync?.ownerConnected?.()){setMessage('To replace a forgotten token, sign in to Kk-syllabus with the parent account first, then return here.','error');return}
       setMessage('Replacing token and preserving existing state…');
       try{await sync.resetMemorableToken(token);setMessage('Memorable token replaced. Existing Openday data has been kept and this device is synced.','ok')}
       catch(error){setMessage(error.message||'Could not replace token.','error')}
-    };
+    }}
     d.querySelector('#forgetToken').onclick=()=>{sync?.forgetToken?.();input.value='';setMessage('The token was forgotten on this device. Cloud data was not deleted.','ok')};
     d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};
     return d;
