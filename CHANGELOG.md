@@ -6,6 +6,13 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.2.4 — 2026-09-23
+
+- Removed the hourly refresh hint from the subscribed calendar.
+- The calendar is now generated only from committed calendar-source data.
+- Unverified user-reported date/time corrections remain global in the app but do not enter subscribed calendars until verified/promoted into the source catalogue.
+- This keeps subscribed calendars stable and change-driven.
+
 ## 2.2.3 — 2026-09-23
 
 - Fixed the change-driven calendar publisher so it rebases cleanly before regenerating and committing `calendar.ics`.
