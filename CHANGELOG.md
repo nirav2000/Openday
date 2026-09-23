@@ -6,6 +6,12 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.0.2 — 2026-09-23
+
+- Added recovery for the obsolete Openday Firebase sign-in used by earlier builds.
+- If that legacy session is still cached in the browser, Openday now clears it and prompts for the existing Kk-syllabus parent sign-in.
+- Existing Firestore private state is preserved; this fixes the appearance of saved schools/notes being missing after the shared-auth migration.
+
 ## 2.0.1 — 2026-09-23
 
 - Completed the shared Kk-syllabus authentication migration.
