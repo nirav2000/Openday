@@ -29,6 +29,8 @@ jobs:
           node --check plugins/developer-notes.js
           node --check plugins/version-lab.js
           node --check plugins/firebase-auth.js
+          node --check scripts/sync-firestore.mjs
+          node -e "JSON.parse(require('fs').readFileSync('data/schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/primary-schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/enhancements.json','utf8'));"
       - name: Validate semantic version
         run: |
           node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('version.json','utf8')).version;if(!/^\\d+\\.\\d+\\.\\d+$/.test(v))throw Error('version.json must contain SemVer x.y.z');const html=fs.readFileSync('index.html','utf8');if(!html.includes('v'+v)||!html.includes('?v='+v))throw Error('index.html version/cache bust does not match version.json');console.log('Release',v)"
