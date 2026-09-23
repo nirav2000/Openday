@@ -28,14 +28,58 @@
   function ensureSyncDialog(){
     let d=document.querySelector('#syncDialog');if(d)return d;
     d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';
-    d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync through Kk-syllabus</h2><p>Openday uses the same Firebase project and parent sign-in as Kk-syllabus. There is no separate Openday Firebase account, token or password.</p><div class="modal-actions"><button id="checkSharedSignIn" class="primary" type="button">Check shared sign-in</button><a href="${sync?.loginUrl||'https://nirav2000.github.io/Kk-syllabus/'}" target="_blank" rel="noopener">Open Kk-syllabus ↗</a></div><p id="syncMessage" class="sync-message"></p><p class="sources">If Kk-syllabus is already signed in in this browser, Openday should connect automatically. Otherwise open Kk-syllabus, sign in with the parent account, then return here.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;
-    document.body.appendChild(d);const message=d.querySelector('#syncMessage');
-    d.querySelector('#checkSharedSignIn').onclick=async()=>{
-      message.className='sync-message';message.textContent='Checking kk-syllabus sign-in…';
-      try{await sync.connect();message.className='sync-message ok';message.textContent='Connected to kk-syllabus. Changes will sync automatically.'}
-      catch(error){message.className='sync-message error';message.textContent=error.message==='owner-mismatch'?'Sign in to the parent account in Kk-syllabus, then return and check again.':error.message}
+    d.innerHTML=`<div class="detail-inner">
+      <p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p>
+      <h2>Sync across your devices</h2>
+      <p>Use your memorable token on any device. Openday keeps using the <b>kk-syllabus</b> Firebase project; the token is simply your private access capability.</p>
+      <label for="syncToken"><b>Memorable token</b></label>
+      <input id="syncToken" type="text" autocomplete="off" spellcheck="false" placeholder="Enter your memorable token">
+      <p class="token-help">If this browser still remembers your old token, <b>Show saved token</b> can reveal it. The token itself is not stored in Firestore, so if no device remembers it, sign in to Kk-syllabus once and set a replacement. Your existing Openday data is preserved.</p>
+      <div class="modal-actions">
+        <button id="connectToken" class="primary" type="button">Connect & sync</button>
+        <button id="showSavedToken" type="button">Show saved token</button>
+        <button id="copySetupLink" type="button">Copy setup link</button>
+      </div>
+      <hr style="border:0;border-top:1px solid #e5ebf0;margin:18px 0">
+      <h3>Forgotten token?</h3>
+      <p class="token-help">A forgotten token cannot be recovered from the cloud because only a derived capability ID is stored there. If you are signed in to Kk-syllabus as the parent, you can replace it without losing your saved schools, notes or bookings.</p>
+      <div class="modal-actions">
+        <button id="replaceToken" type="button">Set / replace token</button>
+        <a href="${sync?.loginUrl||'https://nirav2000.github.io/Kk-syllabus/'}" target="_blank" rel="noopener">Open Kk-syllabus ↗</a>
+        <button id="forgetToken" type="button">Forget on this device</button>
+      </div>
+      <p id="syncMessage" class="sync-message"></p>
+    </div><button class="close" data-close-sync aria-label="Close">×</button>`;
+    document.body.appendChild(d);
+    const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage');
+    const setMessage=(text,kind='')=>{message.className='sync-message'+(kind?' '+kind:'');message.textContent=text};
+    d.querySelector('#connectToken').onclick=async()=>{
+      setMessage('Connecting…');
+      try{await sync.connect(input.value);setMessage('Connected. This device will now sync using the memorable token.','ok')}
+      catch(error){setMessage(error.message||'Could not connect.','error')}
     };
-    d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};return d;
+    d.querySelector('#showSavedToken').onclick=()=>{
+      const token=sync?.getToken?.()||'';
+      if(!token){setMessage('This browser does not have the memorable token saved. Sign in to Kk-syllabus and set a replacement token.','error');return}
+      input.value=token;setMessage('Saved token shown above.','ok');
+    };
+    d.querySelector('#copySetupLink').onclick=async e=>{
+      const token=input.value||sync?.getToken?.()||'',link=sync?.setupLink?.(token);
+      if(!link){setMessage('Enter your memorable token first.','error');return}
+      try{await navigator.clipboard.writeText(link);e.currentTarget.textContent='Copied ✓';setMessage('Private setup link copied.','ok')}
+      catch{setMessage('Could not copy the setup link on this browser.','error')}
+    };
+    d.querySelector('#replaceToken').onclick=async()=>{
+      const token=input.value;
+      if(!token){setMessage('Enter the new memorable token you want to use first.','error');return}
+      if(!sync?.ownerConnected?.()){setMessage('To replace a forgotten token, sign in to Kk-syllabus with the parent account first, then return here.','error');return}
+      setMessage('Replacing token and preserving existing state…');
+      try{await sync.resetMemorableToken(token);setMessage('Memorable token replaced. Existing Openday data has been kept and this device is synced.','ok')}
+      catch(error){setMessage(error.message||'Could not replace token.','error')}
+    };
+    d.querySelector('#forgetToken').onclick=()=>{sync?.forgetToken?.();input.value='';setMessage('The token was forgotten on this device. Cloud data was not deleted.','ok')};
+    d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};
+    return d;
   }
   function openSyncDialog(){ensureSyncDialog().showModal()}
 
@@ -64,5 +108,5 @@
 
   enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
-  updateSyncStatus({state:sync?.isConnected?.()?'syncing':'local',text:sync?.isConnected?.()?'Checking cloud…':'Local only'});
+  updateSyncStatus({state:sync?.isConnected?.()?'syncing':'local',text:sync?.isConnected?.()?'Checking cloud…':'Enter memorable token to sync'});
 })();
