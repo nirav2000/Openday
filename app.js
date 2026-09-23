@@ -82,7 +82,7 @@ function updateCounts(){const now=new Date();$('#upcomingCount').textContent=sch
 function alternateRows(s){
   const extra=schoolExtra(s);
   const same=schools.filter(x=>x.name===s.name&&x.id!==s.id).map(x=>({event:x.event,start:x.start,end:x.end,status:x.status,note:x.note,bookingUrl:x.bookingUrl,source:'tracker'}));
-  return [...same,...(extra.alternateVisits||[])].sort((a,b)=>{
+  return [...same,...(s.alternateVisits||[]),...(extra.alternateVisits||[])].sort((a,b)=>{
     if(a.start&&b.start)return dateObj(a.start)-dateObj(b.start); if(a.start)return-1;if(b.start)return 1;return 0;
   });
 }
