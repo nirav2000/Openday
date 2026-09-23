@@ -19,6 +19,10 @@ const releases=[
   {version:'2.1.0',commit:'beb6d21921fe5d12d85dc48ebad297e7f0646413',kind:'release',label:'Memorable-token restoration'}
 ];
 
+const current=JSON.parse(fs.readFileSync('version.json','utf8'));
+const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+if(!releases.some(r=>r.version===current.version))releases.push({version:current.version,commit:head,kind:'release',label:current.summary||'Current release'});
+
 const root='version-lab';
 const snapshots=path.join(root,'snapshots');
 fs.rmSync(snapshots,{recursive:true,force:true});
