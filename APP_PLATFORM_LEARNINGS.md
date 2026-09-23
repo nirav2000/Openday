@@ -24,56 +24,42 @@ Use Firebase Authentication for multi-user apps, roles, parent/child accounts or
 
 Reusable adapter: `plugins/firebase-auth.js`.
 
-### Memorable-token personal mode
+### Shared parent-session personal mode
 
-Openday is currently a one-user app, so the UI should not show an email/password login form or require each device to be individually approved.
-
-The no-Functions pattern is:
+Openday is a one-user app, but it does not need a separate Firebase identity. It reuses the existing parent Firebase Authentication session from the `kk-syllabus` project.
 
 ```text
-memorable token entered in Openday
-        -> Firebase Email/Password Authentication
-           using a fixed internal Openday email
-        -> authenticated Firebase session persists on the device
-        -> Firestore rules permit only that dedicated account
+parent signs in to Kk-syllabus
+        -> Firebase persists that parent session in the browser
+        -> Openday uses the same Firebase project/configuration
+        -> Firestore rules permit only the configured parent UID
         -> app_private_state/openday
 ```
 
-The memorable token is therefore the password for one dedicated Firebase Authentication user. The internal email is fixed in the app and not shown to the user.
-
 Benefits:
+- one Firebase project and one parent identity;
+- no separate Openday password or token to manage;
 - no Firebase Functions;
-- no per-device approval;
-- no visible email/login flow;
-- the same token works on iPhone, iPad and Mac;
-- Firebase handles authenticated session persistence;
-- Firestore is not anonymously writable.
+- Firestore remains owner-only;
+- the same private Openday state can follow the parent account across devices.
 
-Trade-off: the memorable token is a real password. It should be a long passphrase (ideally four or more unrelated words plus digits), not a short PIN.
+Reusable adapter: `plugins/firebase-token-sync.js` (name retained for compatibility, behaviour now uses the shared parent session).
 
-Reusable adapter: `plugins/firebase-token-sync.js`.
+## 3. Automated catalogue publishing
 
-## 3. One-time Firebase setup for token sync
+The school catalogue is public app data, but Openday also mirrors it into the `kk-syllabus` Firestore document so connected clients can receive current catalogue data.
 
-In Firebase Console:
+The scheduled publisher lives in the **Kk-syllabus repository**, not the Openday repository, because Kk-syllabus already holds the authorised GitHub Actions secret `FIREBASE_SERVICE_ACCOUNT_KK_SYLLABUS`.
 
-1. Enable **Authentication -> Sign-in method -> Email/Password**.
-2. Under **Authentication -> Users**, create one user with email:
-   `openday-sync@nirav2000.github.io`
-3. Set its password to the memorable token you want to type into Openday.
-4. Publish Firestore rules containing the dedicated Openday rule from `nirav2000/Kk-syllabus/firestore.rules`.
+The publisher:
+- fetches the latest Openday senior, primary and enhancement JSON plus `version.json`;
+- hashes the source bundle;
+- skips the Firestore write when nothing changed;
+- writes only the catalogue fields when the hash changes, preserving private Openday state.
 
-No Cloud Function, Secret Manager value or server deployment is required for Openday sync.
+## 4. Do not put credentials in public JavaScript
 
-The relevant Firestore rule permits only the authenticated Openday account to read/create/update `app_private_state/openday`; deletes remain disabled.
-
-## 4. Do not use a token baked into public JavaScript
-
-A literal secret inside GitHub Pages source is not secret. Anybody can inspect it.
-
-A fixed internal email is acceptable because it is an identifier, not a credential. The memorable token/password must be supplied by the user and handled by Firebase Authentication.
-
-Likewise, do not make a public collection writable merely because there is currently one user.
+Firebase web configuration is public project metadata, not a secret. Service-account credentials, parent passwords and private capability URLs must never be committed to a public repository.
 
 ## 5. Autosave is a reusable capability
 
@@ -150,7 +136,7 @@ plugins/
   app-platform.js         registry/event bus
   autosave.js             debounced autosave helper
   firebase-auth.js        conventional Firebase account adapter
-  firebase-token-sync.js  no-visible-login personal sync adapter
+  firebase-token-sync.js  shared Kk-syllabus parent-session sync adapter
   developer-notes.js      common developer-note contract
   version-lab.js          release/decision/development-brief contract
 ```
@@ -182,15 +168,15 @@ Public planning context can remain anonymous, e.g. `Year 5 / September 2028 entr
 
 ## 11. Current Openday setup
 
-Openday release **1.4.0** removes the proposed Cloud Function sync gateway. The app signs directly into Firebase Authentication with the hidden dedicated email and user-entered memorable token, then uses Firestore under restrictive rules.
+Openday release **2.0.1** uses the existing Kk-syllabus parent Authentication session. There is no separate Openday Firebase account or memorable-token password.
 
 Current user-state flow:
 
 ```text
-edit note / save school / mark booked
+edit note / save school / mark booked / add personal date-time correction
         -> localStorage immediately
         -> autosave debounce
-        -> Firebase authenticated Firestore sync when connected
+        -> owner-authenticated kk-syllabus Firestore sync when connected
 ```
 
 The app remains usable locally if Firebase is unavailable.
