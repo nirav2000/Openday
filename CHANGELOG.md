@@ -6,6 +6,12 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 1.5.1 — 2026-09-23
+
+- Fixed a JavaScript syntax error in the Firebase catalogue reader discovered by deployment validation.
+- Primary-school alternative visit dates are now shown in the same Other visits panel.
+- Kept the 1.5 feature set unchanged; this is a patch release.
+
 ## 1.5.0 — 2026-09-23
 
 - Added a school-phase toggle: Senior / secondary is the default; Primary is available alongside it.
