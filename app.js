@@ -140,6 +140,8 @@ function renderCalendar(out){
 function setView(view){currentView=view;$('#listViewBtn').classList.toggle('active',view==='list');$('#calendarViewBtn').classList.toggle('active',view==='calendar');render()}
 function resetCalendarCursor(){const upcoming=schools.filter(s=>s.start&&dateObj(s.start)>=new Date()).sort((a,b)=>dateObj(a.start)-dateObj(b.start));const d=upcoming[0]?dateObj(upcoming[0].start):new Date();calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
 function setPhase(phase){schoolPhase=phase;schools=schoolSets[phase]||[];$('#seniorPhaseBtn')?.classList.toggle('active',phase==='senior');$('#primaryPhaseBtn')?.classList.toggle('active',phase==='primary');const hint=$('#phaseHint');if(hint)hint.textContent=phase==='senior'?'Senior / secondary open days':'Primary / Reception open days';resetCalendarCursor();render()}
+function applyCloudCatalog(detail={}){let changed=false;if(detail.senior?.schools){schoolSets.senior=detail.senior.schools;schoolMeta.senior=detail.senior.meta||schoolMeta.senior;changed=true}if(detail.primary?.schools){schoolSets.primary=detail.primary.schools;schoolMeta.primary=detail.primary.meta||schoolMeta.primary;changed=true}if(detail.enhancements?.schools){enhancements=detail.enhancements;changed=true}if(changed){schools=schoolSets[schoolPhase]||[];render()}}
+window.addEventListener('openday:catalog-state',e=>applyCloudCatalog(e.detail));
 function openSubscribe(){const https=`${location.origin}${location.pathname.replace(/[^/]*$/,'')}calendar.ics`;$('#icsLink').href=https;$('#webcalLink').href=https.replace(/^https?:/,'webcal:');$('#subscribeDialog').showModal()}
 function checkBookingNotifications(){if(!('Notification'in window)||Notification.permission!=='granted')return;for(const id of state.watchBooking){const w=enhancements.schools?.[id]?.bookingWatch;if(w?.status==='open')new Notification('School booking is open',{body:`${schools.find(s=>s.id===id)?.name||'School'} booking now appears open.`,tag:`booking-${id}`})}}
 
@@ -159,7 +161,7 @@ Promise.all([
   fetch('data/enhancements.json').then(r=>r.ok?r.json():({meta:{},schools:{}}))
 ]).then(([senior,primary,e])=>{
   schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;resetCalendarCursor();
-  render();checkBookingNotifications();
+  if(window.OpenDayCatalog)applyCloudCatalog(window.OpenDayCatalog);else render();checkBookingNotifications();
   const oldest=[senior.meta?.updated,primary.meta?.updated].filter(Boolean).sort()[0];if(oldest&&new Date()-new Date(oldest)>30*864e5){$('#notice').hidden=false;$('#notice').textContent='Some school details were last reviewed over 30 days ago. Re-check dates before making plans.'}
 }).catch(e=>{$('#list').innerHTML=`<p class="empty">${e.message}. Please refresh.</p>`});
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
