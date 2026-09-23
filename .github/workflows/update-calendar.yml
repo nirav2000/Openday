@@ -36,6 +36,12 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          node scripts/generate-calendar.mjs
+          if git diff --quiet -- calendar.ics; then
+            echo "calendar.ics became current after rebasing; nothing to publish."
+            exit 0
+          fi
           git add calendar.ics
           git commit -m "Update subscribed calendar"
-          git push
+          git push origin HEAD:main
