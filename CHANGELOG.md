@@ -6,6 +6,14 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.0.1 — 2026-09-23
+
+- Completed the shared Kk-syllabus authentication migration.
+- Removed the obsolete Openday-side Firestore publishing workflow and password-based publishing script.
+- Moved scheduled catalogue publishing into the Kk-syllabus repository, using its existing authorised service-account secret.
+- Catalogue publishing now hashes the Openday source bundle and skips Firestore writes when nothing changed.
+- Updated documentation to remove the obsolete dedicated Openday Firebase user/token setup.
+
 ## 2.0.0 — 2026-09-23
 
 - Removed the separate Openday token/password authentication design.
