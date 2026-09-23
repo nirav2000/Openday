@@ -175,3 +175,25 @@ edit note / save school / mark booked / add personal date-time correction
 ```
 
 The app remains usable locally if Firebase is unavailable.
+
+
+### Exact Git-backed Version Lab
+
+Do not emulate older versions by loading historical metadata into the current app. For trustworthy regression work, build a deploy-time snapshot from the original Git tree:
+
+```text
+release label -> pinned commit SHA -> git archive -> deployed read-only historical tree
+```
+
+This means the JavaScript, CSS, HTML, data and service-worker files being inspected are the files that existed at that commit. If semantic version metadata did not yet exist, label the milestone as reconstructed rather than fabricating a historical version file.
+
+### Global reports vs private state
+
+Keep public factual corrections separate from private user state:
+
+- **global reported data:** school date/time corrections, pseudonymous contributor, timestamp
+- **private data:** visit notes, saved schools, booked flags and personal planning
+
+A memorable token produces a stable pseudonymous contributor identity across devices. Without a token, use a persistent random device seed. Never publish the user's private note text when promoting an old local date/time override into the global report stream.
+
+The calendar builder should consume both the authoritative catalogue and the latest public reports, use stable UIDs, and rebuild on a schedule so existing subscribers receive corrected dates without resubscribing.
