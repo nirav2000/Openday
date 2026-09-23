@@ -2,8 +2,6 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: '17 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -42,8 +40,6 @@ jobs:
           node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('version.json','utf8')).version;if(!/^\\d+\\.\\d+\\.\\d+$/.test(v))throw Error('version.json must contain SemVer x.y.z');const html=fs.readFileSync('index.html','utf8');if(!html.includes('v'+v)||!html.includes('?v='+v))throw Error('index.html version/cache bust does not match version.json');console.log('Release',v)"
       - name: Build exact Version Lab snapshots
         run: node scripts/build-version-lab.mjs
-      - name: Generate subscribable calendar
-        run: node scripts/generate-calendar.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
