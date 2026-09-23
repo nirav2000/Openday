@@ -22,25 +22,20 @@
     const header=document.querySelector('header');if(!header||document.querySelector('#syncPill'))return;
     let actions=header.querySelector('.header-actions');
     if(!actions){actions=document.createElement('div');actions.className='header-actions';const install=document.querySelector('#installBtn');if(install)actions.appendChild(install);header.appendChild(actions)}
-    const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.hasToken?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,actions.firstChild);button.onclick=openSyncDialog;
+    const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.isConnected?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,actions.firstChild);button.onclick=openSyncDialog;
   }
 
   function ensureSyncDialog(){
     let d=document.querySelector('#syncDialog');if(d)return d;
-    d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync across your devices</h2><p>Enter the same memorable token on each device. There is no visible account or login screen.</p><label for="syncToken"><b>Memorable token</b></label><input id="syncToken" type="text" autocomplete="off" spellcheck="false" placeholder="Enter token"><p class="token-help">The token is shown as you type. Openday does not impose its own length or format rules.</p><div class="modal-actions"><button id="connectToken" class="primary" type="button">Connect & sync</button><button id="copySetupLink" type="button">Copy setup link</button><button id="forgetToken" type="button">Forget token</button></div><p id="syncMessage" class="sync-message"></p><p class="sources">Use the same token on another device, or paste it manually here. A setup link can carry it in the URL fragment, which is removed after the app reads it.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;document.body.appendChild(d);
-    const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage');
-    d.querySelector('#connectToken').onclick=async()=>{
-      message.className='sync-message';message.textContent='Connecting…';
-      try{await sync.connect(input.value);message.className='sync-message ok';message.textContent='Connected. Changes will sync automatically.'}
-      catch(error){message.className='sync-message error';message.textContent=error.message}
+    d=document.createElement('dialog');d.id='syncDialog';d.className='sync-dialog';
+    d.innerHTML=`<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">PRIVATE SYNC</p><h2>Sync through Kk-syllabus</h2><p>Openday uses the same Firebase project and parent sign-in as Kk-syllabus. There is no separate Openday Firebase account, token or password.</p><div class="modal-actions"><button id="checkSharedSignIn" class="primary" type="button">Check shared sign-in</button><a href="${sync?.loginUrl||'https://nirav2000.github.io/Kk-syllabus/'}" target="_blank" rel="noopener">Open Kk-syllabus ↗</a></div><p id="syncMessage" class="sync-message"></p><p class="sources">If Kk-syllabus is already signed in in this browser, Openday should connect automatically. Otherwise open Kk-syllabus, sign in with the parent account, then return here.</p></div><button class="close" data-close-sync aria-label="Close">×</button>`;
+    document.body.appendChild(d);const message=d.querySelector('#syncMessage');
+    d.querySelector('#checkSharedSignIn').onclick=async()=>{
+      message.className='sync-message';message.textContent='Checking kk-syllabus sign-in…';
+      try{await sync.connect();message.className='sync-message ok';message.textContent='Connected to kk-syllabus. Changes will sync automatically.'}
+      catch(error){message.className='sync-message error';message.textContent=error.message==='owner-mismatch'?'Sign in to the parent account in Kk-syllabus, then return and check again.':error.message}
     };
-    d.querySelector('#copySetupLink').onclick=async e=>{
-      const link=sync?.setupLink?.(input.value);if(!link){message.className='sync-message error';message.textContent='Enter your token first.';return}
-      try{await navigator.clipboard.writeText(link);e.currentTarget.textContent='Copied ✓';message.className='sync-message ok';message.textContent='Private setup link copied.'}catch{message.className='sync-message error';message.textContent='Could not copy the link on this browser.'}
-    };
-    d.querySelector('#forgetToken').onclick=()=>{sync?.disconnect?.();input.value='';message.className='sync-message';message.textContent='Firebase session removed from this device.'};
-    d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};
-    return d;
+    d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};return d;
   }
   function openSyncDialog(){ensureSyncDialog().showModal()}
 
@@ -54,8 +49,8 @@
 
   function identifyOpenSchool(){const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;const dateText=document.querySelector('#detailBody .bigdate')?.textContent;return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null}
   function enhanceDetail(){
-    const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;const school=identifyOpenSchool();if(!school)return;note.dataset.autosave='1';document.querySelector('#detailBody #saveNote')?.remove();const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved automatically · sync connected':'Saved automatically on this device';note.after(status);
-    const persist=()=>{state.notes[school.id]=note.value;saveState();status.className='autosave-status saved';status.textContent=sync?.hasToken?.()?'Saved locally · syncing…':'Saved on this device';sync?.schedule?.()};note.addEventListener('input',()=>{status.className='autosave-status';status.textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(persist,350)});note.addEventListener('blur',()=>{clearTimeout(noteTimer);persist()});
+    const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;const school=identifyOpenSchool();if(!school)return;note.dataset.autosave='1';document.querySelector('#detailBody #saveNote')?.remove();const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.isConnected?.()?'Saved automatically · sync connected':'Saved automatically on this device';note.after(status);
+    const persist=()=>{state.notes[school.id]=note.value;saveState();status.className='autosave-status saved';status.textContent=sync?.isConnected?.()?'Saved locally · syncing…':'Saved on this device';sync?.schedule?.()};note.addEventListener('input',()=>{status.className='autosave-status';status.textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(persist,350)});note.addEventListener('blur',()=>{clearTimeout(noteTimer);persist()});
     const cal=document.querySelector('#detailBody #calendar');if(cal){cal.classList.add('calendar-action');cal.innerHTML='<span class="calendar-glyph" aria-hidden="true">📅</span> Add to calendar';cal.setAttribute('aria-label','Add this visit to calendar')}
   }
   const detailBody=document.querySelector('#detailBody');if(detailBody)new MutationObserver(enhanceDetail).observe(detailBody,{childList:true,subtree:true});
@@ -69,5 +64,5 @@
 
   enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
-  updateSyncStatus({state:sync?.hasToken?.()?'syncing':'local',text:sync?.hasToken?.()?'Checking cloud…':'Local only'});
+  updateSyncStatus({state:sync?.isConnected?.()?'syncing':'local',text:sync?.isConnected?.()?'Checking cloud…':'Local only'});
 })();
