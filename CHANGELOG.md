@@ -6,6 +6,17 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 1.5.0 — 2026-09-23
+
+- Added a school-phase toggle: Senior / secondary is the default; Primary is available alongside it.
+- Added a primary-school catalogue seeded from the Harrow primary-school guide, plus currently published nearby open-event dates where verified.
+- Replaced generic `TBC` wording with explicit states such as checking date, reported, and previous-year date.
+- Previous-year dates can now be shown as planning guides without implying they are current.
+- Added support for date-only events when a school publishes the day but not the event time.
+- Updated St Clement Danes to Saturday 26 September 2026 from the school's calendar, with time left unpublished.
+- Added Michaela's reported Monday 28 September 2026 event as reported pending exact official time/date verification.
+- Added automation plumbing so refreshed school catalogues can be mirrored to Firestore without Firebase Functions.
+
 ## 1.4.1 — 2026-09-17
 
 - Memorable token is visible while entering it.
