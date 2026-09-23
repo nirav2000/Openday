@@ -117,7 +117,7 @@ function downloadICS(s){
   const dt=x=>dateObj(x).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
   let timing;
   if(dateOnly(s.start)){const start=s.start.replace(/-/g,''),d=dateObj(s.start);d.setDate(d.getDate()+1);const end=`${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;timing=[`DTSTART;VALUE=DATE:${start}`,`DTEND;VALUE=DATE:${end}`]}
-  else{const end=s.end||new Date(dateObj(s.start).getTime()+2*3600000).toISOString();timing=[`DTSTART:${dt(s.start)}`,`DTEND:${dt(end)}`]}
+  else{timing=[`DTSTART:${dt(s.start)}`];if(s.end)timing.push(`DTEND:${dt(s.end)}`)}
   const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//School Open Days//EN','BEGIN:VEVENT',`UID:${s.id}@openday`,`DTSTAMP:${dt(new Date())}`,...timing,`SUMMARY:${s.name} — ${s.event}`,`LOCATION:${schoolExtra(s).destination||s.area}`,`DESCRIPTION:${String(s.note||'').replace(/,/g,'\\,')} ${s.infoUrl}`,'BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:School open day tomorrow','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([body],{type:'text/calendar'}));a.download=`${s.name.replace(/[^a-z0-9]+/gi,'-').toLowerCase()}-open-day.ics`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);
 }
