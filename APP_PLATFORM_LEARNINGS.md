@@ -24,26 +24,21 @@ Use Firebase Authentication for multi-user apps, roles, parent/child accounts or
 
 Reusable adapter: `plugins/firebase-auth.js`.
 
-### Shared parent-session personal mode
+### Memorable-token personal mode with owner recovery
 
-Openday is a one-user app, but it does not need a separate Firebase identity. It reuses the existing parent Firebase Authentication session from the `kk-syllabus` project.
+Openday uses a memorable token as the normal cross-device access method while keeping the existing Kk-syllabus parent account as an owner/recovery route.
 
 ```text
-parent signs in to Kk-syllabus
-        -> Firebase persists that parent session in the browser
-        -> Openday uses the same Firebase project/configuration
-        -> Firestore rules permit only the configured parent UID
-        -> app_private_state/openday
+memorable token
+        -> PBKDF2-derived 256-bit capability document ID
+        -> exact Firestore document read/write
+        -> collection listing forbidden
+        -> Openday private state
 ```
 
-Benefits:
-- one Firebase project and one parent identity;
-- no separate Openday password or token to manage;
-- no Firebase Functions;
-- Firestore remains owner-only;
-- the same private Openday state can follow the parent account across devices.
+The plaintext token is never stored in Firestore. A browser that remembers the token can reveal it locally. If every device has forgotten it, the parent can sign in through Kk-syllabus and rotate to a new memorable token without losing the existing private state.
 
-Reusable adapter: `plugins/firebase-token-sync.js` (name retained for compatibility, behaviour now uses the shared parent session).
+Reusable adapter: `plugins/firebase-token-sync.js`.
 
 ## 3. Automated catalogue publishing
 
@@ -168,7 +163,7 @@ Public planning context can remain anonymous, e.g. `Year 5 / September 2028 entr
 
 ## 11. Current Openday setup
 
-Openday release **2.0.1** uses the existing Kk-syllabus parent Authentication session. There is no separate Openday Firebase account or memorable-token password.
+Openday release **2.1.0** restores memorable-token sync while continuing to use the existing Kk-syllabus Firebase project. There is no separate Openday Firebase project or Firebase user; the Kk-syllabus parent account is the recovery/reset authority.
 
 Current user-state flow:
 
