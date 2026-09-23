@@ -1,5 +1,5 @@
 (()=>{
-  const cfg={stateKey:'openDayState',documentPath:['app_private_state','openday'],loginUrl:'https://nirav2000.github.io/Kk-syllabus/'};
+  const cfg={stateKey:'openDayState',documentPath:['app_private_state','openday'],loginUrl:'https://nirav2000.github.io/Kk-syllabus/',legacyEmail:'openday-sync@nirav2000.github.io'};
   let FApp,FAuth,FStore,auth,db,ref,OWNER_UID='',unsubscribe=null,lastRemote='',lastLocal='',timer=null,realtimePromise=null,lastAuthUid=null;
   const emit=(state,text)=>{const detail={state,text,connected:!!auth?.currentUser&&auth.currentUser.uid===OWNER_UID};window.dispatchEvent(new CustomEvent('openday:sync-status',{detail}));window.AppPlatform?.emit?.('sync:status',detail)};
   const readLocal=()=>{try{return JSON.parse(localStorage.getItem(cfg.stateKey)||'{}')}catch{return{}}};
@@ -31,6 +31,11 @@
     if(uid===lastAuthUid&&((uid!==OWNER_UID)||unsubscribe||realtimePromise))return;
     lastAuthUid=uid;
     if(uid===OWNER_UID){emit('syncing','Connecting to kk-syllabus…');try{await startRealtime()}catch(error){emit('error',friendly(error))}}
+    else if(user?.email===cfg.legacyEmail){
+      unsubscribe?.();unsubscribe=null;realtimePromise=null;emit('syncing','Clearing old Openday sign-in…');
+      try{await FAuth.signOut(auth)}catch{}
+      lastAuthUid=null;emit('local','Old Openday sign-in cleared. Sign in to Kk-syllabus once to restore your synced Openday data.');
+    }
     else{unsubscribe?.();unsubscribe=null;realtimePromise=null;emit(uid?'error':'local',uid?'Different kk-syllabus account is signed in.':'Sign in to Kk-syllabus to enable cloud sync.')}
   }
 
