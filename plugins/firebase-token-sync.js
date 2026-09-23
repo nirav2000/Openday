@@ -6,6 +6,7 @@
   const writeLocal=data=>localStorage.setItem(cfg.stateKey,JSON.stringify(data||{}));
   const normalise=data=>({saved:Array.isArray(data.saved)?data.saved:[],booked:data.booked||{},notes:data.notes||{},watchBooking:Array.isArray(data.watchBooking)?data.watchBooking:[],updatedAt:data.updatedAt||''});
   const localJSON=()=>JSON.stringify(normalise(readLocal()));
+  const emitCatalog=data=>{try{const detail={senior:data?.catalogSenior?JSON.parse(data.catalogSenior):null,primary:data?.catalogPrimary?JSON.parse(data.catalogPrimary):null,enhancements:data?.catalogEnhancements?JSON.parse(data.catalogEnhancements):null,version:data?.catalogVersion||'',updatedAt:data?.catalogUpdatedAt?.toDate?.()?.toISOString?.()||''};if(detail.senior||detail.primary){window.OpenDayCatalog=detail;window.dispatchEvent(new CustomEvent('openday:catalog-state',{detail}));window.AppPlatform?.emit?.('catalog:state',detail)}}catch(error){console.warn('Could not read cloud school catalogue',error)}};
   const friendly=error=>{const code=error?.code||'';if(code.includes('invalid-credential')||code.includes('wrong-password')||code.includes('user-not-found'))return'Token not recognised.';if(code.includes('operation-not-allowed'))return'Enable Email/Password sign-in in Firebase Authentication first.';if(code.includes('permission-denied'))return'Firestore rules do not yet allow the Openday sync user.';return error?.message||'Sync unavailable.'};
 
   async function loadFirebase(){
@@ -25,8 +26,8 @@
   async function startRealtime(){
     unsubscribe?.();unsubscribe=null;
     window.FirebaseUsageMonitor?.read(1,'state-read','openday');const snap=await FStore.getDoc(ref),local=normalise(readLocal());
-    if(snap.exists()&&snap.data()?.state){const remote=normalise(snap.data().state),json=JSON.stringify(remote);lastRemote=json;if(Date.parse(remote.updatedAt||0)>Date.parse(local.updatedAt||0)){writeLocal(remote);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:remote}))}else if(localJSON()!==json)await push()}else await push();
-    window.FirebaseUsageMonitor?.listener(1,'state-listener','openday');unsubscribe=FStore.onSnapshot(ref,s=>{const remote=s.data()?.state;if(!remote)return;const n=normalise(remote),json=JSON.stringify(n);lastRemote=json;const localNow=normalise(readLocal());if(Date.parse(n.updatedAt||0)>Date.parse(localNow.updatedAt||0)){writeLocal(n);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:n}))}emit('synced','Synced')},error=>emit('error',friendly(error)));
+    if(snap.exists()){emitCatalog(snap.data());if(snap.data()?.state){const remote=normalise(snap.data().state),json=JSON.stringify(remote);lastRemote=json;if(Date.parse(remote.updatedAt||0)>Date.parse(local.updatedAt||0)){writeLocal(remote);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:remote}))}else if(localJSON()!==json)await push()}else await push()}else await push();
+    window.FirebaseUsageMonitor?.listener(1,'state-listener','openday');unsubscribe=FStore.onSnapshot(ref,s=>{const data=s.data()||{};emitCatalog(data);const remote=data.state;if(remote){const n=normalise(remote),json=JSON.stringify(n);lastRemote=json;const localNow=normalise(readLocal());if(Date.parse(n.updatedAt||0)>Date.parse(localNow.updatedAt||0)){writeLocal(n);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:n}))}}emit('synced','Synced')},error=>emit('error',friendly(error)));
     emit('synced','Synced');
   }
 
