@@ -40,7 +40,7 @@ For browser/private-state sync:
 2. Open Openday and tap **Sync** if it has not connected automatically.
 3. Openday reuses the persisted Kk-syllabus Firebase Authentication session and stores private Openday state at `app_private_state/openday`.
 
-For automated school-catalogue publishing, the Kk-syllabus repository owns the scheduled workflow because it already has the authorised `FIREBASE_SERVICE_ACCOUNT_KK_SYLLABUS` GitHub Actions secret. Openday does not need or store a separate Firebase password.
+For automated school-catalogue publishing, the Kk-syllabus repository owns the scheduled workflow because it already has the authorised `FIREBASE_SERVICE_ACCOUNT_KK_SYLLABUS` GitHub Actions secret. Openday does not need or store a separate Firebase password. The catalogue publisher is scheduled daily at 09:30 UTC and also supports manual runs from the Kk-syllabus Actions page.
 
 Dates can change. Each listing exposes its verification status and links back to the school.
 
