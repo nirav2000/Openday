@@ -6,6 +6,19 @@
   const writeLocal=data=>localStorage.setItem(cfg.stateKey,JSON.stringify(data||{}));
   const normalise=data=>({saved:Array.isArray(data.saved)?data.saved:[],booked:data.booked||{},notes:data.notes||{},watchBooking:Array.isArray(data.watchBooking)?data.watchBooking:[],eventOverrides:data.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},updatedAt:data.updatedAt||''});
   const localJSON=()=>JSON.stringify(normalise(readLocal()));
+  const mergeStates=(localInput,remoteInput)=>{
+    const local=normalise(localInput),remote=normalise(remoteInput);
+    const lt=Date.parse(local.updatedAt||0)||0,rt=Date.parse(remote.updatedAt||0)||0,localNewer=lt>=rt;
+    const mergeMap=(a,b)=>localNewer?{...b,...a}:{...a,...b};
+    return {
+      saved:[...new Set([...(remote.saved||[]),...(local.saved||[])])],
+      booked:mergeMap(local.booked||{},remote.booked||{}),
+      notes:mergeMap(local.notes||{},remote.notes||{}),
+      watchBooking:[...new Set([...(remote.watchBooking||[]),...(local.watchBooking||[])])],
+      eventOverrides:mergeMap(local.eventOverrides||{},remote.eventOverrides||{}),
+      updatedAt:new Date(Math.max(lt,rt)||Date.now()).toISOString()
+    };
+  };
   const emitCatalog=data=>{try{const detail={senior:data?.catalogSenior?JSON.parse(data.catalogSenior):null,primary:data?.catalogPrimary?JSON.parse(data.catalogPrimary):null,enhancements:data?.catalogEnhancements?JSON.parse(data.catalogEnhancements):null,version:data?.catalogVersion||'',updatedAt:data?.catalogUpdatedAt?.toDate?.()?.toISOString?.()||''};if(detail.senior||detail.primary){window.OpenDayCatalog=detail;window.dispatchEvent(new CustomEvent('openday:catalog-state',{detail}));window.AppPlatform?.emit?.('catalog:state',detail)}}catch(error){console.warn('Could not read cloud school catalogue',error)}};
   const friendly=error=>{const code=error?.code||'';if(code.includes('permission-denied'))return'Cloud access was denied by kk-syllabus Firestore rules.';if(error?.message==='owner-mismatch')return'Sign in to the configured parent account in Kk-syllabus first.';return error?.message||'Sync unavailable.'};
 
@@ -48,16 +61,28 @@
       if(snap.exists()){
         emitCatalog(snap.data());
         if(snap.data()?.state){
-          const remote=normalise(snap.data().state),json=JSON.stringify(remote);lastRemote=json;
-          if(Date.parse(remote.updatedAt||0)>Date.parse(local.updatedAt||0)){writeLocal(remote);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:remote}))}
-          else if(localJSON()!==json)await push();
+          const remote=normalise(snap.data().state),remoteJSON=JSON.stringify(remote),merged=mergeStates(local,remote),mergedJSON=JSON.stringify(merged);
+          lastRemote=remoteJSON;
+          if(mergedJSON!==JSON.stringify(local)){
+            writeLocal(merged);lastLocal=mergedJSON;
+            window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
+          }else lastLocal=mergedJSON;
+          if(mergedJSON!==remoteJSON)await push();
         }else await push();
       }else await push();
       window.FirebaseUsageMonitor?.listener(1,'state-listener','openday','kk-syllabus','(default)');
       unsubscribe=FStore.onSnapshot(ref,s=>{
         window.FirebaseUsageMonitor?.read(1,'state-listener-snapshot','openday','kk-syllabus','(default)');
         const data=s.data()||{};emitCatalog(data);const remote=data.state;
-        if(remote){const n=normalise(remote),json=JSON.stringify(n);lastRemote=json;const localNow=normalise(readLocal());if(Date.parse(n.updatedAt||0)>Date.parse(localNow.updatedAt||0)){writeLocal(n);lastLocal=json;window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:n}))}}
+        if(remote){
+          const n=normalise(remote),remoteJSON=JSON.stringify(n),localNow=normalise(readLocal()),localNowJSON=JSON.stringify(localNow),merged=mergeStates(localNow,n),mergedJSON=JSON.stringify(merged);
+          lastRemote=remoteJSON;
+          if(mergedJSON!==localNowJSON){
+            writeLocal(merged);lastLocal=mergedJSON;
+            window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
+          }
+          if(mergedJSON!==remoteJSON){lastLocal=mergedJSON;schedule()}else lastLocal=mergedJSON;
+        }
         emit('synced','Synced through kk-syllabus');
       },error=>emit('error',friendly(error)));
       emit('synced','Synced through kk-syllabus');
