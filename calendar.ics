@@ -4,342 +4,415 @@ PRODID:-//Open Day Tracker//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:School Open Days
-X-WR-CALDESC:School open days and admissions visits tracked in Open Day T
- racker
+X-WR-CALDESC:Public school open days and admissions visits tracked in Openday
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:rooks-heath@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260909T160000Z
 DTEND:20260909T183000Z
 SUMMARY:Rooks Heath School — Open Evening
 LOCATION:South Harrow
-DESCRIPTION:Local state-school benchmark. https://www.rooksheath.harrow.s
- ch.uk/
+CATEGORIES:Senior
+DESCRIPTION:Local state-school benchmark. https://www.rooksheath.harrow.sch.uk/
 END:VEVENT
 BEGIN:VEVENT
 UID:rgs-high-wycombe@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260915T163000Z
 DTEND:20260915T190000Z
 SUMMARY:Royal Grammar School High Wycombe — Open Evening
 LOCATION:High Wycombe
-DESCRIPTION:Bucks residence priorities matter\; verify realistic admissio
- n route. https://www.rgshw.com/page/?pid=205&title=Year+7+Admissions+and
- +Open+Events
+CATEGORIES:Senior
+DESCRIPTION:Bucks residence priorities matter\; verify realistic admission route. https://www.rgshw.com/page/?pid=205&title=Year+7+Admissions+and+Open+Events
 END:VEVENT
 BEGIN:VEVENT
 UID:jfs-morning@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260916T080000Z
 DTEND:20260916T100000Z
 SUMMARY:JFS — Open Morning
 LOCATION:Kenton
-DESCRIPTION:Jewish faith admissions criteria apply. https://www.jfs.brent
- .sch.uk/events
+CATEGORIES:Senior
+DESCRIPTION:Jewish faith admissions criteria apply. https://www.jfs.brent.sch.uk/events
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-general@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260917T080000Z
 DTEND:20260917T103000Z
 SUMMARY:Haberdashers' Boys' School — General Open Morning
 LOCATION:Elstree
-DESCRIPTION:Particularly practical from Harrow\; covers both 11+ and 13+.
-  https://www.habselstree.org.uk/boys/admissions/book-a-visit/
+CATEGORIES:Senior
+DESCRIPTION:Particularly practical from Harrow\; covers both 11+ and 13+. https://www.habselstree.org.uk/boys/admissions/book-a-visit/
 END:VEVENT
 BEGIN:VEVENT
 UID:challoners@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260917T160000Z
 DTEND:20260917T190000Z
 SUMMARY:Dr Challoner's Grammar School — Open Evening
 LOCATION:Amersham
-DESCRIPTION:Head talks reported at 17:00\, 17:30\, 18:30 and 19:00. Bucks
-  priority rules matter. https://www.challoners.com/admissions/
+CATEGORIES:Senior
+DESCRIPTION:Head talks reported at 17:00\, 17:30\, 18:30 and 19:00. Bucks priority rules matter. https://www.challoners.com/admissions/
 END:VEVENT
 BEGIN:VEVENT
 UID:park-high@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260917T170000Z
 DTEND:20260917T190000Z
 SUMMARY:Park High School — Open Evening
 LOCATION:Stanmore
-DESCRIPTION:Additional mornings reported for 22\, 23\, 24 and 30 Septembe
- r and 7 October. https://www.parkhighstanmore.org.uk/admissions
+CATEGORIES:Senior
+DESCRIPTION:Additional mornings reported for 22\, 23\, 24 and 30 September and 7 October. https://www.parkhighstanmore.org.uk/admissions
 END:VEVENT
 BEGIN:VEVENT
 UID:claremont@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260917T160000Z
 DTEND:20260917T183000Z
 SUMMARY:Claremont High School — Open Evening
 LOCATION:Kenton
-DESCRIPTION:Head talks reported at 17:15\, 18:15 and 19:15. https://www.c
- laremont-high.org.uk/
+CATEGORIES:Senior
+DESCRIPTION:Head talks reported at 17:15\, 18:15 and 19:15. https://www.claremont-high.org.uk/
 END:VEVENT
 BEGIN:VEVENT
 UID:berkhamsted@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260918T120000Z
-DTEND:20260918T140000Z
 SUMMARY:Berkhamsted Boys — Senior School Open Event
 LOCATION:Berkhamsted
-DESCRIPTION:School describes this as an afternoon event\; exact time shou
- ld be confirmed. https://www.berkhamsted.com/joining-berkhamsted-boys/
+CATEGORIES:Senior
+DESCRIPTION:School describes this as an afternoon event\; exact time should be confirmed. https://www.berkhamsted.com/joining-berkhamsted-boys/
 END:VEVENT
 BEGIN:VEVENT
 UID:st-pauls@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260919T080000Z
-DTEND:20260919T100000Z
 SUMMARY:St Paul's School — 13+ Open Day
 LOCATION:Barnes
-DESCRIPTION:Confirmed date\; precise start time is not published on the p
- age. High Master talk and pupil-led tour. https://www.stpaulsschool.org.
- uk/admissions/entry-to-st-pauls-13/open-days/
+CATEGORIES:Senior
+DESCRIPTION:Confirmed date\; precise start time is not published on the page. High Master talk and pupil-led tour. https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/
 END:VEVENT
 BEGIN:VEVENT
 UID:st-margarets@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260919T080000Z
-DTEND:20260919T100000Z
 SUMMARY:St Margaret's School — Whole School Open Day
 LOCATION:Bushey
-DESCRIPTION:Confirmed date\; exact time not published. One-to-one tours a
- re available if this clashes with St Paul's. https://www.stmargarets-sch
- ool.org.uk/admissions/visit-us
+CATEGORIES:Senior
+DESCRIPTION:Confirmed date\; exact time not published. One-to-one tours are available if this clashes with St Paul's. https://www.stmargarets-school.org.uk/admissions/visit-us
 END:VEVENT
 BEGIN:VEVENT
 UID:hampton@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260919T080000Z
-DTEND:20260919T100000Z
 SUMMARY:Hampton School — Open Event
 LOCATION:Hampton
-DESCRIPTION:Longer journey\; check current event session before booking. 
- https://hamptonschool.org.uk/admissions/open-events/
+CATEGORIES:Senior
+DESCRIPTION:Longer journey\; check current event session before booking. https://hamptonschool.org.uk/admissions/open-events/
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-taster-sep@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260922T080000Z
 DTEND:20260922T103000Z
 SUMMARY:Haberdashers' Boys' School — 11+ Taster Morning
 LOCATION:Elstree
-DESCRIPTION:For prospective 11+ families. https://www.habselstree.org.uk/
- boys/admissions/book-a-visit/
+CATEGORIES:Senior
+DESCRIPTION:For prospective 11+ families. https://www.habselstree.org.uk/boys/admissions/book-a-visit/
 END:VEVENT
 BEGIN:VEVENT
 UID:harrow-high@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260923T160000Z
-DTEND:20260923T180000Z
 SUMMARY:Harrow High School — Open Evening
 LOCATION:Harrow
-DESCRIPTION:Date reported in school calendar\; confirm time on school pag
- e. https://www.harrowhigh.com/admissions/
+CATEGORIES:Senior
+DESCRIPTION:Date reported in school calendar\; confirm time on school page. https://www.harrowhigh.com/admissions/
 END:VEVENT
 BEGIN:VEVENT
 UID:sutton-grammar@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260923T154500Z
 DTEND:20260923T190000Z
 SUMMARY:Sutton Grammar School — Open Evening
 LOCATION:Sutton
-DESCRIPTION:Some places are open-score places\, but the daily journey is 
- substantial. https://www.suttongrammar.sutton.sch.uk/admissions/
+CATEGORIES:Senior
+DESCRIPTION:Some places are open-score places\, but the daily journey is substantial. https://www.suttongrammar.sutton.sch.uk/admissions/
 END:VEVENT
 BEGIN:VEVENT
 UID:alperton@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260924T150000Z
 DTEND:20260924T183000Z
 SUMMARY:Alperton Community School — Open Evening
 LOCATION:Wembley
-DESCRIPTION:Reported as explicitly welcoming Year 5 as well as Year 6. ht
- tps://www.alperton.brent.sch.uk/
+CATEGORIES:Senior
+DESCRIPTION:Reported as explicitly welcoming Year 5 as well as Year 6. https://www.alperton.brent.sch.uk/
 END:VEVENT
 BEGIN:VEVENT
 UID:preston-manor@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260924T170000Z
 DTEND:20260924T193000Z
 SUMMARY:Preston Manor School — Open Evening
 LOCATION:Wembley
-DESCRIPTION:Open mornings also reported for 29 September\, 6 and 13 Octob
- er. https://www.preston-manor.com/open-days-for-sept-2027-start
+CATEGORIES:Senior
+DESCRIPTION:Open mornings also reported for 29 September\, 6 and 13 October. https://www.preston-manor.com/open-days-for-sept-2027-start
 END:VEVENT
 BEGIN:VEVENT
 UID:mts@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260926T080000Z
-DTEND:20260926T100000Z
 SUMMARY:Merchant Taylors' School — Open Morning
 LOCATION:Northwood
-DESCRIPTION:Core nearby independent option. Exact session time to confirm
- . https://www.mtsn.org.uk/admissions/book-a-visit/
+CATEGORIES:Senior
+DESCRIPTION:Core nearby independent option. Exact session time to confirm. https://www.mtsn.org.uk/admissions/book-a-visit/
 END:VEVENT
 BEGIN:VEVENT
 UID:mill-hill@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260926T080000Z
-DTEND:20260926T100000Z
 SUMMARY:Mill Hill School — Open Morning
 LOCATION:Mill Hill
-DESCRIPTION:Practical geographically\; exact time to confirm. https://www
- .millhill.org.uk/admissions/open-days-and-visits
+CATEGORIES:Senior
+DESCRIPTION:Practical geographically\; exact time to confirm. https://www.millhill.org.uk/admissions/open-days-and-visits
 END:VEVENT
 BEGIN:VEVENT
 UID:john-lyon@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260927T080000Z
-DTEND:20260927T100000Z
 SUMMARY:John Lyon School — Whole School Open Day
 LOCATION:Harrow
-DESCRIPTION:Very convenient local independent option\; check available se
- ssions. https://www.johnlyon.org/admissions/visit-us/
+CATEGORIES:Senior
+DESCRIPTION:Very convenient local independent option\; check available sessions. https://www.johnlyon.org/admissions/visit-us/
 END:VEVENT
 BEGIN:VEVENT
 UID:ark-mornings@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260928T080000Z
 DTEND:20260930T093000Z
 SUMMARY:Ark Academy — Open Mornings (28–30 Sep)
 LOCATION:Wembley
-DESCRIPTION:Choose one morning\; displayed as a date range. https://arkac
- ademy.org/admissions/secondary
+CATEGORIES:Senior
+DESCRIPTION:Choose one morning\; displayed as a date range. https://arkacademy.org/admissions/secondary
 END:VEVENT
 BEGIN:VEVENT
 UID:salvatorian@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260929T160000Z
-DTEND:20260929T180000Z
 SUMMARY:Salvatorian College — Year 7 Open Evening
 LOCATION:Harrow
-DESCRIPTION:Catholic admissions criteria may apply\; guided tours can als
- o be arranged. https://www.salvatoriancollege.com/admissions/
+CATEGORIES:Senior
+DESCRIPTION:Catholic admissions criteria may apply\; guided tours can also be arranged. https://www.salvatoriancollege.com/admissions/
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-high@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261001T150000Z
 DTEND:20261001T183000Z
 SUMMARY:Pinner High School — Open Evening
 LOCATION:Pinner
-DESCRIPTION:Open Morning also reported for 5 October at 09:00 and 11:00. 
- https://www.pinnerhighschool.org/admissions/
+CATEGORIES:Senior
+DESCRIPTION:Open Morning also reported for 5 October at 09:00 and 11:00. https://www.pinnerhighschool.org/admissions/
 END:VEVENT
 BEGIN:VEVENT
 UID:ark-evening@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261001T160000Z
-DTEND:20261001T180000Z
 SUMMARY:Ark Academy — Open Evening
 LOCATION:Wembley
-DESCRIPTION:Start reported as 17:00\; confirm finishing time. https://ark
- academy.org/admissions/secondary
+CATEGORIES:Senior
+DESCRIPTION:Start reported as 17:00\; confirm finishing time. https://arkacademy.org/admissions/secondary
 END:VEVENT
 BEGIN:VEVENT
 UID:winchester-oct@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261003T081500Z
 DTEND:20261003T123000Z
 SUMMARY:Winchester College — 13+ Open Day
 LOCATION:Winchester
-DESCRIPTION:Boarding makes the longer journey less relevant day-to-day. h
- ttps://www.winchestercollege.org/admissions/visit-us/book-a-13-open-even
- t/
+CATEGORIES:Senior
+DESCRIPTION:Boarding makes the longer journey less relevant day-to-day. https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/
 END:VEVENT
 BEGIN:VEVENT
 UID:aldenham@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261003T090000Z
-DTEND:20261003T110000Z
 SUMMARY:Aldenham School — Open Morning
 LOCATION:Elstree
-DESCRIPTION:Doors reported at 10:00\; Head talks at 10:30 and 11:30. http
- s://aldenham.com/the-school/visit-us/open-mornings/
+CATEGORIES:Senior
+DESCRIPTION:Doors reported at 10:00\; Head talks at 10:30 and 11:30. https://aldenham.com/the-school/visit-us/open-mornings/
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-whole@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261010T080000Z
-DTEND:20261010T100000Z
 SUMMARY:Haberdashers' Boys' School — Whole School Open Day
 LOCATION:Elstree
-DESCRIPTION:Exact session time to confirm. https://www.habselstree.org.uk
- /boys/admissions/book-a-visit/
+CATEGORIES:Senior
+DESCRIPTION:Exact session time to confirm. https://www.habselstree.org.uk/boys/admissions/book-a-visit/
 END:VEVENT
 BEGIN:VEVENT
 UID:dao@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261013T080000Z
 DTEND:20261015T110000Z
 SUMMARY:Dame Alice Owen's School — School in Action (13–15 Oct)
 LOCATION:Potters Bar
-DESCRIPTION:Academic and music selection routes. Select one session\; exa
- ct times to confirm. https://damealiceowens.herts.sch.uk/sixth-form/admi
- ssions/secondary-transfer/application-information/
+CATEGORIES:Senior
+DESCRIPTION:Academic and music selection routes. Select one session\; exact times to confirm. https://damealiceowens.herts.sch.uk/sixth-form/admissions/secondary-transfer/application-information/
 END:VEVENT
 BEGIN:VEVENT
 UID:jfs-evening@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261015T153000Z
 DTEND:20261015T190000Z
 SUMMARY:JFS — Prospective Parents Evening
 LOCATION:Kenton
-DESCRIPTION:Head talks reported at 17:00\, 18:00 and 19:00. Jewish faith 
- criteria apply. https://www.jfs.brent.sch.uk/events
+CATEGORIES:Senior
+DESCRIPTION:Head talks reported at 17:00\, 18:00 and 19:00. Jewish faith criteria apply. https://www.jfs.brent.sch.uk/events
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-taster-nov@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261104T090000Z
 DTEND:20261104T113000Z
 SUMMARY:Haberdashers' Boys' School — 11+ Taster Morning
 LOCATION:Elstree
-DESCRIPTION:For prospective 11+ families. https://www.habselstree.org.uk/
- boys/admissions/book-a-visit/
+CATEGORIES:Senior
+DESCRIPTION:For prospective 11+ families. https://www.habselstree.org.uk/boys/admissions/book-a-visit/
 END:VEVENT
 BEGIN:VEVENT
 UID:winchester-nov@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261112T100000Z
 DTEND:20261112T124500Z
 SUMMARY:Winchester College — 13+ Open Morning
 LOCATION:Winchester
-DESCRIPTION:Good alternative to the Saturday open day. https://www.winche
- stercollege.org/admissions/visit-us/book-a-13-open-event/
+CATEGORIES:Senior
+DESCRIPTION:Good alternative to the Saturday open day. https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/
 END:VEVENT
 BEGIN:VEVENT
 UID:winchester-dec@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20261204T100000Z
 DTEND:20261204T124500Z
 SUMMARY:Winchester College — 13+ Open Morning
 LOCATION:Winchester
-DESCRIPTION:Latest published 2026 13+ visit. https://www.winchestercolleg
- e.org/admissions/visit-us/book-a-13-open-event/
+CATEGORIES:Senior
+DESCRIPTION:Latest published 2026 13+ visit. https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/
+END:VEVENT
+BEGIN:VEVENT
+UID:michaela@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20260928T160000Z
+SUMMARY:Michaela Community School — Year 7 Open Evening
+LOCATION:Wembley
+CATEGORIES:Senior
+DESCRIPTION:Monday 28 September 2026 at 17:00 has been reported for the Year 7 Open Evening. Treat as reported until the exact current event listing is independently verified on the school's official site. https://michaela.education/home/secondary-school-wembley/
 END:VEVENT
 BEGIN:VEVENT
 UID:qe-boys@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260702T080000Z
-DTEND:20260702T100000Z
 SUMMARY:Queen Elizabeth's School\, Barnet — Annual Open Day
 LOCATION:Barnet
-DESCRIPTION:Genuine no-catchment selection by test score. Watch from May 
- 2027 for the selected cohort’s important cycle. https://www.qebarnet.c
- o.uk/open-day-2026-booking/
+CATEGORIES:Senior
+DESCRIPTION:Genuine no-catchment selection by test score. Watch from May 2027 for the selected cohort’s important cycle. https://www.qebarnet.co.uk/open-day-2026-booking/
 END:VEVENT
 BEGIN:VEVENT
 UID:parmiters@openday
-DTSTAMP:20260917T131618Z
+DTSTAMP:20260923T213223Z
 DTSTART:20260625T150000Z
 DTEND:20260625T190000Z
 SUMMARY:Parmiter's School — Annual Open Day
 LOCATION:Garston
-DESCRIPTION:SW Herts academic/music selection. Watch June 2027. https://w
- ww.parmiters.herts.sch.uk/page/?pid=28&title=Admissions
+CATEGORIES:Senior
+DESCRIPTION:SW Herts academic/music selection. Watch June 2027. https://www.parmiters.herts.sch.uk/page/?pid=28&title=Admissions
+END:VEVENT
+BEGIN:VEVENT
+UID:st-clement-danes@openday
+DTSTAMP:20260923T213223Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260927
+SUMMARY:St Clement Danes School — Open Day
+LOCATION:Chorleywood
+CATEGORIES:Senior
+DESCRIPTION:Open Day date taken from the school's current calendar. Exact event time is not stored yet\; check the calendar before travelling. SW Herts academic/music selection route. https://www.stclementdanes.org.uk/admissions/
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261014T083000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Tours begin at 9:30am. The school asks families to contact the school office to book. https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-0@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261016T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Friday 16 October · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-1@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261020T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Tuesday 20 October · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-2@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261022T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Thursday 22 October · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-3@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261104T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Wednesday 4 November · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-4@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261106T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Friday 6 November · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-5@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261117T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Tuesday 17 November · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:wembley-primary-alt-6@openday
+DTSTAMP:20260923T213223Z
+DTSTART:20261119T093000Z
+SUMMARY:Wembley Primary School — EYFS Open Day
+LOCATION:Wembley
+CATEGORIES:Primary
+DESCRIPTION:Thursday 19 November · tour begins 9:30am https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027
 END:VEVENT
 END:VCALENDAR
