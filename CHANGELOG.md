@@ -6,6 +6,19 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.2.0 — 2026-09-23
+
+- Added a **Version Lab** that deploys exact historical app trees from their original Git commits rather than reconstructing old versions from current files.
+- Versions 1.0.0–1.3.0 are explicitly labelled reconstructed release milestones because semantic version files did not exist yet; their snapshots are still byte-for-byte files from the selected historical commits.
+- Added a Versions link in the live app.
+- Date/time corrections entered in a school are now **global reported data**, visible to every Openday visitor rather than private per-device overrides.
+- Global reports use a stable pseudonymous contributor name derived from the memorable token, or from a persistent random device identity when no token is present.
+- Personal visit notes remain private and continue to sync only with the private Openday state.
+- Existing legacy private date/time overrides are migrated to global reported corrections without publishing their personal note text.
+- The subscribable calendar now combines Senior and Primary catalogues, applies the latest global date/time reports, preserves stable event UIDs, and refreshes from Firestore on an hourly Pages build.
+- Fixed date-only school events in the shared calendar so they publish as all-day events rather than artificial midnight/two-hour visits.
+- The Openday Pages workflow now checks out full Git history so historical snapshots are generated from the actual commit trees.
+
 ## 2.1.0 — 2026-09-23
 
 - Restored the memorable-token cross-device sync experience.
