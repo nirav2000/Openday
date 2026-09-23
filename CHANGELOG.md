@@ -6,6 +6,11 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.2.3 — 2026-09-23
+
+- Fixed the change-driven calendar publisher so it rebases cleanly before regenerating and committing `calendar.ics`.
+- Confirmed the publisher now succeeds and commits only when the feed content differs.
+
 ## 2.2.2 — 2026-09-23
 
 - Removed the hourly Pages schedule and stopped rebuilding the subscribed calendar on unrelated app deployments.
