@@ -6,6 +6,16 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.0.0 — 2026-09-23
+
+- Removed the separate Openday token/password authentication design.
+- Openday now reuses the existing parent Firebase Authentication session from the `kk-syllabus` project.
+- The sync panel now explains the shared Kk-syllabus sign-in and links to Kk-syllabus when sign-in is needed.
+- Personal Openday notes, bookings, saved schools and date/time overrides continue to sync to `app_private_state/openday` for the configured parent UID.
+- Removed the Openday-repository Firestore publishing workflow that required the nonexistent `OPENDAY_FIREBASE_PASSWORD`.
+- Automated public catalogue publishing is now owned by the Kk-syllabus repository, which already holds the authorised Firebase service-account secret.
+- This is a major version because the authentication and cloud-publishing workflow changed fundamentally.
+
 ## 1.6.0 — 2026-09-23
 
 - Added a private **My update** panel near the top of each school visit for personal date, start-time, end-time and note corrections.
