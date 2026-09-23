@@ -8,11 +8,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>School Open Days</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=1.4.1">
+  <link rel="stylesheet" href="styles.css?v=1.5.0">
 <script>window.FIREBASE_USAGE_APP="openday";</script><script src="https://nirav2000.github.io/Apps/firebase-usage-monitor.js"></script></head>
 <body>
   <header>
-    <div><p class="eyebrow">Year 5 · 2028 entry planning · <span id="appVersion">v1.4.1</span></p><h1>Open days</h1></div>
+    <div><p class="eyebrow">Year 5 · 2028 entry planning · <span id="appVersion">v1.5.0</span></p><h1>Open days</h1></div>
     <button id="installBtn" class="icon-btn" hidden aria-label="Install app">＋</button>
   </header>
   <main>
@@ -20,6 +20,14 @@
       <div><strong id="upcomingCount">—</strong><span>upcoming</span></div>
       <div><strong id="savedCount">0</strong><span>saved</span></div>
       <div><strong id="bookedCount">0</strong><span>booked</span></div>
+    </section>
+
+    <section class="phasebar" aria-label="Choose school phase">
+      <div class="segmented phase-toggle" role="group" aria-label="Choose primary or senior schools">
+        <button id="seniorPhaseBtn" class="active" type="button">Senior / secondary</button>
+        <button id="primaryPhaseBtn" type="button">Primary</button>
+      </div>
+      <span id="phaseHint">Senior / secondary open days</span>
     </section>
 
     <section class="viewbar" aria-label="View and calendar controls">
@@ -39,7 +47,7 @@
         <button class="chip" data-filter="state">State</button>
         <button class="chip" data-filter="grammar">Grammar</button>
         <button class="chip" data-filter="independent">Independent</button>
-        <button class="chip" data-filter="tbc">Dates TBC</button>
+        <button class="chip" data-filter="tbc">Needs date check</button>
       </div>
       <div class="toolbar"><span id="resultCount">Loading…</span><select id="sort" aria-label="Sort"><option value="date">Soonest</option><option value="priority">Priority</option><option value="distance">Journey</option><option value="name">Name</option></select></div>
     </section>
@@ -63,12 +71,12 @@
 
   <template id="cardTemplate"><article class="card"><button class="save" aria-label="Save school">♡</button><div class="datebox"><span class="dow"></span><b></b><span class="mon"></span></div><div class="cardmain"><div class="badges"></div><h2></h2><p class="meta"></p><p class="event"></p><div class="actions"><button class="primary details">View visit</button><a class="book" target="_blank" rel="noopener">Book ↗</a></div></div></article></template>
 
-  <script src="plugins/app-platform.js?v=1.4.1" defer></script>
-  <script src="plugins/autosave.js?v=1.4.1" defer></script>
-  <script src="plugins/firebase-token-sync.js?v=1.4.1" defer></script>
-  <script src="plugins/developer-notes.js?v=1.4.1" defer></script>
-  <script src="plugins/version-lab.js?v=1.4.1" defer></script>
-  <script src="app.js?v=1.4.1" defer></script>
-  <script src="integrations.js?v=1.4.1" defer></script>
+  <script src="plugins/app-platform.js?v=1.5.0" defer></script>
+  <script src="plugins/autosave.js?v=1.5.0" defer></script>
+  <script src="plugins/firebase-token-sync.js?v=1.5.0" defer></script>
+  <script src="plugins/developer-notes.js?v=1.5.0" defer></script>
+  <script src="plugins/version-lab.js?v=1.5.0" defer></script>
+  <script src="app.js?v=1.5.0" defer></script>
+  <script src="integrations.js?v=1.5.0" defer></script>
 </body>
 </html>
