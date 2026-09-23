@@ -6,6 +6,16 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.1.0 — 2026-09-23
+
+- Restored the memorable-token cross-device sync experience.
+- A remembered token can be revealed on a device that still has it stored locally.
+- New devices can enter the same token and sync without signing into Kk-syllabus.
+- If the token is forgotten everywhere, the Kk-syllabus parent account can set a replacement token without deleting saved schools, notes, bookings or personal event corrections.
+- The token itself is never stored in Firestore; a deliberately slowed derived capability ID is used instead.
+- Token-based private state is merged with the existing `app_private_state/openday` owner state so either access route preserves the same data.
+- Replacing a token first merges the prior token-backed state before rotating the capability.
+
 ## 2.0.3 — 2026-09-23
 
 - Changed first sync after the authentication migration from winner-takes-all to a safe merge of device and cloud Openday state.
