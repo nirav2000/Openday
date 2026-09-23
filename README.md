@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.1.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.2.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -47,3 +47,18 @@ The Kk-syllabus parent account remains an owner/recovery route. Automated public
 Dates can change. Each listing exposes its verification status and links back to the school.
 
 Public content uses an anonymous Year-5 (2026/27) planning profile. Do not commit child names, current schools, private visit notes, household details, passwords, service-account credentials or private capability URLs. Harrow is a search origin, not a stored home address.
+
+
+## Version Lab
+
+The deployed app includes **Version Lab** at `/Openday/version-lab/`. Each historical release opens an exact snapshot created with `git archive <commit>` during deployment. The old app files are therefore taken from the historical commit tree itself, not rebuilt from today's files or today's `version.json`.
+
+Versions 1.0.0–1.3.0 pre-date semantic version metadata; the version labels for those milestones are reconstructed, but the files shown are the original files from the selected commits.
+
+## Global date/time reports
+
+School date and time corrections entered through Openday are public reported data. They are stored separately from private notes and are visible to all visitors. Each report has a stable made-up contributor label. The same memorable token produces the same contributor identity across devices; a device without a token receives a persistent local pseudonym.
+
+Personal visit notes, saved schools and booking state remain private.
+
+The public calendar feed is rebuilt hourly and on every deployment. Official catalogue changes and global date/time reports therefore flow into the subscribed `calendar.ics` feed without changing the subscription URL.
