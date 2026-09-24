@@ -1,6 +1,6 @@
 {
-  "version": "2.4.0",
+  "version": "2.4.1",
   "released": "2026-09-24",
   "channel": "main",
-  "summary": "Add private school-decision labels such as Liked, Want to visit again, Want to try for and Not for us."
+  "summary": "Distinguish memorable-token sync from recovery access, show per-device local-state counts, and safely back up/merge an old device when connecting a replacement token."
 }
