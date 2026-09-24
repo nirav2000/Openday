@@ -197,3 +197,26 @@ Keep public factual corrections separate from private user state:
 A memorable token produces a stable pseudonymous contributor identity across devices. Without a token, use a persistent random device seed. Never publish the user's private note text when promoting an old local date/time override into the global report stream.
 
 The calendar builder should consume both the authoritative catalogue and the latest public reports, use stable UIDs, and rebuild on a schedule so existing subscribers receive corrected dates without resubscribing.
+
+
+### Low-usage local-first sync
+
+For small personal webapps, do not default to realtime listeners merely because Firestore offers them.
+
+Preferred pattern:
+
+```text
+launch
+  -> static app/catalogue files
+  -> one private-state read
+  -> one public-corrections read
+  -> local work only
+
+explicit Save / discrete toggle
+  -> one cloud write
+
+manual Refresh
+  -> next cloud read
+```
+
+Text fields should save locally while typing. Cloud writes should happen on an explicit Save action or other discrete user action, with an unsynced warning when closing the editing panel. `beforeunload` can request a browser warning on reload/close, but mobile browsers may ignore it; local persistence therefore remains the safety net.
