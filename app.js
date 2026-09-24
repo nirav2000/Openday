@@ -70,10 +70,10 @@ function card(s){
   return n;
 }
 
-function toggleSave(id){state.saved=state.saved.includes(id)?state.saved.filter(x=>x!==id):[...state.saved,id];saveState();render()}
+function toggleSave(id){state.saved=state.saved.includes(id)?state.saved.filter(x=>x!==id):[...state.saved,id];saveState();window.OpenDaySync?.push?.();render()}
 function toggleWatch(id){
   state.watchBooking=state.watchBooking.includes(id)?state.watchBooking.filter(x=>x!==id):[...state.watchBooking,id];
-  saveState();
+  saveState();window.OpenDaySync?.push?.();
   if(state.watchBooking.includes(id)&&'Notification'in window&&Notification.permission==='default')Notification.requestPermission();
   showDetail(schools.find(s=>s.id===id)); render();
 }
@@ -106,7 +106,7 @@ function showDetail(s){
   const booked=!!state.booked[s.id];
   const shown=displayStart(s),dateNote=historical(s)?`<p class="historical-note">This is the most recent previous-year date we have. The current-year date is still being checked.</p>`:'';
   $('#detailBody').innerHTML=`<div class="detail-inner"><div class="badges"><span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span></div><h2>${s.name}</h2><p class="meta">${s.area} · ${s.entry} entry</p><p class="bigdate">${historical(s)?'Last known: ':''}${fmtDate(shown)}</p>${dateNote}<p>${s.event} · ${s.start?fmtTime(s.start,s.end):historical(s)?'Current time/date not yet verified':'Current date and time being checked'}</p>${travelHtml(s)}<section class="other-dates"><small>OTHER VISITS</small><h3>Other dates & visit options</h3>${alternatesHtml(s)}</section>${bookingWatchHtml(s)}${s.admission?`<section class="admission"><small>ENTRY ROUTE</small><h3>${s.admission.route}</h3><p><b>${s.admission.summary}</b></p><p>${s.admission.note}</p><div class="admission-links"><a href="${s.admission.url}" target="_blank" rel="noopener">Official admission page ↗</a>${s.admission.secondary?`<a href="${s.admission.secondary.url}" target="_blank" rel="noopener">${s.admission.secondary.label} ↗</a>`:''}</div></section>`:''}<div class="detail-grid"><div><small>Booking</small><b>${s.bookingRequired===true?'Required':s.bookingRequired===false?'Not required':'Check school'}</b></div><div><small>Priority</small><b>${'★'.repeat(s.priority)}${'☆'.repeat(5-s.priority)}</b></div></div><p>${s.note}</p><label class="check"><input id="booked" type="checkbox" ${booked?'checked':''}> I have booked this visit</label><h3>Visit notes</h3><textarea id="note" class="note" placeholder="Questions to ask, impressions, travel notes…">${state.notes[s.id]||''}</textarea><div class="modal-actions"><a class="primary" href="${s.infoUrl}" target="_blank" rel="noopener">School information ↗</a>${s.bookingUrl?`<a href="${s.bookingUrl}" target="_blank" rel="noopener">Booking page ↗</a>`:''}${s.start?'<button id="calendar">Add this visit</button>':''}<button id="saveNote">Save notes</button></div><p class="sources">Dates and booking availability can change. Check the school page before travelling.</p></div>`;
-  $('#booked').onchange=e=>{state.booked[s.id]=e.target.checked;saveState();updateCounts()};
+  $('#booked').onchange=e=>{state.booked[s.id]=e.target.checked;saveState();window.OpenDaySync?.push?.();updateCounts()};
   $('#saveNote').onclick=()=>{state.notes[s.id]=$('#note').value;saveState();$('#saveNote').textContent='Saved ✓'};
   if(s.start)$('#calendar').onclick=()=>downloadICS(s);
   if($('#watchBooking'))$('#watchBooking').onclick=()=>toggleWatch(s.id);
@@ -156,9 +156,9 @@ $('#subscribeDialog').onclick=e=>{if(e.target.hasAttribute('data-close-subscribe
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('#installBtn').hidden=false});$('#installBtn').onclick=()=>deferredPrompt?.prompt();
 
 Promise.all([
-  fetch('data/schools.json').then(r=>{if(!r.ok)throw Error('Could not load senior school data');return r.json()}),
-  fetch('data/primary-schools.json').then(r=>{if(!r.ok)throw Error('Could not load primary school data');return r.json()}),
-  fetch('data/enhancements.json').then(r=>r.ok?r.json():({meta:{},schools:{}}))
+  fetch('data/schools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load senior school data');return r.json()}),
+  fetch('data/primary-schools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load primary school data');return r.json()}),
+  fetch('data/enhancements.json',{cache:'no-store'}).then(r=>r.ok?r.json():({meta:{},schools:{}}))
 ]).then(([senior,primary,e])=>{
   schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;resetCalendarCursor();
   if(window.OpenDayCatalog)applyCloudCatalog(window.OpenDayCatalog);else render();checkBookingNotifications();
