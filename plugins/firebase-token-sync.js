@@ -8,7 +8,7 @@
     legacyEmail:'openday-sync@nirav2000.github.io',
     tokenSalt:'Openday memorable token v2 | kk-syllabus'
   };
-  let FApp,FAuth,FStore,auth,db,ref,OWNER_UID='',ownerUnsubscribe=null,tokenUnsubscribe=null,tokenRef=null,activeTokenHash='',lastOwner='',lastTokenState='',lastLocal='',timer=null,ownerPromise=null,tokenPromise=null,lastAuthUid=null;
+  let FApp,FAuth,FStore,auth,db,ref,OWNER_UID='',tokenRef=null,activeTokenHash='',lastRemote='',lastLocal='',timer=null,booted=false;
 
   const readLocal=()=>{try{return JSON.parse(localStorage.getItem(cfg.stateKey)||'{}')}catch{return{}}};
   const writeLocal=data=>localStorage.setItem(cfg.stateKey,JSON.stringify(data||{}));
@@ -36,7 +36,7 @@
   const localJSON=()=>JSON.stringify(normalise(readLocal()));
   const ownerConnected=()=>!!auth?.currentUser&&auth.currentUser.uid===OWNER_UID;
   const tokenConnected=()=>!!tokenRef;
-  const isConnected=()=>ownerConnected()||tokenConnected();
+  const isConnected=()=>tokenConnected()||ownerConnected();
   const rememberedToken=()=>localStorage.getItem(cfg.tokenKey)||'';
   const emit=(state,text)=>{
     const detail={state,text,connected:isConnected(),ownerConnected:ownerConnected(),tokenConnected:tokenConnected(),hasRememberedToken:!!rememberedToken()};
@@ -45,25 +45,11 @@
   };
   const friendly=error=>{
     const code=error?.code||'';
-    if(code.includes('permission-denied'))return'Cloud access was denied. Check the memorable token or Kk-syllabus sign-in.';
-    if(error?.message==='owner-mismatch')return'Sign in to the configured parent account in Kk-syllabus first.';
-    if(error?.message==='token-not-recognised')return'Memorable token not recognised. If you forgot it, sign in to Kk-syllabus and set a new one; your saved data will be preserved.';
+    if(code.includes('permission-denied'))return'Cloud access was denied. Check the memorable token.';
+    if(error?.message==='owner-mismatch')return'This recovery action needs the authorised Firebase owner session.';
+    if(error?.message==='token-not-recognised')return'Memorable token not recognised.';
     return error?.message||'Sync unavailable.';
   };
-  const emitCatalog=data=>{try{
-    const detail={
-      senior:data?.catalogSenior?JSON.parse(data.catalogSenior):null,
-      primary:data?.catalogPrimary?JSON.parse(data.catalogPrimary):null,
-      enhancements:data?.catalogEnhancements?JSON.parse(data.catalogEnhancements):null,
-      version:data?.catalogVersion||'',
-      updatedAt:data?.catalogUpdatedAt?.toDate?.()?.toISOString?.()||''
-    };
-    if(detail.senior||detail.primary){
-      window.OpenDayCatalog=detail;
-      window.dispatchEvent(new CustomEvent('openday:catalog-state',{detail}));
-      window.AppPlatform?.emit?.('catalog:state',detail);
-    }
-  }catch(error){console.warn('Could not read cloud school catalogue',error)}};
 
   async function deriveTokenHash(token){
     const value=String(token??'');
@@ -86,137 +72,125 @@
     auth=FAuth.getAuth(app);await FAuth.setPersistence(auth,FAuth.browserLocalPersistence);
     db=FStore.getFirestore(app);ref=FStore.doc(db,...cfg.documentPath);
     await auth.authStateReady();
-    FAuth.onAuthStateChanged(auth,user=>handleAuth(user));
-    await handleAuth(auth.currentUser);
+    FAuth.onAuthStateChanged(auth,user=>{
+      if(!booted)return;
+      if(user?.email===cfg.legacyEmail){FAuth.signOut(auth).catch(()=>{});return}
+      if(user?.uid===OWNER_UID&&!rememberedToken()&&!tokenRef)refreshOwnerOnce().catch(()=>{});
+    });
   }
 
-  function applyMerged(remote){
-    const local=normalise(readLocal()),merged=mergeStates(local,remote),localJ=JSON.stringify(local),mergedJ=JSON.stringify(merged);
-    if(localJ!==mergedJ){
-      writeLocal(merged);lastLocal=mergedJ;
+  function applyRemote(remote){
+    const local=normalise(readLocal()),merged=mergeStates(local,remote),mergedJSON=JSON.stringify(merged);
+    if(JSON.stringify(local)!==mergedJSON){
+      writeLocal(merged);
       window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
-    }else lastLocal=mergedJ;
-    return {merged,json:mergedJ};
+    }
+    lastLocal=mergedJSON;
+    lastRemote=JSON.stringify(normalise(remote||{}));
+    return merged;
+  }
+
+  async function readTokenOnce(refToRead=tokenRef){
+    if(!refToRead)return false;
+    window.FirebaseUsageMonitor?.read(1,'token-state-read','openday','kk-syllabus','(default)');
+    const snap=await FStore.getDoc(refToRead);
+    if(!snap.exists())throw new Error('token-not-recognised');
+    const data=snap.data()||{};
+    if(data.app!=='openday'||data.active!==true)throw new Error('token-not-recognised');
+    applyRemote(data.state||{});
+    emit('synced','Synced · loaded once');
+    return true;
+  }
+
+  async function refreshOwnerOnce(){
+    await loadFirebase();if(!ownerConnected())return false;
+    window.FirebaseUsageMonitor?.read(1,'owner-state-read','openday','kk-syllabus','(default)');
+    const snap=await FStore.getDoc(ref),data=snap.exists()?snap.data():{};
+    applyRemote(data.state||{});
+    return data;
   }
 
   async function bindTokenHash(hash,{createIfOwner=false}={}){
     if(!hash)return false;
     await loadFirebase();
-    tokenRef=FStore.doc(db,cfg.tokenCollection,hash);activeTokenHash=hash;
-    window.FirebaseUsageMonitor?.read(1,'token-state-read','openday','kk-syllabus','(default)');
-    let snap=await FStore.getDoc(tokenRef);
-    if(!snap.exists()){
-      if(!createIfOwner||!ownerConnected()){tokenRef=null;activeTokenHash='';throw new Error('token-not-recognised')}
-      const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
+    const candidate=FStore.doc(db,cfg.tokenCollection,hash);
+    try{
+      await readTokenOnce(candidate);
+      tokenRef=candidate;activeTokenHash=hash;
+      return true;
+    }catch(error){
+      if(error?.message!=='token-not-recognised'||!createIfOwner||!ownerConnected())throw error;
+      const ownerData=await refreshOwnerOnce();
+      const state=mergeStates(readLocal(),ownerData?.state||{});state.updatedAt=new Date().toISOString();writeLocal(state);
       window.FirebaseUsageMonitor?.write(1,'token-capability-create','openday','kk-syllabus','(default)');
-      await FStore.setDoc(tokenRef,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()});
-      snap=await FStore.getDoc(tokenRef);
+      await FStore.setDoc(candidate,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()});
+      tokenRef=candidate;activeTokenHash=hash;lastRemote=JSON.stringify(state);lastLocal=lastRemote;
+      emit('synced','Memorable token restored');
+      return true;
     }
-    const data=snap.data()||{};
-    if(data.app!=='openday'||data.active!==true||data.tokenHash!==hash){tokenRef=null;activeTokenHash='';throw new Error('token-not-recognised')}
-    const {merged,json}=applyMerged(data.state||{});
-    lastTokenState=JSON.stringify(normalise(data.state||{}));
-    if(json!==lastTokenState)await push();
-    startTokenListener();
-    return true;
   }
 
-  function startTokenListener(){
-    if(!tokenRef)return;
-    tokenUnsubscribe?.();tokenUnsubscribe=null;
-    window.FirebaseUsageMonitor?.listener(1,'token-state-listener','openday','kk-syllabus','(default)');
-    tokenUnsubscribe=FStore.onSnapshot(tokenRef,s=>{
-      window.FirebaseUsageMonitor?.read(1,'token-state-listener-snapshot','openday','kk-syllabus','(default)');
-      const data=s.data()||{};
-      if(data.active!==true){tokenUnsubscribe?.();tokenUnsubscribe=null;tokenRef=null;activeTokenHash='';emit(ownerConnected()?'synced':'local','Memorable token was replaced.');return}
-      const {json}=applyMerged(data.state||{});
-      lastTokenState=JSON.stringify(normalise(data.state||{}));
-      if(json!==lastTokenState)schedule();
-      emit('synced','Synced with memorable token');
-    },error=>emit('error',friendly(error)));
-  }
-
-  async function startOwner(){
-    if(ownerPromise)return ownerPromise;
-    ownerPromise=(async()=>{
-      ownerUnsubscribe?.();ownerUnsubscribe=null;
-      window.FirebaseUsageMonitor?.read(1,'state-read','openday','kk-syllabus','(default)');
-      const snap=await FStore.getDoc(ref);
-      const data=snap.exists()?snap.data():{};
-      emitCatalog(data);
-      const {json}=applyMerged(data.state||{});
-      lastOwner=JSON.stringify(normalise(data.state||{}));
-      if(json!==lastOwner)await push();
-      const hash=data.activeTokenHash||'';
-      if(hash&&!tokenRef){try{await bindTokenHash(hash)}catch(error){console.warn('Could not attach active memorable-token state',error)}}
-      const legacy=rememberedToken();
-      if(legacy&&!hash&&ownerConnected()){
-        try{await setMemorableToken(legacy,{rotate:false,legacyRecovery:true})}catch(error){console.warn('Could not restore remembered token capability',error)}
+  async function refresh(){
+    await loadFirebase();
+    emit('syncing','Refreshing cloud data…');
+    try{
+      if(tokenRef)return await readTokenOnce(tokenRef);
+      const token=rememberedToken();
+      if(token){
+        const hash=await deriveTokenHash(token);
+        return await bindTokenHash(hash,{createIfOwner:ownerConnected()});
       }
-      window.FirebaseUsageMonitor?.listener(1,'state-listener','openday','kk-syllabus','(default)');
-      ownerUnsubscribe=FStore.onSnapshot(ref,s=>{
-        window.FirebaseUsageMonitor?.read(1,'state-listener-snapshot','openday','kk-syllabus','(default)');
-        const d=s.data()||{};emitCatalog(d);
-        const {json:mergedJSON}=applyMerged(d.state||{});
-        lastOwner=JSON.stringify(normalise(d.state||{}));
-        if(d.activeTokenHash&&d.activeTokenHash!==activeTokenHash)bindTokenHash(d.activeTokenHash).catch(()=>{});
-        if(mergedJSON!==lastOwner)schedule();
-        emit('synced',tokenRef?'Synced with memorable token':'Synced through Kk-syllabus');
-      },error=>emit('error',friendly(error)));
-    })().finally(()=>{ownerPromise=null});
-    return ownerPromise;
-  }
-
-  async function handleAuth(user){
-    const uid=user?.uid||null;
-    if(uid===lastAuthUid&&((uid!==OWNER_UID)||ownerUnsubscribe||ownerPromise))return;
-    lastAuthUid=uid;
-    if(uid===OWNER_UID){emit('syncing','Connecting to kk-syllabus…');try{await startOwner()}catch(error){emit('error',friendly(error))}}
-    else if(user?.email===cfg.legacyEmail){
-      ownerUnsubscribe?.();ownerUnsubscribe=null;emit('syncing','Clearing old Openday sign-in…');
-      try{await FAuth.signOut(auth)}catch{}
-      lastAuthUid=null;emit(tokenRef?'synced':'local',tokenRef?'Synced with memorable token':'Old Openday sign-in cleared.');
-    }else{
-      ownerUnsubscribe?.();ownerUnsubscribe=null;
-      if(!tokenRef)emit(uid?'error':'local',uid?'Different kk-syllabus account is signed in.':'Local only · enter memorable token to sync.');
-    }
+      if(ownerConnected()){
+        await refreshOwnerOnce();emit('synced','Owner recovery data refreshed');return true;
+      }
+      emit('local','Enter memorable token to sync');return false;
+    }catch(error){emit('error',friendly(error));throw error}
   }
 
   async function push(){
     await loadFirebase();
-    if(!ownerConnected()&&!tokenRef)return false;
     const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
-    const json=JSON.stringify(state);lastLocal=json;emit('syncing','Saving…');
+    const json=JSON.stringify(state);lastLocal=json;
+    if(!tokenRef&&!ownerConnected()){emit('local','Saved on device · not connected');return false}
+    emit('syncing','Saving to cloud…');
     try{
-      const writes=[];
-      if(ownerConnected()&&json!==lastOwner){
-        window.FirebaseUsageMonitor?.write(1,'state-write','openday','kk-syllabus','(default)');
-        writes.push(FStore.setDoc(ref,{app:'openday',state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp(),...(activeTokenHash?{activeTokenHash}:{})},{merge:true}).then(()=>{lastOwner=json}));
-      }
-      if(tokenRef&&json!==lastTokenState){
+      if(tokenRef){
+        if(json===lastRemote){emit('synced','Already synced');return true}
         window.FirebaseUsageMonitor?.write(1,'token-state-write','openday','kk-syllabus','(default)');
-        writes.push(FStore.setDoc(tokenRef,{state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true}).then(()=>{lastTokenState=json}));
+        await FStore.setDoc(tokenRef,{state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+        lastRemote=json;
+      }else{
+        window.FirebaseUsageMonitor?.write(1,'owner-state-write','openday','kk-syllabus','(default)');
+        await FStore.setDoc(ref,{app:'openday',state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+        lastRemote=json;
       }
-      await Promise.all(writes);emit('synced',tokenRef?'Synced with memorable token':'Synced through Kk-syllabus');return true;
+      emit('synced','Saved & synced');return true;
     }catch(error){emit('error',friendly(error));return false}
   }
-  const schedule=()=>{clearTimeout(timer);timer=setTimeout(()=>void push(),450)};
+
+  const schedule=()=>{
+    clearTimeout(timer);
+    timer=setTimeout(()=>void push(),900);
+  };
 
   async function connect(token){
     await loadFirebase();
     if(token!==undefined&&String(token)!==''){
-      const value=String(token);const hash=await deriveTokenHash(value);
-      await bindTokenHash(hash);localStorage.setItem(cfg.tokenKey,value);emit('synced','Synced with memorable token');return true;
+      const value=String(token),hash=await deriveTokenHash(value);
+      await bindTokenHash(hash,{createIfOwner:ownerConnected()});
+      localStorage.setItem(cfg.tokenKey,value);
+      emit('synced','Synced with memorable token');
+      return true;
     }
-    if(!ownerConnected())throw new Error('owner-mismatch');
-    await startOwner();return true;
+    if(ownerConnected()){await refreshOwnerOnce();emit('synced','Owner recovery data loaded');return true}
+    throw new Error('owner-mismatch');
   }
 
   async function setMemorableToken(token,{rotate=true,legacyRecovery=false}={}){
     await loadFirebase();if(!ownerConnected())throw new Error('owner-mismatch');
     const value=String(token??'');if(!value)throw new Error('Enter a memorable token.');
     const hash=await deriveTokenHash(value);
-    const ownerSnap=await FStore.getDoc(ref),ownerData=ownerSnap.exists()?ownerSnap.data():{};
+    const ownerData=await refreshOwnerOnce()||{};
     const existingHash=ownerData.activeTokenHash||activeTokenHash||'';
     let merged=mergeStates(readLocal(),ownerData.state||{});
     if(existingHash){
@@ -234,18 +208,19 @@
         await FStore.setDoc(oldRef,{active:false,rotatedAt:FStore.serverTimestamp()},{merge:true});
       }catch(error){console.warn('Could not deactivate old memorable token',error)}
     }
-    tokenUnsubscribe?.();tokenUnsubscribe=null;tokenRef=FStore.doc(db,cfg.tokenCollection,hash);activeTokenHash=hash;
+    tokenRef=FStore.doc(db,cfg.tokenCollection,hash);activeTokenHash=hash;
     window.FirebaseUsageMonitor?.write(2,legacyRecovery?'token-legacy-restore':'token-capability-set','openday','kk-syllabus','(default)');
     await Promise.all([
       FStore.setDoc(tokenRef,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state:merged,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true}),
       FStore.setDoc(ref,{app:'openday',state:merged,activeTokenHash:hash,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true})
     ]);
-    lastOwner=JSON.stringify(merged);lastTokenState=JSON.stringify(merged);localStorage.setItem(cfg.tokenKey,value);startTokenListener();
-    emit('synced',legacyRecovery?'Old memorable token restored':'Memorable token set and synced');return true;
+    lastRemote=JSON.stringify(merged);lastLocal=lastRemote;localStorage.setItem(cfg.tokenKey,value);
+    emit('synced',legacyRecovery?'Old memorable token restored':'Memorable token set and synced');
+    return true;
   }
 
   async function resetMemorableToken(token){return setMemorableToken(token,{rotate:true})}
-  function forgetToken(){localStorage.removeItem(cfg.tokenKey);tokenUnsubscribe?.();tokenUnsubscribe=null;tokenRef=null;activeTokenHash='';emit(ownerConnected()?'synced':'local',ownerConnected()?'Kk-syllabus sync remains connected.':'Memorable token forgotten on this device.')}
+  function forgetToken(){localStorage.removeItem(cfg.tokenKey);tokenRef=null;activeTokenHash='';emit(ownerConnected()?'synced':'local',ownerConnected()?'Recovery session remains available.':'Memorable token forgotten on this device.')}
   const getToken=()=>rememberedToken();
   const hasToken=()=>!!rememberedToken();
   const setupLink=(token=rememberedToken())=>token?location.origin+location.pathname+'#sync='+encodeURIComponent(token):'';
@@ -258,15 +233,22 @@
   }
 
   async function boot(){
-    await loadFirebase();
+    await loadFirebase();booted=true;
     const token=rememberedToken();
-    if(token){try{await bindTokenHash(await deriveTokenHash(token),{createIfOwner:ownerConnected()})}catch(error){if(ownerConnected())console.warn('Remembered token will need reset',error)}}
-    if(ownerConnected())await startOwner();
+    if(token){
+      try{await bindTokenHash(await deriveTokenHash(token),{createIfOwner:ownerConnected()})}
+      catch(error){
+        if(ownerConnected()){
+          try{await refreshOwnerOnce()}catch{}
+        }
+        emit('error',friendly(error));
+      }
+    }else if(ownerConnected()){
+      try{await refreshOwnerOnce();emit('synced','Recovery data loaded once')}catch(error){emit('error',friendly(error))}
+    }else emit('local','Local data loaded · enter token to sync');
     await consumeSetupLink();
-    setInterval(()=>{if(!isConnected()||document.visibilityState!=='visible')return;const json=localJSON();if(json!==lastLocal){lastLocal=json;schedule()}},5000);
-    window.addEventListener('online',()=>{if(tokenRef)bindTokenHash(activeTokenHash).catch(()=>{});if(ownerConnected())startOwner().catch(()=>{})});
   }
 
-  const api={connect,push,schedule,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash};
+  const api={connect,push,schedule,refresh,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash};
   window.OpenDaySync=api;window.AppPlatform?.register?.('firebase-token-sync',api);boot().catch(error=>emit('error',friendly(error)));
 })();
