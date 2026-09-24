@@ -6,6 +6,14 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.4.1 — 2026-09-24
+
+- Sync status now distinguishes **Token synced** from **Recovery** access.
+- The Sync panel shows how many notes, saved schools and booked flags are held locally on the current device.
+- A recovery-capable device can expose **Set new memorable token** even if it does not know the old token.
+- Connecting a token backs up the device's current local state first, then merges unique local data with the cloud state and performs one recovery merge write when needed.
+- This is intended to protect older iPhone/iPad-local notes while re-establishing one memorable token across devices.
+
 ## 2.4.0 — 2026-09-24
 
 - Added a private **My view** selector to each school: Want to visit again, Liked, Want to try for, Not for us, or Undecided.
