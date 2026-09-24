@@ -83,14 +83,14 @@
   }
 
   function applyRemote(remote){
-    const local=normalise(readLocal()),merged=mergeStates(local,remote),mergedJSON=JSON.stringify(merged);
+    const local=normalise(readLocal()),merged=mergeStates(local,remote),mergedJSON=JSON.stringify(merged),remoteJSON=JSON.stringify(normalise(remote||{}));
     if(JSON.stringify(local)!==mergedJSON){
       writeLocal(merged);
       window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
     }
     lastLocal=mergedJSON;
-    lastRemote=JSON.stringify(normalise(remote||{}));
-    return merged;
+    lastRemote=remoteJSON;
+    return {merged,mergedJSON,remoteJSON,needsCloudWrite:mergedJSON!==remoteJSON};
   }
 
   async function readTokenOnce(refToRead=tokenRef){
@@ -100,9 +100,9 @@
     if(!snap.exists())throw new Error('token-not-recognised');
     const data=snap.data()||{};
     if(data.app!=='openday'||data.active!==true)throw new Error('token-not-recognised');
-    applyRemote(data.state||{});
+    const merge=applyRemote(data.state||{});
     emit('synced','Synced · loaded once');
-    return true;
+    return merge;
   }
 
   async function refreshOwnerOnce(){
@@ -113,13 +113,20 @@
     return data;
   }
 
-  async function bindTokenHash(hash,{createIfOwner=false}={}){
+  async function bindTokenHash(hash,{createIfOwner=false,pushMerged=false}={}){
     if(!hash)return false;
     await loadFirebase();
     const candidate=FStore.doc(db,cfg.tokenCollection,hash);
     try{
-      await readTokenOnce(candidate);
+      const merge=await readTokenOnce(candidate);
       tokenRef=candidate;activeTokenHash=hash;
+      if(pushMerged&&merge?.needsCloudWrite){
+        window.FirebaseUsageMonitor?.write(1,'token-recovery-merge-write','openday','kk-syllabus','(default)');
+        const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
+        await FStore.setDoc(candidate,{state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+        lastRemote=JSON.stringify(state);lastLocal=lastRemote;
+        emit('synced','Local and cloud data merged & synced');
+      }
       return true;
     }catch(error){
       if(error?.message!=='token-not-recognised'||!createIfOwner||!ownerConnected())throw error;
@@ -180,7 +187,7 @@
     await loadFirebase();
     if(token!==undefined&&String(token)!==''){
       const value=String(token),hash=await deriveTokenHash(value);
-      await bindTokenHash(hash,{createIfOwner:ownerConnected()});
+      await bindTokenHash(hash,{createIfOwner:ownerConnected(),pushMerged:true});
       localStorage.setItem(cfg.tokenKey,value);
       emit('synced','Synced with memorable token');
       return true;
