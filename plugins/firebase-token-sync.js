@@ -4,6 +4,7 @@
     documentPath:['app_private_state','openday'],
     tokenCollection:'openday_sync',
     tokenKey:'openday.sync.token.v1',
+    stateBackupKey:'openday.state.before-token-connect.v1',
     loginUrl:'https://nirav2000.github.io/Kk-syllabus/',
     legacyEmail:'openday-sync@nirav2000.github.io',
     tokenSalt:'Openday memorable token v2 | kk-syllabus'
@@ -12,6 +13,7 @@
 
   const readLocal=()=>{try{return JSON.parse(localStorage.getItem(cfg.stateKey)||'{}')}catch{return{}}};
   const writeLocal=data=>localStorage.setItem(cfg.stateKey,JSON.stringify(data||{}));
+  const backupLocal=()=>{try{localStorage.setItem(cfg.stateBackupKey,JSON.stringify({savedAt:new Date().toISOString(),state:readLocal()}))}catch{}};
   const normalise=data=>({
     saved:Array.isArray(data?.saved)?data.saved:[],
     booked:data?.booked||{},
@@ -187,6 +189,7 @@
     await loadFirebase();
     if(token!==undefined&&String(token)!==''){
       const value=String(token),hash=await deriveTokenHash(value);
+      backupLocal();
       await bindTokenHash(hash,{createIfOwner:ownerConnected(),pushMerged:true});
       localStorage.setItem(cfg.tokenKey,value);
       emit('synced','Synced with memorable token');
