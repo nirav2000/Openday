@@ -73,6 +73,7 @@
     db=FStore.getFirestore(app);ref=FStore.doc(db,...cfg.documentPath);
     await auth.authStateReady();
     FAuth.onAuthStateChanged(auth,user=>{
+      window.AppsAuth?.setAppIdentity(user,{app:'Openday'});
       if(!booted)return;
       if(user?.email===cfg.legacyEmail){FAuth.signOut(auth).catch(()=>{});return}
       if(user?.uid===OWNER_UID&&!rememberedToken()&&!tokenRef)refreshOwnerOnce().catch(()=>{});
