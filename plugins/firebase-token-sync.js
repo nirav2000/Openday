@@ -17,6 +17,7 @@
     booked:data?.booked||{},
     notes:data?.notes||{},
     watchBooking:Array.isArray(data?.watchBooking)?data.watchBooking:[],
+    schoolDecisions:data?.schoolDecisions&&typeof data.schoolDecisions==='object'?data.schoolDecisions:{},
     eventOverrides:data?.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},
     updatedAt:data?.updatedAt||''
   });
@@ -29,6 +30,7 @@
       booked:mergeMap(a.booked||{},b.booked||{}),
       notes:mergeMap(a.notes||{},b.notes||{}),
       watchBooking:[...new Set([...(b.watchBooking||[]),...(a.watchBooking||[])])],
+      schoolDecisions:mergeMap(a.schoolDecisions||{},b.schoolDecisions||{}),
       eventOverrides:mergeMap(a.eventOverrides||{},b.eventOverrides||{}),
       updatedAt:new Date(Math.max(at,bt)||Date.now()).toISOString()
     };
