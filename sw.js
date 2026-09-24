@@ -1,4 +1,4 @@
-const CACHE='open-days-v2.4.1';
+const CACHE='open-days-v2.5.0';
 const ASSETS=[
   './','./index.html','./styles.css','./app.js','./integrations.js','./version.json',
   './plugins/app-platform.js','./plugins/autosave.js','./plugins/firebase-token-sync.js','./plugins/developer-notes.js','./plugins/version-lab.js','./plugins/public-overrides.js','./plugins/personal-updates.js',
