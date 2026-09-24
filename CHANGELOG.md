@@ -6,6 +6,12 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.4.0 — 2026-09-24
+
+- Added a private **My view** selector to each school: Want to visit again, Liked, Want to try for, Not for us, or Undecided.
+- The selection is stored with the same private Openday state as notes/bookings and follows the memorable-token sync model.
+- Choosing a view is a deliberate action, so it performs at most one cloud write rather than background/autosave writes.
+
 ## 2.3.0 — 2026-09-24
 
 - Removed realtime Firestore listeners from Openday private state and global date/time reports.
