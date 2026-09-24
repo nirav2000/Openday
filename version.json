@@ -1,6 +1,6 @@
 {
-  "version": "2.3.0",
+  "version": "2.4.0",
   "released": "2026-09-24",
   "channel": "main",
-  "summary": "Reduce Firestore usage to load/manual refresh reads and deliberate writes, with local-first note editing and explicit cloud save."
+  "summary": "Add private school-decision labels such as Liked, Want to visit again, Want to try for and Not for us."
 }
