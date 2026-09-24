@@ -23,7 +23,8 @@ const releases=[
   {version:'2.2.3',commit:'f84e5b890febb9f5f68bea8f91ee9c4f82e94e1a',kind:'release',label:'Calendar publisher race fix'},
   {version:'2.2.4',commit:'b1b4fce49f2fd7ac120931f7736d2c110b3bfe2b',kind:'release',label:'Strict change-driven calendar'},
   {version:'2.3.0',commit:'9f69723e076071242405458e348254be4d08c49c',kind:'release',label:'Low-usage local-first Firestore sync'},
-  {version:'2.4.0',commit:'0e623a8800905900360c3ed208d37b1814cb405e',kind:'release',label:'School decision labels'}
+  {version:'2.4.0',commit:'0e623a8800905900360c3ed208d37b1814cb405e',kind:'release',label:'School decision labels'},
+  {version:'2.4.1',commit:'f24aa9fe1f5d95ad501f530ac222762dbb374355',kind:'release',label:'Token/recovery distinction and safe device-state backup'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
