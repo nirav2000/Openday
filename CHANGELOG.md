@@ -6,6 +6,18 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.3.0 — 2026-09-24
+
+- Removed realtime Firestore listeners from Openday private state and global date/time reports.
+- School catalogue data continues to load from the deployed JSON files once at app launch; it is not read school-by-school from Firestore.
+- Memorable-token private state now performs one cloud document read when the app connects, then no further reads until manual refresh/reconnect.
+- Global date/time reports now perform one collection load at launch and no background refresh. A **Refresh cloud data** control is available in Sync.
+- Global reports use one document per school instead of accumulating a new document for every correction.
+- Visit-note typing now saves to local storage only. Cloud sync happens only when **Save note to cloud** is pressed.
+- Closing the school panel with a locally changed but unsynced note now warns before closing. Browser reload/close also requests a standard unsaved-changes warning where the browser supports it.
+- Saved-school, booked and booking-watch toggles remain deliberate one-action/one-cloud-write operations.
+- Added spacing below the note sync/status message.
+
 ## 2.2.4 — 2026-09-23
 
 - Removed the hourly refresh hint from the subscribed calendar.
