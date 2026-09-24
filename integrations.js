@@ -15,6 +15,7 @@
     .feed-label{display:block;margin:14px 0 6px;font-size:.76rem;font-weight:800;color:#61758a;text-transform:uppercase;letter-spacing:.06em}
     .feed-copy{display:grid;grid-template-columns:1fr auto;gap:7px}.feed-copy input{min-width:0;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit;color:#102a43;background:#f8fafb}.feed-copy button{border:1px solid #dce5ed;border-radius:10px;background:white;color:#1769aa;font-weight:750;padding:8px 12px}
     .sync-dialog{max-width:480px}.sync-dialog .detail-inner{padding:24px}.sync-dialog input{width:100%;border:1px solid #dce5ed;border-radius:10px;padding:11px 12px;font:inherit;margin:8px 0}.sync-dialog .token-help{font-size:.82rem;color:#61758a;line-height:1.45}.sync-dialog .sync-message{min-height:1.2em;font-size:.82rem;color:#61758a}.sync-dialog .sync-message.error{color:#b94444}.sync-dialog .sync-message.ok{color:#15805d}
+    .notes-dialog{width:min(760px,calc(100vw - 24px));max-height:86vh}.notes-dialog .detail-inner{padding:22px}.notes-list{display:grid;gap:10px;margin:14px 0}.note-card{border:1px solid #dce5ed;border-radius:12px;padding:12px;background:#fff}.note-card h3{margin:0 0 5px;font-size:1rem}.note-card p{white-space:pre-wrap;margin:0;color:#29445d;line-height:1.45}.note-meta{font-size:.74rem;color:#71869a;margin-top:7px}.merge-warning{border:1px solid #e5c36a;background:#fff9e8;border-radius:12px;padding:12px;margin:12px 0}.notes-empty{color:#61758a}.notes-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
     @media(max-width:600px){.sync-pill .sync-label{display:none}.sync-pill{width:38px;height:38px;justify-content:center;padding:0}}
   `;
   document.head.appendChild(style);
@@ -29,8 +30,41 @@
     let actions=header.querySelector('.header-actions');
     if(!actions){actions=document.createElement('div');actions.className='header-actions';const install=document.querySelector('#installBtn');if(install)actions.appendChild(install);header.appendChild(actions)}
     const history=document.createElement('a');history.className='version-link';history.href='version-lab/';history.textContent='Versions';history.setAttribute('aria-label','Open Version Lab');actions.insertBefore(history,actions.firstChild);
-    const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.isConnected?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,history);button.onclick=openSyncDialog;
+    const notes=document.createElement('button');notes.className='version-link';notes.type='button';notes.textContent='Notes';notes.setAttribute('aria-label','Show all notes stored on this device');notes.onclick=openLocalNotes;actions.insertBefore(notes,history);
+    const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.isConnected?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,notes);button.onclick=openSyncDialog;
   }
+
+  const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  function localSchoolName(id){
+    const all=[...(window.schoolSets?.senior||[]),...(window.schoolSets?.primary||[]),...(typeof schools!=='undefined'?schools:[])];
+    return all.find(s=>s.id===id)?.name||id;
+  }
+  function ensureLocalNotesDialog(){
+    let d=document.querySelector('#localNotesDialog');if(d)return d;
+    d=document.createElement('dialog');d.id='localNotesDialog';d.className='notes-dialog';
+    d.innerHTML='<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">THIS DEVICE</p><h2>Local notes</h2><p class="token-help">Everything shown here comes from this browser\'s local Openday storage. Opening this view does not read or write Firebase.</p><div class="notes-toolbar"><button id="copyLocalNotes" type="button">Copy all notes</button></div><div id="mergeConflictSummary"></div><div id="localNotesList" class="notes-list"></div><details><summary>Pre-token-connect backup</summary><div id="backupNotesList" class="notes-list"></div></details></div><button class="close" data-close-local-notes aria-label="Close">×</button>';
+    document.body.appendChild(d);
+    d.onclick=e=>{if(e.target.hasAttribute('data-close-local-notes')||e.target===d)d.close()};
+    d.querySelector('#copyLocalNotes').onclick=async()=>{
+      const local=JSON.parse(localStorage.getItem('openDayState')||'{}'),entries=Object.entries(local.notes||{}).filter(([,v])=>String(v||'').trim());
+      const text=entries.map(([id,note])=>localSchoolName(id)+'\n'+String(note)).join('\n\n---\n\n');
+      try{await navigator.clipboard.writeText(text);d.querySelector('#copyLocalNotes').textContent='Copied ✓'}catch{d.querySelector('#copyLocalNotes').textContent='Copy failed'}
+    };
+    return d;
+  }
+  function renderLocalNotes(){
+    const d=ensureLocalNotesDialog(),local=JSON.parse(localStorage.getItem('openDayState')||'{}');
+    const notes=Object.entries(local.notes||{}).filter(([,v])=>String(v||'').trim());
+    const list=d.querySelector('#localNotesList');
+    list.innerHTML=notes.length?notes.map(([id,note])=>'<article class="note-card"><h3>'+escapeHtml(localSchoolName(id))+'</h3><p>'+escapeHtml(note)+'</p><div class="note-meta">'+escapeHtml(id)+'</div></article>').join(''):'<p class="notes-empty">No notes are stored locally on this device.</p>';
+    const conflicts=Object.values(local.mergeConflicts||{}).filter(x=>x?.status!=='resolved');
+    const conflictBox=d.querySelector('#mergeConflictSummary');
+    conflictBox.innerHTML=conflicts.length?'<div class="merge-warning"><b>'+conflicts.length+' preserved merge difference'+(conflicts.length===1?'':'s')+'</b><p>Local and cloud versions differed. Neither copy has been discarded; both values are preserved in the merge record for later review.</p></div>':'';
+    let backup={};try{backup=JSON.parse(localStorage.getItem('openday.state.before-token-connect.v1')||'{}')?.state||{}}catch{}
+    const backupNotes=Object.entries(backup.notes||{}).filter(([,v])=>String(v||'').trim());
+    d.querySelector('#backupNotesList').innerHTML=backupNotes.length?backupNotes.map(([id,note])=>'<article class="note-card"><h3>'+escapeHtml(localSchoolName(id))+'</h3><p>'+escapeHtml(note)+'</p><div class="note-meta">Backup · '+escapeHtml(id)+'</div></article>').join(''):'<p class="notes-empty">No pre-token-connect backup exists on this device yet.</p>';
+  }
+  function openLocalNotes(){const d=ensureLocalNotesDialog();renderLocalNotes();d.showModal()}
 
   function ensureSyncDialog(){
     let d=document.querySelector('#syncDialog');if(d)return d;
