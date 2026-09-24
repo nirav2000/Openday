@@ -13,7 +13,7 @@ Current app version: **2.2.1**. Openday follows Semantic Versioning; see [`versi
 - notes autosave while typing
 - iPhone-friendly individual `.ics` downloads with a one-day reminder
 - subscribable `calendar.ics` feed
-- cross-device sync using a memorable token, with the Kk-syllabus parent account retained as the recovery/reset route
+- cross-device sync using a memorable token; Firebase owner/service credentials are used only for administrative recovery and publishing
 - no separate Openday Firebase project or Firebase user required
 - offline-capable progressive web app
 
@@ -40,7 +40,7 @@ The normal cross-device experience is the **memorable token**:
 2. Openday derives a private capability document ID locally and syncs the private Openday state.
 3. The plaintext token is stored only on devices where you choose to remember it; Firestore stores only the derived capability ID.
 
-If a device still remembers an older token, **Show saved token** can reveal it. If the token has been forgotten on every device, it cannot be reconstructed from Firestore. Sign in to Kk-syllabus with the configured parent account and use **Set / replace token**. Openday merges the existing owner state and any reachable token-backed state before rotating the token, so resetting the token does not delete the saved schools, notes, bookings or personal corrections.
+If a device still remembers an older token, **Show saved token** can reveal it. If the token has been forgotten on every device, it cannot be reconstructed from Firestore. Administrative recovery can rotate the capability without deleting the saved schools, notes or bookings.
 
 The Kk-syllabus parent account remains an owner/recovery route. Automated public school-catalogue publishing also lives in the Kk-syllabus repository because it already holds the authorised `FIREBASE_SERVICE_ACCOUNT_KK_SYLLABUS` GitHub Actions secret.
 
@@ -62,3 +62,18 @@ School date and time corrections entered through Openday are public reported dat
 Personal visit notes, saved schools and booking state remain private.
 
 The public calendar feed is no longer rebuilt on a timer or on unrelated app deployments. A dedicated workflow regenerates `calendar.ics` only when calendar-source files change and commits the feed only when its contents actually differ. Verified catalogue changes therefore update existing subscribers without needless hourly rewrites. Public reported corrections remain visible in the app immediately, but they enter the subscribed feed only after they are verified/promoted into the committed calendar-source data. The feed has no forced hourly refresh hint.
+
+
+## Firestore usage model
+
+Openday is deliberately local-first and low-read/write:
+
+- school catalogues are deployed JSON and are loaded once when the app opens;
+- a remembered-token session reads its single private state document once when connecting;
+- global reported date/time corrections are fetched once when the app opens;
+- there are no realtime Firestore listeners;
+- **Refresh cloud data** performs the next explicit read;
+- visit notes save locally while typing and are written to cloud only when **Save note to cloud** is pressed;
+- discrete controls such as Save school / Booked / Booking watch write once per deliberate change.
+
+This keeps typing, scrolling, filtering and browsing out of Firestore billing.
