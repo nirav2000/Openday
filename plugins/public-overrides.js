@@ -1,18 +1,13 @@
 (()=>{
   const COLLECTION='openday_public_reports';
   const DEVICE_KEY='openday.publicContributor.v1';
-  let FApp,FStore,db,unsubscribe=null,ready=false;
+  let FApp,FStore,db,ready=false,lastRefresh=0;
   const reportsBySchool=new Map();
 
   const emit=()=>{
-    const detail={reports:Object.fromEntries(reportsBySchool)};
+    const detail={reports:Object.fromEntries(reportsBySchool),refreshedAt:lastRefresh?new Date(lastRefresh).toISOString():''};
     window.dispatchEvent(new CustomEvent('openday:public-overrides',{detail}));
     window.AppPlatform?.emit?.('public-overrides:changed',detail);
-  };
-
-  const latest=(a,b)=>{
-    const at=Date.parse(a?.updatedAt||0)||0,bt=Date.parse(b?.updatedAt||0)||0;
-    return at>=bt?a:b;
   };
 
   async function loadFirebase(){
@@ -60,7 +55,7 @@
     const updated=data.updatedAt?.toDate?.()?.toISOString?.()||data.updatedAt||'';
     return {
       id,
-      schoolId:String(data.schoolId||''),
+      schoolId:String(data.schoolId||id||''),
       date:String(data.date||''),
       startTime:String(data.startTime||''),
       endTime:String(data.endTime||''),
@@ -71,33 +66,28 @@
     };
   }
 
-  async function start(){
-    if(unsubscribe)return;
+  async function refresh(){
     await loadFirebase();
-    window.FirebaseUsageMonitor?.listener(1,'public-report-listener','openday','kk-syllabus','(default)');
-    unsubscribe=FStore.onSnapshot(FStore.collection(db,COLLECTION),snap=>{
-      window.FirebaseUsageMonitor?.read(snap.size||0,'public-report-snapshot','openday','kk-syllabus','(default)');
-      reportsBySchool.clear();
-      snap.forEach(doc=>{
-        const report=normaliseReport(doc.data(),doc.id);
-        if(!report.schoolId)return;
-        reportsBySchool.set(report.schoolId,latest(reportsBySchool.get(report.schoolId),report));
-      });
-      ready=true;emit();
-    },error=>{
-      console.warn('Openday public reports unavailable',error);
-      window.dispatchEvent(new CustomEvent('openday:public-overrides-error',{detail:{message:error?.message||'Public reports unavailable'}}));
+    window.FirebaseUsageMonitor?.read(1,'public-report-query','openday','kk-syllabus','(default)');
+    const snap=await FStore.getDocs(FStore.collection(db,COLLECTION));
+    reportsBySchool.clear();
+    snap.forEach(doc=>{
+      const report=normaliseReport(doc.data(),doc.id);
+      if(report.schoolId)reportsBySchool.set(report.schoolId,report);
     });
+    if(snap.size>1)window.FirebaseUsageMonitor?.read(snap.size-1,'public-report-docs','openday','kk-syllabus','(default)');
+    lastRefresh=Date.now();ready=true;emit();
+    return reportsBySchool.size;
   }
 
   async function report(schoolId,{date='',startTime='',endTime=''}={}){
     await loadFirebase();
     if(!schoolId)throw new Error('Missing school.');
     if(!date&&!startTime&&!endTime)throw new Error('Enter a date or time to report.');
-    const who=await contributor();
+    const who=await contributor(),id=String(schoolId);
     const payload={
       app:'openday',
-      schoolId:String(schoolId),
+      schoolId:id,
       date:String(date||''),
       startTime:String(startTime||''),
       endTime:String(endTime||''),
@@ -106,10 +96,10 @@
       status:'reported',
       updatedAt:FStore.serverTimestamp()
     };
-    window.FirebaseUsageMonitor?.write(1,'public-report-create','openday','kk-syllabus','(default)');
-    const ref=await FStore.addDoc(FStore.collection(db,COLLECTION),payload);
-    const local={...payload,id:ref.id,updatedAt:new Date().toISOString()};
-    reportsBySchool.set(String(schoolId),local);emit();
+    window.FirebaseUsageMonitor?.write(1,'public-report-save','openday','kk-syllabus','(default)');
+    await FStore.setDoc(FStore.doc(db,COLLECTION,id),payload);
+    const local={...payload,id,updatedAt:new Date().toISOString()};
+    reportsBySchool.set(id,local);emit();
     return {...local,contributor:who};
   }
 
@@ -117,8 +107,11 @@
   function all(){return Object.fromEntries(reportsBySchool)}
   function isReady(){return ready}
 
-  const api={start,report,get,all,contributor,isReady};
+  const api={refresh,report,get,all,contributor,isReady};
   window.OpenDayPublicOverrides=api;
   window.AppPlatform?.register?.('public-overrides',api);
-  start().catch(error=>console.warn('Could not start Openday public reports',error));
+  refresh().catch(error=>{
+    console.warn('Openday public reports unavailable',error);
+    window.dispatchEvent(new CustomEvent('openday:public-overrides-error',{detail:{message:error?.message||'Public reports unavailable'}}));
+  });
 })();
