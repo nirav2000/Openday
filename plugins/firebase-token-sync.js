@@ -21,19 +21,45 @@
     watchBooking:Array.isArray(data?.watchBooking)?data.watchBooking:[],
     schoolDecisions:data?.schoolDecisions&&typeof data.schoolDecisions==='object'?data.schoolDecisions:{},
     eventOverrides:data?.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},
+    mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?data.mergeConflicts:{},
     updatedAt:data?.updatedAt||''
   });
   const mergeStates=(aInput,bInput)=>{
     const a=normalise(aInput),b=normalise(bInput);
     const at=Date.parse(a.updatedAt||0)||0,bt=Date.parse(b.updatedAt||0)||0,aNewer=at>=bt;
-    const mergeMap=(aMap,bMap)=>aNewer?{...bMap,...aMap}:{...aMap,...bMap};
+    const conflicts={...(b.mergeConflicts||{}),...(a.mergeConflicts||{})};
+    const same=(x,y)=>JSON.stringify(x)===JSON.stringify(y);
+    const mergeMap=(field,aMap={},bMap={})=>{
+      const out={},keys=new Set([...Object.keys(bMap),...Object.keys(aMap)]);
+      for(const key of keys){
+        const hasA=Object.prototype.hasOwnProperty.call(aMap,key),hasB=Object.prototype.hasOwnProperty.call(bMap,key);
+        if(hasA&&hasB&&!same(aMap[key],bMap[key])){
+          const id=field+':'+key;
+          const prior=conflicts[id]||{};
+          conflicts[id]={
+            field,key,
+            local:aMap[key],
+            cloud:bMap[key],
+            localUpdatedAt:a.updatedAt||'',
+            cloudUpdatedAt:b.updatedAt||'',
+            firstSeenAt:prior.firstSeenAt||new Date().toISOString(),
+            status:'unresolved'
+          };
+        }
+        if(hasA&&hasB)out[key]=aNewer?aMap[key]:bMap[key];
+        else if(hasA)out[key]=aMap[key];
+        else out[key]=bMap[key];
+      }
+      return out;
+    };
     return {
       saved:[...new Set([...(b.saved||[]),...(a.saved||[])])],
-      booked:mergeMap(a.booked||{},b.booked||{}),
-      notes:mergeMap(a.notes||{},b.notes||{}),
+      booked:mergeMap('booked',a.booked,b.booked),
+      notes:mergeMap('notes',a.notes,b.notes),
       watchBooking:[...new Set([...(b.watchBooking||[]),...(a.watchBooking||[])])],
-      schoolDecisions:mergeMap(a.schoolDecisions||{},b.schoolDecisions||{}),
-      eventOverrides:mergeMap(a.eventOverrides||{},b.eventOverrides||{}),
+      schoolDecisions:mergeMap('schoolDecisions',a.schoolDecisions,b.schoolDecisions),
+      eventOverrides:mergeMap('eventOverrides',a.eventOverrides,b.eventOverrides),
+      mergeConflicts:conflicts,
       updatedAt:new Date(Math.max(at,bt)||Date.now()).toISOString()
     };
   };
@@ -262,6 +288,6 @@
     await consumeSetupLink();
   }
 
-  const api={connect,push,schedule,refresh,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash};
+  const api={connect,push,schedule,refresh,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash,mergeStates,normalise,readLocal};
   window.OpenDaySync=api;window.AppPlatform?.register?.('firebase-token-sync',api);boot().catch(error=>emit('error',friendly(error)));
 })();
