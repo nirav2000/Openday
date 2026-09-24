@@ -36,7 +36,7 @@
 
   const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   function localSchoolName(id){
-    const all=[...(window.schoolSets?.senior||[]),...(window.schoolSets?.primary||[]),...(typeof schools!=='undefined'?schools:[])];
+    const sets=typeof schoolSets!=='undefined'?schoolSets:{};const all=[...(sets.senior||[]),...(sets.primary||[]),...(typeof schools!=='undefined'?schools:[])];
     return all.find(s=>s.id===id)?.name||id;
   }
   function ensureLocalNotesDialog(){
@@ -59,7 +59,7 @@
     list.innerHTML=notes.length?notes.map(([id,note])=>'<article class="note-card"><h3>'+escapeHtml(localSchoolName(id))+'</h3><p>'+escapeHtml(note)+'</p><div class="note-meta">'+escapeHtml(id)+'</div></article>').join(''):'<p class="notes-empty">No notes are stored locally on this device.</p>';
     const conflicts=Object.values(local.mergeConflicts||{}).filter(x=>x?.status!=='resolved');
     const conflictBox=d.querySelector('#mergeConflictSummary');
-    conflictBox.innerHTML=conflicts.length?'<div class="merge-warning"><b>'+conflicts.length+' preserved merge difference'+(conflicts.length===1?'':'s')+'</b><p>Local and cloud versions differed. Neither copy has been discarded; both values are preserved in the merge record for later review.</p></div>':'';
+    conflictBox.innerHTML=conflicts.length?'<div class="merge-warning"><b>'+conflicts.length+' preserved merge difference'+(conflicts.length===1?'':'s')+'</b><p>Local and cloud versions differed. Neither copy has been discarded.</p>'+conflicts.map(x=>'<details><summary>'+escapeHtml(localSchoolName(x.key))+' · '+escapeHtml(x.field)+'</summary><div class="note-card"><div class="note-meta">Local/device version</div><p>'+escapeHtml(typeof x.local==='string'?x.local:JSON.stringify(x.local,null,2))+'</p></div><div class="note-card"><div class="note-meta">Cloud version</div><p>'+escapeHtml(typeof x.cloud==='string'?x.cloud:JSON.stringify(x.cloud,null,2))+'</p></div></details>').join('')+'</div>':'';
     let backup={};try{backup=JSON.parse(localStorage.getItem('openday.state.before-token-connect.v1')||'{}')?.state||{}}catch{}
     const backupNotes=Object.entries(backup.notes||{}).filter(([,v])=>String(v||'').trim());
     d.querySelector('#backupNotesList').innerHTML=backupNotes.length?backupNotes.map(([id,note])=>'<article class="note-card"><h3>'+escapeHtml(localSchoolName(id))+'</h3><p>'+escapeHtml(note)+'</p><div class="note-meta">Backup · '+escapeHtml(id)+'</div></article>').join(''):'<p class="notes-empty">No pre-token-connect backup exists on this device yet.</p>';
