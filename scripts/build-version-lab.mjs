@@ -17,7 +17,13 @@ const releases=[
   {version:'2.0.2',commit:'81de550dd7fe76fb2c29c3ae2713ea069fa2b5d3',kind:'release',label:'Legacy auth-session recovery'},
   {version:'2.0.3',commit:'95674845ddf58bac5ac797aa66c019cb7777c253',kind:'release',label:'Safe local/cloud state merge'},
   {version:'2.1.0',commit:'beb6d21921fe5d12d85dc48ebad297e7f0646413',kind:'release',label:'Memorable-token restoration'},
-  {version:'2.2.0',commit:'88311e2f919a9dad36f5f259ec62a7ede626785a',kind:'release',label:'Exact Version Lab, global date/time reports and subscribed-calendar refresh'}
+  {version:'2.2.0',commit:'88311e2f919a9dad36f5f259ec62a7ede626785a',kind:'release',label:'Exact Version Lab, global date/time reports and subscribed-calendar refresh'},
+  {version:'2.2.1',commit:'acbab7d3af1788e3eddf33da17c9c900fc9c8631',kind:'release',label:'Calendar duration fix'},
+  {version:'2.2.2',commit:'e4c12944e04dd2f5bb5137b2b8edfff0526d3906',kind:'release',label:'Change-driven calendar publishing'},
+  {version:'2.2.3',commit:'f84e5b890febb9f5f68bea8f91ee9c4f82e94e1a',kind:'release',label:'Calendar publisher race fix'},
+  {version:'2.2.4',commit:'b1b4fce49f2fd7ac120931f7736d2c110b3bfe2b',kind:'release',label:'Strict change-driven calendar'},
+  {version:'2.3.0',commit:'9f69723e076071242405458e348254be4d08c49c',kind:'release',label:'Low-usage local-first Firestore sync'},
+  {version:'2.4.0',commit:'0e623a8800905900360c3ed208d37b1814cb405e',kind:'release',label:'School decision labels'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
@@ -46,4 +52,20 @@ for(const release of releases){
 }
 manifest.reverse();
 fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify({generatedAt:new Date().toISOString(),source:'git commit trees',releases:manifest},null,2)+'\n');
-console.log('Built Version Lab with '+manifest.length+' exact commit snapshots');
+
+const escHtml=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const fmtDate=value=>{
+  const d=new Date(value);
+  if(Number.isNaN(d.getTime()))return escHtml(value);
+  return new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(d);
+};
+const cards=manifest.map(v=>`<article class="version">
+  <div><h2>v${escHtml(v.version)}</h2><span class="badge ${v.kind==='reconstructed'?'reconstructed':''}">${v.kind==='reconstructed'?'reconstructed label':'release'}</span></div>
+  <div><b>${escHtml(v.label)}</b><p>${fmtDate(v.date)} · ${escHtml(v.subject)}</p><p class="commit">${escHtml(v.commit.slice(0,12))} · tree ${escHtml(v.tree.slice(0,12))} · ${v.fileCount} files</p></div>
+  <div class="actions"><a class="primary" href="${escHtml(v.snapshot)}">Open exact snapshot</a><a href="${escHtml(v.source)}" target="_blank" rel="noopener">Browse commit</a></div>
+</article>`).join('\n');
+const pagePath=path.join(root,'index.html');
+const page=fs.readFileSync(pagePath,'utf8');
+if(!page.includes('<!-- VERSION_CARDS -->'))throw new Error('Version Lab card marker missing');
+fs.writeFileSync(pagePath,page.replace('<!-- VERSION_CARDS -->',cards));
+console.log('Built Version Lab with '+manifest.length+' exact commit snapshots and a static version index');
