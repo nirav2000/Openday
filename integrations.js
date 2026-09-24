@@ -60,8 +60,18 @@
       <p id="syncMessage" class="sync-message"></p>
     </div><button class="close" data-close-sync aria-label="Close">×</button>`;
     document.body.appendChild(d);
-    const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage');
+    const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage'),mode=d.querySelector('#syncMode'),summary=d.querySelector('#localDataSummary');
     const setMessage=(text,kind='')=>{message.className='sync-message'+(kind?' '+kind:'');message.textContent=text};
+    const refreshDialogState=()=>{
+      const token=sync?.getToken?.()||'',owner=!!sync?.ownerConnected?.(),tokenConnected=!!sync?.tokenConnected?.();
+      mode.textContent=tokenConnected?'Connected using memorable token.':owner?'Connected through recovery access only — this device does not currently know the memorable token.':'Not connected to private cloud data.';
+      try{
+        const local=JSON.parse(localStorage.getItem('openDayState')||'{}');
+        summary.textContent=`This device currently holds ${Object.keys(local.notes||{}).length} note(s), ${(local.saved||[]).length} saved school(s), and ${Object.keys(local.booked||{}).filter(k=>local.booked[k]).length} booked flag(s) locally.`;
+      }catch{summary.textContent='Could not inspect this device local Openday data.'}
+      const replace=d.querySelector('#replaceToken');
+      if(replace){replace.hidden=!owner;replace.textContent=token?'Replace memorable token':'Set new memorable token'}
+    };
     d.querySelector('#connectToken').onclick=async()=>{
       setMessage('Connecting…');
       try{await sync.connect(input.value);setMessage('Connected. This device will now sync using the memorable token.','ok')}
@@ -69,7 +79,7 @@
     };
     d.querySelector('#showSavedToken').onclick=()=>{
       const token=sync?.getToken?.()||'';
-      if(!token){setMessage('This browser does not have the memorable token saved. Sign in to Kk-syllabus and set a replacement token.','error');return}
+      if(!token){setMessage('This browser does not have the memorable token saved. If this device has recovery access, use Set new memorable token below.','error');refreshDialogState();return}
       input.value=token;setMessage('Saved token shown above.','ok');
     };
     d.querySelector('#copySetupLink').onclick=async e=>{
@@ -86,21 +96,30 @@
       }catch(error){setMessage(error?.message||'Could not refresh cloud data.','error')}
     };
     const replace=d.querySelector('#replaceToken');
-    if(replace&&sync?.ownerConnected?.()){replace.hidden=false;replace.onclick=async()=>{
+    if(replace)replace.onclick=async()=>{
       const token=input.value;
+      if(!sync?.ownerConnected?.()){setMessage('This device does not have recovery access, so it cannot create a replacement token.','error');return}
       if(!token){setMessage('Enter the new memorable token you want to use first.','error');return}
-      setMessage('Replacing token and preserving existing state…');
-      try{await sync.resetMemorableToken(token);setMessage('Memorable token replaced. Existing Openday data has been kept and this device is synced.','ok')}
-      catch(error){setMessage(error.message||'Could not replace token.','error')}
-    }}
+      setMessage('Setting the memorable token and preserving existing state…');
+      try{await sync.resetMemorableToken(token);setMessage('New memorable token set. Existing Openday cloud data has been kept and this device is now token-synced.','ok');refreshDialogState()}
+      catch(error){setMessage(error.message||'Could not set the memorable token.','error')}
+    };
+    refreshDialogState();
     d.querySelector('#forgetToken').onclick=()=>{sync?.forgetToken?.();input.value='';setMessage('The token was forgotten on this device. Cloud data was not deleted.','ok')};
     d.onclick=e=>{if(e.target.hasAttribute('data-close-sync')||e.target===d)d.close()};
     return d;
   }
-  function openSyncDialog(){ensureSyncDialog().showModal()}
+  function openSyncDialog(){
+    const d=ensureSyncDialog(),mode=d.querySelector('#syncMode'),summary=d.querySelector('#localDataSummary'),replace=d.querySelector('#replaceToken');
+    const token=sync?.getToken?.()||'',owner=!!sync?.ownerConnected?.(),tokenConnected=!!sync?.tokenConnected?.();
+    if(mode)mode.textContent=tokenConnected?'Connected using memorable token.':owner?'Connected through recovery access only — this device does not currently know the memorable token.':'Not connected to private cloud data.';
+    try{const local=JSON.parse(localStorage.getItem('openDayState')||'{}');if(summary)summary.textContent=`This device currently holds ${Object.keys(local.notes||{}).length} note(s), ${(local.saved||[]).length} saved school(s), and ${Object.keys(local.booked||{}).filter(k=>local.booked[k]).length} booked flag(s) locally.`}catch{}
+    if(replace){replace.hidden=!owner;replace.textContent=token?'Replace memorable token':'Set new memorable token'}
+    d.showModal();
+  }
 
   function updateSyncStatus(detail={}){
-    const b=document.querySelector('#syncPill');if(!b)return;b.dataset.state=detail.state||'local';const label=b.querySelector('.sync-label');if(label)label.textContent=detail.state==='synced'?'Synced':detail.state==='syncing'?'Saving':'Sync';b.title=detail.text||'Sync settings';
+    const b=document.querySelector('#syncPill');if(!b)return;b.dataset.state=detail.state||'local';const label=b.querySelector('.sync-label');if(label)label.textContent=detail.state==='synced'?(detail.tokenConnected?'Token synced':detail.ownerConnected?'Recovery':'Synced'):detail.state==='syncing'?'Saving':'Sync';b.title=detail.text||'Sync settings';
     const openStatus=document.querySelector('#detailBody .autosave-status');if(openStatus&&detail.state==='synced'){openStatus.className='autosave-status saved';openStatus.textContent='Saved & synced'}else if(openStatus&&detail.state==='error'){openStatus.className='autosave-status error';openStatus.textContent='Saved locally · sync unavailable'}
     const message=document.querySelector('#syncMessage');if(message&&document.querySelector('#syncDialog')?.open&&!message.textContent)message.textContent=detail.text||'';
   }
