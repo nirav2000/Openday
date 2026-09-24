@@ -5,7 +5,7 @@
     .header-actions{display:flex;align-items:center;gap:8px}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}
     .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px}
     .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}
-    .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 0;min-height:1.1em}.autosave-status.saved{color:#15805d}.autosave-status.error{color:#b94444}
+    .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 12px;min-height:1.1em}.autosave-status.saved{color:#15805d}.autosave-status.error{color:#b94444}
     .calendar-action{gap:7px}.calendar-action .calendar-glyph{font-size:1.05rem}
     .feed-label{display:block;margin:14px 0 6px;font-size:.76rem;font-weight:800;color:#61758a;text-transform:uppercase;letter-spacing:.06em}
     .feed-copy{display:grid;grid-template-columns:1fr auto;gap:7px}.feed-copy input{min-width:0;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit;color:#102a43;background:#f8fafb}.feed-copy button{border:1px solid #dce5ed;border-radius:10px;background:white;color:#1769aa;font-weight:750;padding:8px 12px}
@@ -17,6 +17,7 @@
   const nativeRender=typeof render==='function'?render:null;
   const sync=window.OpenDaySync;
   let noteTimer=null;
+  const unsyncedNotes=new Set();
 
   function enhanceHeader(){
     const header=document.querySelector('header');if(!header||document.querySelector('#syncPill'))return;
@@ -40,6 +41,7 @@
         <button id="connectToken" class="primary" type="button">Connect & sync</button>
         <button id="showSavedToken" type="button">Show saved token</button>
         <button id="copySetupLink" type="button">Copy setup link</button>
+        <button id="refreshCloud" type="button">Refresh cloud data</button>
       </div>
       <hr style="border:0;border-top:1px solid #e5ebf0;margin:18px 0">
       <h3>Forgotten token?</h3>
@@ -69,6 +71,13 @@
       try{await navigator.clipboard.writeText(link);e.currentTarget.textContent='Copied ✓';setMessage('Private setup link copied.','ok')}
       catch{setMessage('Could not copy the setup link on this browser.','error')}
     };
+    d.querySelector('#refreshCloud').onclick=async()=>{
+      setMessage('Refreshing cloud data…');
+      try{
+        await Promise.all([sync?.refresh?.(),window.OpenDayPublicOverrides?.refresh?.()]);
+        setMessage('Cloud data refreshed. No further reads will be made until you refresh again or reload the app.','ok');
+      }catch(error){setMessage(error?.message||'Could not refresh cloud data.','error')}
+    };
     const replace=d.querySelector('#replaceToken');
     if(replace&&sync?.ownerConnected?.()){replace.hidden=false;replace.onclick=async()=>{
       const token=input.value;
@@ -93,11 +102,55 @@
 
   function identifyOpenSchool(){const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;const dateText=document.querySelector('#detailBody .bigdate')?.textContent;return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null}
   function enhanceDetail(){
-    const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;const school=identifyOpenSchool();if(!school)return;note.dataset.autosave='1';document.querySelector('#detailBody #saveNote')?.remove();const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.isConnected?.()?'Saved automatically · sync connected':'Saved automatically on this device';note.after(status);
-    const persist=()=>{state.notes[school.id]=note.value;saveState();status.className='autosave-status saved';status.textContent=sync?.isConnected?.()?'Saved locally · syncing…':'Saved on this device';sync?.schedule?.()};note.addEventListener('input',()=>{status.className='autosave-status';status.textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(persist,350)});note.addEventListener('blur',()=>{clearTimeout(noteTimer);persist()});
+    const note=document.querySelector('#detailBody #note');if(!note||note.dataset.autosave)return;
+    const school=identifyOpenSchool();if(!school)return;
+    note.dataset.autosave='1';
+    const saveButton=document.querySelector('#detailBody #saveNote');
+    const status=document.createElement('p');status.className='autosave-status saved';status.textContent=sync?.isConnected?.()?'Saved on device · cloud unchanged until Save':'Saved on device';
+    note.after(status);
+    if(saveButton)saveButton.textContent=sync?.isConnected?.()?'Save note to cloud':'Save note';
+    const persistLocal=()=>{
+      state.notes[school.id]=note.value;
+      saveState();
+      unsyncedNotes.add(school.id);
+      status.className='autosave-status';
+      status.textContent=sync?.isConnected?.()?'Saved on device · not yet synced':'Saved on device · cloud not connected';
+    };
+    note.addEventListener('input',persistLocal);
+    note.addEventListener('change',persistLocal);
+    if(saveButton)saveButton.onclick=async()=>{
+      persistLocal();
+      saveButton.disabled=true;
+      status.className='autosave-status';
+      status.textContent=sync?.isConnected?.()?'Saving once to cloud…':'Saved on device · cloud not connected';
+      let ok=false;
+      if(sync?.isConnected?.())ok=await sync.push();
+      if(ok){
+        unsyncedNotes.delete(school.id);
+        status.className='autosave-status saved';
+        status.textContent='Saved & synced';
+        saveButton.textContent='Saved ✓';
+        setTimeout(()=>{if(document.contains(saveButton)){saveButton.textContent='Save note to cloud';saveButton.disabled=false}},900);
+      }else{
+        saveButton.disabled=false;
+        saveButton.textContent=sync?.isConnected?.()?'Try cloud save again':'Save note';
+      }
+    };
     const cal=document.querySelector('#detailBody #calendar');if(cal){cal.classList.add('calendar-action');cal.innerHTML='<span class="calendar-glyph" aria-hidden="true">📅</span> Add to calendar';cal.setAttribute('aria-label','Add this visit to calendar')}
   }
   const detailBody=document.querySelector('#detailBody');if(detailBody)new MutationObserver(enhanceDetail).observe(detailBody,{childList:true,subtree:true});
+  const detailDialog=document.querySelector('#detail');
+  const warnUnsyncedClose=()=>{
+    const school=identifyOpenSchool();
+    if(!school||!unsyncedNotes.has(school.id))return true;
+    return window.confirm('This note is saved on this device but has not been saved to the cloud. Close anyway?');
+  };
+  detailDialog?.addEventListener('click',e=>{
+    if(!(e.target===detailDialog||e.target.hasAttribute('data-close')))return;
+    if(!warnUnsyncedClose()){e.preventDefault();e.stopImmediatePropagation()}
+  },true);
+  detailDialog?.addEventListener('cancel',e=>{if(!warnUnsyncedClose())e.preventDefault()});
+  window.addEventListener('beforeunload',e=>{if(!unsyncedNotes.size)return;e.preventDefault();e.returnValue=''});
 
   function enhanceTravelCards(){document.querySelectorAll('.card').forEach(card=>{const meta=card.querySelector('.meta');if(!meta||meta.dataset.travelLabelled)return;meta.textContent=meta.textContent.replace(/Approx\. ([^·;]+?) drive from HA1 3PU(?: · check live traffic|; check live traffic)?/g,'🚗 Car est. $1 from HA1 3PU');meta.dataset.travelLabelled='1'})}
   const list=document.querySelector('#list');if(list)new MutationObserver(enhanceTravelCards).observe(list,{childList:true,subtree:true});enhanceTravelCards();
