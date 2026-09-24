@@ -77,3 +77,10 @@ Openday is deliberately local-first and low-read/write:
 - discrete controls such as Save school / Booked / Booking watch write once per deliberate change.
 
 This keeps typing, scrolling, filtering and browsing out of Firestore billing.
+
+
+## Local notes and lossless merge recovery
+
+The header **Notes** control displays every note currently stored in that browser's `openDayState` without a Firebase read. It also shows the automatic pre-token-connect backup created before a device joins a memorable-token profile.
+
+Cross-device merge is deliberately conservative. Arrays such as saved schools/watch lists are unioned. If both device and cloud contain different values for the same note, booked flag, school decision or legacy event amendment, one value remains active according to the existing state timestamp but **both original values are retained** in `mergeConflicts` for review in the Notes view. Connecting a token first takes a full local-state backup, so the pre-merge device copy remains recoverable even if the merge is later reconsidered.
