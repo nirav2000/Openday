@@ -1,6 +1,6 @@
 {
-  "version": "2.4.1",
+  "version": "2.5.0",
   "released": "2026-09-24",
   "channel": "main",
-  "summary": "Distinguish memorable-token sync from recovery access, show per-device local-state counts, and safely back up/merge an old device when connecting a replacement token."
+  "summary": "Add a one-place local notes/backup viewer, preserve both sides of conflicting device/cloud amendments during merge, and make Version Lab a static Safari-safe exact-history index."
 }
