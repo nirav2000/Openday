@@ -41,7 +41,9 @@
       <p>Use your memorable token on any device. Openday keeps using the <b>kk-syllabus</b> Firebase project; the token is simply your private access capability.</p>
       <label for="syncToken"><b>Memorable token</b></label>
       <input id="syncToken" type="text" autocomplete="off" spellcheck="false" placeholder="Enter your memorable token">
-      <p class="token-help">If this browser still remembers your old token, <b>Show saved token</b> can reveal it. The token itself is not stored in Firestore, so if no device remembers it, sign in to Kk-syllabus once and set a replacement. Your existing Openday data is preserved.</p>
+      <p class="token-help">If this browser still remembers your old token, <b>Show saved token</b> can reveal it. A device may also have recovery access without actually possessing the memorable token.</p>
+      <p id="syncMode" class="token-help"></p>
+      <p id="localDataSummary" class="token-help"></p>
       <div class="modal-actions">
         <button id="connectToken" class="primary" type="button">Connect & sync</button>
         <button id="showSavedToken" type="button">Show saved token</button>
