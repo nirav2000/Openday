@@ -6,6 +6,15 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.5.0 — 2026-09-24
+
+- Added a **Notes** view that shows every note stored locally on the current device in one place, without reading Firebase.
+- The Notes view also shows the pre-token-connect device backup and any preserved local/cloud merge differences.
+- Device/cloud merging now records both sides whenever the same note, booked flag, school decision or legacy event amendment differs; the non-selected value is retained in `mergeConflicts` rather than discarded.
+- Connecting a memorable token continues to create a complete local pre-merge backup before modifying local state.
+- Rebuilt Version Lab as a static deployment-time index. It no longer depends on Safari fetching/parsing `manifest.json` in the browser, while each snapshot still comes from the exact original Git commit tree.
+- Added the missing 2.2.1–2.4.1 releases to Version Lab.
+
 ## 2.4.1 — 2026-09-24
 
 - Sync status now distinguishes **Token synced** from **Recovery** access.
