@@ -63,6 +63,59 @@
       updatedAt:new Date(Math.max(at,bt)||Date.now()).toISOString()
     };
   };
+  const mergeThreeWay=(baseInput,localInput,remoteInput)=>{
+    const base=normalise(baseInput),local=normalise(localInput),remote=normalise(remoteInput),now=new Date().toISOString();
+    const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+    const conflicts={...(remote.mergeConflicts||{}),...(local.mergeConflicts||{})};
+    const has=(obj,key)=>Object.prototype.hasOwnProperty.call(obj||{},key);
+    const mergeMap=(field,baseMap={},localMap={},remoteMap={})=>{
+      const out={},keys=new Set([...Object.keys(baseMap),...Object.keys(localMap),...Object.keys(remoteMap)]);
+      for(const key of keys){
+        const bp=has(baseMap,key),lp=has(localMap,key),rp=has(remoteMap,key);
+        const bv=bp?baseMap[key]:null,lv=lp?localMap[key]:null,rv=rp?remoteMap[key]:null;
+        const localChanged=lp!==bp||(lp&&bp&&!same(lv,bv));
+        const remoteChanged=rp!==bp||(rp&&bp&&!same(rv,bv));
+        let present,value;
+        if(localChanged&&!remoteChanged){present=lp;value=lv}
+        else if(!localChanged&&remoteChanged){present=rp;value=rv}
+        else if(localChanged&&remoteChanged){
+          if(lp===rp&&(!lp||same(lv,rv))){present=lp;value=lv}
+          else{
+            present=lp;value=lv;
+            const id=field+':'+key,prior=conflicts[id]||{};
+            conflicts[id]={
+              field,key,
+              localPresent:lp,cloudPresent:rp,
+              local:lp?lv:null,cloud:rp?rv:null,
+              localUpdatedAt:local.updatedAt||'',cloudUpdatedAt:remote.updatedAt||'',
+              firstSeenAt:prior.firstSeenAt||now,status:'unresolved'
+            };
+          }
+        }else{present=rp;value=rv}
+        if(present)out[key]=value;
+      }
+      return out;
+    };
+    const mergeMembership=(baseList=[],localList=[],remoteList=[])=>{
+      const b=new Set(baseList),l=new Set(localList),r=new Set(remoteList),out=new Set(),keys=new Set([...b,...l,...r]);
+      for(const key of keys){
+        const bv=b.has(key),lv=l.has(key),rv=r.has(key),lc=lv!==bv,rc=rv!==bv;
+        const chosen=lc&&!rc?lv:!lc&&rc?rv:lc&&rc?lv:rv;
+        if(chosen)out.add(key);
+      }
+      return [...out];
+    };
+    return {
+      saved:mergeMembership(base.saved,local.saved,remote.saved),
+      booked:mergeMap('booked',base.booked,local.booked,remote.booked),
+      notes:mergeMap('notes',base.notes,local.notes,remote.notes),
+      watchBooking:mergeMembership(base.watchBooking,local.watchBooking,remote.watchBooking),
+      schoolDecisions:mergeMap('schoolDecisions',base.schoolDecisions,local.schoolDecisions,remote.schoolDecisions),
+      eventOverrides:mergeMap('eventOverrides',base.eventOverrides,local.eventOverrides,remote.eventOverrides),
+      mergeConflicts:conflicts,
+      updatedAt:now
+    };
+  };
   const localJSON=()=>JSON.stringify(normalise(readLocal()));
   const ownerConnected=()=>!!auth?.currentUser&&auth.currentUser.uid===OWNER_UID;
   const tokenConnected=()=>!!tokenRef;
@@ -188,36 +241,36 @@
   async function push(){
     await loadFirebase();
     let local=normalise(readLocal());
-    if(!tokenRef&&!ownerConnected()){local.updatedAt=new Date().toISOString();writeLocal(local);lastLocal=JSON.stringify(local);emit('local','Saved on device · not connected');return false}
+    local.updatedAt=new Date().toISOString();
+    writeLocal(local);
+    if(!tokenRef&&!ownerConnected()){lastLocal=JSON.stringify(local);emit('local','Saved on device · not connected');return false}
     emit('syncing','Reading latest cloud data…');
     try{
       const target=tokenRef||ref;
+      let finalMerged=null;
       window.FirebaseUsageMonitor?.read(1,tokenRef?'token-prewrite-read':'owner-prewrite-read','openday','kk-syllabus','(default)');
-      const snap=await FStore.getDoc(target);
-      if(tokenRef){
-        if(!snap.exists())throw new Error('token-not-recognised');
-        const data=snap.data()||{};
-        if(data.app!=='openday'||data.active!==true)throw new Error('token-not-recognised');
-      }
-      const remote=snap.exists()?(snap.data()?.state||{}):{};
-      const remoteJSON=JSON.stringify(normalise(remote));
-      const localBeforeJSON=JSON.stringify(local);
-      if(localBeforeJSON===remoteJSON){
-        lastRemote=remoteJSON;lastLocal=localBeforeJSON;emit('synced','Already synced');return true;
-      }
-      const merged=mergeStates(local,remote);
-      merged.updatedAt=new Date().toISOString();
-      writeLocal(merged);
-      const mergedJSON=JSON.stringify(merged);
-      lastLocal=mergedJSON;
-      window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
       window.FirebaseUsageMonitor?.write(1,tokenRef?'token-merge-write':'owner-merge-write','openday','kk-syllabus','(default)');
-      if(tokenRef){
-        await FStore.setDoc(tokenRef,{state:merged,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
-      }else{
-        await FStore.setDoc(ref,{app:'openday',state:merged,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
-      }
-      lastRemote=mergedJSON;
+      await FStore.runTransaction(db,async tx=>{
+        const snap=await tx.get(target);
+        if(tokenRef){
+          if(!snap.exists())throw new Error('token-not-recognised');
+          const data=snap.data()||{};
+          if(data.app!=='openday'||data.active!==true)throw new Error('token-not-recognised');
+        }
+        const remote=snap.exists()?(snap.data()?.state||{}):{};
+        let base={};
+        try{base=lastRemote?JSON.parse(lastRemote):{}}catch{}
+        finalMerged=lastRemote?mergeThreeWay(base,local,remote):mergeStates(local,remote);
+        finalMerged.updatedAt=new Date().toISOString();
+        if(tokenRef){
+          tx.set(target,{state:finalMerged,clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+        }else{
+          tx.set(target,{app:'openday',state:finalMerged,clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+        }
+      });
+      const merged=normalise(finalMerged||local),mergedJSON=JSON.stringify(merged);
+      writeLocal(merged);lastLocal=mergedJSON;lastRemote=mergedJSON;
+      window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
       const conflicts=Object.values(merged.mergeConflicts||{}).filter(x=>x?.status!=='resolved').length;
       emit('synced',conflicts?'Saved, merged & synced · '+conflicts+' difference'+(conflicts===1?'':'s')+' preserved':'Saved, merged & synced');
       return true;
@@ -306,6 +359,6 @@
     await consumeSetupLink();
   }
 
-  const api={connect,push,schedule,refresh,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash,mergeStates,normalise,readLocal};
+  const api={connect,push,schedule,refresh,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash,mergeStates,mergeThreeWay,normalise,readLocal};
   window.OpenDaySync=api;window.AppPlatform?.register?.('firebase-token-sync',api);boot().catch(error=>emit('error',friendly(error)));
 })();
