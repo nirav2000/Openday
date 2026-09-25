@@ -6,6 +6,15 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.5.1 — 2026-09-25
+
+- Every deliberate private-state cloud save now runs as a Firestore transaction: read latest cloud state → three-way merge against the device's last known cloud baseline → write the merged state.
+- Changes made on different schools/devices merge automatically even when the second device has not manually refreshed first.
+- Saved-school and booking-watch membership are merged per school, so additions and removals can both survive stale-device saves instead of using a simple union.
+- If both devices changed the same note/booked flag/school decision/legacy amendment since their common baseline, the current save remains active while both versions are retained in `mergeConflicts` for review.
+- Firestore can retry the transaction automatically if another device writes during the save, avoiding the normal read-then-write race.
+- The Sync panel now explains this multi-device behaviour.
+
 ## 2.5.0 — 2026-09-24
 
 - Added a **Notes** view that shows every note stored locally on the current device in one place, without reading Firebase.
