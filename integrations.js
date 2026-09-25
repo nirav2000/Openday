@@ -78,6 +78,7 @@
       <p class="token-help">If this browser still remembers your old token, <b>Show saved token</b> can reveal it. A device may also have recovery access without actually possessing the memorable token.</p>
       <p id="syncMode" class="token-help"></p>
       <p id="localDataSummary" class="token-help"></p>
+      <p class="token-help"><b>Multi-device safety:</b> each deliberate cloud save first reads the latest cloud state and merges it transactionally with this device. Changes on different schools are combined automatically; conflicting changes to the same item are preserved for review.</p>
       <div class="modal-actions">
         <button id="connectToken" class="primary" type="button">Connect & sync</button>
         <button id="showSavedToken" type="button">Show saved token</button>
