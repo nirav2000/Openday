@@ -187,22 +187,40 @@
 
   async function push(){
     await loadFirebase();
-    const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
-    const json=JSON.stringify(state);lastLocal=json;
-    if(!tokenRef&&!ownerConnected()){emit('local','Saved on device · not connected');return false}
-    emit('syncing','Saving to cloud…');
+    let local=normalise(readLocal());
+    if(!tokenRef&&!ownerConnected()){local.updatedAt=new Date().toISOString();writeLocal(local);lastLocal=JSON.stringify(local);emit('local','Saved on device · not connected');return false}
+    emit('syncing','Reading latest cloud data…');
     try{
+      const target=tokenRef||ref;
+      window.FirebaseUsageMonitor?.read(1,tokenRef?'token-prewrite-read':'owner-prewrite-read','openday','kk-syllabus','(default)');
+      const snap=await FStore.getDoc(target);
       if(tokenRef){
-        if(json===lastRemote){emit('synced','Already synced');return true}
-        window.FirebaseUsageMonitor?.write(1,'token-state-write','openday','kk-syllabus','(default)');
-        await FStore.setDoc(tokenRef,{state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
-        lastRemote=json;
-      }else{
-        window.FirebaseUsageMonitor?.write(1,'owner-state-write','openday','kk-syllabus','(default)');
-        await FStore.setDoc(ref,{app:'openday',state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
-        lastRemote=json;
+        if(!snap.exists())throw new Error('token-not-recognised');
+        const data=snap.data()||{};
+        if(data.app!=='openday'||data.active!==true)throw new Error('token-not-recognised');
       }
-      emit('synced','Saved & synced');return true;
+      const remote=snap.exists()?(snap.data()?.state||{}):{};
+      const remoteJSON=JSON.stringify(normalise(remote));
+      const localBeforeJSON=JSON.stringify(local);
+      if(localBeforeJSON===remoteJSON){
+        lastRemote=remoteJSON;lastLocal=localBeforeJSON;emit('synced','Already synced');return true;
+      }
+      const merged=mergeStates(local,remote);
+      merged.updatedAt=new Date().toISOString();
+      writeLocal(merged);
+      const mergedJSON=JSON.stringify(merged);
+      lastLocal=mergedJSON;
+      window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
+      window.FirebaseUsageMonitor?.write(1,tokenRef?'token-merge-write':'owner-merge-write','openday','kk-syllabus','(default)');
+      if(tokenRef){
+        await FStore.setDoc(tokenRef,{state:merged,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+      }else{
+        await FStore.setDoc(ref,{app:'openday',state:merged,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+      }
+      lastRemote=mergedJSON;
+      const conflicts=Object.values(merged.mergeConflicts||{}).filter(x=>x?.status!=='resolved').length;
+      emit('synced',conflicts?'Saved, merged & synced · '+conflicts+' difference'+(conflicts===1?'':'s')+' preserved':'Saved, merged & synced');
+      return true;
     }catch(error){emit('error',friendly(error));return false}
   }
 
