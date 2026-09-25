@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.2.1**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.5.1**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -72,9 +72,10 @@ Openday is deliberately local-first and low-read/write:
 - a remembered-token session reads its single private state document once when connecting;
 - global reported date/time corrections are fetched once when the app opens;
 - there are no realtime Firestore listeners;
-- **Refresh cloud data** performs the next explicit read;
-- visit notes save locally while typing and are written to cloud only when **Save note to cloud** is pressed;
-- discrete controls such as Save school / Booked / Booking watch write once per deliberate change.
+- **Refresh cloud data** performs an explicit read without making a change;
+- visit notes save locally while typing and reach the cloud only when **Save note to cloud** is pressed;
+- every deliberate private-state cloud save performs one transactional read of the latest private state and one write of the merged result (with automatic transaction retries only if another write races it);
+- discrete controls such as Save school / Booked / Booking watch use that same read → three-way merge → write path.
 
 This keeps typing, scrolling, filtering and browsing out of Firestore billing.
 
@@ -83,4 +84,4 @@ This keeps typing, scrolling, filtering and browsing out of Firestore billing.
 
 The header **Notes** control displays every note currently stored in that browser's `openDayState` without a Firebase read. It also shows the automatic pre-token-connect backup created before a device joins a memorable-token profile.
 
-Cross-device merge is deliberately conservative. Arrays such as saved schools/watch lists are unioned. If both device and cloud contain different values for the same note, booked flag, school decision or legacy event amendment, one value remains active according to the existing state timestamp but **both original values are retained** in `mergeConflicts` for review in the Notes view. Connecting a token first takes a full local-state backup, so the pre-merge device copy remains recoverable even if the merge is later reconsidered.
+Cross-device saves use a **three-way merge** against the device's last known cloud baseline. This means a stale iPhone can save a new note without first refreshing and still retain a newer unrelated iPad change. Saved-school and booking-watch membership are merged per school, so both additions and removals propagate correctly. If both devices independently changed the same note, booked flag, school decision or legacy event amendment, the current deliberate save remains active and **both competing values are retained** in `mergeConflicts` for review in the Notes view. The merge runs inside a Firestore transaction, so Firestore retries it if another device changes the same cloud document during the save. Connecting a token still takes a full local-state backup first.
