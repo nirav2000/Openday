@@ -1,6 +1,6 @@
 {
-  "version": "2.5.0",
-  "released": "2026-09-24",
+  "version": "2.5.1",
+  "released": "2026-09-25",
   "channel": "main",
-  "summary": "Add a one-place local notes/backup viewer, preserve both sides of conflicting device/cloud amendments during merge, and make Version Lab a static Safari-safe exact-history index."
+  "summary": "Use a transactional three-way merge before every deliberate private-state cloud save so stale iPhone/iPad sessions combine changes automatically without manual refresh."
 }
