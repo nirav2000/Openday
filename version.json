@@ -1,6 +1,6 @@
 {
-  "version": "2.5.1",
-  "released": "2026-09-25",
+  "version": "2.6.0",
+  "released": "2026-09-26",
   "channel": "main",
-  "summary": "Use a transactional three-way merge before every deliberate private-state cloud save so stale iPhone/iPad sessions combine changes automatically without manual refresh."
+  "summary": "Make Upcoming the default, keep all of today's visits visible even after their time passes, and add a collapsed TBC/no-date filter summary with on-demand school cards."
 }
