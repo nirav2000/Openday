@@ -50,28 +50,25 @@ function render(){
 function tbcSchools(){
   return schools.filter(isTbcSchool).sort((a,b)=>a.name.localeCompare(b.name));
 }
-function tbcSummaryCard(){
-  const tbc=tbcSchools(),historicalCount=tbc.filter(s=>s.lastKnownStart).length,noHistory=tbc.length-historicalCount;
+function tbcSummaryCard(tbc){
+  const historicalCount=tbc.filter(s=>s.lastKnownStart).length,noHistory=tbc.length-historicalCount;
   const box=document.createElement('article');box.className='tbc-summary-card';
-  box.innerHTML=`<div class="tbc-summary-icon">?</div><div class="tbc-summary-main"><div class="badges"><span class="badge research">TBC / NO CURRENT DATE</span></div><h2>${tbc.length} school${tbc.length===1?'':'s'} still need a current visit date</h2><p>${historicalCount?historicalCount+' have a previous-year date stored as a planning guide. ':''}${noHistory?noHistory+' have no recent visit date stored. ':''}These schools are kept separate from the dated Upcoming list so they are easy to review.</p><button type="button" class="tbc-reveal">${tbcExpanded?'Hide TBC schools':'Show TBC schools'}</button></div>`;
+  box.innerHTML=`<div class="tbc-summary-icon">?</div><div class="tbc-summary-main"><div class="badges"><span class="badge research">TBC / NO CURRENT DATE</span></div><h2>${tbc.length} school${tbc.length===1?'':'s'} still need a current visit date</h2><p>${historicalCount?historicalCount+' have a previous-year date stored as a planning guide. ':''}${noHistory?noHistory+' have no recent visit date stored. ':''}They stay out of Upcoming until a current date is known.</p><button type="button" class="tbc-reveal" aria-expanded="${tbcExpanded}">${tbcExpanded?'Hide school cards':'Show '+tbc.length+' school card'+(tbc.length===1?'':'s')}</button></div>`;
   box.querySelector('.tbc-reveal').onclick=()=>{tbcExpanded=!tbcExpanded;render()};
   return box;
 }
 function renderList(out){
   $('#list').hidden=false; $('#calendarView').hidden=true;
   $('#list').innerHTML='';
-  if(filter==='upcoming'){
-    const tbc=tbcSchools();
-    if(tbc.length){
-      $('#list').append(tbcSummaryCard());
-      if(tbcExpanded)tbc.forEach(s=>$('#list').append(card(s)));
-    }
-  }else if(filter==='tbc'){
-    const tbc=tbcSchools();
-    if(tbc.length)$('#list').append(tbcSummaryCard());
+  if(filter==='tbc'){
+    if(out.length){
+      $('#list').append(tbcSummaryCard(out));
+      if(tbcExpanded)out.forEach(s=>$('#list').append(card(s)));
+    }else $('#list').innerHTML='<p class="empty">No schools are waiting for a current visit date.</p>';
+    return;
   }
   out.forEach(s=>$('#list').append(card(s)));
-  if(!out.length&&!(filter==='upcoming'&&tbcSchools().length)&&filter!=='tbc')$('#list').innerHTML='<p class="empty">No visits match these filters.</p>';
+  if(!out.length)$('#list').innerHTML='<p class="empty">No visits match these filters.</p>';
 }
 
 function card(s){
@@ -165,7 +162,7 @@ function renderCalendar(out){
 
 function setView(view){currentView=view;$('#listViewBtn').classList.toggle('active',view==='list');$('#calendarViewBtn').classList.toggle('active',view==='calendar');render()}
 function resetCalendarCursor(){const today=startOfToday(),upcoming=schools.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).sort((a,b)=>dateObj(effectiveCurrentStart(a))-dateObj(effectiveCurrentStart(b)));const d=upcoming[0]?dateObj(effectiveCurrentStart(upcoming[0])):new Date();calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
-function setPhase(phase){schoolPhase=phase;schools=schoolSets[phase]||[];$('#seniorPhaseBtn')?.classList.toggle('active',phase==='senior');$('#primaryPhaseBtn')?.classList.toggle('active',phase==='primary');const hint=$('#phaseHint');if(hint)hint.textContent=phase==='senior'?'Senior / secondary open days':'Primary / Reception open days';resetCalendarCursor();render()}
+function setPhase(phase){schoolPhase=phase;tbcExpanded=false;schools=schoolSets[phase]||[];$('#seniorPhaseBtn')?.classList.toggle('active',phase==='senior');$('#primaryPhaseBtn')?.classList.toggle('active',phase==='primary');const hint=$('#phaseHint');if(hint)hint.textContent=phase==='senior'?'Senior / secondary open days':'Primary / Reception open days';resetCalendarCursor();render()}
 function applyCloudCatalog(detail={}){let changed=false;if(detail.senior?.schools){schoolSets.senior=detail.senior.schools;schoolMeta.senior=detail.senior.meta||schoolMeta.senior;changed=true}if(detail.primary?.schools){schoolSets.primary=detail.primary.schools;schoolMeta.primary=detail.primary.meta||schoolMeta.primary;changed=true}if(detail.enhancements?.schools){enhancements=detail.enhancements;changed=true}if(changed){schools=schoolSets[schoolPhase]||[];render()}}
 window.addEventListener('openday:catalog-state',e=>applyCloudCatalog(e.detail));
 function openSubscribe(){const https=`${location.origin}${location.pathname.replace(/[^/]*$/,'')}calendar.ics`;$('#icsLink').href=https;$('#webcalLink').href=https.replace(/^https?:/,'webcal:');$('#subscribeDialog').showModal()}
