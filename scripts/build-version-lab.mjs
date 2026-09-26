@@ -25,7 +25,8 @@ const releases=[
   {version:'2.3.0',commit:'9f69723e076071242405458e348254be4d08c49c',kind:'release',label:'Low-usage local-first Firestore sync'},
   {version:'2.4.0',commit:'0e623a8800905900360c3ed208d37b1814cb405e',kind:'release',label:'School decision labels'},
   {version:'2.4.1',commit:'f24aa9fe1f5d95ad501f530ac222762dbb374355',kind:'release',label:'Token/recovery distinction and safe device-state backup'},
-  {version:'2.5.0',commit:'73480b00203b76fc2c1e312e1677df250a9a8bc6',kind:'release',label:'Local notes viewer, lossless conflict preservation and static Version Lab'}
+  {version:'2.5.0',commit:'73480b00203b76fc2c1e312e1677df250a9a8bc6',kind:'release',label:'Local notes viewer, lossless conflict preservation and static Version Lab'},
+  {version:'2.5.1',commit:'2d7c3a79f1f9175029482806441e095d442485d4',kind:'release',label:'Transactional three-way multi-device sync'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
