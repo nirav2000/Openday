@@ -46,14 +46,14 @@
   document.head.appendChild(style);
 
   filteredSchools=function(){
-    const q=$('#search').value.trim().toLowerCase(),now=new Date();
+    const q=$('#search').value.trim().toLowerCase(),today=startOfToday();
     let out=schools.filter(s=>{
       const extra=schoolExtra(s),o=overrideFor(s),start=effectiveStart(s);
       const text=`${s.name} ${s.area} ${s.event} ${s.type} ${s.admission?.summary||''} ${s.admission?.route||''} ${extra.travel?.transitText||''} ${o?.contributorLabel||''}`.toLowerCase();
       if(q&&!text.includes(q))return false;
       if(filter==='saved')return state.saved.includes(s.id);
-      if(filter==='upcoming')return start&&dateObj(start)>=now;
-      if(filter==='tbc')return !s.start||['tbc','research','reported'].includes(String(s.status));
+      if(filter==='upcoming')return start&&dateObj(start)>=today;
+      if(filter==='tbc')return !start;
       if(['state','grammar','independent'].includes(filter))return filter==='state'?['state','part-selective'].includes(s.type):s.type===filter;
       return true;
     });
@@ -81,14 +81,14 @@
   };
 
   updateCounts=function(){
-    const now=new Date();
-    $('#upcomingCount').textContent=schools.filter(s=>{const start=effectiveStart(s);return start&&dateObj(start)>=now}).length;
+    const today=startOfToday();
+    $('#upcomingCount').textContent=schools.filter(s=>{const start=effectiveStart(s);return start&&dateObj(start)>=today}).length;
     $('#savedCount').textContent=state.saved.filter(id=>schools.some(s=>s.id===id)).length;
     $('#bookedCount').textContent=schools.filter(s=>state.booked[s.id]).length;
   };
 
   resetCalendarCursor=function(){
-    const upcoming=schools.filter(s=>{const start=effectiveStart(s);return start&&dateObj(start)>=new Date()}).sort((a,b)=>dateObj(effectiveStart(a))-dateObj(effectiveStart(b)));
+    const today=startOfToday(),upcoming=schools.filter(s=>{const start=effectiveStart(s);return start&&dateObj(start)>=today}).sort((a,b)=>dateObj(effectiveStart(a))-dateObj(effectiveStart(b)));
     const d=upcoming[0]?dateObj(effectiveStart(upcoming[0])):new Date();
     calendarCursor=new Date(d.getFullYear(),d.getMonth(),1);
   };
