@@ -1,6 +1,6 @@
 const $ = s => document.querySelector(s);
-let schools = [], schoolSets={senior:[],primary:[]}, schoolMeta={senior:{},primary:{}}, enhancements = {meta:{},schools:{}}, filter='all', deferredPrompt;
-let currentView='list', schoolPhase='senior';
+let schools = [], schoolSets={senior:[],primary:[]}, schoolMeta={senior:{},primary:{}}, enhancements = {meta:{},schools:{}}, filter='upcoming', deferredPrompt;
+let currentView='list', schoolPhase='senior', tbcExpanded=false;
 let calendarCursor=new Date(); calendarCursor.setDate(1);
 const savedRaw=JSON.parse(localStorage.getItem('openDayState')||'{}');
 const state={saved:[],booked:{},notes:{},watchBooking:[],schoolDecisions:{},...savedRaw};
@@ -8,6 +8,9 @@ const saveState=()=>localStorage.setItem('openDayState',JSON.stringify(state));
 const origin=()=>enhancements.meta?.travelOrigin||'Harrow';
 const dateOnly=v=>typeof v==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(v);
 const dateObj=v=>v?new Date(dateOnly(v)?`${v}T12:00:00`:v):null;
+const startOfToday=()=>{const d=new Date();d.setHours(0,0,0,0);return d};
+const effectiveCurrentStart=s=>window.OpenDayPersonalUpdates?.effectiveStart?.(s)||s.start||null;
+const isTbcSchool=s=>!effectiveCurrentStart(s);
 const displayStart=s=>s.start||s.lastKnownStart||null;
 const historical=s=>!s.start&&!!s.lastKnownStart;
 const fmtDate=s=>s?new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(dateObj(s)):'Current date not yet published';
@@ -21,14 +24,14 @@ const travelSummary=s=>schoolExtra(s).travel?.driveText||(Number.isFinite(s.jour
 const sortDate=s=>{if(s.start)return dateObj(s.start);if(s.lastKnownStart){const d=dateObj(s.lastKnownStart),now=new Date(),p=new Date(now.getFullYear(),d.getMonth(),d.getDate(),12);if(p<new Date(now.getTime()-30*864e5))p.setFullYear(p.getFullYear()+1);return p}return new Date('2099-01-01')};
 
 function filteredSchools(){
-  const q=$('#search').value.trim().toLowerCase(),now=new Date();
+  const q=$('#search').value.trim().toLowerCase(),today=startOfToday();
   let out=schools.filter(s=>{
     const extra=schoolExtra(s);
     const text=`${s.name} ${s.area} ${s.event} ${s.type} ${s.admission?.summary||''} ${s.admission?.route||''} ${extra.travel?.transitText||''}`.toLowerCase();
     if(q&&!text.includes(q))return false;
     if(filter==='saved')return state.saved.includes(s.id);
-    if(filter==='upcoming')return s.start&&dateObj(s.start)>=now;
-    if(filter==='tbc')return !s.start||['research','reported'].includes(String(s.status));
+    if(filter==='upcoming'){const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}
+    if(filter==='tbc')return isTbcSchool(s);
     if(['state','grammar','independent'].includes(filter))return filter==='state'?['state','part-selective'].includes(s.type):s.type===filter;
     return true;
   });
@@ -44,10 +47,31 @@ function render(){
   updateCounts();
 }
 
+function tbcSchools(){
+  return schools.filter(isTbcSchool).sort((a,b)=>a.name.localeCompare(b.name));
+}
+function tbcSummaryCard(){
+  const tbc=tbcSchools(),historicalCount=tbc.filter(s=>s.lastKnownStart).length,noHistory=tbc.length-historicalCount;
+  const box=document.createElement('article');box.className='tbc-summary-card';
+  box.innerHTML=`<div class="tbc-summary-icon">?</div><div class="tbc-summary-main"><div class="badges"><span class="badge research">TBC / NO CURRENT DATE</span></div><h2>${tbc.length} school${tbc.length===1?'':'s'} still need a current visit date</h2><p>${historicalCount?historicalCount+' have a previous-year date stored as a planning guide. ':''}${noHistory?noHistory+' have no recent visit date stored. ':''}These schools are kept separate from the dated Upcoming list so they are easy to review.</p><button type="button" class="tbc-reveal">${tbcExpanded?'Hide TBC schools':'Show TBC schools'}</button></div>`;
+  box.querySelector('.tbc-reveal').onclick=()=>{tbcExpanded=!tbcExpanded;render()};
+  return box;
+}
 function renderList(out){
   $('#list').hidden=false; $('#calendarView').hidden=true;
-  $('#list').innerHTML='';out.forEach(s=>$('#list').append(card(s)));
-  if(!out.length)$('#list').innerHTML='<p class="empty">No visits match these filters.</p>';
+  $('#list').innerHTML='';
+  if(filter==='upcoming'){
+    const tbc=tbcSchools();
+    if(tbc.length){
+      $('#list').append(tbcSummaryCard());
+      if(tbcExpanded)tbc.forEach(s=>$('#list').append(card(s)));
+    }
+  }else if(filter==='tbc'){
+    const tbc=tbcSchools();
+    if(tbc.length)$('#list').append(tbcSummaryCard());
+  }
+  out.forEach(s=>$('#list').append(card(s)));
+  if(!out.length&&!(filter==='upcoming'&&tbcSchools().length)&&filter!=='tbc')$('#list').innerHTML='<p class="empty">No visits match these filters.</p>';
 }
 
 function card(s){
@@ -78,7 +102,7 @@ function toggleWatch(id){
   if(state.watchBooking.includes(id)&&'Notification'in window&&Notification.permission==='default')Notification.requestPermission();
   showDetail(schools.find(s=>s.id===id)); render();
 }
-function updateCounts(){const now=new Date();$('#upcomingCount').textContent=schools.filter(s=>s.start&&dateObj(s.start)>=now).length;$('#savedCount').textContent=state.saved.filter(id=>schools.some(s=>s.id===id)).length;$('#bookedCount').textContent=schools.filter(s=>state.booked[s.id]).length}
+function updateCounts(){const today=startOfToday();$('#upcomingCount').textContent=schools.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).length;$('#savedCount').textContent=state.saved.filter(id=>schools.some(s=>s.id===id)).length;$('#bookedCount').textContent=schools.filter(s=>state.booked[s.id]).length}
 
 function alternateRows(s){
   const extra=schoolExtra(s);
@@ -140,14 +164,14 @@ function renderCalendar(out){
 }
 
 function setView(view){currentView=view;$('#listViewBtn').classList.toggle('active',view==='list');$('#calendarViewBtn').classList.toggle('active',view==='calendar');render()}
-function resetCalendarCursor(){const upcoming=schools.filter(s=>s.start&&dateObj(s.start)>=new Date()).sort((a,b)=>dateObj(a.start)-dateObj(b.start));const d=upcoming[0]?dateObj(upcoming[0].start):new Date();calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
+function resetCalendarCursor(){const today=startOfToday(),upcoming=schools.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).sort((a,b)=>dateObj(effectiveCurrentStart(a))-dateObj(effectiveCurrentStart(b)));const d=upcoming[0]?dateObj(effectiveCurrentStart(upcoming[0])):new Date();calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
 function setPhase(phase){schoolPhase=phase;schools=schoolSets[phase]||[];$('#seniorPhaseBtn')?.classList.toggle('active',phase==='senior');$('#primaryPhaseBtn')?.classList.toggle('active',phase==='primary');const hint=$('#phaseHint');if(hint)hint.textContent=phase==='senior'?'Senior / secondary open days':'Primary / Reception open days';resetCalendarCursor();render()}
 function applyCloudCatalog(detail={}){let changed=false;if(detail.senior?.schools){schoolSets.senior=detail.senior.schools;schoolMeta.senior=detail.senior.meta||schoolMeta.senior;changed=true}if(detail.primary?.schools){schoolSets.primary=detail.primary.schools;schoolMeta.primary=detail.primary.meta||schoolMeta.primary;changed=true}if(detail.enhancements?.schools){enhancements=detail.enhancements;changed=true}if(changed){schools=schoolSets[schoolPhase]||[];render()}}
 window.addEventListener('openday:catalog-state',e=>applyCloudCatalog(e.detail));
 function openSubscribe(){const https=`${location.origin}${location.pathname.replace(/[^/]*$/,'')}calendar.ics`;$('#icsLink').href=https;$('#webcalLink').href=https.replace(/^https?:/,'webcal:');$('#subscribeDialog').showModal()}
 function checkBookingNotifications(){if(!('Notification'in window)||Notification.permission!=='granted')return;for(const id of state.watchBooking){const w=enhancements.schools?.[id]?.bookingWatch;if(w?.status==='open')new Notification('School booking is open',{body:`${schools.find(s=>s.id===id)?.name||'School'} booking now appears open.`,tag:`booking-${id}`})}}
 
-$('#chips').onclick=e=>{if(!e.target.dataset.filter)return;filter=e.target.dataset.filter;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===e.target));render()};
+$('#chips').onclick=e=>{if(!e.target.dataset.filter)return;filter=e.target.dataset.filter;tbcExpanded=false;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===e.target));render()};
 $('#search').oninput=render;$('#sort').onchange=render;
 $('#seniorPhaseBtn').onclick=()=>setPhase('senior');$('#primaryPhaseBtn').onclick=()=>setPhase('primary');
 $('#listViewBtn').onclick=()=>setView('list');$('#calendarViewBtn').onclick=()=>setView('calendar');$('#subscribeBtn').onclick=openSubscribe;
