@@ -6,6 +6,15 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.6.0 — 2026-09-26
+
+- **Upcoming** is now the default filter when Openday opens.
+- Upcoming is day-based rather than time-based: a school remains in Upcoming for the whole of its event date, even after the stated start/end time has passed.
+- Added a dedicated **TBC / no date** filter for schools without a current visit date.
+- The TBC view opens with a summary card showing how many schools need dates, how many have a previous-year date for planning, and how many have no recent date stored.
+- TBC school cards stay collapsed until **Show school cards** is pressed, keeping the list compact.
+- Personal/global date overrides use the same whole-day Upcoming logic, so corrected dates behave consistently.
+
 ## 2.5.1 — 2026-09-25
 
 - Every deliberate private-state cloud save now runs as a Firestore transaction: read latest cloud state → three-way merge against the device's last known cloud baseline → write the merged state.
