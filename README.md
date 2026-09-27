@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.6.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.6.1**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -76,7 +76,7 @@ Openday is deliberately local-first and low-read/write:
 - global reported date/time corrections are fetched once when the app opens;
 - there are no realtime Firestore listeners;
 - **Refresh cloud data** performs an explicit read without making a change;
-- visit notes save locally while typing and reach the cloud only when **Save note to cloud** is pressed;
+- visit notes save locally while typing; changed notes are tracked persistently as pending, shown on the main page, and **any deliberate private-state cloud save sends all pending notes together**;
 - every deliberate private-state cloud save performs one transactional read of the latest private state and one write of the merged result (with automatic transaction retries only if another write races it);
 - discrete controls such as Save school / Booked / Booking watch use that same read → three-way merge → write path.
 
@@ -88,3 +88,8 @@ This keeps typing, scrolling, filtering and browsing out of Firestore billing.
 The header **Notes** control displays every note currently stored in that browser's `openDayState` without a Firebase read. It also shows the automatic pre-token-connect backup created before a device joins a memorable-token profile.
 
 Cross-device saves use a **three-way merge** against the device's last known cloud baseline. This means a stale iPhone can save a new note without first refreshing and still retain a newer unrelated iPad change. Saved-school and booking-watch membership are merged per school, so both additions and removals propagate correctly. If both devices independently changed the same note, booked flag, school decision or legacy event amendment, the current deliberate save remains active and **both competing values are retained** in `mergeConflicts` for review in the Notes view. The merge runs inside a Firestore transaction, so Firestore retries it if another device changes the same cloud document during the save. Connecting a token still takes a full local-state backup first.
+
+
+## Pending note sync
+
+When a visit note changes, its school ID is added to a small device-local pending list. This list survives reloads but causes no Firestore traffic. While any notes are pending, the main page shows a green pending cloud save bar and the sync indicator gently pulses. **Save all to cloud** performs the same transactional private-state save as the school-level save action. Because the private state contains all notes, one successful write saves every pending note on that device, not just the currently open school. The pending list is cleared only after Openday receives a confirmed cloud-write success event.
