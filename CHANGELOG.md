@@ -6,6 +6,15 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.6.1 — 2026-09-27
+
+- Locally edited notes are now tracked as **pending cloud save** across page reloads on that device.
+- The main page shows a compact green **notes waiting for cloud save** bar with a **Save all to cloud** button whenever one or more notes are pending.
+- The header cloud/sync dot gently pulses green while note changes are waiting to be uploaded.
+- Pressing **Save note to cloud** from any school now saves the entire private state, so every pending note on that device is included in the same transactional read → merge → write.
+- Any other successful deliberate private-state write (for example Save school / Booked / Booking watch) also carries all pending notes and clears their pending state after the cloud confirms the write.
+- The pending-note indicator is cleared only after a confirmed cloud write, including token recovery/creation writes.
+
 ## 2.6.0 — 2026-09-26
 
 - **Upcoming** is now the default filter when Openday opens.
