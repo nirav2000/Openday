@@ -271,6 +271,7 @@
       const merged=normalise(finalMerged||local),mergedJSON=JSON.stringify(merged);
       writeLocal(merged);lastLocal=mergedJSON;lastRemote=mergedJSON;
       window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
+      window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state:merged,at:merged.updatedAt}}));
       const conflicts=Object.values(merged.mergeConflicts||{}).filter(x=>x?.status!=='resolved').length;
       emit('synced',conflicts?'Saved, merged & synced · '+conflicts+' difference'+(conflicts===1?'':'s')+' preserved':'Saved, merged & synced');
       return true;
@@ -325,6 +326,7 @@
       FStore.setDoc(ref,{app:'openday',state:merged,activeTokenHash:hash,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true})
     ]);
     lastRemote=JSON.stringify(merged);lastLocal=lastRemote;localStorage.setItem(cfg.tokenKey,value);
+    window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state:merged,at:merged.updatedAt}}));
     emit('synced',legacyRecovery?'Old memorable token restored':'Memorable token set and synced');
     return true;
   }
