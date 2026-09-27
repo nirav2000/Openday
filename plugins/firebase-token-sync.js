@@ -206,6 +206,7 @@
         const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
         await FStore.setDoc(candidate,{state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
         lastRemote=JSON.stringify(state);lastLocal=lastRemote;
+        window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state,at:state.updatedAt}}));
         emit('synced','Local and cloud data merged & synced');
       }
       return true;
@@ -216,6 +217,7 @@
       window.FirebaseUsageMonitor?.write(1,'token-capability-create','openday','kk-syllabus','(default)');
       await FStore.setDoc(candidate,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()});
       tokenRef=candidate;activeTokenHash=hash;lastRemote=JSON.stringify(state);lastLocal=lastRemote;
+      window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state,at:state.updatedAt}}));
       emit('synced','Memorable token restored');
       return true;
     }
