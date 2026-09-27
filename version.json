@@ -1,6 +1,6 @@
 {
-  "version": "2.6.0",
-  "released": "2026-09-26",
+  "version": "2.6.1",
+  "released": "2026-09-27",
   "channel": "main",
-  "summary": "Make Upcoming the default, keep all of today's visits visible even after their time passes, and add a collapsed TBC/no-date filter summary with on-demand school cards."
+  "summary": "Track locally changed notes persistently, show a subtle pending-cloud indicator and main-page Save all action, and clear every pending note after any successful private-state cloud write."
 }
