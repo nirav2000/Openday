@@ -4,7 +4,7 @@
     [hidden]{display:none!important}
     .header-actions{display:flex;align-items:center;gap:8px}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}
     .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px}
-    .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}
+    .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}.sync-pill[data-pending="true"] .sync-dot{background:#5ee0ae;animation:pendingCloudPulse 1.8s ease-in-out infinite}.sync-pill[data-pending="true"]{border-color:#5ee0ae88}@keyframes pendingCloudPulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 #5ee0ae22}50%{opacity:1;box-shadow:0 0 0 5px #5ee0ae12}}
     .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 12px;min-height:1.1em}
     .decision-panel{margin:14px 0;padding:13px;background:#f7f9fb;border:1px solid #dce5ed;border-radius:12px}
     .decision-panel h3{margin:4px 0 9px}
@@ -16,6 +16,7 @@
     .feed-copy{display:grid;grid-template-columns:1fr auto;gap:7px}.feed-copy input{min-width:0;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit;color:#102a43;background:#f8fafb}.feed-copy button{border:1px solid #dce5ed;border-radius:10px;background:white;color:#1769aa;font-weight:750;padding:8px 12px}
     .sync-dialog{max-width:480px}.sync-dialog .detail-inner{padding:24px}.sync-dialog input{width:100%;border:1px solid #dce5ed;border-radius:10px;padding:11px 12px;font:inherit;margin:8px 0}.sync-dialog .token-help{font-size:.82rem;color:#61758a;line-height:1.45}.sync-dialog .sync-message{min-height:1.2em;font-size:.82rem;color:#61758a}.sync-dialog .sync-message.error{color:#b94444}.sync-dialog .sync-message.ok{color:#15805d}
     .notes-dialog{width:min(760px,calc(100vw - 24px));max-height:86vh}.notes-dialog .detail-inner{padding:22px}.notes-list{display:grid;gap:10px;margin:14px 0}.note-card{border:1px solid #dce5ed;border-radius:12px;padding:12px;background:#fff}.note-card h3{margin:0 0 5px;font-size:1rem}.note-card p{white-space:pre-wrap;margin:0;color:#29445d;line-height:1.45}.note-meta{font-size:.74rem;color:#71869a;margin-top:7px}.merge-warning{border:1px solid #e5c36a;background:#fff9e8;border-radius:12px;padding:12px;margin:12px 0}.notes-empty{color:#61758a}.notes-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+    .pending-sync-bar{display:none;align-items:center;justify-content:space-between;gap:12px;background:#effaf5;border:1px solid #bfe8d6;border-radius:13px;padding:10px 12px;margin:-2px 0 12px}.pending-sync-bar.show{display:flex}.pending-sync-copy{display:flex;align-items:center;gap:9px;min-width:0}.pending-sync-cloud{font-size:1.2rem}.pending-sync-copy b{display:block;font-size:.84rem;color:#176b50}.pending-sync-copy span{display:block;font-size:.75rem;color:#5d746b;margin-top:2px}.pending-sync-bar button{border:0;border-radius:9px;background:#176b50;color:white;padding:9px 11px;font-weight:800;white-space:nowrap}
     @media(max-width:600px){.sync-pill .sync-label{display:none}.sync-pill{width:38px;height:38px;justify-content:center;padding:0}}
   `;
   document.head.appendChild(style);
@@ -23,7 +24,37 @@
   const nativeRender=typeof render==='function'?render:null;
   const sync=window.OpenDaySync;
   let noteTimer=null;
-  const unsyncedNotes=new Set();
+  const pendingNotesKey='openday.unsyncedNotes.v1';
+  const readPendingNotes=()=>{try{return JSON.parse(localStorage.getItem(pendingNotesKey)||'[]')}catch{return[]}};
+  const unsyncedNotes=new Set(readPendingNotes());
+  const persistPendingNotes=()=>localStorage.setItem(pendingNotesKey,JSON.stringify([...unsyncedNotes]));
+
+  function ensurePendingSyncBar(){
+    let bar=document.querySelector('#pendingSyncBar');if(bar)return bar;
+    bar=document.createElement('section');bar.id='pendingSyncBar';bar.className='pending-sync-bar';bar.innerHTML='<div class="pending-sync-copy"><span class="pending-sync-cloud">☁︎</span><div><b id="pendingSyncTitle"></b><span id="pendingSyncText"></span></div></div><button id="saveAllPendingNotes" type="button">Save to cloud</button>';
+    const summary=document.querySelector('.summary');summary?.after(bar);
+    bar.querySelector('#saveAllPendingNotes').onclick=async e=>{
+      const button=e.currentTarget;
+      if(!sync?.isConnected?.()){openSyncDialog();return}
+      button.disabled=true;button.textContent='Saving…';
+      const ok=await sync.push();
+      if(!ok){button.disabled=false;button.textContent='Try again'}
+    };
+    return bar;
+  }
+  function updatePendingNotesUI(){
+    const count=unsyncedNotes.size,bar=ensurePendingSyncBar(),pill=document.querySelector('#syncPill');
+    if(pill)pill.dataset.pending=count?'true':'false';
+    bar.classList.toggle('show',count>0);
+    if(count){
+      bar.querySelector('#pendingSyncTitle').textContent=count+' note'+(count===1?'':'s')+' waiting for cloud save';
+      bar.querySelector('#pendingSyncText').textContent='One save sends every changed note on this device.';
+      const button=bar.querySelector('#saveAllPendingNotes');button.disabled=false;button.textContent=sync?.isConnected?.()?'Save all to cloud':'Connect to save';
+      if(pill)pill.title=count+' note'+(count===1?'':'s')+' waiting for cloud save';
+    }
+  }
+  function markNotePending(id){unsyncedNotes.add(id);persistPendingNotes();updatePendingNotesUI()}
+  function clearPendingNotes(){unsyncedNotes.clear();persistPendingNotes();updatePendingNotesUI()}
 
   function enhanceHeader(){
     const header=document.querySelector('header');if(!header||document.querySelector('#syncPill'))return;
@@ -160,6 +191,7 @@
   }
   window.addEventListener('openday:sync-status',e=>updateSyncStatus(e.detail));
   window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));nativeRender?.()}});
+  window.addEventListener('openday:sync-write-success',()=>clearPendingNotes());
 
   function identifyOpenSchool(){const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;const dateText=document.querySelector('#detailBody .bigdate')?.textContent;return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null}
   function enhanceDetail(){
@@ -173,7 +205,7 @@
     const persistLocal=()=>{
       state.notes[school.id]=note.value;
       saveState();
-      unsyncedNotes.add(school.id);
+      markNotePending(school.id);
       status.className='autosave-status';
       status.textContent=sync?.isConnected?.()?'Saved on device · not yet synced':'Saved on device · cloud not connected';
     };
@@ -183,14 +215,13 @@
       persistLocal();
       saveButton.disabled=true;
       status.className='autosave-status';
-      status.textContent=sync?.isConnected?.()?'Saving once to cloud…':'Saved on device · cloud not connected';
+      status.textContent=sync?.isConnected?.()?'Saving all changed notes to cloud…':'Saved on device · cloud not connected';
       let ok=false;
       if(sync?.isConnected?.())ok=await sync.push();
       if(ok){
-        unsyncedNotes.delete(school.id);
         status.className='autosave-status saved';
-        status.textContent='Saved & synced';
-        saveButton.textContent='Saved ✓';
+        status.textContent='All changed notes saved & synced';
+        saveButton.textContent='Saved all ✓';
         setTimeout(()=>{if(document.contains(saveButton)){saveButton.textContent='Save note to cloud';saveButton.disabled=false}},900);
       }else{
         saveButton.disabled=false;
@@ -220,7 +251,7 @@
 
   async function initialiseVersion(){try{const release=await fetch('version.json',{cache:'no-store'}).then(r=>r.json());const el=document.querySelector('#appVersion');if(el)el.textContent=`v${release.version}`;const lab=window.createVersionLab?.({appId:'openday',currentVersion:release.version});lab?.recordRelease?.({version:release.version,date:release.released,summary:release.summary,areas:['sync','autosave','calendar','card-density','developer-notes']})}catch{}}
 
-  enhanceHeader();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
+  enhanceHeader();ensurePendingSyncBar();updatePendingNotesUI();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
   updateSyncStatus({state:sync?.isConnected?.()?'syncing':'local',text:sync?.isConnected?.()?'Checking cloud…':'Enter memorable token to sync'});
 })();
