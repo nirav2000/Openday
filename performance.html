@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#102a43">
   <title>School performance comparison · Openday</title>
-  <link rel="stylesheet" href="performance.css?v=2.7.1">
+  <link rel="stylesheet" href="performance.css?v=2.8.0">
 </head>
 <body>
   <header>
@@ -15,23 +15,23 @@
   <main>
     <section class="intro">
       <h2>Academic performance at a glance</h2>
-      <p>Compare official DfE GCSE and A-level measures for the schools in Openday. Tap a school row for year-by-year and subject detail. Raw attainment should not be treated as a like-for-like measure of school effectiveness, especially across selective, non-selective and independent schools.</p>
+      <p>Compare official DfE GCSE and A-level outcomes alongside whole-school context: FSM, EAL, SEN support, EHCP and attendance. Tap a school row for year-by-year, subject and contextual detail. Raw attainment should not be treated as a like-for-like measure of school effectiveness, especially across selective, non-selective and independent schools.</p>
       <div id="dataStatus" class="data-status">Loading official performance data…</div>
     </section>
     <section class="controls">
       <label class="search"><span>⌕</span><input id="perfSearch" type="search" placeholder="School or area…" autocomplete="off"></label>
       <div class="chips" id="perfChips">
-        <button class="chip active" data-filter="all">All</button><button class="chip" data-filter="visited">Visited</button><button class="chip" data-filter="booked">Booked</button><button class="chip" data-filter="saved">Saved</button><button class="chip" data-filter="liked">Liked</button><button class="chip" data-filter="visit-again">Visit again</button><button class="chip" data-filter="try-for">Want to try for</button><button class="chip" data-filter="not-for-us">Not for us</button><button class="chip" data-filter="state">State</button><button class="chip" data-filter="grammar">Grammar</button><button class="chip" data-filter="independent">Independent</button><button class="chip" data-filter="has-gcse">Has GCSE data</button><button class="chip" data-filter="has-alevel">Has A-level data</button>
+        <button class="chip active" data-filter="all">All</button><button class="chip" data-filter="visited">Visited</button><button class="chip" data-filter="booked">Booked</button><button class="chip" data-filter="saved">Saved</button><button class="chip" data-filter="liked">Liked</button><button class="chip" data-filter="visit-again">Visit again</button><button class="chip" data-filter="try-for">Want to try for</button><button class="chip" data-filter="not-for-us">Not for us</button><button class="chip" data-filter="state">State</button><button class="chip" data-filter="grammar">Grammar</button><button class="chip" data-filter="independent">Independent</button><button class="chip" data-filter="has-gcse">Has GCSE data</button><button class="chip" data-filter="has-alevel">Has A-level data</button><button class="chip" data-filter="has-context">Has context data</button><button class="chip" data-filter="has-absence">Has attendance data</button>
       </div>
-      <div class="toolbar"><span id="perfCount">—</span><label>Sort <select id="perfSort"><option value="name">School</option><option value="attainment8">Latest Attainment 8</option><option value="engmath5">English & maths 5+</option><option value="progress8">Latest available Progress 8</option><option value="alevel">A-level APS</option><option value="eal">KS4 EAL %</option></select></label></div>
+      <div class="toolbar"><span id="perfCount">—</span><label>Sort <select id="perfSort"><option value="name">School</option><option value="attainment8">Latest Attainment 8</option><option value="engmath5">English & maths 5+</option><option value="progress8">Latest available Progress 8</option><option value="alevel">A-level APS</option><option value="fsm">Whole-school FSM %</option><option value="wholeEal">Whole-school EAL %</option><option value="sen">SEN support %</option><option value="ehcp">EHCP %</option><option value="absence">Overall absence % (low first)</option><option value="persistent">Persistent absence % (low first)</option></select></label></div>
     </section>
-    <section class="metric-help"><details><summary>What the columns mean</summary><div class="help-grid"><p><b>Attainment 8</b> is the average points score across eight qualifying subjects.</p><p><b>English & maths 5+</b> is the percentage achieving grade 5 or above in both.</p><p><b>Progress 8</b> compares progress with pupils nationally who had similar KS2 starting points. It is unavailable for 2024/25 and 2025/26 because those cohorts lack KS2 baselines after COVID disruption.</p><p><b>KS4 EAL</b> is the first-language breakdown for the KS4 cohort where the DfE dataset publishes it; it is not yet the whole-school census EAL percentage.</p><p><b>A-level APS</b> is the average point score per A-level entry; the DfE also supplies the corresponding average grade.</p><p><b>Subject details</b> are published grade counts. Small counts may be suppressed by DfE.</p></div></details></section>
+    <section class="metric-help"><details><summary>What the columns mean</summary><div class="help-grid"><p><b>Attainment 8</b> is the average points score across eight qualifying subjects.</p><p><b>English & maths 5+</b> is the percentage achieving grade 5 or above in both.</p><p><b>Progress 8</b> compares progress with pupils nationally who had similar KS2 starting points. It is unavailable for 2024/25 and 2025/26 because those cohorts lack KS2 baselines after COVID disruption.</p><p><b>Whole-school FSM / EAL</b> come from the January 2026 school census. EAL means first language known or believed to be other than English.</p><p><b>SEN support / EHCP</b> are whole-school January 2026 DfE SEN census percentages.</p><p><b>Absence</b> is the full-year percentage of possible sessions missed; <b>PA</b> is the percentage persistently absent (10% or more sessions missed). Latest full-year data is 2024/25.</p><p><b>A-level APS</b> is the average point score per A-level entry; the DfE also supplies the corresponding average grade.</p><p><b>Subject details</b> are published grade counts. Small counts may be suppressed by DfE.</p></div></details></section>
     <section class="table-wrap" aria-live="polite">
-      <table class="performance-table"><thead><tr><th>School</th><th>GCSE year</th><th>A8</th><th>Eng & maths 5+</th><th>P8 latest</th><th>KS4 EAL</th><th>A-level</th></tr></thead><tbody id="performanceRows"></tbody></table>
+      <table class="performance-table"><thead><tr><th>School</th><th>GCSE year</th><th>A8</th><th>Eng & maths 5+</th><th>P8 latest</th><th>A-level</th><th>FSM</th><th>EAL</th><th>SEN support</th><th>EHCP</th><th>Absence</th><th>PA</th></tr></thead><tbody id="performanceRows"></tbody></table>
       <p id="performanceEmpty" class="empty" hidden>No schools match these filters.</p>
     </section>
     <section class="methodology" id="methodology"></section>
   </main>
-  <script src="performance.js?v=2.7.1"></script>
+  <script src="performance.js?v=2.8.0"></script>
 </body>
 </html>
