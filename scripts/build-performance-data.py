@@ -14,7 +14,7 @@ ALIASES={
   "St Paul's School":["St Paul's School"],
   "St Margaret's School":["St Margaret's School","St Margaret's School, Bushey"],
   "Merchant Taylors' School":["Merchant Taylors' School","Merchant Taylors School"],
-  "Mill Hill School":["Mill Hill School"],
+  "Mill Hill School":["Mill Hill School","Mill Hill Schools"],
   "John Lyon School":["The John Lyon School","John Lyon School"],
   "Winchester College":["Winchester College"],
   "Westminster School":["Westminster School"],
@@ -23,6 +23,7 @@ ALIASES={
   "St Olave's Grammar School":["St Olave's and St Saviour's Grammar School","St Olave's Grammar School"],
   "Queens' School":["Queens' School"],
   "Wallington County Grammar School":["Wallington County Grammar School"],
+  "Salvatorian College":["Salvatorian Roman Catholic College","Salvatorian College"],
   "Haberdashers' Boys' School":["Haberdashers' Boys' School","Haberdashers' Boys School","Haberdashers' Aske's Boys' School"],
 }
 
