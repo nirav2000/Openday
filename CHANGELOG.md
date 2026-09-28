@@ -6,6 +6,21 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.7.0 — 2026-09-28
+
+- Added a dedicated **Performance** page for comparing the senior schools tracked by Openday.
+- The comparison currently matches all 39 tracked school groups to official DfE performance records, using stable URNs where school names differ.
+- Added official DfE GCSE / KS4 history for 2022/23–2024/25, including Attainment 8, English & maths grade 5+, EBacc measures, cohort size and the latest available Progress 8.
+- Added official DfE A-level history for 2021/22–2024/25, including average point score, average grade, value added, best-three A-level measures, AAB and retention where published.
+- Added KS4 first-language / EAL breakdowns where available. This is labelled **KS4 EAL** rather than whole-school EAL to avoid implying a census-wide percentage.
+- Added 2024/25 GCSE and A-level subject-by-subject grade-count detail. Desktop row hover shows a compact subject preview; click/tap expands the full history and subject tables.
+- Added performance filters for **Visited**, Saved, Liked, Want to try for, state, grammar, independent, GCSE-data and A-level-data schools, plus metric sorting and search.
+- Added an explicit **I visited this school** control to school details and sync it across devices with the memorable-token private state.
+- Added a scheduled official-data refresh workflow using DfE Explore Education Statistics CSVs, with manual refresh and automatic refresh when the school catalogue/data builder changes.
+- Added caveats for independent schools: DfE KS4 measures can omit qualifications that do not count in performance tables, so zero or unusually low headline measures are not silently presented as equivalent to state-school GCSE measures.
+- Added transparent five-school-year GCSE display slots: 2020/21 is marked as pandemic/non-comparable; 2021/22 remains an explicit legacy-data gap rather than being backfilled with a different series; 2022/23–2024/25 use the current official institution series.
+- Confirmed **Ark Academy Open Evening — Thursday 1 October 2026 at 17:00** from the school's official admissions page, marked it verified in the catalogue and updated the subscribed calendar.
+
 ## 2.6.1 — 2026-09-27
 
 - Locally edited notes are now tracked as **pending cloud save** across page reloads on that device.
