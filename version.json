@@ -1,6 +1,6 @@
 {
-  "version": "2.7.1",
+  "version": "2.8.0",
   "released": "2026-09-28",
   "channel": "main",
-  "summary": "Refine academic comparison filters and cohort detail, and split Ark Academy's official 28–30 September open mornings plus 1 October open evening into separate verified events."
+  "summary": "Add whole-school FSM, EAL, SEN support, EHCP and accredited absence/persistent-absence context to the school performance comparison, with sortable columns and five-year attendance detail."
 }
