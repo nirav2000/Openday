@@ -27,7 +27,8 @@ const releases=[
   {version:'2.4.1',commit:'f24aa9fe1f5d95ad501f530ac222762dbb374355',kind:'release',label:'Token/recovery distinction and safe device-state backup'},
   {version:'2.5.0',commit:'73480b00203b76fc2c1e312e1677df250a9a8bc6',kind:'release',label:'Local notes viewer, lossless conflict preservation and static Version Lab'},
   {version:'2.5.1',commit:'2d7c3a79f1f9175029482806441e095d442485d4',kind:'release',label:'Transactional three-way multi-device sync'},
-  {version:'2.6.0',commit:'a753963af1af1ca30707922bc005d1c6f004aa17',kind:'release',label:'Upcoming default and collapsed TBC/no-date view'}
+  {version:'2.6.0',commit:'a753963af1af1ca30707922bc005d1c6f004aa17',kind:'release',label:'Upcoming default and collapsed TBC/no-date view'},
+  {version:'2.6.1',commit:'b380793c39bdaf11f48354fee12f228c77b131d3',kind:'release',label:'Pending note cloud-save indicator and save-all notes'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
