@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.7.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.8.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -106,3 +106,8 @@ The GCSE five-year view deliberately shows transparent gaps rather than mixing n
 For independent schools, DfE performance-table measures can exclude qualifications that do not count in the accountability tables. The app therefore flags this limitation and avoids presenting a zero English/maths headline measure as a normal like-for-like result.
 
 `.github/workflows/refresh-performance.yml` refreshes the generated performance dataset weekly, can be dispatched manually, and also runs when the tracked-school catalogue or data-builder changes.
+
+
+## Whole-school context in Performance
+
+The Performance page combines attainment with descriptive context from official DfE sources. The January 2026 school census supplies whole-school FSM eligibility and EAL; the 2025/26 SEN school-level dataset supplies SEN support and EHCP counts; and the accredited full-year absence series supplies overall, unauthorised, persistent and severe absence through 2024/25. These context measures are not treated as school-quality scores. Independent schools can have census/SEN context but are outside the DfE school-level absence series.
