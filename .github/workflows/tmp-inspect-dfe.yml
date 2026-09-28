@@ -1,0 +1,36 @@
+name: Temporary inspect DfE context datasets
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-inspect-dfe.yml'
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect DfE CSV headers and tracked Ark rows
+        run: |
+          python3 - <<'PY'
+          import csv,io,urllib.request
+          urls={
+            'characteristics':'https://content.explore-education-statistics.service.gov.uk/api/releases/420ab305-b770-4dfa-89a0-ac899f34ac46/files/3d6359e3-0733-4a4c-a829-66aec003966d',
+            'sen':'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/c5490fd8-6cf3-469e-9f60-0b4262134cb5/csv',
+            'absence':'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/889f9166-e3bf-4d3a-afb2-d86e4aecc70a/csv'
+          }
+          for name,url in urls.items():
+            print('---',name,'---',flush=True)
+            req=urllib.request.Request(url,headers={'User-Agent':'Openday inspect/1.0'})
+            raw=urllib.request.urlopen(req,timeout=180)
+            text=io.TextIOWrapper(raw,encoding='utf-8-sig',newline='')
+            reader=csv.DictReader(text)
+            print('FIELDS',reader.fieldnames,flush=True)
+            seen=0
+            for row in reader:
+              urn=str(row.get('school_urn') or row.get('URN') or row.get('urn') or '')
+              if urn in {'135600','137198'}:
+                print('ROW',urn,{k:v for k,v in row.items() if v not in ('','z','x','0','0.0')},flush=True)
+                seen+=1
+                if seen>=8: break
+          PY
