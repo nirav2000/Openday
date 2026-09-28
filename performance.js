@@ -65,13 +65,27 @@
     return 0;
   }
 
+  function subjectHoverLine(subject){
+    if(!subject)return '';
+    const grades=subject.grades||{};
+    const preferred=['9','8','7','A*','A','B','Total exam entries'];
+    const bits=preferred.filter(g=>grades[g]!==undefined).slice(0,4).map(g=>g+': '+grades[g]);
+    return '<br><span style="opacity:.88">'+esc(subject.subject)+': '+esc(bits.join(' · ')||'published detail available')+'</span>';
+  }
   function hoverText(s,m){
+    const priority=['English Language','Mathematics','Biology'];
+    const subjects=[...(s.gcseSubjects||[])].sort((a,b)=>{
+      const ai=priority.indexOf(a.subject),bi=priority.indexOf(b.subject);
+      return (ai<0?99:ai)-(bi<0?99:bi)||a.subject.localeCompare(b.subject);
+    }).slice(0,3);
     return '<b>'+esc(s.name)+'</b><br>'+
       'Latest A8: '+(m.a8?fmt(m.a8.value):'not available')+
       ' · Eng/maths 5+: '+(m.em?pct(m.em.value):'—')+'<br>'+
       'P8 latest: '+(m.p8?fmt(m.p8.value)+' ('+yearLabel(m.p8.year)+')':'not available')+'<br>'+
       'A-level: '+(m.al?(m.al.row.averageGrade||fmt(m.al.value)):'—')+
-      '<br><span style="opacity:.75">Click/tap for history and subject detail.</span>';
+      (subjects.length?'<br><b>2024/25 subjects</b>':'')+
+      subjects.map(subjectHoverLine).join('')+
+      '<br><span style="opacity:.7">Click/tap for full year-by-year and subject tables.</span>';
   }
 
   function schoolRow(s){
