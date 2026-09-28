@@ -1200,21 +1200,162 @@
       }
     },
     {
-      "id": "ark-mornings",
+      "id": "ark-morning-2026-09-28",
       "name": "Ark Academy",
       "type": "state",
       "area": "Wembley",
       "journey": 25,
       "priority": 3,
       "entry": "11+",
-      "event": "Open Mornings (28–30 Sep)",
-      "start": "2026-09-28T09:00:00+01:00",
-      "end": "2026-09-30T10:30:00+01:00",
-      "status": "reported",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "infoUrl": "https://arkacademy.org/admissions/secondary",
-      "bookingUrl": "https://arkacademy.org/admissions/secondary",
-      "note": "Choose one morning; displayed as a date range.",
+      "bookingUrl": "https://forms.office.com/e/3Lyccg3ZBj",
+      "admission": {
+        "route": "11+ · September 2028 entry",
+        "deadline": "2027-10-31",
+        "summary": "31 Oct 2027 — submit Harrow secondary application",
+        "status": "rule-based",
+        "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "note": "Applications open September 2027."
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
+      },
+      "event": "Monday Open Morning",
+      "start": "2026-09-28T09:00:00+01:00",
+      "end": null,
+      "note": "Official Ark Academy admissions page lists this Secondary Open Morning at 9am. Finish time is not published; booking uses the school's open-events form.",
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-28",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-28",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      }
+    },
+    {
+      "id": "ark-morning-2026-09-29",
+      "name": "Ark Academy",
+      "type": "state",
+      "area": "Wembley",
+      "journey": 25,
+      "priority": 3,
+      "entry": "11+",
+      "status": "confirmed",
+      "bookingRequired": true,
+      "infoUrl": "https://arkacademy.org/admissions/secondary",
+      "bookingUrl": "https://forms.office.com/e/3Lyccg3ZBj",
+      "admission": {
+        "route": "11+ · September 2028 entry",
+        "deadline": "2027-10-31",
+        "summary": "31 Oct 2027 — submit Harrow secondary application",
+        "status": "rule-based",
+        "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "note": "Applications open September 2027."
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
+      },
+      "event": "Tuesday Open Morning",
+      "start": "2026-09-29T09:00:00+01:00",
+      "end": null,
+      "note": "Official Ark Academy admissions page lists this Secondary Open Morning at 9am. Finish time is not published; booking uses the school's open-events form.",
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-28",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-28",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      }
+    },
+    {
+      "id": "ark-morning-2026-09-30",
+      "name": "Ark Academy",
+      "type": "state",
+      "area": "Wembley",
+      "journey": 25,
+      "priority": 3,
+      "entry": "11+",
+      "status": "confirmed",
+      "bookingRequired": true,
+      "infoUrl": "https://arkacademy.org/admissions/secondary",
+      "bookingUrl": "https://forms.office.com/e/3Lyccg3ZBj",
+      "admission": {
+        "route": "11+ · September 2028 entry",
+        "deadline": "2027-10-31",
+        "summary": "31 Oct 2027 — submit Harrow secondary application",
+        "status": "rule-based",
+        "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "note": "Applications open September 2027."
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-16"
+      },
+      "event": "Wednesday Open Morning",
+      "start": "2026-09-30T09:00:00+01:00",
+      "end": null,
+      "note": "Official Ark Academy admissions page lists this Secondary Open Morning at 9am. Finish time is not published; booking uses the school's open-events form.",
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-28",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-28",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        }
+      }
+    },
+    {
+      "id": "ark-evening",
+      "name": "Ark Academy",
+      "type": "state",
+      "area": "Wembley",
+      "journey": 25,
+      "priority": 3,
+      "entry": "11+",
+      "event": "Open Evening",
+      "start": "2026-10-01T17:00:00+01:00",
+      "end": null,
+      "status": "confirmed",
+      "bookingRequired": true,
+      "infoUrl": "https://arkacademy.org/admissions/secondary",
+      "bookingUrl": "https://forms.office.com/e/3Lyccg3ZBj",
+      "note": "Official Ark Academy admissions page lists Open Evening on Thursday 1 October 2026 at 5pm. Attendees are asked to complete the school's open-events form; finish time is not published.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": "2027-10-31",
@@ -1225,11 +1366,11 @@
       },
       "linkChecks": {
         "infoUrl": {
-          "checked": "2026-09-16",
+          "checked": "2026-09-28",
           "status": "retrieved"
         },
         "bookingUrl": {
-          "checked": "2026-09-16",
+          "checked": "2026-09-28",
           "status": "retrieved"
         },
         "admission": {
@@ -1324,53 +1465,6 @@
         },
         "bookingUrl": {
           "checked": "2026-09-16",
-          "status": "retrieved"
-        },
-        "admission": {
-          "checked": "2026-09-16",
-          "status": "retrieved"
-        }
-      },
-      "academic": {
-        "summary": "No academic pass score — non-selective entry",
-        "kind": "non-selective",
-        "cycle": "Check the policy for the selected cohort’s entry year",
-        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including any faith, sibling or distance priorities.",
-        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
-        "checked": "2026-09-16"
-      }
-    },
-    {
-      "id": "ark-evening",
-      "name": "Ark Academy",
-      "type": "state",
-      "area": "Wembley",
-      "journey": 25,
-      "priority": 3,
-      "entry": "11+",
-      "event": "Open Evening",
-      "start": "2026-10-01T17:00:00+01:00",
-      "end": null,
-      "status": "confirmed",
-      "bookingRequired": true,
-      "infoUrl": "https://arkacademy.org/admissions/secondary",
-      "bookingUrl": "https://arkacademy.org/admissions/secondary",
-      "note": "Official Ark Academy admissions page lists Open Evening on Thursday 1 October 2026 at 5pm. Attendees are asked to complete the school's open-events form; finish time is not published.",
-      "admission": {
-        "route": "11+ · September 2028 entry",
-        "deadline": "2027-10-31",
-        "summary": "31 Oct 2027 — submit Harrow secondary application",
-        "status": "rule-based",
-        "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
-        "note": "Applications open September 2027."
-      },
-      "linkChecks": {
-        "infoUrl": {
-          "checked": "2026-09-28",
-          "status": "retrieved"
-        },
-        "bookingUrl": {
-          "checked": "2026-09-28",
           "status": "retrieved"
         },
         "admission": {
