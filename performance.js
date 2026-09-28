@@ -212,6 +212,9 @@
       '<a href="'+esc(doc.sources?.ks4_performance||'#')+'" target="_blank" rel="noopener">DfE KS4 performance source ↗</a>'+
       '<a href="'+esc(doc.sources?.ks4_subjects||'#')+'" target="_blank" rel="noopener">DfE GCSE subject source ↗</a>'+
       '<a href="'+esc(doc.sources?.alevel_performance||'#')+'" target="_blank" rel="noopener">DfE A-level source ↗</a>'+
+      '<a href="'+esc(doc.sources?.characteristics||'#')+'" target="_blank" rel="noopener">DfE pupil characteristics source ↗</a>'+
+      '<a href="'+esc(doc.sources?.sen||'#')+'" target="_blank" rel="noopener">DfE SEN source ↗</a>'+
+      '<a href="'+esc(doc.sources?.absence||'#')+'" target="_blank" rel="noopener">DfE absence source ↗</a>'+
       '</div></div>';
     tr.append(td);
     return tr;
