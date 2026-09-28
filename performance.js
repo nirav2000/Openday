@@ -80,7 +80,7 @@
     }).slice(0,3);
     return '<b>'+esc(s.name)+'</b><br>'+
       'Latest A8: '+(m.a8?fmt(m.a8.value):'not available')+
-      ' · Eng/maths 5+: '+(m.em?pct(m.em.value):'—')+'<br>'+
+      ' · Eng/maths 5+: '+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'<br>'+
       'P8 latest: '+(m.p8?fmt(m.p8.value)+' ('+yearLabel(m.p8.year)+')':'not available')+'<br>'+
       'A-level: '+(m.al?(m.al.row.averageGrade||fmt(m.al.value)):'—')+
       (subjects.length?'<br><b>2024/25 subjects</b>':'')+
@@ -102,7 +102,7 @@
       '</span><div class="hover-card">'+hoverText(s,m)+'</div></td>'+
       '<td class="metric">'+(m.a8?yearLabel(m.a8.year):'—')+'</td>'+
       '<td class="metric">'+(m.a8?fmt(m.a8.value):'—')+'</td>'+
-      '<td class="metric">'+(m.em?pct(m.em.value):'—')+'</td>'+
+      '<td class="metric">'+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'</td>'+
       '<td class="metric">'+(m.p8?fmt(m.p8.value)+' <span class="muted">('+yearLabel(m.p8.year)+')</span>':'—')+'</td>'+
       '<td class="metric">'+(m.eal?pct(m.eal.value):'—')+'</td>'+
       '<td class="metric">'+(m.al?(esc(m.al.row.averageGrade||fmt(m.al.value)))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—')+'</td>';
@@ -117,13 +117,15 @@
       return '<tr>'+
         '<td>'+esc(x.year)+'</td>'+
         '<td>'+(d?fmt(d.attainment8):'—')+'</td>'+
-        '<td>'+(d?pct(d.englishMaths5Plus):'—')+'</td>'+
+        '<td>'+(d?(s.type==='independent'&&Number(d.englishMaths5Plus)===0?'n/a†':pct(d.englishMaths5Plus)):'—')+'</td>'+
         '<td>'+(d&&d.progress8!==null&&d.progress8!==undefined?fmt(d.progress8):'—')+'</td>'+
         '<td>'+(d?pct(d.ebaccEntry):'—')+'</td>'+
         '<td>'+(s.ks4Eal?.[key]!==undefined?pct(s.ks4Eal[key]):'—')+'</td>'+
         '</tr>';
     }).join('');
+    const independentNote=s.type==='independent'?'<p class="warning"><b>Independent-school caution:</b> DfE performance measures only count qualifications approved for the performance tables. Schools using IGCSEs or other non-counting qualifications can therefore show artificially low or zero KS4 headline measures. Use the subject detail and school-published results alongside these DfE figures.</p>':'';
     return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>A8</th><th>Eng/math 5+</th><th>P8</th><th>EBacc entry</th><th>KS4 EAL</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+      independentNote+
       '<p class="warning">2020/21 has no comparable exam series. The current DfE institution API exposes school-level KS4 performance from 2022/23; 2021/22 is left as a transparent gap rather than silently substituting another series.</p>';
   }
 
