@@ -1,6 +1,6 @@
 {
-  "version": "2.6.1",
-  "released": "2026-09-27",
+  "version": "2.7.0",
+  "released": "2026-09-28",
   "channel": "main",
-  "summary": "Track locally changed notes persistently, show a subtle pending-cloud indicator and main-page Save all action, and clear every pending note after any successful private-state cloud write."
+  "summary": "Add an official DfE school-performance comparison dashboard with GCSE, A-level, KS4 EAL, Progress 8, subject-level detail and visited/saved filters, plus confirm Ark Academy's Thursday open evening."
 }
