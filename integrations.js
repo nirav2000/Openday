@@ -2,7 +2,7 @@
   const style=document.createElement('style');
   style.textContent=`
     [hidden]{display:none!important}
-    .header-actions{display:flex;align-items:center;gap:8px}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}
+    .header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}
     .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px}
     .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}.sync-pill[data-pending="true"] .sync-dot{background:#5ee0ae;animation:pendingCloudPulse 1.8s ease-in-out infinite}.sync-pill[data-pending="true"]{border-color:#5ee0ae88}@keyframes pendingCloudPulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 #5ee0ae22}50%{opacity:1;box-shadow:0 0 0 5px #5ee0ae12}}
     .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 12px;min-height:1.1em}
@@ -61,7 +61,8 @@
     let actions=header.querySelector('.header-actions');
     if(!actions){actions=document.createElement('div');actions.className='header-actions';const install=document.querySelector('#installBtn');if(install)actions.appendChild(install);header.appendChild(actions)}
     const history=document.createElement('a');history.className='version-link';history.href='version-lab/';history.textContent='Versions';history.setAttribute('aria-label','Open Version Lab');actions.insertBefore(history,actions.firstChild);
-    const notes=document.createElement('button');notes.className='version-link';notes.type='button';notes.textContent='Notes';notes.setAttribute('aria-label','Show all notes stored on this device');notes.onclick=openLocalNotes;actions.insertBefore(notes,history);
+    const performance=document.createElement('a');performance.className='version-link';performance.href='performance.html';performance.textContent='Performance';performance.setAttribute('aria-label','Compare school academic performance');actions.insertBefore(performance,history);
+    const notes=document.createElement('button');notes.className='version-link';notes.type='button';notes.textContent='Notes';notes.setAttribute('aria-label','Show all notes stored on this device');notes.onclick=openLocalNotes;actions.insertBefore(notes,performance);
     const button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.dataset.state=sync?.isConnected?.()?'syncing':'local';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';button.setAttribute('aria-label','Open sync settings');actions.insertBefore(button,notes);button.onclick=openSyncDialog;
   }
 
