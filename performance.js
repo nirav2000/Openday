@@ -31,12 +31,19 @@
   const decisionFlag=(school,value)=>school.eventIds.some(id=>decisions[id]===value);
 
   function latestSummary(s){
+    const context=s.context||{},pc=context.pupilCharacteristics||{},sen=context.sen||{};
     return{
       a8:latest(s.gcse,'attainment8'),
       em:latest(s.gcse,'englishMaths5Plus'),
       p8:latest(s.gcse,'progress8'),
-      eal:latest(s.ks4Eal||{},null),
-      al:latest(s.alevel,'aps')
+      ks4Eal:latest(s.ks4Eal||{},null),
+      al:latest(s.alevel,'aps'),
+      fsm:pc.fsmPercent!==null&&pc.fsmPercent!==undefined?{year:pc.year||'2025/26',value:pc.fsmPercent,row:pc}:null,
+      wholeEal:pc.ealPercent!==null&&pc.ealPercent!==undefined?{year:pc.year||'2025/26',value:pc.ealPercent,row:pc}:null,
+      sen:sen.senSupportPercent!==null&&sen.senSupportPercent!==undefined?{year:sen.year||'2025/26',value:sen.senSupportPercent,row:sen}:null,
+      ehcp:sen.ehcpPercent!==null&&sen.ehcpPercent!==undefined?{year:sen.year||'2025/26',value:sen.ehcpPercent,row:sen}:null,
+      absence:latest(context.absence||{},'overallAbsencePercent'),
+      persistent:latest(context.absence||{},'persistentAbsencePercent')
     };
   }
 
@@ -55,6 +62,8 @@
     if(filter==='independent')return s.type==='independent';
     if(filter==='has-gcse')return years(s.gcse).length>0;
     if(filter==='has-alevel')return years(s.alevel).length>0;
+    if(filter==='has-context')return !!Object.keys(s.context?.pupilCharacteristics||{}).length;
+    if(filter==='has-absence')return years(s.context?.absence||{}).length>0;
     return true;
   }
 
@@ -64,7 +73,12 @@
     if(key==='engmath5')return m.em?.value??-Infinity;
     if(key==='progress8')return m.p8?.value??-Infinity;
     if(key==='alevel')return m.al?.value??-Infinity;
-    if(key==='eal')return m.eal?.value??-Infinity;
+    if(key==='fsm')return m.fsm?.value??-Infinity;
+    if(key==='wholeEal')return m.wholeEal?.value??-Infinity;
+    if(key==='sen')return m.sen?.value??-Infinity;
+    if(key==='ehcp')return m.ehcp?.value??-Infinity;
+    if(key==='absence')return m.absence?.value??Infinity;
+    if(key==='persistent')return m.persistent?.value??Infinity;
     return 0;
   }
 
@@ -85,7 +99,10 @@
       'Latest A8: '+(m.a8?fmt(m.a8.value):'not available')+
       ' · Eng/maths 5+: '+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'<br>'+
       'P8 latest: '+(m.p8?fmt(m.p8.value)+' ('+yearLabel(m.p8.year)+')':'not available')+'<br>'+
-      'A-level: '+(m.al?(m.al.row.averageGrade||fmt(m.al.value)):'—')+
+      'A-level: '+(m.al?(m.al.row.averageGrade||fmt(m.al.value)):'—')+'<br>'+
+      'FSM: '+(m.fsm?pct(m.fsm.value):'—')+' · EAL: '+(m.wholeEal?pct(m.wholeEal.value):'—')+
+      ' · SEN support: '+(m.sen?pct(m.sen.value):'—')+' · EHCP: '+(m.ehcp?pct(m.ehcp.value):'—')+'<br>'+
+      'Absence: '+(m.absence?pct(m.absence.value):'—')+' · persistent absence: '+(m.persistent?pct(m.persistent.value):'—')+
       (subjects.length?'<br><b>2024/25 subjects</b>':'')+
       subjects.map(subjectHoverLine).join('')+
       '<br><span style="opacity:.7">Click/tap for full year-by-year and subject tables.</span>';
@@ -107,8 +124,13 @@
       '<td class="metric">'+(m.a8?fmt(m.a8.value):'—')+'</td>'+
       '<td class="metric">'+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'</td>'+
       '<td class="metric">'+(m.p8?fmt(m.p8.value)+' <span class="muted">('+yearLabel(m.p8.year)+')</span>':'—')+'</td>'+
-      '<td class="metric">'+(m.eal?pct(m.eal.value):'—')+'</td>'+
-      '<td class="metric">'+(m.al?(esc(m.al.row.averageGrade||fmt(m.al.value)))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—')+'</td>';
+      '<td class="metric">'+(m.al?(esc(m.al.row.averageGrade||fmt(m.al.value)))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—')+'</td>'+
+      '<td class="metric">'+(m.fsm?pct(m.fsm.value):'—')+'</td>'+
+      '<td class="metric">'+(m.wholeEal?pct(m.wholeEal.value):'—')+'</td>'+
+      '<td class="metric">'+(m.sen?pct(m.sen.value):'—')+'</td>'+
+      '<td class="metric">'+(m.ehcp?pct(m.ehcp.value):'—')+'</td>'+
+      '<td class="metric">'+(m.absence?pct(m.absence.value)+' <span class="muted">('+yearLabel(m.absence.year)+')</span>':'—')+'</td>'+
+      '<td class="metric">'+(m.persistent?pct(m.persistent.value)+' <span class="muted">('+yearLabel(m.persistent.year)+')</span>':'—')+'</td>';
     tr.onclick=()=>{expanded=expanded===s.name?'':s.name;render()};
     return tr;
   }
@@ -149,15 +171,41 @@
     return '<div class="subject-wrap"><table class="subject-table"><thead><tr><th>Subject</th><th>'+(kind==='gcse'?'Qualification':'')+'</th><th>Published grade counts</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
 
+  function contextDetail(s){
+    const pc=s.context?.pupilCharacteristics||{},sen=s.context?.sen||{};
+    if(!Object.keys(pc).length&&!Object.keys(sen).length)return '<p class="muted">No whole-school census context record matched this school.</p>';
+    return '<div class="context-grid">'+
+      '<div><small>Pupils</small><b>'+fmt(pc.headcount)+'</b><span>'+esc(pc.year||'')+'</span></div>'+
+      '<div><small>FSM eligible</small><b>'+pct(pc.fsmPercent)+'</b><span>'+fmt(pc.fsmCount)+' pupils</span></div>'+
+      '<div><small>EAL</small><b>'+pct(pc.ealPercent)+'</b><span>whole school</span></div>'+
+      '<div><small>SEN support</small><b>'+pct(sen.senSupportPercent)+'</b><span>'+fmt(sen.senSupportCount)+' pupils</span></div>'+
+      '<div><small>EHCP</small><b>'+pct(sen.ehcpPercent)+'</b><span>'+fmt(sen.ehcpCount)+' pupils</span></div>'+
+      '<div><small>Any SEN</small><b>'+pct(sen.anySenPercent)+'</b><span>'+fmt(sen.anySenCount)+' pupils</span></div>'+
+      '</div>'+
+      (pc.phase||pc.admissionsPolicy?'<p class="muted context-note">'+esc(pc.phase||'')+(pc.phase&&pc.admissionsPolicy?' · ':'')+esc(pc.admissionsPolicy||'')+'</p>':'')+
+      '<p class="warning"><b>Context, not a score:</b> these figures describe the pupil population and provision; they should not be interpreted as school quality measures.</p>';
+  }
+
+  function absenceHistory(s){
+    const rows=years(s.context?.absence||{}).reverse().slice(0,5).map(y=>{
+      const d=s.context.absence[y];
+      return '<tr><td>'+yearLabel(y)+'</td><td>'+fmt(d.enrolments)+'</td><td>'+pct(d.overallAbsencePercent)+'</td><td>'+pct(d.unauthorisedAbsencePercent)+'</td><td>'+pct(d.persistentAbsencePercent)+'</td><td>'+pct(d.severeAbsencePercent)+'</td></tr>';
+    }).join('');
+    if(!rows)return '<p class="muted">No DfE full-year school-level absence record is available for this school. The official series covers state-funded primary, secondary and special schools, not independent schools.</p>';
+    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Enrolments</th><th>Absence</th><th>Unauthorised</th><th>Persistent</th><th>Severe</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="muted context-note">Persistent = 10% or more sessions missed; severe = 50% or more.</p>';
+  }
+
   function detailRow(s){
     const tr=document.createElement('tr');
     tr.className='detail-row';
     const td=document.createElement('td');
-    td.colSpan=7;
+    td.colSpan=12;
     td.innerHTML=
       '<div class="detail-panel"><div class="detail-grid">'+
       '<section class="detail-card"><h3>GCSE / KS4 history</h3>'+gcseHistory(s)+'</section>'+
       '<section class="detail-card"><h3>A-level history</h3>'+alevelHistory(s)+'</section>'+
+      '<section class="detail-card"><h3>Whole-school context · 2025/26</h3>'+contextDetail(s)+'</section>'+
+      '<section class="detail-card"><h3>Attendance history</h3>'+absenceHistory(s)+'</section>'+
       '<section class="detail-card"><h3>GCSE subject detail · latest published year</h3>'+subjectTable(s.gcseSubjects,'gcse')+'</section>'+
       '<section class="detail-card"><h3>A-level subject detail · latest published year</h3>'+subjectTable(s.alevelSubjects,'alevel')+'</section>'+
       '</div><div class="source-links">'+
@@ -173,6 +221,7 @@
     let rows=(doc.schools||[]).filter(matches);
     const sort=$('#perfSort').value;
     if(sort==='name')rows.sort((a,b)=>a.name.localeCompare(b.name));
+    else if(sort==='absence'||sort==='persistent')rows.sort((a,b)=>score(a,sort)-score(b,sort)||a.name.localeCompare(b.name));
     else rows.sort((a,b)=>score(b,sort)-score(a,sort)||a.name.localeCompare(b.name));
     $('#perfCount').textContent=rows.length+' school'+(rows.length===1?'':'s');
     const tbody=$('#performanceRows');
