@@ -200,7 +200,7 @@ for row in open_csv(DATASETS['characteristics']):
 sen_acc={}
 for row in open_csv(DATASETS['sen']):
     tracked=urn_to_name.get(str(row.get('school_urn') or '')) or URN_TO_TRACKED.get(str(row.get('school_urn') or ''))
-    if not tracked or (row.get('sen_primary_need') or '')!='All pupils': continue
+    if not tracked or (row.get('sen_primary_need') or '')!='All pupils' or (row.get('specialist_provision_unit_type') or 'All pupils')!='All pupils': continue
     rec=sen_acc.setdefault(tracked,{'year':'2025/26','totalPupils':None,'senSupportCount':None,'ehcpCount':None})
     provision=(row.get('sen_provision') or '').strip()
     count=i(row.get('pupil_count'))
@@ -208,7 +208,9 @@ for row in open_csv(DATASETS['sen']):
     elif provision=='SEN support':rec['senSupportCount']=count
     elif provision=='Education, health and care plans':rec['ehcpCount']=count
 for tracked,rec in sen_acc.items():
-    total=rec.get('totalPupils')
+    census_total=results[tracked].get('context',{}).get('pupilCharacteristics',{}).get('headcount')
+    total=census_total or rec.get('totalPupils')
+    rec['totalPupils']=total
     support=rec.get('senSupportCount')
     ehcp=rec.get('ehcpCount')
     rec['senSupportPercent']=round(100*support/total,1) if total and support is not None else None
