@@ -28,9 +28,9 @@ const releases=[
   {version:'2.5.0',commit:'73480b00203b76fc2c1e312e1677df250a9a8bc6',kind:'release',label:'Local notes viewer, lossless conflict preservation and static Version Lab'},
   {version:'2.5.1',commit:'2d7c3a79f1f9175029482806441e095d442485d4',kind:'release',label:'Transactional three-way multi-device sync'},
   {version:'2.6.0',commit:'a753963af1af1ca30707922bc005d1c6f004aa17',kind:'release',label:'Upcoming default and collapsed TBC/no-date view'},
-  {version:'2.6.1',commit:'b380793c39bdaf11f48354fee12f228c77b131d3',kind:'release',label:'Pending note cloud-save indicator and save-all notes'}
-,
-  {version:'2.7.0',commit:'10d2ac6f06d710f85f77df728ece8c96f8af8ff0',kind:'release',label:'Official DfE academic performance comparison dashboard'}
+  {version:'2.6.1',commit:'b380793c39bdaf11f48354fee12f228c77b131d3',kind:'release',label:'Pending note cloud-save indicator and save-all notes'},
+  {version:'2.7.0',commit:'10d2ac6f06d710f85f77df728ece8c96f8af8ff0',kind:'release',label:'Official DfE academic performance comparison dashboard'},
+  {version:'2.7.1',commit:'e02eae661168f4bc86b3772c92f0d00f11ede8f7',kind:'release',label:'Ark event split and performance comparison refinements'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
