@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T10:10:38.448269+00:00",
+  "generatedAt": "2026-09-28T10:14:31.067589+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
@@ -13391,12 +13391,418 @@
       "type": "state",
       "area": "Harrow",
       "journey": 15,
-      "urn": null,
-      "officialName": null,
-      "gcse": {},
+      "urn": "138458",
+      "officialName": "Salvatorian Roman Catholic College",
+      "gcse": {
+        "202425": {
+          "pupils": 123,
+          "attainment8": 54.1,
+          "progress8": null,
+          "progress8Lower": null,
+          "progress8Upper": null,
+          "englishMaths5Plus": 58.5,
+          "englishMaths4Plus": 72.4,
+          "ebaccEntry": 40.7,
+          "ebaccAPS": 4.72,
+          "grade9to7AllGCSE": 97.6,
+          "tripleScienceEntry": 29.3
+        },
+        "202324": {
+          "pupils": 141,
+          "attainment8": 54.3,
+          "progress8": 0.45,
+          "progress8Lower": 0.19,
+          "progress8Upper": 0.71,
+          "englishMaths5Plus": 61.7,
+          "englishMaths4Plus": 75.9,
+          "ebaccEntry": 52.5,
+          "ebaccAPS": 4.84,
+          "grade9to7AllGCSE": 99.3,
+          "tripleScienceEntry": 39.0
+        },
+        "202223": {
+          "pupils": 78,
+          "attainment8": 56.2,
+          "progress8": 0.62,
+          "progress8Lower": 0.25,
+          "progress8Upper": 0.98,
+          "englishMaths5Plus": 70.5,
+          "englishMaths4Plus": 82.1,
+          "ebaccEntry": 73.1,
+          "ebaccAPS": 5.23,
+          "grade9to7AllGCSE": 97.4,
+          "tripleScienceEntry": 48.7
+        }
+      },
       "alevel": {},
-      "ks4Eal": {},
-      "gcseSubjects": [],
+      "ks4Eal": {
+        "202425": 60.2,
+        "202324": 58.9,
+        "202223": 60.3
+      },
+      "gcseSubjects": [
+        {
+          "subject": "Art and Design",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "2": 1,
+            "3": 8,
+            "4": 11,
+            "5": 7,
+            "6": 2,
+            "7": 6,
+            "8": 2,
+            "9": 6,
+            "Total exam entries": 43
+          }
+        },
+        {
+          "subject": "Biology",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "4": 1,
+            "5": 6,
+            "6": 4,
+            "7": 11,
+            "8": 8,
+            "9": 6,
+            "Total exam entries": 36
+          }
+        },
+        {
+          "subject": "Business",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "2": 6,
+            "3": 3,
+            "4": 12,
+            "5": 11,
+            "6": 8,
+            "7": 7,
+            "8": 3,
+            "9": 2,
+            "Total exam entries": 52
+          }
+        },
+        {
+          "subject": "Chemistry",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "4": 2,
+            "5": 3,
+            "6": 4,
+            "7": 9,
+            "8": 11,
+            "9": 7,
+            "Total exam entries": 36
+          }
+        },
+        {
+          "subject": "Combined Science",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "21": 3,
+            "22": 4,
+            "32": 5,
+            "33": 4,
+            "43": 16,
+            "44": 6,
+            "54": 12,
+            "55": 5,
+            "65": 6,
+            "66": 5,
+            "76": 5,
+            "77": 5,
+            "87": 1,
+            "88": 3,
+            "98": 2,
+            "Total exam entries": 85,
+            "X": 3
+          }
+        },
+        {
+          "subject": "Computer Science",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "4": 2,
+            "5": 2,
+            "6": 4,
+            "7": 9,
+            "8": 5,
+            "9": 2,
+            "Total exam entries": 24
+          }
+        },
+        {
+          "subject": "Drama",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "2": 1,
+            "3": 5,
+            "4": 2,
+            "5": 3,
+            "6": 3,
+            "7": 2,
+            "Total exam entries": 16
+          }
+        },
+        {
+          "subject": "Economics",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "3": 2,
+            "5": 1,
+            "6": 2,
+            "7": 2,
+            "8": 2,
+            "9": 1,
+            "Total exam entries": 10
+          }
+        },
+        {
+          "subject": "English Language",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 2,
+            "2": 9,
+            "3": 16,
+            "4": 12,
+            "5": 26,
+            "6": 20,
+            "7": 12,
+            "8": 15,
+            "9": 7,
+            "Total exam entries": 122,
+            "X": 3
+          }
+        },
+        {
+          "subject": "English Literature",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 6,
+            "2": 8,
+            "3": 7,
+            "4": 14,
+            "5": 21,
+            "6": 30,
+            "7": 11,
+            "8": 15,
+            "9": 5,
+            "Total exam entries": 120,
+            "U": 2,
+            "X": 1
+          }
+        },
+        {
+          "subject": "French",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 1,
+            "3": 3,
+            "4": 2,
+            "5": 1,
+            "6": 2,
+            "7": 1,
+            "8": 5,
+            "Total exam entries": 15
+          }
+        },
+        {
+          "subject": "Geography",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 4,
+            "2": 7,
+            "3": 11,
+            "4": 8,
+            "5": 14,
+            "6": 9,
+            "7": 10,
+            "8": 7,
+            "9": 6,
+            "Total exam entries": 76
+          }
+        },
+        {
+          "subject": "History",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 3,
+            "2": 3,
+            "3": 6,
+            "4": 8,
+            "5": 9,
+            "6": 13,
+            "7": 11,
+            "8": 5,
+            "9": 7,
+            "Total exam entries": 72,
+            "U": 6,
+            "X": 1
+          }
+        },
+        {
+          "subject": "Hospitality and Catering",
+          "qualification": "Vocational",
+          "pupils": 123,
+          "grades": {
+            "Level 1 distinction": 1,
+            "Level 1 distinction star": 2,
+            "Level 1 merit": 1,
+            "Level 1 pass": 1,
+            "Level 2 distinction": 4,
+            "Level 2 merit": 7,
+            "Level 2 pass": 3,
+            "Total exam entries": 19
+          }
+        },
+        {
+          "subject": "Information and Communication Technology",
+          "qualification": "Vocational",
+          "pupils": 123,
+          "grades": {
+            "Level 1 distinction": 5,
+            "Level 1 pass": 1,
+            "Level 2 merit": 5,
+            "Level 2 pass": 4,
+            "Total exam entries": 15
+          }
+        },
+        {
+          "subject": "Mathematics",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 4,
+            "2": 6,
+            "3": 13,
+            "4": 19,
+            "5": 20,
+            "6": 13,
+            "7": 18,
+            "8": 18,
+            "9": 9,
+            "Total exam entries": 122,
+            "X": 2
+          }
+        },
+        {
+          "subject": "Music",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "3": 2,
+            "4": 1,
+            "5": 1,
+            "6": 2,
+            "7": 1,
+            "Total exam entries": 7
+          }
+        },
+        {
+          "subject": "Other Modern Languages",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "4": 1,
+            "7": 2,
+            "9": 3,
+            "Total exam entries": 6
+          }
+        },
+        {
+          "subject": "Physical Education",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "2": 3,
+            "3": 4,
+            "4": 1,
+            "5": 3,
+            "6": 3,
+            "7": 5,
+            "8": 2,
+            "Total exam entries": 21
+          }
+        },
+        {
+          "subject": "Physics",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "5": 6,
+            "6": 1,
+            "7": 6,
+            "8": 14,
+            "9": 9,
+            "Total exam entries": 36
+          }
+        },
+        {
+          "subject": "Religious Studies",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 6,
+            "2": 9,
+            "3": 12,
+            "4": 7,
+            "5": 12,
+            "6": 21,
+            "7": 11,
+            "8": 16,
+            "9": 23,
+            "Total exam entries": 119,
+            "U": 2
+          }
+        },
+        {
+          "subject": "Social Studies",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 2,
+            "2": 1,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "7": 1,
+            "Total exam entries": 11
+          }
+        },
+        {
+          "subject": "Spanish",
+          "qualification": "GCSE",
+          "pupils": 123,
+          "grades": {
+            "1": 1,
+            "2": 3,
+            "3": 7,
+            "4": 1,
+            "5": 6,
+            "6": 2,
+            "7": 3,
+            "8": 1,
+            "9": 2,
+            "Total exam entries": 27,
+            "U": 1
+          }
+        }
+      ],
       "alevelSubjects": [],
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
@@ -13413,15 +13819,51 @@
         },
         {
           "year": "2022/23",
-          "data": null
+          "data": {
+            "pupils": 78,
+            "attainment8": 56.2,
+            "progress8": 0.62,
+            "progress8Lower": 0.25,
+            "progress8Upper": 0.98,
+            "englishMaths5Plus": 70.5,
+            "englishMaths4Plus": 82.1,
+            "ebaccEntry": 73.1,
+            "ebaccAPS": 5.23,
+            "grade9to7AllGCSE": 97.4,
+            "tripleScienceEntry": 48.7
+          }
         },
         {
           "year": "2023/24",
-          "data": null
+          "data": {
+            "pupils": 141,
+            "attainment8": 54.3,
+            "progress8": 0.45,
+            "progress8Lower": 0.19,
+            "progress8Upper": 0.71,
+            "englishMaths5Plus": 61.7,
+            "englishMaths4Plus": 75.9,
+            "ebaccEntry": 52.5,
+            "ebaccAPS": 4.84,
+            "grade9to7AllGCSE": 99.3,
+            "tripleScienceEntry": 39.0
+          }
         },
         {
           "year": "2024/25",
-          "data": null
+          "data": {
+            "pupils": 123,
+            "attainment8": 54.1,
+            "progress8": null,
+            "progress8Lower": null,
+            "progress8Upper": null,
+            "englishMaths5Plus": 58.5,
+            "englishMaths4Plus": 72.4,
+            "ebaccEntry": 40.7,
+            "ebaccAPS": 4.72,
+            "grade9to7AllGCSE": 97.6,
+            "tripleScienceEntry": 29.3
+          }
         }
       ],
       "alevelWindow": [
