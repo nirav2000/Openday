@@ -25,6 +25,7 @@ jobs:
         run: |
           node --check app.js
           node --check integrations.js
+          node --check performance.js
           node --check plugins/app-platform.js
           node --check plugins/autosave.js
           node --check plugins/firebase-token-sync.js
@@ -34,7 +35,8 @@ jobs:
           node --check plugins/personal-updates.js
           node --check plugins/public-overrides.js
           node --check scripts/build-version-lab.mjs
-          node -e "JSON.parse(require('fs').readFileSync('data/schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/primary-schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/enhancements.json','utf8'));"
+          python3 -m py_compile scripts/build-performance-data.py
+          node -e "JSON.parse(require('fs').readFileSync('data/schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/primary-schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/enhancements.json','utf8'));JSON.parse(require('fs').readFileSync('data/performance.json','utf8'));"
       - name: Validate semantic version
         run: |
           node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('version.json','utf8')).version;if(!/^\\d+\\.\\d+\\.\\d+$/.test(v))throw Error('version.json must contain SemVer x.y.z');const html=fs.readFileSync('index.html','utf8');if(!html.includes('v'+v)||!html.includes('?v='+v))throw Error('index.html version/cache bust does not match version.json');console.log('Release',v)"
