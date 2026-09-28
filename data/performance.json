@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T20:16:12.321297+00:00",
+  "generatedAt": "2026-09-28T20:18:00.869558+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
@@ -792,13 +792,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1148,
           "senSupportCount": 120,
           "ehcpCount": 35,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 10.5,
+          "ehcpPercent": 3.0,
           "anySenCount": 155,
-          "anySenPercent": null
+          "anySenPercent": 13.5
         },
         "absence": {
           "201415": {
@@ -1675,13 +1675,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1451,
           "senSupportCount": 117,
           "ehcpCount": 7,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 8.1,
+          "ehcpPercent": 0.5,
           "anySenCount": 124,
-          "anySenPercent": null
+          "anySenPercent": 8.5
         },
         "absence": {
           "201415": {
@@ -2701,13 +2701,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 2091,
           "senSupportCount": 232,
           "ehcpCount": 65,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 11.1,
+          "ehcpPercent": 3.1,
           "anySenCount": 297,
-          "anySenPercent": null
+          "anySenPercent": 14.2
         },
         "absence": {
           "201314": {
@@ -3451,13 +3451,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1429,
           "senSupportCount": 272,
           "ehcpCount": 1,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 19.0,
+          "ehcpPercent": 0.1,
           "anySenCount": 273,
-          "anySenPercent": null
+          "anySenPercent": 19.1
         },
         "absence": {}
       },
@@ -4257,13 +4257,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1384,
           "senSupportCount": 42,
           "ehcpCount": 15,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 3.0,
+          "ehcpPercent": 1.1,
           "anySenCount": 57,
-          "anySenPercent": null
+          "anySenPercent": 4.1
         },
         "absence": {
           "201415": {
@@ -5237,13 +5237,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1475,
           "senSupportCount": 171,
           "ehcpCount": 42,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 11.6,
+          "ehcpPercent": 2.8,
           "anySenCount": 213,
-          "anySenPercent": null
+          "anySenPercent": 14.4
         },
         "absence": {
           "201314": {
@@ -6241,13 +6241,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1695,
           "senSupportCount": 87,
           "ehcpCount": 47,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 5.1,
+          "ehcpPercent": 2.8,
           "anySenCount": 134,
-          "anySenPercent": null
+          "anySenPercent": 7.9
         },
         "absence": {
           "201314": {
@@ -7022,13 +7022,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1439,
           "senSupportCount": 384,
           "ehcpCount": 0,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 26.7,
+          "ehcpPercent": 0.0,
           "anySenCount": 384,
-          "anySenPercent": null
+          "anySenPercent": 26.7
         },
         "absence": {}
       },
@@ -7547,13 +7547,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 38,
           "senSupportCount": 0,
           "ehcpCount": 38,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 0.0,
+          "ehcpPercent": 100.0,
           "anySenCount": 38,
-          "anySenPercent": null
+          "anySenPercent": 100.0
         },
         "absence": {}
       },
@@ -8321,13 +8321,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 799,
           "senSupportCount": 193,
           "ehcpCount": 11,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 24.2,
+          "ehcpPercent": 1.4,
           "anySenCount": 204,
-          "anySenPercent": null
+          "anySenPercent": 25.5
         },
         "absence": {}
       },
@@ -8961,13 +8961,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1578,
           "senSupportCount": 325,
           "ehcpCount": 1,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 20.6,
+          "ehcpPercent": 0.1,
           "anySenCount": 326,
-          "anySenPercent": null
+          "anySenPercent": 20.7
         },
         "absence": {}
       },
@@ -9696,13 +9696,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 982,
           "senSupportCount": 142,
           "ehcpCount": 16,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 14.5,
+          "ehcpPercent": 1.6,
           "anySenCount": 158,
-          "anySenPercent": null
+          "anySenPercent": 16.1
         },
         "absence": {
           "202324": {
@@ -10526,13 +10526,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1061,
           "senSupportCount": 60,
           "ehcpCount": 11,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 5.7,
+          "ehcpPercent": 1.0,
           "anySenCount": 71,
-          "anySenPercent": null
+          "anySenPercent": 6.7
         },
         "absence": {
           "202324": {
@@ -11518,13 +11518,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1929,
           "senSupportCount": 177,
           "ehcpCount": 27,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 9.2,
+          "ehcpPercent": 1.4,
           "anySenCount": 204,
-          "anySenPercent": null
+          "anySenPercent": 10.6
         },
         "absence": {
           "202324": {
@@ -12484,13 +12484,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 1,
+          "totalPupils": 1902,
           "senSupportCount": 163,
           "ehcpCount": 95,
-          "senSupportPercent": 16300.0,
-          "ehcpPercent": 9500.0,
+          "senSupportPercent": 8.6,
+          "ehcpPercent": 5.0,
           "anySenCount": 258,
-          "anySenPercent": 25800.0
+          "anySenPercent": 13.6
         },
         "absence": {
           "201314": {
@@ -13263,13 +13263,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1051,
           "senSupportCount": 220,
           "ehcpCount": 3,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 20.9,
+          "ehcpPercent": 0.3,
           "anySenCount": 223,
-          "anySenPercent": null
+          "anySenPercent": 21.2
         },
         "absence": {}
       },
@@ -14092,13 +14092,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 909,
           "senSupportCount": 343,
           "ehcpCount": 3,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 37.7,
+          "ehcpPercent": 0.3,
           "anySenCount": 346,
-          "anySenPercent": null
+          "anySenPercent": 38.1
         },
         "absence": {}
       },
@@ -14640,13 +14640,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 781,
           "senSupportCount": 83,
           "ehcpCount": 3,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 10.6,
+          "ehcpPercent": 0.4,
           "anySenCount": 86,
-          "anySenPercent": null
+          "anySenPercent": 11.0
         },
         "absence": {}
       },
@@ -15400,13 +15400,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1639,
           "senSupportCount": 155,
           "ehcpCount": 57,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 9.5,
+          "ehcpPercent": 3.5,
           "anySenCount": 212,
-          "anySenPercent": null
+          "anySenPercent": 12.9
         },
         "absence": {
           "202324": {
@@ -16062,13 +16062,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 802,
           "senSupportCount": 106,
           "ehcpCount": 26,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 13.2,
+          "ehcpPercent": 3.2,
           "anySenCount": 132,
-          "anySenPercent": null
+          "anySenPercent": 16.5
         },
         "absence": {
           "201314": {
@@ -16951,13 +16951,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 1,
+          "totalPupils": 1111,
           "senSupportCount": 30,
           "ehcpCount": 69,
-          "senSupportPercent": 3000.0,
-          "ehcpPercent": 6900.0,
+          "senSupportPercent": 2.7,
+          "ehcpPercent": 6.2,
           "anySenCount": 99,
-          "anySenPercent": 9900.0
+          "anySenPercent": 8.9
         },
         "absence": {
           "202122": {
@@ -17718,13 +17718,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 738,
           "senSupportCount": 107,
           "ehcpCount": 1,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 14.5,
+          "ehcpPercent": 0.1,
           "anySenCount": 108,
-          "anySenPercent": null
+          "anySenPercent": 14.6
         },
         "absence": {}
       },
@@ -18442,13 +18442,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 849,
           "senSupportCount": 184,
           "ehcpCount": 7,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 21.7,
+          "ehcpPercent": 0.8,
           "anySenCount": 191,
-          "anySenPercent": null
+          "anySenPercent": 22.5
         },
         "absence": {}
       },
@@ -19340,13 +19340,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1467,
           "senSupportCount": 144,
           "ehcpCount": 51,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 9.8,
+          "ehcpPercent": 3.5,
           "anySenCount": 195,
-          "anySenPercent": null
+          "anySenPercent": 13.3
         },
         "absence": {
           "201516": {
@@ -20043,13 +20043,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 780,
           "senSupportCount": 158,
           "ehcpCount": 2,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 20.3,
+          "ehcpPercent": 0.3,
           "anySenCount": 160,
-          "anySenPercent": null
+          "anySenPercent": 20.5
         },
         "absence": {}
       },
@@ -20830,13 +20830,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 833,
           "senSupportCount": 252,
           "ehcpCount": 1,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 30.3,
+          "ehcpPercent": 0.1,
           "anySenCount": 253,
-          "anySenPercent": null
+          "anySenPercent": 30.4
         },
         "absence": {}
       },
@@ -21377,13 +21377,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 747,
           "senSupportCount": 112,
           "ehcpCount": 21,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 15.0,
+          "ehcpPercent": 2.8,
           "anySenCount": 133,
-          "anySenPercent": null
+          "anySenPercent": 17.8
         },
         "absence": {
           "202324": {
@@ -22338,13 +22338,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1555,
           "senSupportCount": 156,
           "ehcpCount": 30,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 10.0,
+          "ehcpPercent": 1.9,
           "anySenCount": 186,
-          "anySenPercent": null
+          "anySenPercent": 12.0
         },
         "absence": {
           "202324": {
@@ -23548,13 +23548,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 2030,
           "senSupportCount": 256,
           "ehcpCount": 77,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 12.6,
+          "ehcpPercent": 3.8,
           "anySenCount": 333,
-          "anySenPercent": null
+          "anySenPercent": 16.4
         },
         "absence": {
           "202324": {
@@ -24716,13 +24716,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1375,
           "senSupportCount": 203,
           "ehcpCount": 41,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 14.8,
+          "ehcpPercent": 3.0,
           "anySenCount": 244,
-          "anySenPercent": null
+          "anySenPercent": 17.7
         },
         "absence": {
           "201718": {
@@ -25730,13 +25730,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1496,
           "senSupportCount": 122,
           "ehcpCount": 52,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 8.2,
+          "ehcpPercent": 3.5,
           "anySenCount": 174,
-          "anySenPercent": null
+          "anySenPercent": 11.6
         },
         "absence": {
           "201415": {
@@ -26725,13 +26725,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1590,
           "senSupportCount": 108,
           "ehcpCount": 61,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 6.8,
+          "ehcpPercent": 3.8,
           "anySenCount": 169,
-          "anySenPercent": null
+          "anySenPercent": 10.6
         },
         "absence": {
           "201314": {
@@ -27751,13 +27751,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1697,
           "senSupportCount": 280,
           "ehcpCount": 47,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 16.5,
+          "ehcpPercent": 2.8,
           "anySenCount": 327,
-          "anySenPercent": null
+          "anySenPercent": 19.3
         },
         "absence": {
           "202223": {
@@ -28756,13 +28756,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1585,
           "senSupportCount": 193,
           "ehcpCount": 38,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 12.2,
+          "ehcpPercent": 2.4,
           "anySenCount": 231,
-          "anySenPercent": null
+          "anySenPercent": 14.6
         },
         "absence": {
           "202223": {
@@ -29780,13 +29780,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1575,
           "senSupportCount": 168,
           "ehcpCount": 35,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 10.7,
+          "ehcpPercent": 2.2,
           "anySenCount": 203,
-          "anySenPercent": null
+          "anySenPercent": 12.9
         },
         "absence": {
           "202223": {
@@ -30595,13 +30595,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1327,
           "senSupportCount": 28,
           "ehcpCount": 8,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 2.1,
+          "ehcpPercent": 0.6,
           "anySenCount": 36,
-          "anySenPercent": null
+          "anySenPercent": 2.7
         },
         "absence": {
           "201314": {
@@ -31457,13 +31457,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1119,
           "senSupportCount": 47,
           "ehcpCount": 5,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 4.2,
+          "ehcpPercent": 0.4,
           "anySenCount": 52,
-          "anySenPercent": null
+          "anySenPercent": 4.6
         },
         "absence": {
           "202324": {
@@ -32262,13 +32262,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1084,
           "senSupportCount": 71,
           "ehcpCount": 3,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 6.5,
+          "ehcpPercent": 0.3,
           "anySenCount": 74,
-          "anySenPercent": null
+          "anySenPercent": 6.8
         },
         "absence": {
           "202324": {
@@ -33271,13 +33271,13 @@
         },
         "sen": {
           "year": "2025/26",
-          "totalPupils": 0,
+          "totalPupils": 1701,
           "senSupportCount": 120,
           "ehcpCount": 11,
-          "senSupportPercent": null,
-          "ehcpPercent": null,
+          "senSupportPercent": 7.1,
+          "ehcpPercent": 0.6,
           "anySenCount": 131,
-          "anySenPercent": null
+          "anySenPercent": 7.7
         },
         "absence": {
           "201314": {
