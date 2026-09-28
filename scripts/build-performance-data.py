@@ -38,6 +38,9 @@ DATASETS={
   'ks4_subjects': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/49abed18-1c61-489f-afc0-11f501335da1/csv',
   'alevel_performance': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/eb2322e3-5976-42f2-ae83-900f26e92bd9/csv',
   'alevel_subjects': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/9a275c77-4325-4ac8-aa9e-b1a2bd3ab63b/csv',
+  'characteristics': 'https://content.explore-education-statistics.service.gov.uk/api/releases/420ab305-b770-4dfa-89a0-ac899f34ac46/files/3d6359e3-0733-4a4c-a829-66aec003966d',
+  'sen': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/c5490fd8-6cf3-469e-9f60-0b4262134cb5/csv',
+  'absence': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/889f9166-e3bf-4d3a-afb2-d86e4aecc70a/csv',
 }
 
 def norm(s):
@@ -73,7 +76,8 @@ for g in groups:
 results={g['name']:{
   'name':g['name'],'eventIds':g['eventIds'],'type':g['type'],'area':g['area'],'journey':g['journey'],
   'urn':None,'officialName':None,'gcse':{},'alevel':{},'ks4Eal':{},'gcseSubjects':[],'alevelSubjects':[],
-  'coverage':{'gcse':'Official DfE institution data currently exposed for 2022/23–2024/25.','alevel':'Official DfE institution data currently exposed for 2021/22–2024/25.'}
+  'context':{'pupilCharacteristics':{},'sen':{},'absence':{}},
+  'coverage':{'gcse':'Official DfE institution data currently exposed for 2022/23–2024/25.','alevel':'Official DfE institution data currently exposed for 2021/22–2024/25.','context':'Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25.'}
 } for g in groups}
 
 def open_csv(url):
@@ -172,6 +176,62 @@ for (tracked,_),rec in alevel_acc.items():
 for item in results.values():
     item['alevelSubjects'].sort(key=lambda x:x['subject'])
 
+
+# Whole-school pupil characteristics, January 2026 census.
+for row in open_csv(DATASETS['characteristics']):
+    tracked=urn_to_name.get(str(row.get('urn') or '')) or URN_TO_TRACKED.get(str(row.get('urn') or ''))
+    if not tracked: continue
+    item=results[tracked]
+    item['context']['pupilCharacteristics']={
+      'year':'2025/26',
+      'headcount':i(row.get('headcount of pupils')),
+      'fsmCount':i(row.get('number of pupils known to be eligible for free school meals')),
+      'fsmPercent':n(row.get('% of pupils known to be eligible for free school meals')),
+      'ealCount':i(row.get('number of pupils whose first language is known or believed to be other than English')),
+      'ealPercent':n(row.get('% of pupils whose first language is known or believed to be other than English')),
+      'englishFirstLanguagePercent':n(row.get('% of pupils whose first language is known or believed to be English')),
+      'youngCarerCount':i(row.get('number of pupils who are a young carer')),
+      'youngCarerPercent':n(row.get('% of pupils who are a young carer')),
+      'phase':row.get('phase_type_grouping') or None,
+      'admissionsPolicy':row.get('admissions_policy') or None,
+    }
+
+# School-level SEN provision, January 2026 census. Use "All pupils" primary-need rows to avoid double counting needs.
+sen_acc={}
+for row in open_csv(DATASETS['sen']):
+    tracked=urn_to_name.get(str(row.get('school_urn') or '')) or URN_TO_TRACKED.get(str(row.get('school_urn') or ''))
+    if not tracked or (row.get('sen_primary_need') or '')!='All pupils': continue
+    rec=sen_acc.setdefault(tracked,{'year':'2025/26','totalPupils':None,'senSupportCount':None,'ehcpCount':None})
+    provision=(row.get('sen_provision') or '').strip()
+    count=i(row.get('pupil_count'))
+    if provision=='All pupils':rec['totalPupils']=count
+    elif provision=='SEN support':rec['senSupportCount']=count
+    elif provision=='Education, health and care plans':rec['ehcpCount']=count
+for tracked,rec in sen_acc.items():
+    total=rec.get('totalPupils')
+    support=rec.get('senSupportCount')
+    ehcp=rec.get('ehcpCount')
+    rec['senSupportPercent']=round(100*support/total,1) if total and support is not None else None
+    rec['ehcpPercent']=round(100*ehcp/total,1) if total and ehcp is not None else None
+    rec['anySenCount']=(support or 0)+(ehcp or 0) if support is not None or ehcp is not None else None
+    rec['anySenPercent']=round(100*rec['anySenCount']/total,1) if total and rec['anySenCount'] is not None else None
+    results[tracked]['context']['sen']=rec
+
+# Accredited full-year school absence history. Independent schools are outside this school-level absence series.
+for row in open_csv(DATASETS['absence']):
+    tracked=urn_to_name.get(str(row.get('school_urn') or '')) or URN_TO_TRACKED.get(str(row.get('school_urn') or ''))
+    if not tracked: continue
+    year=str(row.get('time_period') or '')
+    if not year: continue
+    results[tracked]['context']['absence'][year]={
+      'enrolments':i(row.get('enrolments')),
+      'overallAbsencePercent':n(row.get('sess_overall_percent')),
+      'authorisedAbsencePercent':n(row.get('sess_authorised_percent')),
+      'unauthorisedAbsencePercent':n(row.get('sess_unauthorised_percent')),
+      'persistentAbsencePercent':n(row.get('enrolments_pa_10_exact_percent')),
+      'severeAbsencePercent':n(row.get('enrolments_pa_50_exact_percent')),
+    }
+
 # Add an explicit five-school-year display window with transparent gaps.
 for item in results.values():
     item['gcseFiveYearWindow']=[
@@ -195,7 +255,10 @@ out={
     'gcseSubjects':'DfE 2024/25 institution-level subject entries and grades.',
     'alevel':'DfE Explore Education Statistics, 16–18 institution performance, A level cohort, 2021/22 to 2024/25.',
     'alevelSubjects':'DfE 2024/25 institution-level A-level subject entries and grades.',
-    'eal':'Where populated, EAL is the percentage of the KS4 cohort in the DfE First language breakdown, not the whole-school census percentage.',
+    'eal':'Whole-school EAL is the January 2026 school-census percentage whose first language is known or believed to be other than English. KS4 EAL is retained separately for historical exam-cohort context.',
+    'fsm':'Whole-school FSM is the January 2026 percentage of pupils known to be eligible for free school meals.',
+    'sen':'SEN support and EHCP percentages are calculated from the DfE 2025/26 school-level SEN census using the All pupils rows.',
+    'absence':'Absence and persistent absence use the DfE accredited full academic-year school-level absence series through 2024/25. Independent schools are outside this series.',
     'progress8':'DfE does not publish Progress 8 for 2024/25 or 2025/26 because those cohorts lack KS2 baseline assessments after COVID disruption.',
     'comparability':'Independent and state-school results may be present in the same DfE performance-table datasets, but intake/selectivity and curriculum differ; do not treat raw attainment as a like-for-like school-effect measure.'
   },
