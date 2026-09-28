@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-09-23",
+    "updated": "2026-09-28",
     "entryYear": 2028,
     "note": "Times and booking availability can change. Always re-check the school page before travelling.",
     "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page.",
@@ -1351,11 +1351,11 @@
       "event": "Open Evening",
       "start": "2026-10-01T17:00:00+01:00",
       "end": null,
-      "status": "time-tbc",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "infoUrl": "https://arkacademy.org/admissions/secondary",
       "bookingUrl": "https://arkacademy.org/admissions/secondary",
-      "note": "Start reported as 17:00; confirm finishing time.",
+      "note": "Official Ark Academy admissions page lists Open Evening on Thursday 1 October 2026 at 5pm. Attendees are asked to complete the school's open-events form; finish time is not published.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": "2027-10-31",
@@ -1366,11 +1366,11 @@
       },
       "linkChecks": {
         "infoUrl": {
-          "checked": "2026-09-16",
+          "checked": "2026-09-28",
           "status": "retrieved"
         },
         "bookingUrl": {
-          "checked": "2026-09-16",
+          "checked": "2026-09-28",
           "status": "retrieved"
         },
         "admission": {
