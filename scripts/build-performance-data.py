@@ -14,7 +14,7 @@ ALIASES={
   "St Paul's School":["St Paul's School"],
   "St Margaret's School":["St Margaret's School","St Margaret's School, Bushey"],
   "Merchant Taylors' School":["Merchant Taylors' School","Merchant Taylors School"],
-  "Mill Hill School":["Mill Hill School","Mill Hill Schools"],
+  "Mill Hill School":["Mill Hill School","Mill Hill Schools","Mill Hill School Foundation"],
   "John Lyon School":["The John Lyon School","John Lyon School"],
   "Winchester College":["Winchester College"],
   "Westminster School":["Westminster School"],
@@ -26,6 +26,12 @@ ALIASES={
   "Salvatorian College":["Salvatorian Roman Catholic College","Salvatorian College"],
   "Haberdashers' Boys' School":["Haberdashers' Boys' School","Haberdashers' Boys School","Haberdashers' Aske's Boys' School"],
 }
+
+URN_OVERRIDES={
+  "Mill Hill School":"101367",
+  "Salvatorian College":"138458",
+}
+URN_TO_TRACKED={urn:name for name,urn in URN_OVERRIDES.items()}
 
 DATASETS={
   'ks4_performance': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv',
@@ -81,7 +87,7 @@ def total_ks4(row):
 
 # KS4 performance, including school matching and 3-year history.
 for row in open_csv(DATASETS['ks4_performance']):
-    tracked=candidate_to_group.get(norm(row.get('school_name')))
+    tracked=URN_TO_TRACKED.get(str(row.get('school_urn') or '')) or candidate_to_group.get(norm(row.get('school_name')))
     if not tracked: continue
     item=results[tracked]
     item['urn']=row.get('school_urn') or item['urn']
@@ -111,7 +117,7 @@ urn_to_name={str(v['urn']):k for k,v in results.items() if v.get('urn')}
 # KS4 subject detail for latest year. Keep raw published grade counts and suppress nothing ourselves.
 subject_acc={}
 for row in open_csv(DATASETS['ks4_subjects']):
-    tracked=urn_to_name.get(str(row.get('school_urn') or ''))
+    tracked=URN_TO_TRACKED.get(str(row.get('school_urn') or '')) or urn_to_name.get(str(row.get('school_urn') or ''))
     if not tracked: continue
     subject=(row.get('subject') or '').strip()
     if not subject or subject.lower()=='all subjects': continue
