@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T10:14:31.067589+00:00",
+  "generatedAt": "2026-09-28T10:15:57.838181+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
@@ -12079,13 +12079,675 @@
       "type": "independent",
       "area": "Mill Hill",
       "journey": 30,
-      "urn": null,
-      "officialName": null,
-      "gcse": {},
-      "alevel": {},
-      "ks4Eal": {},
-      "gcseSubjects": [],
-      "alevelSubjects": [],
+      "urn": "101367",
+      "officialName": "Mill Hill School Foundation",
+      "gcse": {
+        "202425": {
+          "pupils": 225,
+          "attainment8": 43.1,
+          "progress8": null,
+          "progress8Lower": null,
+          "progress8Upper": null,
+          "englishMaths5Plus": 0.0,
+          "englishMaths4Plus": 0.0,
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 4.07,
+          "grade9to7AllGCSE": 98.2,
+          "tripleScienceEntry": 33.8
+        },
+        "202324": {
+          "pupils": 256,
+          "attainment8": 50.5,
+          "progress8": null,
+          "progress8Lower": null,
+          "progress8Upper": null,
+          "englishMaths5Plus": 62.5,
+          "englishMaths4Plus": 67.6,
+          "ebaccEntry": 30.9,
+          "ebaccAPS": 4.46,
+          "grade9to7AllGCSE": 99.2,
+          "tripleScienceEntry": 36.3
+        },
+        "202223": {
+          "pupils": 260,
+          "attainment8": 46.2,
+          "progress8": null,
+          "progress8Lower": null,
+          "progress8Upper": null,
+          "englishMaths5Plus": 62.3,
+          "englishMaths4Plus": 70.0,
+          "ebaccEntry": 25.0,
+          "ebaccAPS": 4.14,
+          "grade9to7AllGCSE": 70.0,
+          "tripleScienceEntry": 28.1
+        }
+      },
+      "alevel": {
+        "202425": {
+          "students": 175,
+          "aps": 43.94,
+          "averageGrade": "B+",
+          "valueAdded": 0.52,
+          "valueAddedLower": 0.43,
+          "valueAddedUpper": 0.62,
+          "best3APS": 43.92,
+          "best3Grade": "B+",
+          "aabPercent": 21.6,
+          "retainedPercent": null
+        },
+        "202324": {
+          "students": 173,
+          "aps": 45.0,
+          "averageGrade": "A-",
+          "valueAdded": 0.58,
+          "valueAddedLower": 0.48,
+          "valueAddedUpper": 0.67,
+          "best3APS": null,
+          "best3Grade": null,
+          "aabPercent": null,
+          "retainedPercent": null
+        },
+        "202223": {
+          "students": 164,
+          "aps": 39.28,
+          "averageGrade": "B",
+          "valueAdded": null,
+          "valueAddedLower": null,
+          "valueAddedUpper": null,
+          "best3APS": null,
+          "best3Grade": null,
+          "aabPercent": null,
+          "retainedPercent": null
+        },
+        "202122": {
+          "students": 176,
+          "aps": 42.47,
+          "averageGrade": "B+",
+          "valueAdded": null,
+          "valueAddedLower": null,
+          "valueAddedUpper": null,
+          "best3APS": null,
+          "best3Grade": null,
+          "aabPercent": null,
+          "retainedPercent": null
+        }
+      },
+      "ks4Eal": {
+        "202425": null,
+        "202324": null,
+        "202223": null
+      },
+      "gcseSubjects": [
+        {
+          "subject": "Art and Design",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "6": 8,
+            "7": 12,
+            "8": 12,
+            "9": 6,
+            "Total exam entries": 38
+          }
+        },
+        {
+          "subject": "Biology",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 4,
+            "4": 3,
+            "5": 4,
+            "6": 8,
+            "7": 15,
+            "8": 26,
+            "9": 42,
+            "Total exam entries": 102
+          }
+        },
+        {
+          "subject": "Business",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 2,
+            "4": 8,
+            "5": 11,
+            "6": 3,
+            "7": 1,
+            "8": 2,
+            "9": 1,
+            "Total exam entries": 28
+          }
+        },
+        {
+          "subject": "Chemistry",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "5": 2,
+            "6": 4,
+            "7": 10,
+            "8": 28,
+            "9": 32,
+            "Total exam entries": 76
+          }
+        },
+        {
+          "subject": "Classical Civilisation",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 1,
+            "4": 1,
+            "5": 3,
+            "6": 8,
+            "7": 2,
+            "8": 5,
+            "9": 1,
+            "Total exam entries": 21
+          }
+        },
+        {
+          "subject": "Combined Science",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "44": 2,
+            "54": 3,
+            "55": 3,
+            "65": 4,
+            "66": 7,
+            "76": 23,
+            "77": 8,
+            "87": 9,
+            "88": 12,
+            "98": 12,
+            "99": 8,
+            "Total exam entries": 91
+          }
+        },
+        {
+          "subject": "Design & Technology",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "6": 1,
+            "7": 3,
+            "8": 13,
+            "9": 7,
+            "Total exam entries": 24
+          }
+        },
+        {
+          "subject": "Drama",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "4": 1,
+            "5": 3,
+            "6": 11,
+            "7": 9,
+            "8": 8,
+            "9": 2,
+            "Total exam entries": 34
+          }
+        },
+        {
+          "subject": "Economics",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "2": 1,
+            "4": 3,
+            "5": 2,
+            "6": 3,
+            "7": 3,
+            "9": 1,
+            "Total exam entries": 13
+          }
+        },
+        {
+          "subject": "French",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 5,
+            "4": 9,
+            "5": 10,
+            "6": 4,
+            "7": 22,
+            "8": 15,
+            "9": 28,
+            "Total exam entries": 94,
+            "U": 1
+          }
+        },
+        {
+          "subject": "Geography",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "5": 4,
+            "6": 10,
+            "7": 16,
+            "8": 24,
+            "9": 12,
+            "Total exam entries": 66
+          }
+        },
+        {
+          "subject": "German",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "4": 2,
+            "5": 5,
+            "7": 5,
+            "8": 6,
+            "9": 8,
+            "Total exam entries": 26
+          }
+        },
+        {
+          "subject": "Latin",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 1,
+            "4": 2,
+            "5": 1,
+            "6": 2,
+            "7": 2,
+            "9": 3,
+            "Total exam entries": 11
+          }
+        },
+        {
+          "subject": "Mathematics",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 1,
+            "4": 10,
+            "5": 19,
+            "6": 41,
+            "7": 36,
+            "8": 42,
+            "9": 20,
+            "Total exam entries": 169
+          }
+        },
+        {
+          "subject": "Music",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 1,
+            "5": 2,
+            "6": 5,
+            "7": 3,
+            "8": 2,
+            "9": 3,
+            "Total exam entries": 16
+          }
+        },
+        {
+          "subject": "Other Modern Languages",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 1,
+            "7": 1,
+            "8": 1,
+            "9": 7,
+            "Total exam entries": 2
+          }
+        },
+        {
+          "subject": "Physical Education",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "5": 3,
+            "6": 6,
+            "7": 8,
+            "8": 8,
+            "9": 9,
+            "Total exam entries": 34
+          }
+        },
+        {
+          "subject": "Physics",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "5": 2,
+            "6": 5,
+            "7": 9,
+            "8": 30,
+            "9": 31,
+            "Total exam entries": 77
+          }
+        },
+        {
+          "subject": "Religious Studies",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "5": 1,
+            "6": 8,
+            "7": 17,
+            "8": 23,
+            "9": 26,
+            "Total exam entries": 75
+          }
+        },
+        {
+          "subject": "Social Studies",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 3,
+            "5": 1,
+            "6": 3,
+            "7": 2,
+            "8": 1,
+            "9": 1,
+            "Total exam entries": 14
+          }
+        },
+        {
+          "subject": "Spanish",
+          "qualification": "GCSE",
+          "pupils": 225,
+          "grades": {
+            "3": 2,
+            "4": 6,
+            "5": 7,
+            "6": 9,
+            "7": 9,
+            "8": 4,
+            "9": 13,
+            "Total exam entries": 50
+          }
+        }
+      ],
+      "alevelSubjects": [
+        {
+          "subject": "Art and Design",
+          "grades": {
+            "A*": 4,
+            "A": 2,
+            "B": 2,
+            "C": 0,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 8
+          }
+        },
+        {
+          "subject": "Biology",
+          "grades": {
+            "A*": 1,
+            "A": 5,
+            "B": 5,
+            "C": 4,
+            "D": 3,
+            "E": 0,
+            "Total exam entries": 18
+          }
+        },
+        {
+          "subject": "Business Studies",
+          "grades": {
+            "A*": 7,
+            "A": 10,
+            "B": 25,
+            "C": 13,
+            "D": 2,
+            "E": 0,
+            "Total exam entries": 57
+          }
+        },
+        {
+          "subject": "Chemistry",
+          "grades": {
+            "A*": 2,
+            "A": 2,
+            "B": 8,
+            "C": 3,
+            "D": 5,
+            "E": 0,
+            "Total exam entries": 20
+          }
+        },
+        {
+          "subject": "Chinese",
+          "grades": {
+            "Total exam entries": 3
+          }
+        },
+        {
+          "subject": "Classical Civilisation",
+          "grades": {
+            "Total exam entries": 5
+          }
+        },
+        {
+          "subject": "Design and Technology (Product Design)",
+          "grades": {
+            "Total exam entries": 4
+          }
+        },
+        {
+          "subject": "Drama and Theatre Studies",
+          "grades": {
+            "Total exam entries": 5
+          }
+        },
+        {
+          "subject": "Economics",
+          "grades": {
+            "A*": 7,
+            "A": 9,
+            "B": 5,
+            "C": 5,
+            "D": 1,
+            "E": 0,
+            "Total exam entries": 27
+          }
+        },
+        {
+          "subject": "English Literature",
+          "grades": {
+            "A*": 4,
+            "A": 4,
+            "B": 2,
+            "C": 2,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 12
+          }
+        },
+        {
+          "subject": "French",
+          "grades": {
+            "A*": 1,
+            "A": 3,
+            "B": 2,
+            "C": 1,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 7
+          }
+        },
+        {
+          "subject": "Geography",
+          "grades": {
+            "A*": 7,
+            "A": 11,
+            "B": 9,
+            "C": 6,
+            "D": 1,
+            "E": 0,
+            "Total exam entries": 34
+          }
+        },
+        {
+          "subject": "German",
+          "grades": {
+            "Total exam entries": 2
+          }
+        },
+        {
+          "subject": "Government and Politics",
+          "grades": {
+            "A*": 10,
+            "A": 10,
+            "B": 11,
+            "C": 3,
+            "D": 1,
+            "E": 0,
+            "Total exam entries": 35
+          }
+        },
+        {
+          "subject": "History",
+          "grades": {
+            "A*": 10,
+            "A": 18,
+            "B": 18,
+            "C": 11,
+            "D": 1,
+            "E": 1,
+            "Total exam entries": 59
+          }
+        },
+        {
+          "subject": "Latin",
+          "grades": {
+            "Total exam entries": 2
+          }
+        },
+        {
+          "subject": "Mathematics",
+          "grades": {
+            "A*": 14,
+            "A": 8,
+            "B": 22,
+            "C": 12,
+            "D": 5,
+            "E": 2,
+            "Total exam entries": 63
+          }
+        },
+        {
+          "subject": "Mathematics (Further)",
+          "grades": {
+            "A*": 3,
+            "A": 4,
+            "B": 1,
+            "C": 1,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 9
+          }
+        },
+        {
+          "subject": "Music",
+          "grades": {
+            "Total exam entries": 2
+          }
+        },
+        {
+          "subject": "Persian",
+          "grades": {
+            "Total exam entries": 3
+          }
+        },
+        {
+          "subject": "Physical Education / Sports Studies",
+          "grades": {
+            "A*": 0,
+            "A": 2,
+            "B": 6,
+            "C": 2,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 10
+          }
+        },
+        {
+          "subject": "Physics",
+          "grades": {
+            "A*": 4,
+            "A": 5,
+            "B": 8,
+            "C": 3,
+            "D": 1,
+            "E": 2,
+            "Total exam entries": 23
+          }
+        },
+        {
+          "subject": "Psychology",
+          "grades": {
+            "A*": 5,
+            "A": 15,
+            "B": 17,
+            "C": 6,
+            "D": 2,
+            "E": 0,
+            "Total exam entries": 1
+          }
+        },
+        {
+          "subject": "Religious Studies",
+          "grades": {
+            "A*": 5,
+            "A": 13,
+            "B": 7,
+            "C": 3,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 28
+          }
+        },
+        {
+          "subject": "Russian",
+          "grades": {
+            "A*": 7,
+            "A": 1,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 8
+          }
+        },
+        {
+          "subject": "Spanish",
+          "grades": {
+            "A*": 1,
+            "A": 1,
+            "B": 5,
+            "C": 2,
+            "D": 0,
+            "E": 0,
+            "Total exam entries": 9
+          }
+        },
+        {
+          "subject": "Turkish",
+          "grades": {
+            "Total exam entries": 4
+          }
+        }
+      ],
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
@@ -12101,33 +12763,113 @@
         },
         {
           "year": "2022/23",
-          "data": null
+          "data": {
+            "pupils": 260,
+            "attainment8": 46.2,
+            "progress8": null,
+            "progress8Lower": null,
+            "progress8Upper": null,
+            "englishMaths5Plus": 62.3,
+            "englishMaths4Plus": 70.0,
+            "ebaccEntry": 25.0,
+            "ebaccAPS": 4.14,
+            "grade9to7AllGCSE": 70.0,
+            "tripleScienceEntry": 28.1
+          }
         },
         {
           "year": "2023/24",
-          "data": null
+          "data": {
+            "pupils": 256,
+            "attainment8": 50.5,
+            "progress8": null,
+            "progress8Lower": null,
+            "progress8Upper": null,
+            "englishMaths5Plus": 62.5,
+            "englishMaths4Plus": 67.6,
+            "ebaccEntry": 30.9,
+            "ebaccAPS": 4.46,
+            "grade9to7AllGCSE": 99.2,
+            "tripleScienceEntry": 36.3
+          }
         },
         {
           "year": "2024/25",
-          "data": null
+          "data": {
+            "pupils": 225,
+            "attainment8": 43.1,
+            "progress8": null,
+            "progress8Lower": null,
+            "progress8Upper": null,
+            "englishMaths5Plus": 0.0,
+            "englishMaths4Plus": 0.0,
+            "ebaccEntry": 0.0,
+            "ebaccAPS": 4.07,
+            "grade9to7AllGCSE": 98.2,
+            "tripleScienceEntry": 33.8
+          }
         }
       ],
       "alevelWindow": [
         {
           "year": "2021/22",
-          "data": null
+          "data": {
+            "students": 176,
+            "aps": 42.47,
+            "averageGrade": "B+",
+            "valueAdded": null,
+            "valueAddedLower": null,
+            "valueAddedUpper": null,
+            "best3APS": null,
+            "best3Grade": null,
+            "aabPercent": null,
+            "retainedPercent": null
+          }
         },
         {
           "year": "2022/23",
-          "data": null
+          "data": {
+            "students": 164,
+            "aps": 39.28,
+            "averageGrade": "B",
+            "valueAdded": null,
+            "valueAddedLower": null,
+            "valueAddedUpper": null,
+            "best3APS": null,
+            "best3Grade": null,
+            "aabPercent": null,
+            "retainedPercent": null
+          }
         },
         {
           "year": "2023/24",
-          "data": null
+          "data": {
+            "students": 173,
+            "aps": 45.0,
+            "averageGrade": "A-",
+            "valueAdded": 0.58,
+            "valueAddedLower": 0.48,
+            "valueAddedUpper": 0.67,
+            "best3APS": null,
+            "best3Grade": null,
+            "aabPercent": null,
+            "retainedPercent": null
+          }
         },
         {
           "year": "2024/25",
-          "data": null
+          "data": {
+            "students": 175,
+            "aps": 43.94,
+            "averageGrade": "B+",
+            "valueAdded": 0.52,
+            "valueAddedLower": 0.43,
+            "valueAddedUpper": 0.62,
+            "best3APS": 43.92,
+            "best3Grade": "B+",
+            "aabPercent": 21.6,
+            "retainedPercent": null
+          }
         }
       ]
     },
