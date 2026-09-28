@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T10:15:57.838181+00:00",
+  "generatedAt": "2026-09-28T12:53:25.171706+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
@@ -13397,7 +13397,9 @@
     {
       "name": "Ark Academy",
       "eventIds": [
-        "ark-mornings",
+        "ark-morning-2026-09-28",
+        "ark-morning-2026-09-29",
+        "ark-morning-2026-09-30",
         "ark-evening"
       ],
       "type": "state",
