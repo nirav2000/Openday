@@ -2,7 +2,7 @@
   const $=s=>document.querySelector(s);
   let doc={schools:[]},filter='all',expanded='';
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
-  const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]);
+  const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
 
   const esc=v=>String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -44,9 +44,12 @@
     const q=$('#perfSearch').value.trim().toLowerCase();
     if(q&&!(String(s.name)+' '+String(s.area)+' '+String(s.type)).toLowerCase().includes(q))return false;
     if(filter==='visited')return eventFlag(s,visited);
+    if(filter==='booked')return s.eventIds.some(id=>!!booked[id]);
     if(filter==='saved')return eventFlag(s,saved);
     if(filter==='liked')return decisionFlag(s,'liked');
+    if(filter==='visit-again')return decisionFlag(s,'visit-again');
     if(filter==='try-for')return decisionFlag(s,'try-for');
+    if(filter==='not-for-us')return decisionFlag(s,'not-for-us');
     if(filter==='state')return ['state','part-selective'].includes(s.type);
     if(filter==='grammar')return s.type==='grammar';
     if(filter==='independent')return s.type==='independent';
@@ -115,7 +118,7 @@
       const d=x.data;
       const key=String(x.year||'').replace('/','');
       return '<tr>'+
-        '<td>'+esc(x.year)+'</td>'+
+        '<td>'+esc(x.year)+'</td><td>'+(d?fmt(d.pupils):'—')+'</td>'+
         '<td>'+(d?fmt(d.attainment8):'—')+'</td>'+
         '<td>'+(d?(s.type==='independent'&&Number(d.englishMaths5Plus)===0?'n/a†':pct(d.englishMaths5Plus)):'—')+'</td>'+
         '<td>'+(d&&d.progress8!==null&&d.progress8!==undefined?fmt(d.progress8):'—')+'</td>'+
@@ -124,7 +127,7 @@
         '</tr>';
     }).join('');
     const independentNote=s.type==='independent'?'<p class="warning"><b>Independent-school caution:</b> DfE performance measures only count qualifications approved for the performance tables. Schools using IGCSEs or other non-counting qualifications can therefore show artificially low or zero KS4 headline measures. Use the subject detail and school-published results alongside these DfE figures.</p>':'';
-    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>A8</th><th>Eng/math 5+</th><th>P8</th><th>EBacc entry</th><th>KS4 EAL</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Pupils</th><th>A8</th><th>Eng/math 5+</th><th>P8</th><th>EBacc entry</th><th>KS4 EAL</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
       independentNote+
       '<p class="warning">2020/21 has no comparable exam series. The current DfE institution API exposes school-level KS4 performance from 2022/23; 2021/22 is left as a transparent gap rather than silently substituting another series.</p>';
   }
@@ -132,9 +135,9 @@
   function alevelHistory(s){
     const rows=(s.alevelWindow||[]).map(x=>{
       const d=x.data;
-      return '<tr><td>'+esc(x.year)+'</td><td>'+(d?esc(d.averageGrade||'—'):'—')+'</td><td>'+(d?fmt(d.aps):'—')+'</td><td>'+(d?fmt(d.valueAdded):'—')+'</td><td>'+(d?pct(d.aabPercent):'—')+'</td></tr>';
+      return '<tr><td>'+esc(x.year)+'</td><td>'+(d?fmt(d.students):'—')+'</td><td>'+(d?esc(d.averageGrade||'—'):'—')+'</td><td>'+(d?fmt(d.aps):'—')+'</td><td>'+(d?fmt(d.valueAdded):'—')+'</td><td>'+(d?pct(d.aabPercent):'—')+'</td></tr>';
     }).join('');
-    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Avg grade</th><th>APS</th><th>Value added</th><th>≥AAB</th></tr></thead><tbody>'+(rows||'<tr><td colspan="5">No DfE A-level institution data found.</td></tr>')+'</tbody></table></div>';
+    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Students</th><th>Avg grade</th><th>APS</th><th>Value added</th><th>≥AAB</th></tr></thead><tbody>'+(rows||'<tr><td colspan="6">No DfE A-level institution data found.</td></tr>')+'</tbody></table></div>';
   }
 
   function subjectTable(subjects=[],kind){
