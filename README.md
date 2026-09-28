@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.6.1**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.7.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -93,3 +93,16 @@ Cross-device saves use a **three-way merge** against the device's last known clo
 ## Pending note sync
 
 When a visit note changes, its school ID is added to a small device-local pending list. This list survives reloads but causes no Firestore traffic. While any notes are pending, the main page shows a green pending cloud save bar and the sync indicator gently pulses. **Save all to cloud** performs the same transactional private-state save as the school-level save action. Because the private state contains all notes, one successful write saves every pending note on that device, not just the currently open school. The pending list is cleared only after Openday receives a confirmed cloud-write success event.
+
+
+## Academic performance comparison
+
+Openday now includes `performance.html`, linked from the main header and from each senior-school detail panel. The dashboard groups multiple open-day events for the same school into one academic record and supports filters for visited, saved, liked, want-to-try-for, school type and data availability.
+
+The generated `data/performance.json` is built from official DfE Explore Education Statistics institution-level datasets. It currently includes GCSE / KS4 performance for 2022/23–2024/25, A-level performance for 2021/22–2024/25, KS4 first-language / EAL breakdowns where published, and 2024/25 subject grade counts. The data builder matches schools by official name and, where necessary, stable URN overrides.
+
+The GCSE five-year view deliberately shows transparent gaps rather than mixing non-comparable series: 2020/21 is marked as pandemic/non-comparable, 2021/22 is left as a legacy-data gap, and 2022/23–2024/25 use the current DfE institution series. Progress 8 is not available for 2024/25 because the cohort lacks the required KS2 baseline.
+
+For independent schools, DfE performance-table measures can exclude qualifications that do not count in the accountability tables. The app therefore flags this limitation and avoids presenting a zero English/maths headline measure as a normal like-for-like result.
+
+`.github/workflows/refresh-performance.yml` refreshes the generated performance dataset weekly, can be dispatched manually, and also runs when the tracked-school catalogue or data-builder changes.
