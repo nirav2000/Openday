@@ -1,11 +1,14 @@
 {
-  "generatedAt": "2026-09-28T12:53:25.171706+00:00",
+  "generatedAt": "2026-09-28T20:16:12.321297+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
     "alevel": "DfE Explore Education Statistics, 16–18 institution performance, A level cohort, 2021/22 to 2024/25.",
     "alevelSubjects": "DfE 2024/25 institution-level A-level subject entries and grades.",
-    "eal": "Where populated, EAL is the percentage of the KS4 cohort in the DfE First language breakdown, not the whole-school census percentage.",
+    "eal": "Whole-school EAL is the January 2026 school-census percentage whose first language is known or believed to be other than English. KS4 EAL is retained separately for historical exam-cohort context.",
+    "fsm": "Whole-school FSM is the January 2026 percentage of pupils known to be eligible for free school meals.",
+    "sen": "SEN support and EHCP percentages are calculated from the DfE 2025/26 school-level SEN census using the All pupils rows.",
+    "absence": "Absence and persistent absence use the DfE accredited full academic-year school-level absence series through 2024/25. Independent schools are outside this series.",
     "progress8": "DfE does not publish Progress 8 for 2024/25 or 2025/26 because those cohorts lack KS2 baseline assessments after COVID disruption.",
     "comparability": "Independent and state-school results may be present in the same DfE performance-table datasets, but intake/selectivity and curriculum differ; do not treat raw attainment as a like-for-like school-effect measure."
   },
@@ -13,7 +16,10 @@
     "ks4_performance": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
     "ks4_subjects": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/49abed18-1c61-489f-afc0-11f501335da1/csv",
     "alevel_performance": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/eb2322e3-5976-42f2-ae83-900f26e92bd9/csv",
-    "alevel_subjects": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/9a275c77-4325-4ac8-aa9e-b1a2bd3ab63b/csv"
+    "alevel_subjects": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/9a275c77-4325-4ac8-aa9e-b1a2bd3ab63b/csv",
+    "characteristics": "https://content.explore-education-statistics.service.gov.uk/api/releases/420ab305-b770-4dfa-89a0-ac899f34ac46/files/3d6359e3-0733-4a4c-a829-66aec003966d",
+    "sen": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/c5490fd8-6cf3-469e-9f60-0b4262134cb5/csv",
+    "absence": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/889f9166-e3bf-4d3a-afb2-d86e4aecc70a/csv"
   },
   "schools": [
     {
@@ -770,9 +776,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1148,
+          "fsmCount": 397,
+          "fsmPercent": 34.6,
+          "ealCount": 757,
+          "ealPercent": 65.9,
+          "englishFirstLanguagePercent": 34.0,
+          "youngCarerCount": 19,
+          "youngCarerPercent": 1.7,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 120,
+          "ehcpCount": 35,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 155,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201415": {
+            "enrolments": 900,
+            "overallAbsencePercent": 4.72198,
+            "authorisedAbsencePercent": 3.94081,
+            "unauthorisedAbsencePercent": 0.78117,
+            "persistentAbsencePercent": 12.33333,
+            "severeAbsencePercent": 1.0
+          },
+          "201314": {
+            "enrolments": 894,
+            "overallAbsencePercent": 4.8696,
+            "authorisedAbsencePercent": 3.8577,
+            "unauthorisedAbsencePercent": 1.0119,
+            "persistentAbsencePercent": 13.75839,
+            "severeAbsencePercent": 1.11857
+          },
+          "201617": {
+            "enrolments": 965,
+            "overallAbsencePercent": 5.16907,
+            "authorisedAbsencePercent": 3.89292,
+            "unauthorisedAbsencePercent": 1.27614,
+            "persistentAbsencePercent": 12.02073,
+            "severeAbsencePercent": 1.86528
+          },
+          "201516": {
+            "enrolments": 936,
+            "overallAbsencePercent": 5.14013,
+            "authorisedAbsencePercent": 4.01128,
+            "unauthorisedAbsencePercent": 1.12884,
+            "persistentAbsencePercent": 12.17949,
+            "severeAbsencePercent": 0.53419
+          },
+          "201718": {
+            "enrolments": 986,
+            "overallAbsencePercent": 5.32005,
+            "authorisedAbsencePercent": 4.22733,
+            "unauthorisedAbsencePercent": 1.09272,
+            "persistentAbsencePercent": 13.7931,
+            "severeAbsencePercent": 1.21704
+          },
+          "201819": {
+            "enrolments": 1063,
+            "overallAbsencePercent": 5.44945,
+            "authorisedAbsencePercent": 4.1062,
+            "unauthorisedAbsencePercent": 1.34325,
+            "persistentAbsencePercent": 14.67545,
+            "severeAbsencePercent": 0.84666
+          },
+          "202021": {
+            "enrolments": 1069,
+            "overallAbsencePercent": 7.99469,
+            "authorisedAbsencePercent": 5.65866,
+            "unauthorisedAbsencePercent": 2.33603,
+            "persistentAbsencePercent": 24.3218,
+            "severeAbsencePercent": 1.40318
+          },
+          "202223": {
+            "enrolments": 1128,
+            "overallAbsencePercent": 9.27791,
+            "authorisedAbsencePercent": 6.38984,
+            "unauthorisedAbsencePercent": 2.88807,
+            "persistentAbsencePercent": 30.76241,
+            "severeAbsencePercent": 2.57092
+          },
+          "202122": {
+            "enrolments": 1102,
+            "overallAbsencePercent": 9.62548,
+            "authorisedAbsencePercent": 7.27735,
+            "unauthorisedAbsencePercent": 2.34814,
+            "persistentAbsencePercent": 35.93466,
+            "severeAbsencePercent": 2.63158
+          },
+          "202324": {
+            "enrolments": 1124,
+            "overallAbsencePercent": 7.62586,
+            "authorisedAbsencePercent": 5.11095,
+            "unauthorisedAbsencePercent": 2.51491,
+            "persistentAbsencePercent": 23.22064,
+            "severeAbsencePercent": 1.9573
+          },
+          "202425": {
+            "enrolments": 1120,
+            "overallAbsencePercent": 8.03521,
+            "authorisedAbsencePercent": 5.45527,
+            "unauthorisedAbsencePercent": 2.57995,
+            "persistentAbsencePercent": 25.53571,
+            "severeAbsencePercent": 2.67857
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -1537,9 +1659,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1451,
+          "fsmCount": 73,
+          "fsmPercent": 5.0,
+          "ealCount": 359,
+          "ealPercent": 24.7,
+          "englishFirstLanguagePercent": 75.3,
+          "youngCarerCount": 7,
+          "youngCarerPercent": 0.5,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 117,
+          "ehcpCount": 7,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 124,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201415": {
+            "enrolments": 947,
+            "overallAbsencePercent": 4.28696,
+            "authorisedAbsencePercent": 4.27283,
+            "unauthorisedAbsencePercent": 0.01413,
+            "persistentAbsencePercent": 8.34213,
+            "severeAbsencePercent": 0.31679
+          },
+          "201314": {
+            "enrolments": 946,
+            "overallAbsencePercent": 3.71251,
+            "authorisedAbsencePercent": 3.7012,
+            "unauthorisedAbsencePercent": 0.0113,
+            "persistentAbsencePercent": 5.39112,
+            "severeAbsencePercent": 0.31712
+          },
+          "202425": {
+            "enrolments": 969,
+            "overallAbsencePercent": 6.0578,
+            "authorisedAbsencePercent": 5.65339,
+            "unauthorisedAbsencePercent": 0.40441,
+            "persistentAbsencePercent": 25.2838,
+            "severeAbsencePercent": 0.3096
+          },
+          "201718": {
+            "enrolments": 955,
+            "overallAbsencePercent": 5.01546,
+            "authorisedAbsencePercent": 4.87956,
+            "unauthorisedAbsencePercent": 0.1359,
+            "persistentAbsencePercent": 14.24084,
+            "severeAbsencePercent": 0.31414
+          },
+          "201617": {
+            "enrolments": 952,
+            "overallAbsencePercent": 4.98396,
+            "authorisedAbsencePercent": 4.8315,
+            "unauthorisedAbsencePercent": 0.15245,
+            "persistentAbsencePercent": 12.28992,
+            "severeAbsencePercent": 0.42017
+          },
+          "202021": {
+            "enrolments": 977,
+            "overallAbsencePercent": 4.4666,
+            "authorisedAbsencePercent": 4.30933,
+            "unauthorisedAbsencePercent": 0.15727,
+            "persistentAbsencePercent": 7.67656,
+            "severeAbsencePercent": 0.10235
+          },
+          "201516": {
+            "enrolments": 958,
+            "overallAbsencePercent": 4.31929,
+            "authorisedAbsencePercent": 4.29258,
+            "unauthorisedAbsencePercent": 0.02672,
+            "persistentAbsencePercent": 7.30689,
+            "severeAbsencePercent": 0.73069
+          },
+          "201819": {
+            "enrolments": 957,
+            "overallAbsencePercent": 3.98986,
+            "authorisedAbsencePercent": 3.79531,
+            "unauthorisedAbsencePercent": 0.19455,
+            "persistentAbsencePercent": 7.628,
+            "severeAbsencePercent": 0.0
+          },
+          "202324": {
+            "enrolments": 963,
+            "overallAbsencePercent": 6.46636,
+            "authorisedAbsencePercent": 6.11401,
+            "unauthorisedAbsencePercent": 0.35235,
+            "persistentAbsencePercent": 23.98754,
+            "severeAbsencePercent": 0.83074
+          },
+          "202223": {
+            "enrolments": 962,
+            "overallAbsencePercent": 6.90538,
+            "authorisedAbsencePercent": 6.50453,
+            "unauthorisedAbsencePercent": 0.40084,
+            "persistentAbsencePercent": 22.45322,
+            "severeAbsencePercent": 1.14345
+          },
+          "202122": {
+            "enrolments": 973,
+            "overallAbsencePercent": 8.08148,
+            "authorisedAbsencePercent": 7.85108,
+            "unauthorisedAbsencePercent": 0.2304,
+            "persistentAbsencePercent": 31.86023,
+            "severeAbsencePercent": 0.71942
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -2447,9 +2685,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 2091,
+          "fsmCount": 105,
+          "fsmPercent": 5.0,
+          "ealCount": 299,
+          "ealPercent": 14.3,
+          "englishFirstLanguagePercent": 85.0,
+          "youngCarerCount": 10,
+          "youngCarerPercent": 0.5,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 232,
+          "ehcpCount": 65,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 297,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 1511,
+            "overallAbsencePercent": 6.3039,
+            "authorisedAbsencePercent": 4.87955,
+            "unauthorisedAbsencePercent": 1.42435,
+            "persistentAbsencePercent": 20.9133,
+            "severeAbsencePercent": 0.33091
+          },
+          "201415": {
+            "enrolments": 1498,
+            "overallAbsencePercent": 5.55515,
+            "authorisedAbsencePercent": 4.5811,
+            "unauthorisedAbsencePercent": 0.97406,
+            "persistentAbsencePercent": 13.41789,
+            "severeAbsencePercent": 0.53405
+          },
+          "202425": {
+            "enrolments": 1519,
+            "overallAbsencePercent": 7.1358,
+            "authorisedAbsencePercent": 6.0632,
+            "unauthorisedAbsencePercent": 1.0726,
+            "persistentAbsencePercent": 19.02567,
+            "severeAbsencePercent": 1.18499
+          },
+          "201617": {
+            "enrolments": 1483,
+            "overallAbsencePercent": 5.05823,
+            "authorisedAbsencePercent": 4.4136,
+            "unauthorisedAbsencePercent": 0.64462,
+            "persistentAbsencePercent": 10.45179,
+            "severeAbsencePercent": 0.40459
+          },
+          "202021": {
+            "enrolments": 1542,
+            "overallAbsencePercent": 6.49375,
+            "authorisedAbsencePercent": 3.23637,
+            "unauthorisedAbsencePercent": 3.25738,
+            "persistentAbsencePercent": 18.74189,
+            "severeAbsencePercent": 0.77821
+          },
+          "201516": {
+            "enrolments": 1499,
+            "overallAbsencePercent": 4.82855,
+            "authorisedAbsencePercent": 4.37771,
+            "unauthorisedAbsencePercent": 0.45084,
+            "persistentAbsencePercent": 8.93929,
+            "severeAbsencePercent": 0.46698
+          },
+          "201718": {
+            "enrolments": 1505,
+            "overallAbsencePercent": 4.79702,
+            "authorisedAbsencePercent": 4.20848,
+            "unauthorisedAbsencePercent": 0.58854,
+            "persistentAbsencePercent": 10.03322,
+            "severeAbsencePercent": 0.26578
+          },
+          "201819": {
+            "enrolments": 1500,
+            "overallAbsencePercent": 5.26332,
+            "authorisedAbsencePercent": 4.1653,
+            "unauthorisedAbsencePercent": 1.09803,
+            "persistentAbsencePercent": 11.86667,
+            "severeAbsencePercent": 0.46667
+          },
+          "202223": {
+            "enrolments": 1450,
+            "overallAbsencePercent": 6.95757,
+            "authorisedAbsencePercent": 5.70731,
+            "unauthorisedAbsencePercent": 1.25026,
+            "persistentAbsencePercent": 20.2069,
+            "severeAbsencePercent": 1.10345
+          },
+          "202122": {
+            "enrolments": 1482,
+            "overallAbsencePercent": 8.11002,
+            "authorisedAbsencePercent": 6.59203,
+            "unauthorisedAbsencePercent": 1.51799,
+            "persistentAbsencePercent": 24.35897,
+            "severeAbsencePercent": 1.68691
+          },
+          "202324": {
+            "enrolments": 1462,
+            "overallAbsencePercent": 7.14818,
+            "authorisedAbsencePercent": 6.28884,
+            "unauthorisedAbsencePercent": 0.85934,
+            "persistentAbsencePercent": 24.487,
+            "severeAbsencePercent": 0.82079
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -3081,9 +3435,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1429,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 272,
+          "ehcpCount": 1,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 273,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -3860,9 +4241,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1384,
+          "fsmCount": 35,
+          "fsmPercent": 2.5,
+          "ealCount": 251,
+          "ealPercent": 18.1,
+          "englishFirstLanguagePercent": 81.9,
+          "youngCarerCount": 27,
+          "youngCarerPercent": 2.0,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 42,
+          "ehcpCount": 15,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 57,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201415": {
+            "enrolments": 909,
+            "overallAbsencePercent": 6.74698,
+            "authorisedAbsencePercent": 6.69098,
+            "unauthorisedAbsencePercent": 0.05601,
+            "persistentAbsencePercent": 16.39164,
+            "severeAbsencePercent": 0.33003
+          },
+          "201516": {
+            "enrolments": 919,
+            "overallAbsencePercent": 5.43818,
+            "authorisedAbsencePercent": 5.3741,
+            "unauthorisedAbsencePercent": 0.06407,
+            "persistentAbsencePercent": 13.38411,
+            "severeAbsencePercent": 0.32644
+          },
+          "201314": {
+            "enrolments": 906,
+            "overallAbsencePercent": 6.13981,
+            "authorisedAbsencePercent": 6.08936,
+            "unauthorisedAbsencePercent": 0.05045,
+            "persistentAbsencePercent": 12.03091,
+            "severeAbsencePercent": 0.11038
+          },
+          "201718": {
+            "enrolments": 926,
+            "overallAbsencePercent": 3.86224,
+            "authorisedAbsencePercent": 3.6845,
+            "unauthorisedAbsencePercent": 0.17775,
+            "persistentAbsencePercent": 6.37149,
+            "severeAbsencePercent": 0.10799
+          },
+          "201617": {
+            "enrolments": 928,
+            "overallAbsencePercent": 3.649,
+            "authorisedAbsencePercent": 3.57275,
+            "unauthorisedAbsencePercent": 0.07626,
+            "persistentAbsencePercent": 6.03448,
+            "severeAbsencePercent": 0.21552
+          },
+          "202021": {
+            "enrolments": 923,
+            "overallAbsencePercent": 3.86164,
+            "authorisedAbsencePercent": 3.57972,
+            "unauthorisedAbsencePercent": 0.28191,
+            "persistentAbsencePercent": 9.85915,
+            "severeAbsencePercent": 0.21668
+          },
+          "201819": {
+            "enrolments": 930,
+            "overallAbsencePercent": 4.0003,
+            "authorisedAbsencePercent": 3.85973,
+            "unauthorisedAbsencePercent": 0.14057,
+            "persistentAbsencePercent": 8.60215,
+            "severeAbsencePercent": 0.43011
+          },
+          "202223": {
+            "enrolments": 923,
+            "overallAbsencePercent": 5.38164,
+            "authorisedAbsencePercent": 5.1705,
+            "unauthorisedAbsencePercent": 0.21114,
+            "persistentAbsencePercent": 10.72589,
+            "severeAbsencePercent": 0.32503
+          },
+          "202324": {
+            "enrolments": 920,
+            "overallAbsencePercent": 5.50451,
+            "authorisedAbsencePercent": 5.30623,
+            "unauthorisedAbsencePercent": 0.19828,
+            "persistentAbsencePercent": 14.56522,
+            "severeAbsencePercent": 0.21739
+          },
+          "202122": {
+            "enrolments": 920,
+            "overallAbsencePercent": 5.84147,
+            "authorisedAbsencePercent": 5.69403,
+            "unauthorisedAbsencePercent": 0.14744,
+            "persistentAbsencePercent": 19.8913,
+            "severeAbsencePercent": 0.21739
+          },
+          "202425": {
+            "enrolments": 916,
+            "overallAbsencePercent": 5.17286,
+            "authorisedAbsencePercent": 4.9967,
+            "unauthorisedAbsencePercent": 0.17616,
+            "persistentAbsencePercent": 14.19214,
+            "severeAbsencePercent": 0.10917
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -4724,9 +5221,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1475,
+          "fsmCount": 441,
+          "fsmPercent": 29.9,
+          "ealCount": 1045,
+          "ealPercent": 70.8,
+          "englishFirstLanguagePercent": 29.1,
+          "youngCarerCount": 6,
+          "youngCarerPercent": 0.4,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 171,
+          "ehcpCount": 42,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 213,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 1458,
+            "overallAbsencePercent": 3.87426,
+            "authorisedAbsencePercent": 3.29811,
+            "unauthorisedAbsencePercent": 0.57615,
+            "persistentAbsencePercent": 6.9273,
+            "severeAbsencePercent": 0.5487
+          },
+          "201516": {
+            "enrolments": 1412,
+            "overallAbsencePercent": 3.88583,
+            "authorisedAbsencePercent": 3.56695,
+            "unauthorisedAbsencePercent": 0.31888,
+            "persistentAbsencePercent": 7.93201,
+            "severeAbsencePercent": 0.63739
+          },
+          "201415": {
+            "enrolments": 1424,
+            "overallAbsencePercent": 3.96227,
+            "authorisedAbsencePercent": 3.4002,
+            "unauthorisedAbsencePercent": 0.56208,
+            "persistentAbsencePercent": 7.58427,
+            "severeAbsencePercent": 0.42135
+          },
+          "202021": {
+            "enrolments": 1372,
+            "overallAbsencePercent": 4.88694,
+            "authorisedAbsencePercent": 4.4037,
+            "unauthorisedAbsencePercent": 0.48324,
+            "persistentAbsencePercent": 11.88047,
+            "severeAbsencePercent": 0.94752
+          },
+          "201819": {
+            "enrolments": 1390,
+            "overallAbsencePercent": 4.73976,
+            "authorisedAbsencePercent": 4.2587,
+            "unauthorisedAbsencePercent": 0.48106,
+            "persistentAbsencePercent": 11.8705,
+            "severeAbsencePercent": 0.86331
+          },
+          "201718": {
+            "enrolments": 1314,
+            "overallAbsencePercent": 3.95922,
+            "authorisedAbsencePercent": 3.66601,
+            "unauthorisedAbsencePercent": 0.29321,
+            "persistentAbsencePercent": 7.45814,
+            "severeAbsencePercent": 0.68493
+          },
+          "202324": {
+            "enrolments": 1400,
+            "overallAbsencePercent": 7.80731,
+            "authorisedAbsencePercent": 6.16952,
+            "unauthorisedAbsencePercent": 1.63779,
+            "persistentAbsencePercent": 27.85714,
+            "severeAbsencePercent": 1.85714
+          },
+          "201617": {
+            "enrolments": 1376,
+            "overallAbsencePercent": 4.23479,
+            "authorisedAbsencePercent": 3.96233,
+            "unauthorisedAbsencePercent": 0.27247,
+            "persistentAbsencePercent": 8.86628,
+            "severeAbsencePercent": 1.23547
+          },
+          "202223": {
+            "enrolments": 1403,
+            "overallAbsencePercent": 9.15968,
+            "authorisedAbsencePercent": 7.00338,
+            "unauthorisedAbsencePercent": 2.1563,
+            "persistentAbsencePercent": 36.13685,
+            "severeAbsencePercent": 1.71062
+          },
+          "202122": {
+            "enrolments": 1395,
+            "overallAbsencePercent": 8.03531,
+            "authorisedAbsencePercent": 6.85796,
+            "unauthorisedAbsencePercent": 1.17735,
+            "persistentAbsencePercent": 29.96416,
+            "severeAbsencePercent": 1.00358
+          },
+          "202425": {
+            "enrolments": 1364,
+            "overallAbsencePercent": 6.95977,
+            "authorisedAbsencePercent": 5.13697,
+            "unauthorisedAbsencePercent": 1.8228,
+            "persistentAbsencePercent": 21.84751,
+            "severeAbsencePercent": 1.46628
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -5612,9 +6225,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1695,
+          "fsmCount": 314,
+          "fsmPercent": 18.5,
+          "ealCount": 757,
+          "ealPercent": 44.7,
+          "englishFirstLanguagePercent": 48.1,
+          "youngCarerCount": 1,
+          "youngCarerPercent": 0.1,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 87,
+          "ehcpCount": 47,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 134,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 1281,
+            "overallAbsencePercent": 4.77071,
+            "authorisedAbsencePercent": 4.49412,
+            "unauthorisedAbsencePercent": 0.27659,
+            "persistentAbsencePercent": 10.8509,
+            "severeAbsencePercent": 0.54645
+          },
+          "202324": {
+            "enrolments": 1409,
+            "overallAbsencePercent": 6.03675,
+            "authorisedAbsencePercent": 4.54824,
+            "unauthorisedAbsencePercent": 1.48851,
+            "persistentAbsencePercent": 16.89141,
+            "severeAbsencePercent": 1.20653
+          },
+          "201415": {
+            "enrolments": 1286,
+            "overallAbsencePercent": 4.12205,
+            "authorisedAbsencePercent": 3.76496,
+            "unauthorisedAbsencePercent": 0.35709,
+            "persistentAbsencePercent": 9.56454,
+            "severeAbsencePercent": 0.3888
+          },
+          "201617": {
+            "enrolments": 1301,
+            "overallAbsencePercent": 4.36246,
+            "authorisedAbsencePercent": 3.68651,
+            "unauthorisedAbsencePercent": 0.67594,
+            "persistentAbsencePercent": 10.06918,
+            "severeAbsencePercent": 0.15373
+          },
+          "201516": {
+            "enrolments": 1285,
+            "overallAbsencePercent": 4.2408,
+            "authorisedAbsencePercent": 3.85225,
+            "unauthorisedAbsencePercent": 0.38855,
+            "persistentAbsencePercent": 10.27237,
+            "severeAbsencePercent": 0.23346
+          },
+          "201718": {
+            "enrolments": 1321,
+            "overallAbsencePercent": 5.12221,
+            "authorisedAbsencePercent": 4.29754,
+            "unauthorisedAbsencePercent": 0.82467,
+            "persistentAbsencePercent": 11.65783,
+            "severeAbsencePercent": 0.6813
+          },
+          "202021": {
+            "enrolments": 1367,
+            "overallAbsencePercent": 3.23239,
+            "authorisedAbsencePercent": 2.36942,
+            "unauthorisedAbsencePercent": 0.86297,
+            "persistentAbsencePercent": 6.14484,
+            "severeAbsencePercent": 0.29261
+          },
+          "201819": {
+            "enrolments": 1337,
+            "overallAbsencePercent": 4.86984,
+            "authorisedAbsencePercent": 3.87498,
+            "unauthorisedAbsencePercent": 0.99486,
+            "persistentAbsencePercent": 10.69559,
+            "severeAbsencePercent": 0.89753
+          },
+          "202122": {
+            "enrolments": 1369,
+            "overallAbsencePercent": 5.37771,
+            "authorisedAbsencePercent": 4.3881,
+            "unauthorisedAbsencePercent": 0.9896,
+            "persistentAbsencePercent": 13.00219,
+            "severeAbsencePercent": 0.51132
+          },
+          "202223": {
+            "enrolments": 1375,
+            "overallAbsencePercent": 6.55422,
+            "authorisedAbsencePercent": 5.20068,
+            "unauthorisedAbsencePercent": 1.35354,
+            "persistentAbsencePercent": 17.67273,
+            "severeAbsencePercent": 1.16364
+          },
+          "202425": {
+            "enrolments": 1434,
+            "overallAbsencePercent": 6.48912,
+            "authorisedAbsencePercent": 4.69249,
+            "unauthorisedAbsencePercent": 1.79663,
+            "persistentAbsencePercent": 19.59554,
+            "severeAbsencePercent": 1.60391
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -6277,9 +7006,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1439,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 384,
+          "ehcpCount": 0,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 384,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -6775,9 +7531,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 38,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 0,
+          "ehcpCount": 38,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 38,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -7522,9 +8305,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 799,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 193,
+          "ehcpCount": 11,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 204,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -8135,9 +8945,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1578,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 325,
+          "ehcpCount": 1,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 326,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -8843,9 +9680,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 982,
+          "fsmCount": 314,
+          "fsmPercent": 32.0,
+          "ealCount": 733,
+          "ealPercent": 74.6,
+          "englishFirstLanguagePercent": 25.4,
+          "youngCarerCount": 3,
+          "youngCarerPercent": 0.3,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 142,
+          "ehcpCount": 16,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 158,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 951,
+            "overallAbsencePercent": 8.11015,
+            "authorisedAbsencePercent": 5.55363,
+            "unauthorisedAbsencePercent": 2.55652,
+            "persistentAbsencePercent": 23.76446,
+            "severeAbsencePercent": 3.89064
+          },
+          "201415": {
+            "enrolments": 791,
+            "overallAbsencePercent": 6.28665,
+            "authorisedAbsencePercent": 3.81093,
+            "unauthorisedAbsencePercent": 2.47573,
+            "persistentAbsencePercent": 18.07838,
+            "severeAbsencePercent": 1.76991
+          },
+          "201314": {
+            "enrolments": 713,
+            "overallAbsencePercent": 5.56169,
+            "authorisedAbsencePercent": 3.73132,
+            "unauthorisedAbsencePercent": 1.83037,
+            "persistentAbsencePercent": 15.56802,
+            "severeAbsencePercent": 0.98177
+          },
+          "201617": {
+            "enrolments": 823,
+            "overallAbsencePercent": 5.8039,
+            "authorisedAbsencePercent": 4.19231,
+            "unauthorisedAbsencePercent": 1.61159,
+            "persistentAbsencePercent": 18.71203,
+            "severeAbsencePercent": 1.21507
+          },
+          "202425": {
+            "enrolments": 950,
+            "overallAbsencePercent": 8.44225,
+            "authorisedAbsencePercent": 6.0438,
+            "unauthorisedAbsencePercent": 2.39845,
+            "persistentAbsencePercent": 24.84211,
+            "severeAbsencePercent": 3.78947
+          },
+          "201516": {
+            "enrolments": 816,
+            "overallAbsencePercent": 5.4808,
+            "authorisedAbsencePercent": 3.76645,
+            "unauthorisedAbsencePercent": 1.71435,
+            "persistentAbsencePercent": 14.21569,
+            "severeAbsencePercent": 1.47059
+          },
+          "201819": {
+            "enrolments": 856,
+            "overallAbsencePercent": 6.00968,
+            "authorisedAbsencePercent": 4.06749,
+            "unauthorisedAbsencePercent": 1.94219,
+            "persistentAbsencePercent": 18.57477,
+            "severeAbsencePercent": 0.81776
+          },
+          "201718": {
+            "enrolments": 804,
+            "overallAbsencePercent": 5.29572,
+            "authorisedAbsencePercent": 3.81411,
+            "unauthorisedAbsencePercent": 1.4816,
+            "persistentAbsencePercent": 14.92537,
+            "severeAbsencePercent": 1.36816
+          },
+          "202021": {
+            "enrolments": 945,
+            "overallAbsencePercent": 6.20669,
+            "authorisedAbsencePercent": 3.54501,
+            "unauthorisedAbsencePercent": 2.66167,
+            "persistentAbsencePercent": 19.36508,
+            "severeAbsencePercent": 3.80952
+          },
+          "202122": {
+            "enrolments": 951,
+            "overallAbsencePercent": 7.53254,
+            "authorisedAbsencePercent": 5.44418,
+            "unauthorisedAbsencePercent": 2.08836,
+            "persistentAbsencePercent": 21.55626,
+            "severeAbsencePercent": 3.78549
+          },
+          "202223": {
+            "enrolments": 946,
+            "overallAbsencePercent": 8.81234,
+            "authorisedAbsencePercent": 6.29397,
+            "unauthorisedAbsencePercent": 2.51837,
+            "persistentAbsencePercent": 30.23256,
+            "severeAbsencePercent": 2.95983
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -9557,9 +10510,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1061,
+          "fsmCount": 21,
+          "fsmPercent": 2.0,
+          "ealCount": 382,
+          "ealPercent": 36.0,
+          "englishFirstLanguagePercent": 64.0,
+          "youngCarerCount": 28,
+          "youngCarerPercent": 2.6,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 60,
+          "ehcpCount": 11,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 71,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 682,
+            "overallAbsencePercent": 4.6665,
+            "authorisedAbsencePercent": 4.37493,
+            "unauthorisedAbsencePercent": 0.29158,
+            "persistentAbsencePercent": 10.1173,
+            "severeAbsencePercent": 0.0
+          },
+          "201617": {
+            "enrolments": 635,
+            "overallAbsencePercent": 2.76961,
+            "authorisedAbsencePercent": 2.16691,
+            "unauthorisedAbsencePercent": 0.60269,
+            "persistentAbsencePercent": 1.5748,
+            "severeAbsencePercent": 0.15748
+          },
+          "201415": {
+            "enrolments": 603,
+            "overallAbsencePercent": 3.22942,
+            "authorisedAbsencePercent": 2.38878,
+            "unauthorisedAbsencePercent": 0.84064,
+            "persistentAbsencePercent": 3.31675,
+            "severeAbsencePercent": 0.16584
+          },
+          "201314": {
+            "enrolments": 600,
+            "overallAbsencePercent": 2.44406,
+            "authorisedAbsencePercent": 1.92906,
+            "unauthorisedAbsencePercent": 0.515,
+            "persistentAbsencePercent": 3.0,
+            "severeAbsencePercent": 0.0
+          },
+          "202122": {
+            "enrolments": 681,
+            "overallAbsencePercent": 6.24299,
+            "authorisedAbsencePercent": 6.14202,
+            "unauthorisedAbsencePercent": 0.10097,
+            "persistentAbsencePercent": 21.5859,
+            "severeAbsencePercent": 0.44053
+          },
+          "201516": {
+            "enrolments": 618,
+            "overallAbsencePercent": 3.14349,
+            "authorisedAbsencePercent": 2.22224,
+            "unauthorisedAbsencePercent": 0.92124,
+            "persistentAbsencePercent": 2.75081,
+            "severeAbsencePercent": 0.64725
+          },
+          "201718": {
+            "enrolments": 650,
+            "overallAbsencePercent": 3.08766,
+            "authorisedAbsencePercent": 2.63467,
+            "unauthorisedAbsencePercent": 0.45299,
+            "persistentAbsencePercent": 2.76923,
+            "severeAbsencePercent": 0.15385
+          },
+          "202425": {
+            "enrolments": 685,
+            "overallAbsencePercent": 4.78597,
+            "authorisedAbsencePercent": 4.45709,
+            "unauthorisedAbsencePercent": 0.32888,
+            "persistentAbsencePercent": 13.57664,
+            "severeAbsencePercent": 0.72993
+          },
+          "201819": {
+            "enrolments": 668,
+            "overallAbsencePercent": 5.12341,
+            "authorisedAbsencePercent": 4.8083,
+            "unauthorisedAbsencePercent": 0.31511,
+            "persistentAbsencePercent": 20.95808,
+            "severeAbsencePercent": 0.2994
+          },
+          "202021": {
+            "enrolments": 683,
+            "overallAbsencePercent": 3.14069,
+            "authorisedAbsencePercent": 2.78052,
+            "unauthorisedAbsencePercent": 0.36017,
+            "persistentAbsencePercent": 3.3675,
+            "severeAbsencePercent": 0.14641
+          },
+          "202223": {
+            "enrolments": 682,
+            "overallAbsencePercent": 5.82714,
+            "authorisedAbsencePercent": 5.5998,
+            "unauthorisedAbsencePercent": 0.22734,
+            "persistentAbsencePercent": 15.39589,
+            "severeAbsencePercent": 0.58651
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -10433,9 +11502,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1929,
+          "fsmCount": 452,
+          "fsmPercent": 23.4,
+          "ealCount": 1375,
+          "ealPercent": 71.3,
+          "englishFirstLanguagePercent": 27.8,
+          "youngCarerCount": 19,
+          "youngCarerPercent": 1.0,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 177,
+          "ehcpCount": 27,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 204,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 1660,
+            "overallAbsencePercent": 5.98379,
+            "authorisedAbsencePercent": 3.00111,
+            "unauthorisedAbsencePercent": 2.98268,
+            "persistentAbsencePercent": 17.59036,
+            "severeAbsencePercent": 0.96386
+          },
+          "201415": {
+            "enrolments": 1135,
+            "overallAbsencePercent": 4.53904,
+            "authorisedAbsencePercent": 2.02736,
+            "unauthorisedAbsencePercent": 2.51169,
+            "persistentAbsencePercent": 12.07048,
+            "severeAbsencePercent": 0.44053
+          },
+          "201314": {
+            "enrolments": 1142,
+            "overallAbsencePercent": 4.65799,
+            "authorisedAbsencePercent": 2.87523,
+            "unauthorisedAbsencePercent": 1.78276,
+            "persistentAbsencePercent": 10.94571,
+            "severeAbsencePercent": 0.35026
+          },
+          "202425": {
+            "enrolments": 1640,
+            "overallAbsencePercent": 5.79859,
+            "authorisedAbsencePercent": 2.68256,
+            "unauthorisedAbsencePercent": 3.11603,
+            "persistentAbsencePercent": 16.46341,
+            "severeAbsencePercent": 1.15854
+          },
+          "201516": {
+            "enrolments": 1148,
+            "overallAbsencePercent": 5.0736,
+            "authorisedAbsencePercent": 2.68364,
+            "unauthorisedAbsencePercent": 2.38996,
+            "persistentAbsencePercent": 12.89199,
+            "severeAbsencePercent": 0.78397
+          },
+          "201617": {
+            "enrolments": 1137,
+            "overallAbsencePercent": 4.64068,
+            "authorisedAbsencePercent": 3.2647,
+            "unauthorisedAbsencePercent": 1.37598,
+            "persistentAbsencePercent": 11.69745,
+            "severeAbsencePercent": 0.96746
+          },
+          "201819": {
+            "enrolments": 1279,
+            "overallAbsencePercent": 4.83956,
+            "authorisedAbsencePercent": 2.86171,
+            "unauthorisedAbsencePercent": 1.97785,
+            "persistentAbsencePercent": 12.58796,
+            "severeAbsencePercent": 1.32916
+          },
+          "201718": {
+            "enrolments": 1176,
+            "overallAbsencePercent": 4.86403,
+            "authorisedAbsencePercent": 2.94579,
+            "unauthorisedAbsencePercent": 1.91824,
+            "persistentAbsencePercent": 11.9898,
+            "severeAbsencePercent": 1.27551
+          },
+          "202021": {
+            "enrolments": 1488,
+            "overallAbsencePercent": 4.17424,
+            "authorisedAbsencePercent": 2.48063,
+            "unauthorisedAbsencePercent": 1.69361,
+            "persistentAbsencePercent": 10.75269,
+            "severeAbsencePercent": 1.5457
+          },
+          "202223": {
+            "enrolments": 1638,
+            "overallAbsencePercent": 6.44355,
+            "authorisedAbsencePercent": 3.03784,
+            "unauthorisedAbsencePercent": 3.40571,
+            "persistentAbsencePercent": 19.16972,
+            "severeAbsencePercent": 1.0989
+          },
+          "202122": {
+            "enrolments": 1581,
+            "overallAbsencePercent": 7.54524,
+            "authorisedAbsencePercent": 3.48651,
+            "unauthorisedAbsencePercent": 4.05874,
+            "persistentAbsencePercent": 23.84567,
+            "severeAbsencePercent": 1.77103
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -11283,9 +12468,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1902,
+          "fsmCount": 582,
+          "fsmPercent": 30.6,
+          "ealCount": 1242,
+          "ealPercent": 65.3,
+          "englishFirstLanguagePercent": 34.2,
+          "youngCarerCount": 3,
+          "youngCarerPercent": 0.2,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 1,
+          "senSupportCount": 163,
+          "ehcpCount": 95,
+          "senSupportPercent": 16300.0,
+          "ehcpPercent": 9500.0,
+          "anySenCount": 258,
+          "anySenPercent": 25800.0
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 1541,
+            "overallAbsencePercent": 6.06691,
+            "authorisedAbsencePercent": 3.76671,
+            "unauthorisedAbsencePercent": 2.30021,
+            "persistentAbsencePercent": 15.50941,
+            "severeAbsencePercent": 1.16807
+          },
+          "201415": {
+            "enrolments": 1610,
+            "overallAbsencePercent": 5.13291,
+            "authorisedAbsencePercent": 3.07826,
+            "unauthorisedAbsencePercent": 2.05465,
+            "persistentAbsencePercent": 13.10559,
+            "severeAbsencePercent": 0.86957
+          },
+          "201516": {
+            "enrolments": 1686,
+            "overallAbsencePercent": 5.58641,
+            "authorisedAbsencePercent": 3.4365,
+            "unauthorisedAbsencePercent": 2.14991,
+            "persistentAbsencePercent": 14.23488,
+            "severeAbsencePercent": 0.88968
+          },
+          "201617": {
+            "enrolments": 1695,
+            "overallAbsencePercent": 5.52652,
+            "authorisedAbsencePercent": 3.51112,
+            "unauthorisedAbsencePercent": 2.0154,
+            "persistentAbsencePercent": 13.62832,
+            "severeAbsencePercent": 0.88496
+          },
+          "201718": {
+            "enrolments": 1668,
+            "overallAbsencePercent": 4.8365,
+            "authorisedAbsencePercent": 3.11899,
+            "unauthorisedAbsencePercent": 1.71751,
+            "persistentAbsencePercent": 11.8705,
+            "severeAbsencePercent": 0.65947
+          },
+          "201819": {
+            "enrolments": 1652,
+            "overallAbsencePercent": 5.05784,
+            "authorisedAbsencePercent": 3.59958,
+            "unauthorisedAbsencePercent": 1.45826,
+            "persistentAbsencePercent": 11.68281,
+            "severeAbsencePercent": 0.60533
+          },
+          "202021": {
+            "enrolments": 1703,
+            "overallAbsencePercent": 5.49074,
+            "authorisedAbsencePercent": 3.73855,
+            "unauthorisedAbsencePercent": 1.7522,
+            "persistentAbsencePercent": 14.32766,
+            "severeAbsencePercent": 1.87904
+          },
+          "202122": {
+            "enrolments": 1659,
+            "overallAbsencePercent": 7.35693,
+            "authorisedAbsencePercent": 5.07083,
+            "unauthorisedAbsencePercent": 2.2861,
+            "persistentAbsencePercent": 22.96564,
+            "severeAbsencePercent": 1.14527
+          },
+          "202223": {
+            "enrolments": 1667,
+            "overallAbsencePercent": 8.23998,
+            "authorisedAbsencePercent": 4.96104,
+            "unauthorisedAbsencePercent": 3.27894,
+            "persistentAbsencePercent": 28.25435,
+            "severeAbsencePercent": 0.89982
+          },
+          "202324": {
+            "enrolments": 1687,
+            "overallAbsencePercent": 7.82395,
+            "authorisedAbsencePercent": 5.00731,
+            "unauthorisedAbsencePercent": 2.81664,
+            "persistentAbsencePercent": 27.38589,
+            "severeAbsencePercent": 1.18554
+          },
+          "202425": {
+            "enrolments": 1691,
+            "overallAbsencePercent": 8.18527,
+            "authorisedAbsencePercent": 5.27794,
+            "unauthorisedAbsencePercent": 2.90732,
+            "persistentAbsencePercent": 27.91248,
+            "severeAbsencePercent": 2.06978
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -11946,9 +13247,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1051,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 220,
+          "ehcpCount": 3,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 223,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -12748,9 +14076,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 909,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 343,
+          "ehcpCount": 3,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 346,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -13269,9 +14624,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 781,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 83,
+          "ehcpCount": 3,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 86,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -14002,9 +15384,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1639,
+          "fsmCount": 679,
+          "fsmPercent": 41.4,
+          "ealCount": 785,
+          "ealPercent": 47.9,
+          "englishFirstLanguagePercent": 50.4,
+          "youngCarerCount": 8,
+          "youngCarerPercent": 0.5,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 155,
+          "ehcpCount": 57,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 212,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 1282,
+            "overallAbsencePercent": 4.87069,
+            "authorisedAbsencePercent": 3.7578,
+            "unauthorisedAbsencePercent": 1.11289,
+            "persistentAbsencePercent": 12.16849,
+            "severeAbsencePercent": 0.62402
+          },
+          "201415": {
+            "enrolments": 1263,
+            "overallAbsencePercent": 3.95786,
+            "authorisedAbsencePercent": 2.94421,
+            "unauthorisedAbsencePercent": 1.01365,
+            "persistentAbsencePercent": 8.70942,
+            "severeAbsencePercent": 0.15835
+          },
+          "201314": {
+            "enrolments": 1026,
+            "overallAbsencePercent": 4.50032,
+            "authorisedAbsencePercent": 3.11149,
+            "unauthorisedAbsencePercent": 1.38883,
+            "persistentAbsencePercent": 10.23392,
+            "severeAbsencePercent": 0.19493
+          },
+          "201718": {
+            "enrolments": 1270,
+            "overallAbsencePercent": 4.89991,
+            "authorisedAbsencePercent": 3.3528,
+            "unauthorisedAbsencePercent": 1.5471,
+            "persistentAbsencePercent": 11.88976,
+            "severeAbsencePercent": 0.3937
+          },
+          "201516": {
+            "enrolments": 1284,
+            "overallAbsencePercent": 4.23267,
+            "authorisedAbsencePercent": 3.51108,
+            "unauthorisedAbsencePercent": 0.72159,
+            "persistentAbsencePercent": 9.57944,
+            "severeAbsencePercent": 0.07788
+          },
+          "201617": {
+            "enrolments": 1280,
+            "overallAbsencePercent": 3.85324,
+            "authorisedAbsencePercent": 3.06386,
+            "unauthorisedAbsencePercent": 0.78938,
+            "persistentAbsencePercent": 7.57812,
+            "severeAbsencePercent": 0.3125
+          },
+          "201819": {
+            "enrolments": 1265,
+            "overallAbsencePercent": 4.47968,
+            "authorisedAbsencePercent": 2.34575,
+            "unauthorisedAbsencePercent": 2.13393,
+            "persistentAbsencePercent": 10.43478,
+            "severeAbsencePercent": 0.23715
+          },
+          "202122": {
+            "enrolments": 1269,
+            "overallAbsencePercent": 5.29926,
+            "authorisedAbsencePercent": 3.03695,
+            "unauthorisedAbsencePercent": 2.26231,
+            "persistentAbsencePercent": 12.76596,
+            "severeAbsencePercent": 0.1576
+          },
+          "202021": {
+            "enrolments": 1257,
+            "overallAbsencePercent": 3.58953,
+            "authorisedAbsencePercent": 2.01606,
+            "unauthorisedAbsencePercent": 1.57347,
+            "persistentAbsencePercent": 5.40971,
+            "severeAbsencePercent": 0.07955
+          },
+          "202223": {
+            "enrolments": 1269,
+            "overallAbsencePercent": 6.05116,
+            "authorisedAbsencePercent": 4.68346,
+            "unauthorisedAbsencePercent": 1.3677,
+            "persistentAbsencePercent": 15.20883,
+            "severeAbsencePercent": 0.78802
+          },
+          "202425": {
+            "enrolments": 1282,
+            "overallAbsencePercent": 4.91464,
+            "authorisedAbsencePercent": 3.73178,
+            "unauthorisedAbsencePercent": 1.18287,
+            "persistentAbsencePercent": 11.23245,
+            "severeAbsencePercent": 0.23401
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -14548,9 +16046,125 @@
         }
       ],
       "alevelSubjects": [],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 802,
+          "fsmCount": 222,
+          "fsmPercent": 27.7,
+          "ealCount": 474,
+          "ealPercent": 59.1,
+          "englishFirstLanguagePercent": 40.6,
+          "youngCarerCount": 3,
+          "youngCarerPercent": 0.4,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 106,
+          "ehcpCount": 26,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 132,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 698,
+            "overallAbsencePercent": 5.44724,
+            "authorisedAbsencePercent": 3.95364,
+            "unauthorisedAbsencePercent": 1.49361,
+            "persistentAbsencePercent": 12.75072,
+            "severeAbsencePercent": 0.71633
+          },
+          "202324": {
+            "enrolments": 741,
+            "overallAbsencePercent": 5.72182,
+            "authorisedAbsencePercent": 4.53216,
+            "unauthorisedAbsencePercent": 1.18966,
+            "persistentAbsencePercent": 14.97976,
+            "severeAbsencePercent": 0.80972
+          },
+          "201415": {
+            "enrolments": 656,
+            "overallAbsencePercent": 5.44748,
+            "authorisedAbsencePercent": 3.92343,
+            "unauthorisedAbsencePercent": 1.52405,
+            "persistentAbsencePercent": 11.89024,
+            "severeAbsencePercent": 0.91463
+          },
+          "201718": {
+            "enrolments": 444,
+            "overallAbsencePercent": 5.65269,
+            "authorisedAbsencePercent": 4.32265,
+            "unauthorisedAbsencePercent": 1.33005,
+            "persistentAbsencePercent": 15.31532,
+            "severeAbsencePercent": 2.02703
+          },
+          "201516": {
+            "enrolments": 617,
+            "overallAbsencePercent": 5.51483,
+            "authorisedAbsencePercent": 3.61379,
+            "unauthorisedAbsencePercent": 1.90104,
+            "persistentAbsencePercent": 13.93841,
+            "severeAbsencePercent": 1.2966
+          },
+          "201617": {
+            "enrolments": 535,
+            "overallAbsencePercent": 5.86314,
+            "authorisedAbsencePercent": 3.48698,
+            "unauthorisedAbsencePercent": 2.37616,
+            "persistentAbsencePercent": 15.70093,
+            "severeAbsencePercent": 1.30841
+          },
+          "201819": {
+            "enrolments": 373,
+            "overallAbsencePercent": 4.42409,
+            "authorisedAbsencePercent": 3.38572,
+            "unauthorisedAbsencePercent": 1.03836,
+            "persistentAbsencePercent": 8.84718,
+            "severeAbsencePercent": 0.80429
+          },
+          "202021": {
+            "enrolments": 424,
+            "overallAbsencePercent": 6.785,
+            "authorisedAbsencePercent": 3.15472,
+            "unauthorisedAbsencePercent": 3.63028,
+            "persistentAbsencePercent": 22.64151,
+            "severeAbsencePercent": 1.17925
+          },
+          "202122": {
+            "enrolments": 491,
+            "overallAbsencePercent": 4.15526,
+            "authorisedAbsencePercent": 3.06866,
+            "unauthorisedAbsencePercent": 1.0866,
+            "persistentAbsencePercent": 8.14664,
+            "severeAbsencePercent": 0.20367
+          },
+          "202223": {
+            "enrolments": 640,
+            "overallAbsencePercent": 5.45651,
+            "authorisedAbsencePercent": 4.06769,
+            "unauthorisedAbsencePercent": 1.38882,
+            "persistentAbsencePercent": 12.65625,
+            "severeAbsencePercent": 1.09375
+          },
+          "202425": {
+            "enrolments": 735,
+            "overallAbsencePercent": 6.15312,
+            "authorisedAbsencePercent": 4.63,
+            "unauthorisedAbsencePercent": 1.52312,
+            "persistentAbsencePercent": 16.46259,
+            "severeAbsencePercent": 1.4966
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -15321,9 +16935,101 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1111,
+          "fsmCount": 123,
+          "fsmPercent": 11.1,
+          "ealCount": 465,
+          "ealPercent": 41.9,
+          "englishFirstLanguagePercent": 57.2,
+          "youngCarerCount": 18,
+          "youngCarerPercent": 1.6,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 1,
+          "senSupportCount": 30,
+          "ehcpCount": 69,
+          "senSupportPercent": 3000.0,
+          "ehcpPercent": 6900.0,
+          "anySenCount": 99,
+          "anySenPercent": 9900.0
+        },
+        "absence": {
+          "202122": {
+            "enrolments": 908,
+            "overallAbsencePercent": 6.19015,
+            "authorisedAbsencePercent": 5.38038,
+            "unauthorisedAbsencePercent": 0.80977,
+            "persistentAbsencePercent": 15.7489,
+            "severeAbsencePercent": 1.54185
+          },
+          "201819": {
+            "enrolments": 538,
+            "overallAbsencePercent": 4.11422,
+            "authorisedAbsencePercent": 3.2602,
+            "unauthorisedAbsencePercent": 0.85402,
+            "persistentAbsencePercent": 6.87732,
+            "severeAbsencePercent": 1.11524
+          },
+          "201617": {
+            "enrolments": 171,
+            "overallAbsencePercent": 3.79378,
+            "authorisedAbsencePercent": 2.84752,
+            "unauthorisedAbsencePercent": 0.94626,
+            "persistentAbsencePercent": 6.43275,
+            "severeAbsencePercent": 0.0
+          },
+          "201718": {
+            "enrolments": 317,
+            "overallAbsencePercent": 4.25373,
+            "authorisedAbsencePercent": 3.43466,
+            "unauthorisedAbsencePercent": 0.81908,
+            "persistentAbsencePercent": 7.57098,
+            "severeAbsencePercent": 0.63091
+          },
+          "202021": {
+            "enrolments": 908,
+            "overallAbsencePercent": 3.28729,
+            "authorisedAbsencePercent": 2.75916,
+            "unauthorisedAbsencePercent": 0.52812,
+            "persistentAbsencePercent": 6.27753,
+            "severeAbsencePercent": 0.77093
+          },
+          "202223": {
+            "enrolments": 914,
+            "overallAbsencePercent": 6.55822,
+            "authorisedAbsencePercent": 4.72659,
+            "unauthorisedAbsencePercent": 1.83163,
+            "persistentAbsencePercent": 17.28665,
+            "severeAbsencePercent": 1.31291
+          },
+          "202324": {
+            "enrolments": 925,
+            "overallAbsencePercent": 5.89379,
+            "authorisedAbsencePercent": 4.76097,
+            "unauthorisedAbsencePercent": 1.13282,
+            "persistentAbsencePercent": 14.7027,
+            "severeAbsencePercent": 1.94595
+          },
+          "202425": {
+            "enrolments": 924,
+            "overallAbsencePercent": 6.56151,
+            "authorisedAbsencePercent": 5.30753,
+            "unauthorisedAbsencePercent": 1.25398,
+            "persistentAbsencePercent": 17.20779,
+            "severeAbsencePercent": 1.83983
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -15996,9 +17702,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 738,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 107,
+          "ehcpCount": 1,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 108,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -16693,9 +18426,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 849,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 184,
+          "ehcpCount": 7,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 191,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -17564,9 +19324,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1467,
+          "fsmCount": 53,
+          "fsmPercent": 3.6,
+          "ealCount": 104,
+          "ealPercent": 7.1,
+          "englishFirstLanguagePercent": 92.7,
+          "youngCarerCount": 19,
+          "youngCarerPercent": 1.3,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 144,
+          "ehcpCount": 51,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 195,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201516": {
+            "enrolments": 1051,
+            "overallAbsencePercent": 3.58689,
+            "authorisedAbsencePercent": 3.54095,
+            "unauthorisedAbsencePercent": 0.04594,
+            "persistentAbsencePercent": 5.51855,
+            "severeAbsencePercent": 0.0
+          },
+          "202425": {
+            "enrolments": 1009,
+            "overallAbsencePercent": 4.03516,
+            "authorisedAbsencePercent": 3.81192,
+            "unauthorisedAbsencePercent": 0.22324,
+            "persistentAbsencePercent": 7.03667,
+            "severeAbsencePercent": 0.59465
+          },
+          "201617": {
+            "enrolments": 1047,
+            "overallAbsencePercent": 3.73023,
+            "authorisedAbsencePercent": 3.68481,
+            "unauthorisedAbsencePercent": 0.04543,
+            "persistentAbsencePercent": 5.82617,
+            "severeAbsencePercent": 0.19102
+          },
+          "201314": {
+            "enrolments": 1019,
+            "overallAbsencePercent": 3.18177,
+            "authorisedAbsencePercent": 3.16395,
+            "unauthorisedAbsencePercent": 0.01782,
+            "persistentAbsencePercent": 3.82728,
+            "severeAbsencePercent": 0.09814
+          },
+          "201819": {
+            "enrolments": 1035,
+            "overallAbsencePercent": 3.96721,
+            "authorisedAbsencePercent": 3.77437,
+            "unauthorisedAbsencePercent": 0.19284,
+            "persistentAbsencePercent": 5.70048,
+            "severeAbsencePercent": 0.57971
+          },
+          "201718": {
+            "enrolments": 1041,
+            "overallAbsencePercent": 4.20973,
+            "authorisedAbsencePercent": 4.14673,
+            "unauthorisedAbsencePercent": 0.063,
+            "persistentAbsencePercent": 7.10855,
+            "severeAbsencePercent": 0.57637
+          },
+          "201415": {
+            "enrolments": 1043,
+            "overallAbsencePercent": 3.31162,
+            "authorisedAbsencePercent": 3.29224,
+            "unauthorisedAbsencePercent": 0.01938,
+            "persistentAbsencePercent": 4.31448,
+            "severeAbsencePercent": 0.09588
+          },
+          "202021": {
+            "enrolments": 1024,
+            "overallAbsencePercent": 4.90967,
+            "authorisedAbsencePercent": 4.76924,
+            "unauthorisedAbsencePercent": 0.14042,
+            "persistentAbsencePercent": 13.47656,
+            "severeAbsencePercent": 0.29297
+          },
+          "202324": {
+            "enrolments": 1017,
+            "overallAbsencePercent": 4.2027,
+            "authorisedAbsencePercent": 3.94962,
+            "unauthorisedAbsencePercent": 0.25309,
+            "persistentAbsencePercent": 8.16126,
+            "severeAbsencePercent": 0.49164
+          },
+          "202223": {
+            "enrolments": 1024,
+            "overallAbsencePercent": 6.06272,
+            "authorisedAbsencePercent": 5.67733,
+            "unauthorisedAbsencePercent": 0.38538,
+            "persistentAbsencePercent": 13.76953,
+            "severeAbsencePercent": 1.75781
+          },
+          "202122": {
+            "enrolments": 1025,
+            "overallAbsencePercent": 7.88074,
+            "authorisedAbsencePercent": 7.53641,
+            "unauthorisedAbsencePercent": 0.34433,
+            "persistentAbsencePercent": 25.95122,
+            "severeAbsencePercent": 1.17073
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -18151,9 +20027,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 780,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 158,
+          "ehcpCount": 2,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 160,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -18911,9 +20814,36 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 833,
+          "fsmCount": null,
+          "fsmPercent": null,
+          "ealCount": null,
+          "ealPercent": null,
+          "englishFirstLanguagePercent": null,
+          "youngCarerCount": null,
+          "youngCarerPercent": null,
+          "phase": "Independent school",
+          "admissionsPolicy": "Not applicable"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 252,
+          "ehcpCount": 1,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 253,
+          "anySenPercent": null
+        },
+        "absence": {}
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -19431,9 +21361,117 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 747,
+          "fsmCount": 265,
+          "fsmPercent": 35.5,
+          "ealCount": 515,
+          "ealPercent": 68.9,
+          "englishFirstLanguagePercent": 31.1,
+          "youngCarerCount": 2,
+          "youngCarerPercent": 0.3,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 112,
+          "ehcpCount": 21,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 133,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 638,
+            "overallAbsencePercent": 3.65609,
+            "authorisedAbsencePercent": 2.74003,
+            "unauthorisedAbsencePercent": 0.91607,
+            "persistentAbsencePercent": 9.71787,
+            "severeAbsencePercent": 2.82132
+          },
+          "201415": {
+            "enrolments": 127,
+            "overallAbsencePercent": 2.62016,
+            "authorisedAbsencePercent": 1.93187,
+            "unauthorisedAbsencePercent": 0.68829,
+            "persistentAbsencePercent": 4.72441,
+            "severeAbsencePercent": 0.0
+          },
+          "201516": {
+            "enrolments": 255,
+            "overallAbsencePercent": 4.11624,
+            "authorisedAbsencePercent": 2.69639,
+            "unauthorisedAbsencePercent": 1.41985,
+            "persistentAbsencePercent": 7.84314,
+            "severeAbsencePercent": 1.56863
+          },
+          "201617": {
+            "enrolments": 387,
+            "overallAbsencePercent": 3.91604,
+            "authorisedAbsencePercent": 2.28718,
+            "unauthorisedAbsencePercent": 1.62885,
+            "persistentAbsencePercent": 9.30233,
+            "severeAbsencePercent": 3.10078
+          },
+          "202021": {
+            "enrolments": 633,
+            "overallAbsencePercent": 4.5734,
+            "authorisedAbsencePercent": 3.67023,
+            "unauthorisedAbsencePercent": 0.90317,
+            "persistentAbsencePercent": 11.69036,
+            "severeAbsencePercent": 2.21169
+          },
+          "201819": {
+            "enrolments": 610,
+            "overallAbsencePercent": 4.22954,
+            "authorisedAbsencePercent": 3.10445,
+            "unauthorisedAbsencePercent": 1.12509,
+            "persistentAbsencePercent": 10.4918,
+            "severeAbsencePercent": 0.81967
+          },
+          "202223": {
+            "enrolments": 641,
+            "overallAbsencePercent": 4.05781,
+            "authorisedAbsencePercent": 3.31604,
+            "unauthorisedAbsencePercent": 0.74177,
+            "persistentAbsencePercent": 10.92044,
+            "severeAbsencePercent": 3.27613
+          },
+          "201718": {
+            "enrolments": 502,
+            "overallAbsencePercent": 4.79842,
+            "authorisedAbsencePercent": 3.10338,
+            "unauthorisedAbsencePercent": 1.69504,
+            "persistentAbsencePercent": 11.75299,
+            "severeAbsencePercent": 1.99203
+          },
+          "202122": {
+            "enrolments": 640,
+            "overallAbsencePercent": 4.87196,
+            "authorisedAbsencePercent": 4.02593,
+            "unauthorisedAbsencePercent": 0.84603,
+            "persistentAbsencePercent": 11.875,
+            "severeAbsencePercent": 1.875
+          },
+          "202425": {
+            "enrolments": 632,
+            "overallAbsencePercent": 2.50887,
+            "authorisedAbsencePercent": 2.10983,
+            "unauthorisedAbsencePercent": 0.39903,
+            "persistentAbsencePercent": 6.64557,
+            "severeAbsencePercent": 0.94937
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -20284,9 +22322,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1555,
+          "fsmCount": 257,
+          "fsmPercent": 16.5,
+          "ealCount": 1015,
+          "ealPercent": 65.3,
+          "englishFirstLanguagePercent": 34.1,
+          "youngCarerCount": 6,
+          "youngCarerPercent": 0.4,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 156,
+          "ehcpCount": 30,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 186,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 1298,
+            "overallAbsencePercent": 6.4847,
+            "authorisedAbsencePercent": 4.42975,
+            "unauthorisedAbsencePercent": 2.05495,
+            "persistentAbsencePercent": 17.33436,
+            "severeAbsencePercent": 1.15562
+          },
+          "201415": {
+            "enrolments": 1070,
+            "overallAbsencePercent": 3.87354,
+            "authorisedAbsencePercent": 3.25868,
+            "unauthorisedAbsencePercent": 0.61487,
+            "persistentAbsencePercent": 5.88785,
+            "severeAbsencePercent": 0.28037
+          },
+          "201314": {
+            "enrolments": 1066,
+            "overallAbsencePercent": 3.93361,
+            "authorisedAbsencePercent": 3.24811,
+            "unauthorisedAbsencePercent": 0.6855,
+            "persistentAbsencePercent": 6.66041,
+            "severeAbsencePercent": 0.09381
+          },
+          "201516": {
+            "enrolments": 1133,
+            "overallAbsencePercent": 4.02515,
+            "authorisedAbsencePercent": 3.27094,
+            "unauthorisedAbsencePercent": 0.75421,
+            "persistentAbsencePercent": 6.26655,
+            "severeAbsencePercent": 0.08826
+          },
+          "202425": {
+            "enrolments": 1298,
+            "overallAbsencePercent": 6.97908,
+            "authorisedAbsencePercent": 4.33788,
+            "unauthorisedAbsencePercent": 2.6412,
+            "persistentAbsencePercent": 19.79969,
+            "severeAbsencePercent": 1.30971
+          },
+          "202021": {
+            "enrolments": 1096,
+            "overallAbsencePercent": 4.48569,
+            "authorisedAbsencePercent": 3.10602,
+            "unauthorisedAbsencePercent": 1.37967,
+            "persistentAbsencePercent": 10.4927,
+            "severeAbsencePercent": 0.4562
+          },
+          "201617": {
+            "enrolments": 1181,
+            "overallAbsencePercent": 3.586,
+            "authorisedAbsencePercent": 2.94127,
+            "unauthorisedAbsencePercent": 0.64473,
+            "persistentAbsencePercent": 4.91109,
+            "severeAbsencePercent": 0.16935
+          },
+          "201718": {
+            "enrolments": 1071,
+            "overallAbsencePercent": 3.33993,
+            "authorisedAbsencePercent": 2.5706,
+            "unauthorisedAbsencePercent": 0.76934,
+            "persistentAbsencePercent": 3.92157,
+            "severeAbsencePercent": 0.18674
+          },
+          "201819": {
+            "enrolments": 1089,
+            "overallAbsencePercent": 3.38075,
+            "authorisedAbsencePercent": 2.56795,
+            "unauthorisedAbsencePercent": 0.8128,
+            "persistentAbsencePercent": 4.40771,
+            "severeAbsencePercent": 0.18365
+          },
+          "202223": {
+            "enrolments": 1304,
+            "overallAbsencePercent": 5.78094,
+            "authorisedAbsencePercent": 4.10072,
+            "unauthorisedAbsencePercent": 1.68023,
+            "persistentAbsencePercent": 14.57055,
+            "severeAbsencePercent": 0.84356
+          },
+          "202122": {
+            "enrolments": 1109,
+            "overallAbsencePercent": 6.1098,
+            "authorisedAbsencePercent": 5.00105,
+            "unauthorisedAbsencePercent": 1.10875,
+            "persistentAbsencePercent": 14.7881,
+            "severeAbsencePercent": 0.90171
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -21378,9 +23532,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 2030,
+          "fsmCount": 361,
+          "fsmPercent": 17.8,
+          "ealCount": 1142,
+          "ealPercent": 56.3,
+          "englishFirstLanguagePercent": 39.4,
+          "youngCarerCount": 16,
+          "youngCarerPercent": 0.8,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 256,
+          "ehcpCount": 77,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 333,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 1640,
+            "overallAbsencePercent": 6.35152,
+            "authorisedAbsencePercent": 5.57273,
+            "unauthorisedAbsencePercent": 0.77879,
+            "persistentAbsencePercent": 17.43902,
+            "severeAbsencePercent": 1.09756
+          },
+          "201415": {
+            "enrolments": 1517,
+            "overallAbsencePercent": 4.11834,
+            "authorisedAbsencePercent": 3.67668,
+            "unauthorisedAbsencePercent": 0.44166,
+            "persistentAbsencePercent": 7.77851,
+            "severeAbsencePercent": 0.46144
+          },
+          "201314": {
+            "enrolments": 1515,
+            "overallAbsencePercent": 3.64735,
+            "authorisedAbsencePercent": 3.26727,
+            "unauthorisedAbsencePercent": 0.38008,
+            "persistentAbsencePercent": 6.33663,
+            "severeAbsencePercent": 0.39604
+          },
+          "201516": {
+            "enrolments": 1520,
+            "overallAbsencePercent": 4.05237,
+            "authorisedAbsencePercent": 3.58199,
+            "unauthorisedAbsencePercent": 0.47038,
+            "persistentAbsencePercent": 6.84211,
+            "severeAbsencePercent": 0.46053
+          },
+          "201718": {
+            "enrolments": 1542,
+            "overallAbsencePercent": 4.41523,
+            "authorisedAbsencePercent": 3.94761,
+            "unauthorisedAbsencePercent": 0.46762,
+            "persistentAbsencePercent": 9.33852,
+            "severeAbsencePercent": 0.51881
+          },
+          "201617": {
+            "enrolments": 1529,
+            "overallAbsencePercent": 4.19578,
+            "authorisedAbsencePercent": 3.7335,
+            "unauthorisedAbsencePercent": 0.46227,
+            "persistentAbsencePercent": 9.41792,
+            "severeAbsencePercent": 0.26161
+          },
+          "201819": {
+            "enrolments": 1576,
+            "overallAbsencePercent": 4.35524,
+            "authorisedAbsencePercent": 3.70559,
+            "unauthorisedAbsencePercent": 0.64965,
+            "persistentAbsencePercent": 8.69289,
+            "severeAbsencePercent": 0.63452
+          },
+          "202122": {
+            "enrolments": 1641,
+            "overallAbsencePercent": 5.73354,
+            "authorisedAbsencePercent": 5.31323,
+            "unauthorisedAbsencePercent": 0.42031,
+            "persistentAbsencePercent": 15.66118,
+            "severeAbsencePercent": 0.97502
+          },
+          "202021": {
+            "enrolments": 1608,
+            "overallAbsencePercent": 5.00067,
+            "authorisedAbsencePercent": 4.66052,
+            "unauthorisedAbsencePercent": 0.34015,
+            "persistentAbsencePercent": 22.76119,
+            "severeAbsencePercent": 0.12438
+          },
+          "202223": {
+            "enrolments": 1655,
+            "overallAbsencePercent": 6.3395,
+            "authorisedAbsencePercent": 5.72204,
+            "unauthorisedAbsencePercent": 0.61746,
+            "persistentAbsencePercent": 17.16012,
+            "severeAbsencePercent": 1.08761
+          },
+          "202425": {
+            "enrolments": 1652,
+            "overallAbsencePercent": 5.8754,
+            "authorisedAbsencePercent": 4.76545,
+            "unauthorisedAbsencePercent": 1.10995,
+            "persistentAbsencePercent": 16.16223,
+            "severeAbsencePercent": 0.90799
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -22430,9 +24700,109 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1375,
+          "fsmCount": 202,
+          "fsmPercent": 14.7,
+          "ealCount": 41,
+          "ealPercent": 3.0,
+          "englishFirstLanguagePercent": 97.0,
+          "youngCarerCount": 56,
+          "youngCarerPercent": 4.1,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 203,
+          "ehcpCount": 41,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 244,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201718": {
+            "enrolments": 1210,
+            "overallAbsencePercent": 7.87326,
+            "authorisedAbsencePercent": 6.21302,
+            "unauthorisedAbsencePercent": 1.66024,
+            "persistentAbsencePercent": 21.4876,
+            "severeAbsencePercent": 1.73554
+          },
+          "202324": {
+            "enrolments": 1187,
+            "overallAbsencePercent": 13.32516,
+            "authorisedAbsencePercent": 7.7703,
+            "unauthorisedAbsencePercent": 5.55486,
+            "persistentAbsencePercent": 38.83741,
+            "severeAbsencePercent": 6.73968
+          },
+          "202021": {
+            "enrolments": 1211,
+            "overallAbsencePercent": 7.47189,
+            "authorisedAbsencePercent": 3.97824,
+            "unauthorisedAbsencePercent": 3.49365,
+            "persistentAbsencePercent": 20.06606,
+            "severeAbsencePercent": 2.97275
+          },
+          "201819": {
+            "enrolments": 1211,
+            "overallAbsencePercent": 7.50706,
+            "authorisedAbsencePercent": 5.17022,
+            "unauthorisedAbsencePercent": 2.33684,
+            "persistentAbsencePercent": 21.38728,
+            "severeAbsencePercent": 2.8076
+          },
+          "201516": {
+            "enrolments": 1159,
+            "overallAbsencePercent": 6.09298,
+            "authorisedAbsencePercent": 4.92359,
+            "unauthorisedAbsencePercent": 1.1694,
+            "persistentAbsencePercent": 15.44435,
+            "severeAbsencePercent": 1.03538
+          },
+          "201617": {
+            "enrolments": 1210,
+            "overallAbsencePercent": 6.23677,
+            "authorisedAbsencePercent": 4.94643,
+            "unauthorisedAbsencePercent": 1.29034,
+            "persistentAbsencePercent": 16.94215,
+            "severeAbsencePercent": 1.15702
+          },
+          "202122": {
+            "enrolments": 1224,
+            "overallAbsencePercent": 14.58202,
+            "authorisedAbsencePercent": 9.51886,
+            "unauthorisedAbsencePercent": 5.06315,
+            "persistentAbsencePercent": 51.63399,
+            "severeAbsencePercent": 6.61765
+          },
+          "202425": {
+            "enrolments": 1132,
+            "overallAbsencePercent": 12.67967,
+            "authorisedAbsencePercent": 6.8366,
+            "unauthorisedAbsencePercent": 5.84307,
+            "persistentAbsencePercent": 35.15901,
+            "severeAbsencePercent": 8.83392
+          },
+          "202223": {
+            "enrolments": 1203,
+            "overallAbsencePercent": 13.7251,
+            "authorisedAbsencePercent": 8.57022,
+            "unauthorisedAbsencePercent": 5.15488,
+            "persistentAbsencePercent": 37.57273,
+            "severeAbsencePercent": 8.39568
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -23344,9 +25714,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1496,
+          "fsmCount": 83,
+          "fsmPercent": 5.5,
+          "ealCount": 340,
+          "ealPercent": 22.7,
+          "englishFirstLanguagePercent": 77.1,
+          "youngCarerCount": 14,
+          "youngCarerPercent": 0.9,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 122,
+          "ehcpCount": 52,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 174,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201415": {
+            "enrolments": 1010,
+            "overallAbsencePercent": 5.00928,
+            "authorisedAbsencePercent": 4.79417,
+            "unauthorisedAbsencePercent": 0.21511,
+            "persistentAbsencePercent": 18.81188,
+            "severeAbsencePercent": 0.39604
+          },
+          "201516": {
+            "enrolments": 1036,
+            "overallAbsencePercent": 4.19482,
+            "authorisedAbsencePercent": 3.8153,
+            "unauthorisedAbsencePercent": 0.37952,
+            "persistentAbsencePercent": 7.23938,
+            "severeAbsencePercent": 0.48263
+          },
+          "201718": {
+            "enrolments": 1051,
+            "overallAbsencePercent": 4.31606,
+            "authorisedAbsencePercent": 3.75186,
+            "unauthorisedAbsencePercent": 0.56421,
+            "persistentAbsencePercent": 6.94577,
+            "severeAbsencePercent": 0.38059
+          },
+          "201617": {
+            "enrolments": 1052,
+            "overallAbsencePercent": 3.98543,
+            "authorisedAbsencePercent": 3.61864,
+            "unauthorisedAbsencePercent": 0.3668,
+            "persistentAbsencePercent": 7.22433,
+            "severeAbsencePercent": 0.09506
+          },
+          "202425": {
+            "enrolments": 1081,
+            "overallAbsencePercent": 5.65813,
+            "authorisedAbsencePercent": 5.00446,
+            "unauthorisedAbsencePercent": 0.65367,
+            "persistentAbsencePercent": 17.2988,
+            "severeAbsencePercent": 1.11008
+          },
+          "201819": {
+            "enrolments": 1048,
+            "overallAbsencePercent": 4.05958,
+            "authorisedAbsencePercent": 3.5689,
+            "unauthorisedAbsencePercent": 0.49068,
+            "persistentAbsencePercent": 7.06107,
+            "severeAbsencePercent": 0.57252
+          },
+          "202021": {
+            "enrolments": 1053,
+            "overallAbsencePercent": 4.79694,
+            "authorisedAbsencePercent": 4.26985,
+            "unauthorisedAbsencePercent": 0.5271,
+            "persistentAbsencePercent": 8.35708,
+            "severeAbsencePercent": 0.94967
+          },
+          "201314": {
+            "enrolments": 988,
+            "overallAbsencePercent": 5.44245,
+            "authorisedAbsencePercent": 5.24915,
+            "unauthorisedAbsencePercent": 0.1933,
+            "persistentAbsencePercent": 24.39271,
+            "severeAbsencePercent": 0.40486
+          },
+          "202223": {
+            "enrolments": 1067,
+            "overallAbsencePercent": 6.54808,
+            "authorisedAbsencePercent": 5.64206,
+            "unauthorisedAbsencePercent": 0.90601,
+            "persistentAbsencePercent": 21.36832,
+            "severeAbsencePercent": 1.03093
+          },
+          "202122": {
+            "enrolments": 1056,
+            "overallAbsencePercent": 5.84317,
+            "authorisedAbsencePercent": 4.92392,
+            "unauthorisedAbsencePercent": 0.91925,
+            "persistentAbsencePercent": 17.70833,
+            "severeAbsencePercent": 0.85227
+          },
+          "202324": {
+            "enrolments": 1071,
+            "overallAbsencePercent": 6.609,
+            "authorisedAbsencePercent": 5.6199,
+            "unauthorisedAbsencePercent": 0.9891,
+            "persistentAbsencePercent": 22.68908,
+            "severeAbsencePercent": 1.12045
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -24223,9 +26709,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1590,
+          "fsmCount": 94,
+          "fsmPercent": 5.9,
+          "ealCount": 364,
+          "ealPercent": 22.9,
+          "englishFirstLanguagePercent": 76.7,
+          "youngCarerCount": 11,
+          "youngCarerPercent": 0.7,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 108,
+          "ehcpCount": 61,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 169,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 943,
+            "overallAbsencePercent": 4.82577,
+            "authorisedAbsencePercent": 4.77447,
+            "unauthorisedAbsencePercent": 0.05131,
+            "persistentAbsencePercent": 12.72534,
+            "severeAbsencePercent": 0.10604
+          },
+          "202425": {
+            "enrolments": 1137,
+            "overallAbsencePercent": 7.05988,
+            "authorisedAbsencePercent": 6.13446,
+            "unauthorisedAbsencePercent": 0.92542,
+            "persistentAbsencePercent": 21.45998,
+            "severeAbsencePercent": 1.23131
+          },
+          "201617": {
+            "enrolments": 953,
+            "overallAbsencePercent": 7.42868,
+            "authorisedAbsencePercent": 7.04782,
+            "unauthorisedAbsencePercent": 0.38086,
+            "persistentAbsencePercent": 26.75761,
+            "severeAbsencePercent": 0.10493
+          },
+          "202122": {
+            "enrolments": 1101,
+            "overallAbsencePercent": 6.02496,
+            "authorisedAbsencePercent": 5.54447,
+            "unauthorisedAbsencePercent": 0.48049,
+            "persistentAbsencePercent": 14.35059,
+            "severeAbsencePercent": 0.63579
+          },
+          "201415": {
+            "enrolments": 958,
+            "overallAbsencePercent": 5.19573,
+            "authorisedAbsencePercent": 5.04055,
+            "unauthorisedAbsencePercent": 0.15518,
+            "persistentAbsencePercent": 18.47599,
+            "severeAbsencePercent": 0.10438
+          },
+          "201819": {
+            "enrolments": 999,
+            "overallAbsencePercent": 4.1054,
+            "authorisedAbsencePercent": 3.69814,
+            "unauthorisedAbsencePercent": 0.40727,
+            "persistentAbsencePercent": 7.10711,
+            "severeAbsencePercent": 0.0
+          },
+          "201718": {
+            "enrolments": 962,
+            "overallAbsencePercent": 5.163,
+            "authorisedAbsencePercent": 4.76747,
+            "unauthorisedAbsencePercent": 0.39553,
+            "persistentAbsencePercent": 13.72141,
+            "severeAbsencePercent": 0.2079
+          },
+          "202021": {
+            "enrolments": 1063,
+            "overallAbsencePercent": 3.53353,
+            "authorisedAbsencePercent": 3.23529,
+            "unauthorisedAbsencePercent": 0.29824,
+            "persistentAbsencePercent": 5.73848,
+            "severeAbsencePercent": 0.37629
+          },
+          "202223": {
+            "enrolments": 1129,
+            "overallAbsencePercent": 6.69222,
+            "authorisedAbsencePercent": 5.93498,
+            "unauthorisedAbsencePercent": 0.75724,
+            "persistentAbsencePercent": 20.10629,
+            "severeAbsencePercent": 0.44287
+          },
+          "201516": {
+            "enrolments": 961,
+            "overallAbsencePercent": 6.06658,
+            "authorisedAbsencePercent": 5.76004,
+            "unauthorisedAbsencePercent": 0.30654,
+            "persistentAbsencePercent": 24.45369,
+            "severeAbsencePercent": 0.20812
+          },
+          "202324": {
+            "enrolments": 1132,
+            "overallAbsencePercent": 6.79942,
+            "authorisedAbsencePercent": 6.07464,
+            "unauthorisedAbsencePercent": 0.72478,
+            "persistentAbsencePercent": 21.28975,
+            "severeAbsencePercent": 1.14841
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -25133,9 +27735,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1697,
+          "fsmCount": 166,
+          "fsmPercent": 9.8,
+          "ealCount": 300,
+          "ealPercent": 17.7,
+          "englishFirstLanguagePercent": 81.6,
+          "youngCarerCount": 15,
+          "youngCarerPercent": 0.9,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 280,
+          "ehcpCount": 47,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 327,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202223": {
+            "enrolments": 1359,
+            "overallAbsencePercent": 7.40547,
+            "authorisedAbsencePercent": 6.64714,
+            "unauthorisedAbsencePercent": 0.75833,
+            "persistentAbsencePercent": 18.24871,
+            "severeAbsencePercent": 1.83959
+          },
+          "201516": {
+            "enrolments": 1329,
+            "overallAbsencePercent": 4.21729,
+            "authorisedAbsencePercent": 3.65162,
+            "unauthorisedAbsencePercent": 0.56567,
+            "persistentAbsencePercent": 9.17983,
+            "severeAbsencePercent": 0.52671
+          },
+          "201617": {
+            "enrolments": 1330,
+            "overallAbsencePercent": 4.55627,
+            "authorisedAbsencePercent": 3.69055,
+            "unauthorisedAbsencePercent": 0.86572,
+            "persistentAbsencePercent": 8.42105,
+            "severeAbsencePercent": 0.75188
+          },
+          "201819": {
+            "enrolments": 1344,
+            "overallAbsencePercent": 4.66842,
+            "authorisedAbsencePercent": 4.15484,
+            "unauthorisedAbsencePercent": 0.51358,
+            "persistentAbsencePercent": 9.3006,
+            "severeAbsencePercent": 0.66964
+          },
+          "201718": {
+            "enrolments": 1335,
+            "overallAbsencePercent": 5.00017,
+            "authorisedAbsencePercent": 4.1178,
+            "unauthorisedAbsencePercent": 0.88237,
+            "persistentAbsencePercent": 11.46067,
+            "severeAbsencePercent": 0.97378
+          },
+          "201314": {
+            "enrolments": 1325,
+            "overallAbsencePercent": 4.80899,
+            "authorisedAbsencePercent": 4.1478,
+            "unauthorisedAbsencePercent": 0.6612,
+            "persistentAbsencePercent": 11.62264,
+            "severeAbsencePercent": 0.5283
+          },
+          "202122": {
+            "enrolments": 1370,
+            "overallAbsencePercent": 7.48103,
+            "authorisedAbsencePercent": 6.7315,
+            "unauthorisedAbsencePercent": 0.74953,
+            "persistentAbsencePercent": 19.78102,
+            "severeAbsencePercent": 1.67883
+          },
+          "202021": {
+            "enrolments": 1356,
+            "overallAbsencePercent": 3.77179,
+            "authorisedAbsencePercent": 3.43639,
+            "unauthorisedAbsencePercent": 0.3354,
+            "persistentAbsencePercent": 8.40708,
+            "severeAbsencePercent": 0.73746
+          },
+          "202324": {
+            "enrolments": 1368,
+            "overallAbsencePercent": 5.68033,
+            "authorisedAbsencePercent": 4.56841,
+            "unauthorisedAbsencePercent": 1.11193,
+            "persistentAbsencePercent": 11.84211,
+            "severeAbsencePercent": 1.68129
+          },
+          "201415": {
+            "enrolments": 1324,
+            "overallAbsencePercent": 4.72325,
+            "authorisedAbsencePercent": 4.2058,
+            "unauthorisedAbsencePercent": 0.51745,
+            "persistentAbsencePercent": 10.87613,
+            "severeAbsencePercent": 0.45317
+          },
+          "202425": {
+            "enrolments": 1379,
+            "overallAbsencePercent": 5.55552,
+            "authorisedAbsencePercent": 4.69094,
+            "unauthorisedAbsencePercent": 0.86458,
+            "persistentAbsencePercent": 12.47281,
+            "severeAbsencePercent": 1.45033
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -26022,9 +28740,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1585,
+          "fsmCount": 76,
+          "fsmPercent": 4.8,
+          "ealCount": 212,
+          "ealPercent": 13.4,
+          "englishFirstLanguagePercent": 84.2,
+          "youngCarerCount": 2,
+          "youngCarerPercent": 0.1,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 193,
+          "ehcpCount": 38,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 231,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202223": {
+            "enrolments": 1205,
+            "overallAbsencePercent": 6.72946,
+            "authorisedAbsencePercent": 6.18766,
+            "unauthorisedAbsencePercent": 0.5418,
+            "persistentAbsencePercent": 23.48548,
+            "severeAbsencePercent": 0.6639
+          },
+          "201314": {
+            "enrolments": 1041,
+            "overallAbsencePercent": 3.7474,
+            "authorisedAbsencePercent": 3.43429,
+            "unauthorisedAbsencePercent": 0.31311,
+            "persistentAbsencePercent": 4.9952,
+            "severeAbsencePercent": 0.48031
+          },
+          "201415": {
+            "enrolments": 1034,
+            "overallAbsencePercent": 3.49327,
+            "authorisedAbsencePercent": 3.29914,
+            "unauthorisedAbsencePercent": 0.19413,
+            "persistentAbsencePercent": 4.44874,
+            "severeAbsencePercent": 0.09671
+          },
+          "201516": {
+            "enrolments": 1036,
+            "overallAbsencePercent": 3.71526,
+            "authorisedAbsencePercent": 3.44687,
+            "unauthorisedAbsencePercent": 0.26839,
+            "persistentAbsencePercent": 6.27413,
+            "severeAbsencePercent": 0.0
+          },
+          "201718": {
+            "enrolments": 1097,
+            "overallAbsencePercent": 4.75,
+            "authorisedAbsencePercent": 4.42538,
+            "unauthorisedAbsencePercent": 0.32463,
+            "persistentAbsencePercent": 10.11851,
+            "severeAbsencePercent": 0.6381
+          },
+          "201617": {
+            "enrolments": 1065,
+            "overallAbsencePercent": 3.58004,
+            "authorisedAbsencePercent": 3.3459,
+            "unauthorisedAbsencePercent": 0.23415,
+            "persistentAbsencePercent": 4.13146,
+            "severeAbsencePercent": 0.37559
+          },
+          "202021": {
+            "enrolments": 1210,
+            "overallAbsencePercent": 4.16354,
+            "authorisedAbsencePercent": 3.93809,
+            "unauthorisedAbsencePercent": 0.22545,
+            "persistentAbsencePercent": 8.18182,
+            "severeAbsencePercent": 0.82645
+          },
+          "202122": {
+            "enrolments": 1211,
+            "overallAbsencePercent": 7.63798,
+            "authorisedAbsencePercent": 6.83795,
+            "unauthorisedAbsencePercent": 0.80003,
+            "persistentAbsencePercent": 27.33278,
+            "severeAbsencePercent": 0.90834
+          },
+          "201819": {
+            "enrolments": 1131,
+            "overallAbsencePercent": 4.75126,
+            "authorisedAbsencePercent": 4.35167,
+            "unauthorisedAbsencePercent": 0.39958,
+            "persistentAbsencePercent": 9.90274,
+            "severeAbsencePercent": 0.44209
+          },
+          "202324": {
+            "enrolments": 1215,
+            "overallAbsencePercent": 6.91168,
+            "authorisedAbsencePercent": 6.14833,
+            "unauthorisedAbsencePercent": 0.76335,
+            "persistentAbsencePercent": 24.36214,
+            "severeAbsencePercent": 1.15226
+          },
+          "202425": {
+            "enrolments": 1214,
+            "overallAbsencePercent": 6.45341,
+            "authorisedAbsencePercent": 5.83617,
+            "unauthorisedAbsencePercent": 0.61724,
+            "persistentAbsencePercent": 24.54695,
+            "severeAbsencePercent": 1.07084
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -26930,9 +29764,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1575,
+          "fsmCount": 91,
+          "fsmPercent": 5.8,
+          "ealCount": 536,
+          "ealPercent": 34.0,
+          "englishFirstLanguagePercent": 65.3,
+          "youngCarerCount": 5,
+          "youngCarerPercent": 0.3,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Non-selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 168,
+          "ehcpCount": 35,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 203,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202223": {
+            "enrolments": 1239,
+            "overallAbsencePercent": 5.49358,
+            "authorisedAbsencePercent": 4.51789,
+            "unauthorisedAbsencePercent": 0.97569,
+            "persistentAbsencePercent": 10.89588,
+            "severeAbsencePercent": 2.01776
+          },
+          "201617": {
+            "enrolments": 991,
+            "overallAbsencePercent": 4.51587,
+            "authorisedAbsencePercent": 3.72643,
+            "unauthorisedAbsencePercent": 0.78944,
+            "persistentAbsencePercent": 8.17356,
+            "severeAbsencePercent": 0.40363
+          },
+          "201516": {
+            "enrolments": 960,
+            "overallAbsencePercent": 4.51039,
+            "authorisedAbsencePercent": 3.73894,
+            "unauthorisedAbsencePercent": 0.77145,
+            "persistentAbsencePercent": 8.4375,
+            "severeAbsencePercent": 0.41667
+          },
+          "201819": {
+            "enrolments": 1042,
+            "overallAbsencePercent": 4.2318,
+            "authorisedAbsencePercent": 3.69938,
+            "unauthorisedAbsencePercent": 0.53242,
+            "persistentAbsencePercent": 8.25336,
+            "severeAbsencePercent": 0.57582
+          },
+          "202021": {
+            "enrolments": 1110,
+            "overallAbsencePercent": 3.61701,
+            "authorisedAbsencePercent": 3.17811,
+            "unauthorisedAbsencePercent": 0.43889,
+            "persistentAbsencePercent": 7.56757,
+            "severeAbsencePercent": 0.45045
+          },
+          "201314": {
+            "enrolments": 957,
+            "overallAbsencePercent": 4.67665,
+            "authorisedAbsencePercent": 3.85337,
+            "unauthorisedAbsencePercent": 0.82328,
+            "persistentAbsencePercent": 9.71787,
+            "severeAbsencePercent": 0.41797
+          },
+          "201718": {
+            "enrolments": 996,
+            "overallAbsencePercent": 4.75029,
+            "authorisedAbsencePercent": 3.98743,
+            "unauthorisedAbsencePercent": 0.76285,
+            "persistentAbsencePercent": 9.83936,
+            "severeAbsencePercent": 0.40161
+          },
+          "201415": {
+            "enrolments": 962,
+            "overallAbsencePercent": 4.73584,
+            "authorisedAbsencePercent": 3.68878,
+            "unauthorisedAbsencePercent": 1.04706,
+            "persistentAbsencePercent": 9.04366,
+            "severeAbsencePercent": 0.8316
+          },
+          "202324": {
+            "enrolments": 1262,
+            "overallAbsencePercent": 5.17669,
+            "authorisedAbsencePercent": 4.21301,
+            "unauthorisedAbsencePercent": 0.96368,
+            "persistentAbsencePercent": 10.69731,
+            "severeAbsencePercent": 1.66403
+          },
+          "202122": {
+            "enrolments": 1171,
+            "overallAbsencePercent": 6.32659,
+            "authorisedAbsencePercent": 5.3228,
+            "unauthorisedAbsencePercent": 1.0038,
+            "persistentAbsencePercent": 14.26132,
+            "severeAbsencePercent": 1.79334
+          },
+          "202425": {
+            "enrolments": 1270,
+            "overallAbsencePercent": 5.11188,
+            "authorisedAbsencePercent": 4.26256,
+            "unauthorisedAbsencePercent": 0.84932,
+            "persistentAbsencePercent": 9.6063,
+            "severeAbsencePercent": 1.33858
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -27629,9 +30579,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1327,
+          "fsmCount": 76,
+          "fsmPercent": 5.7,
+          "ealCount": 569,
+          "ealPercent": 42.9,
+          "englishFirstLanguagePercent": 56.8,
+          "youngCarerCount": 13,
+          "youngCarerPercent": 1.0,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 28,
+          "ehcpCount": 8,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 36,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 763,
+            "overallAbsencePercent": 2.40299,
+            "authorisedAbsencePercent": 2.29337,
+            "unauthorisedAbsencePercent": 0.10962,
+            "persistentAbsencePercent": 1.44168,
+            "severeAbsencePercent": 0.13106
+          },
+          "201415": {
+            "enrolments": 797,
+            "overallAbsencePercent": 2.78144,
+            "authorisedAbsencePercent": 2.74101,
+            "unauthorisedAbsencePercent": 0.04043,
+            "persistentAbsencePercent": 2.76035,
+            "severeAbsencePercent": 0.12547
+          },
+          "201718": {
+            "enrolments": 894,
+            "overallAbsencePercent": 2.8694,
+            "authorisedAbsencePercent": 2.71631,
+            "unauthorisedAbsencePercent": 0.15309,
+            "persistentAbsencePercent": 2.46085,
+            "severeAbsencePercent": 0.11186
+          },
+          "201516": {
+            "enrolments": 830,
+            "overallAbsencePercent": 2.83267,
+            "authorisedAbsencePercent": 2.74744,
+            "unauthorisedAbsencePercent": 0.08523,
+            "persistentAbsencePercent": 1.80723,
+            "severeAbsencePercent": 0.12048
+          },
+          "202425": {
+            "enrolments": 949,
+            "overallAbsencePercent": 2.82589,
+            "authorisedAbsencePercent": 2.67359,
+            "unauthorisedAbsencePercent": 0.1523,
+            "persistentAbsencePercent": 1.79136,
+            "severeAbsencePercent": 0.0
+          },
+          "201617": {
+            "enrolments": 859,
+            "overallAbsencePercent": 2.78896,
+            "authorisedAbsencePercent": 2.66868,
+            "unauthorisedAbsencePercent": 0.12028,
+            "persistentAbsencePercent": 2.91036,
+            "severeAbsencePercent": 0.11641
+          },
+          "201819": {
+            "enrolments": 930,
+            "overallAbsencePercent": 2.20306,
+            "authorisedAbsencePercent": 2.07176,
+            "unauthorisedAbsencePercent": 0.13129,
+            "persistentAbsencePercent": 1.07527,
+            "severeAbsencePercent": 0.21505
+          },
+          "202122": {
+            "enrolments": 949,
+            "overallAbsencePercent": 4.01866,
+            "authorisedAbsencePercent": 3.82347,
+            "unauthorisedAbsencePercent": 0.19518,
+            "persistentAbsencePercent": 5.37408,
+            "severeAbsencePercent": 0.21075
+          },
+          "202021": {
+            "enrolments": 943,
+            "overallAbsencePercent": 2.7401,
+            "authorisedAbsencePercent": 2.594,
+            "unauthorisedAbsencePercent": 0.1461,
+            "persistentAbsencePercent": 4.98409,
+            "severeAbsencePercent": 0.0
+          },
+          "202223": {
+            "enrolments": 942,
+            "overallAbsencePercent": 3.16437,
+            "authorisedAbsencePercent": 2.90623,
+            "unauthorisedAbsencePercent": 0.25814,
+            "persistentAbsencePercent": 2.76008,
+            "severeAbsencePercent": 0.0
+          },
+          "202324": {
+            "enrolments": 953,
+            "overallAbsencePercent": 3.01256,
+            "authorisedAbsencePercent": 2.89405,
+            "unauthorisedAbsencePercent": 0.11851,
+            "persistentAbsencePercent": 2.62329,
+            "severeAbsencePercent": 0.0
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -28375,9 +31441,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1119,
+          "fsmCount": 83,
+          "fsmPercent": 7.4,
+          "ealCount": 361,
+          "ealPercent": 32.3,
+          "englishFirstLanguagePercent": 63.2,
+          "youngCarerCount": 15,
+          "youngCarerPercent": 1.3,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 47,
+          "ehcpCount": 5,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 52,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 758,
+            "overallAbsencePercent": 4.08519,
+            "authorisedAbsencePercent": 3.71377,
+            "unauthorisedAbsencePercent": 0.37142,
+            "persistentAbsencePercent": 6.20053,
+            "severeAbsencePercent": 0.26385
+          },
+          "201314": {
+            "enrolments": 652,
+            "overallAbsencePercent": 3.48937,
+            "authorisedAbsencePercent": 3.24784,
+            "unauthorisedAbsencePercent": 0.24153,
+            "persistentAbsencePercent": 4.60123,
+            "severeAbsencePercent": 0.0
+          },
+          "201415": {
+            "enrolments": 683,
+            "overallAbsencePercent": 3.66244,
+            "authorisedAbsencePercent": 3.42878,
+            "unauthorisedAbsencePercent": 0.23366,
+            "persistentAbsencePercent": 4.97804,
+            "severeAbsencePercent": 0.29283
+          },
+          "202425": {
+            "enrolments": 754,
+            "overallAbsencePercent": 3.98347,
+            "authorisedAbsencePercent": 3.66897,
+            "unauthorisedAbsencePercent": 0.31449,
+            "persistentAbsencePercent": 5.43767,
+            "severeAbsencePercent": 0.26525
+          },
+          "201718": {
+            "enrolments": 745,
+            "overallAbsencePercent": 3.61453,
+            "authorisedAbsencePercent": 3.41779,
+            "unauthorisedAbsencePercent": 0.19675,
+            "persistentAbsencePercent": 4.96644,
+            "severeAbsencePercent": 0.13423
+          },
+          "201516": {
+            "enrolments": 681,
+            "overallAbsencePercent": 4.11578,
+            "authorisedAbsencePercent": 3.90695,
+            "unauthorisedAbsencePercent": 0.20883,
+            "persistentAbsencePercent": 11.89427,
+            "severeAbsencePercent": 0.14684
+          },
+          "201617": {
+            "enrolments": 708,
+            "overallAbsencePercent": 4.06703,
+            "authorisedAbsencePercent": 3.91531,
+            "unauthorisedAbsencePercent": 0.15172,
+            "persistentAbsencePercent": 6.49718,
+            "severeAbsencePercent": 0.0
+          },
+          "201819": {
+            "enrolments": 751,
+            "overallAbsencePercent": 3.30702,
+            "authorisedAbsencePercent": 3.08668,
+            "unauthorisedAbsencePercent": 0.22034,
+            "persistentAbsencePercent": 4.12783,
+            "severeAbsencePercent": 0.13316
+          },
+          "202021": {
+            "enrolments": 751,
+            "overallAbsencePercent": 3.2424,
+            "authorisedAbsencePercent": 3.10683,
+            "unauthorisedAbsencePercent": 0.13557,
+            "persistentAbsencePercent": 6.39148,
+            "severeAbsencePercent": 0.0
+          },
+          "202122": {
+            "enrolments": 755,
+            "overallAbsencePercent": 5.09516,
+            "authorisedAbsencePercent": 4.72994,
+            "unauthorisedAbsencePercent": 0.36522,
+            "persistentAbsencePercent": 11.65563,
+            "severeAbsencePercent": 0.13245
+          },
+          "202223": {
+            "enrolments": 760,
+            "overallAbsencePercent": 4.80618,
+            "authorisedAbsencePercent": 4.48811,
+            "unauthorisedAbsencePercent": 0.31807,
+            "persistentAbsencePercent": 9.86842,
+            "severeAbsencePercent": 0.39474
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -29064,9 +32246,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1084,
+          "fsmCount": 47,
+          "fsmPercent": 4.3,
+          "ealCount": 549,
+          "ealPercent": 50.6,
+          "englishFirstLanguagePercent": 49.4,
+          "youngCarerCount": 11,
+          "youngCarerPercent": 1.0,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 71,
+          "ehcpCount": 3,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 74,
+          "anySenPercent": null
+        },
+        "absence": {
+          "202324": {
+            "enrolments": 638,
+            "overallAbsencePercent": 4.15066,
+            "authorisedAbsencePercent": 3.86846,
+            "unauthorisedAbsencePercent": 0.2822,
+            "persistentAbsencePercent": 4.70219,
+            "severeAbsencePercent": 0.47022
+          },
+          "201314": {
+            "enrolments": 596,
+            "overallAbsencePercent": 3.32541,
+            "authorisedAbsencePercent": 3.22906,
+            "unauthorisedAbsencePercent": 0.09635,
+            "persistentAbsencePercent": 4.02685,
+            "severeAbsencePercent": 0.0
+          },
+          "201415": {
+            "enrolments": 601,
+            "overallAbsencePercent": 3.61629,
+            "authorisedAbsencePercent": 3.52065,
+            "unauthorisedAbsencePercent": 0.09564,
+            "persistentAbsencePercent": 5.15807,
+            "severeAbsencePercent": 0.16639
+          },
+          "201516": {
+            "enrolments": 611,
+            "overallAbsencePercent": 2.64349,
+            "authorisedAbsencePercent": 2.51695,
+            "unauthorisedAbsencePercent": 0.12654,
+            "persistentAbsencePercent": 3.27332,
+            "severeAbsencePercent": 0.0
+          },
+          "201617": {
+            "enrolments": 625,
+            "overallAbsencePercent": 3.77825,
+            "authorisedAbsencePercent": 3.65324,
+            "unauthorisedAbsencePercent": 0.12501,
+            "persistentAbsencePercent": 5.6,
+            "severeAbsencePercent": 0.32
+          },
+          "201718": {
+            "enrolments": 633,
+            "overallAbsencePercent": 3.86444,
+            "authorisedAbsencePercent": 3.76156,
+            "unauthorisedAbsencePercent": 0.10288,
+            "persistentAbsencePercent": 7.109,
+            "severeAbsencePercent": 0.47393
+          },
+          "201819": {
+            "enrolments": 638,
+            "overallAbsencePercent": 3.33181,
+            "authorisedAbsencePercent": 3.20418,
+            "unauthorisedAbsencePercent": 0.12763,
+            "persistentAbsencePercent": 4.23197,
+            "severeAbsencePercent": 0.47022
+          },
+          "202021": {
+            "enrolments": 636,
+            "overallAbsencePercent": 2.88243,
+            "authorisedAbsencePercent": 2.83313,
+            "unauthorisedAbsencePercent": 0.0493,
+            "persistentAbsencePercent": 5.66038,
+            "severeAbsencePercent": 0.0
+          },
+          "202122": {
+            "enrolments": 637,
+            "overallAbsencePercent": 5.33127,
+            "authorisedAbsencePercent": 5.1153,
+            "unauthorisedAbsencePercent": 0.21597,
+            "persistentAbsencePercent": 12.87284,
+            "severeAbsencePercent": 0.31397
+          },
+          "202223": {
+            "enrolments": 639,
+            "overallAbsencePercent": 4.78911,
+            "authorisedAbsencePercent": 4.58984,
+            "unauthorisedAbsencePercent": 0.19927,
+            "persistentAbsencePercent": 9.23318,
+            "severeAbsencePercent": 0.15649
+          },
+          "202425": {
+            "enrolments": 643,
+            "overallAbsencePercent": 3.70169,
+            "authorisedAbsencePercent": 3.35227,
+            "unauthorisedAbsencePercent": 0.34943,
+            "persistentAbsencePercent": 3.88802,
+            "severeAbsencePercent": 0.15552
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
@@ -29957,9 +33255,125 @@
           }
         }
       ],
+      "context": {
+        "pupilCharacteristics": {
+          "year": "2025/26",
+          "headcount": 1701,
+          "fsmCount": 205,
+          "fsmPercent": 12.1,
+          "ealCount": 171,
+          "ealPercent": 10.1,
+          "englishFirstLanguagePercent": 89.9,
+          "youngCarerCount": 0,
+          "youngCarerPercent": 0.0,
+          "phase": "State-funded secondary",
+          "admissionsPolicy": "Selective"
+        },
+        "sen": {
+          "year": "2025/26",
+          "totalPupils": 0,
+          "senSupportCount": 120,
+          "ehcpCount": 11,
+          "senSupportPercent": null,
+          "ehcpPercent": null,
+          "anySenCount": 131,
+          "anySenPercent": null
+        },
+        "absence": {
+          "201314": {
+            "enrolments": 832,
+            "overallAbsencePercent": 2.35062,
+            "authorisedAbsencePercent": 2.23196,
+            "unauthorisedAbsencePercent": 0.11865,
+            "persistentAbsencePercent": 2.16346,
+            "severeAbsencePercent": 0.0
+          },
+          "202223": {
+            "enrolments": 964,
+            "overallAbsencePercent": 3.90266,
+            "authorisedAbsencePercent": 3.65514,
+            "unauthorisedAbsencePercent": 0.24752,
+            "persistentAbsencePercent": 5.18672,
+            "severeAbsencePercent": 0.10373
+          },
+          "201415": {
+            "enrolments": 867,
+            "overallAbsencePercent": 2.72372,
+            "authorisedAbsencePercent": 2.53481,
+            "unauthorisedAbsencePercent": 0.18891,
+            "persistentAbsencePercent": 4.03691,
+            "severeAbsencePercent": 0.23068
+          },
+          "201718": {
+            "enrolments": 957,
+            "overallAbsencePercent": 3.07835,
+            "authorisedAbsencePercent": 2.76431,
+            "unauthorisedAbsencePercent": 0.31404,
+            "persistentAbsencePercent": 4.07524,
+            "severeAbsencePercent": 0.31348
+          },
+          "201516": {
+            "enrolments": 897,
+            "overallAbsencePercent": 2.93945,
+            "authorisedAbsencePercent": 2.65146,
+            "unauthorisedAbsencePercent": 0.288,
+            "persistentAbsencePercent": 3.233,
+            "severeAbsencePercent": 0.22297
+          },
+          "201617": {
+            "enrolments": 935,
+            "overallAbsencePercent": 2.93817,
+            "authorisedAbsencePercent": 2.62762,
+            "unauthorisedAbsencePercent": 0.31055,
+            "persistentAbsencePercent": 3.52941,
+            "severeAbsencePercent": 0.42781
+          },
+          "202122": {
+            "enrolments": 966,
+            "overallAbsencePercent": 3.91924,
+            "authorisedAbsencePercent": 3.72503,
+            "unauthorisedAbsencePercent": 0.1942,
+            "persistentAbsencePercent": 6.3147,
+            "severeAbsencePercent": 0.20704
+          },
+          "201819": {
+            "enrolments": 966,
+            "overallAbsencePercent": 2.65076,
+            "authorisedAbsencePercent": 2.39992,
+            "unauthorisedAbsencePercent": 0.25084,
+            "persistentAbsencePercent": 3.31263,
+            "severeAbsencePercent": 0.10352
+          },
+          "202021": {
+            "enrolments": 964,
+            "overallAbsencePercent": 2.07646,
+            "authorisedAbsencePercent": 1.97491,
+            "unauthorisedAbsencePercent": 0.10156,
+            "persistentAbsencePercent": 3.0083,
+            "severeAbsencePercent": 0.0
+          },
+          "202324": {
+            "enrolments": 971,
+            "overallAbsencePercent": 2.94417,
+            "authorisedAbsencePercent": 2.72331,
+            "unauthorisedAbsencePercent": 0.22086,
+            "persistentAbsencePercent": 3.29557,
+            "severeAbsencePercent": 0.10299
+          },
+          "202425": {
+            "enrolments": 967,
+            "overallAbsencePercent": 2.5828,
+            "authorisedAbsencePercent": 2.43314,
+            "unauthorisedAbsencePercent": 0.14965,
+            "persistentAbsencePercent": 2.37849,
+            "severeAbsencePercent": 0.0
+          }
+        }
+      },
       "coverage": {
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
-        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25."
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
       "gcseFiveYearWindow": [
         {
