@@ -6,6 +6,18 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.8.0 — 2026-09-28
+
+- Added whole-school **FSM eligibility** and **EAL** from the January 2026 DfE school census.
+- Added whole-school **SEN support**, **EHCP** and combined SEN percentages from the 2025/26 DfE school-level SEN census.
+- Added accredited full-year **overall absence**, **unauthorised absence**, **persistent absence** and **severe absence** history through 2024/25 for schools covered by the DfE school-level absence series.
+- Added sortable comparison columns for FSM, EAL, SEN support, EHCP, absence and persistent absence.
+- Added **Has context data** and **Has attendance data** filters.
+- Expanded each school's detail panel with a whole-school context card and up to five years of attendance history.
+- Added direct source links to the official DfE pupil-characteristics, SEN and absence datasets.
+- Context data is explicitly labelled as descriptive pupil-population information rather than a school-quality score.
+- Independent schools retain pupil-characteristics/SEN context where available, but the DfE school-level absence series does not cover independent schools.
+
 ## 2.7.1 — 2026-09-28
 
 - Split Ark Academy's official open events into four separate verified entries: Monday 28, Tuesday 29 and Wednesday 30 September open mornings at 09:00, plus Thursday 1 October open evening at 17:00.
