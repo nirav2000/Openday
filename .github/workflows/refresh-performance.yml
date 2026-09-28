@@ -23,7 +23,7 @@ jobs:
         run: python3 scripts/build-performance-data.py
       - name: Commit refreshed dataset when changed
         run: |
-          if git diff --quiet -- data/performance.json; then
+          if [ -z "$(git status --porcelain -- data/performance.json)" ]; then
             echo "No performance data changes"
             exit 0
           fi
