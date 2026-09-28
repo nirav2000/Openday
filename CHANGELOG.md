@@ -6,6 +6,14 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.7.1 — 2026-09-28
+
+- Split Ark Academy's official open events into four separate verified entries: Monday 28, Tuesday 29 and Wednesday 30 September open mornings at 09:00, plus Thursday 1 October open evening at 17:00.
+- Linked each Ark event directly to the school's open-events form.
+- Expanded Performance filters with **Booked**, **Visit again** and **Not for us** alongside Visited, Saved, Liked and Want to try for.
+- Added GCSE cohort size and A-level student count to the year-by-year expanded performance tables.
+- Refreshed the official DfE performance dataset after the Ark event-ID change so personal visited/saved/booked filtering continues to map correctly.
+
 ## 2.7.0 — 2026-09-28
 
 - Added a dedicated **Performance** page for comparing the senior schools tracked by Openday.
