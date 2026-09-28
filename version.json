@@ -1,6 +1,6 @@
 {
-  "version": "2.7.0",
+  "version": "2.7.1",
   "released": "2026-09-28",
   "channel": "main",
-  "summary": "Add an official DfE school-performance comparison dashboard with GCSE, A-level, KS4 EAL, Progress 8, subject-level detail and visited/saved filters, plus confirm Ark Academy's Thursday open evening."
+  "summary": "Refine academic comparison filters and cohort detail, and split Ark Academy's official 28–30 September open mornings plus 1 October open evening into separate verified events."
 }
