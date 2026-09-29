@@ -31,7 +31,7 @@ function filteredSchools(){
     const extra=schoolExtra(s);
     const text=`${s.name} ${s.area} ${s.event} ${s.type} ${s.admission?.summary||''} ${s.admission?.route||''} ${extra.travel?.transitText||''}`.toLowerCase();
     if(q&&!text.includes(q))return false;
-    if(schoolPhase==='primary'&&primaryDistance>0&&Number.isFinite(s.distanceMiles)&&s.distanceMiles>primaryDistance)return false;
+    if(schoolPhase==='primary'&&primaryDistance>0&&(!Number.isFinite(s.distanceMiles)||s.distanceMiles>primaryDistance))return false;
     if(filter==='saved')return state.saved.includes(s.id);
     if(filter==='upcoming'){const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}
     if(filter==='tbc')return isTbcSchool(s);
