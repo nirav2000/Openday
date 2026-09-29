@@ -80,3 +80,70 @@ button.grade-chip{appearance:none;background:transparent;padding:0;cursor:pointe
 .component-details>div>b{display:block;margin-bottom:3px;font-size:.69rem}
 .next-grade{display:block;margin-top:3px;padding:3px 5px;border-radius:6px;background:#fff3d4;color:#765300;font-size:.65rem!important;font-weight:800!important}
 @media(max-width:760px){.table-wrap{max-height:74vh}.compare-scroll{max-height:68vh}}
+
+
+/* v2.15 compact comparison, saved school sets and precise detail affordances */
+.saved-set-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:2px 0 10px}
+.saved-set-bar label{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:.78rem;font-weight:800}
+.saved-set-bar select,.saved-set-bar button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 9px;font:inherit;font-size:.78rem}
+.saved-set-bar select{color:var(--blue);font-weight:800}
+.saved-set-bar button{color:var(--blue);font-weight:800;cursor:pointer}
+.saved-set-bar #deleteSchoolSet{color:var(--red)}
+
+.school-cell{min-width:210px}
+.school-select-line{align-items:center;gap:6px}
+.school-name{line-height:1.2}
+.school-icons{display:inline-flex;gap:3px;align-items:center;margin-left:2px;white-space:nowrap}
+.school-state-icon{font-size:.72rem;line-height:1}
+.saved-icon{color:#b24158}
+.visited-icon{color:#15805d}
+.school-meta-line{display:flex;align-items:center;gap:6px;margin-top:2px}
+.school-meta{margin-top:0;min-width:0;line-height:1.25}
+.school-status-actions{display:inline-flex;gap:3px;margin:0 0 0 auto;flex:0 0 auto}
+.school-status-actions .status-icon{border:0;background:transparent;padding:0 2px;border-radius:4px;font-size:.82rem;line-height:1.1;color:#8a99a8;cursor:pointer}
+.school-status-actions .status-icon.on{background:transparent;color:#b17d00}
+.school-status-actions .status-icon.on.reject{background:transparent;color:#b94444}
+.school-status-actions .status-icon:hover{background:#eef3f7}
+.school-row:hover .hover-card{display:none}
+.school-cell:hover .hover-card{display:block}
+.school-row.expanded .school-cell:hover .hover-card{display:none!important}
+
+.gcse-year-cell{display:flex;flex-direction:column;gap:1px;white-space:nowrap}
+.gcse-year-cell>b{font-size:.82rem}
+.gcse-year-cell>span{font-size:.65rem;color:var(--muted);font-weight:650}
+
+.headline-grade{display:inline-grid;grid-template-columns:32px minmax(58px,max-content);min-width:96px;overflow:visible}
+.headline-grade .grade-label{min-width:32px}
+.headline-grade .grade-count{min-width:58px;white-space:nowrap;justify-content:flex-end;padding-left:8px;padding-right:8px}
+.compare-table td{min-width:104px}
+.compare-table .metric-grade9pct,.compare-table .metric-grade97pct{min-width:108px}
+
+.sort-mark{font-size:.58rem!important;color:var(--muted)!important;font-weight:750!important;letter-spacing:0!important;text-transform:none!important;margin-left:4px!important}
+
+.compare-metric-cell{cursor:pointer;color:var(--ink)}
+.compare-metric-cell:hover{background:#e8f2fa!important;color:var(--blue)}
+.compare-metric-cell:focus-visible{outline:3px solid #78a9cf;outline-offset:-3px}
+.detail-icon{display:inline-flex;align-items:center;justify-content:center;margin-left:3px;font-size:.72rem;color:var(--blue);font-weight:900;line-height:1}
+.compare-table thead th[data-compare-school]{cursor:grab;user-select:none}
+.compare-table thead th[data-compare-school]:active{cursor:grabbing}
+.compare-table thead th.dragging{opacity:.45}
+.compare-click-hint .detail-icon{margin:0}
+
+.subject-family-toggle{appearance:none;border:0;background:transparent;padding:0;color:var(--blue);font:inherit;font-weight:850;cursor:pointer;text-align:left}
+.subject-family-toggle span{display:inline-block;margin-left:3px}
+.subject-component-row>td{background:#f8fafb!important;padding:10px 12px!important}
+.rollup-detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px}
+.rollup-detail-grid section{background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px}
+.rollup-detail-grid h4{margin:0 0 7px;font-size:.76rem}
+.source-subject-row{padding:6px 0;border-top:1px solid #edf1f4}
+.source-subject-row:first-of-type{border-top:0}
+.source-subject-row>b{display:block;font-size:.7rem;margin-bottom:3px}
+
+@media(max-width:760px){
+  .school-cell{min-width:190px}
+  .school-status-actions{display:inline-flex!important}
+  .saved-set-bar{align-items:stretch}
+  .saved-set-bar label{width:100%}
+  .saved-set-bar select{flex:1}
+  .headline-grade{grid-template-columns:30px minmax(56px,max-content);min-width:92px}
+}
