@@ -135,6 +135,47 @@ for (tracked,_,_),rec in subject_acc.items():
 for item in results.values():
     item['gcseSubjects'].sort(key=lambda x:x['subject'])
 
+# Derive an easy-to-scan latest GCSE grade profile from the published 2024/25
+# subject grade counts. Combined Science double grades (e.g. 9-8, 8-8)
+# are split into their two GCSE grade awards before calculating percentages.
+for item in results.values():
+    grade9=0
+    grade97=0
+    total_awards=0
+    for subject in item['gcseSubjects']:
+        qualification=(subject.get('qualification') or '').upper()
+        if 'GCSE' not in qualification:
+            continue
+        is_combined='combined science' in (subject.get('subject') or '').lower()
+        for raw_grade,count in (subject.get('grades') or {}).items():
+            if raw_grade=='Total exam entries' or count is None:
+                continue
+            label=str(raw_grade).replace('-','').replace('–','').replace(' ','')
+            if label.upper() in {'U','FAIL'}:
+                total_awards += int(count) * (2 if is_combined else 1)
+                continue
+            digits=[int(ch) for ch in label if ch.isdigit() and ch!='0']
+            if not digits:
+                continue
+            # A normal GCSE grade is one award. Combined Science publishes
+            # paired grades such as 98/88/76, which are two awards.
+            if is_combined and len(digits)>=2:
+                awarded=digits[:2]
+            else:
+                awarded=digits[:1]
+            total_awards += int(count)*len(awarded)
+            grade9 += int(count)*sum(1 for g in awarded if g==9)
+            grade97 += int(count)*sum(1 for g in awarded if g>=7)
+    item['gcseGradeProfile']={
+      'year':'2024/25',
+      'grade9Count':grade9,
+      'grade9Percent':round(100*grade9/total_awards,1) if total_awards else None,
+      'grade97Count':grade97,
+      'grade97Percent':round(100*grade97/total_awards,1) if total_awards else None,
+      'totalGradeAwards':total_awards,
+      'method':'Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards.'
+    }
+
 # A-level performance history.
 for row in open_csv(DATASETS['alevel_performance']):
     tracked=urn_to_name.get(str(row.get('school_urn') or '')) or candidate_to_group.get(norm(row.get('school_name')))
