@@ -617,6 +617,7 @@
     return source.replace(/ · .+$/,'');
   };
   const qualificationScale=subject=>{
+    if(subject?._scale)return subject._scale;
     const q=String(subject?.qualification||'').toLowerCase(),keys=Object.keys(subject?.grades||{}).filter(k=>k!=='Total exam entries');
     if(q.includes('fsmq'))return'fsmq';
     if(keys.some(k=>/^\d{2}$/.test(k))&&!keys.some(k=>/^\d$/.test(k)))return'double-gcse';
@@ -646,12 +647,10 @@
   function groupSubjects(subjects=[],kind='gcse'){
     const groups=new Map();
     for(const subject of subjects){
-      const raw=subjectRawName(subject),name=subjectFamily(subject,kind),existing=groups.get(name)||{subject:name,qualification:'comparison roll-up',grades:{},components:[],_publishedHighlight:null};
+      const raw=subjectRawName(subject),scale=qualificationScale(subject),name=subjectFamily(subject,kind),existing=groups.get(name)||{subject:name,qualification:subject.qualification||'comparison roll-up',grades:{},components:[],_publishedHighlight:null,_scale:scale};
       existing.components.push({...subject,_rawName:raw});
       if(subject._publishedHighlight)existing._publishedHighlight={...subject._publishedHighlight};
-      if(qualificationScale(subject)!=='fsmq'){
-        for(const [grade,value] of Object.entries(subject.grades||{}))existing.grades[grade]=(Number(existing.grades[grade])||0)+(Number(value)||0);
-      }
+      for(const [grade,value] of Object.entries(subject.grades||{}))existing.grades[grade]=(Number(existing.grades[grade])||0)+(Number(value)||0);
       groups.set(name,existing);
     }
     return groups;
@@ -863,7 +862,7 @@
       if(expanded===s.name)tbody.append(detailRow(s));
     });
     $('#performanceEmpty').hidden=rows.length>0;
-    updateCompareTray();
+    updateCompareTray();renderSchoolSets();
   }
 
   function renderMethodology(){
