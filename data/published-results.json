@@ -1,0 +1,803 @@
+{
+  "generatedAt": "2026-09-29",
+  "note": "School-published examination results used where DfE performance-table coverage is incomplete or where the school has published newer 2025/26 outcomes. DfE data remains separately available in data/performance.json.",
+  "schools": {
+    "St Paul's School": {
+      "2025/26": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 72,
+          "grade98Percent": 93,
+          "grade97Percent": 99,
+          "note": "Headline 2026 school-published results. Full subject table is due from the school in October 2026."
+        },
+        "alevel": {
+          "astarPercent": 60,
+          "astarAPercent": 91.5,
+          "candidates": 212
+        },
+        "sources": {
+          "gcse": "https://www.stpaulsschool.org.uk/gcse-results-2026/",
+          "alevel": "https://www.stpaulsschool.org.uk/a-level-results-2026/"
+        }
+      },
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Count": 1436,
+          "grade9Percent": 68.6,
+          "grade98Percent": 90.4,
+          "grade97Percent": 97.7,
+          "subjectDetails": [
+            {
+              "subject": "Ancient History",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 3,
+                "7": 5,
+                "8": 5,
+                "9": 11,
+                "Total exam entries": 24
+              }
+            },
+            {
+              "subject": "Art",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 4,
+                "8": 16,
+                "9": 32,
+                "Total exam entries": 52
+              }
+            },
+            {
+              "subject": "Biology",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 2,
+                "7": 11,
+                "8": 28,
+                "9": 153,
+                "Total exam entries": 194
+              }
+            },
+            {
+              "subject": "Chemistry",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 9,
+                "8": 40,
+                "9": 144,
+                "Total exam entries": 193
+              }
+            },
+            {
+              "subject": "Computing",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 4,
+                "8": 10,
+                "9": 52,
+                "Total exam entries": 67
+              }
+            },
+            {
+              "subject": "Design & Technology",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1,
+                "6": 4,
+                "7": 14,
+                "8": 32,
+                "9": 23,
+                "Total exam entries": 74
+              }
+            },
+            {
+              "subject": "Drama",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 1,
+                "8": 8,
+                "9": 10,
+                "Total exam entries": 20
+              }
+            },
+            {
+              "subject": "Electronics",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 23,
+                "Total exam entries": 23
+              }
+            },
+            {
+              "subject": "English",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 0,
+                "6": 6,
+                "7": 16,
+                "8": 63,
+                "9": 109,
+                "Total exam entries": 195
+              }
+            },
+            {
+              "subject": "English Literature",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1,
+                "6": 6,
+                "7": 23,
+                "8": 49,
+                "9": 116,
+                "Total exam entries": 195
+              }
+            },
+            {
+              "subject": "French",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 7,
+                "8": 28,
+                "9": 76,
+                "Total exam entries": 112
+              }
+            },
+            {
+              "subject": "Geography",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 7,
+                "7": 16,
+                "8": 35,
+                "9": 73,
+                "Total exam entries": 131
+              }
+            },
+            {
+              "subject": "German",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 5,
+                "8": 2,
+                "9": 21,
+                "Total exam entries": 29
+              }
+            },
+            {
+              "subject": "Greek",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 3,
+                "9": 17,
+                "Total exam entries": 20
+              }
+            },
+            {
+              "subject": "History",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1,
+                "6": 1,
+                "7": 12,
+                "8": 9,
+                "9": 115,
+                "Total exam entries": 138
+              }
+            },
+            {
+              "subject": "Italian",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 2,
+                "7": 6,
+                "8": 19,
+                "9": 33,
+                "Total exam entries": 60
+              }
+            },
+            {
+              "subject": "Latin",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1,
+                "6": 2,
+                "7": 3,
+                "8": 17,
+                "9": 63,
+                "Total exam entries": 86
+              }
+            },
+            {
+              "subject": "Mathematics",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 20,
+                "9": 175,
+                "Total exam entries": 195
+              }
+            },
+            {
+              "subject": "Music",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 4,
+                "8": 6,
+                "9": 18,
+                "Total exam entries": 29
+              }
+            },
+            {
+              "subject": "Physics",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 6,
+                "8": 42,
+                "9": 146,
+                "Total exam entries": 195
+              }
+            },
+            {
+              "subject": "Religious Studies",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 1,
+                "8": 6,
+                "9": 9,
+                "Total exam entries": 17
+              }
+            },
+            {
+              "subject": "Spanish",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 2,
+                "6": 0,
+                "7": 3,
+                "8": 14,
+                "9": 17,
+                "Total exam entries": 36
+              }
+            }
+          ],
+          "note": "Full school-published GCSE/IGCSE subject table. Percentages use the school's published headline figures."
+        },
+        "alevel": {
+          "astarPercent": 59.3,
+          "astarAPercent": 92.5
+        },
+        "sources": {
+          "gcse": "https://www.stpaulsschool.org.uk/academic/academic-13-16/exam-results-information/gcse-results/",
+          "alevel": "https://www.stpaulsschool.org.uk/academic/academic-13-16/exam-results-information/a-level-and-pre-u-results/"
+        }
+      }
+    },
+    "Haberdashers' Boys' School": {
+      "2025/26": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 56.2,
+          "grade98Percent": 80.1,
+          "subjectHighlights": [
+            {
+              "subject": "Mathematics",
+              "grade9Percent": 82,
+              "grade98Percent": 93
+            },
+            {
+              "subject": "Sciences and Geography",
+              "grade98Percent": 90
+            },
+            {
+              "subject": "Computer Science",
+              "grade98Percent": 86
+            },
+            {
+              "subject": "History",
+              "grade98Percent": 84
+            },
+            {
+              "subject": "Design & Technology",
+              "grade98Percent": 80
+            },
+            {
+              "subject": "Physics",
+              "grade9Percent": 74
+            },
+            {
+              "subject": "Chemistry",
+              "grade9Percent": 72
+            }
+          ],
+          "note": "Headline 2026 school-published results; full subject counts have not yet been published on the result page."
+        },
+        "alevel": {
+          "astarPercent": 51,
+          "astarAPercent": 83
+        },
+        "sources": {
+          "gcse": "https://www.habselstree.org.uk/boys/whats-on/our-news/gcse-results-2026-celebrating-record-breaking-success-and-exciting-opportunities-ahead/",
+          "alevel": "https://www.habselstree.org.uk/boys/whats-on/our-news/a-level-results-2026-achievement-character-and-impact/"
+        }
+      },
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "totalGradeAwards": 1536,
+          "grade9Count": 752,
+          "grade9Percent": 48.96,
+          "grade98Count": 1139,
+          "grade98Percent": 74.15,
+          "grade97Count": 1362,
+          "grade97Percent": 88.67,
+          "subjectDetails": [
+            {
+              "subject": "Art Graphics",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 2,
+                "6": 2,
+                "7": 3,
+                "8": 1,
+                "9": 0,
+                "Total exam entries": 8
+              }
+            },
+            {
+              "subject": "Biology",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 10,
+                "6": 7,
+                "7": 13,
+                "8": 40,
+                "9": 73,
+                "Total exam entries": 143
+              }
+            },
+            {
+              "subject": "Chemistry",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 2,
+                "6": 4,
+                "7": 16,
+                "8": 35,
+                "9": 92,
+                "Total exam entries": 150
+              }
+            },
+            {
+              "subject": "Classical Greek",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 1,
+                "8": 1,
+                "9": 3,
+                "Total exam entries": 5
+              }
+            },
+            {
+              "subject": "Computer Science",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 4,
+                "6": 13,
+                "7": 9,
+                "8": 13,
+                "9": 24,
+                "Total exam entries": 64
+              }
+            },
+            {
+              "subject": "D&T Resistant Materials",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 4,
+                "7": 6,
+                "8": 9,
+                "9": 17,
+                "Total exam entries": 36
+              }
+            },
+            {
+              "subject": "Drama",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1,
+                "6": 2,
+                "7": 5,
+                "8": 9,
+                "9": 4,
+                "Total exam entries": 21
+              }
+            },
+            {
+              "subject": "English Language",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 1,
+                "4": 0,
+                "5": 3,
+                "6": 11,
+                "7": 40,
+                "8": 50,
+                "9": 51,
+                "Total exam entries": 156
+              }
+            },
+            {
+              "subject": "English Literature",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 1,
+                "4": 2,
+                "5": 5,
+                "6": 24,
+                "7": 38,
+                "8": 38,
+                "9": 48,
+                "Total exam entries": 156
+              }
+            },
+            {
+              "subject": "Fine Art",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 1,
+                "6": 2,
+                "7": 1,
+                "8": 3,
+                "9": 0,
+                "Total exam entries": 8
+              }
+            },
+            {
+              "subject": "French",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 1,
+                "6": 5,
+                "7": 9,
+                "8": 6,
+                "9": 13,
+                "Total exam entries": 35
+              }
+            },
+            {
+              "subject": "Geography",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 2,
+                "6": 6,
+                "7": 15,
+                "8": 34,
+                "9": 67,
+                "Total exam entries": 125
+              }
+            },
+            {
+              "subject": "German",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 1,
+                "6": 4,
+                "7": 8,
+                "8": 16,
+                "9": 24,
+                "Total exam entries": 54
+              }
+            },
+            {
+              "subject": "History",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 0,
+                "6": 4,
+                "7": 10,
+                "8": 22,
+                "9": 51,
+                "Total exam entries": 89
+              }
+            },
+            {
+              "subject": "Latin",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 2,
+                "7": 1,
+                "8": 7,
+                "9": 6,
+                "Total exam entries": 16
+              }
+            },
+            {
+              "subject": "Mathematics",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 3,
+                "7": 8,
+                "8": 30,
+                "9": 115,
+                "Total exam entries": 156
+              }
+            },
+            {
+              "subject": "Music",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 1,
+                "7": 0,
+                "8": 1,
+                "9": 16,
+                "Total exam entries": 18
+              }
+            },
+            {
+              "subject": "Physical Education",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 3,
+                "6": 5,
+                "7": 11,
+                "8": 14,
+                "9": 10,
+                "Total exam entries": 43
+              }
+            },
+            {
+              "subject": "Physics",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 2,
+                "6": 5,
+                "7": 11,
+                "8": 31,
+                "9": 88,
+                "Total exam entries": 139
+              }
+            },
+            {
+              "subject": "Religious Studies",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 0,
+                "6": 2,
+                "7": 6,
+                "8": 12,
+                "9": 27,
+                "Total exam entries": 48
+              }
+            },
+            {
+              "subject": "Russian",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 1,
+                "8": 0,
+                "9": 2,
+                "Total exam entries": 3
+              }
+            },
+            {
+              "subject": "Spanish",
+              "qualification": "school-published GCSE / IGCSE",
+              "grades": {
+                "2": 0,
+                "3": 1,
+                "4": 1,
+                "5": 6,
+                "6": 8,
+                "7": 11,
+                "8": 15,
+                "9": 21,
+                "Total exam entries": 63
+              }
+            }
+          ],
+          "note": "Full Habs Boys GCSE results table, updated 25 November 2025."
+        },
+        "alevel": {
+          "totalGradeAwards": 531,
+          "astarCount": 247,
+          "astarPercent": 46.52,
+          "astarACount": 419,
+          "astarAPercent": 78.91
+        },
+        "sources": {
+          "gcse": "https://www.habselstree.org.uk/boys/wp-content/uploads/sites/2/2025/12/GCSE-Results-2025.pdf",
+          "alevel": "https://www.habselstree.org.uk/boys/wp-content/uploads/sites/2/2025/12/A-Level-Results-2025.pdf"
+        }
+      }
+    }
+  }
+}
