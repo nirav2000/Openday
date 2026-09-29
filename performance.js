@@ -635,16 +635,23 @@
   }
   function completeSubjectPack(s,kind){
     const published=Object.entries(s.publishedResults||{}).sort((a,b)=>yearNumber(b[0])-yearNumber(a[0]));
-    for(const [year,data] of published){const subjects=data?.[kind]?.subjectDetails;if(subjects?.length)return{year,subjects,source:'school-published'}}
-    const subjects=kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]);
-    return{year:subjects.length?'2024/25':'',subjects,source:subjects.length?'DfE':'none'};
+    for(const [year,data] of published){
+      const payload=data?.[kind],subjects=payload?.subjectDetails;
+      if(subjects?.length)return{year,subjects:applyPublishedHighlights(subjects,payload?.subjectHighlights||[],kind),source:'school-published'};
+    }
+    const baseYear='2024/25',base=kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]);
+    const highlights=s.publishedResults?.[baseYear]?.[kind]?.subjectHighlights||[];
+    return{year:base.length?baseYear:'',subjects:applyPublishedHighlights(base,highlights,kind),source:highlights.length?'DfE + school':'DfE'};
   }
-  function groupSubjects(subjects=[]){
+  function groupSubjects(subjects=[],kind='gcse'){
     const groups=new Map();
     for(const subject of subjects){
-      const raw=subjectName(subject),name=subjectFamily(raw),existing=groups.get(name)||{subject:name,qualification:'comparison roll-up',grades:{},components:[]};
+      const raw=subjectRawName(subject),name=subjectFamily(subject,kind),existing=groups.get(name)||{subject:name,qualification:'comparison roll-up',grades:{},components:[],_publishedHighlight:null};
       existing.components.push({...subject,_rawName:raw});
-      for(const [grade,value] of Object.entries(subject.grades||{}))existing.grades[grade]=(Number(existing.grades[grade])||0)+(Number(value)||0);
+      if(subject._publishedHighlight)existing._publishedHighlight={...subject._publishedHighlight};
+      if(qualificationScale(subject)!=='fsmq'){
+        for(const [grade,value] of Object.entries(subject.grades||{}))existing.grades[grade]=(Number(existing.grades[grade])||0)+(Number(value)||0);
+      }
       groups.set(name,existing);
     }
     return groups;
@@ -655,12 +662,37 @@
     const counted=Object.keys(grades).filter(g=>g!=='Total exam entries').reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
     return{grade,count:Number(grades[grade])||0,total,percent:total?100*(Number(grades[grade])||0)/total:null};
   }
+  function publishedHighlightStat(highlight,kind){
+    if(!highlight)return'';
+    if(kind==='gcse'){
+      const bits=[];
+      if(highlight.grade9Percent!==undefined)bits.push('<b>9: '+pct(highlight.grade9Percent)+'</b>');
+      if(highlight.grade98Percent!==undefined)bits.push('<span>9–8: '+pct(highlight.grade98Percent)+'</span>');
+      if(highlight.grade97Percent!==undefined)bits.push('<span>9–7: '+pct(highlight.grade97Percent)+'</span>');
+      return '<span class="compare-stat published-subject-stat">'+bits.join('')+'<span>school published · entries not stated</span></span>';
+    }
+    const bits=[];
+    if(highlight.astarPercent!==undefined)bits.push('<b>A*: '+pct(highlight.astarPercent)+'</b>');
+    if(highlight.astarAPercent!==undefined)bits.push('<span>A*–A: '+pct(highlight.astarAPercent)+'</span>');
+    return '<span class="compare-stat published-subject-stat">'+bits.join('')+'<span>school published · entries not stated</span></span>';
+  }
   function gradeStat(subject,kind){
     if(!subject)return '—';
+    if(subject._publishedHighlight)return publishedHighlightStat(subject._publishedHighlight,kind);
     const grades=subject.grades||{},keys=Object.keys(grades).filter(g=>g!=='Total exam entries');
     const counted=keys.reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
     if(!total)return '—';
-    const top=highestAchieved(grades);
+    const scale=qualificationScale(subject),top=highestAchieved(grades);
+    if(kind==='gcse'&&scale==='fsmq'){
+      return '<span class="compare-stat different-scale"><b>FSMQ · A–D grading</b><span>'+(top?esc(gradeDisplay(top.grade))+': '+pct(top.percent)+' ('+fmt(top.count)+')':'grade detail unavailable')+' · '+fmt(total)+' entries</span></span>';
+    }
+    if(kind==='gcse'&&scale==='letter'){
+      return '<span class="compare-stat different-scale"><b>Different grading scale</b><span>'+(top?esc(gradeDisplay(top.grade))+': '+pct(top.percent)+' ('+fmt(top.count)+')':'grade detail unavailable')+' · '+fmt(total)+' entries</span></span>';
+    }
+    if(kind==='gcse'&&scale==='double-gcse'){
+      const top99=Number(grades['99'])||0,best=top||null;
+      return '<span class="compare-stat"><b>9–9: '+pct(100*top99/total)+'</b><span>double-award outcomes · '+fmt(total)+' entries</span>'+(best&&best.grade!=='99'?'<span class="next-grade">Highest shown: '+esc(gradeDisplay(best.grade))+' · '+pct(best.percent)+' ('+fmt(best.count)+')</span>':'')+'</span>';
+    }
     if(kind==='gcse'){
       const g9=Number(grades['9'])||0,g97=g9+(Number(grades['8'])||0)+(Number(grades['7'])||0);
       const fallback=!g9&&top&&top.grade!=='9'?'<span class="next-grade">Highest: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
