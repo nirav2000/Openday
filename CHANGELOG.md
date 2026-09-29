@@ -6,6 +6,20 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.9.0 — 2026-09-29
+
+- Added **Grade 9 % / # awards** and **Grades 9–7 % / # awards** as default headline columns in the Performance comparison, with sorting by Grade 9 or 9–7 percentage.
+- Derived the top-grade measures from the official DfE 2024/25 subject-grade dataset. The denominator uses total exam entries; Combined Science counts as two GCSE awards. Suppressed top-grade cells are not estimated, so the displayed percentage can be a small underestimate.
+- Reworked subject-level grade counts into highest-to-lowest, colour-coded grade chips for faster scanning.
+- Combined Science double awards now display explicitly as paired outcomes such as **9–8**, **8–8**, **7–6**, with a dashed chip and an explanation rather than looking like an unrelated grading scale.
+- Split generic multi-language subject records by their DfE discount code/group so separate languages no longer overwrite one another's entry totals.
+- Added a **Columns** customiser: show/hide metrics, drag to reorder on desktop, or use left/right controls on touch devices. The chosen layout is remembered on that device and can be reset to the default.
+- Corrected the DfE mapping for **Queen Elizabeth's School, Barnet** to current URN **136290** and made pinned URNs authoritative so similarly named schools cannot contaminate the record.
+- Deepened primary-school research by searching official admissions, school-tour, prospective-parent and Reception 2027 pages rather than relying only on homepage/open-day wording.
+- Added or expanded verified visit information for West Lodge, Earlsmead, Pinner Park, Vaughan, St John Fisher, Cedars Manor, Roxeth, Stanburn, St John's C of E, Weald Rise, Priestmead, Pinner Wood, Whitchurch and St Teresa's, plus visit-by-arrangement information for Aylward, Kenmore Park Junior, St Anselm's, Welldon Park and Whitefriars.
+- Where official pages conflict or do not publish an exact session time/date, Openday now records that uncertainty rather than inventing a value.
+- Regenerated the subscribed calendar after the newly verified primary dates.
+
 ## 2.8.0 — 2026-09-28
 
 - Added whole-school **FSM eligibility** and **EAL** from the January 2026 DfE school census.
