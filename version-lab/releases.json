@@ -210,6 +210,12 @@
       "commit": "dcbff9200b45d47c61ffa8b215f1479ac61c3649",
       "kind": "release",
       "label": "Durable live multi-device sync, clear connection status and richer subject comparisons"
+    },
+    {
+      "version": "2.15.0",
+      "commit": "f974dd82ccb64aa4c41b2b56e1eb9408345cfb05",
+      "kind": "release",
+      "label": "Metric-cell detail affordances, saved school sets, compact status icons and richer GCSE comparison roll-ups"
     }
   ]
 }
