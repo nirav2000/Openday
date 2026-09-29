@@ -1,9 +1,11 @@
 (()=>{
   const $=s=>document.querySelector(s);
-  let doc={schools:[]},filter='all',expanded='';
+  let doc={schools:[]},filter='all',expanded='',sortKey='name',sortDir='asc';
+  const selectedCompare=new Set();
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
+  const shortlisted=new Set(state.shortlistedSchools||[]),rejected=new Set(state.rejectedSchools||[]);
   const layoutKey='openday.performance.columns.v1';
   const DEFAULT_COLUMNS=['school','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
   const COLUMN_LABELS={
@@ -74,6 +76,8 @@
   function matches(s){
     const q=$('#perfSearch').value.trim().toLowerCase();
     if(q&&!(String(s.name)+' '+String(s.area)+' '+String(s.type)).toLowerCase().includes(q))return false;
+    if(filter==='shortlist')return eventFlag(s,shortlisted);
+    if(filter==='rejected')return eventFlag(s,rejected);
     if(filter==='visited')return eventFlag(s,visited);
     if(filter==='booked')return s.eventIds.some(id=>!!booked[id]);
     if(filter==='saved')return eventFlag(s,saved);
@@ -94,6 +98,9 @@
   function score(s,key){
     const m=latestSummary(s);
     if(key==='grade9pct')return m.grade9pct?.value??-Infinity;
+    if(key==='grade9count')return m.grade9count?.value??-Infinity;
+    if(key==='grade97count')return m.grade97count?.value??-Infinity;
+    if(key==='gcseYear')return Number(String(m.a8?.year||s.gcseGradeProfile?.year||'0').replace(/\D/g,''))||0;
     if(key==='grade97pct')return m.grade97pct?.value??-Infinity;
     if(key==='attainment8')return m.a8?.value??-Infinity;
     if(key==='engmath5')return m.em?.value??-Infinity;
@@ -165,13 +172,15 @@
   }
 
   function schoolCell(s,m){
-    const isVisited=eventFlag(s,visited),isSaved=eventFlag(s,saved);
-    return '<td><span class="school-name">'+esc(s.name)+'</span>'+
+    const isVisited=eventFlag(s,visited),isSaved=eventFlag(s,saved),isShort=eventFlag(s,shortlisted),isRejected=eventFlag(s,rejected),checked=selectedCompare.has(s.name);
+    return '<td><div class="school-select-line"><input class="compare-select" type="checkbox" '+(checked?'checked':'')+' aria-label="Select '+esc(s.name)+' for comparison"><span class="school-name">'+esc(s.name)+'</span></div>'+
       '<span class="school-meta">'+esc(s.area||'')+' · '+esc(String(s.type||'').replace('-',' '))+'</span>'+
       '<span class="school-flags">'+
+      (isShort?'<span class="tag shortlist">shortlist</span>':'')+
+      (isRejected?'<span class="tag rejected">rejected</span>':'')+
       (isVisited?'<span class="tag visited">visited</span>':'')+
       (isSaved?'<span class="tag saved">saved</span>':'')+
-      '</span><div class="hover-card">'+hoverText(s,m)+'</div></td>';
+      '</span><div class="school-status-actions"><button type="button" data-school-status="shortlist" class="'+(isShort?'on':'')+'">Shortlist</button><button type="button" data-school-status="rejected" class="'+(isRejected?'on reject':'')+'">Reject</button></div><div class="hover-card">'+hoverText(s,m)+'</div></td>';
   }
 
   function metricCell(id,s,m){
@@ -195,19 +204,46 @@
     return '<td class="metric metric-'+esc(id)+'">'+html+'</td>';
   }
 
+  const sortForColumn=id=>id==='school'?'name':id==='a8'?'attainment8':id==='engmath5'?'engmath5':id==='p8'?'progress8':id;
   function renderHead(){
     const ids=visibleColumnIds();
-    $('#performanceHead').innerHTML=ids.map(id=>'<th data-column="'+esc(id)+'">'+esc(COLUMN_LABELS[id]||id)+'</th>').join('');
+    $('#performanceHead').innerHTML=ids.map(id=>{
+      const key=sortForColumn(id),active=sortKey===key,arrow=active?(sortDir==='asc'?'▲':'▼'):'↕';
+      return '<th data-column="'+esc(id)+'"><button class="sort-head" type="button" data-sort-key="'+esc(key)+'" aria-label="Sort by '+esc(COLUMN_LABELS[id]||id)+'">'+esc(COLUMN_LABELS[id]||id)+' <span>'+arrow+'</span></button></th>';
+    }).join('');
+    document.querySelectorAll('#performanceHead [data-sort-key]').forEach(btn=>btn.onclick=()=>{
+      const key=btn.dataset.sortKey;
+      if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=key==='name'?'asc':'desc'}
+      const sel=$('#perfSort');if(sel&&[...sel.options].some(o=>o.value===key))sel.value=key;
+      render();
+    });
     const table=document.querySelector('.performance-table');
     if(table)table.style.minWidth=Math.max(760,250+(ids.length-1)*105)+'px';
   }
 
+  function savePersonalState(){
+    state.shortlistedSchools=[...shortlisted];
+    state.rejectedSchools=[...rejected];
+    localStorage.setItem('openDayState',JSON.stringify(state));
+    window.OpenDaySync?.push?.();
+  }
+  function setSchoolStatus(s,status){
+    s.eventIds.forEach(id=>{shortlisted.delete(id);rejected.delete(id)});
+    if(status==='shortlist')s.eventIds.forEach(id=>shortlisted.add(id));
+    if(status==='rejected')s.eventIds.forEach(id=>rejected.add(id));
+    savePersonalState();render();
+  }
   function schoolRow(s){
     const m=latestSummary(s),tr=document.createElement('tr');
     tr.className='school-row';
     tr.dataset.school=s.name;
     tr.innerHTML=visibleColumnIds().map(id=>id==='school'?schoolCell(s,m):metricCell(id,s,m)).join('');
-    tr.onclick=()=>{expanded=expanded===s.name?'':s.name;render()};
+    tr.onclick=e=>{
+      if(e.target.closest('.compare-select')||e.target.closest('[data-school-status]'))return;
+      expanded=expanded===s.name?'':s.name;render()
+    };
+    tr.querySelector('.compare-select')?.addEventListener('change',e=>{if(e.target.checked)selectedCompare.add(s.name);else selectedCompare.delete(s.name);updateCompareTray()});
+    tr.querySelectorAll('[data-school-status]').forEach(b=>b.onclick=e=>{e.stopPropagation();setSchoolStatus(s,b.dataset.schoolStatus)});
     return tr;
   }
 
@@ -357,13 +393,35 @@
     });
   }
 
+  function updateCompareTray(){
+    const tray=$('#compareTray');if(!tray)return;
+    tray.hidden=selectedCompare.size===0;
+    $('#compareCount').textContent=selectedCompare.size+' selected';
+    $('#openCompare').disabled=selectedCompare.size<2;
+  }
+  function compareMatrix(){
+    const chosen=(doc.schools||[]).filter(s=>selectedCompare.has(s.name)),ids=visibleColumnIds().filter(id=>id!=='school');
+    if(!chosen.length)return '<p class="muted">Select at least two schools.</p>';
+    return '<div class="compare-scroll"><table class="compare-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+
+      ids.map(id=>'<tr><th>'+esc(COLUMN_LABELS[id]||id)+'</th>'+chosen.map(s=>metricCell(id,s,latestSummary(s)).replace(/^<td[^>]*>|<\/td>$/g,'')).map(v=>'<td>'+v+'</td>').join('')+'</tr>').join('')+
+      '</tbody></table></div>';
+  }
   function render(){
     renderHead();
     let rows=(doc.schools||[]).filter(matches);
-    const sort=$('#perfSort').value;
-    if(sort==='name')rows.sort((a,b)=>a.name.localeCompare(b.name));
-    else if(sort==='absence'||sort==='persistent')rows.sort((a,b)=>score(a,sort)-score(b,sort)||a.name.localeCompare(b.name));
-    else rows.sort((a,b)=>score(b,sort)-score(a,sort)||a.name.localeCompare(b.name));
+    const key=sortKey;
+    if(key==='name')rows.sort((a,b)=>a.name.localeCompare(b.name)*(sortDir==='asc'?1:-1));
+    else{
+      const lowFirst=key==='absence'||key==='persistent';
+      const direction=sortDir==='asc'?1:-1;
+      rows.sort((a,b)=>{
+        const av=score(a,key),bv=score(b,key);
+        if(av===bv)return a.name.localeCompare(b.name);
+        if(!Number.isFinite(av)&&!Number.isFinite(bv))return a.name.localeCompare(b.name);
+        if(!Number.isFinite(av))return 1;if(!Number.isFinite(bv))return -1;
+        return (av-bv)*direction;
+      });
+    }
     $('#perfCount').textContent=rows.length+' school'+(rows.length===1?'':'s');
     const tbody=$('#performanceRows');
     tbody.innerHTML='';
@@ -372,6 +430,7 @@
       if(expanded===s.name)tbody.append(detailRow(s));
     });
     $('#performanceEmpty').hidden=rows.length>0;
+    updateCompareTray();
   }
 
   function renderMethodology(){
@@ -380,12 +439,16 @@
   }
 
   $('#perfSearch').oninput=render;
-  $('#perfSort').onchange=render;
+  $('#perfSort').onchange=e=>{sortKey=e.target.value;sortDir=(sortKey==='name'||sortKey==='absence'||sortKey==='persistent')?'asc':'desc';render()};
   $('#columnsButton').onclick=()=>{renderColumnDialog();$('#columnDialog').showModal()};
   $('#closeColumns').onclick=()=>$('#columnDialog').close();
   $('#doneColumns').onclick=()=>$('#columnDialog').close();
   $('#resetColumns').onclick=()=>{columnState={order:[...METRIC_COLUMNS],hidden:[]};applyColumnLayout()};
   $('#columnDialog').onclick=e=>{if(e.target.id==='columnDialog')e.target.close()};
+  $('#clearCompare').onclick=()=>{selectedCompare.clear();render()};
+  $('#openCompare').onclick=()=>{if(selectedCompare.size<2)return;$('#compareMatrix').innerHTML=compareMatrix();$('#compareDialog').showModal()};
+  $('#closeCompare').onclick=()=>$('#compareDialog').close();
+  $('#compareDialog').onclick=e=>{if(e.target.id==='compareDialog')e.target.close()};
   $('#perfChips').onclick=e=>{
     const f=e.target.dataset.filter;
     if(!f)return;
