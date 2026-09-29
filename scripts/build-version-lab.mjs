@@ -32,7 +32,8 @@ const releases=[
   {version:'2.7.0',commit:'10d2ac6f06d710f85f77df728ece8c96f8af8ff0',kind:'release',label:'Official DfE academic performance comparison dashboard'},
   {version:'2.7.1',commit:'e02eae661168f4bc86b3772c92f0d00f11ede8f7',kind:'release',label:'Ark event split and performance comparison refinements'},
   {version:'2.8.0',commit:'f242408c3df97dd5d760dca23be73c7e0a19c040',kind:'release',label:'Whole-school context and attendance comparison'},
-  {version:'2.9.0',commit:'f5e3ed1b7ae81da7b2f01e72ea49081a0740e09a',kind:'release',label:'Grade 9 focus, configurable performance columns and deeper primary tour research'}
+  {version:'2.9.0',commit:'f5e3ed1b7ae81da7b2f01e72ea49081a0740e09a',kind:'release',label:'Grade 9 focus, configurable performance columns and deeper primary tour research'},
+  {version:'2.10.0',commit:'8c7a1db7aaebdca77e756ce63f50a7ddfc3ba34e',kind:'release',label:'UB5-centred primary catalogue and distance filters'}
 ];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
