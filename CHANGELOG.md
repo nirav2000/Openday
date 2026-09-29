@@ -6,6 +6,20 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.12.0 — 2026-09-29
+
+- Repaired **Version Lab** so release history remains visible even when the deployment-time snapshot builder has not injected its static cards; the release registry is now committed separately and the Pages build still generates exact Git snapshots.
+- Added **2025/26 school-published exam results** where verified and newer than the current DfE school-level release, with source provenance kept alongside the DfE record.
+- Corrected **St Paul's School**: the old 0% Grade 9 display came from a materially incomplete DfE independent-school extract (only 10 GCSE entries in the subject file), so verified school-published results now take priority.
+- Corrected **Haberdashers' Boys' School** using the school's full published GCSE table, including Mathematics and the complete 2024/25 subject totals, rather than the partial DfE subject extract.
+- Added a **Year** selector so the performance table can switch between latest available and individual academic years.
+- Made the **whole column heading clickable** for sorting, added hover explanations for every heading, and made headings draggable to change column order.
+- Clarified that **Grade 9 # / Grades 9–7 # are grade awards, not pupils**.
+- Added count ↔ percentage switching to GCSE and A-level subject-grade detail and improved grade-chip alignment.
+- Moved the desktop school hover card beside the row rather than underneath the school name and suppress it while the row is expanded.
+- Tightened expanded performance cards so short sections such as attendance no longer stretch to match taller neighbouring cards.
+- Suppressed incomplete DfE KS4 headline measures for independent schools when a fuller verified school-published result set is available.
+
 ## 2.11.0 — 2026-09-29
 
 - Made every visible Performance table heading directly clickable for sorting, with ascending/descending arrows and sensible defaults (higher-first for attainment; lower-first for absence).
