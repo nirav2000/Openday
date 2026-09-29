@@ -315,9 +315,10 @@
   function renderHead(){
     const ids=visibleColumnIds();
     $('#performanceHead').innerHTML=ids.map(id=>{
-      const key=sortForColumn(id),active=sortKey===key,mark=active?(sortDir==='asc'?'▴':'▾'):'';
+      const key=sortForColumn(id),active=sortKey===key;
+      const sortLabel=!active?'':key==='name'?(sortDir==='asc'?'A–Z':'Z–A'):(sortDir==='asc'?'low–high':'high–low');
       const draggable=id!=='school';
-      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+(mark?' <span class="sort-mark">'+mark+'</span>':'')+'</span></th>';
+      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+(sortLabel?' <span class="sort-mark">'+sortLabel+'</span>':'')+'</span></th>';
     }).join('');
     let dragged='',didDrag=false;
     document.querySelectorAll('#performanceHead th[data-sort-key]').forEach(th=>{
