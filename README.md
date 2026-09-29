@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.10.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.11.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -133,3 +133,14 @@ Primary-school discovery now uses **UB5 6QX** as its default origin. The catalog
 Distance is calculated from the postcode centroid using OS National Grid coordinates and is intended for fast filtering, not route planning. The Primary view exposes ≤1, ≤2, ≤3 and ≤5 mile filters plus Any distance; the default is ≤5 miles and the preference is stored on the device. Live Google Maps driving and public-transport links remain the appropriate source for real journey distances/times.
 
 The generated radius fields include school URN, postcode, `distanceMiles` and `distanceFromPostcode`. The builder at `scripts/expand-primary-radius.py` preserves manually researched records and their stable IDs, and de-duplicates by school URN/website when merging location data.
+
+
+## Decision workflow and side-by-side comparison
+
+The Performance table supports direct click-to-sort headings, including toggleable ascending/descending order. Rows can be selected with checkboxes and opened in a side-by-side comparison matrix that follows the user's current visible-column layout.
+
+A separate operational school status now sits alongside the existing qualitative **My view** labels: **Shortlist**, **Rejected**, or no status. These states appear as filters and badges in both the main app and Performance page and are part of private memorable-token sync.
+
+## Note merge-difference resolution
+
+When two devices independently change the same school note, the conflict is still preserved rather than overwritten. The Notes control now shows a visible conflict count. Affected notes are highlighted, and **Review & merge notes** opens both device/cloud versions with one-click device/cloud selection, Combine both, or manual editing. Saving marks that specific merge conflict resolved and syncs the chosen merged text through the normal transactional save path.
