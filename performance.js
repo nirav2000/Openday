@@ -527,33 +527,74 @@
   }
   const compareGroup=id=>['gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8'].includes(id)?'gcse':id==='alevel'?'alevel':['fsm','wholeEal','sen','ehcp'].includes(id)?'context':['absence','persistent'].includes(id)?'attendance':'';
   const subjectName=s=>(s.subject==='Other Modern Languages'&&s.subjectGroup?s.subjectGroup:s.subject)+(s.subjectGroup&&s.subjectGroup!==s.subject&&s.subject!=='Other Modern Languages'?' · '+s.subjectGroup:'');
+  const subjectFamily=raw=>{
+    const source=String(raw||'').trim(),k=source.toLowerCase().replace(/&/g,'and').replace(/\s+/g,' ');
+    if(['art','fine art','art graphics','art and design','graphic communication'].includes(k))return'Art & Design';
+    if(['mathematics','maths','math'].includes(k))return'Mathematics';
+    if(['computer science','computing'].includes(k))return'Computer Science';
+    if(k==='design and technology'||k==='d&t resistant materials'||k==='design & technology'||k==='resistant materials')return'Design & Technology';
+    if(k==='classical greek'||k==='greek')return'Greek';
+    if(k==='physical education'||k==='pe')return'Physical Education';
+    if(k==='religious studies'||k==='religion and philosophy'||k==='religion, philosophy and ethics')return'Religious Studies';
+    if(k==='english'||k==='english language')return'English Language';
+    return source;
+  };
   function completeSubjectPack(s,kind){
     const published=Object.entries(s.publishedResults||{}).sort((a,b)=>yearNumber(b[0])-yearNumber(a[0]));
     for(const [year,data] of published){const subjects=data?.[kind]?.subjectDetails;if(subjects?.length)return{year,subjects,source:'school-published'}}
     const subjects=kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]);
     return{year:subjects.length?'2024/25':'',subjects,source:subjects.length?'DfE':'none'};
   }
-  function gradeStat(subject,kind){
+  function groupSubjects(subjects=[]){
+    const groups=new Map();
+    for(const subject of subjects){
+      const raw=subjectName(subject),name=subjectFamily(raw),existing=groups.get(name)||{subject:name,qualification:'comparison roll-up',grades:{},components:[]};
+      existing.components.push({...subject,_rawName:raw});
+      for(const [grade,value] of Object.entries(subject.grades||{}))existing.grades[grade]=(Number(existing.grades[grade])||0)+(Number(value)||0);
+      groups.set(name,existing);
+    }
+    return groups;
+  }
+  function highestAchieved(grades={}){
+    const keys=Object.keys(grades).filter(g=>g!=='Total exam entries'&&(Number(grades[g])||0)>0).sort((a,b)=>gradeRank(b)-gradeRank(a));
+    const grade=keys[0];if(!grade)return null;
+    const counted=Object.keys(grades).filter(g=>g!=='Total exam entries').reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
+    return{grade,count:Number(grades[grade])||0,total,percent:total?100*(Number(grades[grade])||0)/total:null};
+  }
+  function gradeStat(subject,kind,{compact=false}={}){
     if(!subject)return '—';
     const grades=subject.grades||{},keys=Object.keys(grades).filter(g=>g!=='Total exam entries');
     const counted=keys.reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
     if(!total)return '—';
+    const top=highestAchieved(grades);
     if(kind==='gcse'){
       const g9=Number(grades['9'])||0,g97=g9+(Number(grades['8'])||0)+(Number(grades['7'])||0);
-      return '<span class="compare-stat"><b>9: '+pct(100*g9/total)+'</b><span>9–7: '+pct(100*g97/total)+' · '+fmt(total)+' entries</span></span>';
+      const fallback=!g9&&top&&top.grade!=='9'?'<span class="next-grade">Highest shown: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
+      return '<span class="compare-stat"><b>9: '+pct(100*g9/total)+'</b><span>9–7: '+pct(100*g97/total)+' · '+fmt(total)+' entries</span>'+fallback+'</span>';
     }
     const astar=Number(grades['A*'])||0,a=Number(grades['A'])||0;
-    return '<span class="compare-stat"><b>A*: '+pct(100*astar/total)+'</b><span>A*–A: '+pct(100*(astar+a)/total)+' · '+fmt(total)+' entries</span></span>';
+    const fallback=!astar&&top&&String(top.grade).toUpperCase()!=='A*'?'<span class="next-grade">Highest shown: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
+    return '<span class="compare-stat"><b>A*: '+pct(100*astar/total)+'</b><span>A*–A: '+pct(100*(astar+a)/total)+' · '+fmt(total)+' entries</span>'+fallback+'</span>';
+  }
+  function componentDetail(group,kind){
+    if(!group?.components?.length)return'';
+    const needs=group.components.length>1||group.components.some(x=>subjectFamily(x._rawName)!==x._rawName);
+    if(!needs)return'';
+    return '<details class="component-details"><summary>'+group.components.length+' source subject'+(group.components.length===1?'':'s')+'</summary>'+group.components.map(x=>'<div><b>'+esc(x._rawName)+'</b>'+gradeStat(x,kind,{compact:true})+'</div>').join('')+'</details>';
   }
   function subjectDrilldown(chosen,kind){
-    const packs=chosen.map(s=>({school:s,pack:completeSubjectPack(s,kind)}));
-    const names=[...new Set(packs.flatMap(x=>x.pack.subjects.map(subjectName)))].sort((a,b)=>a.localeCompare(b));
+    const packs=chosen.map(s=>{const pack=completeSubjectPack(s,kind);return{school:s,pack,groups:groupSubjects(pack.subjects)}});
+    const names=[...new Set(packs.flatMap(x=>[...x.groups.keys()]))].sort((a,b)=>a.localeCompare(b));
     const title=kind==='gcse'?'GCSE subject comparison':'A-level subject comparison';
-    const intro='Latest complete subject-level result set available for each school; the year is shown beneath each school name.';
+    const intro='Latest complete subject-level result set available for each school. Similar labels are rolled up only in this comparison view; expand a grouped subject to see the original source labels.';
     if(!names.length)return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>No subject detail available</h3></div></div>';
     return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
       '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+esc(x.school.name)+'<small>'+esc(x.pack.year)+(x.pack.source==='school-published'?' · school':' · DfE')+'</small></th>').join('')+'</tr></thead><tbody>'+
-      names.map(name=>'<tr><th>'+esc(name)+'</th>'+packs.map(x=>'<td>'+gradeStat(x.pack.subjects.find(s=>subjectName(s)===name),kind)+'</td>').join('')+'</tr>').join('')+
+      names.map(name=>{
+        const variants=[...new Set(packs.flatMap(x=>(x.groups.get(name)?.components||[]).map(s=>s._rawName)))].sort();
+        const subjectHead=variants.length>1||variants[0]!==name?'<details class="subject-family"><summary>'+esc(name)+'</summary><span>Comparison roll-up only: '+variants.map(esc).join(' · ')+'</span></details>':esc(name);
+        return '<tr><th>'+subjectHead+'</th>'+packs.map(x=>{const group=x.groups.get(name);return'<td>'+gradeStat(group,kind)+componentDetail(group,kind)+'</td>'}).join('')+'</tr>';
+      }).join('')+
       '</tbody></table></div>';
   }
   function contextDrilldown(chosen){
