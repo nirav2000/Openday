@@ -238,13 +238,31 @@
     return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Students</th><th>Avg grade</th><th>APS</th><th>Value added</th><th>≥AAB</th></tr></thead><tbody>'+(rows||'<tr><td colspan="6">No DfE A-level institution data found.</td></tr>')+'</tbody></table></div>';
   }
 
+  function gradeChips(subject,kind){
+    const grades=subject.grades||{},total=grades['Total exam entries'];
+    const keys=Object.keys(grades).filter(g=>g!=='Total exam entries').sort((a,b)=>gradeRank(b)-gradeRank(a));
+    const chips=keys.map(g=>{
+      const display=gradeDisplay(g),paired=kind==='gcse'&&/combined science/i.test(subject.subject||'')&&/^\d{2}$/.test(String(g));
+      const title=paired?'Combined Science double award: grades '+display.replace('–',' and '):'Grade '+display;
+      return '<span class="grade-chip tone-'+gradeTone(g)+(paired?' double-award':'')+'" title="'+esc(title)+'"><span class="grade-label">'+esc(display)+'</span><span class="grade-count">'+fmt(grades[g])+'</span></span>';
+    }).join('');
+    return '<div class="grade-chip-row">'+(chips||'<span class="muted">No unsuppressed grade counts</span>')+(total!==undefined?'<span class="entry-total">'+fmt(total)+' entries</span>':'')+'</div>';
+  }
   function subjectTable(subjects=[],kind){
     if(!subjects.length)return '<p class="muted">No subject-level record matched this school in the latest DfE file.</p>';
-    const rows=subjects.map(s=>{
-      const grades=Object.entries(s.grades||{}).map(([g,v])=>g+': '+v).join(' · ');
-      return '<tr><td>'+esc(s.subject)+'</td><td>'+esc(s.qualification||'')+'</td><td>'+esc(grades||'—')+'</td></tr>';
-    }).join('');
-    return '<div class="subject-wrap"><table class="subject-table"><thead><tr><th>Subject</th><th>'+(kind==='gcse'?'Qualification':'')+'</th><th>Published grade counts</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+    const rows=subjects.map(s=>'<tr><td>'+esc(s.subject)+'</td><td>'+esc(s.qualification||'')+'</td><td>'+gradeChips(s,kind)+'</td></tr>').join('');
+    const note=kind==='gcse'?'<p class="muted grade-note"><b>How to read this:</b> grades run from 9 downward. Combined Science is a double award, so a chip such as <span class="grade-chip tone-top double-award"><span class="grade-label">9–8</span><span class="grade-count">12</span></span> means 12 pupils received the paired grades 9 and 8.</p>':'';
+    return note+'<div class="subject-wrap"><table class="subject-table"><thead><tr><th>Subject</th><th>'+(kind==='gcse'?'Qualification':'')+'</th><th>Published grade counts · highest first</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+
+  function gradeProfileDetail(s){
+    const g=s.gcseGradeProfile||{};
+    if(g.grade9Percent===null||g.grade9Percent===undefined)return '<p class="muted">No comparable published GCSE grade-count profile is available.</p>';
+    return '<div class="context-grid grade-profile-grid">'+
+      '<div><small>Grade 9</small><b>'+pct(g.grade9Percent)+'</b><span>'+fmt(g.grade9Count)+' published grade awards</span></div>'+
+      '<div><small>Grades 9–7</small><b>'+pct(g.grade97Percent)+'</b><span>'+fmt(g.grade97Count)+' published grade awards</span></div>'+
+      '<div><small>Published awards counted</small><b>'+fmt(g.totalGradeAwards)+'</b><span>'+esc(g.year||'2024/25')+'</span></div>'+
+      '</div><p class="warning">These percentages are derived from the DfE subject-level grade counts that are actually published. Suppressed grade cells are not silently estimated. Combined Science paired grades count as two GCSE grade awards.</p>';
   }
 
   function contextDetail(s){
@@ -275,9 +293,10 @@
     const tr=document.createElement('tr');
     tr.className='detail-row';
     const td=document.createElement('td');
-    td.colSpan=12;
+    td.colSpan=visibleColumnIds().length;
     td.innerHTML=
       '<div class="detail-panel"><div class="detail-grid">'+
+      '<section class="detail-card"><h3>GCSE top-grade profile · latest published year</h3>'+gradeProfileDetail(s)+'</section>'+
       '<section class="detail-card"><h3>GCSE / KS4 history</h3>'+gcseHistory(s)+'</section>'+
       '<section class="detail-card"><h3>A-level history</h3>'+alevelHistory(s)+'</section>'+
       '<section class="detail-card"><h3>Whole-school context · 2025/26</h3>'+contextDetail(s)+'</section>'+
