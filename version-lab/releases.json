@@ -204,6 +204,12 @@
       "commit": "ff4ae16f14106592e6092e6a66f225de65be7e54",
       "kind": "release",
       "label": "Word-level merge review, rich Version Lab comparisons and performance metric drill-downs"
+    },
+    {
+      "version": "2.14.0",
+      "commit": "PENDING_MAIN_HEAD",
+      "kind": "release",
+      "label": "Durable live multi-device sync, clear connection status and richer subject comparisons"
     }
   ]
 }
