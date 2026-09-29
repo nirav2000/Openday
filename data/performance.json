@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T06:15:31.161186+00:00",
+  "generatedAt": "2026-09-29T06:24:08.620034+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
@@ -24144,40 +24144,41 @@
         {
           "subject": "Art and Design",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "2": 7,
-            "3": 9,
             "4": 24,
             "5": 32,
             "6": 22,
             "7": 18,
             "8": 5,
             "9": 4,
-            "Total exam entries": 121
+            "Total exam entries": 121,
+            "2": 7,
+            "3": 9
           }
         },
         {
           "subject": "Biology",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "3": 1,
-            "4": 15,
-            "5": 37,
-            "6": 24,
             "7": 9,
             "8": 4,
             "9": 4,
             "Total exam entries": 95,
+            "3": 1,
+            "4": 15,
+            "5": 37,
+            "6": 24,
             "U": 1
           }
         },
         {
           "subject": "Business",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "Total exam entries": 26,
             "1": 3,
             "2": 6,
             "3": 5,
@@ -24185,7 +24186,6 @@
             "5": 6,
             "6": 1,
             "7": 1,
-            "Total exam entries": 26,
             "X": 1
           }
         },
@@ -24206,24 +24206,30 @@
         {
           "subject": "Chemistry",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "8": 6,
+            "9": 2,
+            "Total exam entries": 95,
             "2": 1,
             "4": 28,
             "5": 28,
             "6": 22,
             "7": 7,
-            "8": 6,
-            "9": 2,
-            "Total exam entries": 95,
             "U": 1
           }
         },
         {
           "subject": "Combined Science",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "77": 1,
+            "87": 2,
+            "88": 1,
+            "98": 4,
+            "99": 11,
+            "Total exam entries": 259,
             "11": 4,
             "21": 4,
             "22": 10,
@@ -24236,10 +24242,6 @@
             "65": 13,
             "66": 5,
             "76": 9,
-            "77": 1,
-            "87": 2,
-            "88": 1,
-            "Total exam entries": 259,
             "U": 13,
             "X": 7
           }
@@ -24247,17 +24249,18 @@
         {
           "subject": "Computer Science",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "7": 3,
+            "9": 6,
+            "Total exam entries": 29,
             "1": 1,
             "2": 6,
             "3": 3,
             "4": 2,
             "5": 7,
             "6": 5,
-            "7": 3,
             "8": 1,
-            "Total exam entries": 29,
             "X": 1
           }
         },
@@ -24278,17 +24281,18 @@
         {
           "subject": "Design & Technology",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "6": 7,
+            "7": 5,
+            "8": 2,
+            "9": 32,
+            "Total exam entries": 34,
             "1": 2,
             "2": 2,
             "3": 4,
             "4": 7,
-            "5": 5,
-            "6": 7,
-            "7": 5,
-            "8": 2,
-            "Total exam entries": 34
+            "5": 5
           }
         },
         {
@@ -24308,13 +24312,23 @@
           }
         },
         {
+          "subject": "Economics",
+          "qualification": "GCSE",
+          "pupils": 193,
+          "grades": {
+            "5": 1,
+            "6": 4,
+            "7": 20,
+            "8": 52,
+            "9": 101,
+            "Total exam entries": 178
+          }
+        },
+        {
           "subject": "English Language",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "1": 7,
-            "2": 14,
-            "3": 61,
             "4": 83,
             "5": 72,
             "6": 58,
@@ -24322,6 +24336,9 @@
             "8": 11,
             "9": 7,
             "Total exam entries": 360,
+            "1": 7,
+            "2": 14,
+            "3": 61,
             "U": 2,
             "X": 10
           }
@@ -24329,18 +24346,18 @@
         {
           "subject": "English Literature",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "1": 20,
-            "2": 29,
             "3": 41,
-            "4": 63,
             "5": 75,
             "6": 69,
             "7": 24,
             "8": 11,
             "9": 8,
             "Total exam entries": 354,
+            "1": 20,
+            "2": 29,
+            "4": 63,
             "U": 8,
             "X": 6
           }
@@ -24365,36 +24382,36 @@
         {
           "subject": "French",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "1": 1,
-            "2": 2,
-            "3": 5,
-            "4": 5,
             "5": 20,
-            "6": 1,
             "7": 6,
             "8": 6,
             "9": 4,
             "Total exam entries": 51,
+            "1": 1,
+            "2": 2,
+            "3": 5,
+            "4": 5,
+            "6": 1,
             "X": 1
           }
         },
         {
           "subject": "Geography",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "1": 7,
-            "2": 15,
-            "3": 25,
-            "4": 17,
             "5": 28,
             "6": 19,
             "7": 14,
             "8": 11,
             "9": 2,
             "Total exam entries": 140,
+            "1": 7,
+            "2": 15,
+            "3": 25,
+            "4": 17,
             "U": 1,
             "X": 1
           }
@@ -24402,8 +24419,14 @@
         {
           "subject": "German",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "4": 3,
+            "5": 4,
+            "6": 5,
+            "7": 19,
+            "8": 29,
+            "9": 77,
             "Total exam entries": 1
           }
         },
@@ -24426,37 +24449,48 @@
         {
           "subject": "History",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "1": 21,
-            "2": 18,
             "3": 31,
-            "4": 20,
             "5": 19,
             "6": 22,
             "7": 20,
             "8": 14,
             "9": 5,
             "Total exam entries": 176,
+            "1": 21,
+            "2": 18,
+            "4": 20,
             "U": 1,
             "X": 5
           }
         },
         {
+          "subject": "Latin",
+          "qualification": "GCSE",
+          "pupils": 193,
+          "grades": {
+            "7": 3,
+            "8": 13,
+            "9": 34,
+            "Total exam entries": 50
+          }
+        },
+        {
           "subject": "Mathematics",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "1": 10,
-            "2": 26,
-            "3": 57,
-            "4": 98,
-            "5": 62,
             "6": 50,
             "7": 28,
             "8": 15,
             "9": 4,
             "Total exam entries": 363,
+            "1": 10,
+            "2": 26,
+            "3": 57,
+            "4": 98,
+            "5": 62,
             "U": 3,
             "X": 10
           }
@@ -24493,18 +24527,46 @@
         {
           "subject": "Music",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
+            "6": 2,
+            "7": 1,
+            "8": 7,
+            "9": 8,
+            "Total exam entries": 6,
             "3": 2,
             "4": 1,
-            "5": 3,
-            "Total exam entries": 6
+            "5": 3
+          }
+        },
+        {
+          "subject": "Music",
+          "qualification": "Grade 6 Performing Arts Graded Examination",
+          "pupils": 193,
+          "grades": {
+            "Total exam entries": 3
+          }
+        },
+        {
+          "subject": "Music",
+          "qualification": "Grade 7 Performing Arts Graded Examination",
+          "pupils": 193,
+          "grades": {
+            "Total exam entries": 5
+          }
+        },
+        {
+          "subject": "Music",
+          "qualification": "Grade 8 Performing Arts Graded Examination",
+          "pupils": 193,
+          "grades": {
+            "Total exam entries": 1
           }
         },
         {
           "subject": "Other Modern Languages",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
             "Total exam entries": 1
           }
@@ -24528,16 +24590,16 @@
         {
           "subject": "Physics",
           "qualification": "GCSE",
-          "pupils": 368,
+          "pupils": 193,
           "grades": {
-            "3": 2,
-            "4": 14,
-            "5": 34,
-            "6": 21,
             "7": 11,
             "8": 8,
             "9": 2,
             "Total exam entries": 94,
+            "3": 2,
+            "4": 14,
+            "5": 34,
+            "6": 21,
             "U": 2
           }
         },
@@ -24607,6 +24669,14 @@
             "Total exam entries": 1,
             "U": 1,
             "X": 2
+          }
+        },
+        {
+          "subject": "Statistics",
+          "qualification": "GCSE",
+          "pupils": 193,
+          "grades": {
+            "Total exam entries": 1
           }
         }
       ],
@@ -24986,37 +25056,13 @@
           "anySenPercent": 17.7
         },
         "absence": {
-          "201718": {
-            "enrolments": 1210,
-            "overallAbsencePercent": 7.87326,
-            "authorisedAbsencePercent": 6.21302,
-            "unauthorisedAbsencePercent": 1.66024,
-            "persistentAbsencePercent": 21.4876,
-            "severeAbsencePercent": 1.73554
-          },
-          "202324": {
-            "enrolments": 1187,
-            "overallAbsencePercent": 13.32516,
-            "authorisedAbsencePercent": 7.7703,
-            "unauthorisedAbsencePercent": 5.55486,
-            "persistentAbsencePercent": 38.83741,
-            "severeAbsencePercent": 6.73968
-          },
-          "202021": {
-            "enrolments": 1211,
-            "overallAbsencePercent": 7.47189,
-            "authorisedAbsencePercent": 3.97824,
-            "unauthorisedAbsencePercent": 3.49365,
-            "persistentAbsencePercent": 20.06606,
-            "severeAbsencePercent": 2.97275
-          },
-          "201819": {
-            "enrolments": 1211,
-            "overallAbsencePercent": 7.50706,
-            "authorisedAbsencePercent": 5.17022,
-            "unauthorisedAbsencePercent": 2.33684,
-            "persistentAbsencePercent": 21.38728,
-            "severeAbsencePercent": 2.8076
+          "201314": {
+            "enrolments": 900,
+            "overallAbsencePercent": 2.75381,
+            "authorisedAbsencePercent": 2.70473,
+            "unauthorisedAbsencePercent": 0.04908,
+            "persistentAbsencePercent": 2.77778,
+            "severeAbsencePercent": 0.22222
           },
           "201516": {
             "enrolments": 1159,
@@ -25026,6 +25072,30 @@
             "persistentAbsencePercent": 15.44435,
             "severeAbsencePercent": 1.03538
           },
+          "201415": {
+            "enrolments": 907,
+            "overallAbsencePercent": 3.00996,
+            "authorisedAbsencePercent": 2.94216,
+            "unauthorisedAbsencePercent": 0.0678,
+            "persistentAbsencePercent": 3.41786,
+            "severeAbsencePercent": 0.22051
+          },
+          "202425": {
+            "enrolments": 1132,
+            "overallAbsencePercent": 12.67967,
+            "authorisedAbsencePercent": 6.8366,
+            "unauthorisedAbsencePercent": 5.84307,
+            "persistentAbsencePercent": 35.15901,
+            "severeAbsencePercent": 8.83392
+          },
+          "201718": {
+            "enrolments": 1210,
+            "overallAbsencePercent": 7.87326,
+            "authorisedAbsencePercent": 6.21302,
+            "unauthorisedAbsencePercent": 1.66024,
+            "persistentAbsencePercent": 21.4876,
+            "severeAbsencePercent": 1.73554
+          },
           "201617": {
             "enrolments": 1210,
             "overallAbsencePercent": 6.23677,
@@ -25033,6 +25103,14 @@
             "unauthorisedAbsencePercent": 1.29034,
             "persistentAbsencePercent": 16.94215,
             "severeAbsencePercent": 1.15702
+          },
+          "202324": {
+            "enrolments": 960,
+            "overallAbsencePercent": 3.33307,
+            "authorisedAbsencePercent": 2.85316,
+            "unauthorisedAbsencePercent": 0.4799,
+            "persistentAbsencePercent": 2.29167,
+            "severeAbsencePercent": 0.3125
           },
           "202122": {
             "enrolments": 1224,
@@ -25042,13 +25120,21 @@
             "persistentAbsencePercent": 51.63399,
             "severeAbsencePercent": 6.61765
           },
-          "202425": {
-            "enrolments": 1132,
-            "overallAbsencePercent": 12.67967,
-            "authorisedAbsencePercent": 6.8366,
-            "unauthorisedAbsencePercent": 5.84307,
-            "persistentAbsencePercent": 35.15901,
-            "severeAbsencePercent": 8.83392
+          "202021": {
+            "enrolments": 953,
+            "overallAbsencePercent": 2.46387,
+            "authorisedAbsencePercent": 2.37108,
+            "unauthorisedAbsencePercent": 0.09279,
+            "persistentAbsencePercent": 2.62329,
+            "severeAbsencePercent": 0.0
+          },
+          "201819": {
+            "enrolments": 1211,
+            "overallAbsencePercent": 7.50706,
+            "authorisedAbsencePercent": 5.17022,
+            "unauthorisedAbsencePercent": 2.33684,
+            "persistentAbsencePercent": 21.38728,
+            "severeAbsencePercent": 2.8076
           },
           "202223": {
             "enrolments": 1203,
@@ -25067,11 +25153,11 @@
       },
       "gcseGradeProfile": {
         "year": "2024/25",
-        "grade9Count": 50,
-        "grade9Percent": 1.7,
-        "grade97Count": 419,
-        "grade97Percent": 14.2,
-        "totalGradeAwards": 2958,
+        "grade9Count": 334,
+        "grade9Percent": 9.8,
+        "grade97Count": 851,
+        "grade97Percent": 25.0,
+        "totalGradeAwards": 3409,
         "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
