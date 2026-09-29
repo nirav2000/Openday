@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.9.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.10.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -124,3 +124,12 @@ The **Columns** control lets each device show, hide and reorder comparison metri
 ## Primary open-event discovery
 
 Primary-school research now searches each tracked school's official admissions/tours pages using terms including school tours, open days, open mornings, prospective parents and Reception 2027. Fixed dates and recurring tour patterns are added only when supported by the school's own site. If the official pages conflict or publish a visit option without a date, Openday keeps the conflict/unknown visible rather than guessing.
+
+
+## Primary catalogue centred on UB5 6QX
+
+Primary-school discovery now uses **UB5 6QX** as its default origin. The catalogue combines the previously researched primary records with open, Reception-capable London primary/all-through schools within a five-mile straight-line radius, even when those schools sit in neighbouring boroughs.
+
+Distance is calculated from the postcode centroid using OS National Grid coordinates and is intended for fast filtering, not route planning. The Primary view exposes ≤1, ≤2, ≤3 and ≤5 mile filters plus Any distance; the default is ≤5 miles and the preference is stored on the device. Live Google Maps driving and public-transport links remain the appropriate source for real journey distances/times.
+
+The generated radius fields include school URN, postcode, `distanceMiles` and `distanceFromPostcode`. The builder at `scripts/expand-primary-radius.py` preserves manually researched records and their stable IDs, and de-duplicates by school URN/website when merging location data.
