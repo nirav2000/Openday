@@ -107,8 +107,26 @@
   const mergeThreeWay=(baseInput,localInput,remoteInput)=>{
     const base=normalise(baseInput),local=normalise(localInput),remote=normalise(remoteInput),now=new Date().toISOString();
     const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
-    const conflicts={...(remote.mergeConflicts||{}),...(local.mergeConflicts||{})};
     const has=(obj,key)=>Object.prototype.hasOwnProperty.call(obj||{},key);
+    const mergeConflictRecords=(baseMap={},localMap={},remoteMap={})=>{
+      const out={},keys=new Set([...Object.keys(baseMap),...Object.keys(localMap),...Object.keys(remoteMap)]);
+      for(const key of keys){
+        const bp=has(baseMap,key),lp=has(localMap,key),rp=has(remoteMap,key),bv=bp?baseMap[key]:null,lv=lp?localMap[key]:null,rv=rp?remoteMap[key]:null;
+        const lc=lp!==bp||(lp&&bp&&!same(lv,bv)),rc=rp!==bp||(rp&&bp&&!same(rv,bv));
+        let present,value;
+        if(lc&&!rc){present=lp;value=lv}
+        else if(!lc&&rc){present=rp;value=rv}
+        else if(lc&&rc){
+          if(lp===rp&&(!lp||same(lv,rv))){present=lp;value=lv}
+          else if(lv?.status==='resolved'&&rv?.status!=='resolved'){present=true;value=lv}
+          else if(rv?.status==='resolved'&&lv?.status!=='resolved'){present=true;value=rv}
+          else{present=lp;value=lv}
+        }else{present=rp;value=rv}
+        if(present)out[key]=value;
+      }
+      return out;
+    };
+    const conflicts=mergeConflictRecords(base.mergeConflicts,local.mergeConflicts,remote.mergeConflicts);
     const mergeMap=(field,baseMap={},localMap={},remoteMap={})=>{
       const out={},keys=new Set([...Object.keys(baseMap),...Object.keys(localMap),...Object.keys(remoteMap)]);
       for(const key of keys){
@@ -211,7 +229,12 @@
   }
 
   function applyRemote(remote){
-    const local=normalise(readLocal()),merged=normalise(mergeStates(local,remote)),mergedJSON=JSON.stringify(merged),remoteJSON=JSON.stringify(normalise(remote||{}));
+    const local=normalise(readLocal()),cleanRemote=normalise(remote||{});
+    let merged;
+    if(lastRemote){
+      try{merged=normalise(mergeThreeWay(JSON.parse(lastRemote),local,cleanRemote))}catch{merged=normalise(mergeStates(local,cleanRemote))}
+    }else merged=normalise(mergeStates(local,cleanRemote));
+    const mergedJSON=JSON.stringify(merged),remoteJSON=JSON.stringify(cleanRemote);
     if(JSON.stringify(local)!==mergedJSON){
       writeLocal(merged);
       window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
@@ -270,6 +293,7 @@
       const state=normalise(mergeStates(readLocal(),ownerData?.state||{}));state.updatedAt=new Date().toISOString();writeLocal(state);
       window.FirebaseUsageMonitor?.write(1,'token-capability-create','openday','kk-syllabus','(default)');
       await FStore.setDoc(candidate,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state:cleanForFirestore(state),clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()});
+      if(ownerConnected())await FStore.setDoc(ref,{app:'openday',state:cleanForFirestore(state),activeTokenHash:hash,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
       merge={merged:state,mergedJSON:JSON.stringify(state),remoteJSON:JSON.stringify(state),needsCloudWrite:false};created=true;
     }
     tokenRef=candidate;activeTokenHash=hash;
@@ -336,6 +360,7 @@
         finalMerged.updatedAt=new Date().toISOString();
         if(tokenRef){
           tx.set(target,{state:cleanForFirestore(finalMerged),clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+          if(ownerConnected())tx.set(ref,{app:'openday',state:cleanForFirestore(finalMerged),activeTokenHash:activeTokenHash,clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
         }else{
           tx.set(target,{app:'openday',state:cleanForFirestore(finalMerged),clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
         }
