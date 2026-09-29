@@ -147,3 +147,5 @@ button.grade-chip{appearance:none;background:transparent;padding:0;cursor:pointe
   .saved-set-bar select{flex:1}
   .headline-grade{grid-template-columns:30px minmax(56px,max-content);min-width:92px}
 }
+
+.compare-tray[hidden]{display:none!important}
