@@ -278,15 +278,37 @@
   function gcseCohort(s,year){
     const displayYear=yearLabel(year),published=s.publishedResults?.[displayYear]?.gcse?.subjectDetails||[];
     if(published.length){
-      const maths=published.filter(x=>/^(mathematics|maths)$/i.test(String(x.subject||'').trim())).map(examEntryTotal).filter(Boolean);
+      const maths=published.filter(x=>/^(mathematics|maths)$/i.test(String(x.subject||'').trim())&&!/fsmq|additional/i.test(String(x.qualification||'')+' '+String(x.subjectGroup||''))).map(examEntryTotal).filter(Boolean);
       const english=published.filter(x=>/^(english|english language)$/i.test(String(x.subject||'').trim())).map(examEntryTotal).filter(Boolean);
       const m=Math.max(0,...maths),e=Math.max(0,...english);
       if(m&&e&&m===e)return{value:m,inferred:false,source:'matching Mathematics and English entry totals'};
       if(m||e)return{value:Math.max(m,e),inferred:true,source:'compulsory-subject entry total'};
     }
     const dfe=s.gcse?.[compactYear(displayYear)]?.pupils;
-    if(Number(dfe)>0&&!(s.type==='independent'&&s.publishedResults?.[displayYear]))return{value:Number(dfe),inferred:false,source:'DfE KS4 cohort'};
+    if(Number(dfe)>0&&!(s.type==='independent'&&s.publishedResults?.[displayYear]?.gcse?.subjectDetails?.length))return{value:Number(dfe),inferred:false,source:'DfE KS4 cohort'};
     return null;
+  }
+  function alevelCohort(s,year){
+    const displayYear=yearLabel(year),published=s.publishedResults?.[displayYear]?.alevel||{};
+    const publishedCount=Number(published.candidates??published.students??published.pupils);
+    if(publishedCount>0)return{value:publishedCount,inferred:false,source:'school-published A-level candidates'};
+    const dfe=s.alevel?.[compactYear(displayYear)]?.students;
+    if(Number(dfe)>0)return{value:Number(dfe),inferred:false,source:'DfE A-level cohort'};
+    return null;
+  }
+  const cohortLine=(s,kind,year)=>{
+    const cohort=kind==='gcse'?gcseCohort(s,year):alevelCohort(s,year),label=kind==='gcse'?'GCSE':'A-level';
+    return '<small class="school-cohort-line">'+esc(yearLabel(year)||'—')+' · '+(cohort?(cohort.inferred?'≈':'')+fmt(cohort.value)+' '+label+' pupils':label+' cohort —')+'</small>';
+  };
+  const qualificationSchoolHeader=(s,kind,year)=>esc(s.name)+cohortLine(s,kind,year);
+  function mainCompareSchoolHeader(s){
+    const m=latestSummary(s),profile=s.gcseGradeProfile||{};
+    const gy=yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||'');
+    const ay=yearLabel(m.alPub?.year||m.al?.year||'');
+    let html=esc(s.name);
+    if(gy)html+=cohortLine(s,'gcse',gy);
+    if(ay)html+=cohortLine(s,'alevel',ay);
+    return html;
   }
 
   function metricCell(id,s,m){
