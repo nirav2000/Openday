@@ -92,7 +92,13 @@ def total_ks4(row):
 
 # KS4 performance, including school matching and 3-year history.
 for row in open_csv(DATASETS['ks4_performance']):
-    tracked=URN_TO_TRACKED.get(str(row.get('school_urn') or '')) or candidate_to_group.get(norm(row.get('school_name')))
+    row_urn=str(row.get('school_urn') or '')
+    tracked=URN_TO_TRACKED.get(row_urn)
+    if not tracked:
+        candidate=candidate_to_group.get(norm(row.get('school_name')))
+        if candidate and candidate in URN_OVERRIDES and URN_OVERRIDES[candidate]!=row_urn:
+            continue
+        tracked=candidate
     if not tracked: continue
     item=results[tracked]
     item['urn']=row.get('school_urn') or item['urn']
@@ -179,7 +185,13 @@ for item in results.values():
 
 # A-level performance history.
 for row in open_csv(DATASETS['alevel_performance']):
-    tracked=urn_to_name.get(str(row.get('school_urn') or '')) or candidate_to_group.get(norm(row.get('school_name')))
+    row_urn=str(row.get('school_urn') or '')
+    tracked=urn_to_name.get(row_urn) or URN_TO_TRACKED.get(row_urn)
+    if not tracked:
+        candidate=candidate_to_group.get(norm(row.get('school_name')))
+        if candidate and candidate in URN_OVERRIDES and URN_OVERRIDES[candidate]!=row_urn:
+            continue
+        tracked=candidate
     if not tracked: continue
     item=results[tracked]
     item['urn']=row.get('school_urn') or item['urn']
