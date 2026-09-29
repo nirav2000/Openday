@@ -1,6 +1,6 @@
 {
-  "version": "2.10.0",
+  "version": "2.11.0",
   "released": "2026-09-29",
   "channel": "main",
-  "summary": "Centre the primary-school catalogue on UB5 6QX, expand it across borough boundaries to Reception-capable schools within five miles, and add persistent 1/2/3/5-mile distance filters."
+  "summary": "Add sortable performance-table headings, multi-school side-by-side comparison, synced shortlist/reject workflow, robust Notes/Sync controls, and interactive note merge-conflict resolution."
 }
