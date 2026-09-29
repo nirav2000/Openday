@@ -59,6 +59,8 @@
     rejectedSchools:Array.isArray(data?.rejectedSchools)?data.rejectedSchools:[],
     schoolDecisions:data?.schoolDecisions&&typeof data.schoolDecisions==='object'?data.schoolDecisions:{},
     eventOverrides:data?.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},
+    performanceSchoolSets:data?.performanceSchoolSets&&typeof data.performanceSchoolSets==='object'?cleanForFirestore(data.performanceSchoolSets):{},
+    performanceCompareOrder:Array.isArray(data?.performanceCompareOrder)?data.performanceCompareOrder.map(String):[],
     mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?cleanForFirestore(data.mergeConflicts):{},
     updatedAt:asIso(data?.updatedAt)
   });
@@ -100,6 +102,8 @@
       rejectedSchools:[...new Set([...(b.rejectedSchools||[]),...(a.rejectedSchools||[])])],
       schoolDecisions:mergeMap('schoolDecisions',a.schoolDecisions,b.schoolDecisions),
       eventOverrides:mergeMap('eventOverrides',a.eventOverrides,b.eventOverrides),
+      performanceSchoolSets:mergeMap('performanceSchoolSets',a.performanceSchoolSets,b.performanceSchoolSets),
+      performanceCompareOrder:aNewer?a.performanceCompareOrder:b.performanceCompareOrder,
       mergeConflicts:conflicts,
       updatedAt:new Date(Math.max(at,bt)||Date.now()).toISOString()
     };
@@ -174,6 +178,11 @@
       rejectedSchools:mergeMembership(base.rejectedSchools,local.rejectedSchools,remote.rejectedSchools),
       schoolDecisions:mergeMap('schoolDecisions',base.schoolDecisions,local.schoolDecisions,remote.schoolDecisions),
       eventOverrides:mergeMap('eventOverrides',base.eventOverrides,local.eventOverrides,remote.eventOverrides),
+      performanceSchoolSets:mergeMap('performanceSchoolSets',base.performanceSchoolSets,local.performanceSchoolSets,remote.performanceSchoolSets),
+      performanceCompareOrder:(()=>{
+        const b=base.performanceCompareOrder||[],l=local.performanceCompareOrder||[],r=remote.performanceCompareOrder||[];
+        const lc=!same(l,b),rc=!same(r,b);return lc&&!rc?l:!lc&&rc?r:lc&&rc?l:r;
+      })(),
       mergeConflicts:conflicts,
       updatedAt:now
     };
