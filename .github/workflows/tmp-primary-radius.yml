@@ -1,37 +1,28 @@
-name: Temporary discover primary schools near UB5 6QX
+name: Temporary build primary radius catalogue
 on:
   push:
     branches: [main]
     paths:
+      - 'scripts/expand-primary-radius.py'
       - '.github/workflows/tmp-primary-radius.yml'
 permissions:
-  contents: read
+  contents: write
 jobs:
-  discover:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Query London Schools layer
+      - uses: actions/checkout@v4
+      - name: Expand primary catalogue from UB5 6QX
+        run: python3 scripts/expand-primary-radius.py
+      - name: Commit generated catalogue
         run: |
-          python3 - <<'PY'
-          import json, math, urllib.parse, urllib.request
-          x0,y0=511286,184166
-          where="establishmentstatus__name_='Open' AND phaseofeducation__name_ IN ('Primary','All-through')"
-          params={
-            'f':'json','where':where,'outFields':'urn,establishmentname,postcode,schoolwebsite,town,phaseofeducation__name_,typeofestablishment__name_,easting,northing,statutorylowage,statutoryhighage',
-            'returnGeometry':'false','resultRecordCount':'2000'
-          }
-          url='https://gis.london.gov.uk/arcgis/rest/services/apps/ESOL_webmap/MapServer/3/query?'+urllib.parse.urlencode(params)
-          req=urllib.request.Request(url,headers={'User-Agent':'Openday/1.0'})
-          data=json.load(urllib.request.urlopen(req,timeout=60))
-          out=[]
-          for f in data.get('features',[]):
-            a=f.get('attributes',{})
-            try:x=float(a.get('easting')); y=float(a.get('northing'))
-            except:continue
-            miles=math.hypot(x-x0,y-y0)/1609.344
-            if miles<=5.0 and 'special' not in str(a.get('typeofestablishment__name_','')).lower():
-              a['distanceMiles']=round(miles,2); out.append(a)
-          out.sort(key=lambda r:(r['distanceMiles'],r.get('establishmentname') or ''))
-          print(json.dumps(out,indent=2))
-          print('COUNT',len(out))
-          PY
+          if git diff --quiet -- data/primary-schools.json; then
+            echo "No catalogue change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/primary-schools.json
+          git commit -m "Expand primary catalogue around UB5 6QX"
+          git pull --rebase origin main
+          git push origin HEAD:main
