@@ -1,8 +1,13 @@
 (()=>{
   const $=s=>document.querySelector(s);
-  let doc={schools:[]},filter='all',expanded='',sortKey='name',sortDir='asc',selectedYear='latest';
+  let doc={schools:[]},filter='all',expanded='',sortKey='name',sortDir='asc',selectedYear='latest',activeSchoolSet='';
   const selectedCompare=new Set();
   const subjectMode={gcse:'count',alevel:'count'};
+  const schoolSetKey='openday.performance.schoolSets.v1',compareOrderKey='openday.performance.compareOrder.v1';
+  const loadJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||'null')??fallback}catch{return fallback}};
+  let schoolSets=loadJson(schoolSetKey,{}),compareOrder=loadJson(compareOrderKey,[]);
+  if(!schoolSets||Array.isArray(schoolSets)||typeof schoolSets!=='object')schoolSets={};
+  if(!Array.isArray(compareOrder))compareOrder=[];
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
@@ -146,6 +151,7 @@
   function matches(s){
     const q=$('#perfSearch').value.trim().toLowerCase();
     if(q&&!(String(s.name)+' '+String(s.area)+' '+String(s.type)).toLowerCase().includes(q))return false;
+    if(activeSchoolSet&&!(schoolSets[activeSchoolSet]||[]).includes(s.name))return false;
     if(filter==='shortlist')return eventFlag(s,shortlisted);
     if(filter==='rejected')return eventFlag(s,rejected);
     if(filter==='visited')return eventFlag(s,visited);
@@ -250,20 +256,42 @@
 
   function schoolCell(s,m){
     const isVisited=eventFlag(s,visited),isSaved=eventFlag(s,saved),isShort=eventFlag(s,shortlisted),isRejected=eventFlag(s,rejected),checked=selectedCompare.has(s.name);
-    return '<td><div class="school-select-line"><input class="compare-select" type="checkbox" '+(checked?'checked':'')+' aria-label="Select '+esc(s.name)+' for comparison"><span class="school-name">'+esc(s.name)+'</span></div>'+
-      '<span class="school-meta">'+esc(s.area||'')+' · '+esc(String(s.type||'').replace('-',' '))+'</span>'+
-      '<span class="school-flags">'+
-      (isShort?'<span class="tag shortlist">shortlist</span>':'')+
-      (isRejected?'<span class="tag rejected">rejected</span>':'')+
-      (isVisited?'<span class="tag visited">visited</span>':'')+
-      (isSaved?'<span class="tag saved">saved</span>':'')+
-      '</span><div class="school-status-actions"><button type="button" data-school-status="shortlist" class="'+(isShort?'on':'')+'">Shortlist</button><button type="button" data-school-status="rejected" class="'+(isRejected?'on reject':'')+'">Reject</button></div><div class="hover-card">'+hoverText(s,m)+'</div></td>';
+    return '<td class="school-cell"><div class="school-select-line"><input class="compare-select" type="checkbox" '+(checked?'checked':'')+' aria-label="Select '+esc(s.name)+' for comparison"><span class="school-name">'+esc(s.name)+'</span><span class="school-icons">'+
+      (isSaved?'<span class="school-state-icon saved-icon" title="Saved" aria-label="Saved">♥</span>':'')+
+      (isVisited?'<span class="school-state-icon visited-icon" title="Visited" aria-label="Visited">✓</span>':'')+
+      '</span></div>'+
+      '<div class="school-meta-line"><span class="school-meta">'+esc(s.area||'')+' · '+esc(String(s.type||'').replace('-',' '))+'</span><span class="school-status-actions">'+
+      '<button type="button" data-school-status="shortlist" class="status-icon '+(isShort?'on':'')+'" title="'+(isShort?'Remove from shortlist':'Add to shortlist')+'" aria-label="'+(isShort?'Remove from shortlist':'Add to shortlist')+'">'+(isShort?'★':'☆')+'</button>'+
+      '<button type="button" data-school-status="rejected" class="status-icon '+(isRejected?'on reject':'')+'" title="'+(isRejected?'Remove rejection':'Reject school')+'" aria-label="'+(isRejected?'Remove rejection':'Reject school')+'">⊘</button>'+
+      '</span></div><div class="hover-card">'+hoverText(s,m)+'</div></td>';
+  }
+
+  const examEntryTotal=subject=>{
+    const g=subject?.grades||{},declared=Number(g['Total exam entries'])||0;
+    const counted=Object.entries(g).filter(([k])=>k!=='Total exam entries').reduce((n,[,v])=>n+(Number(v)||0),0);
+    return Math.max(declared,counted);
+  };
+  function gcseCohort(s,year){
+    const displayYear=yearLabel(year),published=s.publishedResults?.[displayYear]?.gcse?.subjectDetails||[];
+    if(published.length){
+      const maths=published.filter(x=>/^(mathematics|maths)$/i.test(String(x.subject||'').trim())).map(examEntryTotal).filter(Boolean);
+      const english=published.filter(x=>/^(english|english language)$/i.test(String(x.subject||'').trim())).map(examEntryTotal).filter(Boolean);
+      const m=Math.max(0,...maths),e=Math.max(0,...english);
+      if(m&&e&&m===e)return{value:m,inferred:false,source:'matching Mathematics and English entry totals'};
+      if(m||e)return{value:Math.max(m,e),inferred:true,source:'compulsory-subject entry total'};
+    }
+    const dfe=s.gcse?.[compactYear(displayYear)]?.pupils;
+    if(Number(dfe)>0&&!(s.type==='independent'&&s.publishedResults?.[displayYear]))return{value:Number(dfe),inferred:false,source:'DfE KS4 cohort'};
+    return null;
   }
 
   function metricCell(id,s,m){
     const profile=s.gcseGradeProfile||{};
     let html='—';
-    if(id==='gcseYear')html=esc(yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||''));
+    if(id==='gcseYear'){
+      const year=yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||''),cohort=gcseCohort(s,year);
+      html='<span class="gcse-year-cell"><b>'+esc(year||'—')+'</b><span title="'+esc(cohort?.source||'Cohort size not published in the available source')+'">'+(cohort?(cohort.inferred?'≈':'')+fmt(cohort.value)+' pupils':'cohort —')+'</span></span>';
+    }
     else if(id==='grade9pct')html=m.grade9pct?'<span class="headline-grade grade-chip tone-top"><span class="grade-label">9</span><span class="grade-count">'+pct(m.grade9pct.value)+'</span></span>':'—';
     else if(id==='grade9count')html=m.grade9count?fmt(m.grade9count.value):'—';
     else if(id==='grade97pct')html=m.grade97pct?'<span class="headline-grade grade-chip tone-high"><span class="grade-label">9–7</span><span class="grade-count">'+pct(m.grade97pct.value)+'</span></span>':'—';
@@ -287,9 +315,9 @@
   function renderHead(){
     const ids=visibleColumnIds();
     $('#performanceHead').innerHTML=ids.map(id=>{
-      const key=sortForColumn(id),active=sortKey===key,arrow=active?(sortDir==='asc'?'▲':'▼'):'↕';
+      const key=sortForColumn(id),active=sortKey===key,mark=active?(sortDir==='asc'?'▴':'▾'):'';
       const draggable=id!=='school';
-      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+' <span>'+arrow+'</span></span></th>';
+      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+(mark?' <span class="sort-mark">'+mark+'</span>':'')+'</span></th>';
     }).join('');
     let dragged='',didDrag=false;
     document.querySelectorAll('#performanceHead th[data-sort-key]').forEach(th=>{
@@ -343,7 +371,11 @@
       if(e.target.closest('.compare-select')||e.target.closest('[data-school-status]'))return;
       expanded=expanded===s.name?'':s.name;render()
     };
-    tr.querySelector('.compare-select')?.addEventListener('change',e=>{if(e.target.checked)selectedCompare.add(s.name);else selectedCompare.delete(s.name);updateCompareTray()});
+    tr.querySelector('.compare-select')?.addEventListener('change',e=>{
+      if(e.target.checked){selectedCompare.add(s.name);if(!compareOrder.includes(s.name)){compareOrder.push(s.name);localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder))}}
+      else selectedCompare.delete(s.name);
+      updateCompareTray();
+    });
     tr.querySelectorAll('[data-school-status]').forEach(b=>b.onclick=e=>{e.stopPropagation();setSchoolStatus(s,b.dataset.schoolStatus)});
     return tr;
   }
@@ -525,19 +557,36 @@
     $('#compareCount').textContent=selectedCompare.size+' selected';
     $('#openCompare').disabled=selectedCompare.size<2;
   }
-  const compareGroup=id=>['gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8'].includes(id)?'gcse':id==='alevel'?'alevel':['fsm','wholeEal','sen','ehcp'].includes(id)?'context':['absence','persistent'].includes(id)?'attendance':'';
+  const detailKind=id=>['grade9pct','grade9count','grade97pct','grade97count'].includes(id)?'gcse-subjects':['a8','engmath5','p8'].includes(id)?'gcse-history':id==='alevel'?'alevel':['fsm','wholeEal','sen','ehcp'].includes(id)?'context':['absence','persistent'].includes(id)?'attendance':'';
   const subjectName=s=>(s.subject==='Other Modern Languages'&&s.subjectGroup?s.subjectGroup:s.subject)+(s.subjectGroup&&s.subjectGroup!==s.subject&&s.subject!=='Other Modern Languages'?' · '+s.subjectGroup:'');
   const subjectFamily=raw=>{
     const source=String(raw||'').trim(),k=source.toLowerCase().replace(/&/g,'and').replace(/\s+/g,' ');
-    if(['art','fine art','art graphics','art and design','graphic communication'].includes(k))return'Art & Design';
-    if(['mathematics','maths','math'].includes(k))return'Mathematics';
-    if(['computer science','computing'].includes(k))return'Computer Science';
-    if(k==='design and technology'||k==='d&t resistant materials'||k==='design & technology'||k==='resistant materials')return'Design & Technology';
-    if(k==='classical greek'||k==='greek')return'Greek';
-    if(k==='physical education'||k==='pe')return'Physical Education';
-    if(k==='religious studies'||k==='religion and philosophy'||k==='religion, philosophy and ethics')return'Religious Studies';
-    if(k==='english'||k==='english language')return'English Language';
-    return source;
+    if(/art|photograph|fine art|graphic communication/.test(k))return'Art & Other';
+    if(/ancient history|classical civil|classical greek|greek \(classic\)|^greek$|^latin$/.test(k))return'Classics';
+    if(k==='chinese')return'Chinese';
+    if(k==='french'||k.includes('french language'))return'French';
+    if(k==='spanish'||k.includes('spanish language'))return'Spanish';
+    if(k==='german'||k.includes('german language'))return'German';
+    if(/arabic|bengali|gujarati|hebrew|italian|japanese|persian|polish|portuguese|punjabi|russian|turkish|urdu|other modern languages/.test(k))return'Other Language';
+    if(/^english($| language)/.test(k))return'English Language';
+    if(/english lit/.test(k))return'English Literature';
+    if(/mathematics|maths/.test(k))return'Mathematics';
+    if(/chemistry/.test(k))return'Chemistry';
+    if(/biology/.test(k))return'Biology';
+    if(/physics/.test(k)&&!k.includes('electronics'))return'Physics';
+    if(/combined science|science double award/.test(k))return'Combined Science';
+    if(/other sciences|astronomy|geology|electronics \(physics\)/.test(k))return'Other Science';
+    if(/computer science|^computing$/.test(k))return'Computer Science';
+    if(/design and technology|design & technology|d&t|d & t|resistant materials|product design|electronics$|engineering/.test(k))return'Design & Technology';
+    if(/drama|speech & drama/.test(k))return'Drama';
+    if(/music/.test(k))return'Music';
+    if(/physical education|sports studies|^sports($| ·)/.test(k))return'Physical Education';
+    if(/food preparation|food technology|hospitality|catering/.test(k))return'Food & Nutrition';
+    if(/film studies|media|multimedia/.test(k))return'Media & Film';
+    if(/religious studies|religion/.test(k))return'Religious Studies';
+    if(/social studies|psychology|sociology/.test(k))return'Social Sciences';
+    if(/information and communication technology|computer appreciation/.test(k))return'ICT';
+    return source.replace(/ · .+$/,'');
   };
   function completeSubjectPack(s,kind){
     const published=Object.entries(s.publishedResults||{}).sort((a,b)=>yearNumber(b[0])-yearNumber(a[0]));
@@ -561,7 +610,7 @@
     const counted=Object.keys(grades).filter(g=>g!=='Total exam entries').reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
     return{grade,count:Number(grades[grade])||0,total,percent:total?100*(Number(grades[grade])||0)/total:null};
   }
-  function gradeStat(subject,kind,{compact=false}={}){
+  function gradeStat(subject,kind){
     if(!subject)return '—';
     const grades=subject.grades||{},keys=Object.keys(grades).filter(g=>g!=='Total exam entries');
     const counted=keys.reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
@@ -569,43 +618,48 @@
     const top=highestAchieved(grades);
     if(kind==='gcse'){
       const g9=Number(grades['9'])||0,g97=g9+(Number(grades['8'])||0)+(Number(grades['7'])||0);
-      const fallback=!g9&&top&&top.grade!=='9'?'<span class="next-grade">Highest shown: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
+      const fallback=!g9&&top&&top.grade!=='9'?'<span class="next-grade">Highest: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
       return '<span class="compare-stat"><b>9: '+pct(100*g9/total)+'</b><span>9–7: '+pct(100*g97/total)+' · '+fmt(total)+' entries</span>'+fallback+'</span>';
     }
     const astar=Number(grades['A*'])||0,a=Number(grades['A'])||0;
-    const fallback=!astar&&top&&String(top.grade).toUpperCase()!=='A*'?'<span class="next-grade">Highest shown: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
+    const fallback=!astar&&top&&String(top.grade).toUpperCase()!=='A*'?'<span class="next-grade">Highest: '+esc(gradeDisplay(top.grade))+' · '+pct(top.percent)+' ('+fmt(top.count)+')</span>':'';
     return '<span class="compare-stat"><b>A*: '+pct(100*astar/total)+'</b><span>A*–A: '+pct(100*(astar+a)/total)+' · '+fmt(total)+' entries</span>'+fallback+'</span>';
   }
-  function componentDetail(group,kind){
-    if(!group?.components?.length)return'';
-    const needs=group.components.length>1||group.components.some(x=>subjectFamily(x._rawName)!==x._rawName);
-    if(!needs)return'';
-    return '<details class="component-details"><summary>'+group.components.length+' source subject'+(group.components.length===1?'':'s')+'</summary>'+group.components.map(x=>'<div><b>'+esc(x._rawName)+'</b>'+gradeStat(x,kind,{compact:true})+'</div>').join('')+'</details>';
+  const chosenSchools=()=>{
+    const byName=new Map((doc.schools||[]).map(s=>[s.name,s])),index=new Map(compareOrder.map((name,i)=>[name,i]));
+    return [...selectedCompare].map(name=>byName.get(name)).filter(Boolean).sort((a,b)=>(index.has(a.name)?index.get(a.name):1e9)-(index.has(b.name)?index.get(b.name):1e9)||a.name.localeCompare(b.name));
+  };
+  function rollupDetailRow(name,packs,index,kind){
+    const any=packs.some(x=>(x.groups.get(name)?.components||[]).length>1||(x.groups.get(name)?.components||[]).some(s=>subjectFamily(s._rawName)!==s._rawName));
+    if(!any)return'';
+    return '<tr class="subject-component-row" data-family-detail="'+index+'" hidden><td colspan="'+(packs.length+1)+'"><div class="rollup-detail-grid">'+packs.map(x=>{
+      const components=x.groups.get(name)?.components||[];
+      return '<section><h4>'+esc(x.school.name)+'</h4>'+(components.length?components.map(s=>'<div class="source-subject-row"><b>'+esc(s._rawName)+'</b>'+gradeStat(s,kind)+'</div>').join(''):'<span class="muted">No '+esc(name)+' entry</span>')+'</section>';
+    }).join('')+'</div></td></tr>';
   }
   function subjectDrilldown(chosen,kind){
     const packs=chosen.map(s=>{const pack=completeSubjectPack(s,kind);return{school:s,pack,groups:groupSubjects(pack.subjects)}});
     const names=[...new Set(packs.flatMap(x=>[...x.groups.keys()]))].sort((a,b)=>a.localeCompare(b));
     const title=kind==='gcse'?'GCSE subject comparison':'A-level subject comparison';
-    const intro='Latest complete subject-level result set available for each school. Similar labels are rolled up only in this comparison view; expand a grouped subject to see the original source labels.';
+    const intro='Similar subject labels are combined only for comparison. Counts are summed before percentages are calculated; source records are never averaged or altered. Select a grouped subject to see every underlying subject and its original figures.';
     if(!names.length)return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>No subject detail available</h3></div></div>';
+    const rows=names.map((name,i)=>{
+      const variants=[...new Set(packs.flatMap(x=>(x.groups.get(name)?.components||[]).map(s=>s._rawName)))],grouped=variants.length>1||variants.some(v=>subjectFamily(v)!==v);
+      const label=grouped?'<button type="button" class="subject-family-toggle" data-family-toggle="'+i+'" aria-expanded="false">'+esc(name)+' <span>⌄</span></button>':esc(name);
+      const main='<tr><th>'+label+'</th>'+packs.map(x=>'<td>'+gradeStat(x.groups.get(name),kind)+'</td>').join('')+'</tr>';
+      return main+rollupDetailRow(name,packs,i,kind);
+    }).join('');
     return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
-      '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+esc(x.school.name)+'<small>'+esc(x.pack.year)+(x.pack.source==='school-published'?' · school':' · DfE')+'</small></th>').join('')+'</tr></thead><tbody>'+
-      names.map(name=>{
-        const variants=[...new Set(packs.flatMap(x=>(x.groups.get(name)?.components||[]).map(s=>s._rawName)))].sort();
-        const subjectHead=variants.length>1||variants[0]!==name?'<details class="subject-family"><summary>'+esc(name)+'</summary><span>Comparison roll-up only: '+variants.map(esc).join(' · ')+'</span></details>':esc(name);
-        return '<tr><th>'+subjectHead+'</th>'+packs.map(x=>{const group=x.groups.get(name);return'<td>'+gradeStat(group,kind)+componentDetail(group,kind)+'</td>'}).join('')+'</tr>';
-      }).join('')+
-      '</tbody></table></div>';
+      '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+esc(x.school.name)+'<small>'+esc(x.pack.year)+(x.pack.source==='school-published'?' · school':' · DfE')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  function gcseHistoryDrilldown(chosen,id){
+    const labels={a8:'Attainment 8',engmath5:'English & maths 5+',p8:'Progress 8'},field={a8:'attainment8',engmath5:'englishMaths5Plus',p8:'progress8'}[id];
+    const yearSet=new Set();chosen.forEach(s=>Object.keys(s.gcse||{}).forEach(y=>yearSet.add(yearLabel(y))));
+    const ys=[...yearSet].sort((a,b)=>yearNumber(b)-yearNumber(a));
+    return '<div class="compare-drill-head"><div><p class="eyebrow">GCSE HISTORY</p><h3>'+esc(labels[id]||id)+'</h3><p>Year-by-year school-level values for the selected metric.</p></div><button type="button" data-close-drill>Close detail</button></div><div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Year</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+ys.map(y=>'<tr><th>'+esc(y)+'</th>'+chosen.map(s=>{const d=s.gcse?.[compactYear(y)],v=d?.[field];return'<td>'+(v===null||v===undefined?'—':id==='engmath5'?pct(v):fmt(v))+'</td>'}).join('')+'</tr>').join('')+'</tbody></table></div>';
   }
   function contextDrilldown(chosen){
-    const rows=[
-      ['Pupils',s=>s.context?.pupilCharacteristics?.headcount],
-      ['FSM eligible',s=>s.context?.pupilCharacteristics?.fsmPercent,true],
-      ['EAL',s=>s.context?.pupilCharacteristics?.ealPercent,true],
-      ['SEN support',s=>s.context?.sen?.senSupportPercent,true],
-      ['EHCP',s=>s.context?.sen?.ehcpPercent,true],
-      ['Any SEN',s=>s.context?.sen?.anySenPercent,true]
-    ];
+    const rows=[['Pupils',s=>s.context?.pupilCharacteristics?.headcount],['FSM eligible',s=>s.context?.pupilCharacteristics?.fsmPercent,true],['EAL',s=>s.context?.pupilCharacteristics?.ealPercent,true],['SEN support',s=>s.context?.sen?.senSupportPercent,true],['EHCP',s=>s.context?.sen?.ehcpPercent,true],['Any SEN',s=>s.context?.sen?.anySenPercent,true]];
     return '<div class="compare-drill-head"><div><p class="eyebrow">WHOLE-SCHOOL CONTEXT</p><h3>Context behind the headline metrics</h3></div><button type="button" data-close-drill>Close detail</button></div><div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(([label,get,isPct])=>'<tr><th>'+label+'</th>'+chosen.map(s=>'<td>'+((v=>v===null||v===undefined?'—':isPct?pct(v):fmt(v))(get(s)))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
   }
   function attendanceDrilldown(chosen){
@@ -614,29 +668,70 @@
     return '<div class="compare-drill-head"><div><p class="eyebrow">ATTENDANCE</p><h3>Attendance history</h3></div><button type="button" data-close-drill>Close detail</button></div><div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Year</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+ys.map(y=>'<tr><th>'+esc(yearLabel(y))+'</th>'+chosen.map(s=>{const d=s.context?.absence?.[y];return '<td>'+(d?'<span class="compare-stat"><b>Absence '+pct(d.overallAbsencePercent)+'</b><span>Persistent '+pct(d.persistentAbsencePercent)+' · severe '+pct(d.severeAbsencePercent)+'</span></span>':'—')+'</td>'}).join('')+'</tr>').join('')+'</tbody></table></div>';
   }
   function compareDrilldown(id){
-    const chosen=(doc.schools||[]).filter(s=>selectedCompare.has(s.name)),group=compareGroup(id);
-    if(group==='gcse')return subjectDrilldown(chosen,'gcse');
-    if(group==='alevel')return subjectDrilldown(chosen,'alevel');
-    if(group==='context')return contextDrilldown(chosen);
-    if(group==='attendance')return attendanceDrilldown(chosen);
+    const chosen=chosenSchools(),kind=detailKind(id);
+    if(kind==='gcse-subjects')return subjectDrilldown(chosen,'gcse');
+    if(kind==='gcse-history')return gcseHistoryDrilldown(chosen,id);
+    if(kind==='alevel')return subjectDrilldown(chosen,'alevel');
+    if(kind==='context')return contextDrilldown(chosen);
+    if(kind==='attendance')return attendanceDrilldown(chosen);
     return '<p class="muted">No deeper comparison is available for this metric.</p>';
   }
+  function bindSubjectRollups(host){
+    host.querySelectorAll('[data-family-toggle]').forEach(button=>button.onclick=()=>{
+      const row=host.querySelector('[data-family-detail="'+button.dataset.familyToggle+'"]');if(!row)return;
+      const open=row.hidden;row.hidden=!open;button.setAttribute('aria-expanded',String(open));button.querySelector('span').textContent=open?'⌃':'⌄';
+    });
+  }
+  function saveCompareOrder(names){compareOrder=[...names,...compareOrder.filter(x=>!names.includes(x))];localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder))}
   function bindCompareMatrix(){
     const host=$('#compareMatrix');if(!host)return;
-    host.querySelectorAll('[data-compare-metric]').forEach(row=>row.onclick=e=>{
-      if(e.target.closest('a,button'))return;
-      const detail=host.querySelector('#compareDrilldown');
-      detail.innerHTML=compareDrilldown(row.dataset.compareMetric);detail.hidden=false;detail.scrollIntoView({behavior:'smooth',block:'start'});
-      detail.querySelector('[data-close-drill]')?.addEventListener('click',()=>{detail.hidden=true;detail.innerHTML=''});
+    host.querySelectorAll('[data-open-metric]').forEach(cell=>{
+      const open=()=>{
+        const detail=host.querySelector('#compareDrilldown');detail.innerHTML=compareDrilldown(cell.dataset.openMetric);detail.hidden=false;bindSubjectRollups(detail);detail.scrollIntoView({behavior:'smooth',block:'start'});
+        detail.querySelector('[data-close-drill]')?.addEventListener('click',()=>{detail.hidden=true;detail.innerHTML=''});
+      };
+      cell.onclick=e=>{if(e.target.closest('button,a,input'))return;open()};
+      cell.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}};
+    });
+    let dragged='';
+    host.querySelectorAll('th[data-compare-school]').forEach(th=>{
+      th.ondragstart=()=>{dragged=th.dataset.compareSchool;th.classList.add('dragging')};
+      th.ondragend=()=>{dragged='';th.classList.remove('dragging')};
+      th.ondragover=e=>{if(dragged)e.preventDefault()};
+      th.ondrop=e=>{
+        e.preventDefault();const target=th.dataset.compareSchool;if(!dragged||!target||dragged===target)return;
+        const names=chosenSchools().map(s=>s.name),from=names.indexOf(dragged),to=names.indexOf(target);if(from<0||to<0)return;
+        names.splice(to,0,names.splice(from,1)[0]);saveCompareOrder(names);host.innerHTML=compareMatrix();bindCompareMatrix();
+      };
     });
   }
   function compareMatrix(){
-    const chosen=(doc.schools||[]).filter(s=>selectedCompare.has(s.name)),ids=visibleColumnIds().filter(id=>id!=='school');
+    const chosen=chosenSchools(),ids=visibleColumnIds().filter(id=>id!=='school');
     if(!chosen.length)return '<p class="muted">Select at least two schools.</p>';
-    return '<p class="compare-click-hint">Tap/click a metric row to compare that area in more detail.</p><div class="compare-scroll"><table class="compare-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+
-      ids.map(id=>'<tr class="'+(compareGroup(id)?'drillable':'')+'" data-compare-metric="'+esc(id)+'"><th>'+esc(COLUMN_LABELS[id]||id)+(compareGroup(id)?'<span class="drill-cue">Open detail →</span>':'')+'</th>'+chosen.map(s=>metricCell(id,s,latestSummary(s)).replace(/^<td[^>]*>|<\/td>$/g,'')).map(v=>'<td>'+v+'</td>').join('')+'</tr>').join('')+
+    return '<p class="compare-click-hint">Select <span class="detail-icon" aria-hidden="true">↗</span> beside a metric when a deeper comparison is available. Drag school headings to rearrange them; the order is remembered.</p><div class="compare-scroll"><table class="compare-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th draggable="true" data-compare-school="'+esc(s.name)+'" title="Drag to rearrange school columns">'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+
+      ids.map(id=>{const kind=detailKind(id),head=kind?'<th class="compare-metric-cell" tabindex="0" role="button" data-open-metric="'+esc(id)+'" title="Open detailed comparison">'+esc(COLUMN_LABELS[id]||id)+' <span class="detail-icon" aria-hidden="true">↗</span></th>':'<th>'+esc(COLUMN_LABELS[id]||id)+'</th>';return'<tr>'+head+chosen.map(s=>metricCell(id,s,latestSummary(s)).replace(/^<td[^>]*>|<\/td>$/g,'')).map(v=>'<td>'+v+'</td>').join('')+'</tr>'}).join('')+
       '</tbody></table></div><section id="compareDrilldown" class="compare-drilldown" hidden></section>';
   }
+
+  function renderSchoolSets(){
+    const select=$('#schoolSet');if(!select)return;
+    const names=Object.keys(schoolSets).sort((a,b)=>a.localeCompare(b));
+    if(activeSchoolSet&&!schoolSets[activeSchoolSet])activeSchoolSet='';
+    select.innerHTML='<option value="">All schools</option>'+names.map(name=>'<option value="'+esc(name)+'">'+esc(name)+' · '+schoolSets[name].length+'</option>').join('');
+    select.value=activeSchoolSet;
+    const del=$('#deleteSchoolSet');if(del)del.hidden=!activeSchoolSet;
+  }
+  function saveSelectedSchoolSet(){
+    const schools=chosenSchools().map(s=>s.name);
+    if(!schools.length){alert('Select the schools you want in this set first.');return}
+    const proposed=activeSchoolSet||'My school set',name=(prompt('Name this school set:',proposed)||'').trim();if(!name)return;
+    schoolSets[name]=schools;localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));activeSchoolSet=name;renderSchoolSets();render();
+  }
+  function deleteActiveSchoolSet(){
+    if(!activeSchoolSet)return;const name=activeSchoolSet;if(!confirm('Delete the saved school set “'+name+'”?'))return;
+    delete schoolSets[name];localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));activeSchoolSet='';renderSchoolSets();render();
+  }
+
   function render(){
     renderHead();
     let rows=(doc.schools||[]).filter(matches);
@@ -685,6 +780,9 @@
   $('#perfSearch').oninput=render;
   $('#perfSort').onchange=e=>{sortKey=e.target.value;sortDir=(sortKey==='name'||sortKey==='absence'||sortKey==='persistent')?'asc':'desc';render()};
   $('#perfYear').onchange=e=>{selectedYear=e.target.value;render()};
+  $('#schoolSet').onchange=e=>{activeSchoolSet=e.target.value;renderSchoolSets();render()};
+  $('#saveSchoolSet').onclick=saveSelectedSchoolSet;
+  $('#deleteSchoolSet').onclick=deleteActiveSchoolSet;
   document.addEventListener('click',e=>{const b=e.target.closest('[data-grade-toggle]');if(!b)return;e.stopPropagation();const kind=b.dataset.gradeToggle;if(!subjectMode[kind])return;subjectMode[kind]=subjectMode[kind]==='count'?'percent':'count';render()});
   $('#columnsButton').onclick=()=>{renderColumnDialog();$('#columnDialog').showModal()};
   $('#closeColumns').onclick=()=>$('#columnDialog').close();
@@ -714,6 +812,7 @@
       const matched=doc.schools.filter(s=>s.urn).length;
       $('#dataStatus').textContent='Updated '+new Date(doc.generatedAt).toLocaleString('en-GB')+' · '+matched+'/'+doc.schools.length+' tracked schools matched to a DfE performance record. Verified school-published results are layered on top where newer or more complete.';
       populateYearSelect();
+      renderSchoolSets();
       renderMethodology();
       render();
       const hash=new URLSearchParams(location.hash.replace(/^#/,'')).get('school');
