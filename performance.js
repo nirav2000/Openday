@@ -706,28 +706,34 @@
     const byName=new Map((doc.schools||[]).map(s=>[s.name,s])),index=new Map(compareOrder.map((name,i)=>[name,i]));
     return [...selectedCompare].map(name=>byName.get(name)).filter(Boolean).sort((a,b)=>(index.has(a.name)?index.get(a.name):1e9)-(index.has(b.name)?index.get(b.name):1e9)||a.name.localeCompare(b.name));
   };
+  const GCSE_PRIORITY=['Mathematics','English Language','English Literature','Combined Science','Biology','Chemistry','Physics'];
+  const subjectSort=(kind,a,b)=>{
+    if(kind!=='gcse')return a.localeCompare(b);
+    const ai=GCSE_PRIORITY.indexOf(a),bi=GCSE_PRIORITY.indexOf(b);
+    if(ai>=0||bi>=0)return(ai>=0?ai:999)-(bi>=0?bi:999)||a.localeCompare(b);
+    return a.localeCompare(b);
+  };
   function rollupDetailRow(name,packs,index,kind){
-    const any=packs.some(x=>(x.groups.get(name)?.components||[]).length>1||(x.groups.get(name)?.components||[]).some(s=>subjectFamily(s._rawName)!==s._rawName));
+    const variants=[...new Set(packs.flatMap(x=>(x.groups.get(name)?.components||[]).map(s=>s._rawName)))].sort((a,b)=>a.localeCompare(b));
+    const any=variants.length>1||packs.some(x=>(x.groups.get(name)?.components||[]).some(s=>subjectFamily(s,kind)!==name));
     if(!any)return'';
-    return '<tr class="subject-component-row" data-family-detail="'+index+'" hidden><td colspan="'+(packs.length+1)+'"><div class="rollup-detail-grid">'+packs.map(x=>{
-      const components=x.groups.get(name)?.components||[];
-      return '<section><h4>'+esc(x.school.name)+'</h4>'+(components.length?components.map(s=>'<div class="source-subject-row"><b>'+esc(s._rawName)+'</b>'+gradeStat(s,kind)+'</div>').join(''):'<span class="muted">No '+esc(name)+' entry</span>')+'</section>';
-    }).join('')+'</div></td></tr>';
+    const rows=variants.map(raw=>'<tr><th>'+esc(raw)+'</th>'+packs.map(x=>{const component=(x.groups.get(name)?.components||[]).find(s=>s._rawName===raw);return'<td>'+gradeStat(component,kind)+'</td>'}).join('')+'</tr>').join('');
+    return '<tr class="subject-component-row" data-family-detail="'+index+'" hidden><td colspan="'+(packs.length+1)+'"><div class="rollup-comparison"><table class="compare-table rollup-compare-table"><thead><tr><th>Source subject</th>'+packs.map(x=>'<th>'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'</th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div></td></tr>';
   }
   function subjectDrilldown(chosen,kind){
-    const packs=chosen.map(s=>{const pack=completeSubjectPack(s,kind);return{school:s,pack,groups:groupSubjects(pack.subjects)}});
-    const names=[...new Set(packs.flatMap(x=>[...x.groups.keys()]))].sort((a,b)=>a.localeCompare(b));
+    const packs=chosen.map(s=>{const pack=completeSubjectPack(s,kind);return{school:s,pack,groups:groupSubjects(pack.subjects,kind)}});
+    const names=[...new Set(packs.flatMap(x=>[...x.groups.keys()]))].sort((a,b)=>subjectSort(kind,a,b));
     const title=kind==='gcse'?'GCSE subject comparison':'A-level subject comparison';
-    const intro='Similar subject labels are combined only for comparison. Counts are summed before percentages are calculated; source records are never averaged or altered. Select a grouped subject to see every underlying subject and its original figures.';
+    const intro='Similar subject labels are combined only when the qualification and grading scale are compatible. Counts are summed before percentages are calculated. Select a grouped subject to compare every original source subject across the same school columns.';
     if(!names.length)return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>No subject detail available</h3></div></div>';
     const rows=names.map((name,i)=>{
-      const variants=[...new Set(packs.flatMap(x=>(x.groups.get(name)?.components||[]).map(s=>s._rawName)))],grouped=variants.length>1||variants.some(v=>subjectFamily(v)!==v);
+      const grouped=packs.some(x=>(x.groups.get(name)?.components||[]).length>1||(x.groups.get(name)?.components||[]).some(s=>subjectFamily(s,kind)!==name));
       const label=grouped?'<button type="button" class="subject-family-toggle" data-family-toggle="'+i+'" aria-expanded="false">'+esc(name)+' <span>⌄</span></button>':esc(name);
       const main='<tr><th>'+label+'</th>'+packs.map(x=>'<td>'+gradeStat(x.groups.get(name),kind)+'</td>').join('')+'</tr>';
       return main+rollupDetailRow(name,packs,i,kind);
     }).join('');
     return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
-      '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+esc(x.school.name)+'<small>'+esc(x.pack.year)+(x.pack.source==='school-published'?' · school':' · DfE')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
   function gcseHistoryDrilldown(chosen,id){
     const labels={a8:'Attainment 8',engmath5:'English & maths 5+',p8:'Progress 8'},field={a8:'attainment8',engmath5:'englishMaths5Plus',p8:'progress8'}[id];
