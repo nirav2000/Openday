@@ -1,10 +1,10 @@
 {
   "meta": {
-    "updated": "2026-09-23",
+    "updated": "2026-09-29",
     "phase": "primary",
     "coverage": "All 41 Harrow primary/infant/junior schools in Harrow Council's 2026-27 guide, plus Wembley Primary where a current 2026 open-day schedule is published.",
     "sourceUrl": "https://www.harrow.gov.uk/downloads/file/33318/Primary_Schools_Guide_2025_26_29_Aug.pdf",
-    "note": "School catalog is authoritative to the Harrow guide; open-event dates are checked separately against school websites, calendars, council pages and other corroborating sources. Unknown current dates are not labelled TBC."
+    "note": "School catalogue is authoritative to the Harrow guide. Open-event research now searches each school's own admissions/tours pages and targeted terms such as school tours, open days/evenings, prospective parents and Reception 2027; fixed and recurring tours are added when the school publishes them."
   },
   "schools": [
     {
@@ -29,19 +29,19 @@
       "id": "aylward-primary",
       "name": "Aylward Primary School",
       "area": "Stanmore",
-      "infoUrl": "https://www.aylwardschool.org.uk",
-      "bookingUrl": "https://www.aylwardschool.org.uk",
+      "infoUrl": "https://www.aylwardschool.org.uk/admissions/",
+      "bookingUrl": "https://www.aylwardschool.org.uk/admissions/",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
+      "event": "School tour by arrangement",
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official 2027 admissions page confirms school tours are available; contact the school office or use the admissions form to arrange a visit. No fixed public tour date is listed."
     },
     {
       "id": "belmont-primary",
@@ -101,37 +101,55 @@
       "id": "cedars-manor-primary",
       "name": "Cedars Manor School",
       "area": "Harrow",
-      "infoUrl": "https://www.cedarsmanorschool.co.uk",
-      "bookingUrl": "https://www.cedarsmanorschool.co.uk",
+      "infoUrl": "https://www.cedarsmanorschool.co.uk/admissions",
+      "bookingUrl": "https://www.cedarsmanorschool.co.uk/admissions",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "School tour (Wednesdays)",
+      "start": "2026-09-30T09:00:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official admissions page says school tours are held every Wednesday at 9:00am; contact the school office to arrange a visit."
     },
     {
       "id": "earlsmead-primary",
       "name": "Earlsmead Primary School",
       "area": "South Harrow",
-      "infoUrl": "https://www.earlsmeadprimaryschool.co.uk",
-      "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk",
+      "infoUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027",
+      "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception 2027 school tour",
+      "start": "2026-10-08T09:30:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
+      "status": "confirmed",
       "bookingRequired": null,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official Reception 2027 page lists three school tours: 8 Oct 2026 at 9:30am, 10 Nov 2026 at 1:45pm and 12 Jan 2027 at 9:30am.",
+      "alternateVisits": [
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-11-10T13:45:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Tuesday 10 November · 1:45pm",
+          "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2027-01-12T09:30:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Tuesday 12 January · 9:30am",
+          "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027"
+        }
+      ]
     },
     {
       "id": "elmgrove-primary",
@@ -371,19 +389,69 @@
       "id": "pinner-park-primary",
       "name": "Pinner Park Primary School",
       "area": "Pinner",
-      "infoUrl": "https://pinnerpark.harrow.sch.uk",
-      "bookingUrl": "https://pinnerpark.harrow.sch.uk",
+      "infoUrl": "https://pinnerpark.harrow.sch.uk/admissions.html",
+      "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception 2027 school tour",
+      "start": "2026-10-06T09:15:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official admissions page lists Reception 2027 tours at 9:15am. Earlier September dates have passed; the next listed tour is 6 October.",
+      "alternateVisits": [
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-10-12T09:15:00+01:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Monday 12 October · 9:15am",
+          "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-11-04T09:15:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Wednesday 4 November · 9:15am",
+          "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-11-19T09:15:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Thursday 19 November · 9:15am",
+          "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-11-25T09:15:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Wednesday 25 November · 9:15am",
+          "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2027-01-07T09:15:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Thursday 7 January · 9:15am",
+          "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2027-01-11T09:15:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Monday 11 January · 9:15am",
+          "bookingUrl": "https://pinnerpark.harrow.sch.uk/admissions.html"
+        }
+      ]
     },
     {
       "id": "pinner-wood-primary",
@@ -443,37 +511,37 @@
       "id": "roxeth-primary",
       "name": "Roxeth Primary School",
       "area": "Harrow",
-      "infoUrl": "https://www.roxethschoolharrow.org",
-      "bookingUrl": "https://www.roxethschoolharrow.org",
+      "infoUrl": "https://www.roxethschoolharrow.org/admissions-and-new-starters",
+      "bookingUrl": "https://www.roxethschoolharrow.org/admissions-and-new-starters",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Open House school tour (Tuesdays)",
+      "start": "2026-09-29T09:00:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official admissions page says visitors are welcome to a guided Open House every Tuesday at 9:00am; use the school's Book School Tours form."
     },
     {
       "id": "st-anselms-primary",
       "name": "St Anselm's Catholic Primary School",
       "area": "Harrow-on-the-Hill",
-      "infoUrl": "https://www.st-anselms.harrow.sch.uk",
-      "bookingUrl": "https://www.st-anselms.harrow.sch.uk",
+      "infoUrl": "https://www.st-anselms.harrow.sch.uk/Admissions/",
+      "bookingUrl": "https://www.eventbrite.co.uk/e/copy-of-st-anselms-prospective-parents-school-tour-tickets-1999515922951?aff=oddtdtcreator",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
+      "event": "Prospective parents school tour",
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official admissions page confirms 2027–28 prospective-parent tours and links to Eventbrite. The school page does not expose the tour dates in its page text, so the exact next date remains to be pulled from the booking listing."
     },
     {
       "id": "st-bernadettes-primary",
@@ -533,37 +601,79 @@
       "id": "st-john-fisher-primary",
       "name": "St John Fisher Catholic Primary School",
       "area": "Pinner",
-      "infoUrl": "https://www.stjohnfisherschool.co.uk",
-      "bookingUrl": "https://www.stjohnfisherschool.co.uk",
+      "infoUrl": "https://www.stjohnfisherschool.co.uk/school-tours/",
+      "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
-      "end": null,
+      "event": "Reception 2027 open morning",
+      "start": "2026-10-01T09:30:00+01:00",
+      "end": "2026-10-01T10:30:00+01:00",
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official School Tours page lists Thursday open mornings at 9:30am for September 2027 starters; tours last about one hour and require email confirmation.",
+      "alternateVisits": [
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2026-10-08T09:30:00+01:00",
+          "end": "2026-10-08T10:30:00+01:00",
+          "status": "confirmed",
+          "note": "Thursday 8 October · 9:30am",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
+        },
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2026-10-15T09:30:00+01:00",
+          "end": "2026-10-15T10:30:00+01:00",
+          "status": "confirmed",
+          "note": "Thursday 15 October · 9:30am",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
+        },
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2026-11-05T09:30:00+00:00",
+          "end": "2026-11-05T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Thursday 5 November · 9:30am",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
+        },
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2026-11-19T09:30:00+00:00",
+          "end": "2026-11-19T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Thursday 19 November · 9:30am",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
+        },
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2026-11-26T09:30:00+00:00",
+          "end": "2026-11-26T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Thursday 26 November · 9:30am",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
+        }
+      ]
     },
     {
       "id": "st-johns-primary",
       "name": "St John's C of E School",
       "area": "Stanmore",
-      "infoUrl": "https://www.stjohns.harrow.sch.uk",
-      "bookingUrl": "https://www.stjohns.harrow.sch.uk",
+      "infoUrl": "https://www.stjohns.harrow.sch.uk/page/?pid=9&title=Admissions",
+      "bookingUrl": "https://www.stjohns.harrow.sch.uk/page/?pid=9&title=Admissions",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "School tour (Tuesdays)",
+      "start": "2026-09-29T09:30:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official admissions page says regular school tours run on Tuesdays at 9:30am; contact the school office to arrange a place."
     },
     {
       "id": "st-josephs-primary",
@@ -623,19 +733,19 @@
       "id": "stanburn-primary",
       "name": "Stanburn Primary School",
       "area": "Stanmore",
-      "infoUrl": "https://www.stanburn.harrow.sch.uk",
-      "bookingUrl": "https://www.stanburn.harrow.sch.uk",
+      "infoUrl": "https://www.stanburn.harrow.sch.uk/page/?pid=33&title=School+Tours",
+      "bookingUrl": "https://www.stanburn.harrow.sch.uk/page/?pid=33&title=School+Tours",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Prospective Reception school tour",
+      "start": "2026-10-01T09:00:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official School Tours page says prospective Reception parents can tour most Thursdays at 9:00am from September to January; booking confirmation is required."
     },
     {
       "id": "vaughan-primary",
@@ -645,15 +755,49 @@
       "bookingUrl": "https://www.vaughan.harrow.sch.uk/admissions",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception 2027 school tour",
+      "start": "2026-10-02T09:00:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official admissions page lists Headteacher-led tours at 9:00am, lasting about an hour.",
+      "alternateVisits": [
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-10-16T09:00:00+01:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Friday 16 October · 9:00am",
+          "bookingUrl": "https://www.vaughan.harrow.sch.uk/admissions"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-11-06T09:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Friday 6 November · 9:00am",
+          "bookingUrl": "https://www.vaughan.harrow.sch.uk/admissions"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2026-11-20T09:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Friday 20 November · 9:00am",
+          "bookingUrl": "https://www.vaughan.harrow.sch.uk/admissions"
+        },
+        {
+          "event": "Reception 2027 school tour",
+          "start": "2027-01-08T09:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Friday 8 January · 9:00am",
+          "bookingUrl": "https://www.vaughan.harrow.sch.uk/admissions"
+        }
+      ]
     },
     {
       "id": "weald-rise-primary",
@@ -695,19 +839,69 @@
       "id": "west-lodge-primary",
       "name": "West Lodge Primary School",
       "area": "Pinner",
-      "infoUrl": "https://www.westlodge.harrow.sch.uk",
-      "bookingUrl": "https://www.westlodge.harrow.sch.uk",
+      "infoUrl": "https://www.westlodge.harrow.sch.uk/school-tours",
+      "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
-      "end": null,
+      "event": "Parent school tour",
+      "start": "2026-10-06T09:15:00+01:00",
+      "end": "2026-10-06T10:30:00+01:00",
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official School Tours page lists parent tours from 9:15–10:30am. The page's weekday labels for 12 and 17 November appear inconsistent with the 2026 calendar; the app uses the published dates and computes the weekday from the date.",
+      "alternateVisits": [
+        {
+          "event": "Parent school tour",
+          "start": "2026-10-20T09:15:00+01:00",
+          "end": "2026-10-20T10:30:00+01:00",
+          "status": "confirmed",
+          "note": "Tuesday 20 October · 9:15–10:30am",
+          "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours"
+        },
+        {
+          "event": "Parent school tour",
+          "start": "2026-11-12T09:15:00+00:00",
+          "end": "2026-11-12T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "12 November · 9:15–10:30am",
+          "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours"
+        },
+        {
+          "event": "Parent school tour",
+          "start": "2026-11-17T09:15:00+00:00",
+          "end": "2026-11-17T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "17 November · 9:15–10:30am",
+          "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours"
+        },
+        {
+          "event": "Parent school tour",
+          "start": "2026-11-26T09:15:00+00:00",
+          "end": "2026-11-26T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Thursday 26 November · 9:15–10:30am",
+          "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours"
+        },
+        {
+          "event": "Parent school tour",
+          "start": "2026-12-03T09:15:00+00:00",
+          "end": "2026-12-03T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Thursday 3 December · 9:15–10:30am",
+          "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours"
+        },
+        {
+          "event": "Parent school tour",
+          "start": "2026-12-08T09:15:00+00:00",
+          "end": "2026-12-08T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Tuesday 8 December · 9:15–10:30am",
+          "bookingUrl": "https://www.westlodge.harrow.sch.uk/school-tours"
+        }
+      ]
     },
     {
       "id": "whitchurch-primary",
