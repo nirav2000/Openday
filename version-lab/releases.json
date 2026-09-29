@@ -213,7 +213,7 @@
     },
     {
       "version": "2.15.0",
-      "commit": "f974dd82ccb64aa4c41b2b56e1eb9408345cfb05",
+      "commit": "d5f6d16d7800f66c54b2d6efbb4e29d9606934ff",
       "kind": "release",
       "label": "Metric-cell detail affordances, saved school sets, compact status icons and richer GCSE comparison roll-ups"
     }
