@@ -1,29 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Openday Version Lab</title>
-<style>
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#102a43;background:#f5f8fa}*{box-sizing:border-box}body{margin:0}header{background:#102a43;color:white;padding:22px max(18px,calc((100vw - 980px)/2));display:flex;gap:14px;align-items:center;justify-content:space-between}header a{color:white;text-decoration:none;border:1px solid #ffffff55;border-radius:10px;padding:8px 11px}.wrap{max-width:980px;margin:auto;padding:20px}.lead{background:white;border:1px solid #dce5ed;border-radius:14px;padding:16px;margin-bottom:16px}.lead p{margin:.4rem 0;line-height:1.5}.versions{display:grid;gap:10px}.version{background:white;border:1px solid #dce5ed;border-radius:14px;padding:15px;display:grid;grid-template-columns:110px 1fr auto;gap:14px;align-items:center}.version h2{margin:0;font-size:1.05rem}.version p{margin:4px 0;color:#61758a;font-size:.86rem}.commit{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.75rem}.badge{display:inline-block;border-radius:999px;padding:3px 7px;background:#e8efff;color:#395e9c;font-size:.7rem;font-weight:750}.badge.reconstructed{background:#fff2d8;color:#7a5a12}.actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.actions a{display:inline-block;text-decoration:none;border:1px solid #cbd8e3;border-radius:9px;padding:8px 10px;color:#1769aa;font-weight:700;font-size:.8rem}.actions a.primary{background:#1769aa;color:white;border-color:#1769aa}@media(max-width:720px){.version{grid-template-columns:1fr}.actions{justify-content:flex-start}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <title>Openday · Version Lab</title>
+  <link rel="stylesheet" href="lab.css?v=2.13.0">
 </head>
 <body>
-<header><div><small>EXACT GIT HISTORY</small><h1 style="margin:2px 0 0">Openday Version Lab</h1></div><a href="../">Back to current app</a></header>
-<main class="wrap">
-<section class="lead"><p><b>Each historical app below is built from the original Git tree at the stated commit.</b> The files are copied byte-for-byte at deployment; the lab does not recreate an old app from today's files or from today's <code>version.json</code>.</p><p>Versions 1.0.0–1.3.0 pre-date semantic version files, so their labels are reconstructed milestones. Their snapshots are still the original files from the listed commits. Cloud services are <b>not</b> time-travelled. The historical HTML/JS/CSS/data are exact, but old sync endpoints, Firebase Authentication users and Firestore rules may have changed or disappeared. Use the snapshots to inspect and exercise the historical UI/local behaviour; do not assume historical cloud sync will still work against today's backend.</p></section>
-<section class="lead"><p><b>What is usable?</b> Static school data, navigation, filters, cards, calendar UI and local-storage behaviour come from the original files and should be meaningful to inspect. Cloud-backed behaviour is only historically accurate at the code level; the live backend is today's backend. For that reason Version Lab is an audit/regression tool, not a promise that every retired cloud workflow can still authenticate or write.</p></section><div id="versions" class="versions"><!-- VERSION_CARDS --></div>
-</main>
-<script>
-(()=>{
-  const root=document.getElementById('versions');
-  if(!root||root.querySelector('.version'))return;
-  const esc=v=>String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  fetch('releases.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('release registry unavailable');return r.json()}).then(reg=>{
-    const releases=[...(reg.releases||[])].reverse();
-    root.innerHTML=releases.map(v=>'<article class="version"><div><h2>v'+esc(v.version)+'</h2><span class="badge '+(v.kind==='reconstructed'?'reconstructed':'')+'">'+(v.kind==='reconstructed'?'reconstructed label':'release')+'</span></div><div><b>'+esc(v.label)+'</b><p class="commit">'+esc(String(v.commit||'').slice(0,12))+'</p></div><div class="actions"><a class="primary" href="https://github.com/nirav2000/Openday/tree/'+encodeURIComponent(v.commit)+'" target="_blank" rel="noopener">Browse exact commit</a></div></article>').join('');
-  }).catch(err=>{
-    root.innerHTML='<article class="version"><div><h2>History unavailable</h2></div><div><b>'+esc(err.message)+'</b><p>Use the repository history while this deployment is repaired.</p></div></article>';
-  });
-})();
-</script>
-</body></html>
+  <header class="lab-topbar">
+    <a class="back" href="../">← Openday</a>
+    <div class="lab-brand"><strong>Version Lab</strong><span>browse · compare · decide</span></div>
+    <span id="currentPill" class="current-pill">Loading…</span>
+  </header>
+
+  <main class="lab-main">
+    <section class="lab-hero">
+      <div>
+        <p class="eyebrow">EXACT RELEASE HISTORY</p>
+        <h1>See the app, not just the commit.</h1>
+        <p>Every release is reconstructed from its exact Git tree at deployment. Preview a working historical screen, browse that version, or place two releases side by side with synchronized scrolling.</p>
+      </div>
+      <aside class="workflow-card">
+        <strong>What is frozen?</strong>
+        <p>HTML, JavaScript, CSS and committed data come from the selected release. Cloud services are not time-travelled, so historical Firebase/auth behaviour may still meet today’s backend.</p>
+      </aside>
+    </section>
+
+    <section class="release-section">
+      <div class="section-title">
+        <div><p class="eyebrow">RELEASES</p><h2>Choose a checkpoint</h2></div>
+        <p>The cards are human-readable checkpoints. Git remains the audit trail underneath them.</p>
+      </div>
+      <div id="releaseGrid" class="release-grid"></div>
+    </section>
+
+    <section class="snapshot-section">
+      <div class="section-title">
+        <div><p class="eyebrow">WORKING SNAPSHOT</p><h2>Browse one version</h2></div>
+        <p>This is the selected release running inside an isolated frame. Use the viewport controls to inspect its responsive layout.</p>
+      </div>
+      <div class="snapshot-toolbar">
+        <div>
+          <strong id="previewTitle">Select a version</strong>
+          <span id="previewStatus"></span>
+        </div>
+        <div class="viewport-controls" role="group" aria-label="Preview viewport">
+          <button type="button" data-viewport="phone">Phone</button>
+          <button type="button" data-viewport="tablet">Tablet</button>
+          <button type="button" data-viewport="desktop" class="active">Desktop</button>
+        </div>
+        <div class="snapshot-actions">
+          <a id="openSnapshot" target="_blank" rel="noopener">Open full version ↗</a>
+          <a id="openSource" target="_blank" rel="noopener">Git source ↗</a>
+        </div>
+      </div>
+      <div id="snapshotStage" class="snapshot-stage desktop">
+        <iframe id="snapshotFrame" sandbox="allow-scripts allow-forms allow-modals allow-same-origin allow-popups" title="Selected historical Openday version"></iframe>
+      </div>
+    </section>
+
+    <section class="compare-section" id="compare">
+      <div class="section-title">
+        <div><p class="eyebrow">SIDE BY SIDE</p><h2>Compare working versions</h2></div>
+        <p>Choose any two checkpoints. Synchronized scrolling follows the same relative position in both versions and can be turned off when layouts diverge.</p>
+      </div>
+      <div class="compare-controls">
+        <label>Left version<select id="leftVersion"></select></label>
+        <button id="swapVersions" type="button" title="Swap versions">⇄</button>
+        <label>Right version<select id="rightVersion"></select></label>
+        <label class="sync-scroll-control"><input id="syncScroll" type="checkbox" checked> Sync scrolling</label>
+        <button id="loadCompare" type="button" class="primary">Load comparison</button>
+      </div>
+      <div class="preview-grid">
+        <article class="preview-panel">
+          <header><div><strong id="leftTitle">Left</strong><span id="leftStatus"></span></div><a id="leftSource" target="_blank" rel="noopener">Source ↗</a></header>
+          <iframe id="leftFrame" sandbox="allow-scripts allow-forms allow-modals allow-same-origin allow-popups" title="Left version preview"></iframe>
+        </article>
+        <article class="preview-panel">
+          <header><div><strong id="rightTitle">Right</strong><span id="rightStatus"></span></div><a id="rightSource" target="_blank" rel="noopener">Source ↗</a></header>
+          <iframe id="rightFrame" sandbox="allow-scripts allow-forms allow-modals allow-same-origin allow-popups" title="Right version preview"></iframe>
+        </article>
+      </div>
+      <section class="comparison-note-box">
+        <h3>Notes while comparing</h3>
+        <p>Capture what should be kept, reverted or reworked while both versions are visible.</p>
+        <div class="comparison-note-form">
+          <textarea id="comparisonNoteText" placeholder="e.g. Keep the v2.12 performance layout, but the v2.10 card spacing is clearer…"></textarea>
+          <button id="addComparisonNote" type="button">Add note</button>
+        </div>
+        <div id="comparisonNoteList" class="comparison-note-list"></div>
+      </section>
+    </section>
+
+    <section id="staticFallback" class="static-fallback">
+      <div class="section-title"><div><p class="eyebrow">BASIC HISTORY</p><h2>Release index</h2></div><p>Shown if the richer Version Lab cannot load.</p></div>
+      <div id="versions" class="versions"><!-- VERSION_CARDS --></div>
+    </section>
+  </main>
+
+  <script src="lab.js?v=2.13.0"></script>
+</body>
+</html>
