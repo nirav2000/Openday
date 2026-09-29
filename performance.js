@@ -115,10 +115,11 @@
       return null;
     };
     const alPub=pub&&Object.keys(pubAlevel).length?{year:pub.year,row:pubAlevel,source:'school-published'}:null;
+    const independentPublished=s.type==='independent'&&Object.keys(s.publishedResults||{}).length>0;
     return{
-      a8:metricForYear(s.gcse,'attainment8'),
-      em:metricForYear(s.gcse,'englishMaths5Plus'),
-      p8:metricForYear(s.gcse,'progress8'),
+      a8:independentPublished?null:metricForYear(s.gcse,'attainment8'),
+      em:independentPublished?null:metricForYear(s.gcse,'englishMaths5Plus'),
+      p8:independentPublished?null:metricForYear(s.gcse,'progress8'),
       ks4Eal:metricForYear(s.ks4Eal||{},null),
       al:metricForYear(s.alevel,'aps'),
       alPub,
