@@ -213,7 +213,7 @@
     }).join('');
     document.querySelectorAll('#performanceHead [data-sort-key]').forEach(btn=>btn.onclick=()=>{
       const key=btn.dataset.sortKey;
-      if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=key==='name'?'asc':'desc'}
+      if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=(key==='name'||key==='absence'||key==='persistent')?'asc':'desc'}
       const sel=$('#perfSort');if(sel&&[...sel.options].some(o=>o.value===key))sel.value=key;
       render();
     });
@@ -228,9 +228,10 @@
     window.OpenDaySync?.push?.();
   }
   function setSchoolStatus(s,status){
+    const already=status==='shortlist'?eventFlag(s,shortlisted):status==='rejected'?eventFlag(s,rejected):false;
     s.eventIds.forEach(id=>{shortlisted.delete(id);rejected.delete(id)});
-    if(status==='shortlist')s.eventIds.forEach(id=>shortlisted.add(id));
-    if(status==='rejected')s.eventIds.forEach(id=>rejected.add(id));
+    if(!already&&status==='shortlist')s.eventIds.forEach(id=>shortlisted.add(id));
+    if(!already&&status==='rejected')s.eventIds.forEach(id=>rejected.add(id));
     savePersonalState();render();
   }
   function schoolRow(s){
