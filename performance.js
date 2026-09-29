@@ -51,11 +51,16 @@
     if(v===null||v===undefined||v==='')return '—';
     const num=Number(v);
     if(!Number.isFinite(num))return String(v);
-    if(Math.abs(num-Math.round(num))<0.05)return String(Math.round(num));
-    const fixed=num.toFixed(Math.abs(num)<2?2:1);
+    if(Number.isInteger(num))return String(num);
+    const fixed=num.toFixed(Math.abs(num)<10?2:1);
     return fixed.replace(/0+$/,'').replace(/\.$/,'');
   };
-  const pct=v=>v===null||v===undefined?'—':fmt(v)+'%';
+  const pct=v=>{
+    if(v===null||v===undefined)return '—';
+    const num=Number(v);if(!Number.isFinite(num))return String(v)+'%';
+    if(Math.abs(num-Math.round(num))<0.05)return String(Math.round(num))+'%';
+    return num.toFixed(1).replace(/\.0$/,'')+'%';
+  };
   const years=o=>Object.keys(o||{}).sort();
   const latest=(o,field)=>{
     for(const y of years(o).reverse()){
