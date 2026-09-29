@@ -5,6 +5,7 @@
   const subjectMode={gcse:'count',alevel:'count'};
   const schoolSetKey='openday.performance.schoolSets.v1',compareOrderKey='openday.performance.compareOrder.v1';
   const loadJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||'null')??fallback}catch{return fallback}};
+  const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   let schoolSets=state.performanceSchoolSets||loadJson(schoolSetKey,{}),compareOrder=state.performanceCompareOrder||loadJson(compareOrderKey,[]);
   if(!schoolSets||Array.isArray(schoolSets)||typeof schoolSets!=='object')schoolSets={};
   if(!Array.isArray(compareOrder))compareOrder=[];
@@ -14,7 +15,6 @@
     localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder));
     window.OpenDaySync?.schedule?.();
   };
-  const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
   const shortlisted=new Set(state.shortlistedSchools||[]),rejected=new Set(state.rejectedSchools||[]);
