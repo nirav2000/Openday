@@ -398,9 +398,9 @@
       expanded=expanded===s.name?'':s.name;render()
     };
     tr.querySelector('.compare-select')?.addEventListener('change',e=>{
-      if(e.target.checked){selectedCompare.add(s.name);if(!compareOrder.includes(s.name)){compareOrder.push(s.name);localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder))}}
+      if(e.target.checked){selectedCompare.add(s.name);if(!compareOrder.includes(s.name)){compareOrder.push(s.name);persistPerformancePrefs()}}
       else selectedCompare.delete(s.name);
-      updateCompareTray();
+      updateCompareTray();renderSchoolSets();
     });
     tr.querySelectorAll('[data-school-status]').forEach(b=>b.onclick=e=>{e.stopPropagation();setSchoolStatus(s,b.dataset.schoolStatus)});
     return tr;
@@ -802,8 +802,32 @@
     if(activeSchoolSet&&!schoolSets[activeSchoolSet])activeSchoolSet='';
     select.innerHTML='<option value="">All schools</option>'+names.map(name=>'<option value="'+esc(name)+'">'+esc(name)+' · '+schoolSets[name].length+'</option>').join('');
     select.value=activeSchoolSet;
-    const del=$('#deleteSchoolSet');if(del)del.hidden=!activeSchoolSet;
+    const del=$('#deleteSchoolSet'),selectAll=$('#selectSchoolSet'),clear=$('#clearSetSelection');
+    if(del)del.hidden=!activeSchoolSet;
+    if(!activeSchoolSet){
+      if(selectAll)selectAll.hidden=true;
+      if(clear)clear.hidden=selectedCompare.size===0;
+      return;
+    }
+    const members=schoolSets[activeSchoolSet]||[],selected=members.filter(name=>selectedCompare.has(name)).length,all=members.length>0&&selected===members.length;
+    if(selectAll){
+      selectAll.hidden=false;
+      selectAll.textContent=all?'Deselect all '+members.length:selected?'Select all '+members.length+' ('+selected+' selected)':'Select all '+members.length;
+      selectAll.dataset.allSelected=all?'true':'false';
+    }
+    if(clear)clear.hidden=selectedCompare.size===0;
   }
+  function toggleActiveSchoolSetSelection(){
+    if(!activeSchoolSet)return;
+    const members=schoolSets[activeSchoolSet]||[],all=members.length>0&&members.every(name=>selectedCompare.has(name));
+    if(all)members.forEach(name=>selectedCompare.delete(name));
+    else{
+      members.forEach(name=>{selectedCompare.add(name);if(!compareOrder.includes(name))compareOrder.push(name)});
+      persistPerformancePrefs();
+    }
+    render();
+  }
+  function clearComparisonSelection(){selectedCompare.clear();render()}
   function saveSelectedSchoolSet(){
     const schools=chosenSchools().map(s=>s.name);
     if(!schools.length){alert('Select the schools you want in this set first.');return}
@@ -864,6 +888,8 @@
   $('#perfSort').onchange=e=>{sortKey=e.target.value;sortDir=(sortKey==='name'||sortKey==='absence'||sortKey==='persistent')?'asc':'desc';render()};
   $('#perfYear').onchange=e=>{selectedYear=e.target.value;render()};
   $('#schoolSet').onchange=e=>{activeSchoolSet=e.target.value;renderSchoolSets();render()};
+  $('#selectSchoolSet').onclick=toggleActiveSchoolSetSelection;
+  $('#clearSetSelection').onclick=clearComparisonSelection;
   $('#saveSchoolSet').onclick=saveSelectedSchoolSet;
   $('#deleteSchoolSet').onclick=deleteActiveSchoolSet;
   document.addEventListener('click',e=>{const b=e.target.closest('[data-grade-toggle]');if(!b)return;e.stopPropagation();const kind=b.dataset.gradeToggle;if(!subjectMode[kind])return;subjectMode[kind]=subjectMode[kind]==='count'?'percent':'count';render()});
@@ -872,7 +898,7 @@
   $('#doneColumns').onclick=()=>$('#columnDialog').close();
   $('#resetColumns').onclick=()=>{columnState={order:[...METRIC_COLUMNS],hidden:[]};applyColumnLayout()};
   $('#columnDialog').onclick=e=>{if(e.target.id==='columnDialog')e.target.close()};
-  $('#clearCompare').onclick=()=>{selectedCompare.clear();render()};
+  $('#clearCompare').onclick=clearComparisonSelection;
   $('#openCompare').onclick=()=>{if(selectedCompare.size<2)return;$('#compareMatrix').innerHTML=compareMatrix();bindCompareMatrix();$('#compareDialog').showModal()};
   $('#closeCompare').onclick=()=>$('#compareDialog').close();
   $('#compareDialog').onclick=e=>{if(e.target.id==='compareDialog')e.target.close()};
