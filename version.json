@@ -1,6 +1,6 @@
 {
-  "version": "2.15.1",
+  "version": "2.16.0",
   "released": "2026-09-29",
   "channel": "main",
-  "summary": "Hotfix Performance startup after saved school-set sync and correctly hide the empty comparison tray."
+  "summary": "Refine performance comparisons with triangle sorting, qualification-aware GCSE subjects, correct Merchant Taylors Maths, cohort headers, saved-set bulk selection and denser status icons."
 }
