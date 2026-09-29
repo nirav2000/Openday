@@ -76,7 +76,7 @@ for g in groups:
 
 results={g['name']:{
   'name':g['name'],'eventIds':g['eventIds'],'type':g['type'],'area':g['area'],'journey':g['journey'],
-  'urn':None,'officialName':None,'gcse':{},'alevel':{},'ks4Eal':{},'gcseSubjects':[],'alevelSubjects':[],
+  'urn':URN_OVERRIDES.get(g['name']),'officialName':None,'gcse':{},'alevel':{},'ks4Eal':{},'gcseSubjects':[],'alevelSubjects':[],
   'context':{'pupilCharacteristics':{},'sen':{},'absence':{}},
   'coverage':{'gcse':'Official DfE institution data currently exposed for 2022/23–2024/25.','alevel':'Official DfE institution data currently exposed for 2021/22–2024/25.','context':'Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25.'}
 } for g in groups}
@@ -123,7 +123,14 @@ for row in open_csv(DATASETS['ks4_performance']):
         if 'additional' in label or 'other than english' in label or 'not english' in label:
             item['ks4Eal'][year]=n(row.get('pupil_percent'))
 
-urn_to_name={str(v['urn']):k for k,v in results.items() if v.get('urn')}
+# URN map is authoritative. Pinned overrides must never inherit data from a
+# different school with a similar/identical name.
+urn_to_name=dict(URN_TO_TRACKED)
+for name,item in results.items():
+    if name in URN_OVERRIDES:
+        continue
+    if item.get('urn'):
+        urn_to_name[str(item['urn'])]=name
 
 # KS4 subject detail for latest year. Keep raw published grade counts and suppress nothing ourselves.
 subject_acc={}
@@ -215,7 +222,13 @@ for row in open_csv(DATASETS['alevel_performance']):
 # A-level subject detail (latest year).
 alevel_acc={}
 for row in open_csv(DATASETS['alevel_subjects']):
-    tracked=urn_to_name.get(str(row.get('school_urn') or '')) or candidate_to_group.get(norm(row.get('school_name')))
+    row_urn=str(row.get('school_urn') or '')
+    tracked=URN_TO_TRACKED.get(row_urn) or urn_to_name.get(row_urn)
+    if not tracked:
+        candidate=candidate_to_group.get(norm(row.get('school_name')))
+        if candidate and candidate in URN_OVERRIDES and URN_OVERRIDES[candidate]!=row_urn:
+            continue
+        tracked=candidate
     if not tracked: continue
     if (row.get('exam_cohort') or '').lower()!='a level': continue
     subject=(row.get('subject') or '').strip()
