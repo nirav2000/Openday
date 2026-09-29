@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T20:18:00.869558+00:00",
+  "generatedAt": "2026-09-29T06:15:31.161186+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades.",
@@ -896,6 +896,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 42,
+        "grade9Percent": 2.1,
+        "grade97Count": 232,
+        "grade97Percent": 11.8,
+        "totalGradeAwards": 1969,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -1778,6 +1787,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 433,
+        "grade9Percent": 21.0,
+        "grade97Count": 1359,
+        "grade97Percent": 65.9,
+        "totalGradeAwards": 2062,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -2805,6 +2823,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 487,
+        "grade9Percent": 17.5,
+        "grade97Count": 1478,
+        "grade97Percent": 53.2,
+        "totalGradeAwards": 2778,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -3465,6 +3492,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 250,
+        "grade9Percent": 39.1,
+        "grade97Count": 555,
+        "grade97Percent": 86.7,
+        "totalGradeAwards": 640,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -4360,6 +4396,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 402,
+        "grade9Percent": 22.4,
+        "grade97Count": 1174,
+        "grade97Percent": 65.4,
+        "totalGradeAwards": 1795,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -5340,6 +5385,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 77,
+        "grade9Percent": 3.4,
+        "grade97Count": 511,
+        "grade97Percent": 22.9,
+        "totalGradeAwards": 2235,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -6345,6 +6399,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 160,
+        "grade9Percent": 6.9,
+        "grade97Count": 768,
+        "grade97Percent": 33.1,
+        "totalGradeAwards": 2319,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -7037,6 +7100,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 62,
+        "grade9Percent": 22.3,
+        "grade97Count": 198,
+        "grade97Percent": 71.2,
+        "totalGradeAwards": 278,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -7561,6 +7633,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 0,
+        "grade9Percent": null,
+        "grade97Count": 0,
+        "grade97Percent": null,
+        "totalGradeAwards": 0,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -8336,6 +8417,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 63,
+        "grade9Percent": 14.2,
+        "grade97Count": 193,
+        "grade97Percent": 43.6,
+        "totalGradeAwards": 443,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -8975,6 +9065,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 304,
+        "grade9Percent": 59.4,
+        "grade97Count": 473,
+        "grade97Percent": 92.4,
+        "totalGradeAwards": 512,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -9799,6 +9898,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 72,
+        "grade9Percent": 5.0,
+        "grade97Count": 343,
+        "grade97Percent": 23.8,
+        "totalGradeAwards": 1441,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -10629,6 +10737,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 471,
+        "grade9Percent": 33.6,
+        "grade97Count": 1139,
+        "grade97Percent": 81.3,
+        "totalGradeAwards": 1401,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -11622,6 +11739,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 139,
+        "grade9Percent": 5.2,
+        "grade97Count": 591,
+        "grade97Percent": 22.3,
+        "totalGradeAwards": 2655,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -12588,6 +12714,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 91,
+        "grade9Percent": 4.1,
+        "grade97Count": 432,
+        "grade97Percent": 19.6,
+        "totalGradeAwards": 2199,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -13277,6 +13412,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 128,
+        "grade9Percent": 31.2,
+        "grade97Count": 357,
+        "grade97Percent": 87.1,
+        "totalGradeAwards": 410,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -14107,6 +14251,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 281,
+        "grade9Percent": 24.2,
+        "grade97Count": 809,
+        "grade97Percent": 69.7,
+        "totalGradeAwards": 1160,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -14654,6 +14807,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 27,
+        "grade9Percent": 14.5,
+        "grade97Count": 108,
+        "grade97Percent": 58.1,
+        "totalGradeAwards": 186,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -15504,6 +15666,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 69,
+        "grade9Percent": 4.6,
+        "grade97Count": 397,
+        "grade97Percent": 26.3,
+        "totalGradeAwards": 1509,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -16165,6 +16336,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 97,
+        "grade9Percent": 8.6,
+        "grade97Count": 389,
+        "grade97Percent": 34.5,
+        "totalGradeAwards": 1129,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -17031,6 +17211,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 172,
+        "grade9Percent": 10.8,
+        "grade97Count": 564,
+        "grade97Percent": 35.5,
+        "totalGradeAwards": 1590,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -17732,6 +17921,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 264,
+        "grade9Percent": 43.1,
+        "grade97Count": 571,
+        "grade97Percent": 93.1,
+        "totalGradeAwards": 613,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -18456,6 +18654,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 62,
+        "grade9Percent": 10.9,
+        "grade97Count": 266,
+        "grade97Percent": 46.8,
+        "totalGradeAwards": 568,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -19444,6 +19651,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 565,
+        "grade9Percent": 29.8,
+        "grade97Count": 1375,
+        "grade97Percent": 72.5,
+        "totalGradeAwards": 1896,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -20057,6 +20273,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 416,
+        "grade9Percent": 77.2,
+        "grade97Count": 524,
+        "grade97Percent": 97.2,
+        "totalGradeAwards": 539,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -20845,6 +21070,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 154,
+        "grade9Percent": 32.6,
+        "grade97Count": 386,
+        "grade97Percent": 81.6,
+        "totalGradeAwards": 473,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -21472,6 +21706,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 399,
+        "grade9Percent": 43.2,
+        "grade97Count": 764,
+        "grade97Percent": 82.7,
+        "totalGradeAwards": 924,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -22441,6 +22684,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 403,
+        "grade9Percent": 12.7,
+        "grade97Count": 1662,
+        "grade97Percent": 52.4,
+        "totalGradeAwards": 3174,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -23652,6 +23904,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 293,
+        "grade9Percent": 10.2,
+        "grade97Count": 1091,
+        "grade97Percent": 37.8,
+        "totalGradeAwards": 2884,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -24804,6 +25065,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 50,
+        "grade9Percent": 1.7,
+        "grade97Count": 419,
+        "grade97Percent": 14.2,
+        "totalGradeAwards": 2958,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -25834,6 +26104,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 356,
+        "grade9Percent": 18.3,
+        "grade97Count": 1084,
+        "grade97Percent": 55.6,
+        "totalGradeAwards": 1950,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -26828,6 +27107,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 484,
+        "grade9Percent": 22.6,
+        "grade97Count": 1266,
+        "grade97Percent": 59.2,
+        "totalGradeAwards": 2139,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -27855,6 +28143,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 201,
+        "grade9Percent": 8.1,
+        "grade97Count": 791,
+        "grade97Percent": 31.7,
+        "totalGradeAwards": 2492,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -28859,6 +29156,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 292,
+        "grade9Percent": 13.9,
+        "grade97Count": 997,
+        "grade97Percent": 47.4,
+        "totalGradeAwards": 2104,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -29884,6 +30190,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 184,
+        "grade9Percent": 9.4,
+        "grade97Count": 764,
+        "grade97Percent": 39.1,
+        "totalGradeAwards": 1955,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -30698,6 +31013,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 1259,
+        "grade9Percent": 62.4,
+        "grade97Count": 1968,
+        "grade97Percent": 97.6,
+        "totalGradeAwards": 2017,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -31561,6 +31885,15 @@
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
       },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 425,
+        "grade9Percent": 26.0,
+        "grade97Count": 1225,
+        "grade97Percent": 74.9,
+        "totalGradeAwards": 1636,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
+      },
       "gcseFiveYearWindow": [
         {
           "year": "2020/21",
@@ -32365,6 +32698,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 613,
+        "grade9Percent": 48.3,
+        "grade97Count": 1140,
+        "grade97Percent": 89.8,
+        "totalGradeAwards": 1270,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
@@ -33374,6 +33716,15 @@
         "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
         "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
         "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 292,
+        "grade9Percent": 15.5,
+        "grade97Count": 1104,
+        "grade97Percent": 58.5,
+        "totalGradeAwards": 1886,
+        "method": "Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards."
       },
       "gcseFiveYearWindow": [
         {
