@@ -6,6 +6,20 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.15.0 — 2026-09-29
+
+- Replaced repeated **Open detail** text in the side-by-side comparison with a compact **↗** detail symbol shown only for metrics that genuinely have a deeper comparison.
+- Restricted detailed comparison opening to the **metric-name cell itself**; clicking elsewhere in that comparison row no longer opens detail.
+- Limited the main Performance blue hover card to the **School cell** rather than displaying it when hovering anywhere across a school row.
+- Added named **saved school sets**: select schools, save them as a reusable set, and apply/delete the set as a Performance filter.
+- Compressed school status presentation: **♥ Saved, ★/☆ Shortlist, ⊘ Reject** and ✓ Visited replace large text badges/actions in the School cell.
+- Expanded GCSE comparison roll-ups. Art/Fine Art/Photography/graphics become **Art & Other**; Ancient History/Classical Civilisation/Classical Greek/Greek/Latin become **Classics**; languages outside English/French/Spanish/German/Chinese become **Other Language**; and common variants of Chemistry, D&T, Drama, Maths, Music, PE, Food, Media, ICT, Sciences and others are consolidated for comparison.
+- Roll-ups remain display-only. Selecting a rolled-up subject now opens a per-school breakdown of the **original source subject rows and their individual figures**, rather than merely stating that a roll-up occurred.
+- Added persistent drag-and-drop reordering of **school columns** in the side-by-side comparison. The chosen order is remembered on the device.
+- Added the **GCSE cohort / pupil count beneath GCSE year** when the available source supports it. For school-published independent-school tables, matching compulsory English/Maths entry totals are used only where they support a defensible cohort count; otherwise Openday shows that the cohort is unavailable rather than inventing one.
+- Widened and stabilised Grade 9 / 9–7 result chips so percentages such as **56.2%** no longer overlap the green grade label.
+- Replaced the up/down sort-arrow treatment with quieter text cues such as **A–Z**, **high–low** and **low–high** only on the actively sorted column.
+
 ## 2.14.0 — 2026-09-29
 
 - Fixed private note merge propagation so a resolved note saved on one connected device can flow to the other open connected devices through a live Firestore document listener.
