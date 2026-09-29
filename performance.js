@@ -250,7 +250,11 @@
   }
   function subjectTable(subjects=[],kind){
     if(!subjects.length)return '<p class="muted">No subject-level record matched this school in the latest DfE file.</p>';
-    const rows=subjects.map(s=>'<tr><td>'+esc(s.subject)+'</td><td>'+esc(s.qualification||'')+'</td><td>'+gradeChips(s,kind)+'</td></tr>').join('');
+    const rows=subjects.map(s=>{
+      const subjectName=(s.subject==='Other Modern Languages'&&s.subjectGroup)?s.subjectGroup:s.subject;
+      const secondary=(s.subjectGroup&&s.subjectGroup!==subjectName&&s.subjectGroup!==s.subject)?' · '+s.subjectGroup:'';
+      return '<tr><td>'+esc(subjectName)+esc(secondary)+'</td><td>'+esc(s.qualification||'')+'</td><td>'+gradeChips(s,kind)+'</td></tr>';
+    }).join('');
     const note=kind==='gcse'?'<p class="muted grade-note"><b>How to read this:</b> grades run from 9 downward. Combined Science is a double award, so a chip such as <span class="grade-chip tone-top double-award"><span class="grade-label">9–8</span><span class="grade-count">12</span></span> means 12 pupils received the paired grades 9 and 8.</p>':'';
     return note+'<div class="subject-wrap"><table class="subject-table"><thead><tr><th>Subject</th><th>'+(kind==='gcse'?'Qualification':'')+'</th><th>Published grade counts · highest first</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
@@ -261,8 +265,8 @@
     return '<div class="context-grid grade-profile-grid">'+
       '<div><small>Grade 9</small><b>'+pct(g.grade9Percent)+'</b><span>'+fmt(g.grade9Count)+' published grade awards</span></div>'+
       '<div><small>Grades 9–7</small><b>'+pct(g.grade97Percent)+'</b><span>'+fmt(g.grade97Count)+' published grade awards</span></div>'+
-      '<div><small>Published awards counted</small><b>'+fmt(g.totalGradeAwards)+'</b><span>'+esc(g.year||'2024/25')+'</span></div>'+
-      '</div><p class="warning">These percentages are derived from the DfE subject-level grade counts that are actually published. Suppressed grade cells are not silently estimated. Combined Science paired grades count as two GCSE grade awards.</p>';
+      '<div><small>Total GCSE awards</small><b>'+fmt(g.totalGradeAwards)+'</b><span>'+esc(g.year||'2024/25')+'</span></div>'+
+      '</div><p class="warning">These percentages are derived from DfE subject-level grade counts. The denominator uses total published exam entries; Combined Science counts as two awards. '+(g.hasSuppressedGrades?'<b>Some grade cells are suppressed, so the displayed Grade 9 / 9–7 percentages may be slightly understated.</b>':'No suppressed grade-count gap was detected.')+'</p>';
   }
 
   function contextDetail(s){
