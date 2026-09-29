@@ -714,7 +714,7 @@
   };
   function rollupDetailRow(name,packs,index,kind){
     const variants=[...new Set(packs.flatMap(x=>(x.groups.get(name)?.components||[]).map(s=>s._rawName)))].sort((a,b)=>a.localeCompare(b));
-    const any=variants.length>1||packs.some(x=>(x.groups.get(name)?.components||[]).some(s=>subjectFamily(s,kind)!==name));
+    const any=variants.length>1||packs.some(x=>(x.groups.get(name)?.components||[]).some(s=>s._rawName!==name));
     if(!any)return'';
     const rows=variants.map(raw=>'<tr><th>'+esc(raw)+'</th>'+packs.map(x=>{const component=(x.groups.get(name)?.components||[]).find(s=>s._rawName===raw);return'<td>'+gradeStat(component,kind)+'</td>'}).join('')+'</tr>').join('');
     return '<tr class="subject-component-row" data-family-detail="'+index+'" hidden><td colspan="'+(packs.length+1)+'"><div class="rollup-comparison"><table class="compare-table rollup-compare-table"><thead><tr><th>Source subject</th>'+packs.map(x=>'<th>'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'</th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div></td></tr>';
@@ -726,7 +726,7 @@
     const intro='Similar subject labels are combined only when the qualification and grading scale are compatible. Counts are summed before percentages are calculated. Select a grouped subject to compare every original source subject across the same school columns.';
     if(!names.length)return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>No subject detail available</h3></div></div>';
     const rows=names.map((name,i)=>{
-      const grouped=packs.some(x=>(x.groups.get(name)?.components||[]).length>1||(x.groups.get(name)?.components||[]).some(s=>subjectFamily(s,kind)!==name));
+      const grouped=packs.some(x=>(x.groups.get(name)?.components||[]).length>1||(x.groups.get(name)?.components||[]).some(s=>s._rawName!==name));
       const label=grouped?'<button type="button" class="subject-family-toggle" data-family-toggle="'+i+'" aria-expanded="false">'+esc(name)+' <span>⌄</span></button>':esc(name);
       const main='<tr><th>'+label+'</th>'+packs.map(x=>'<td>'+gradeStat(x.groups.get(name),kind)+'</td>').join('')+'</tr>';
       return main+rollupDetailRow(name,packs,i,kind);
