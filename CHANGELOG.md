@@ -16,7 +16,7 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - Added a **Columns** customiser: show/hide metrics, drag to reorder on desktop, or use left/right controls on touch devices. The chosen layout is remembered on that device and can be reset to the default.
 - Corrected the DfE mapping for **Queen Elizabeth's School, Barnet** to current URN **136290** and made pinned URNs authoritative so similarly named schools cannot contaminate the record.
 - Deepened primary-school research by searching official admissions, school-tour, prospective-parent and Reception 2027 pages rather than relying only on homepage/open-day wording.
-- Added or expanded verified visit information for West Lodge, Earlsmead, Pinner Park, Vaughan, St John Fisher, Cedars Manor, Roxeth, Stanburn, St John's C of E, Weald Rise, Priestmead, Pinner Wood, Whitchurch and St Teresa's, plus visit-by-arrangement information for Aylward, Kenmore Park Junior, St Anselm's, Welldon Park and Whitefriars.
+- Added or expanded verified visit information for West Lodge, Earlsmead, Pinner Park, Vaughan, St John Fisher, Cedars Manor, Roxeth, Stanburn, St John's C of E, Weald Rise, Priestmead, Pinner Wood, Whitchurch, St Teresa's and St Jerome, plus visit-by-arrangement/current visit information for Aylward, Avanti House, Elmgrove, Kenmore Park Junior, St Anselm's, Welldon Park and Whitefriars.
 - Where official pages conflict or do not publish an exact session time/date, Openday now records that uncertainty rather than inventing a value.
 - Regenerated the subscribed calendar after the newly verified primary dates.
 
