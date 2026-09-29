@@ -3,8 +3,7 @@
   style.textContent=`
     [hidden]{display:none!important}
     .header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}.version-link.has-note-conflict{border-color:#ffca58;background:#ffca5822;color:#fff}.version-link .conflict-count{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 4px;margin-left:4px;border-radius:999px;background:#ffca58;color:#4a3500;font-size:.62rem;font-weight:900}
-    .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px}
-    .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}.sync-pill[data-pending="true"] .sync-dot{background:#5ee0ae;animation:pendingCloudPulse 1.8s ease-in-out infinite}.sync-pill[data-pending="true"]{border-color:#5ee0ae88}@keyframes pendingCloudPulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 #5ee0ae22}50%{opacity:1;box-shadow:0 0 0 5px #5ee0ae12}}
+    .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px;transition:background .18s,border-color .18s,color .18s}.sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"]{background:#176b50;border-color:#5ee0ae;color:#fff}.sync-pill[data-state="synced"] .sync-dot{background:#9df2ce}.sync-pill[data-state="recovery"]{background:#735f20;border-color:#e8c65c;color:#fff}.sync-pill[data-state="syncing"]{background:#725619;border-color:#ffca58}.sync-pill[data-state="syncing"] .sync-dot{background:#ffdf88}.sync-pill[data-state="error"]{background:#8b3434;border-color:#ff8585}.sync-pill[data-state="error"] .sync-dot{background:#ffb2b2}.sync-pill[data-pending="true"] .sync-dot{animation:pendingCloudPulse 1.8s ease-in-out infinite}.sync-pill[data-pending="true"]{border-color:#5ee0ae88}@keyframes pendingCloudPulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 #5ee0ae22}50%{opacity:1;box-shadow:0 0 0 5px #5ee0ae12}}
     .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 12px;min-height:1.1em}
     .decision-panel{margin:14px 0;padding:13px;background:#f7f9fb;border:1px solid #dce5ed;border-radius:12px}
     .decision-panel h3{margin:4px 0 9px}
@@ -14,7 +13,7 @@
     .calendar-action{gap:7px}.calendar-action .calendar-glyph{font-size:1.05rem}
     .feed-label{display:block;margin:14px 0 6px;font-size:.76rem;font-weight:800;color:#61758a;text-transform:uppercase;letter-spacing:.06em}
     .feed-copy{display:grid;grid-template-columns:1fr auto;gap:7px}.feed-copy input{min-width:0;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit;color:#102a43;background:#f8fafb}.feed-copy button{border:1px solid #dce5ed;border-radius:10px;background:white;color:#1769aa;font-weight:750;padding:8px 12px}
-    .sync-dialog{max-width:480px}.sync-dialog .detail-inner{padding:24px}.sync-dialog input{width:100%;border:1px solid #dce5ed;border-radius:10px;padding:11px 12px;font:inherit;margin:8px 0}.sync-dialog .token-help{font-size:.82rem;color:#61758a;line-height:1.45}.sync-dialog .sync-message{min-height:1.2em;font-size:.82rem;color:#61758a}.sync-dialog .sync-message.error{color:#b94444}.sync-dialog .sync-message.ok{color:#15805d}
+    .sync-dialog{max-width:540px}.sync-dialog .detail-inner{padding:24px}.sync-dialog input{width:100%;border:1px solid #dce5ed;border-radius:10px;padding:11px 12px;font:inherit;margin:8px 0}.sync-dialog .token-help{font-size:.82rem;color:#61758a;line-height:1.45}.sync-dialog .sync-message{min-height:1.2em;font-size:.82rem;color:#61758a}.sync-dialog .sync-message.error{color:#b94444}.sync-dialog .sync-message.ok{color:#15805d}.sync-hierarchy{display:grid;gap:7px;margin:12px 0}.sync-level{display:grid;grid-template-columns:26px 1fr;gap:9px;align-items:start;border:1px solid #dce5ed;background:#f8fafb;border-radius:10px;padding:9px}.sync-level strong{display:block;font-size:.82rem}.sync-level span{display:block;font-size:.74rem;color:#61758a;line-height:1.35;margin-top:2px}.sync-level.on{border-color:#acd9c8;background:#eef9f4}.sync-level.warn{border-color:#ead28f;background:#fff9e8}.sync-level-icon{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#dfe7ed;font-size:.72rem;font-weight:900}.sync-level.on .sync-level-icon{background:#176b50;color:#fff}.connect-state{margin:8px 0 12px;padding:9px 10px;border-radius:10px;background:#f5f7f9;color:#29445d;font-size:.8rem;font-weight:800}.connect-state.on{background:#e7f6ef;color:#176b50}.connect-state.warn{background:#fff4d9;color:#765300}.sync-dialog #connectToken.connected{background:#176b50;color:#fff;border-color:#176b50}
     .notes-dialog{width:min(760px,calc(100vw - 24px));max-height:86vh}.notes-dialog .detail-inner{padding:22px}.notes-list{display:grid;gap:10px;margin:14px 0}.note-card{border:1px solid #dce5ed;border-radius:12px;padding:12px;background:#fff}.note-card.has-conflict{border:2px solid #e0a72f;background:#fffaf0}.conflict-badge{display:inline-flex;background:#fff0d0;color:#765300;border-radius:999px;padding:3px 7px;font-size:.68rem;font-weight:900;margin-left:6px}.resolve-conflict{margin-top:9px;border:1px solid #d8b250;background:#fff;color:#765300;border-radius:8px;padding:7px 9px;font-weight:800}.conflict-editor{width:min(900px,calc(100vw - 24px));border:0;border-radius:18px;padding:0}.conflict-editor textarea{width:100%;min-height:160px;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit}.conflict-versions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.conflict-versions pre{white-space:pre-wrap;background:#f5f7f9;padding:10px;border-radius:10px;font:inherit;font-size:.82rem;line-height:1.65}.diff-device{background:#ffe5a6;border-radius:4px;padding:1px 2px;box-shadow:inset 0 -2px 0 #d89b20}.diff-cloud{background:#cdebdc;border-radius:4px;padding:1px 2px;box-shadow:inset 0 -2px 0 #39956c}.diff-list{display:grid;gap:8px;margin:12px 0}.diff-item{border:1px solid #dce5ed;border-radius:11px;padding:10px;background:#fbfcfd}.diff-item-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:7px}.diff-item-head b{font-size:.8rem}.diff-actions{display:flex;gap:5px;flex-wrap:wrap}.diff-actions button{border:1px solid #c8d5df;background:#fff;border-radius:999px;padding:5px 8px;font-size:.72rem;font-weight:800;color:#29445d}.diff-actions button.active[data-choice="local"]{background:#fff0c8;border-color:#d8aa37;color:#674900}.diff-actions button.active[data-choice="cloud"]{background:#e2f5eb;border-color:#6bb894;color:#185f43}.diff-snippets{display:grid;grid-template-columns:1fr 1fr;gap:7px}.diff-snippet{border-radius:8px;padding:8px;background:#f4f7f9;font-size:.78rem;line-height:1.45;white-space:pre-wrap}.diff-snippet.local{border-left:3px solid #d89b20}.diff-snippet.cloud{border-left:3px solid #39956c}.merge-help{font-size:.78rem;color:#61758a;line-height:1.45}.whole-merge-actions{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.whole-merge-actions button{border:1px solid #c9d6e2;background:#fff;border-radius:9px;padding:7px 10px;font-weight:800;color:#29445d}.note-card h3{margin:0 0 5px;font-size:1rem}.note-card p{white-space:pre-wrap;margin:0;color:#29445d;line-height:1.45}.note-meta{font-size:.74rem;color:#71869a;margin-top:7px}.merge-warning{border:1px solid #e5c36a;background:#fff9e8;border-radius:12px;padding:12px;margin:12px 0}.notes-empty{color:#61758a}.notes-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
     .pending-sync-bar{display:none;align-items:center;justify-content:space-between;gap:12px;background:#effaf5;border:1px solid #bfe8d6;border-radius:13px;padding:10px 12px;margin:-2px 0 12px}.pending-sync-bar.show{display:flex}.pending-sync-copy{display:flex;align-items:center;gap:9px;min-width:0}.pending-sync-cloud{font-size:1.2rem}.pending-sync-copy b{display:block;font-size:.84rem;color:#176b50}.pending-sync-copy span{display:block;font-size:.75rem;color:#5d746b;margin-top:2px}.pending-sync-bar button{border:0;border-radius:9px;background:#176b50;color:white;padding:9px 11px;font-weight:800;white-space:nowrap}
     @media(max-width:600px){.sync-pill .sync-label{display:none}.sync-pill{width:38px;height:38px;justify-content:center;padding:0}}
@@ -174,10 +173,17 @@
       <p>Use your memorable token on any device. Openday keeps using the <b>kk-syllabus</b> Firebase project; the token is simply your private access capability.</p>
       <label for="syncToken"><b>Memorable token</b></label>
       <input id="syncToken" type="text" autocomplete="off" spellcheck="false" placeholder="Enter your memorable token">
-      <p class="token-help">If this browser still remembers your old token, <b>Show saved token</b> can reveal it. A device may also have recovery access without actually possessing the memorable token.</p>
+      <p class="token-help">The memorable token is this device's reusable key to your private Openday data. Once connected it is cached on this device; you should not normally need to enter it again.</p>
+      <div id="syncConnectionState" class="connect-state">Checking connection…</div>
+      <div class="sync-hierarchy" aria-label="Sync status hierarchy">
+        <div id="syncLevelToken" class="sync-level"><span class="sync-level-icon">1</span><div><strong>Token saved on this device</strong><span>Portable access. This is the part that prevents repeated token entry on iPad/iPhone.</span></div></div>
+        <div id="syncLevelChannel" class="sync-level"><span class="sync-level-icon">2</span><div><strong>Connected to your cloud channel</strong><span>The app can read and write the shared Openday state.</span></div></div>
+        <div id="syncLevelLive" class="sync-level"><span class="sync-level-icon">3</span><div><strong>Live device updates</strong><span>Changes saved on another connected device are received automatically while Openday is open.</span></div></div>
+      </div>
       <p id="syncMode" class="token-help"></p>
       <p id="localDataSummary" class="token-help"></p>
-      <p class="token-help"><b>Multi-device safety:</b> each deliberate cloud save first reads the latest cloud state and merges it transactionally with this device. Changes on different schools are combined automatically; conflicting changes to the same item are preserved for review.</p>
+      <p class="token-help"><b>Recovery access</b> is different from a saved token: it lets the authorised owner recover/connect this app, but it is not the portable token itself.</p>
+      <p class="token-help"><b>Multi-device safety:</b> each cloud save first reads the latest shared state and merges it transactionally. Changes on different schools combine automatically; conflicts on the same note are preserved for review.</p>
       <div class="modal-actions">
         <button id="connectToken" class="primary" type="button">Connect & sync</button>
         <button id="showSavedToken" type="button">Show saved token</button>
@@ -197,11 +203,25 @@
     const input=d.querySelector('#syncToken'),message=d.querySelector('#syncMessage'),mode=d.querySelector('#syncMode'),summary=d.querySelector('#localDataSummary');
     const setMessage=(text,kind='')=>{message.className='sync-message'+(kind?' '+kind:'');message.textContent=text};
     const refreshDialogState=()=>{
-      const token=sync?.getToken?.()||'',owner=!!sync?.ownerConnected?.(),tokenConnected=!!sync?.tokenConnected?.();
-      mode.textContent=tokenConnected?'Connected using memorable token.':owner?'Connected through recovery access only — this device does not currently know the memorable token.':'Not connected to private cloud data.';
+      const token=sync?.getToken?.()||'',owner=!!sync?.ownerConnected?.(),tokenConnected=!!sync?.tokenConnected?.(),st=sync?.status?.()||{};
+      const channel=tokenConnected||st.connected,live=!!st.live;
+      const state=d.querySelector('#syncConnectionState'),connect=d.querySelector('#connectToken');
+      d.querySelector('#syncLevelToken')?.classList.toggle('on',!!token);
+      d.querySelector('#syncLevelChannel')?.classList.toggle('on',!!channel);
+      d.querySelector('#syncLevelLive')?.classList.toggle('on',!!live);
+      if(state){
+        state.className='connect-state '+(channel?'on':owner?'warn':'');
+        state.textContent=channel?(live?'Connected & synced · live updates on':'Connected to cloud'):(owner?'Recovery access available · portable token not saved':'Local only · enter token to connect');
+      }
+      if(connect){
+        connect.classList.toggle('connected',!!channel);
+        connect.textContent=channel?'Connected & synced ✓':'Connect & sync';
+        connect.disabled=!!channel;
+      }
+      mode.textContent=token&&channel?'Saved token + cloud channel connected.':channel&&owner?'Connected through owner recovery to the active sync channel.':owner?'Owner recovery access only — save the token here for normal portable access.':'Not connected to private cloud data.';
       try{
         const local=JSON.parse(localStorage.getItem('openDayState')||'{}');
-        summary.textContent=`This device currently holds ${Object.keys(local.notes||{}).length} note(s), ${(local.saved||[]).length} saved school(s), and ${Object.keys(local.booked||{}).filter(k=>local.booked[k]).length} booked flag(s) locally.`;
+        summary.textContent=`This device currently holds ${Object.keys(local.notes||{}).length} note(s), ${(local.saved||[]).length} saved school(s), and ${Object.keys(local.booked||{}).filter(k=>local.booked[k]).length} booked flag(s) locally.`+(st.lastSyncAt?' Last cloud sync: '+new Date(st.lastSyncAt).toLocaleString('en-GB')+'.':'');
       }catch{summary.textContent='Could not inspect this device local Openday data.'}
       const replace=d.querySelector('#replaceToken');
       if(replace){replace.hidden=!owner;replace.textContent=token?'Replace memorable token':'Set new memorable token'}
@@ -244,18 +264,39 @@
     return d;
   }
   function openSyncDialog(){
-    const d=ensureSyncDialog(),mode=d.querySelector('#syncMode'),summary=d.querySelector('#localDataSummary'),replace=d.querySelector('#replaceToken');
-    const token=sync?.getToken?.()||'',owner=!!sync?.ownerConnected?.(),tokenConnected=!!sync?.tokenConnected?.();
-    if(mode)mode.textContent=tokenConnected?'Connected using memorable token.':owner?'Connected through recovery access only — this device does not currently know the memorable token.':'Not connected to private cloud data.';
-    try{const local=JSON.parse(localStorage.getItem('openDayState')||'{}');if(summary)summary.textContent=`This device currently holds ${Object.keys(local.notes||{}).length} note(s), ${(local.saved||[]).length} saved school(s), and ${Object.keys(local.booked||{}).filter(k=>local.booked[k]).length} booked flag(s) locally.`}catch{}
-    if(replace){replace.hidden=!owner;replace.textContent=token?'Replace memorable token':'Set new memorable token'}
+    const d=ensureSyncDialog();
+    const token=sync?.getToken?.()||'',owner=!!sync?.ownerConnected?.(),st=sync?.status?.()||{},channel=!!st.connected||!!sync?.tokenConnected?.(),live=!!st.live;
+    d.querySelector('#syncLevelToken')?.classList.toggle('on',!!token);d.querySelector('#syncLevelChannel')?.classList.toggle('on',channel);d.querySelector('#syncLevelLive')?.classList.toggle('on',live);
+    const state=d.querySelector('#syncConnectionState');if(state){state.className='connect-state '+(channel?'on':owner?'warn':'');state.textContent=channel?(live?'Connected & synced · live updates on':'Connected to cloud'):(owner?'Recovery access available · portable token not saved':'Local only · enter token to connect')}
+    const connect=d.querySelector('#connectToken');if(connect){connect.classList.toggle('connected',channel);connect.textContent=channel?'Connected & synced ✓':'Connect & sync';connect.disabled=channel}
+    const mode=d.querySelector('#syncMode');if(mode)mode.textContent=token&&channel?'Saved token + cloud channel connected.':channel&&owner?'Connected through owner recovery to the active sync channel.':owner?'Owner recovery access only — save the token here for normal portable access.':'Not connected to private cloud data.';
+    const summary=d.querySelector('#localDataSummary');try{const local=JSON.parse(localStorage.getItem('openDayState')||'{}');if(summary)summary.textContent=`This device currently holds ${Object.keys(local.notes||{}).length} note(s), ${(local.saved||[]).length} saved school(s), and ${Object.keys(local.booked||{}).filter(k=>local.booked[k]).length} booked flag(s) locally.`+(st.lastSyncAt?' Last cloud sync: '+new Date(st.lastSyncAt).toLocaleString('en-GB')+'.':'')}catch{}
+    const replace=d.querySelector('#replaceToken');if(replace){replace.hidden=!owner;replace.textContent=token?'Replace memorable token':'Set new memorable token'}
     d.showModal();
   }
 
   function updateSyncStatus(detail={}){
-    const b=document.querySelector('#syncPill');if(!b)return;b.dataset.state=detail.state||'local';const label=b.querySelector('.sync-label');if(label)label.textContent=detail.state==='synced'?(detail.tokenConnected?'Token synced':detail.ownerConnected?'Recovery':'Synced'):detail.state==='syncing'?'Saving':'Sync';b.title=detail.text||'Sync settings';
-    const openStatus=document.querySelector('#detailBody .autosave-status');if(openStatus&&detail.state==='synced'){openStatus.className='autosave-status saved';openStatus.textContent='Saved & synced'}else if(openStatus&&detail.state==='error'){openStatus.className='autosave-status error';openStatus.textContent='Saved locally · sync unavailable'}
-    const message=document.querySelector('#syncMessage');if(message&&document.querySelector('#syncDialog')?.open&&!message.textContent)message.textContent=detail.text||'';
+    const b=document.querySelector('#syncPill');if(!b)return;
+    const state=detail.state||'local',connected=!!detail.connected;
+    b.dataset.state=connected&&state!=='error'&&state!=='syncing'?'synced':state;
+    const label=b.querySelector('.sync-label');
+    if(label)label.textContent=state==='syncing'?'Syncing…':state==='error'?'Sync error':connected?'Connected ✓':detail.ownerConnected?'Recovery':'Connect';
+    const levels=[
+      detail.hasRememberedToken?'1. Token saved on this device':'1. Token not saved on this device',
+      connected?'2. Cloud channel connected':'2. Cloud channel not connected',
+      detail.live?'3. Live device updates on':'3. Live device updates off'
+    ];
+    const extra=detail.lastSyncAt?'\nLast sync: '+new Date(detail.lastSyncAt).toLocaleString('en-GB'):'';
+    b.title=(detail.text||'Sync settings')+'\n'+levels.join('\n')+extra+'\nTap for details.';
+    b.setAttribute('aria-label',(connected?'Connected and synced. ':'Not connected. ')+levels.join('. '));
+    const openStatus=document.querySelector('#detailBody .autosave-status');if(openStatus&&state==='synced'){openStatus.className='autosave-status saved';openStatus.textContent='Saved & synced'}else if(openStatus&&state==='error'){openStatus.className='autosave-status error';openStatus.textContent='Saved locally · sync unavailable'}
+    const message=document.querySelector('#syncMessage');if(message&&document.querySelector('#syncDialog')?.open)message.textContent=detail.text||'';
+    if(document.querySelector('#syncDialog')?.open){
+      const token=!!detail.hasRememberedToken,channel=connected,live=!!detail.live,d=document.querySelector('#syncDialog');
+      d.querySelector('#syncLevelToken')?.classList.toggle('on',token);d.querySelector('#syncLevelChannel')?.classList.toggle('on',channel);d.querySelector('#syncLevelLive')?.classList.toggle('on',live);
+      const box=d.querySelector('#syncConnectionState');if(box){box.className='connect-state '+(channel?'on':detail.ownerConnected?'warn':'');box.textContent=channel?(live?'Connected & synced · live updates on':'Connected to cloud'):(detail.ownerConnected?'Recovery access available · token not saved':'Local only · enter token to connect')}
+      const connect=d.querySelector('#connectToken');if(connect){connect.classList.toggle('connected',channel);connect.textContent=channel?'Connected & synced ✓':'Connect & sync';connect.disabled=channel}
+    }
   }
   window.addEventListener('openday:sync-status',e=>updateSyncStatus(e.detail));
   window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));updateConflictIndicator();nativeRender?.()}});
