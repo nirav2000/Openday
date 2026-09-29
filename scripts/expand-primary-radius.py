@@ -54,6 +54,8 @@ for row in rows:
 
 used_urns=set()
 for s in schools:
+    if s.get('urn'):
+        used_urns.add(str(s.get('urn')))
     matches=by_name.get(norm(s.get('name')),[])
     h=host(s.get('infoUrl'))
     if not matches and h:matches=by_host.get(h,[])
@@ -130,6 +132,24 @@ for s in manual:
             if g.get(key) is not None:s[key]=g.get(key)
         remove_ids.add(g['id'])
 schools=[s for s in schools if s.get('id') not in remove_ids]
+
+# De-duplicate any previously generated rows by stable ID/URN. Prefer manually
+# researched records because their IDs are already used by saved notes/bookings.
+deduped=[]
+seen_ids=set()
+seen_urns=set()
+ordered=sorted(schools,key=lambda s:str(s.get('id','')).startswith('primary-'))
+for s in ordered:
+    sid=str(s.get('id') or '')
+    urn=str(s.get('urn') or '')
+    if sid and sid in seen_ids:
+        continue
+    if urn and urn in seen_urns:
+        continue
+    deduped.append(s)
+    if sid:seen_ids.add(sid)
+    if urn:seen_urns.add(urn)
+schools=deduped
 
 # Stable default display: nearest first when source data is inspected directly.
 schools.sort(key=lambda s:(s.get('distanceMiles') is None, s.get('distanceMiles',999), s.get('name','')))
