@@ -6,6 +6,21 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.14.0 — 2026-09-29
+
+- Fixed private note merge propagation so a resolved note saved on one connected device can flow to the other open connected devices through a live Firestore document listener.
+- Changed live cloud updates to use three-way state reconciliation against the last cloud snapshot, preventing a stale unresolved conflict on another device from simply resurrecting after it has been resolved elsewhere.
+- Added explicit three-way handling for merge-conflict metadata so a resolved conflict record can propagate instead of being overwritten by an older unresolved copy.
+- Made the memorable token more durable on iPad/iPhone by keeping it in both localStorage and a small IndexedDB store; a successful token lookup now caches the token before any optional merge-write can fail.
+- Added owner recovery of the active token channel and mirrored the active token hash into owner recovery state when a token channel is created.
+- Sanitised private state before Firestore writes, including timestamp-like values such as `updatedAt`, to avoid invalid nested Firestore values blocking note synchronisation.
+- Reworked Sync status wording: the header button turns green and says **Connected ✓** when connected, amber while syncing/recovery-only, and red on errors.
+- Added a three-level status hierarchy inside Sync: **token saved on this device → cloud channel connected → live device updates on**, with plain-English explanations and hover/tap status detail.
+- A connected **Connect & sync** button now becomes green **Connected & synced ✓** and disables itself so it does not invite repeated reconnect attempts.
+- Made Performance table headers sticky inside the metric table, including subject and side-by-side comparison tables.
+- Added a view-only subject-family roll-up for comparisons (for example Art, Fine Art and Art Graphics → **Art & Design**) while preserving raw source subjects; expandable details show exactly what was combined.
+- When a subject has **0% at Grade 9 / A***, the comparison now also shows the highest grade actually present and its percentage/count, so zero no longer looks like missing or obviously bad data without context.
+
 ## 2.13.0 — 2026-09-29
 
 - Reworked note merge differences into a **word/phrase-level diff**: changed, added and removed text is highlighted in the device and cloud versions.
