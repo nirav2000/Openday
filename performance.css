@@ -45,3 +45,20 @@ button.grade-chip{appearance:none;background:transparent;padding:0;cursor:pointe
   .subject-wrap{max-height:440px}
   .subject-mode-row{position:sticky;top:0;background:#fff;z-index:2;padding:5px 0}
 }
+
+
+/* v2.13 comparison drill-down */
+.compare-click-hint{margin:0 0 10px;color:var(--muted);font-size:.78rem}
+.compare-table tbody tr.drillable{cursor:pointer}
+.compare-table tbody tr.drillable:hover td,.compare-table tbody tr.drillable:hover th{background:#f4f8fb}
+.drill-cue{display:block;margin-top:3px;font-size:.62rem;color:var(--blue);font-weight:800}
+.compare-drilldown{margin-top:16px;border-top:1px solid var(--line);padding-top:16px}
+.compare-drill-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+.compare-drill-head h3{margin:3px 0 4px;font-size:1.05rem}
+.compare-drill-head p:not(.eyebrow){margin:0;color:var(--muted);font-size:.78rem;line-height:1.45}
+.compare-drill-head button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 9px;color:var(--blue);font-weight:800}
+.compare-detail-table thead th small{display:block;color:var(--muted);font-size:.62rem;font-weight:650;margin-top:3px;white-space:normal}
+.compare-stat{display:flex;flex-direction:column;gap:2px;min-width:112px}
+.compare-stat b{font-size:.8rem}
+.compare-stat span{font-size:.68rem;color:var(--muted);font-weight:650}
+@media(max-width:760px){.compare-drill-head{flex-direction:column}.compare-drill-head button{align-self:flex-start}}
