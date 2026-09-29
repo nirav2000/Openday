@@ -13,7 +13,13 @@
 <body>
   <header>
     <div><p class="eyebrow">Year 5 · 2028 entry planning · <span id="appVersion">v2.10.0</span></p><h1>Open days</h1></div>
-    <button id="installBtn" class="icon-btn" hidden aria-label="Install app">＋</button>
+    <div class="header-actions">
+      <button id="syncPill" class="sync-pill" type="button" data-state="local" aria-label="Open sync settings"><span class="sync-dot"></span><span class="sync-label">Sync</span></button>
+      <button id="notesButton" class="version-link" type="button" aria-label="Show notes and merge differences">Notes</button>
+      <a class="version-link" href="performance.html">Performance</a>
+      <a class="version-link" href="version-lab/">Versions</a>
+      <button id="installBtn" class="icon-btn" hidden aria-label="Install app">＋</button>
+    </div>
   </header>
   <main>
     <section class="summary" aria-label="Summary">
@@ -53,6 +59,8 @@
       <div class="chips" id="chips">
         <button class="chip" data-filter="all">All</button>
         <button class="chip active" data-filter="upcoming">Upcoming</button>
+        <button class="chip" data-filter="shortlist">Shortlist</button>
+        <button class="chip" data-filter="rejected">Rejected</button>
         <button class="chip" data-filter="saved">Saved</button>
         <button class="chip" data-filter="state">State</button>
         <button class="chip" data-filter="grammar">Grammar</button>
