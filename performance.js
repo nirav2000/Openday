@@ -1,7 +1,8 @@
 (()=>{
   const $=s=>document.querySelector(s);
-  let doc={schools:[]},filter='all',expanded='',sortKey='name',sortDir='asc';
+  let doc={schools:[]},filter='all',expanded='',sortKey='name',sortDir='asc',selectedYear='latest';
   const selectedCompare=new Set();
+  const subjectMode={gcse:'count',alevel:'count'};
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
@@ -11,6 +12,24 @@
   const COLUMN_LABELS={
     school:'School',gcseYear:'GCSE year',grade9pct:'Grade 9 %',grade9count:'Grade 9 #',grade97pct:'Grades 9–7 %',grade97count:'Grades 9–7 #',
     a8:'Attainment 8',engmath5:'Eng & maths 5+',p8:'P8 latest',alevel:'A-level',fsm:'FSM',wholeEal:'EAL',sen:'SEN support',ehcp:'EHCP',absence:'Absence',persistent:'PA'
+  };
+  const COLUMN_HELP={
+    school:'School name and area. Click to sort alphabetically; drag another heading to move that column.',
+    gcseYear:'The academic year used for the GCSE top-grade figures shown in this row. “Latest” can differ by school because publication dates differ.',
+    grade9pct:'Percentage of all covered GCSE / IGCSE grade awards that are grade 9. This is awards, not pupils.',
+    grade9count:'Number of grade 9 awards in the covered result set. One pupil normally takes several GCSEs, so one pupil can contribute several grade 9 awards.',
+    grade97pct:'Percentage of covered GCSE / IGCSE grade awards at grades 9–7 (roughly A*–A on the old scale).',
+    grade97count:'Number of GCSE / IGCSE grade awards at grades 9–7. This is not the number of pupils.',
+    a8:'Attainment 8: average points across eight qualifying GCSE subjects. Mainly a DfE state-school performance-table measure; independent-school coverage can be incomplete.',
+    engmath5:'Percentage achieving grade 5 or above in both English and mathematics in the DfE performance tables.',
+    p8:'Progress 8: progress relative to pupils nationally with similar KS2 starting points. Not published for cohorts without usable KS2 baselines.',
+    alevel:'Latest A-level outcome available for the selected year. School-published A*/A percentages are used when they are newer or more complete than DfE data.',
+    fsm:'Whole-school percentage known to be eligible for free school meals, from the latest available school census.',
+    wholeEal:'Whole-school percentage whose first language is known or believed to be other than English.',
+    sen:'Whole-school percentage receiving SEN support.',
+    ehcp:'Whole-school percentage with an Education, Health and Care Plan.',
+    absence:'Overall percentage of possible school sessions missed. Lower is generally less absence.',
+    persistent:'Percentage of pupils persistently absent, defined in the source as missing 10% or more sessions.'
   };
   const METRIC_COLUMNS=DEFAULT_COLUMNS.filter(x=>x!=='school');
   const loadColumnState=()=>{
@@ -49,21 +68,65 @@
     const s=String(y||'');
     return s.length===6?s.slice(0,4)+'/'+s.slice(4):s;
   };
+  const compactYear=y=>String(y||'').replace('/','');
+  const yearNumber=y=>Number(String(y||'').replace(/\D/g,''))||0;
   const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));
   const decisionFlag=(school,value)=>school.eventIds.some(id=>decisions[id]===value);
+  const metricForYear=(obj,field)=>{
+    if(selectedYear==='latest')return latest(obj,field);
+    const key=compactYear(selectedYear),row=obj?.[key];
+    const value=field?row?.[field]:row;
+    return value!==null&&value!==undefined?{year:key,value,row}:null;
+  };
+  function publishedForView(s){
+    const map=s.publishedResults||{};
+    if(selectedYear!=='latest')return map[selectedYear]?{year:selectedYear,data:map[selectedYear]}:null;
+    const keys=Object.keys(map).sort((a,b)=>yearNumber(a)-yearNumber(b));
+    const year=keys.at(-1);
+    return year?{year,data:map[year]}:null;
+  }
+  function subjectPack(s,kind){
+    const pub=publishedForView(s),payload=pub?.data?.[kind];
+    if(payload?.subjectDetails?.length)return{year:pub.year,subjects:payload.subjectDetails,source:'school-published',note:payload.note||'',highlights:payload.subjectHighlights||[]};
+    if(pub&&(selectedYear==='latest'||selectedYear===pub.year))return{year:pub.year,subjects:[],source:'school-published',note:payload?.note||'',highlights:payload?.subjectHighlights||[]};
+    const year=selectedYear==='latest'?'2024/25':selectedYear;
+    if(year==='2024/25')return{year,subjects:kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]),source:'DfE',note:'',highlights:[]};
+    return{year,subjects:[],source:'none',note:'',highlights:[]};
+  }
 
   function latestSummary(s){
     const context=s.context||{},pc=context.pupilCharacteristics||{},sen=context.sen||{},gp=s.gcseGradeProfile||{};
+    const pub=publishedForView(s),pubGcse=pub?.data?.gcse||{},pubAlevel=pub?.data?.alevel||{};
+    const gpYear=gp.year||'2024/25';
+    const publishedIsNewer=pub&&yearNumber(pub.year)>yearNumber(gpYear);
+    const usePublishedGcse=pub&&(
+      selectedYear!=='latest' ||
+      publishedIsNewer ||
+      pubGcse.grade9Percent!==undefined ||
+      pubGcse.grade97Percent!==undefined
+    );
+    const profileAllowed=selectedYear==='latest'
+      ? !publishedIsNewer
+      : selectedYear===gpYear;
+    const gradeMetric=(field)=>{
+      if(usePublishedGcse&&pubGcse[field]!==null&&pubGcse[field]!==undefined)return{year:pub.year,value:pubGcse[field],row:pubGcse,source:'school-published'};
+      if(usePublishedGcse&&publishedIsNewer)return null;
+      if(profileAllowed&&gp[field]!==null&&gp[field]!==undefined)return{year:gpYear,value:gp[field],row:gp,source:'DfE'};
+      return null;
+    };
+    const alPub=pub&&Object.keys(pubAlevel).length?{year:pub.year,row:pubAlevel,source:'school-published'}:null;
     return{
-      a8:latest(s.gcse,'attainment8'),
-      em:latest(s.gcse,'englishMaths5Plus'),
-      p8:latest(s.gcse,'progress8'),
-      ks4Eal:latest(s.ks4Eal||{},null),
-      al:latest(s.alevel,'aps'),
-      grade9pct:gp.grade9Percent!==null&&gp.grade9Percent!==undefined?{year:gp.year||'2024/25',value:gp.grade9Percent,row:gp}:null,
-      grade9count:gp.grade9Count!==null&&gp.grade9Count!==undefined?{year:gp.year||'2024/25',value:gp.grade9Count,row:gp}:null,
-      grade97pct:gp.grade97Percent!==null&&gp.grade97Percent!==undefined?{year:gp.year||'2024/25',value:gp.grade97Percent,row:gp}:null,
-      grade97count:gp.grade97Count!==null&&gp.grade97Count!==undefined?{year:gp.year||'2024/25',value:gp.grade97Count,row:gp}:null,
+      a8:metricForYear(s.gcse,'attainment8'),
+      em:metricForYear(s.gcse,'englishMaths5Plus'),
+      p8:metricForYear(s.gcse,'progress8'),
+      ks4Eal:metricForYear(s.ks4Eal||{},null),
+      al:metricForYear(s.alevel,'aps'),
+      alPub,
+      grade9pct:gradeMetric('grade9Percent'),
+      grade9count:gradeMetric('grade9Count'),
+      grade97pct:gradeMetric('grade97Percent'),
+      grade97count:gradeMetric('grade97Count'),
+      grade98pct:gradeMetric('grade98Percent'),
       fsm:pc.fsmPercent!==null&&pc.fsmPercent!==undefined?{year:pc.year||'2025/26',value:pc.fsmPercent,row:pc}:null,
       wholeEal:pc.ealPercent!==null&&pc.ealPercent!==undefined?{year:pc.year||'2025/26',value:pc.ealPercent,row:pc}:null,
       sen:sen.senSupportPercent!==null&&sen.senSupportPercent!==undefined?{year:sen.year||'2025/26',value:sen.senSupportPercent,row:sen}:null,
@@ -105,7 +168,7 @@
     if(key==='attainment8')return m.a8?.value??-Infinity;
     if(key==='engmath5')return m.em?.value??-Infinity;
     if(key==='progress8')return m.p8?.value??-Infinity;
-    if(key==='alevel')return m.al?.value??-Infinity;
+    if(key==='alevel')return m.alPub?.row?.astarAPercent??m.al?.value??-Infinity;
     if(key==='fsm')return m.fsm?.value??-Infinity;
     if(key==='wholeEal')return m.wholeEal?.value??-Infinity;
     if(key==='sen')return m.sen?.value??-Infinity;
@@ -151,24 +214,31 @@
     return '<br><span style="opacity:.88">'+esc(subject.subject)+': '+esc(bits.join(' · ')||'published detail available')+'</span>';
   }
   function hoverText(s,m){
-    const priority=['English Language','Mathematics','Biology'];
-    const subjects=[...(s.gcseSubjects||[])].sort((a,b)=>{
+    const pack=subjectPack(s,'gcse');
+    const priority=['English Language','English','Mathematics','Biology'];
+    const subjects=[...(pack.subjects||[])].sort((a,b)=>{
       const ai=priority.indexOf(a.subject),bi=priority.indexOf(b.subject);
       return (ai<0?99:ai)-(bi<0?99:bi)||a.subject.localeCompare(b.subject);
     }).slice(0,3);
+    const gcseYear=m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||pack.year||'';
+    const alText=m.alPub
+      ? 'A-level '+esc(m.alPub.year)+': A* '+pct(m.alPub.row.astarPercent)+' · A*/A '+pct(m.alPub.row.astarAPercent)
+      : 'A-level: '+(m.al?(m.al.row.averageGrade||fmt(m.al.value))+' ('+yearLabel(m.al.year)+')':'—');
     return '<b>'+esc(s.name)+'</b><br>'+
-      '<b>Grade 9:</b> '+(m.grade9pct?pct(m.grade9pct.value)+' ('+fmt(m.grade9count?.value)+' published awards)':'—')+
-      ' · <b>9–7:</b> '+(m.grade97pct?pct(m.grade97pct.value)+' ('+fmt(m.grade97count?.value)+')':'—')+'<br>'+
-      'Latest A8: '+(m.a8?fmt(m.a8.value):'not available')+
+      '<b>GCSE '+esc(yearLabel(gcseYear))+':</b> Grade 9 '+(m.grade9pct?pct(m.grade9pct.value):'—')+
+      (m.grade9count?' ('+fmt(m.grade9count.value)+' awards)':'')+
+      ' · 9–7 '+(m.grade97pct?pct(m.grade97pct.value):'—')+
+      (m.grade97count?' ('+fmt(m.grade97count.value)+')':'')+'<br>'+
+      'Attainment 8: '+(m.a8?fmt(m.a8.value)+' ('+yearLabel(m.a8.year)+')':'not available')+
       ' · Eng/maths 5+: '+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'<br>'+
-      'P8 latest: '+(m.p8?fmt(m.p8.value)+' ('+yearLabel(m.p8.year)+')':'not available')+'<br>'+
-      'A-level: '+(m.al?(m.al.row.averageGrade||fmt(m.al.value)):'—')+'<br>'+
+      'P8: '+(m.p8?fmt(m.p8.value)+' ('+yearLabel(m.p8.year)+')':'not available')+'<br>'+
+      alText+'<br>'+
       'FSM: '+(m.fsm?pct(m.fsm.value):'—')+' · EAL: '+(m.wholeEal?pct(m.wholeEal.value):'—')+
       ' · SEN support: '+(m.sen?pct(m.sen.value):'—')+' · EHCP: '+(m.ehcp?pct(m.ehcp.value):'—')+'<br>'+
       'Absence: '+(m.absence?pct(m.absence.value):'—')+' · persistent absence: '+(m.persistent?pct(m.persistent.value):'—')+
-      (subjects.length?'<br><b>2024/25 subjects</b>':'')+
+      (subjects.length?'<br><b>'+esc(pack.year)+' subject detail</b>':'')+
       subjects.map(subjectHoverLine).join('')+
-      '<br><span style="opacity:.7">Click/tap for full year-by-year and subject tables.</span>';
+      '<br><span style="opacity:.7">Click/tap the row for sources, history and subject tables.</span>';
   }
 
   function schoolCell(s,m){
@@ -186,7 +256,7 @@
   function metricCell(id,s,m){
     const profile=s.gcseGradeProfile||{};
     let html='—';
-    if(id==='gcseYear')html=m.a8?yearLabel(m.a8.year):profile.year||'—';
+    if(id==='gcseYear')html=esc(yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||''));
     else if(id==='grade9pct')html=m.grade9pct?'<span class="headline-grade grade-chip tone-top"><span class="grade-label">9</span><span class="grade-count">'+pct(m.grade9pct.value)+'</span></span>':'—';
     else if(id==='grade9count')html=m.grade9count?fmt(m.grade9count.value):'—';
     else if(id==='grade97pct')html=m.grade97pct?'<span class="headline-grade grade-chip tone-high"><span class="grade-label">9–7</span><span class="grade-count">'+pct(m.grade97pct.value)+'</span></span>':'—';
@@ -194,7 +264,9 @@
     else if(id==='a8')html=m.a8?fmt(m.a8.value):'—';
     else if(id==='engmath5')html=m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—';
     else if(id==='p8')html=m.p8?fmt(m.p8.value)+' <span class="muted">('+yearLabel(m.p8.year)+')</span>':'—';
-    else if(id==='alevel')html=m.al?esc(m.al.row.averageGrade||fmt(m.al.value))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—';
+    else if(id==='alevel')html=m.alPub
+      ? '<span class="published-metric"><b>A* '+pct(m.alPub.row.astarPercent)+'</b><span>A*/A '+pct(m.alPub.row.astarAPercent)+' · '+esc(m.alPub.year)+'</span></span>'
+      : m.al?esc(m.al.row.averageGrade||fmt(m.al.value))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—';
     else if(id==='fsm')html=m.fsm?pct(m.fsm.value):'—';
     else if(id==='wholeEal')html=m.wholeEal?pct(m.wholeEal.value):'—';
     else if(id==='sen')html=m.sen?pct(m.sen.value):'—';
@@ -209,13 +281,34 @@
     const ids=visibleColumnIds();
     $('#performanceHead').innerHTML=ids.map(id=>{
       const key=sortForColumn(id),active=sortKey===key,arrow=active?(sortDir==='asc'?'▲':'▼'):'↕';
-      return '<th data-column="'+esc(id)+'"><button class="sort-head" type="button" data-sort-key="'+esc(key)+'" aria-label="Sort by '+esc(COLUMN_LABELS[id]||id)+'">'+esc(COLUMN_LABELS[id]||id)+' <span>'+arrow+'</span></button></th>';
+      const draggable=id!=='school';
+      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+' <span>'+arrow+'</span></span></th>';
     }).join('');
-    document.querySelectorAll('#performanceHead [data-sort-key]').forEach(btn=>btn.onclick=()=>{
-      const key=btn.dataset.sortKey;
-      if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=(key==='name'||key==='absence'||key==='persistent')?'asc':'desc'}
-      const sel=$('#perfSort');if(sel&&[...sel.options].some(o=>o.value===key))sel.value=key;
-      render();
+    let dragged='',didDrag=false;
+    document.querySelectorAll('#performanceHead th[data-sort-key]').forEach(th=>{
+      const sort=()=>{
+        if(didDrag){didDrag=false;return}
+        const key=th.dataset.sortKey;
+        if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=(key==='name'||key==='absence'||key==='persistent')?'asc':'desc'}
+        const sel=$('#perfSort');if(sel&&[...sel.options].some(o=>o.value===key))sel.value=key;
+        render();
+      };
+      th.onclick=sort;
+      th.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sort()}};
+      if(th.dataset.column!=='school'){
+        th.ondragstart=()=>{dragged=th.dataset.column;th.classList.add('dragging');didDrag=true};
+        th.ondragend=()=>{dragged='';th.classList.remove('dragging');setTimeout(()=>{didDrag=false},0)};
+        th.ondragover=e=>{if(dragged)e.preventDefault()};
+        th.ondrop=e=>{
+          e.preventDefault();
+          const target=th.dataset.column;
+          if(!dragged||dragged===target)return;
+          const from=columnState.order.indexOf(dragged),to=columnState.order.indexOf(target);
+          if(from<0||to<0)return;
+          const next=[...columnState.order];next.splice(from,1);next.splice(to,0,dragged);columnState.order=next;
+          saveColumnState();render();
+        };
+      }
     });
     const table=document.querySelector('.performance-table');
     if(table)table.style.minWidth=Math.max(760,250+(ids.length-1)*105)+'px';
@@ -236,7 +329,7 @@
   }
   function schoolRow(s){
     const m=latestSummary(s),tr=document.createElement('tr');
-    tr.className='school-row';
+    tr.className='school-row'+(expanded===s.name?' expanded':'');
     tr.dataset.school=s.name;
     tr.innerHTML=visibleColumnIds().map(id=>id==='school'?schoolCell(s,m):metricCell(id,s,m)).join('');
     tr.onclick=e=>{
@@ -276,34 +369,52 @@
   }
 
   function gradeChips(subject,kind){
-    const grades=subject.grades||{},total=grades['Total exam entries'];
+    const grades=subject.grades||{};
     const keys=Object.keys(grades).filter(g=>g!=='Total exam entries').sort((a,b)=>gradeRank(b)-gradeRank(a));
+    const counted=keys.reduce((sum,g)=>sum+(Number(grades[g])||0),0);
+    const total=Number(grades['Total exam entries'])||counted;
+    const mode=subjectMode[kind]||'count';
     const chips=keys.map(g=>{
       const display=gradeDisplay(g),paired=kind==='gcse'&&/combined science/i.test(subject.subject||'')&&/^\d{2}$/.test(String(g));
-      const title=paired?'Combined Science double award: grades '+display.replace('–',' and '):'Grade '+display;
-      return '<span class="grade-chip tone-'+gradeTone(g)+(paired?' double-award':'')+'" title="'+esc(title)+'"><span class="grade-label">'+esc(display)+'</span><span class="grade-count">'+fmt(grades[g])+'</span></span>';
+      const title=(paired?'Combined Science double award: grades '+display.replace('–',' and '):'Grade '+display)+' · click to switch count / percentage';
+      const raw=Number(grades[g])||0;
+      const value=mode==='percent'&&total?fmt(100*raw/total)+'%':fmt(raw);
+      return '<button type="button" data-grade-toggle="'+esc(kind)+'" class="grade-chip tone-'+gradeTone(g)+(paired?' double-award':'')+'" title="'+esc(title)+'"><span class="grade-label">'+esc(display)+'</span><span class="grade-count">'+value+'</span></button>';
     }).join('');
-    return '<div class="grade-chip-row">'+(chips||'<span class="muted">No unsuppressed grade counts</span>')+(total!==undefined?'<span class="entry-total">'+fmt(total)+' entries</span>':'')+'</div>';
+    return '<div class="grade-chip-row">'+(chips||'<span class="muted">No unsuppressed grade counts</span>')+(total?'<span class="entry-total">'+fmt(total)+' entries</span>':'')+'</div>';
   }
-  function subjectTable(subjects=[],kind){
-    if(!subjects.length)return '<p class="muted">No subject-level record matched this school in the latest DfE file.</p>';
+  function subjectTable(subjects=[],kind,year='',meta={}){
+    const mode=subjectMode[kind]||'count',switchLabel=mode==='count'?'Show %':'Show numbers';
+    const controls='<div class="subject-mode-row"><span>'+esc(year)+(meta.source?' · '+esc(meta.source):'')+'</span><button type="button" data-grade-toggle="'+esc(kind)+'">'+switchLabel+'</button></div>';
+    const noteBits=[];
+    if(meta.note)noteBits.push('<p class="muted subject-source-note">'+esc(meta.note)+'</p>');
+    if(meta.highlights?.length){
+      noteBits.push('<div class="subject-highlights">'+meta.highlights.map(h=>'<span><b>'+esc(h.subject)+'</b>'+(h.grade9Percent!==undefined?' · 9: '+pct(h.grade9Percent):'')+(h.grade98Percent!==undefined?' · 9–8: '+pct(h.grade98Percent):'')+'</span>').join('')+'</div>');
+    }
+    if(!subjects.length)return controls+noteBits.join('')+'<p class="muted">No full subject-by-subject grade table is published for this school and year.</p>';
     const rows=subjects.map(s=>{
       const subjectName=(s.subject==='Other Modern Languages'&&s.subjectGroup)?s.subjectGroup:s.subject;
       const secondary=(s.subjectGroup&&s.subjectGroup!==subjectName&&s.subjectGroup!==s.subject)?' · '+s.subjectGroup:'';
       return '<tr><td>'+esc(subjectName)+esc(secondary)+'</td><td>'+esc(s.qualification||'')+'</td><td>'+gradeChips(s,kind)+'</td></tr>';
     }).join('');
-    const note=kind==='gcse'?'<p class="muted grade-note"><b>How to read this:</b> grades run from 9 downward. Combined Science is a double award, so a chip such as <span class="grade-chip tone-top double-award"><span class="grade-label">9–8</span><span class="grade-count">12</span></span> means 12 pupils received the paired grades 9 and 8.</p>':'';
-    return note+'<div class="subject-wrap"><table class="subject-table"><thead><tr><th>Subject</th><th>'+(kind==='gcse'?'Qualification':'')+'</th><th>Published grade counts · highest first</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+    const note=kind==='gcse'?'<p class="muted grade-note"><b>How to read this:</b> grades run from 9 downward. “#” means grade awards, not pupils. Click any grade value or the toggle above to switch between counts and percentages within that subject.</p>':'<p class="muted grade-note">Click any grade value or the toggle above to switch between counts and percentages within that subject.</p>';
+    return controls+noteBits.join('')+note+'<div class="subject-wrap"><table class="subject-table"><thead><tr><th>Subject</th><th>'+(kind==='gcse'?'Qualification':'')+'</th><th>Grades · highest first</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
 
   function gradeProfileDetail(s){
-    const g=s.gcseGradeProfile||{};
-    if(g.grade9Percent===null||g.grade9Percent===undefined)return '<p class="muted">No comparable published GCSE grade-count profile is available.</p>';
-    return '<div class="context-grid grade-profile-grid">'+
-      '<div><small>Grade 9</small><b>'+pct(g.grade9Percent)+'</b><span>'+fmt(g.grade9Count)+' published grade awards</span></div>'+
-      '<div><small>Grades 9–7</small><b>'+pct(g.grade97Percent)+'</b><span>'+fmt(g.grade97Count)+' published grade awards</span></div>'+
-      '<div><small>Total GCSE awards</small><b>'+fmt(g.totalGradeAwards)+'</b><span>'+esc(g.year||'2024/25')+'</span></div>'+
-      '</div><p class="warning">These percentages are derived from DfE subject-level grade counts. The denominator uses total published exam entries; Combined Science counts as two awards. '+(g.hasSuppressedGrades?'<b>Some grade cells are suppressed, so the displayed Grade 9 / 9–7 percentages may be slightly understated.</b>':'No suppressed grade-count gap was detected.')+'</p>';
+    const m=latestSummary(s),pub=publishedForView(s),g=pub?.data?.gcse||{},year=m.grade9pct?.year||m.grade97pct?.year||g.year||'';
+    if(!m.grade9pct&&!m.grade97pct)return '<p class="muted">No comparable whole-school GCSE top-grade profile is published for '+esc(selectedYear==='latest'?'the latest available year':selectedYear)+'.</p>';
+    const cards=[];
+    if(m.grade9pct)cards.push('<div><small>Grade 9</small><b>'+pct(m.grade9pct.value)+'</b><span>'+(m.grade9count?fmt(m.grade9count.value)+' grade awards':'percentage published')+'</span></div>');
+    if(m.grade98pct)cards.push('<div><small>Grades 9–8</small><b>'+pct(m.grade98pct.value)+'</b><span>school-published headline</span></div>');
+    if(m.grade97pct)cards.push('<div><small>Grades 9–7</small><b>'+pct(m.grade97pct.value)+'</b><span>'+(m.grade97count?fmt(m.grade97count.value)+' grade awards':'percentage published')+'</span></div>');
+    const total=g.totalGradeAwards??m.grade9pct?.row?.totalGradeAwards;
+    if(total)cards.push('<div><small>Total covered awards</small><b>'+fmt(total)+'</b><span>'+esc(yearLabel(year))+'</span></div>');
+    const source=m.grade9pct?.source||m.grade97pct?.source||'DfE';
+    const caution=source==='school-published'
+      ? '<p class="source-note"><b>School-published · '+esc(yearLabel(year))+'.</b> Used because it is newer or materially more complete than the DfE independent-school performance-table extract.</p>'
+      : '<p class="warning">Derived from DfE subject-level grade counts. For independent schools the DfE performance-table extract can omit IGCSEs or other non-counting qualifications, so incomplete extracts are not treated as whole-school results where a verified school source is available.</p>';
+    return '<div class="context-grid grade-profile-grid">'+cards.join('')+'</div>'+caution+(g.note?'<p class="muted context-note">'+esc(g.note)+'</p>':'');
   }
 
   function contextDetail(s){
@@ -335,23 +446,29 @@
     tr.className='detail-row';
     const td=document.createElement('td');
     td.colSpan=visibleColumnIds().length;
+    const gcsePack=subjectPack(s,'gcse'),alevelPack=subjectPack(s,'alevel'),pub=publishedForView(s),pubA=pub?.data?.alevel;
+    const publishedA=pubA?'<div class="published-result-strip"><b>School-published A-level '+esc(pub.year)+'</b>'+(pubA.astarPercent!==undefined?'<span>A* '+pct(pubA.astarPercent)+'</span>':'')+(pubA.astarAPercent!==undefined?'<span>A*/A '+pct(pubA.astarAPercent)+'</span>':'')+(pubA.candidates!==undefined?'<span>'+fmt(pubA.candidates)+' candidates</span>':'')+'</div>':'';
+    const sourceLinks=[];
+    if(pub?.data?.sources?.gcse)sourceLinks.push('<a href="'+esc(pub.data.sources.gcse)+'" target="_blank" rel="noopener">School GCSE source '+esc(pub.year)+' ↗</a>');
+    if(pub?.data?.sources?.alevel)sourceLinks.push('<a href="'+esc(pub.data.sources.alevel)+'" target="_blank" rel="noopener">School A-level source '+esc(pub.year)+' ↗</a>');
+    sourceLinks.push(
+      '<a href="'+esc(doc.sources?.ks4_performance||'#')+'" target="_blank" rel="noopener">DfE KS4 performance source ↗</a>',
+      '<a href="'+esc(doc.sources?.ks4_subjects||'#')+'" target="_blank" rel="noopener">DfE GCSE subject source ↗</a>',
+      '<a href="'+esc(doc.sources?.alevel_performance||'#')+'" target="_blank" rel="noopener">DfE A-level source ↗</a>',
+      '<a href="'+esc(doc.sources?.characteristics||'#')+'" target="_blank" rel="noopener">DfE pupil characteristics source ↗</a>',
+      '<a href="'+esc(doc.sources?.sen||'#')+'" target="_blank" rel="noopener">DfE SEN source ↗</a>',
+      '<a href="'+esc(doc.sources?.absence||'#')+'" target="_blank" rel="noopener">DfE absence source ↗</a>'
+    );
     td.innerHTML=
-      '<div class="detail-panel"><div class="detail-grid">'+
-      '<section class="detail-card"><h3>GCSE top-grade profile · latest published year</h3>'+gradeProfileDetail(s)+'</section>'+
+      '<div class="detail-panel">'+publishedA+'<div class="detail-grid">'+
+      '<section class="detail-card"><h3>GCSE top-grade profile</h3>'+gradeProfileDetail(s)+'</section>'+
       '<section class="detail-card"><h3>GCSE / KS4 history</h3>'+gcseHistory(s)+'</section>'+
       '<section class="detail-card"><h3>A-level history</h3>'+alevelHistory(s)+'</section>'+
       '<section class="detail-card"><h3>Whole-school context · 2025/26</h3>'+contextDetail(s)+'</section>'+
       '<section class="detail-card"><h3>Attendance history</h3>'+absenceHistory(s)+'</section>'+
-      '<section class="detail-card"><h3>GCSE subject detail · latest published year</h3>'+subjectTable(s.gcseSubjects,'gcse')+'</section>'+
-      '<section class="detail-card"><h3>A-level subject detail · latest published year</h3>'+subjectTable(s.alevelSubjects,'alevel')+'</section>'+
-      '</div><div class="source-links">'+
-      '<a href="'+esc(doc.sources?.ks4_performance||'#')+'" target="_blank" rel="noopener">DfE KS4 performance source ↗</a>'+
-      '<a href="'+esc(doc.sources?.ks4_subjects||'#')+'" target="_blank" rel="noopener">DfE GCSE subject source ↗</a>'+
-      '<a href="'+esc(doc.sources?.alevel_performance||'#')+'" target="_blank" rel="noopener">DfE A-level source ↗</a>'+
-      '<a href="'+esc(doc.sources?.characteristics||'#')+'" target="_blank" rel="noopener">DfE pupil characteristics source ↗</a>'+
-      '<a href="'+esc(doc.sources?.sen||'#')+'" target="_blank" rel="noopener">DfE SEN source ↗</a>'+
-      '<a href="'+esc(doc.sources?.absence||'#')+'" target="_blank" rel="noopener">DfE absence source ↗</a>'+
-      '</div></div>';
+      '<section class="detail-card detail-card-wide"><h3>GCSE subject detail · '+esc(gcsePack.year)+'</h3>'+subjectTable(gcsePack.subjects,'gcse',gcsePack.year,gcsePack)+'</section>'+
+      '<section class="detail-card detail-card-wide"><h3>A-level subject detail · '+esc(alevelPack.year)+'</h3>'+subjectTable(alevelPack.subjects,'alevel',alevelPack.year,alevelPack)+'</section>'+
+      '</div><div class="source-links">'+sourceLinks.join('')+'</div></div>';
     tr.append(td);
     return tr;
   }
@@ -438,9 +555,24 @@
     const m=doc.methodology||{};
     $('#methodology').innerHTML='<h2>Data coverage and caveats</h2><ul>'+Object.values(m).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
   }
+  function populateYearSelect(){
+    const select=$('#perfYear');if(!select)return;
+    const set=new Set();
+    (doc.schools||[]).forEach(s=>{
+      Object.keys(s.publishedResults||{}).forEach(y=>set.add(y));
+      Object.keys(s.gcse||{}).forEach(y=>set.add(yearLabel(y)));
+      Object.keys(s.alevel||{}).forEach(y=>set.add(yearLabel(y)));
+    });
+    const years=[...set].filter(Boolean).sort((a,b)=>yearNumber(b)-yearNumber(a));
+    select.innerHTML='<option value="latest">Latest available</option>'+years.map(y=>'<option value="'+esc(y)+'">'+esc(y)+'</option>').join('');
+    select.value=years.includes(selectedYear)?selectedYear:'latest';
+    selectedYear=select.value;
+  }
 
   $('#perfSearch').oninput=render;
   $('#perfSort').onchange=e=>{sortKey=e.target.value;sortDir=(sortKey==='name'||sortKey==='absence'||sortKey==='persistent')?'asc':'desc';render()};
+  $('#perfYear').onchange=e=>{selectedYear=e.target.value;render()};
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-grade-toggle]');if(!b)return;e.stopPropagation();const kind=b.dataset.gradeToggle;if(!subjectMode[kind])return;subjectMode[kind]=subjectMode[kind]==='count'?'percent':'count';render()});
   $('#columnsButton').onclick=()=>{renderColumnDialog();$('#columnDialog').showModal()};
   $('#closeColumns').onclick=()=>$('#columnDialog').close();
   $('#doneColumns').onclick=()=>$('#columnDialog').close();
@@ -458,12 +590,17 @@
     render();
   };
 
-  fetch('data/performance.json',{cache:'no-store'})
-    .then(r=>{if(!r.ok)throw Error('Official performance dataset is still being prepared');return r.json()})
-    .then(x=>{
+  Promise.all([
+    fetch('data/performance.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Official performance dataset is still being prepared');return r.json()}),
+    fetch('data/published-results.json',{cache:'no-store'}).then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}}))
+  ])
+    .then(([x,published])=>{
       doc=x;
+      (doc.schools||[]).forEach(s=>{s.publishedResults=published?.schools?.[s.name]||s.publishedResults||{}});
+      if(published?.note)doc.methodology={...(doc.methodology||{}),schoolPublished:published.note};
       const matched=doc.schools.filter(s=>s.urn).length;
-      $('#dataStatus').textContent='Updated '+new Date(doc.generatedAt).toLocaleString('en-GB')+' · '+matched+'/'+doc.schools.length+' tracked schools matched to a DfE performance record.';
+      $('#dataStatus').textContent='Updated '+new Date(doc.generatedAt).toLocaleString('en-GB')+' · '+matched+'/'+doc.schools.length+' tracked schools matched to a DfE performance record. Verified school-published results are layered on top where newer or more complete.';
+      populateYearSelect();
       renderMethodology();
       render();
       const hash=new URLSearchParams(location.hash.replace(/^#/,'')).get('school');
