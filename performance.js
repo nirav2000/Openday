@@ -584,9 +584,11 @@
     $('#openCompare').disabled=selectedCompare.size<2;
   }
   const detailKind=id=>['grade9pct','grade9count','grade97pct','grade97count'].includes(id)?'gcse-subjects':['a8','engmath5','p8'].includes(id)?'gcse-history':id==='alevel'?'alevel':['fsm','wholeEal','sen','ehcp'].includes(id)?'context':['absence','persistent'].includes(id)?'attendance':'';
-  const subjectName=s=>(s.subject==='Other Modern Languages'&&s.subjectGroup?s.subjectGroup:s.subject)+(s.subjectGroup&&s.subjectGroup!==s.subject&&s.subject!=='Other Modern Languages'?' · '+s.subjectGroup:'');
-  const subjectFamily=raw=>{
-    const source=String(raw||'').trim(),k=source.toLowerCase().replace(/&/g,'and').replace(/\s+/g,' ');
+  const subjectRawName=s=>(s.subject==='Other Modern Languages'&&s.subjectGroup?s.subjectGroup:s.subject)+(s.subjectGroup&&s.subjectGroup!==s.subject&&s.subject!=='Other Modern Languages'?' · '+s.subjectGroup:'');
+  const subjectFamily=(subject,kind='gcse')=>{
+    const source=subjectRawName(subject),k=source.toLowerCase().replace(/&/g,'and').replace(/\s+/g,' '),q=String(subject?.qualification||'').toLowerCase(),group=String(subject?.subjectGroup||'').toLowerCase();
+    if(kind==='gcse'&&(q.includes('fsmq')||group.includes('additional maths')||k.includes('additional maths')))return'Additional Mathematics / FSMQ';
+    if(/statistics/.test(k))return'Statistics';
     if(/art|photograph|fine art|graphic communication/.test(k))return'Art & Other';
     if(/ancient history|classical civil|classical greek|greek \(classic\)|^greek$|^latin$/.test(k))return'Classics';
     if(k==='chinese')return'Chinese';
@@ -614,6 +616,23 @@
     if(/information and communication technology|computer appreciation/.test(k))return'ICT';
     return source.replace(/ · .+$/,'');
   };
+  const qualificationScale=subject=>{
+    const q=String(subject?.qualification||'').toLowerCase(),keys=Object.keys(subject?.grades||{}).filter(k=>k!=='Total exam entries');
+    if(q.includes('fsmq'))return'fsmq';
+    if(keys.some(k=>/^\d{2}$/.test(k))&&!keys.some(k=>/^\d$/.test(k)))return'double-gcse';
+    if(keys.some(k=>/^(A\*|A|B|C|D|E|U)$/i.test(k))&&!keys.some(k=>/^\d$/.test(k)))return'letter';
+    return'numeric';
+  };
+  function applyPublishedHighlights(subjects=[],highlights=[],kind='gcse'){
+    const out=subjects.map(s=>({...s,grades:{...(s.grades||{})}}));
+    for(const h of highlights||[]){
+      const synthetic={subject:h.subject,qualification:'school-published subject result',grades:{},_publishedHighlight:{...h}};
+      const family=subjectFamily(synthetic,kind);
+      const match=out.find(s=>subjectFamily(s,kind)===family&&qualificationScale(s)!=='fsmq');
+      if(match)match._publishedHighlight={...h};else out.push(synthetic);
+    }
+    return out;
+  }
   function completeSubjectPack(s,kind){
     const published=Object.entries(s.publishedResults||{}).sort((a,b)=>yearNumber(b[0])-yearNumber(a[0]));
     for(const [year,data] of published){const subjects=data?.[kind]?.subjectDetails;if(subjects?.length)return{year,subjects,source:'school-published'}}
