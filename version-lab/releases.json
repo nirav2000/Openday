@@ -216,6 +216,12 @@
       "commit": "d5f6d16d7800f66c54b2d6efbb4e29d9606934ff",
       "kind": "release",
       "label": "Metric-cell detail affordances, saved school sets, compact status icons and richer GCSE comparison roll-ups"
+    },
+    {
+      "version": "2.15.1",
+      "commit": "3c256ddd792176e9b71d62a25fff9da3b373acb0",
+      "kind": "release",
+      "label": "Performance startup hotfix after saved school-set sync"
     }
   ]
 }
