@@ -798,6 +798,84 @@
           "alevel": "https://www.habselstree.org.uk/boys/wp-content/uploads/sites/2/2025/12/A-Level-Results-2025.pdf"
         }
       }
+    },
+    "Merchant Taylors' School": {
+      "2025/26": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 45.9,
+          "grade98Percent": 72.9,
+          "grade97Percent": 90.2,
+          "subjectHighlights": [
+            {
+              "subject": "Mathematics",
+              "grade98Percent": 86,
+              "grade97Percent": 98
+            }
+          ],
+          "note": "Headline 2026 school-published results. The school published Mathematics 9–8 and 9–7 percentages but not a Mathematics Grade 9 percentage on the cited results page."
+        },
+        "alevel": {
+          "astarPercent": 44.9,
+          "astarAPercent": 75.6
+        },
+        "sources": {
+          "gcse": "https://www.mtsn.org.uk/merchant-taylors-pupils-excel-in-2026-gcse-results/",
+          "alevel": "https://www.mtsn.org.uk/academic-excellence/exam-results/"
+        }
+      },
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 43,
+          "grade98Percent": 71,
+          "grade97Percent": 88,
+          "subjectHighlights": [
+            {
+              "subject": "Mathematics",
+              "grade9Percent": 64,
+              "grade97Percent": 99
+            },
+            {
+              "subject": "Biology",
+              "grade9Percent": 64
+            },
+            {
+              "subject": "Chemistry",
+              "grade9Percent": 55
+            },
+            {
+              "subject": "Physics",
+              "grade9Percent": 56
+            },
+            {
+              "subject": "Greek",
+              "grade9Percent": 54
+            },
+            {
+              "subject": "Latin",
+              "grade97Percent": 100
+            },
+            {
+              "subject": "Religious Studies",
+              "grade9Percent": 47
+            },
+            {
+              "subject": "History",
+              "grade9Percent": 42
+            }
+          ],
+          "note": "2025 school-published headline and subject percentages. The ordinary Mathematics result is school-published and must not be substituted with the DfE Additional Mathematics FSMQ row."
+        },
+        "alevel": {
+          "astarPercent": 33,
+          "astarAPercent": 70.6
+        },
+        "sources": {
+          "gcse": "https://www.mtsn.org.uk/merchant-taylors-gcse-success/",
+          "alevel": "https://www.mtsn.org.uk/academic-excellence/exam-results/"
+        }
+      }
     }
   }
 }
