@@ -373,7 +373,8 @@
     const grades=subject.grades||{};
     const keys=Object.keys(grades).filter(g=>g!=='Total exam entries').sort((a,b)=>gradeRank(b)-gradeRank(a));
     const counted=keys.reduce((sum,g)=>sum+(Number(grades[g])||0),0);
-    const total=Number(grades['Total exam entries'])||counted;
+    const declaredTotal=Number(grades['Total exam entries'])||0;
+    const total=Math.max(declaredTotal,counted);
     const mode=subjectMode[kind]||'count';
     const chips=keys.map(g=>{
       const display=gradeDisplay(g),paired=kind==='gcse'&&/combined science/i.test(subject.subject||'')&&/^\d{2}$/.test(String(g));
