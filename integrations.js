@@ -2,7 +2,7 @@
   const style=document.createElement('style');
   style.textContent=`
     [hidden]{display:none!important}
-    .header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}
+    .header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.version-link{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;text-decoration:none}.version-link.has-note-conflict{border-color:#ffca58;background:#ffca5822;color:#fff}.version-link .conflict-count{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 4px;margin-left:4px;border-radius:999px;background:#ffca58;color:#4a3500;font-size:.62rem;font-weight:900}
     .sync-pill{border:1px solid #7892aa;background:#ffffff12;color:#fff;border-radius:999px;padding:8px 10px;font-size:.72rem;font-weight:800;display:inline-flex;align-items:center;gap:6px}
     .sync-dot{width:7px;height:7px;border-radius:50%;background:#aab8c4}.sync-pill[data-state="synced"] .sync-dot{background:#5ee0ae}.sync-pill[data-state="syncing"] .sync-dot{background:#ffca58}.sync-pill[data-state="error"] .sync-dot{background:#ff8585}.sync-pill[data-pending="true"] .sync-dot{background:#5ee0ae;animation:pendingCloudPulse 1.8s ease-in-out infinite}.sync-pill[data-pending="true"]{border-color:#5ee0ae88}@keyframes pendingCloudPulse{0%,100%{opacity:.35;box-shadow:0 0 0 0 #5ee0ae22}50%{opacity:1;box-shadow:0 0 0 5px #5ee0ae12}}
     .autosave-status{font-size:.76rem;color:#61758a;margin:6px 0 12px;min-height:1.1em}
@@ -53,6 +53,15 @@
       if(pill)pill.title=count+' note'+(count===1?'':'s')+' waiting for cloud save';
     }
   }
+  function noteConflictCount(){
+    try{return Object.values(JSON.parse(localStorage.getItem('openDayState')||'{}').mergeConflicts||{}).filter(x=>x?.field==='notes'&&x?.status!=='resolved').length}catch{return 0}
+  }
+  function updateConflictIndicator(){
+    const b=document.querySelector('#notesButton');if(!b)return;const n=noteConflictCount();
+    b.classList.toggle('has-note-conflict',n>0);
+    b.innerHTML='Notes'+(n?'<span class="conflict-count">'+n+'</span>':'');
+    b.title=n?n+' note merge difference'+(n===1?'':'s')+' need review':'Notes';
+  }
   function markNotePending(id){unsyncedNotes.add(id);persistPendingNotes();updatePendingNotesUI()}
   function clearPendingNotes(){unsyncedNotes.clear();persistPendingNotes();updatePendingNotesUI()}
 
@@ -63,7 +72,7 @@
     let history=actions.querySelector('a[href="version-lab/"]');if(!history){history=document.createElement('a');history.className='version-link';history.href='version-lab/';history.textContent='Versions';actions.appendChild(history)}
     let performance=actions.querySelector('a[href="performance.html"]');if(!performance){performance=document.createElement('a');performance.className='version-link';performance.href='performance.html';performance.textContent='Performance';actions.insertBefore(performance,history)}
     let notes=document.querySelector('#notesButton');if(!notes){notes=document.createElement('button');notes.id='notesButton';notes.className='version-link';notes.type='button';notes.textContent='Notes';actions.insertBefore(notes,performance)}
-    notes.setAttribute('aria-label','Show notes and merge differences');notes.onclick=e=>{e.preventDefault();openLocalNotes()};
+    notes.setAttribute('aria-label','Show notes and merge differences');notes.onclick=e=>{e.preventDefault();openLocalNotes()};updateConflictIndicator();
     let button=document.querySelector('#syncPill');if(!button){button=document.createElement('button');button.id='syncPill';button.className='sync-pill';button.type='button';button.innerHTML='<span class="sync-dot"></span><span class="sync-label">Sync</span>';actions.insertBefore(button,notes)}
     button.setAttribute('aria-label','Open sync settings');button.onclick=e=>{e.preventDefault();openSyncDialog()};
     const install=document.querySelector('#installBtn');if(install&&install.parentElement!==actions)actions.appendChild(install);
@@ -123,7 +132,7 @@
       d.querySelector('#conflictSaveStatus').textContent='Merged locally. Saving to cloud…';
       const ok=sync?.isConnected?.()?await sync.push():false;
       d.querySelector('#conflictSaveStatus').textContent=ok?'Merged note saved & synced.':'Merged locally; cloud save is still pending.';
-      renderLocalNotes();if(ok)setTimeout(()=>d.close(),650);
+      renderLocalNotes();updateConflictIndicator();if(ok)setTimeout(()=>d.close(),650);
     };
     d.showModal();
   }
@@ -222,7 +231,7 @@
     const message=document.querySelector('#syncMessage');if(message&&document.querySelector('#syncDialog')?.open&&!message.textContent)message.textContent=detail.text||'';
   }
   window.addEventListener('openday:sync-status',e=>updateSyncStatus(e.detail));
-  window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));nativeRender?.()}});
+  window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));updateConflictIndicator();nativeRender?.()}});
   window.addEventListener('openday:sync-write-success',()=>clearPendingNotes());
 
   function identifyOpenSchool(){const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;const dateText=document.querySelector('#detailBody .bigdate')?.textContent;return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null}
@@ -283,7 +292,7 @@
 
   async function initialiseVersion(){try{const release=await fetch('version.json',{cache:'no-store'}).then(r=>r.json());const el=document.querySelector('#appVersion');if(el)el.textContent=`v${release.version}`;const lab=window.createVersionLab?.({appId:'openday',currentVersion:release.version});lab?.recordRelease?.({version:release.version,date:release.released,summary:release.summary,areas:['sync','autosave','calendar','card-density','developer-notes']})}catch{}}
 
-  enhanceHeader();ensurePendingSyncBar();updatePendingNotesUI();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
+  enhanceHeader();ensurePendingSyncBar();updatePendingNotesUI();updateConflictIndicator();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
   updateSyncStatus({state:sync?.isConnected?.()?'syncing':'local',text:sync?.isConnected?.()?'Checking cloud…':'Enter memorable token to sync'});
 })();
