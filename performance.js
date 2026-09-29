@@ -51,13 +51,17 @@
   const decisionFlag=(school,value)=>school.eventIds.some(id=>decisions[id]===value);
 
   function latestSummary(s){
-    const context=s.context||{},pc=context.pupilCharacteristics||{},sen=context.sen||{};
+    const context=s.context||{},pc=context.pupilCharacteristics||{},sen=context.sen||{},gp=s.gcseGradeProfile||{};
     return{
       a8:latest(s.gcse,'attainment8'),
       em:latest(s.gcse,'englishMaths5Plus'),
       p8:latest(s.gcse,'progress8'),
       ks4Eal:latest(s.ks4Eal||{},null),
       al:latest(s.alevel,'aps'),
+      grade9pct:gp.grade9Percent!==null&&gp.grade9Percent!==undefined?{year:gp.year||'2024/25',value:gp.grade9Percent,row:gp}:null,
+      grade9count:gp.grade9Count!==null&&gp.grade9Count!==undefined?{year:gp.year||'2024/25',value:gp.grade9Count,row:gp}:null,
+      grade97pct:gp.grade97Percent!==null&&gp.grade97Percent!==undefined?{year:gp.year||'2024/25',value:gp.grade97Percent,row:gp}:null,
+      grade97count:gp.grade97Count!==null&&gp.grade97Count!==undefined?{year:gp.year||'2024/25',value:gp.grade97Count,row:gp}:null,
       fsm:pc.fsmPercent!==null&&pc.fsmPercent!==undefined?{year:pc.year||'2025/26',value:pc.fsmPercent,row:pc}:null,
       wholeEal:pc.ealPercent!==null&&pc.ealPercent!==undefined?{year:pc.year||'2025/26',value:pc.ealPercent,row:pc}:null,
       sen:sen.senSupportPercent!==null&&sen.senSupportPercent!==undefined?{year:sen.year||'2025/26',value:sen.senSupportPercent,row:sen}:null,
@@ -89,6 +93,8 @@
 
   function score(s,key){
     const m=latestSummary(s);
+    if(key==='grade9pct')return m.grade9pct?.value??-Infinity;
+    if(key==='grade97pct')return m.grade97pct?.value??-Infinity;
     if(key==='attainment8')return m.a8?.value??-Infinity;
     if(key==='engmath5')return m.em?.value??-Infinity;
     if(key==='progress8')return m.p8?.value??-Infinity;
@@ -102,11 +108,39 @@
     return 0;
   }
 
+  const gradeDisplay=raw=>{
+    const s=String(raw??'').trim();
+    if(/^\d{2}$/.test(s))return s[0]+'–'+s[1];
+    return s;
+  };
+  const gradeRank=raw=>{
+    const s=String(raw??'').trim().toUpperCase();
+    if(s==='A*')return 1100;
+    if(s==='A')return 1000;
+    if(s==='B')return 900;
+    if(s==='C')return 800;
+    if(s==='D')return 700;
+    if(s==='E')return 600;
+    if(s==='U'||s==='FAIL')return -100;
+    if(/^\d{2}$/.test(s))return Number(s[0])*100+Number(s[1]);
+    if(/^\d$/.test(s))return Number(s)*100;
+    return 0;
+  };
+  const gradeTone=raw=>{
+    const s=String(raw??'').toUpperCase();
+    const first=Number((s.match(/\d/)||[])[0]);
+    if(s==='A*'||first===9)return 'top';
+    if(s==='A'||[8,7].includes(first))return 'high';
+    if(s==='B'||[6,5].includes(first))return 'mid';
+    if(s==='C'||first===4)return 'pass';
+    if(s==='U'||s==='FAIL'||[1,2,3].includes(first))return 'low';
+    return 'other';
+  };
   function subjectHoverLine(subject){
     if(!subject)return '';
     const grades=subject.grades||{};
-    const preferred=['9','8','7','A*','A','B','Total exam entries'];
-    const bits=preferred.filter(g=>grades[g]!==undefined).slice(0,4).map(g=>g+': '+grades[g]);
+    const keys=Object.keys(grades).filter(g=>g!=='Total exam entries').sort((a,b)=>gradeRank(b)-gradeRank(a));
+    const bits=keys.slice(0,4).map(g=>gradeDisplay(g)+': '+grades[g]);
     return '<br><span style="opacity:.88">'+esc(subject.subject)+': '+esc(bits.join(' · ')||'published detail available')+'</span>';
   }
   function hoverText(s,m){
@@ -116,6 +150,8 @@
       return (ai<0?99:ai)-(bi<0?99:bi)||a.subject.localeCompare(b.subject);
     }).slice(0,3);
     return '<b>'+esc(s.name)+'</b><br>'+
+      '<b>Grade 9:</b> '+(m.grade9pct?pct(m.grade9pct.value)+' ('+fmt(m.grade9count?.value)+' published awards)':'—')+
+      ' · <b>9–7:</b> '+(m.grade97pct?pct(m.grade97pct.value)+' ('+fmt(m.grade97count?.value)+')':'—')+'<br>'+
       'Latest A8: '+(m.a8?fmt(m.a8.value):'not available')+
       ' · Eng/maths 5+: '+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'<br>'+
       'P8 latest: '+(m.p8?fmt(m.p8.value)+' ('+yearLabel(m.p8.year)+')':'not available')+'<br>'+
@@ -128,29 +164,49 @@
       '<br><span style="opacity:.7">Click/tap for full year-by-year and subject tables.</span>';
   }
 
-  function schoolRow(s){
-    const m=latestSummary(s),isVisited=eventFlag(s,visited),isSaved=eventFlag(s,saved);
-    const tr=document.createElement('tr');
-    tr.className='school-row';
-    tr.dataset.school=s.name;
-    tr.innerHTML=
-      '<td><span class="school-name">'+esc(s.name)+'</span>'+
+  function schoolCell(s,m){
+    const isVisited=eventFlag(s,visited),isSaved=eventFlag(s,saved);
+    return '<td><span class="school-name">'+esc(s.name)+'</span>'+
       '<span class="school-meta">'+esc(s.area||'')+' · '+esc(String(s.type||'').replace('-',' '))+'</span>'+
       '<span class="school-flags">'+
       (isVisited?'<span class="tag visited">visited</span>':'')+
       (isSaved?'<span class="tag saved">saved</span>':'')+
-      '</span><div class="hover-card">'+hoverText(s,m)+'</div></td>'+
-      '<td class="metric">'+(m.a8?yearLabel(m.a8.year):'—')+'</td>'+
-      '<td class="metric">'+(m.a8?fmt(m.a8.value):'—')+'</td>'+
-      '<td class="metric">'+(m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—')+'</td>'+
-      '<td class="metric">'+(m.p8?fmt(m.p8.value)+' <span class="muted">('+yearLabel(m.p8.year)+')</span>':'—')+'</td>'+
-      '<td class="metric">'+(m.al?(esc(m.al.row.averageGrade||fmt(m.al.value)))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—')+'</td>'+
-      '<td class="metric">'+(m.fsm?pct(m.fsm.value):'—')+'</td>'+
-      '<td class="metric">'+(m.wholeEal?pct(m.wholeEal.value):'—')+'</td>'+
-      '<td class="metric">'+(m.sen?pct(m.sen.value):'—')+'</td>'+
-      '<td class="metric">'+(m.ehcp?pct(m.ehcp.value):'—')+'</td>'+
-      '<td class="metric">'+(m.absence?pct(m.absence.value)+' <span class="muted">('+yearLabel(m.absence.year)+')</span>':'—')+'</td>'+
-      '<td class="metric">'+(m.persistent?pct(m.persistent.value)+' <span class="muted">('+yearLabel(m.persistent.year)+')</span>':'—')+'</td>';
+      '</span><div class="hover-card">'+hoverText(s,m)+'</div></td>';
+  }
+
+  function metricCell(id,s,m){
+    const profile=s.gcseGradeProfile||{};
+    let html='—';
+    if(id==='gcseYear')html=m.a8?yearLabel(m.a8.year):profile.year||'—';
+    else if(id==='grade9pct')html=m.grade9pct?'<span class="headline-grade grade-chip tone-top"><span class="grade-label">9</span><span class="grade-count">'+pct(m.grade9pct.value)+'</span></span>':'—';
+    else if(id==='grade9count')html=m.grade9count?fmt(m.grade9count.value):'—';
+    else if(id==='grade97pct')html=m.grade97pct?'<span class="headline-grade grade-chip tone-high"><span class="grade-label">9–7</span><span class="grade-count">'+pct(m.grade97pct.value)+'</span></span>':'—';
+    else if(id==='grade97count')html=m.grade97count?fmt(m.grade97count.value):'—';
+    else if(id==='a8')html=m.a8?fmt(m.a8.value):'—';
+    else if(id==='engmath5')html=m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—';
+    else if(id==='p8')html=m.p8?fmt(m.p8.value)+' <span class="muted">('+yearLabel(m.p8.year)+')</span>':'—';
+    else if(id==='alevel')html=m.al?esc(m.al.row.averageGrade||fmt(m.al.value))+' <span class="muted">('+yearLabel(m.al.year)+')</span>':'—';
+    else if(id==='fsm')html=m.fsm?pct(m.fsm.value):'—';
+    else if(id==='wholeEal')html=m.wholeEal?pct(m.wholeEal.value):'—';
+    else if(id==='sen')html=m.sen?pct(m.sen.value):'—';
+    else if(id==='ehcp')html=m.ehcp?pct(m.ehcp.value):'—';
+    else if(id==='absence')html=m.absence?pct(m.absence.value)+' <span class="muted">('+yearLabel(m.absence.year)+')</span>':'—';
+    else if(id==='persistent')html=m.persistent?pct(m.persistent.value)+' <span class="muted">('+yearLabel(m.persistent.year)+')</span>':'—';
+    return '<td class="metric metric-'+esc(id)+'">'+html+'</td>';
+  }
+
+  function renderHead(){
+    const ids=visibleColumnIds();
+    $('#performanceHead').innerHTML=ids.map(id=>'<th data-column="'+esc(id)+'">'+esc(COLUMN_LABELS[id]||id)+'</th>').join('');
+    const table=document.querySelector('.performance-table');
+    if(table)table.style.minWidth=Math.max(760,250+(ids.length-1)*105)+'px';
+  }
+
+  function schoolRow(s){
+    const m=latestSummary(s),tr=document.createElement('tr');
+    tr.className='school-row';
+    tr.dataset.school=s.name;
+    tr.innerHTML=visibleColumnIds().map(id=>id==='school'?schoolCell(s,m):metricCell(id,s,m)).join('');
     tr.onclick=()=>{expanded=expanded===s.name?'':s.name;render()};
     return tr;
   }
