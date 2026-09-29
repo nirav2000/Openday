@@ -151,6 +151,25 @@ for s in ordered:
     if urn:seen_urns.add(urn)
 schools=deduped
 
+# Run researched/generated consolidation once more after URN de-duplication,
+# when each generated website host is guaranteed to be unique.
+generated=[s for s in schools if str(s.get('id','')).startswith('primary-')]
+manual=[s for s in schools if not str(s.get('id','')).startswith('primary-')]
+generated_by_host={}
+for s in generated:
+    h=host(s.get('infoUrl'))
+    if h:generated_by_host.setdefault(h,[]).append(s)
+remove_ids=set()
+for s in manual:
+    h=host(s.get('infoUrl'))
+    matches=generated_by_host.get(h,[])
+    if len(matches)==1:
+        g=matches[0]
+        for key in ('urn','postcode','distanceMiles','distanceFromPostcode'):
+            if g.get(key) is not None:s[key]=g.get(key)
+        remove_ids.add(g['id'])
+schools=[s for s in schools if s.get('id') not in remove_ids]
+
 # Stable default display: nearest first when source data is inspected directly.
 schools.sort(key=lambda s:(s.get('distanceMiles') is None, s.get('distanceMiles',999), s.get('name','')))
 doc['schools']=schools
