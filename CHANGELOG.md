@@ -6,6 +6,17 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.13.0 — 2026-09-29
+
+- Reworked note merge differences into a **word/phrase-level diff**: changed, added and removed text is highlighted in the device and cloud versions.
+- Added **per-difference merge decisions**, so each changed segment can independently keep the device wording or accept the cloud wording, while retaining whole-note device/cloud/combine options and manual editing.
+- Rebuilt **Version Lab** around the richer Beyond100 pattern: human-readable release cards, a large working historical snapshot, phone/tablet/desktop preview widths, direct browsing of a historical version, Git-source audit links, and side-by-side working-version comparison.
+- Added optional **synchronized scrolling** between Version Lab comparison frames and pair-specific comparison notes stored locally.
+- Kept deployment-time **exact Git-tree snapshots** as the source for historical previews rather than replacing them with reconstructed current files.
+- Added **metric drill-downs** to the Performance side-by-side comparison. Clicking a GCSE metric opens subjects as the rows and compares Grade 9 %, Grades 9–7 % and entry counts across selected schools.
+- Clicking the A-level, whole-school context or attendance metrics opens corresponding detailed comparison tables.
+- Cleaned numeric presentation so values that are effectively whole numbers no longer show insignificant decimal points, while meaningful small decimals such as Progress 8 remain available.
+
 ## 2.12.0 — 2026-09-29
 
 - Repaired **Version Lab** so release history remains visible even when the deployment-time snapshot builder has not injected its static cards; the release registry is now committed separately and the Pages build still generates exact Git snapshots.
