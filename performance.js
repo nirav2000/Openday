@@ -262,14 +262,12 @@
 
   function schoolCell(s,m){
     const isVisited=eventFlag(s,visited),isSaved=eventFlag(s,saved),isShort=eventFlag(s,shortlisted),isRejected=eventFlag(s,rejected),checked=selectedCompare.has(s.name);
-    return '<td class="school-cell"><div class="school-select-line"><input class="compare-select" type="checkbox" '+(checked?'checked':'')+' aria-label="Select '+esc(s.name)+' for comparison"><span class="school-name">'+esc(s.name)+'</span><span class="school-icons">'+
+    return '<td class="school-cell"><div class="school-select-line"><input class="compare-select" type="checkbox" '+(checked?'checked':'')+' aria-label="Select '+esc(s.name)+' for comparison"><span class="school-name">'+esc(s.name)+'</span><span class="school-icons" aria-label="School status">'+
       (isSaved?'<span class="school-state-icon saved-icon" title="Saved" aria-label="Saved">♥</span>':'')+
+      '<button type="button" data-school-status="shortlist" class="school-state-icon status-icon '+(isShort?'on':'')+'" title="'+(isShort?'Remove from shortlist':'Add to shortlist')+'" aria-label="'+(isShort?'Remove from shortlist':'Add to shortlist')+'">'+(isShort?'★':'☆')+'</button>'+
       (isVisited?'<span class="school-state-icon visited-icon" title="Visited" aria-label="Visited">✓</span>':'')+
-      '</span></div>'+
-      '<div class="school-meta-line"><span class="school-meta">'+esc(s.area||'')+' · '+esc(String(s.type||'').replace('-',' '))+'</span><span class="school-status-actions">'+
-      '<button type="button" data-school-status="shortlist" class="status-icon '+(isShort?'on':'')+'" title="'+(isShort?'Remove from shortlist':'Add to shortlist')+'" aria-label="'+(isShort?'Remove from shortlist':'Add to shortlist')+'">'+(isShort?'★':'☆')+'</button>'+
-      '<button type="button" data-school-status="rejected" class="status-icon '+(isRejected?'on reject':'')+'" title="'+(isRejected?'Remove rejection':'Reject school')+'" aria-label="'+(isRejected?'Remove rejection':'Reject school')+'">⊘</button>'+
-      '</span></div><div class="hover-card">'+hoverText(s,m)+'</div></td>';
+      '<button type="button" data-school-status="rejected" class="school-state-icon status-icon '+(isRejected?'on reject':'')+'" title="'+(isRejected?'Remove rejection':'Reject school')+'" aria-label="'+(isRejected?'Remove rejection':'Reject school')+'">⊘</button>'+
+      '</span></div><div class="school-meta-line"><span class="school-meta">'+esc(s.area||'')+' · '+esc(String(s.type||'').replace('-',' '))+'</span></div><div class="hover-card">'+hoverText(s,m)+'</div></td>';
   }
 
   const examEntryTotal=subject=>{
@@ -321,10 +319,9 @@
   function renderHead(){
     const ids=visibleColumnIds();
     $('#performanceHead').innerHTML=ids.map(id=>{
-      const key=sortForColumn(id),active=sortKey===key;
-      const sortLabel=!active?'':key==='name'?(sortDir==='asc'?'A–Z':'Z–A'):(sortDir==='asc'?'low–high':'high–low');
+      const key=sortForColumn(id),active=sortKey===key,sortMark=active?(sortDir==='asc'?'▴':'▾'):'▴▾';
       const draggable=id!=='school';
-      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+(sortLabel?' <span class="sort-mark">'+sortLabel+'</span>':'')+'</span></th>';
+      return '<th tabindex="0" role="button" draggable="'+draggable+'" data-column="'+esc(id)+'" data-sort-key="'+esc(key)+'" title="'+esc(COLUMN_HELP[id]||'Click to sort. Drag to move this column.')+'"><span class="sort-head">'+esc(COLUMN_LABELS[id]||id)+' <span class="sort-mark '+(active?'active':'')+'">'+sortMark+'</span></span></th>';
     }).join('');
     let dragged='',didDrag=false;
     document.querySelectorAll('#performanceHead th[data-sort-key]').forEach(th=>{
