@@ -6,6 +6,22 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.16.0 — 2026-09-29
+
+- Replaced the text sorting labels with compact triangle indicators: **▴▾** when a column is sortable but inactive, **▴** for ascending and **▾** for descending.
+- Reworked rolled-up subject expansion into a **comparison table**: original source-subject variants are rows and the selected schools remain columns, instead of showing one card per school.
+- Added GCSE/A-level cohort information beneath school names throughout qualification comparison headers, including the main side-by-side view. Multi-year GCSE history shows the cohort alongside each year-specific value.
+- Added **Select all** / **Deselect all** for the active saved school set plus **Clear selection**, so a saved set can be taken straight into side-by-side comparison without checking every school individually.
+- Enlarged Saved / Shortlist / Visited / Reject symbols and put them together on the **same school-name line**, while keeping larger tap targets than the visible symbols.
+- Prioritised core GCSE subjects at the top of subject comparisons: **Mathematics, English Language, English Literature, Combined Science, Biology, Chemistry, Physics**, with remaining subjects following alphabetically.
+- Made GCSE subject consolidation **qualification-aware**. Ordinary Mathematics, **Additional Mathematics / FSMQ** and Statistics are separate rows rather than being merged merely because their names contain “Maths”.
+- Added grading-scale detection so FSMQ A–D results are shown as **FSMQ · A–D grading** rather than misleading **Grade 9 = 0%**. Other non-9–1 GCSE-scale records are similarly labelled rather than forced into Grade 9 calculations.
+- Improved Combined Science handling so double-award grade pairs are described as double-award outcomes instead of being treated as ordinary single-grade GCSE rows.
+- Added verified Merchant Taylors’ school-published examination results. For 2025, Mathematics now shows the school-published **64% Grade 9 / 99% Grades 9–7** result, while the DfE **Additional Maths FSMQ** A–D record remains a separate qualification.
+- Merchant Taylors’ 2025 headline figures use the school’s final published results page for 9–8 / 9–7, with Results Day subject figures used for the published subject overrides.
+- School-published subject percentages can now override incomplete DfE subject rows without inventing exam-entry counts; where the school did not publish entries, the UI explicitly says **entries not stated**.
+- Kept all earlier comparison behaviour: deeper-detail symbols only where detail exists, metric-cell-only opening, school-cell-only hover summary, draggable school columns and sticky table headers.
+
 ## 2.15.1 — 2026-09-29
 
 - Fixed a Performance-page startup regression introduced in 2.15.0: saved-school-set preferences were read from `state` before `state` had been initialised, causing a JavaScript `ReferenceError` before the performance data fetch began.
