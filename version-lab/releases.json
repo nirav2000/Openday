@@ -198,6 +198,12 @@
       "commit": "20f583fe28079d06b0ba005e2c4886734cb8bebf",
       "kind": "release",
       "label": "Verified year-selectable performance data, corrected independent-school results and resilient Version Lab"
+    },
+    {
+      "version": "2.13.0",
+      "commit": "ff4ae16f14106592e6092e6a66f225de65be7e54",
+      "kind": "release",
+      "label": "Word-level merge review, rich Version Lab comparisons and performance metric drill-downs"
     }
   ]
 }
