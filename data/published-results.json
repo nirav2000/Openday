@@ -828,8 +828,8 @@
         "sourceType": "school-published",
         "gcse": {
           "grade9Percent": 43,
-          "grade98Percent": 71,
-          "grade97Percent": 88,
+          "grade98Percent": 73.4,
+          "grade97Percent": 89.5,
           "subjectHighlights": [
             {
               "subject": "Mathematics",
@@ -865,7 +865,7 @@
               "grade9Percent": 42
             }
           ],
-          "note": "2025 school-published headline and subject percentages. The ordinary Mathematics result is school-published and must not be substituted with the DfE Additional Mathematics FSMQ row."
+          "note": "2025 school-published headline and subject percentages. Headline 9–8 and 9–7 use the school's final results page; subject Grade 9 figures use the Results Day article. Ordinary Mathematics must not be substituted with the DfE Additional Mathematics FSMQ row."
         },
         "alevel": {
           "astarPercent": 33,
