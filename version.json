@@ -1,6 +1,6 @@
 {
-  "version": "2.15.0",
+  "version": "2.15.1",
   "released": "2026-09-29",
   "channel": "main",
-  "summary": "Refine performance comparisons with metric-cell detail icons, saved school sets, compact status symbols, deeper GCSE subject rollups, draggable school columns and cohort context."
+  "summary": "Hotfix Performance startup after saved school-set sync and correctly hide the empty comparison tray."
 }
