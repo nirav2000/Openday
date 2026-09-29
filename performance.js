@@ -4,6 +4,26 @@
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
+  const layoutKey='openday.performance.columns.v1';
+  const DEFAULT_COLUMNS=['school','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
+  const COLUMN_LABELS={
+    school:'School',gcseYear:'GCSE year',grade9pct:'Grade 9 %',grade9count:'Grade 9 #',grade97pct:'Grades 9–7 %',grade97count:'Grades 9–7 #',
+    a8:'Attainment 8',engmath5:'Eng & maths 5+',p8:'P8 latest',alevel:'A-level',fsm:'FSM',wholeEal:'EAL',sen:'SEN support',ehcp:'EHCP',absence:'Absence',persistent:'PA'
+  };
+  const METRIC_COLUMNS=DEFAULT_COLUMNS.filter(x=>x!=='school');
+  const loadColumnState=()=>{
+    try{
+      const raw=JSON.parse(localStorage.getItem(layoutKey)||'{}');
+      const seen=new Set();
+      const order=(Array.isArray(raw.order)?raw.order:METRIC_COLUMNS).filter(id=>METRIC_COLUMNS.includes(id)&&!seen.has(id)&&seen.add(id));
+      METRIC_COLUMNS.forEach(id=>{if(!seen.has(id))order.push(id)});
+      const hidden=(Array.isArray(raw.hidden)?raw.hidden:[]).filter(id=>METRIC_COLUMNS.includes(id));
+      return{order,hidden};
+    }catch{return{order:[...METRIC_COLUMNS],hidden:[]}}
+  };
+  let columnState=loadColumnState();
+  const saveColumnState=()=>localStorage.setItem(layoutKey,JSON.stringify(columnState));
+  const visibleColumnIds=()=>['school',...columnState.order.filter(id=>!columnState.hidden.includes(id))];
 
   const esc=v=>String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const fmt=v=>{
