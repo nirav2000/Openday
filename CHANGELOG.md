@@ -6,6 +6,18 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.11.0 — 2026-09-29
+
+- Made every visible Performance table heading directly clickable for sorting, with ascending/descending arrows and sensible defaults (higher-first for attainment; lower-first for absence).
+- Added multi-select checkboxes and a **Compare side by side** tray so any group of schools can be compared using the currently visible/customised metrics.
+- Added a private, cross-device **Shortlist / Rejected / No status** school workflow, separate from the existing qualitative My view labels.
+- Added **Shortlist** and **Rejected** filters on both the main Open days view and the Performance page, plus status badges on school cards and comparison rows.
+- Shortlist/reject state is included in the same transactional memorable-token sync and three-way merge as other private state.
+- Made the header **Notes** and **Sync** controls structural HTML controls rather than relying only on dynamically created buttons, and hardened event binding so they remain clickable after app updates.
+- Unresolved note merge differences now visibly badge the Notes control and highlight the affected note cards.
+- Added a note-conflict editor showing device and cloud versions side by side, with **Use device**, **Use cloud**, **Combine both**, and manual-edit options before saving the resolved note back through normal cloud sync.
+- Kept unresolved non-note merge differences preserved for audit/review.
+
 ## 2.10.0 — 2026-09-29
 
 - Changed the default travel/search origin for **Primary** schools to **UB5 6QX** while keeping the Senior/secondary origin unchanged.
