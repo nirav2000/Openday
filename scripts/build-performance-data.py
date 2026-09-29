@@ -30,6 +30,7 @@ ALIASES={
 URN_OVERRIDES={
   "Mill Hill School":"101367",
   "Salvatorian College":"138458",
+  "Queen Elizabeth's School, Barnet":"136290",
 }
 URN_TO_TRACKED={urn:name for name,urn in URN_OVERRIDES.items()}
 
