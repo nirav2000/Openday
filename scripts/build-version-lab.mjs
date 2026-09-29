@@ -2,39 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync,execFileSync} from 'node:child_process';
 
-const releases=[
-  {version:'1.0.0',commit:'207cff2c138e9dec3eec16ce7fbb78e013fa0ec5',kind:'reconstructed',label:'Initial mobile open-day tracker'},
-  {version:'1.1.0',commit:'933076be6f2d246864651361642ffb1e5468f02e',kind:'reconstructed',label:'Admissions, score guidance and privacy cleanup'},
-  {version:'1.2.0',commit:'fa1f9e85c778bc49c8058c82557008e6a05d65be',kind:'reconstructed',label:'Calendar, travel and subscription views'},
-  {version:'1.3.0',commit:'a8424d5f1d20e36ccb8c95bd6913f709fee68a29',kind:'reconstructed',label:'Reusable app plugins, autosave and shared-token sync'},
-  {version:'1.4.0',commit:'0293d9d2c51a425dd40633b2a79b891dbc43ff60',kind:'release',label:'Direct Firebase token sync'},
-  {version:'1.4.1',commit:'f1b4f0cab5ffdc6c342b79578b086dcbe55d4707',kind:'release',label:'Visible unrestricted memorable token'},
-  {version:'1.5.0',commit:'0f67497d0331a5a7ba9d2c0a4793a5a74a1f475f',kind:'release',label:'Primary/senior views and cloud catalogue'},
-  {version:'1.5.1',commit:'b9e78882bc0bb1b930b9633a4dbded0a4888f992',kind:'release',label:'Primary catalogue and Firebase reader patch'},
-  {version:'1.6.0',commit:'d5a367bd8c1b92233bc311014c2d85dec51c0cf6',kind:'release',label:'Personal corrections and Firebase usage monitoring'},
-  {version:'2.0.0',commit:'398fa3184b59a324c90050b89aa793ce4ec4cba1',kind:'release',label:'Shared Kk-syllabus authentication migration'},
-  {version:'2.0.1',commit:'7aaa734c074415b3bb4bef069755ba524d27cc2f',kind:'release',label:'Kk-syllabus catalogue publisher'},
-  {version:'2.0.2',commit:'81de550dd7fe76fb2c29c3ae2713ea069fa2b5d3',kind:'release',label:'Legacy auth-session recovery'},
-  {version:'2.0.3',commit:'95674845ddf58bac5ac797aa66c019cb7777c253',kind:'release',label:'Safe local/cloud state merge'},
-  {version:'2.1.0',commit:'beb6d21921fe5d12d85dc48ebad297e7f0646413',kind:'release',label:'Memorable-token restoration'},
-  {version:'2.2.0',commit:'88311e2f919a9dad36f5f259ec62a7ede626785a',kind:'release',label:'Exact Version Lab, global date/time reports and subscribed-calendar refresh'},
-  {version:'2.2.1',commit:'acbab7d3af1788e3eddf33da17c9c900fc9c8631',kind:'release',label:'Calendar duration fix'},
-  {version:'2.2.2',commit:'e4c12944e04dd2f5bb5137b2b8edfff0526d3906',kind:'release',label:'Change-driven calendar publishing'},
-  {version:'2.2.3',commit:'f84e5b890febb9f5f68bea8f91ee9c4f82e94e1a',kind:'release',label:'Calendar publisher race fix'},
-  {version:'2.2.4',commit:'b1b4fce49f2fd7ac120931f7736d2c110b3bfe2b',kind:'release',label:'Strict change-driven calendar'},
-  {version:'2.3.0',commit:'9f69723e076071242405458e348254be4d08c49c',kind:'release',label:'Low-usage local-first Firestore sync'},
-  {version:'2.4.0',commit:'0e623a8800905900360c3ed208d37b1814cb405e',kind:'release',label:'School decision labels'},
-  {version:'2.4.1',commit:'f24aa9fe1f5d95ad501f530ac222762dbb374355',kind:'release',label:'Token/recovery distinction and safe device-state backup'},
-  {version:'2.5.0',commit:'73480b00203b76fc2c1e312e1677df250a9a8bc6',kind:'release',label:'Local notes viewer, lossless conflict preservation and static Version Lab'},
-  {version:'2.5.1',commit:'2d7c3a79f1f9175029482806441e095d442485d4',kind:'release',label:'Transactional three-way multi-device sync'},
-  {version:'2.6.0',commit:'a753963af1af1ca30707922bc005d1c6f004aa17',kind:'release',label:'Upcoming default and collapsed TBC/no-date view'},
-  {version:'2.6.1',commit:'b380793c39bdaf11f48354fee12f228c77b131d3',kind:'release',label:'Pending note cloud-save indicator and save-all notes'},
-  {version:'2.7.0',commit:'10d2ac6f06d710f85f77df728ece8c96f8af8ff0',kind:'release',label:'Official DfE academic performance comparison dashboard'},
-  {version:'2.7.1',commit:'e02eae661168f4bc86b3772c92f0d00f11ede8f7',kind:'release',label:'Ark event split and performance comparison refinements'},
-  {version:'2.8.0',commit:'f242408c3df97dd5d760dca23be73c7e0a19c040',kind:'release',label:'Whole-school context and attendance comparison'},
-  {version:'2.9.0',commit:'f5e3ed1b7ae81da7b2f01e72ea49081a0740e09a',kind:'release',label:'Grade 9 focus, configurable performance columns and deeper primary tour research'},
-  {version:'2.10.0',commit:'8c7a1db7aaebdca77e756ce63f50a7ddfc3ba34e',kind:'release',label:'UB5-centred primary catalogue and distance filters'}
-];
+const registry=JSON.parse(fs.readFileSync('version-lab/releases.json','utf8'));
+const releases=[...(registry.releases||[])];
 
 const current=JSON.parse(fs.readFileSync('version.json','utf8'));
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();

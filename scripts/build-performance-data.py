@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 ROOT=Path(__file__).resolve().parents[1]
 schools_doc=json.loads((ROOT/'data/schools.json').read_text())
 events=schools_doc.get('schools',[])
+published_path=ROOT/'data/published-results.json'
+published_doc=json.loads(published_path.read_text()) if published_path.exists() else {'schools':{}}
 
 ALIASES={
   "Royal Grammar School High Wycombe":["The Royal Grammar School, High Wycombe","Royal Grammar School, High Wycombe","The Royal Grammar School"],
@@ -314,6 +316,12 @@ for row in open_csv(DATASETS['absence']):
       'severeAbsencePercent':n(row.get('enrolments_pa_50_exact_percent')),
     }
 
+# Merge verified school-published exam results after the DfE build. This is especially important for independent schools using IGCSEs or other qualifications that can be absent from DfE performance-table subject files. The DfE records remain intact alongside these results for transparency.
+for school_name,year_map in (published_doc.get('schools') or {}).items():
+    if school_name in results:
+        results[school_name]['publishedResults']=year_map
+        results[school_name]['coverage']['schoolPublished']='Verified school-published GCSE/A-level outcomes are used where newer than DfE school-level data or where DfE performance-table coverage is materially incomplete.'
+
 # Add an explicit five-school-year display window with transparent gaps.
 for item in results.values():
     item['gcseFiveYearWindow']=[
@@ -334,8 +342,9 @@ out={
   'generatedAt':datetime.now(timezone.utc).isoformat(),
   'methodology':{
     'gcse':'DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.',
-    'gcseSubjects':'DfE 2024/25 institution-level subject entries and grades.',
-    'topGrades':'Grade 9 and Grades 9–7 headline figures are derived from DfE subject-grade counts. The denominator uses total published exam entries; suppressed top-grade cells are not estimated, so a derived percentage can be a small underestimate. Combined Science paired grades count as two GCSE awards.',
+    'gcseSubjects':'DfE 2024/25 institution-level subject entries and grades. For independent schools, these files can omit IGCSE/non-performance-table qualifications, so they must not be assumed to represent the whole curriculum.',
+    'schoolPublished':'Where a school publishes newer or more complete exam results, Openday stores those verified figures separately and prefers them for the matching year while retaining the DfE record for auditability.',
+    'topGrades':'For schools without a verified school-published override, Grade 9 and Grades 9–7 headline figures are derived from DfE subject-grade counts. Combined Science paired grades count as two GCSE awards. Incomplete independent-school DfE extracts are not presented as whole-school top-grade profiles when a verified school source is available.',
     'alevel':'DfE Explore Education Statistics, 16–18 institution performance, A level cohort, 2021/22 to 2024/25.',
     'alevelSubjects':'DfE 2024/25 institution-level A-level subject entries and grades.',
     'eal':'Whole-school EAL is the January 2026 school-census percentage whose first language is known or believed to be other than English. KS4 EAL is retained separately for historical exam-cohort context.',
