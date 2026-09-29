@@ -139,12 +139,18 @@ for row in open_csv(DATASETS['ks4_subjects']):
     if not tracked: continue
     subject=(row.get('subject') or '').strip()
     if not subject or subject.lower()=='all subjects': continue
-    key=(tracked,subject,row.get('qualification_type') or row.get('qualification_detailed') or '')
-    rec=subject_acc.setdefault(key,{'subject':subject,'qualification':key[2],'pupils':i(row.get('pupil_count')),'grades':{}})
+    qualification=row.get('qualification_type') or row.get('qualification_detailed') or ''
+    discount=(row.get('discount_code') or '').strip()
+    group=(row.get('subject_discount_group') or '').strip()
+    key=(tracked,subject,qualification,discount)
+    rec=subject_acc.setdefault(key,{
+      'subject':subject,'qualification':qualification,'discountCode':discount,'subjectGroup':group,
+      'pupils':i(row.get('pupil_count')),'grades':{}
+    })
     grade=(row.get('grade') or '').strip()
     val=i(row.get('number_achieving'))
     if grade and val is not None:rec['grades'][grade]=val
-for (tracked,_,_),rec in subject_acc.items():
+for (tracked,_,_,_),rec in subject_acc.items():
     results[tracked]['gcseSubjects'].append(rec)
 for item in results.values():
     item['gcseSubjects'].sort(key=lambda x:x['subject'])
@@ -156,30 +162,36 @@ for item in results.values():
     grade9=0
     grade97=0
     total_awards=0
+    suppressed_possible=False
     for subject in item['gcseSubjects']:
         qualification=(subject.get('qualification') or '').upper()
         if 'GCSE' not in qualification:
             continue
+        grades=subject.get('grades') or {}
         is_combined='combined science' in (subject.get('subject') or '').lower()
-        for raw_grade,count in (subject.get('grades') or {}).items():
+        entries=grades.get('Total exam entries')
+        if entries is not None:
+            total_awards += int(entries) * (2 if is_combined else 1)
+        visible_awards=0
+        for raw_grade,count in grades.items():
             if raw_grade=='Total exam entries' or count is None:
                 continue
             label=str(raw_grade).replace('-','').replace('–','').replace(' ','')
-            if label.upper() in {'U','FAIL'}:
-                total_awards += int(count) * (2 if is_combined else 1)
+            if label.upper() in {'U','FAIL','X'}:
+                visible_awards += int(count) * (2 if is_combined else 1)
                 continue
             digits=[int(ch) for ch in label if ch.isdigit() and ch!='0']
             if not digits:
                 continue
             # A normal GCSE grade is one award. Combined Science publishes
             # paired grades such as 98/88/76, which are two awards.
-            if is_combined and len(digits)>=2:
-                awarded=digits[:2]
-            else:
-                awarded=digits[:1]
-            total_awards += int(count)*len(awarded)
+            awarded=digits[:2] if is_combined and len(digits)>=2 else digits[:1]
+            visible_awards += int(count)*len(awarded)
             grade9 += int(count)*sum(1 for g in awarded if g==9)
             grade97 += int(count)*sum(1 for g in awarded if g>=7)
+        expected=(int(entries)*(2 if is_combined else 1)) if entries is not None else visible_awards
+        if visible_awards < expected:
+            suppressed_possible=True
     item['gcseGradeProfile']={
       'year':'2024/25',
       'grade9Count':grade9,
@@ -187,7 +199,8 @@ for item in results.values():
       'grade97Count':grade97,
       'grade97Percent':round(100*grade97/total_awards,1) if total_awards else None,
       'totalGradeAwards':total_awards,
-      'method':'Derived from DfE 2024/25 published GCSE subject grade counts; Combined Science paired grades are counted as two GCSE grade awards.'
+      'hasSuppressedGrades':suppressed_possible,
+      'method':'Derived from DfE 2024/25 subject-level GCSE grade counts. The denominator uses total published exam entries (Combined Science counts as two awards); suppressed top-grade cells are not estimated, so derived percentages can be a small underestimate where suppression occurs.'
     }
 
 # A-level performance history.
@@ -322,7 +335,7 @@ out={
   'methodology':{
     'gcse':'DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.',
     'gcseSubjects':'DfE 2024/25 institution-level subject entries and grades.',
-    'topGrades':'Grade 9 and Grades 9–7 headline figures are derived from the published DfE subject-grade counts. Percentages use published/unsuppressed grade awards only; suppressed cells are not estimated. Combined Science paired grades are counted as two GCSE grade awards.',
+    'topGrades':'Grade 9 and Grades 9–7 headline figures are derived from DfE subject-grade counts. The denominator uses total published exam entries; suppressed top-grade cells are not estimated, so a derived percentage can be a small underestimate. Combined Science paired grades count as two GCSE awards.',
     'alevel':'DfE Explore Education Statistics, 16–18 institution performance, A level cohort, 2021/22 to 2024/25.',
     'alevelSubjects':'DfE 2024/25 institution-level A-level subject entries and grades.',
     'eal':'Whole-school EAL is the January 2026 school-census percentage whose first language is known or believed to be other than English. KS4 EAL is retained separately for historical exam-cohort context.',
