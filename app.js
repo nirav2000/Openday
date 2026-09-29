@@ -89,7 +89,7 @@ function card(s){
   if(historical(s)){const warning=document.createElement('p');warning.className='historical-note';warning.textContent='Previous-year date — use as a planning guide only.';event.after(warning)}
   if(s.admission){const deadline=document.createElement('p');deadline.className='deadline';deadline.textContent=`Apply: ${s.admission.summary}`;event.after(deadline)}
   if(s.academic){const score=document.createElement('p');score.className='score-summary';score.textContent=s.academic.summary;event.after(score)}
-  const badges=n.querySelector('.badges');badges.innerHTML=`<span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span>${state.watchBooking.includes(s.id)?'<span class="badge watch">watching booking</span>':''}`;
+  const badges=n.querySelector('.badges');badges.innerHTML=`<span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span>${(state.shortlistedSchools||[]).includes(s.id)?'<span class="badge shortlist">shortlist</span>':''}${(state.rejectedSchools||[]).includes(s.id)?'<span class="badge rejected">rejected</span>':''}${state.watchBooking.includes(s.id)?'<span class="badge watch">watching booking</span>':''}`;
   const save=n.querySelector('.save');save.textContent=state.saved.includes(s.id)?'♥':'♡';save.classList.toggle('on',state.saved.includes(s.id));save.onclick=()=>toggleSave(s.id);
   n.querySelector('.details').onclick=()=>showDetail(s);
   const book=n.querySelector('.book');if(s.bookingUrl){book.href=s.bookingUrl;book.textContent=s.bookingRequired===false?'Info ↗':s.bookingRequired===true?'Book ↗':'Check event ↗'}else book.remove();
