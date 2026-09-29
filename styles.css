@@ -5,3 +5,5 @@
 
 .distancebar{background:#fff;border:1px solid #dce5ed;border-radius:16px;padding:13px 14px;margin:0 0 12px}.distancebar[hidden]{display:none}.distancebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.distancebar-head>div{display:flex;flex-direction:column;gap:2px}.distancebar-head strong{font-size:.9rem}.distancebar-head span{color:#61758a;font-size:.73rem;line-height:1.35}.distancebar-head button{border:1px solid #dce5ed;background:#fff;border-radius:999px;padding:7px 10px;color:#1769aa;font-weight:800;white-space:nowrap}.distancebar-head button.active{background:#102a43;color:#fff;border-color:#102a43}.distance-chips{padding-bottom:0}.distance-chips .chip{font-variant-numeric:tabular-nums}
 @media(max-width:640px){.distancebar-head{align-items:flex-start}.distancebar-head button{font-size:.72rem}.distancebar{padding:11px 12px}}
+
+.badge.shortlist{background:#e2f4ec;color:#11694e}.badge.rejected{background:#fbe8e8;color:#9e3939}.application-status{background:#f3f8f5;border-color:#cfe3d8}.application-status .decision-options button.reject.selected{background:#fbe8e8;color:#9e3939;border-color:#e4b4b4}
