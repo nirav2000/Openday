@@ -281,19 +281,19 @@
       "id": "kenmore-park-junior",
       "name": "Kenmore Park Junior School",
       "area": "Kenton",
-      "infoUrl": "http://www.kpjs.harrow.sch.uk",
-      "bookingUrl": "http://www.kpjs.harrow.sch.uk",
+      "infoUrl": "https://kpjs.harrow.sch.uk/",
+      "bookingUrl": "https://kpjs.harrow.sch.uk/",
       "type": "state",
       "entry": "Year 3",
-      "event": "Junior transfer visit / open event",
+      "event": "Junior-school visit by arrangement",
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "The school's official home page says prospective families are welcome to look around and should phone the office (020 8204 6294) to arrange a visit. No fixed 2027 Year 3 open-event date is currently published."
     },
     {
       "id": "krishna-avanti-primary",
@@ -457,19 +457,61 @@
       "id": "pinner-wood-primary",
       "name": "Pinner Wood School",
       "area": "Pinner",
-      "infoUrl": "https://www.pinnerwood.harrow.sch.uk",
-      "bookingUrl": "https://www.pinnerwood.harrow.sch.uk",
+      "infoUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127",
+      "bookingUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Prospective family school tour",
+      "start": "2026-10-05T10:00:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official Come & Visit Us page lists Autumn 2026 school tours at 10:00am. The 21 September date has passed; the next listed tour is Monday 5 October.",
+      "alternateVisits": [
+        {
+          "event": "Prospective family school tour",
+          "start": "2026-10-19T10:00:00+01:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Monday 19 October · 10:00am",
+          "bookingUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127"
+        },
+        {
+          "event": "Prospective family school tour",
+          "start": "2026-11-04T10:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Wednesday 4 November · 10:00am",
+          "bookingUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127"
+        },
+        {
+          "event": "Prospective family school tour",
+          "start": "2026-11-09T10:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Monday 9 November · 10:00am",
+          "bookingUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127"
+        },
+        {
+          "event": "Prospective family school tour",
+          "start": "2026-11-18T10:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Wednesday 18 November · 10:00am",
+          "bookingUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127"
+        },
+        {
+          "event": "Prospective family school tour",
+          "start": "2026-11-23T10:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Monday 23 November · 10:00am",
+          "bookingUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127"
+        }
+      ]
     },
     {
       "id": "priestmead-primary",
@@ -707,19 +749,19 @@
       "id": "st-teresas-primary",
       "name": "St Teresa's Catholic Primary & Nursery School",
       "area": "Harrow Weald",
-      "infoUrl": "https://www.st-teresas.harrow.sch.uk",
-      "bookingUrl": "https://www.st-teresas.harrow.sch.uk",
+      "infoUrl": "https://www.st-teresas.harrow.sch.uk/",
+      "bookingUrl": "https://www.st-teresas.harrow.sch.uk/",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "School Tour for Prospective Parents",
+      "start": "2026-09-29T09:30:00+01:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
+      "status": "confirmed",
       "bookingRequired": null,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "The school's official home-page diary lists a School Tour for Prospective Parents on Tuesday 29 September 2026 at 9:30am. Further dates should be checked in the school diary/admissions page."
     },
     {
       "id": "stag-lane-primary",
@@ -927,19 +969,37 @@
       "id": "whitchurch-primary",
       "name": "Whitchurch Primary School",
       "area": "Stanmore",
-      "infoUrl": "https://www.whitchurchprimary.harrow.sch.uk",
-      "bookingUrl": "https://www.whitchurchprimary.harrow.sch.uk",
+      "infoUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours",
+      "bookingUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
-      "end": null,
+      "event": "Nursery/Reception 2027 open day & school tour",
+      "start": "2026-10-13T09:15:00+01:00",
+      "end": "2026-10-13T10:15:00+01:00",
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found."
+      "note": "Official Open Days and School Tours page lists three 2027-entry tours, each from 9:15–10:15am.",
+      "alternateVisits": [
+        {
+          "event": "Nursery/Reception 2027 open day & school tour",
+          "start": "2026-10-20T09:15:00+01:00",
+          "end": "2026-10-20T10:15:00+01:00",
+          "status": "confirmed",
+          "note": "Tuesday 20 October · 9:15–10:15am",
+          "bookingUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours"
+        },
+        {
+          "event": "Nursery/Reception 2027 open day & school tour",
+          "start": "2026-11-09T09:15:00+00:00",
+          "end": "2026-11-09T10:15:00+00:00",
+          "status": "confirmed",
+          "note": "Monday 9 November · 9:15–10:15am",
+          "bookingUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours"
+        }
+      ]
     },
     {
       "id": "whitefriars-primary",
