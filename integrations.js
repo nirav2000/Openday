@@ -15,7 +15,7 @@
     .feed-label{display:block;margin:14px 0 6px;font-size:.76rem;font-weight:800;color:#61758a;text-transform:uppercase;letter-spacing:.06em}
     .feed-copy{display:grid;grid-template-columns:1fr auto;gap:7px}.feed-copy input{min-width:0;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit;color:#102a43;background:#f8fafb}.feed-copy button{border:1px solid #dce5ed;border-radius:10px;background:white;color:#1769aa;font-weight:750;padding:8px 12px}
     .sync-dialog{max-width:480px}.sync-dialog .detail-inner{padding:24px}.sync-dialog input{width:100%;border:1px solid #dce5ed;border-radius:10px;padding:11px 12px;font:inherit;margin:8px 0}.sync-dialog .token-help{font-size:.82rem;color:#61758a;line-height:1.45}.sync-dialog .sync-message{min-height:1.2em;font-size:.82rem;color:#61758a}.sync-dialog .sync-message.error{color:#b94444}.sync-dialog .sync-message.ok{color:#15805d}
-    .notes-dialog{width:min(760px,calc(100vw - 24px));max-height:86vh}.notes-dialog .detail-inner{padding:22px}.notes-list{display:grid;gap:10px;margin:14px 0}.note-card{border:1px solid #dce5ed;border-radius:12px;padding:12px;background:#fff}.note-card.has-conflict{border:2px solid #e0a72f;background:#fffaf0}.conflict-badge{display:inline-flex;background:#fff0d0;color:#765300;border-radius:999px;padding:3px 7px;font-size:.68rem;font-weight:900;margin-left:6px}.resolve-conflict{margin-top:9px;border:1px solid #d8b250;background:#fff;color:#765300;border-radius:8px;padding:7px 9px;font-weight:800}.conflict-editor{width:min(720px,calc(100vw - 24px));border:0;border-radius:18px;padding:0}.conflict-editor textarea{width:100%;min-height:180px;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit}.conflict-versions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.conflict-versions pre{white-space:pre-wrap;background:#f5f7f9;padding:10px;border-radius:10px;font:inherit;font-size:.82rem}.note-card h3{margin:0 0 5px;font-size:1rem}.note-card p{white-space:pre-wrap;margin:0;color:#29445d;line-height:1.45}.note-meta{font-size:.74rem;color:#71869a;margin-top:7px}.merge-warning{border:1px solid #e5c36a;background:#fff9e8;border-radius:12px;padding:12px;margin:12px 0}.notes-empty{color:#61758a}.notes-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+    .notes-dialog{width:min(760px,calc(100vw - 24px));max-height:86vh}.notes-dialog .detail-inner{padding:22px}.notes-list{display:grid;gap:10px;margin:14px 0}.note-card{border:1px solid #dce5ed;border-radius:12px;padding:12px;background:#fff}.note-card.has-conflict{border:2px solid #e0a72f;background:#fffaf0}.conflict-badge{display:inline-flex;background:#fff0d0;color:#765300;border-radius:999px;padding:3px 7px;font-size:.68rem;font-weight:900;margin-left:6px}.resolve-conflict{margin-top:9px;border:1px solid #d8b250;background:#fff;color:#765300;border-radius:8px;padding:7px 9px;font-weight:800}.conflict-editor{width:min(900px,calc(100vw - 24px));border:0;border-radius:18px;padding:0}.conflict-editor textarea{width:100%;min-height:160px;border:1px solid #dce5ed;border-radius:10px;padding:10px;font:inherit}.conflict-versions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.conflict-versions pre{white-space:pre-wrap;background:#f5f7f9;padding:10px;border-radius:10px;font:inherit;font-size:.82rem;line-height:1.65}.diff-device{background:#ffe5a6;border-radius:4px;padding:1px 2px;box-shadow:inset 0 -2px 0 #d89b20}.diff-cloud{background:#cdebdc;border-radius:4px;padding:1px 2px;box-shadow:inset 0 -2px 0 #39956c}.diff-list{display:grid;gap:8px;margin:12px 0}.diff-item{border:1px solid #dce5ed;border-radius:11px;padding:10px;background:#fbfcfd}.diff-item-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:7px}.diff-item-head b{font-size:.8rem}.diff-actions{display:flex;gap:5px;flex-wrap:wrap}.diff-actions button{border:1px solid #c8d5df;background:#fff;border-radius:999px;padding:5px 8px;font-size:.72rem;font-weight:800;color:#29445d}.diff-actions button.active[data-choice="local"]{background:#fff0c8;border-color:#d8aa37;color:#674900}.diff-actions button.active[data-choice="cloud"]{background:#e2f5eb;border-color:#6bb894;color:#185f43}.diff-snippets{display:grid;grid-template-columns:1fr 1fr;gap:7px}.diff-snippet{border-radius:8px;padding:8px;background:#f4f7f9;font-size:.78rem;line-height:1.45;white-space:pre-wrap}.diff-snippet.local{border-left:3px solid #d89b20}.diff-snippet.cloud{border-left:3px solid #39956c}.merge-help{font-size:.78rem;color:#61758a;line-height:1.45}.whole-merge-actions{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.whole-merge-actions button{border:1px solid #c9d6e2;background:#fff;border-radius:9px;padding:7px 10px;font-weight:800;color:#29445d}.note-card h3{margin:0 0 5px;font-size:1rem}.note-card p{white-space:pre-wrap;margin:0;color:#29445d;line-height:1.45}.note-meta{font-size:.74rem;color:#71869a;margin-top:7px}.merge-warning{border:1px solid #e5c36a;background:#fff9e8;border-radius:12px;padding:12px;margin:12px 0}.notes-empty{color:#61758a}.notes-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
     .pending-sync-bar{display:none;align-items:center;justify-content:space-between;gap:12px;background:#effaf5;border:1px solid #bfe8d6;border-radius:13px;padding:10px 12px;margin:-2px 0 12px}.pending-sync-bar.show{display:flex}.pending-sync-copy{display:flex;align-items:center;gap:9px;min-width:0}.pending-sync-cloud{font-size:1.2rem}.pending-sync-copy b{display:block;font-size:.84rem;color:#176b50}.pending-sync-copy span{display:block;font-size:.75rem;color:#5d746b;margin-top:2px}.pending-sync-bar button{border:0;border-radius:9px;background:#176b50;color:white;padding:9px 11px;font-weight:800;white-space:nowrap}
     @media(max-width:600px){.sync-pill .sync-label{display:none}.sync-pill{width:38px;height:38px;justify-content:center;padding:0}}
   `;
@@ -79,6 +79,26 @@
   }
 
   const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const diffTokens=value=>String(value??'').match(/\S+\s*|\s+/g)||[];
+  function noteDiffSegments(localText,cloudText){
+    const a=diffTokens(localText),b=diffTokens(cloudText),rows=a.length+1,cols=b.length+1;
+    const dp=Array.from({length:rows},()=>new Uint16Array(cols));
+    for(let i=a.length-1;i>=0;i--)for(let j=b.length-1;j>=0;j--)dp[i][j]=a[i]===b[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);
+    const raw=[];let i=0,j=0;
+    while(i<a.length||j<b.length){
+      if(i<a.length&&j<b.length&&a[i]===b[j]){raw.push({type:'same',text:a[i]});i++;j++;continue}
+      if(i<a.length&&(j>=b.length||dp[i+1][j]>=dp[i][j+1])){raw.push({type:'local',text:a[i++]});continue}
+      if(j<b.length)raw.push({type:'cloud',text:b[j++]});
+    }
+    const out=[];let pending=null;
+    const flush=()=>{if(pending){out.push(pending);pending=null}};
+    raw.forEach(op=>{
+      if(op.type==='same'){flush();const last=out.at(-1);if(last?.type==='same')last.text+=op.text;else out.push({type:'same',text:op.text})}
+      else{if(!pending)pending={type:'change',local:'',cloud:''};pending[op.type]+=op.text}
+    });flush();return out;
+  }
+  const diffHtml=(segments,side)=>segments.map(seg=>seg.type==='same'?escapeHtml(seg.text):'<mark class="'+(side==='local'?'diff-device':'diff-cloud')+'">'+escapeHtml(seg[side]||'∅')+'</mark>').join('');
+  const mergedFromChoices=(segments,choices)=>{let change=0;return segments.map(seg=>seg.type==='same'?seg.text:(choices[change++]==='cloud'?seg.cloud:seg.local)).join('')};
   function localSchoolName(id){
     const sets=typeof schoolSets!=='undefined'?schoolSets:{};const all=[...(sets.senior||[]),...(sets.primary||[]),...(typeof schools!=='undefined'?schools:[])];
     return all.find(s=>s.id===id)?.name||id;
@@ -113,25 +133,32 @@
   function ensureConflictEditor(){
     let d=document.querySelector('#noteConflictEditor');if(d)return d;
     d=document.createElement('dialog');d.id='noteConflictEditor';d.className='conflict-editor';
-    d.innerHTML='<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">MERGE DIFFERENCE</p><h2 id="conflictSchoolName"></h2><div class="conflict-versions"><div><b>Device version</b><pre id="conflictLocal"></pre></div><div><b>Cloud version</b><pre id="conflictCloud"></pre></div></div><label><b>Merged note</b><textarea id="conflictMerged"></textarea></label><div class="modal-actions"><button id="useDeviceNote" type="button">Use device</button><button id="useCloudNote" type="button">Use cloud</button><button id="combineNotes" type="button">Combine both</button><button id="saveMergedNote" class="primary" type="button">Save merged note</button></div><p id="conflictSaveStatus" class="sync-message"></p></div><button class="close" data-close-conflict aria-label="Close">×</button>';
+    d.innerHTML='<div class="detail-inner"><p class="eyebrow" style="color:#1769aa">MERGE DIFFERENCE</p><h2 id="conflictSchoolName"></h2><p class="merge-help">Changed or added text is highlighted below. Choose the device or cloud text for each difference individually, or choose one whole version. You can still edit the merged note manually before saving.</p><div class="conflict-versions"><div><b>Device version</b><pre id="conflictLocal"></pre></div><div><b>Cloud version</b><pre id="conflictCloud"></pre></div></div><div class="whole-merge-actions"><button id="useDeviceNote" type="button">Use whole device note</button><button id="useCloudNote" type="button">Use whole cloud note</button><button id="combineNotes" type="button">Append both whole notes</button></div><div id="conflictDiffList" class="diff-list"></div><label><b>Merged note</b><textarea id="conflictMerged"></textarea></label><div class="modal-actions"><button id="saveMergedNote" class="primary" type="button">Save resolved note</button></div><p id="conflictSaveStatus" class="sync-message"></p></div><button class="close" data-close-conflict aria-label="Close">×</button>';
     document.body.appendChild(d);d.onclick=e=>{if(e.target===d||e.target.hasAttribute('data-close-conflict'))d.close()};return d;
   }
   function openConflictEditor(key){
     const local=JSON.parse(localStorage.getItem('openDayState')||'{}'),id='notes:'+key,conflict=local.mergeConflicts?.[id]||Object.values(local.mergeConflicts||{}).find(x=>x.field==='notes'&&x.key===key&&x.status!=='resolved');
     if(!conflict)return;
-    const d=ensureConflictEditor(),lv=String(conflict.local??''),cv=String(conflict.cloud??'');
-    d.dataset.conflictId=id;d.dataset.schoolKey=key;d.querySelector('#conflictSchoolName').textContent=localSchoolName(key);d.querySelector('#conflictLocal').textContent=lv;d.querySelector('#conflictCloud').textContent=cv;d.querySelector('#conflictMerged').value=String(local.notes?.[key]??lv);
-    d.querySelector('#useDeviceNote').onclick=()=>d.querySelector('#conflictMerged').value=lv;
-    d.querySelector('#useCloudNote').onclick=()=>d.querySelector('#conflictMerged').value=cv;
-    d.querySelector('#combineNotes').onclick=()=>d.querySelector('#conflictMerged').value=[lv,cv].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).join('\n\n');
+    const d=ensureConflictEditor(),lv=String(conflict.local??''),cv=String(conflict.cloud??''),segments=noteDiffSegments(lv,cv),changes=segments.filter(x=>x.type==='change');
+    let choices=changes.map(()=>'local');
+    const merged=d.querySelector('#conflictMerged'),list=d.querySelector('#conflictDiffList');
+    const updateMerged=()=>{merged.value=mergedFromChoices(segments,choices);list.querySelectorAll('[data-diff-choice]').forEach(b=>b.classList.toggle('active',choices[Number(b.dataset.diffIndex)]===b.dataset.diffChoice))};
+    d.dataset.conflictId=id;d.dataset.schoolKey=key;d.querySelector('#conflictSchoolName').textContent=localSchoolName(key);
+    d.querySelector('#conflictLocal').innerHTML=diffHtml(segments,'local');d.querySelector('#conflictCloud').innerHTML=diffHtml(segments,'cloud');
+    list.innerHTML=changes.length?changes.map((seg,i)=>'<article class="diff-item"><div class="diff-item-head"><b>Difference '+(i+1)+'</b><div class="diff-actions"><button type="button" data-diff-index="'+i+'" data-diff-choice="local">Keep device</button><button type="button" data-diff-index="'+i+'" data-diff-choice="cloud">Accept cloud</button></div></div><div class="diff-snippets"><div class="diff-snippet local"><b>Device</b><br>'+escapeHtml(seg.local||'∅')+'</div><div class="diff-snippet cloud"><b>Cloud</b><br>'+escapeHtml(seg.cloud||'∅')+'</div></div></article>').join(''):'<p class="notes-empty">The two notes are textually identical.</p>';
+    list.querySelectorAll('[data-diff-choice]').forEach(b=>b.onclick=()=>{choices[Number(b.dataset.diffIndex)]=b.dataset.diffChoice;updateMerged()});
+    d.querySelector('#useDeviceNote').onclick=()=>{choices=changes.map(()=>'local');merged.value=lv;updateMerged()};
+    d.querySelector('#useCloudNote').onclick=()=>{choices=changes.map(()=>'cloud');merged.value=cv;updateMerged()};
+    d.querySelector('#combineNotes').onclick=()=>merged.value=[lv,cv].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).join('\n\n');
+    const currentValue=String(local.notes?.[key]??lv);if(currentValue===cv)choices=changes.map(()=>'cloud');updateMerged();if(currentValue!==lv&&currentValue!==cv)merged.value=currentValue;
     d.querySelector('#saveMergedNote').onclick=async()=>{
-      const current=JSON.parse(localStorage.getItem('openDayState')||'{}'),value=d.querySelector('#conflictMerged').value;
+      const current=JSON.parse(localStorage.getItem('openDayState')||'{}'),value=merged.value;
       current.notes=current.notes||{};current.notes[key]=value;current.mergeConflicts=current.mergeConflicts||{};
-      const rec=current.mergeConflicts[id]||conflict;current.mergeConflicts[id]={...rec,status:'resolved',resolvedAt:new Date().toISOString(),resolution:'manual-merge',resolvedValue:value};
+      const rec=current.mergeConflicts[id]||conflict;current.mergeConflicts[id]={...rec,status:'resolved',resolvedAt:new Date().toISOString(),resolution:'per-difference-merge',resolvedValue:value};
       localStorage.setItem('openDayState',JSON.stringify(current));Object.assign(state,current);markNotePending(key);
-      d.querySelector('#conflictSaveStatus').textContent='Merged locally. Saving to cloud…';
+      d.querySelector('#conflictSaveStatus').textContent='Resolved locally. Saving to cloud…';
       const ok=sync?.isConnected?.()?await sync.push():false;
-      d.querySelector('#conflictSaveStatus').textContent=ok?'Merged note saved & synced.':'Merged locally; cloud save is still pending.';
+      d.querySelector('#conflictSaveStatus').textContent=ok?'Resolved note saved & synced.':'Resolved locally; cloud save is still pending.';
       renderLocalNotes();updateConflictIndicator();if(ok)setTimeout(()=>d.close(),650);
     };
     d.showModal();
