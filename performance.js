@@ -51,10 +51,16 @@
     if(v===null||v===undefined||v==='')return '—';
     const num=Number(v);
     if(!Number.isFinite(num))return String(v);
+    if(Number.isInteger(num))return String(num);
     const fixed=num.toFixed(Math.abs(num)<10?2:1);
-    return fixed.replace(/\.00$/,'').replace(/(\.\d)0$/,'$1');
+    return fixed.replace(/0+$/,'').replace(/\.$/,'');
   };
-  const pct=v=>v===null||v===undefined?'—':fmt(v)+'%';
+  const pct=v=>{
+    if(v===null||v===undefined)return '—';
+    const num=Number(v);if(!Number.isFinite(num))return String(v)+'%';
+    if(Math.abs(num-Math.round(num))<0.05)return String(Math.round(num))+'%';
+    return num.toFixed(1).replace(/\.0$/,'')+'%';
+  };
   const years=o=>Object.keys(o||{}).sort();
   const latest=(o,field)=>{
     for(const y of years(o).reverse()){
@@ -519,12 +525,76 @@
     $('#compareCount').textContent=selectedCompare.size+' selected';
     $('#openCompare').disabled=selectedCompare.size<2;
   }
+  const compareGroup=id=>['gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8'].includes(id)?'gcse':id==='alevel'?'alevel':['fsm','wholeEal','sen','ehcp'].includes(id)?'context':['absence','persistent'].includes(id)?'attendance':'';
+  const subjectName=s=>(s.subject==='Other Modern Languages'&&s.subjectGroup?s.subjectGroup:s.subject)+(s.subjectGroup&&s.subjectGroup!==s.subject&&s.subject!=='Other Modern Languages'?' · '+s.subjectGroup:'');
+  function completeSubjectPack(s,kind){
+    const published=Object.entries(s.publishedResults||{}).sort((a,b)=>yearNumber(b[0])-yearNumber(a[0]));
+    for(const [year,data] of published){const subjects=data?.[kind]?.subjectDetails;if(subjects?.length)return{year,subjects,source:'school-published'}}
+    const subjects=kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]);
+    return{year:subjects.length?'2024/25':'',subjects,source:subjects.length?'DfE':'none'};
+  }
+  function gradeStat(subject,kind){
+    if(!subject)return '—';
+    const grades=subject.grades||{},keys=Object.keys(grades).filter(g=>g!=='Total exam entries');
+    const counted=keys.reduce((n,g)=>n+(Number(grades[g])||0),0),total=Math.max(Number(grades['Total exam entries'])||0,counted);
+    if(!total)return '—';
+    if(kind==='gcse'){
+      const g9=Number(grades['9'])||0,g97=g9+(Number(grades['8'])||0)+(Number(grades['7'])||0);
+      return '<span class="compare-stat"><b>9: '+pct(100*g9/total)+'</b><span>9–7: '+pct(100*g97/total)+' · '+fmt(total)+' entries</span></span>';
+    }
+    const astar=Number(grades['A*'])||0,a=Number(grades['A'])||0;
+    return '<span class="compare-stat"><b>A*: '+pct(100*astar/total)+'</b><span>A*–A: '+pct(100*(astar+a)/total)+' · '+fmt(total)+' entries</span></span>';
+  }
+  function subjectDrilldown(chosen,kind){
+    const packs=chosen.map(s=>({school:s,pack:completeSubjectPack(s,kind)}));
+    const names=[...new Set(packs.flatMap(x=>x.pack.subjects.map(subjectName)))].sort((a,b)=>a.localeCompare(b));
+    const title=kind==='gcse'?'GCSE subject comparison':'A-level subject comparison';
+    const intro='Latest complete subject-level result set available for each school; the year is shown beneath each school name.';
+    if(!names.length)return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>No subject detail available</h3></div></div>';
+    return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
+      '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+esc(x.school.name)+'<small>'+esc(x.pack.year)+(x.pack.source==='school-published'?' · school':' · DfE')+'</small></th>').join('')+'</tr></thead><tbody>'+
+      names.map(name=>'<tr><th>'+esc(name)+'</th>'+packs.map(x=>'<td>'+gradeStat(x.pack.subjects.find(s=>subjectName(s)===name),kind)+'</td>').join('')+'</tr>').join('')+
+      '</tbody></table></div>';
+  }
+  function contextDrilldown(chosen){
+    const rows=[
+      ['Pupils',s=>s.context?.pupilCharacteristics?.headcount],
+      ['FSM eligible',s=>s.context?.pupilCharacteristics?.fsmPercent,true],
+      ['EAL',s=>s.context?.pupilCharacteristics?.ealPercent,true],
+      ['SEN support',s=>s.context?.sen?.senSupportPercent,true],
+      ['EHCP',s=>s.context?.sen?.ehcpPercent,true],
+      ['Any SEN',s=>s.context?.sen?.anySenPercent,true]
+    ];
+    return '<div class="compare-drill-head"><div><p class="eyebrow">WHOLE-SCHOOL CONTEXT</p><h3>Context behind the headline metrics</h3></div><button type="button" data-close-drill>Close detail</button></div><div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(([label,get,isPct])=>'<tr><th>'+label+'</th>'+chosen.map(s=>'<td>'+((v=>v===null||v===undefined?'—':isPct?pct(v):fmt(v))(get(s)))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
+  }
+  function attendanceDrilldown(chosen){
+    const yearSet=new Set();chosen.forEach(s=>years(s.context?.absence||{}).slice(-5).forEach(y=>yearSet.add(y)));
+    const ys=[...yearSet].sort().reverse();
+    return '<div class="compare-drill-head"><div><p class="eyebrow">ATTENDANCE</p><h3>Attendance history</h3></div><button type="button" data-close-drill>Close detail</button></div><div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Year</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+ys.map(y=>'<tr><th>'+esc(yearLabel(y))+'</th>'+chosen.map(s=>{const d=s.context?.absence?.[y];return '<td>'+(d?'<span class="compare-stat"><b>Absence '+pct(d.overallAbsencePercent)+'</b><span>Persistent '+pct(d.persistentAbsencePercent)+' · severe '+pct(d.severeAbsencePercent)+'</span></span>':'—')+'</td>'}).join('')+'</tr>').join('')+'</tbody></table></div>';
+  }
+  function compareDrilldown(id){
+    const chosen=(doc.schools||[]).filter(s=>selectedCompare.has(s.name)),group=compareGroup(id);
+    if(group==='gcse')return subjectDrilldown(chosen,'gcse');
+    if(group==='alevel')return subjectDrilldown(chosen,'alevel');
+    if(group==='context')return contextDrilldown(chosen);
+    if(group==='attendance')return attendanceDrilldown(chosen);
+    return '<p class="muted">No deeper comparison is available for this metric.</p>';
+  }
+  function bindCompareMatrix(){
+    const host=$('#compareMatrix');if(!host)return;
+    host.querySelectorAll('[data-compare-metric]').forEach(row=>row.onclick=e=>{
+      if(e.target.closest('a,button'))return;
+      const detail=host.querySelector('#compareDrilldown');
+      detail.innerHTML=compareDrilldown(row.dataset.compareMetric);detail.hidden=false;detail.scrollIntoView({behavior:'smooth',block:'start'});
+      detail.querySelector('[data-close-drill]')?.addEventListener('click',()=>{detail.hidden=true;detail.innerHTML=''});
+    });
+  }
   function compareMatrix(){
     const chosen=(doc.schools||[]).filter(s=>selectedCompare.has(s.name)),ids=visibleColumnIds().filter(id=>id!=='school');
     if(!chosen.length)return '<p class="muted">Select at least two schools.</p>';
-    return '<div class="compare-scroll"><table class="compare-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+
-      ids.map(id=>'<tr><th>'+esc(COLUMN_LABELS[id]||id)+'</th>'+chosen.map(s=>metricCell(id,s,latestSummary(s)).replace(/^<td[^>]*>|<\/td>$/g,'')).map(v=>'<td>'+v+'</td>').join('')+'</tr>').join('')+
-      '</tbody></table></div>';
+    return '<p class="compare-click-hint">Tap/click a metric row to compare that area in more detail.</p><div class="compare-scroll"><table class="compare-table"><thead><tr><th>Metric</th>'+chosen.map(s=>'<th>'+esc(s.name)+'</th>').join('')+'</tr></thead><tbody>'+
+      ids.map(id=>'<tr class="'+(compareGroup(id)?'drillable':'')+'" data-compare-metric="'+esc(id)+'"><th>'+esc(COLUMN_LABELS[id]||id)+(compareGroup(id)?'<span class="drill-cue">Open detail →</span>':'')+'</th>'+chosen.map(s=>metricCell(id,s,latestSummary(s)).replace(/^<td[^>]*>|<\/td>$/g,'')).map(v=>'<td>'+v+'</td>').join('')+'</tr>').join('')+
+      '</tbody></table></div><section id="compareDrilldown" class="compare-drilldown" hidden></section>';
   }
   function render(){
     renderHead();
@@ -581,7 +651,7 @@
   $('#resetColumns').onclick=()=>{columnState={order:[...METRIC_COLUMNS],hidden:[]};applyColumnLayout()};
   $('#columnDialog').onclick=e=>{if(e.target.id==='columnDialog')e.target.close()};
   $('#clearCompare').onclick=()=>{selectedCompare.clear();render()};
-  $('#openCompare').onclick=()=>{if(selectedCompare.size<2)return;$('#compareMatrix').innerHTML=compareMatrix();$('#compareDialog').showModal()};
+  $('#openCompare').onclick=()=>{if(selectedCompare.size<2)return;$('#compareMatrix').innerHTML=compareMatrix();bindCompareMatrix();$('#compareDialog').showModal()};
   $('#closeCompare').onclick=()=>$('#compareDialog').close();
   $('#compareDialog').onclick=e=>{if(e.target.id==='compareDialog')e.target.close()};
   $('#perfChips').onclick=e=>{

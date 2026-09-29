@@ -25,6 +25,7 @@ jobs:
         run: |
           node --check app.js
           node --check integrations.js
+          node --check version-lab/lab.js
           node --check performance.js
           node --check plugins/app-platform.js
           node --check plugins/autosave.js

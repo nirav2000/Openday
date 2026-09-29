@@ -1,6 +1,6 @@
 {
-  "version": "2.12.0",
+  "version": "2.13.0",
   "released": "2026-09-29",
   "channel": "main",
-  "summary": "Repair Version Lab, add year-selectable verified performance data, correct St Paul's and Habs independent-school results, and improve performance-table interactions."
+  "summary": "Add word-level merge resolution, rich browsable Version Lab comparisons, metric drill-downs, and cleaner insignificant decimal formatting."
 }
