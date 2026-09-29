@@ -6,6 +6,13 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.15.1 — 2026-09-29
+
+- Fixed a Performance-page startup regression introduced in 2.15.0: saved-school-set preferences were read from `state` before `state` had been initialised, causing a JavaScript `ReferenceError` before the performance data fetch began.
+- This was why the page could remain permanently on **Loading official performance data…** after leaving and returning to Performance; the saved school set itself was not the problem.
+- Fixed the empty **0 selected** comparison tray being visible despite its `hidden` attribute by explicitly making `.compare-tray[hidden]` non-rendering.
+- Bumped Performance assets and the service-worker cache to 2.15.1 so Safari/iPad does not keep serving the broken 2.15.0 script.
+
 ## 2.15.0 — 2026-09-29
 
 - Replaced repeated **Open detail** text in the side-by-side comparison with a compact **↗** detail symbol shown only for metrics that genuinely have a deeper comparison.
