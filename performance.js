@@ -5,9 +5,15 @@
   const subjectMode={gcse:'count',alevel:'count'};
   const schoolSetKey='openday.performance.schoolSets.v1',compareOrderKey='openday.performance.compareOrder.v1';
   const loadJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||'null')??fallback}catch{return fallback}};
-  let schoolSets=loadJson(schoolSetKey,{}),compareOrder=loadJson(compareOrderKey,[]);
+  let schoolSets=state.performanceSchoolSets||loadJson(schoolSetKey,{}),compareOrder=state.performanceCompareOrder||loadJson(compareOrderKey,[]);
   if(!schoolSets||Array.isArray(schoolSets)||typeof schoolSets!=='object')schoolSets={};
   if(!Array.isArray(compareOrder))compareOrder=[];
+  const persistPerformancePrefs=()=>{
+    state.performanceSchoolSets=schoolSets;state.performanceCompareOrder=compareOrder;state.updatedAt=new Date().toISOString();
+    localStorage.setItem('openDayState',JSON.stringify(state));
+    localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder));
+    window.OpenDaySync?.schedule?.();
+  };
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
   const decisions=state.schoolDecisions||{};
@@ -683,7 +689,7 @@
       const open=row.hidden;row.hidden=!open;button.setAttribute('aria-expanded',String(open));button.querySelector('span').textContent=open?'⌃':'⌄';
     });
   }
-  function saveCompareOrder(names){compareOrder=[...names,...compareOrder.filter(x=>!names.includes(x))];localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder))}
+  function saveCompareOrder(names){compareOrder=[...names,...compareOrder.filter(x=>!names.includes(x))];persistPerformancePrefs()}
   function bindCompareMatrix(){
     const host=$('#compareMatrix');if(!host)return;
     host.querySelectorAll('[data-open-metric]').forEach(cell=>{
@@ -726,11 +732,11 @@
     const schools=chosenSchools().map(s=>s.name);
     if(!schools.length){alert('Select the schools you want in this set first.');return}
     const proposed=activeSchoolSet||'My school set',name=(prompt('Name this school set:',proposed)||'').trim();if(!name)return;
-    schoolSets[name]=schools;localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));activeSchoolSet=name;renderSchoolSets();render();
+    schoolSets[name]=schools;persistPerformancePrefs();activeSchoolSet=name;renderSchoolSets();render();
   }
   function deleteActiveSchoolSet(){
     if(!activeSchoolSet)return;const name=activeSchoolSet;if(!confirm('Delete the saved school set “'+name+'”?'))return;
-    delete schoolSets[name];localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));activeSchoolSet='';renderSchoolSets();render();
+    delete schoolSets[name];persistPerformancePrefs();activeSchoolSet='';renderSchoolSets();render();
   }
 
   function render(){
@@ -801,6 +807,12 @@
     document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===e.target));
     render();
   };
+  window.addEventListener('openday:cloud-state',e=>{
+    const remote=e.detail||{},sets=remote.performanceSchoolSets,order=remote.performanceCompareOrder;
+    if(sets&&typeof sets==='object'&&!Array.isArray(sets)){schoolSets=sets;state.performanceSchoolSets=sets;localStorage.setItem(schoolSetKey,JSON.stringify(sets))}
+    if(Array.isArray(order)){compareOrder=order;state.performanceCompareOrder=order;localStorage.setItem(compareOrderKey,JSON.stringify(order))}
+    renderSchoolSets();render();
+  });
 
   Promise.all([
     fetch('data/performance.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Official performance dataset is still being prepared');return r.json()}),
