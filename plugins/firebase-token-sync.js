@@ -9,11 +9,46 @@
     legacyEmail:'openday-sync@nirav2000.github.io',
     tokenSalt:'Openday memorable token v2 | kk-syllabus'
   };
-  let FApp,FAuth,FStore,auth,db,ref,OWNER_UID='',tokenRef=null,activeTokenHash='',lastRemote='',lastLocal='',timer=null,booted=false;
+  let FApp,FAuth,FStore,auth,db,ref,OWNER_UID='',tokenRef=null,activeTokenHash='',lastRemote='',lastLocal='',timer=null,booted=false,unsubscribeRemote=null,lastSyncAt='',lastError='';
 
   const readLocal=()=>{try{return JSON.parse(localStorage.getItem(cfg.stateKey)||'{}')}catch{return{}}};
   const writeLocal=data=>localStorage.setItem(cfg.stateKey,JSON.stringify(data||{}));
   const backupLocal=()=>{try{localStorage.setItem(cfg.stateBackupKey,JSON.stringify({savedAt:new Date().toISOString(),state:readLocal()}))}catch{}};
+  const asIso=value=>{
+    if(!value)return '';
+    if(typeof value==='string')return value;
+    try{if(value instanceof Date)return value.toISOString()}catch{}
+    try{if(typeof value?.toDate==='function')return value.toDate().toISOString()}catch{}
+    const parsed=Date.parse(String(value));return Number.isFinite(parsed)?new Date(parsed).toISOString():'';
+  };
+  const cleanForFirestore=value=>{
+    if(value===undefined||typeof value==='function'||typeof value==='symbol')return undefined;
+    if(value===null||typeof value==='string'||typeof value==='number'||typeof value==='boolean')return value;
+    try{if(value instanceof Date)return value.toISOString()}catch{}
+    try{if(typeof value?.toDate==='function')return value.toDate().toISOString()}catch{}
+    if(Array.isArray(value))return value.map(cleanForFirestore).filter(v=>v!==undefined);
+    if(typeof value==='object'){
+      const out={};
+      for(const [k,v] of Object.entries(value)){const cleaned=cleanForFirestore(v);if(cleaned!==undefined)out[k]=cleaned}
+      return out;
+    }
+    return String(value);
+  };
+  const tokenDb=()=>new Promise((resolve,reject)=>{
+    if(!('indexedDB' in window))return resolve(null);
+    const req=indexedDB.open('openday-private-access',1);
+    req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('kv'))req.result.createObjectStore('kv')};
+    req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+  });
+  async function durableTokenRead(){
+    try{const dbx=await tokenDb();if(!dbx)return'';return await new Promise(resolve=>{const tx=dbx.transaction('kv','readonly'),req=tx.objectStore('kv').get('sync-token');req.onsuccess=()=>resolve(String(req.result||''));req.onerror=()=>resolve('')})}catch{return''}
+  }
+  async function durableTokenWrite(value){
+    try{const dbx=await tokenDb();if(!dbx)return;await new Promise(resolve=>{const tx=dbx.transaction('kv','readwrite');tx.objectStore('kv').put(String(value||''),'sync-token');tx.oncomplete=()=>resolve();tx.onerror=()=>resolve()})}catch{}
+  }
+  async function durableTokenDelete(){
+    try{const dbx=await tokenDb();if(!dbx)return;await new Promise(resolve=>{const tx=dbx.transaction('kv','readwrite');tx.objectStore('kv').delete('sync-token');tx.oncomplete=()=>resolve();tx.onerror=()=>resolve()})}catch{}
+  }
   const normalise=data=>({
     saved:Array.isArray(data?.saved)?data.saved:[],
     booked:data?.booked||{},
@@ -24,8 +59,8 @@
     rejectedSchools:Array.isArray(data?.rejectedSchools)?data.rejectedSchools:[],
     schoolDecisions:data?.schoolDecisions&&typeof data.schoolDecisions==='object'?data.schoolDecisions:{},
     eventOverrides:data?.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},
-    mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?data.mergeConflicts:{},
-    updatedAt:data?.updatedAt||''
+    mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?cleanForFirestore(data.mergeConflicts):{},
+    updatedAt:asIso(data?.updatedAt)
   });
   const mergeStates=(aInput,bInput)=>{
     const a=normalise(aInput),b=normalise(bInput);
@@ -130,8 +165,11 @@
   const tokenConnected=()=>!!tokenRef;
   const isConnected=()=>tokenConnected()||ownerConnected();
   const rememberedToken=()=>localStorage.getItem(cfg.tokenKey)||'';
+  async function rememberToken(value){localStorage.setItem(cfg.tokenKey,String(value||''));await durableTokenWrite(value)}
+  async function restoreRememberedToken(){let value=rememberedToken();if(!value){value=await durableTokenRead();if(value)localStorage.setItem(cfg.tokenKey,value)}return value}
+  const accessMode=()=>rememberedToken()?'saved-token':tokenConnected()&&ownerConnected()?'recovery-channel':ownerConnected()?'recovery':'local';
   const emit=(state,text)=>{
-    const detail={state,text,connected:isConnected(),ownerConnected:ownerConnected(),tokenConnected:tokenConnected(),hasRememberedToken:!!rememberedToken()};
+    const detail={state,text,connected:isConnected(),ownerConnected:ownerConnected(),tokenConnected:tokenConnected(),hasRememberedToken:!!rememberedToken(),accessMode:accessMode(),live:!!unsubscribeRemote,lastSyncAt,lastError};
     window.dispatchEvent(new CustomEvent('openday:sync-status',{detail}));
     window.AppPlatform?.emit?.('sync:status',detail);
   };
@@ -173,7 +211,7 @@
   }
 
   function applyRemote(remote){
-    const local=normalise(readLocal()),merged=mergeStates(local,remote),mergedJSON=JSON.stringify(merged),remoteJSON=JSON.stringify(normalise(remote||{}));
+    const local=normalise(readLocal()),merged=normalise(mergeStates(local,remote)),mergedJSON=JSON.stringify(merged),remoteJSON=JSON.stringify(normalise(remote||{}));
     if(JSON.stringify(local)!==mergedJSON){
       writeLocal(merged);
       window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
@@ -190,62 +228,84 @@
     if(!snap.exists())throw new Error('token-not-recognised');
     const data=snap.data()||{};
     if(data.app!=='openday'||data.active!==true)throw new Error('token-not-recognised');
-    const merge=applyRemote(data.state||{});
-    emit('synced','Synced · loaded once');
-    return merge;
+    return applyRemote(data.state||{});
   }
 
-  async function refreshOwnerOnce(){
+  function stopRemoteListener(){try{unsubscribeRemote?.()}catch{}unsubscribeRemote=null}
+  function startRemoteListener(target=tokenRef){
+    stopRemoteListener();if(!target)return;
+    unsubscribeRemote=FStore.onSnapshot(target,{includeMetadataChanges:true},snap=>{
+      if(!snap.exists()||snap.metadata?.hasPendingWrites)return;
+      const data=snap.data()||{};
+      if(target===tokenRef&&(data.app!=='openday'||data.active!==true))return;
+      const before=localJSON();applyRemote(data.state||{});lastSyncAt=new Date().toISOString();lastError='';
+      emit('synced',before===localJSON()?'Connected & synced · live updates on':'Cloud change received · this device updated');
+    },error=>{lastError=friendly(error);emit('error',lastError)});
+  }
+
+  async function refreshOwnerOnce({applyState=true}={}){
     await loadFirebase();if(!ownerConnected())return false;
     window.FirebaseUsageMonitor?.read(1,'owner-state-read','openday','kk-syllabus','(default)');
     const snap=await FStore.getDoc(ref),data=snap.exists()?snap.data():{};
-    applyRemote(data.state||{});
+    if(applyState)applyRemote(data.state||{});
     return data;
   }
+  async function recoverActiveTokenChannel(){
+    if(tokenRef||!ownerConnected())return !!tokenRef;
+    const ownerData=await refreshOwnerOnce({applyState:false})||{},hash=String(ownerData.activeTokenHash||'');
+    if(!hash){if(ownerData.state)applyRemote(ownerData.state);return false}
+    try{return await bindTokenHash(hash,{createIfOwner:false,pushMerged:false})}catch(error){lastError=friendly(error);return false}
+  }
 
-  async function bindTokenHash(hash,{createIfOwner=false,pushMerged=false}={}){
+  async function bindTokenHash(hash,{createIfOwner=false,pushMerged=false,rememberValue=''}={}){
     if(!hash)return false;
     await loadFirebase();
     const candidate=FStore.doc(db,cfg.tokenCollection,hash);
+    let merge=null,created=false;
     try{
-      const merge=await readTokenOnce(candidate);
-      tokenRef=candidate;activeTokenHash=hash;
-      if(pushMerged&&merge?.needsCloudWrite){
-        window.FirebaseUsageMonitor?.write(1,'token-recovery-merge-write','openday','kk-syllabus','(default)');
-        const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
-        await FStore.setDoc(candidate,{state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
-        lastRemote=JSON.stringify(state);lastLocal=lastRemote;
-        window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state,at:state.updatedAt}}));
-        emit('synced','Local and cloud data merged & synced');
-      }
-      return true;
+      merge=await readTokenOnce(candidate);
     }catch(error){
       if(error?.message!=='token-not-recognised'||!createIfOwner||!ownerConnected())throw error;
-      const ownerData=await refreshOwnerOnce();
-      const state=mergeStates(readLocal(),ownerData?.state||{});state.updatedAt=new Date().toISOString();writeLocal(state);
+      const ownerData=await refreshOwnerOnce({applyState:false});
+      const state=normalise(mergeStates(readLocal(),ownerData?.state||{}));state.updatedAt=new Date().toISOString();writeLocal(state);
       window.FirebaseUsageMonitor?.write(1,'token-capability-create','openday','kk-syllabus','(default)');
-      await FStore.setDoc(candidate,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state,clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()});
-      tokenRef=candidate;activeTokenHash=hash;lastRemote=JSON.stringify(state);lastLocal=lastRemote;
-      window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state,at:state.updatedAt}}));
-      emit('synced','Memorable token restored');
-      return true;
+      await FStore.setDoc(candidate,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state:cleanForFirestore(state),clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()});
+      merge={merged:state,mergedJSON:JSON.stringify(state),remoteJSON:JSON.stringify(state),needsCloudWrite:false};created=true;
     }
+    tokenRef=candidate;activeTokenHash=hash;
+    if(rememberValue)await rememberToken(rememberValue);
+    startRemoteListener(candidate);
+    let pushError=null;
+    if(pushMerged&&merge?.needsCloudWrite){
+      try{
+        window.FirebaseUsageMonitor?.write(1,'token-recovery-merge-write','openday','kk-syllabus','(default)');
+        const state=normalise(readLocal());state.updatedAt=new Date().toISOString();writeLocal(state);
+        await FStore.setDoc(candidate,{state:cleanForFirestore(state),clientUpdatedAt:state.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+        lastRemote=JSON.stringify(state);lastLocal=lastRemote;lastSyncAt=new Date().toISOString();
+        window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state,at:state.updatedAt}}));
+      }catch(error){pushError=error;lastError=friendly(error)}
+    }
+    if(created||!pushError){lastSyncAt=new Date().toISOString();lastError='';emit('synced',rememberValue?'Connected & synced · token saved on this device · live updates on':'Connected to active sync channel · live updates on')}
+    else emit('error','Connected and token saved, but the first cloud write failed: '+lastError);
+    return true;
   }
 
   async function refresh(){
     await loadFirebase();
     emit('syncing','Refreshing cloud data…');
     try{
-      if(tokenRef)return await readTokenOnce(tokenRef);
-      const token=rememberedToken();
+      if(tokenRef){const result=await readTokenOnce(tokenRef);lastSyncAt=new Date().toISOString();lastError='';emit('synced','Cloud refreshed · live updates on');return result}
+      const token=await restoreRememberedToken();
       if(token){
         const hash=await deriveTokenHash(token);
-        return await bindTokenHash(hash,{createIfOwner:ownerConnected()});
+        return await bindTokenHash(hash,{createIfOwner:ownerConnected(),rememberValue:token});
       }
       if(ownerConnected()){
-        await refreshOwnerOnce();emit('synced','Owner recovery data refreshed');return true;
+        const recovered=await recoverActiveTokenChannel();
+        if(recovered){emit('synced','Recovery access connected to the active sync channel · live updates on');return true}
+        await refreshOwnerOnce();emit('recovery','Recovery access only · no active token channel found');return true;
       }
-      emit('local','Enter memorable token to sync');return false;
+      emit('local','Local only · enter the memorable token once to connect');return false;
     }catch(error){emit('error',friendly(error));throw error}
   }
 
@@ -254,8 +314,9 @@
     let local=normalise(readLocal());
     local.updatedAt=new Date().toISOString();
     writeLocal(local);
+    if(!tokenRef&&ownerConnected())await recoverActiveTokenChannel();
     if(!tokenRef&&!ownerConnected()){lastLocal=JSON.stringify(local);emit('local','Saved on device · not connected');return false}
-    emit('syncing','Reading latest cloud data…');
+    emit('syncing','Saving to cloud…');
     try{
       const target=tokenRef||ref;
       let finalMerged=null;
@@ -271,22 +332,22 @@
         const remote=snap.exists()?(snap.data()?.state||{}):{};
         let base={};
         try{base=lastRemote?JSON.parse(lastRemote):{}}catch{}
-        finalMerged=lastRemote?mergeThreeWay(base,local,remote):mergeStates(local,remote);
+        finalMerged=normalise(lastRemote?mergeThreeWay(base,local,remote):mergeStates(local,remote));
         finalMerged.updatedAt=new Date().toISOString();
         if(tokenRef){
-          tx.set(target,{state:finalMerged,clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+          tx.set(target,{state:cleanForFirestore(finalMerged),clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
         }else{
-          tx.set(target,{app:'openday',state:finalMerged,clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
+          tx.set(target,{app:'openday',state:cleanForFirestore(finalMerged),clientUpdatedAt:finalMerged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true});
         }
       });
       const merged=normalise(finalMerged||local),mergedJSON=JSON.stringify(merged);
-      writeLocal(merged);lastLocal=mergedJSON;lastRemote=mergedJSON;
+      writeLocal(merged);lastLocal=mergedJSON;lastRemote=mergedJSON;lastSyncAt=new Date().toISOString();lastError='';
       window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
       window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state:merged,at:merged.updatedAt}}));
       const conflicts=Object.values(merged.mergeConflicts||{}).filter(x=>x?.status!=='resolved').length;
       emit('synced',conflicts?'Saved, merged & synced · '+conflicts+' difference'+(conflicts===1?'':'s')+' preserved':'Saved, merged & synced');
       return true;
-    }catch(error){emit('error',friendly(error));return false}
+    }catch(error){lastError=friendly(error);console.error('Openday sync write failed',error);emit('error',lastError);return false}
   }
 
   const schedule=()=>{
@@ -299,9 +360,7 @@
     if(token!==undefined&&String(token)!==''){
       const value=String(token),hash=await deriveTokenHash(value);
       backupLocal();
-      await bindTokenHash(hash,{createIfOwner:ownerConnected(),pushMerged:true});
-      localStorage.setItem(cfg.tokenKey,value);
-      emit('synced','Synced with memorable token');
+      await bindTokenHash(hash,{createIfOwner:ownerConnected(),pushMerged:true,rememberValue:value});
       return true;
     }
     if(ownerConnected()){await refreshOwnerOnce();emit('synced','Owner recovery data loaded');return true}
@@ -336,14 +395,14 @@
       FStore.setDoc(tokenRef,{app:'openday',active:true,ownerUid:OWNER_UID,tokenHash:hash,state:merged,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true}),
       FStore.setDoc(ref,{app:'openday',state:merged,activeTokenHash:hash,clientUpdatedAt:merged.updatedAt,updatedAt:FStore.serverTimestamp()},{merge:true})
     ]);
-    lastRemote=JSON.stringify(merged);lastLocal=lastRemote;localStorage.setItem(cfg.tokenKey,value);
+    lastRemote=JSON.stringify(merged);lastLocal=lastRemote;await rememberToken(value);startRemoteListener(tokenRef);lastSyncAt=new Date().toISOString();lastError='';
     window.dispatchEvent(new CustomEvent('openday:sync-write-success',{detail:{state:merged,at:merged.updatedAt}}));
-    emit('synced',legacyRecovery?'Old memorable token restored':'Memorable token set and synced');
+    emit('synced',legacyRecovery?'Old memorable token restored · live updates on':'Memorable token saved & synced · live updates on');
     return true;
   }
 
   async function resetMemorableToken(token){return setMemorableToken(token,{rotate:true})}
-  function forgetToken(){localStorage.removeItem(cfg.tokenKey);tokenRef=null;activeTokenHash='';emit(ownerConnected()?'synced':'local',ownerConnected()?'Recovery session remains available.':'Memorable token forgotten on this device.')}
+  function forgetToken(){localStorage.removeItem(cfg.tokenKey);void durableTokenDelete();stopRemoteListener();tokenRef=null;activeTokenHash='';emit(ownerConnected()?'recovery':'local',ownerConnected()?'Saved token removed; recovery access remains available.':'Saved token removed from this device.')}
   const getToken=()=>rememberedToken();
   const hasToken=()=>!!rememberedToken();
   const setupLink=(token=rememberedToken())=>token?location.origin+location.pathname+'#sync='+encodeURIComponent(token):'';
@@ -357,21 +416,26 @@
 
   async function boot(){
     await loadFirebase();booted=true;
-    const token=rememberedToken();
+    const token=await restoreRememberedToken();
     if(token){
-      try{await bindTokenHash(await deriveTokenHash(token),{createIfOwner:ownerConnected()})}
+      try{await bindTokenHash(await deriveTokenHash(token),{createIfOwner:ownerConnected(),rememberValue:token})}
       catch(error){
         if(ownerConnected()){
-          try{await refreshOwnerOnce()}catch{}
+          try{if(await recoverActiveTokenChannel())return}catch{}
         }
-        emit('error',friendly(error));
+        lastError=friendly(error);emit('error',lastError);
       }
     }else if(ownerConnected()){
-      try{await refreshOwnerOnce();emit('synced','Recovery data loaded once')}catch(error){emit('error',friendly(error))}
-    }else emit('local','Local data loaded · enter token to sync');
+      try{
+        if(await recoverActiveTokenChannel())emit('synced','Recovery access connected to the active sync channel · live updates on');
+        else{await refreshOwnerOnce();emit('recovery','Recovery access only · enter/save the token for portable access')}
+      }catch(error){lastError=friendly(error);emit('error',lastError)}
+    }else emit('local','Local only · enter the memorable token once to connect');
     await consumeSetupLink();
+    document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&isConnected())refresh().catch(()=>{})});
   }
 
-  const api={connect,push,schedule,refresh,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash,mergeStates,mergeThreeWay,normalise,readLocal};
+  const status=()=>({connected:isConnected(),ownerConnected:ownerConnected(),tokenConnected:tokenConnected(),hasRememberedToken:!!rememberedToken(),accessMode:accessMode(),live:!!unsubscribeRemote,lastSyncAt,lastError});
+  const api={connect,push,schedule,refresh,status,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash,mergeStates,mergeThreeWay,normalise,readLocal};
   window.OpenDaySync=api;window.AppPlatform?.register?.('firebase-token-sync',api);boot().catch(error=>emit('error',friendly(error)));
 })();
