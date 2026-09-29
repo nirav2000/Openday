@@ -222,6 +222,12 @@
       "commit": "3c256ddd792176e9b71d62a25fff9da3b373acb0",
       "kind": "release",
       "label": "Performance startup hotfix after saved school-set sync"
+    },
+    {
+      "version": "2.16.0",
+      "commit": "534ba28ccc70311eb14e99d836815b75487cd835",
+      "kind": "release",
+      "label": "Qualification-aware subject comparisons, saved-set bulk select, cohort headers and correct Merchant Taylors Maths"
     }
   ]
 }
