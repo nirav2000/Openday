@@ -6,6 +6,19 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.10.0 — 2026-09-29
+
+- Changed the default travel/search origin for **Primary** schools to **UB5 6QX** while keeping the Senior/secondary origin unchanged.
+- Expanded the primary catalogue beyond Harrow borough boundaries using the London school-location register, adding open Reception-capable primary/all-through schools within a **5-mile straight-line radius** of UB5 6QX.
+- Preserved the existing manually researched primary records, dates, notes and stable IDs when the new radius data matched the same school.
+- Added postcode, URN and straight-line distance metadata to matched nearby schools.
+- Added persistent Primary distance filters for **≤1, ≤2, ≤3 and ≤5 miles**, plus **Any distance** to reveal legacy/researched schools outside the radius.
+- The default Primary radius is **≤5 miles** and is remembered per device.
+- Primary cards now show distance from UB5 6QX; the school detail page explains that the filter uses straight-line distance and retains live driving/public-transport links for actual journeys.
+- Primary summary counts now respect the selected radius.
+- The expanded catalogue currently contains **175 primary records**, of which **159 are within 5 miles**, **70 within 3 miles**, **29 within 2 miles** and **7 within 1 mile** of UB5 6QX.
+- Added an idempotent `scripts/expand-primary-radius.py` builder so the radius catalogue can be regenerated without duplicating schools.
+
 ## 2.9.0 — 2026-09-29
 
 - Added **Grade 9 % / # awards** and **Grades 9–7 % / # awards** as default headline columns in the Performance comparison, with sorting by Grade 9 or 9–7 percentage.
