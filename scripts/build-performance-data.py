@@ -309,6 +309,7 @@ out={
   'methodology':{
     'gcse':'DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.',
     'gcseSubjects':'DfE 2024/25 institution-level subject entries and grades.',
+    'topGrades':'Grade 9 and Grades 9–7 headline figures are derived from the published DfE subject-grade counts. Percentages use published/unsuppressed grade awards only; suppressed cells are not estimated. Combined Science paired grades are counted as two GCSE grade awards.',
     'alevel':'DfE Explore Education Statistics, 16–18 institution performance, A level cohort, 2021/22 to 2024/25.',
     'alevelSubjects':'DfE 2024/25 institution-level A-level subject entries and grades.',
     'eal':'Whole-school EAL is the January 2026 school-census percentage whose first language is known or believed to be other than English. KS4 EAL is retained separately for historical exam-cohort context.',
