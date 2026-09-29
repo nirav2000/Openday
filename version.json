@@ -1,6 +1,6 @@
 {
-  "version": "2.14.0",
+  "version": "2.15.0",
   "released": "2026-09-29",
   "channel": "main",
-  "summary": "Make private sync durable and live across devices, clarify connection state, keep performance headers visible, group comparable subjects, and explain zero top-grade results."
+  "summary": "Refine performance comparisons with metric-cell detail icons, saved school sets, compact status symbols, deeper GCSE subject rollups, draggable school columns and cohort context."
 }
