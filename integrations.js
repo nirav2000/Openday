@@ -362,5 +362,5 @@
 
   enhanceHeader();ensurePendingSyncBar();updatePendingNotesUI();updateConflictIndicator();ensureSyncDialog();installCalendarSubscriptionFix();initialiseVersion();
   try{const stored=JSON.parse(localStorage.getItem('openDayState')||'{}');if(typeof state==='object'&&JSON.stringify(stored)!==JSON.stringify(state)){Object.assign(state,stored);nativeRender?.()}}catch{}
-  updateSyncStatus({state:sync?.isConnected?.()?'syncing':'local',text:sync?.isConnected?.()?'Checking cloud…':'Enter memorable token to sync'});
+  {const st=sync?.status?.()||{};updateSyncStatus({state:st.connected?'synced':'local',text:st.connected?'Connected & synced':'Enter memorable token to sync',...st});}
 })();
