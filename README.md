@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.8.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.9.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -111,3 +111,16 @@ For independent schools, DfE performance-table measures can exclude qualificatio
 ## Whole-school context in Performance
 
 The Performance page combines attainment with descriptive context from official DfE sources. The January 2026 school census supplies whole-school FSM eligibility and EAL; the 2025/26 SEN school-level dataset supplies SEN support and EHCP counts; and the accredited full-year absence series supplies overall, unauthorised, persistent and severe absence through 2024/25. These context measures are not treated as school-quality scores. Independent schools can have census/SEN context but are outside the DfE school-level absence series.
+
+
+## Grade 9 and configurable performance columns
+
+The Performance page puts **Grade 9** and **Grades 9–7** at the front of the default comparison layout. Both percentage and number of grade awards are available. These are derived from the DfE 2024/25 subject-level grade counts; total exam entries form the denominator, Combined Science paired grades count as two awards, and suppressed top-grade cells are not estimated.
+
+Subject grade counts are rendered highest-first as coloured grade chips. Combined Science pairs such as `9–8` are labelled as double-award outcomes. Generic language records are kept separate by DfE discount code/group rather than being collapsed into a misleading total.
+
+The **Columns** control lets each device show, hide and reorder comparison metrics. Desktop users can drag; touch users can use move controls. The preference is kept in local storage under `openday.performance.columns.v1` and **Reset default** restores the standard Grade 9 / 9–7-first layout.
+
+## Primary open-event discovery
+
+Primary-school research now searches each tracked school's official admissions/tours pages using terms including school tours, open days, open mornings, prospective parents and Reception 2027. Fixed dates and recurring tour patterns are added only when supported by the school's own site. If the official pages conflict or publish a visit option without a date, Openday keeps the conflict/unknown visible rather than guessing.
