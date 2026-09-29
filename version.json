@@ -1,6 +1,6 @@
 {
-  "version": "2.13.0",
+  "version": "2.14.0",
   "released": "2026-09-29",
   "channel": "main",
-  "summary": "Add word-level merge resolution, rich browsable Version Lab comparisons, metric drill-downs, and cleaner insignificant decimal formatting."
+  "summary": "Make private sync durable and live across devices, clarify connection state, keep performance headers visible, group comparable subjects, and explain zero top-grade results."
 }
