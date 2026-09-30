@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "updated": "2026-09-30",
+    "policy": "Reference index only; copyrighted/commercial papers are not mirrored unless redistribution is clearly permitted."
+  },
+  "resources": [
+    {
+      "id": "iseb",
+      "provider": "ISEB",
+      "school": "",
+      "kind": "Official familiarisation",
+      "title": "ISEB Pre-Tests Admissions Toolkit",
+      "subjects": [
+        "English",
+        "Maths",
+        "VR",
+        "NVR"
+      ],
+      "access": "Free",
+      "authority": "Official",
+      "url": "https://www.iseb.co.uk/families-hub/pre-tests-admissions-toolkit/",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "gl",
+      "provider": "GL",
+      "school": "",
+      "kind": "Familiarisation papers",
+      "title": "GL Assessment free 11+ materials",
+      "subjects": [
+        "English",
+        "Maths",
+        "VR",
+        "NVR"
+      ],
+      "access": "Free PDFs",
+      "authority": "Official",
+      "url": "https://11plus.gl-assessment.co.uk/pages/free-materials",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "cem",
+      "provider": "CEM / Cambridge",
+      "school": "",
+      "kind": "Specification",
+      "title": "Cambridge Select Insight entrance assessments",
+      "subjects": [
+        "Verbal",
+        "Numerical",
+        "NVR"
+      ],
+      "access": "Free information",
+      "authority": "Official",
+      "url": "https://www.cem.org/entrance-assessments",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "bexley",
+      "provider": "Quest",
+      "school": "Beths Grammar School",
+      "kind": "Official familiarisation",
+      "title": "Bexley Selection Test familiarisation",
+      "subjects": [
+        "English",
+        "Verbal",
+        "Numerical",
+        "NVR"
+      ],
+      "access": "Free",
+      "authority": "Official / consortium",
+      "url": "https://www.questassessments.com/parent-guidance-consortium/bexley-selection-test",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "habs",
+      "provider": "Quest",
+      "school": "Haberdashers' Boys' School",
+      "kind": "School familiarisation",
+      "title": "Habs Boys 11+ QUEST familiarisation",
+      "subjects": [
+        "English",
+        "Maths",
+        "VR",
+        "NVR",
+        "Creative"
+      ],
+      "access": "Free",
+      "authority": "Official school",
+      "url": "https://www.habselstree.org.uk/boys/admissions/admissions-process/",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "mts",
+      "provider": "School / Other",
+      "school": "Merchant Taylors' School",
+      "kind": "Specimen papers",
+      "title": "MTS English & Maths papers + online familiarisation",
+      "subjects": [
+        "English",
+        "Maths",
+        "VR"
+      ],
+      "access": "Free",
+      "authority": "Official school",
+      "url": "https://www.mtsn.org.uk/admissions/joining-at-11/",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "jl",
+      "provider": "School / Other",
+      "school": "John Lyon School",
+      "kind": "Sample papers",
+      "title": "John Lyon 11+ and 13+ sample papers",
+      "subjects": [
+        "English",
+        "Maths",
+        "Science",
+        "French"
+      ],
+      "access": "Free PDFs",
+      "authority": "Official school",
+      "url": "https://www.johnlyon.org/admissions/sample-papers/",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "qe",
+      "provider": "School / Other",
+      "school": "Queen Elizabeth's School, Barnet",
+      "kind": "Sample papers",
+      "title": "QE Barnet entrance-test sample papers",
+      "subjects": [
+        "English",
+        "Maths"
+      ],
+      "access": "Free",
+      "authority": "Official school",
+      "url": "https://www.qebarnet.co.uk/admissions-information/sample-test-papers/",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "olaves",
+      "provider": "School / Other",
+      "school": "St Olave's Grammar School",
+      "kind": "Sample questions",
+      "title": "St Olave's Stage 1 & Stage 2 samples",
+      "subjects": [
+        "English",
+        "Maths",
+        "VR",
+        "NVR"
+      ],
+      "access": "Free",
+      "authority": "Official school",
+      "url": "https://www.saintolaves.net/112/entrance-test-information",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "bucks",
+      "provider": "GL",
+      "school": "RGS High Wycombe / Dr Challoner's",
+      "kind": "Official familiarisation",
+      "title": "Buckinghamshire Secondary Transfer familiarisation",
+      "subjects": [
+        "Verbal",
+        "English",
+        "Maths",
+        "NVR"
+      ],
+      "access": "Free",
+      "authority": "Official authority",
+      "url": "https://www.buckinghamshire.gov.uk/schools-libraries-and-parks/school-admissions-and-appeals/guides-and-policies/guide-to-grammar-schools-and-the-secondary-school-transfer-test-11-plus/secondary-transfer-testing-process/",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    },
+    {
+      "id": "atom",
+      "provider": "Atom Learning",
+      "school": "",
+      "kind": "Third-party practice papers",
+      "title": "Atom free 11+ familiarisation & practice",
+      "subjects": [
+        "English",
+        "Maths",
+        "VR",
+        "NVR"
+      ],
+      "access": "Free / account options",
+      "authority": "Third party",
+      "url": "https://www.atomlearning.com/free-11-plus-familiarisation",
+      "entry": [
+        "11+",
+        "13+"
+      ],
+      "stored": "link-only"
+    }
+  ]
+}
