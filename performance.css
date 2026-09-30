@@ -196,3 +196,5 @@ button.school-state-icon.on.reject{color:#b94444}
 .compare-detail-table th[data-subject-school]{cursor:grab;user-select:none}
 .compare-detail-table th[data-subject-school]:active,.subject-compare-row[draggable="true"]>th:active{cursor:grabbing}
 .compare-detail-table th.dragging{opacity:.45}
+
+.metric-assessment{min-width:175px;white-space:normal}.assessment-cell{display:flex;flex-direction:column;gap:3px;line-height:1.28}.assessment-cell b{font-size:.78rem}.assessment-cell span{color:var(--muted);font-size:.67rem;font-weight:600}.header-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
