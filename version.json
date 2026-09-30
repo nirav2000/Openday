@@ -1,6 +1,6 @@
 {
-  "version": "2.16.0",
-  "released": "2026-09-29",
+  "version": "2.17.0",
+  "released": "2026-09-30",
   "channel": "main",
-  "summary": "Refine performance comparisons with triangle sorting, qualification-aware GCSE subjects, correct Merchant Taylors Maths, cohort headers, saved-set bulk selection and denser status icons."
+  "summary": "Add school-published results archive, full Merchant Taylors 2025 subject data, and draggable school/subject ordering in subject comparisons."
 }
