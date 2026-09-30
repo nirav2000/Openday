@@ -6,11 +6,13 @@
   const schoolSetKey='openday.performance.schoolSets.v1',compareOrderKey='openday.performance.compareOrder.v1';
   const loadJson=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||'null')??fallback}catch{return fallback}};
   const state=(()=>{try{return JSON.parse(localStorage.getItem('openDayState')||'{}')}catch{return{}}})();
-  let schoolSets=state.performanceSchoolSets||loadJson(schoolSetKey,{}),compareOrder=state.performanceCompareOrder||loadJson(compareOrderKey,[]);
+  let schoolSets=state.performanceSchoolSets||loadJson(schoolSetKey,{}),compareOrder=state.performanceCompareOrder||loadJson(compareOrderKey,[]),subjectOrder=state.performanceSubjectOrder||{gcse:[],alevel:[]};
   if(!schoolSets||Array.isArray(schoolSets)||typeof schoolSets!=='object')schoolSets={};
   if(!Array.isArray(compareOrder))compareOrder=[];
+  if(!subjectOrder||typeof subjectOrder!=='object')subjectOrder={gcse:[],alevel:[]};
+  if(!Array.isArray(subjectOrder.gcse))subjectOrder.gcse=[];if(!Array.isArray(subjectOrder.alevel))subjectOrder.alevel=[];
   const persistPerformancePrefs=()=>{
-    state.performanceSchoolSets=schoolSets;state.performanceCompareOrder=compareOrder;state.updatedAt=new Date().toISOString();
+    state.performanceSchoolSets=schoolSets;state.performanceCompareOrder=compareOrder;state.performanceSubjectOrder=subjectOrder;state.updatedAt=new Date().toISOString();
     localStorage.setItem('openDayState',JSON.stringify(state));
     localStorage.setItem(schoolSetKey,JSON.stringify(schoolSets));localStorage.setItem(compareOrderKey,JSON.stringify(compareOrder));
     window.OpenDaySync?.schedule?.();
@@ -300,7 +302,8 @@
     const cohort=kind==='gcse'?gcseCohort(s,year):alevelCohort(s,year),label=kind==='gcse'?'GCSE':'A-level';
     return '<small class="school-cohort-line">'+esc(yearLabel(year)||'—')+' · '+(cohort?(cohort.inferred?'≈':'')+fmt(cohort.value)+' '+label+' pupils':label+' cohort —')+'</small>';
   };
-  const qualificationSchoolHeader=(s,kind,year)=>esc(s.name)+cohortLine(s,kind,year);
+  const archiveLink=(s,year,kind)=>s.resultsArchive?.some(x=>x.year===year&&x[kind])?'<a class="archive-link" href="results-archive.html?school='+encodeURIComponent(s.name)+'&year='+encodeURIComponent(year)+'&kind='+encodeURIComponent(kind)+'" target="_blank" rel="noopener">Snapshot ↗</a>':'';
+  const qualificationSchoolHeader=(s,kind,year)=>esc(s.name)+cohortLine(s,kind,year)+archiveLink(s,year,kind);
   function mainCompareSchoolHeader(s){
     const m=latestSummary(s),profile=s.gcseGradeProfile||{};
     const gy=yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||'');
@@ -707,9 +710,12 @@
   };
   const GCSE_PRIORITY=['Mathematics','English Language','English Literature','Combined Science','Biology','Chemistry','Physics'];
   const subjectSort=(kind,a,b)=>{
-    if(kind!=='gcse')return a.localeCompare(b);
-    const ai=GCSE_PRIORITY.indexOf(a),bi=GCSE_PRIORITY.indexOf(b);
-    if(ai>=0||bi>=0)return(ai>=0?ai:999)-(bi>=0?bi:999)||a.localeCompare(b);
+    const custom=subjectOrder[kind]||[],aiCustom=custom.indexOf(a),biCustom=custom.indexOf(b);
+    if(aiCustom>=0||biCustom>=0)return(aiCustom>=0?aiCustom:9999)-(biCustom>=0?biCustom:9999)||a.localeCompare(b);
+    if(kind==='gcse'){
+      const ai=GCSE_PRIORITY.indexOf(a),bi=GCSE_PRIORITY.indexOf(b);
+      if(ai>=0||bi>=0)return(ai>=0?ai:999)-(bi>=0?bi:999)||a.localeCompare(b);
+    }
     return a.localeCompare(b);
   };
   function rollupDetailRow(name,packs,index,kind){
@@ -728,11 +734,11 @@
     const rows=names.map((name,i)=>{
       const grouped=packs.some(x=>(x.groups.get(name)?.components||[]).length>1||(x.groups.get(name)?.components||[]).some(s=>s._rawName!==name));
       const label=grouped?'<button type="button" class="subject-family-toggle" data-family-toggle="'+i+'" aria-expanded="false">'+esc(name)+' <span>⌄</span></button>':esc(name);
-      const main='<tr><th>'+label+'</th>'+packs.map(x=>'<td>'+gradeStat(x.groups.get(name),kind)+'</td>').join('')+'</tr>';
+      const main='<tr class="subject-compare-row" draggable="true" data-subject-name="'+esc(name)+'"><th draggable="true" data-subject-name="'+esc(name)+'" title="Drag to rearrange subjects">'+label+'</th>'+packs.map(x=>'<td>'+gradeStat(x.groups.get(name),kind)+'</td>').join('')+'</tr>';
       return main+rollupDetailRow(name,packs,i,kind);
     }).join('');
     return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
-      '<div class="compare-scroll"><table class="compare-table compare-detail-table"><thead><tr><th>Subject</th>'+packs.map(x=>'<th>'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      '<div class="compare-scroll"><table class="compare-table compare-detail-table" data-subject-kind="'+kind+'"><thead><tr><th>Subject</th>'+packs.map(x=>'<th draggable="true" data-subject-school="'+esc(x.school.name)+'" title="Drag to rearrange school columns">'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
   function gcseHistoryDrilldown(chosen,id){
     const labels={a8:'Attainment 8',engmath5:'English & maths 5+',p8:'Progress 8'},field={a8:'attainment8',engmath5:'englishMaths5Plus',p8:'progress8'}[id];
