@@ -1,6 +1,6 @@
 (()=>{
   const $=s=>document.querySelector(s);
-  let doc={schools:[]},filter='all',expanded='',sortKey='name',sortDir='asc',selectedYear='latest',activeSchoolSet='';
+  let doc={schools:[]},assessmentDoc={schools:{}},filter='all',expanded='',sortKey='name',sortDir='asc',selectedYear='latest',activeSchoolSet='';
   const selectedCompare=new Set();
   const subjectMode={gcse:'count',alevel:'count'};
   const schoolSetKey='openday.performance.schoolSets.v1',compareOrderKey='openday.performance.compareOrder.v1';
@@ -21,13 +21,13 @@
   const decisions=state.schoolDecisions||{};
   const shortlisted=new Set(state.shortlistedSchools||[]),rejected=new Set(state.rejectedSchools||[]);
   const layoutKey='openday.performance.columns.v1';
-  const DEFAULT_COLUMNS=['school','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
+  const DEFAULT_COLUMNS=['school','assessment','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
   const COLUMN_LABELS={
-    school:'School',gcseYear:'GCSE year',grade9pct:'Grade 9 %',grade9count:'Grade 9 #',grade97pct:'Grades 9–7 %',grade97count:'Grades 9–7 #',
+    school:'School',assessment:'11+/13+ assessment',gcseYear:'GCSE year',grade9pct:'Grade 9 %',grade9count:'Grade 9 #',grade97pct:'Grades 9–7 %',grade97count:'Grades 9–7 #',
     a8:'Attainment 8',engmath5:'Eng & maths 5+',p8:'P8 latest',alevel:'A-level',fsm:'FSM',wholeEal:'EAL',sen:'SEN support',ehcp:'EHCP',absence:'Absence',persistent:'PA'
   };
   const COLUMN_HELP={
-    school:'School name and area. Click to sort alphabetically; drag another heading to move that column.',
+    school:'School name and area. Click to sort alphabetically; drag another heading to move that column.',\n    assessment:'Current published admissions assessment route; descriptive admissions data, not a performance score.',
     gcseYear:'The academic year used for the GCSE top-grade figures shown in this row. “Latest” can differ by school because publication dates differ.',
     grade9pct:'Percentage of all covered GCSE / IGCSE grade awards that are grade 9. This is awards, not pupils.',
     grade9count:'Number of grade 9 awards in the covered result set. One pupil normally takes several GCSEs, so one pupil can contribute several grade 9 awards.',
@@ -89,7 +89,7 @@
   };
   const compactYear=y=>String(y||'').replace('/','');
   const yearNumber=y=>Number(String(y||'').replace(/\D/g,''))||0;
-  const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));
+  const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));\n  const assessmentFor=s=>assessmentDoc.schools?.[s.name]||null;\n  const assessmentText=s=>assessmentFor(s)?.summary||'Format being checked';
   const decisionFlag=(school,value)=>school.eventIds.some(id=>decisions[id]===value);
   const metricForYear=(obj,field)=>{
     if(selectedYear==='latest')return latest(obj,field);
@@ -317,7 +317,7 @@
   function metricCell(id,s,m){
     const profile=s.gcseGradeProfile||{};
     let html='—';
-    if(id==='gcseYear'){
+    if(id==='assessment')html='<span class="assessment-cell"><b>'+esc(assessmentText(s))+'</b><span>'+(assessmentFor(s)?.checked?'checked '+esc(assessmentFor(s).checked):'research pending')+'</span></span>';\n    else if(id==='gcseYear'){
       const year=yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||''),cohort=gcseCohort(s,year);
       html='<span class="gcse-year-cell"><b>'+esc(year||'—')+'</b><span title="'+esc(cohort?.source||'Cohort size not published in the available source')+'">'+(cohort?(cohort.inferred?'≈':'')+fmt(cohort.value)+' pupils':'cohort —')+'</span></span>';
     }
@@ -891,7 +891,7 @@
     renderHead();
     let rows=(doc.schools||[]).filter(matches);
     const key=sortKey;
-    if(key==='name')rows.sort((a,b)=>a.name.localeCompare(b.name)*(sortDir==='asc'?1:-1));
+    if(key==='name'||key==='assessment')rows.sort((a,b)=>(key==='name'?a.name.localeCompare(b.name):assessmentText(a).localeCompare(assessmentText(b)))*(sortDir==='asc'?1:-1));
     else{
       const lowFirst=key==='absence'||key==='persistent';
       const direction=sortDir==='asc'?1:-1;
@@ -969,9 +969,9 @@
     fetch('data/performance.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Official performance dataset is still being prepared');return r.json()}),
     fetch('data/published-results.json',{cache:'no-store'}).then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}})),
     fetch('data/school-results-archive.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]})),
-    fetch('data/dfe-results-archive-2024-25.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]}))
+    fetch('data/dfe-results-archive-2024-25.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]})),fetch('data/assessments.json',{cache:'no-store'}).then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}}))
   ])
-    .then(([x,published,schoolArchive,dfeArchive])=>{
+    .then(([x,published,schoolArchive,dfeArchive,assessments])=>{assessmentDoc=assessments||{schools:{}};
       doc=x;
       const preferred=schoolArchive?.snapshots||[],preferredKeys=new Set(preferred.map(x=>x.school+'|'+x.year));
       const archives=[...preferred,...(dfeArchive?.snapshots||[]).filter(x=>!preferredKeys.has(x.school+'|'+x.year))];
