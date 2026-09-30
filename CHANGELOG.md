@@ -6,6 +6,17 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.19.0 — 2026-09-30
+
+- Added structured **11+ / 13+ assessment data** separate from examination-performance data.
+- Open-day cards and school detail now show ISEB, GL, Quest/CEM, consortium, school-specific or no academic entrance test as appropriate.
+- Added **11+/13+ assessment** to the configurable Performance table and side-by-side comparison.
+- Added a dedicated **Assessments** page covering formats, timings, subjects, curriculum coverage and school-specific routes.
+- Seeded a provenance-aware **paper and familiarisation reference library** using official/provider sources first and clearly labelled third-party resources such as Atom Learning.
+- The resource library stores links and metadata by default rather than copying copyrighted/commercial papers without clear redistribution rights.
+- Added initial verified/review-labelled routes for the 40 senior schools represented in the Performance catalogue.
+- Updated service-worker assets for the new page.
+
 ## 2.18.0 — 2026-09-30
 
 - Expanded the **School Results Archive** beyond the initial St Paul's / Habs / Merchant Taylors snapshots.
