@@ -6,6 +6,23 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.18.0 — 2026-09-30
+
+- Expanded the **School Results Archive** beyond the initial St Paul's / Habs / Merchant Taylors snapshots.
+- Added a full school-published **Mill Hill School 2025 GCSE subject table** and full 2025 A-level/EPQ subject table from Mill Hill's own linked PDFs. GCSE now includes actual Mathematics and English Language grade counts rather than relying on incomplete DfE independent-school rows.
+- Added a **John Lyon 2025 hybrid snapshot**: school-published subject highlights (including Mathematics and English Language) are layered over the official DfE subject table where full school counts are not published.
+- Added **Pinner High 2025 school-published core-subject highlights** over the official DfE subject table.
+- Added Aldenham and Winchester school-published headline evidence alongside their official DfE subject snapshots.
+- Added Michaela's official DfE subject snapshot, matching Michaela's own GCSE-results page which directs readers to the DfE performance tables for detailed measures.
+- Added **Whitmore High School** to Openday's tracked catalogue; the existing performance refresh pipeline pulled in its 2024/25 record with full official subject data.
+- Added an annual **2024/25 DfE results archive** covering 40 tracked schools with subject data. School-published/hybrid archive records take precedence where available.
+- Results Archive now shows school-published headline and subject-highlight strips above the raw subject tables so provenance is visible in the interface.
+- Performance now merges school-published archive records with the annual DfE archive and keeps the better school source where both exist.
+- Created **Apps/apps-version-lab.js** as the shared Version Lab browser/compare module and wired Openday to it.
+- The Version Lab current release now previews the **live deployed app** instead of requiring a generated snapshot directory.
+- Historical snapshots are checked before loading; if one is absent the shared component shows a clear source-only fallback instead of a GitHub Pages 404.
+- Added the shared Version Lab module to **Apps/apps-platform.js** and documented it in the shared Apps architecture.
+
 ## 2.17.0 — 2026-09-30
 
 - Added a **School Results Archive** containing structured snapshots of school-published examination data, with original source links and subject-level figures preserved for historical inspection.
