@@ -968,13 +968,16 @@
   Promise.all([
     fetch('data/performance.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Official performance dataset is still being prepared');return r.json()}),
     fetch('data/published-results.json',{cache:'no-store'}).then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}})),
-    fetch('data/school-results-archive.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]}))
+    fetch('data/school-results-archive.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]})),
+    fetch('data/dfe-results-archive-2024-25.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]}))
   ])
-    .then(([x,published,archive])=>{
+    .then(([x,published,schoolArchive,dfeArchive])=>{
       doc=x;
-      (doc.schools||[]).forEach(s=>{s.publishedResults=published?.schools?.[s.name]||s.publishedResults||{};s.resultsArchive=(archive?.snapshots||[]).filter(x=>x.school===s.name)});
+      const preferred=schoolArchive?.snapshots||[],preferredKeys=new Set(preferred.map(x=>x.school+'|'+x.year));
+      const archives=[...preferred,...(dfeArchive?.snapshots||[]).filter(x=>!preferredKeys.has(x.school+'|'+x.year))];
+      (doc.schools||[]).forEach(s=>{s.publishedResults=published?.schools?.[s.name]||s.publishedResults||{};s.resultsArchive=archives.filter(x=>x.school===s.name)});
       if(published?.note)doc.methodology={...(doc.methodology||{}),schoolPublished:published.note};
-      doc.methodology={...(doc.methodology||{}),schoolArchive:'School-published result snapshots are preserved in the Results Archive with subject-level figures and original source links where available.'};
+      doc.methodology={...(doc.methodology||{}),schoolArchive:'School-published result snapshots are preserved where available; annual official DfE subject snapshots provide a clearly-labelled fallback for tracked schools without a complete school table.'};
       const matched=doc.schools.filter(s=>s.urn).length;
       $('#dataStatus').textContent='Updated '+new Date(doc.generatedAt).toLocaleString('en-GB')+' · '+matched+'/'+doc.schools.length+' tracked schools matched to a DfE performance record. Verified school-published results are layered on top where newer or more complete.';
       populateYearSelect();
