@@ -228,6 +228,12 @@
       "commit": "534ba28ccc70311eb14e99d836815b75487cd835",
       "kind": "release",
       "label": "Qualification-aware subject comparisons, saved-set bulk select, cohort headers and correct Merchant Taylors Maths"
+    },
+    {
+      "version": "2.17.0",
+      "commit": "01b304b81a73bda0723c651207e7fffe202b1684",
+      "kind": "release",
+      "label": "School results archive, full Merchant Taylors subject data, and draggable subject/school ordering"
     }
   ]
 }
