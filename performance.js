@@ -643,6 +643,8 @@
       const payload=data?.[kind],subjects=payload?.subjectDetails;
       if(subjects?.length)return{year,subjects:applyPublishedHighlights(subjects,payload?.subjectHighlights||[],kind),source:'school-published'};
     }
+    const archived=(s.resultsArchive||[]).filter(x=>x?.[kind]?.subjectDetails?.length).sort((a,b)=>yearNumber(b.year)-yearNumber(a.year))[0];
+    if(archived)return{year:archived.year,subjects:archived[kind].subjectDetails,source:'school-archive'};
     const baseYear='2024/25',base=kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]);
     const highlights=s.publishedResults?.[baseYear]?.[kind]?.subjectHighlights||[];
     return{year:base.length?baseYear:'',subjects:applyPublishedHighlights(base,highlights,kind),source:highlights.length?'DfE + school':'DfE'};
@@ -708,7 +710,7 @@
     const byName=new Map((doc.schools||[]).map(s=>[s.name,s])),index=new Map(compareOrder.map((name,i)=>[name,i]));
     return [...selectedCompare].map(name=>byName.get(name)).filter(Boolean).sort((a,b)=>(index.has(a.name)?index.get(a.name):1e9)-(index.has(b.name)?index.get(b.name):1e9)||a.name.localeCompare(b.name));
   };
-  const GCSE_PRIORITY=['Mathematics','English Language','English Literature','Combined Science','Biology','Chemistry','Physics'];
+  const GCSE_PRIORITY=['Mathematics','Additional Mathematics / FSMQ','Statistics','English Language','English Literature','Combined Science','Biology','Chemistry','Physics'];
   const subjectSort=(kind,a,b)=>{
     const custom=subjectOrder[kind]||[],aiCustom=custom.indexOf(a),biCustom=custom.indexOf(b);
     if(aiCustom>=0||biCustom>=0)return(aiCustom>=0?aiCustom:9999)-(biCustom>=0?biCustom:9999)||a.localeCompare(b);
@@ -738,7 +740,7 @@
       return main+rollupDetailRow(name,packs,i,kind);
     }).join('');
     return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
-      '<div class="compare-scroll"><table class="compare-table compare-detail-table" data-subject-kind="'+kind+'"><thead><tr><th>Subject</th>'+packs.map(x=>'<th draggable="true" data-subject-school="'+esc(x.school.name)+'" title="Drag to rearrange school columns">'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      '<div class="compare-scroll"><table class="compare-table compare-detail-table" data-subject-kind="'+kind+'"><thead><tr><th>Subject</th>'+packs.map(x=>'<th draggable="true" data-subject-school="'+esc(x.school.name)+'" title="Drag to rearrange school columns">'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='school-archive'?'archived school-published data':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
   function gcseHistoryDrilldown(chosen,id){
     const labels={a8:'Attainment 8',engmath5:'English & maths 5+',p8:'Progress 8'},field={a8:'attainment8',engmath5:'englishMaths5Plus',p8:'progress8'}[id];
@@ -768,6 +770,32 @@
     host.querySelectorAll('[data-family-toggle]').forEach(button=>button.onclick=()=>{
       const row=host.querySelector('[data-family-detail="'+button.dataset.familyToggle+'"]');if(!row)return;
       const open=row.hidden;row.hidden=!open;button.setAttribute('aria-expanded',String(open));button.querySelector('span').textContent=open?'⌃':'⌄';
+    });
+    let draggedSubject='',draggedSchool='';
+    host.querySelectorAll('tr.subject-compare-row[data-subject-name]').forEach(row=>{
+      row.ondragstart=e=>{if(e.target.closest('button'))return;draggedSubject=row.dataset.subjectName;row.classList.add('dragging')};
+      row.ondragend=()=>{draggedSubject='';row.classList.remove('dragging')};
+      row.ondragover=e=>{if(draggedSubject)e.preventDefault()};
+      row.ondrop=e=>{
+        e.preventDefault();const target=row.dataset.subjectName;if(!draggedSubject||!target||draggedSubject===target)return;
+        const table=row.closest('table[data-subject-kind]'),kind=table?.dataset.subjectKind||'gcse';
+        const visible=[...table.querySelectorAll('tr.subject-compare-row[data-subject-name]')].map(r=>r.dataset.subjectName);
+        const from=visible.indexOf(draggedSubject),to=visible.indexOf(target);if(from<0||to<0)return;
+        visible.splice(to,0,visible.splice(from,1)[0]);subjectOrder[kind]=visible;persistPerformancePrefs();
+        const detail=host;detail.innerHTML=subjectDrilldown(chosenSchools(),kind);bindSubjectRollups(detail);
+      };
+    });
+    host.querySelectorAll('th[data-subject-school]').forEach(th=>{
+      th.ondragstart=()=>{draggedSchool=th.dataset.subjectSchool;th.classList.add('dragging')};
+      th.ondragend=()=>{draggedSchool='';th.classList.remove('dragging')};
+      th.ondragover=e=>{if(draggedSchool)e.preventDefault()};
+      th.ondrop=e=>{
+        e.preventDefault();const target=th.dataset.subjectSchool;if(!draggedSchool||!target||draggedSchool===target)return;
+        const names=chosenSchools().map(s=>s.name),from=names.indexOf(draggedSchool),to=names.indexOf(target);if(from<0||to<0)return;
+        names.splice(to,0,names.splice(from,1)[0]);saveCompareOrder(names);
+        const kind=th.closest('table[data-subject-kind]')?.dataset.subjectKind||'gcse';
+        const detail=host;detail.innerHTML=subjectDrilldown(chosenSchools(),kind);bindSubjectRollups(detail);
+      };
     });
   }
   function saveCompareOrder(names){compareOrder=[...names,...compareOrder.filter(x=>!names.includes(x))];persistPerformancePrefs()}
@@ -915,20 +943,23 @@
     render();
   };
   window.addEventListener('openday:cloud-state',e=>{
-    const remote=e.detail||{},sets=remote.performanceSchoolSets,order=remote.performanceCompareOrder;
+    const remote=e.detail||{},sets=remote.performanceSchoolSets,order=remote.performanceCompareOrder,subjects=remote.performanceSubjectOrder;
     if(sets&&typeof sets==='object'&&!Array.isArray(sets)){schoolSets=sets;state.performanceSchoolSets=sets;localStorage.setItem(schoolSetKey,JSON.stringify(sets))}
     if(Array.isArray(order)){compareOrder=order;state.performanceCompareOrder=order;localStorage.setItem(compareOrderKey,JSON.stringify(order))}
+    if(subjects&&typeof subjects==='object'){subjectOrder={gcse:Array.isArray(subjects.gcse)?subjects.gcse:[],alevel:Array.isArray(subjects.alevel)?subjects.alevel:[]};state.performanceSubjectOrder=subjectOrder}
     renderSchoolSets();render();
   });
 
   Promise.all([
     fetch('data/performance.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Official performance dataset is still being prepared');return r.json()}),
-    fetch('data/published-results.json',{cache:'no-store'}).then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}}))
+    fetch('data/published-results.json',{cache:'no-store'}).then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}})),
+    fetch('data/school-results-archive.json',{cache:'no-store'}).then(r=>r.ok?r.json():{snapshots:[]}).catch(()=>({snapshots:[]}))
   ])
-    .then(([x,published])=>{
+    .then(([x,published,archive])=>{
       doc=x;
-      (doc.schools||[]).forEach(s=>{s.publishedResults=published?.schools?.[s.name]||s.publishedResults||{}});
+      (doc.schools||[]).forEach(s=>{s.publishedResults=published?.schools?.[s.name]||s.publishedResults||{};s.resultsArchive=(archive?.snapshots||[]).filter(x=>x.school===s.name)});
       if(published?.note)doc.methodology={...(doc.methodology||{}),schoolPublished:published.note};
+      doc.methodology={...(doc.methodology||{}),schoolArchive:'School-published result snapshots are preserved in the Results Archive with subject-level figures and original source links where available.'};
       const matched=doc.schools.filter(s=>s.urn).length;
       $('#dataStatus').textContent='Updated '+new Date(doc.generatedAt).toLocaleString('en-GB')+' · '+matched+'/'+doc.schools.length+' tracked schools matched to a DfE performance record. Verified school-published results are layered on top where newer or more complete.';
       populateYearSelect();
