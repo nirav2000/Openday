@@ -1,6 +1,6 @@
 {
-  "version": "2.17.0",
+  "version": "2.18.0",
   "released": "2026-09-30",
   "channel": "main",
-  "summary": "Add school-published results archive, full Merchant Taylors 2025 subject data, and draggable school/subject ordering in subject comparisons."
+  "summary": "Expand school results archives across tracked schools and move Version Lab preview behaviour into the shared Apps library."
 }
