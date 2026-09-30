@@ -644,7 +644,18 @@
       if(subjects?.length)return{year,subjects:applyPublishedHighlights(subjects,payload?.subjectHighlights||[],kind),source:'school-published'};
     }
     const archived=(s.resultsArchive||[]).filter(x=>x?.[kind]?.subjectDetails?.length).sort((a,b)=>yearNumber(b.year)-yearNumber(a.year))[0];
-    if(archived)return{year:archived.year,subjects:archived[kind].subjectDetails,source:'school-archive'};
+    if(archived){
+      const archivedSubjects=archived[kind].subjectDetails.map(x=>({...x,grades:{...(x.grades||{})}}));
+      if(kind==='gcse'){
+        const archivedFamilies=new Set(archivedSubjects.map(x=>subjectFamily(x,'gcse')));
+        const specialDfe=(s.gcseSubjects||[]).filter(x=>{
+          const family=subjectFamily(x,'gcse');
+          return ['Additional Mathematics / FSMQ','Statistics'].includes(family)&&!archivedFamilies.has(family);
+        });
+        return{year:archived.year,subjects:[...archivedSubjects,...specialDfe],source:specialDfe.length?'school-archive + DfE':'school-archive'};
+      }
+      return{year:archived.year,subjects:archivedSubjects,source:'school-archive'};
+    }
     const baseYear='2024/25',base=kind==='gcse'?(s.gcseSubjects||[]):(s.alevelSubjects||[]);
     const highlights=s.publishedResults?.[baseYear]?.[kind]?.subjectHighlights||[];
     return{year:base.length?baseYear:'',subjects:applyPublishedHighlights(base,highlights,kind),source:highlights.length?'DfE + school':'DfE'};
@@ -740,7 +751,7 @@
       return main+rollupDetailRow(name,packs,i,kind);
     }).join('');
     return '<div class="compare-drill-head"><div><p class="eyebrow">'+title+'</p><h3>Subjects as the comparison metrics</h3><p>'+intro+'</p></div><button type="button" data-close-drill>Close detail</button></div>'+
-      '<div class="compare-scroll"><table class="compare-table compare-detail-table" data-subject-kind="'+kind+'"><thead><tr><th>Subject</th>'+packs.map(x=>'<th draggable="true" data-subject-school="'+esc(x.school.name)+'" title="Drag to rearrange school columns">'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='school-archive'?'archived school-published data':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      '<div class="compare-scroll"><table class="compare-table compare-detail-table" data-subject-kind="'+kind+'"><thead><tr><th>Subject</th>'+packs.map(x=>'<th draggable="true" data-subject-school="'+esc(x.school.name)+'" title="Drag to rearrange school columns">'+qualificationSchoolHeader(x.school,kind,x.pack.year)+'<small>'+(x.pack.source==='school-published'?'school-published data':x.pack.source==='school-archive'?'archived school-published data':x.pack.source==='school-archive + DfE'?'archived school data + separate DfE qualifications':x.pack.source==='DfE + school'?'DfE + school subject overrides':'DfE subject data')+'</small></th>').join('')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
   function gcseHistoryDrilldown(chosen,id){
     const labels={a8:'Attainment 8',engmath5:'English & maths 5+',p8:'Progress 8'},field={a8:'attainment8',engmath5:'englishMaths5Plus',p8:'progress8'}[id];
