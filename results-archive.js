@@ -6,11 +6,29 @@
   const gradeOrder={gcse:['9','8','7','6','5','4','3','2','1','U'],alevel:['A*','A','B','C','D','E','U']};
   const total=s=>Number(s?.grades?.['Total exam entries'])||Object.entries(s?.grades||{}).filter(([k])=>k!=='Total exam entries').reduce((n,[,v])=>n+(Number(v)||0),0);
   function table(snapshot,kind){
-    const block=snapshot[kind];if(!block?.subjectDetails?.length)return'';
+    const block=snapshot[kind];if(!block)return'';
     const grades=gradeOrder[kind],label=kind==='gcse'?'GCSE / IGCSE':'A-level';
-    const head='<tr><th>Subject</th><th>Qualification</th><th>Entries</th>'+grades.map(g=>'<th>'+esc(g)+'</th>').join('')+'</tr>';
-    const rows=block.subjectDetails.map(s=>'<tr><td>'+esc(s.subject)+'</td><td>'+esc(s.qualification||'—')+'</td><td>'+total(s)+'</td>'+grades.map(g=>'<td>'+(s.grades?.[g]??'—')+'</td>').join('')+'</tr>').join('');
-    return '<section class="qualification"><h3>'+label+(block.cohort?' · '+block.cohort+' pupils':'')+'</h3><div class="archive-table-wrap"><table class="archive-table"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div></section>';
+    const headline=block.headline||{};
+    const headlineBits=kind==='gcse'
+      ? [['Grade 9',headline.grade9Percent],['Grades 9–8',headline.grade98Percent],['Grades 9–7',headline.grade97Percent]]
+      : [['A*',headline.astarPercent],['A*–A',headline.astarAPercent]];
+    const headlineHtml=headlineBits.filter(([,v])=>v!==undefined&&v!==null).map(([k,v])=>'<span><b>'+esc(k)+'</b> '+esc(v)+'%</span>').join('');
+    const highlights=(block.subjectHighlights||[]).map(h=>{
+      const bits=kind==='gcse'
+        ? [['9',h.grade9Percent],['9–8',h.grade98Percent],['9–7',h.grade97Percent]]
+        : [['A*',h.astarPercent],['A*–A',h.astarAPercent]];
+      return '<span><b>'+esc(h.subject)+'</b> · '+bits.filter(([,v])=>v!==undefined&&v!==null).map(([k,v])=>esc(k)+' '+esc(v)+'%').join(' · ')+'</span>';
+    }).join('');
+    let body='';
+    if(block.subjectDetails?.length){
+      const head='<tr><th>Subject</th><th>Qualification</th><th>Entries</th>'+grades.map(g=>'<th>'+esc(g)+'</th>').join('')+'</tr>';
+      const rows=block.subjectDetails.map(s=>'<tr><td>'+esc(s.subject)+'</td><td>'+esc(s.qualification||'—')+'</td><td>'+total(s)+'</td>'+grades.map(g=>'<td>'+(s.grades?.[g]??'—')+'</td>').join('')+'</tr>').join('');
+      body='<div class="archive-table-wrap"><table class="archive-table"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
+    }
+    return '<section class="qualification"><h3>'+label+(block.cohort?' · '+block.cohort+' pupils':'')+'</h3>'+
+      (headlineHtml?'<div class="archive-headlines">'+headlineHtml+'</div>':'')+
+      (highlights?'<div class="archive-highlights"><strong>School-published highlights</strong>'+highlights+'</div>':'')+
+      body+'</section>';
   }
   function card(s){
     const links=Object.entries(s.sourceUrls||{}).map(([k,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(k.replace(/([A-Z])/g,' $1'))+' ↗</a>').join(' · ');
