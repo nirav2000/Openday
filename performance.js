@@ -645,7 +645,11 @@
     }
     const archived=(s.resultsArchive||[]).filter(x=>x?.[kind]?.subjectDetails?.length).sort((a,b)=>yearNumber(b.year)-yearNumber(a.year))[0];
     if(archived){
-      const archivedSubjects=archived[kind].subjectDetails.map(x=>({...x,grades:{...(x.grades||{})}}));
+      const archivedSubjects=applyPublishedHighlights(
+        archived[kind].subjectDetails.map(x=>({...x,grades:{...(x.grades||{})}})),
+        archived[kind].subjectHighlights||[],
+        kind
+      );
       if(kind==='gcse'){
         const archivedFamilies=new Set(archivedSubjects.map(x=>subjectFamily(x,'gcse')));
         const specialDfe=(s.gcseSubjects||[]).filter(x=>{
