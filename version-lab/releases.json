@@ -234,6 +234,12 @@
       "commit": "01b304b81a73bda0723c651207e7fffe202b1684",
       "kind": "release",
       "label": "School results archive, full Merchant Taylors subject data, and draggable subject/school ordering"
+    },
+    {
+      "version": "2.18.0",
+      "commit": "a931176fb713e6fe51a80541f887b060920881a5",
+      "kind": "release",
+      "label": "Expanded school results archive and shared Version Lab preview behaviour"
     }
   ]
 }
