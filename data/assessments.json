@@ -1,0 +1,1063 @@
+{
+  "meta": {
+    "updated": "2026-09-30",
+    "note": "Formats can change by entry year. Unknown provider details are shown explicitly rather than inferred."
+  },
+  "providers": {
+    "iseb": {
+      "name": "ISEB Common Pre-Tests",
+      "short": "ISEB",
+      "format": "Online adaptive multiple choice",
+      "timing": "2h 15m total: English 40m, Mathematics 40m, NVR 30m, VR 25m",
+      "subjects": [
+        "English",
+        "Mathematics",
+        "Verbal Reasoning",
+        "Non-Verbal Reasoning"
+      ],
+      "coverage": "English and Mathematics broadly follow the National Curriculum; reasoning tests verbal and visual problem solving.",
+      "sourceUrl": "https://www.iseb.co.uk/assessments/common-pre-tests/for-families/"
+    },
+    "gl": {
+      "name": "GL Assessment 11+",
+      "short": "GL",
+      "format": "Usually fixed multiple-choice papers; local format varies",
+      "timing": "Set by the admissions authority",
+      "subjects": [
+        "English",
+        "Mathematics",
+        "Verbal Reasoning",
+        "Non-Verbal Reasoning"
+      ],
+      "coverage": "Authorities choose components and weighting.",
+      "sourceUrl": "https://11plus.gl-assessment.co.uk/pages/free-materials"
+    },
+    "cem": {
+      "name": "Cambridge Select Insight",
+      "short": "CEM / Cambridge",
+      "format": "Computer-based school-configured 11+/13+",
+      "timing": "Typically around 60 minutes; school-specific",
+      "subjects": [
+        "Verbal ability",
+        "Numerical ability",
+        "Non-Verbal ability"
+      ],
+      "coverage": "Current independent-school Cambridge/CEM product; not the old paper-based CEM grammar 11+.",
+      "sourceUrl": "https://www.cem.org/entrance-assessments"
+    },
+    "quest": {
+      "name": "Quest Assessments",
+      "short": "Quest",
+      "format": "Paper or computer depending on school",
+      "timing": "School-specific",
+      "subjects": [
+        "English",
+        "Mathematics",
+        "Verbal Reasoning",
+        "Non-Verbal Reasoning"
+      ],
+      "coverage": "School-configured; may include creative/problem-solving tasks.",
+      "sourceUrl": "https://www.questassessments.com/"
+    },
+    "school": {
+      "name": "School-written / bespoke",
+      "short": "School / Other",
+      "format": "Written, online or mixed",
+      "timing": "Varies",
+      "subjects": [
+        "Varies"
+      ],
+      "coverage": "Use the school's own specification and sample papers.",
+      "sourceUrl": ""
+    },
+    "consortium": {
+      "name": "Consortium / regional test",
+      "short": "Consortium",
+      "format": "Shared by a defined group of schools",
+      "timing": "Varies",
+      "subjects": [
+        "Varies"
+      ],
+      "coverage": "Shared scores may be used differently by each school.",
+      "sourceUrl": ""
+    },
+    "none": {
+      "name": "No academic entrance test",
+      "short": "No academic test",
+      "format": "Admissions criteria rather than academic selection",
+      "timing": "—",
+      "subjects": [],
+      "coverage": "Normal published admissions criteria apply.",
+      "sourceUrl": ""
+    }
+  },
+  "schools": {
+    "Rooks Heath School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "JFS": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Park High School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Claremont High School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Harrow High School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Alperton Community School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Preston Manor School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Ark Academy": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Salvatorian College": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Pinner High School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Michaela Community School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Wembley High Technology College": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Nower Hill High School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Whitmore High School": {
+      "summary": "No academic entrance test",
+      "cardLabel": "No academic entrance test",
+      "routes": {
+        "11+": {
+          "providerKey": "none",
+          "label": "No academic test",
+          "format": "Normal admissions criteria",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "No academic-selection paper for normal Year 7 entry.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "",
+      "checked": "2026-09-30",
+      "confidence": "catalogue",
+      "note": "Check any separate faith, aptitude or supplementary-form requirements."
+    },
+    "Royal Grammar School High Wycombe": {
+      "summary": "11+ GL · Bucks Secondary Transfer Test",
+      "cardLabel": "11+ GL · Bucks Secondary Transfer Test",
+      "routes": {
+        "11+": {
+          "providerKey": "gl",
+          "label": "GL · Buckinghamshire Secondary Transfer Test",
+          "format": "Two multiple-choice papers with a short break",
+          "timing": "~45m test time per paper; ~60m each including instructions/examples",
+          "subjects": [
+            "Verbal skills",
+            "Mathematics",
+            "Non-Verbal / spatial reasoning"
+          ],
+          "coverage": "Standardised result weighted 50% verbal, 25% maths, 25% non-verbal.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.buckinghamshire.gov.uk/schools-libraries-and-parks/school-admissions-and-appeals/grammar-schools-and-transfer-testing-11/the-secondary-transfer-test/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Dr Challoner's Grammar School": {
+      "summary": "11+ GL · Bucks Secondary Transfer Test",
+      "cardLabel": "11+ GL · Bucks Secondary Transfer Test",
+      "routes": {
+        "11+": {
+          "providerKey": "gl",
+          "label": "GL · Buckinghamshire Secondary Transfer Test",
+          "format": "Two multiple-choice papers with a short break",
+          "timing": "~45m test time per paper; ~60m each including instructions/examples",
+          "subjects": [
+            "Verbal skills",
+            "Mathematics",
+            "Non-Verbal / spatial reasoning"
+          ],
+          "coverage": "Standardised result weighted 50% verbal, 25% maths, 25% non-verbal.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.buckinghamshire.gov.uk/schools-libraries-and-parks/school-admissions-and-appeals/grammar-schools-and-transfer-testing-11/the-secondary-transfer-test/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Haberdashers' Boys' School": {
+      "summary": "11+ QUEST · 13+ school-written",
+      "cardLabel": "11+ QUEST · 13+ school-written",
+      "routes": {
+        "11+": {
+          "providerKey": "quest",
+          "label": "QUEST first round",
+          "format": "Maths+NVR; English+VR; Creative Comprehension; Creative Writing",
+          "timing": "45m + 40m + 20m + 20m",
+          "subjects": [
+            "Maths",
+            "NVR",
+            "English",
+            "VR",
+            "Creative comprehension",
+            "Creative writing"
+          ],
+          "coverage": "KS2 English/Maths plus reasoning and creative components.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "school",
+          "label": "School-written 13+",
+          "format": "Written papers then interview",
+          "timing": "School-specific",
+          "subjects": [
+            "English",
+            "Mathematics",
+            "Humanities",
+            "Science"
+          ],
+          "coverage": "Humanities and science papers alongside core subjects.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/admissions-process/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Berkhamsted Boys": {
+      "summary": "11+ ISEB · 13+ Berkhamsted online",
+      "cardLabel": "11+ ISEB · 13+ Berkhamsted online",
+      "routes": {
+        "11+": {
+          "providerKey": "iseb",
+          "label": "ISEB Common Pre-Test",
+          "format": "Online adaptive pre-test + Holistic Assessment Day",
+          "timing": "ISEB 2h15",
+          "subjects": [
+            "English",
+            "Maths",
+            "VR",
+            "NVR"
+          ],
+          "coverage": "ISEB plus interview/problem-solving/observed activities.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "school",
+          "label": "Berkhamsted Entrance Assessment",
+          "format": "Online school assessment + Holistic Assessment Day",
+          "timing": "Not stated",
+          "subjects": [
+            "English",
+            "Maths",
+            "VR",
+            "NVR"
+          ],
+          "coverage": "School-set online assessment.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.berkhamsted.com/joining-berkhamsted-boys/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "St Paul's School": {
+      "summary": "13+ ISEB → St Paul's written",
+      "cardLabel": "13+ ISEB → St Paul's written",
+      "routes": {
+        "13+": {
+          "providerKey": "iseb",
+          "label": "ISEB + St Paul's Stage 2",
+          "format": "ISEB then written assessments and interview",
+          "timing": "ISEB 2h15; Stage 2 Maths 75m + English 45m",
+          "subjects": [
+            "English",
+            "Maths",
+            "VR",
+            "NVR"
+          ],
+          "coverage": "Shortlisted candidates sit school-written English and Maths.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/selection-procedure/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "St Margaret's School": {
+      "summary": "11+/13+ school assessment · reasoning + maths",
+      "cardLabel": "11+/13+ school assessment · reasoning + maths",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "School / Other",
+          "format": "Assessment + interview",
+          "timing": "Not published",
+          "subjects": [
+            "VR",
+            "NVR",
+            "Maths"
+          ],
+          "coverage": "School reports/reference also considered.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "school",
+          "label": "School / Other",
+          "format": "Assessment + interview",
+          "timing": "Not published",
+          "subjects": [
+            "VR",
+            "NVR",
+            "Maths"
+          ],
+          "coverage": "School reports/reference also considered.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.stmargarets-school.org.uk/admissions/the-senior-school",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Hampton School": {
+      "summary": "11+/13+ Hampton written pre-test",
+      "cardLabel": "11+/13+ Hampton written pre-test",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "Hampton school-written",
+          "format": "Three written papers then interview",
+          "timing": "English 40m; Words & Reasoning 40m; Maths 45m",
+          "subjects": [
+            "English",
+            "Words & Reasoning",
+            "Maths"
+          ],
+          "coverage": "School-written tests.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "school",
+          "label": "Hampton Year 6 pre-test",
+          "format": "Deferred 13+ pre-test",
+          "timing": "English 40m; Words & Reasoning 40m; Maths 45m",
+          "subjects": [
+            "English",
+            "Words & Reasoning",
+            "Maths"
+          ],
+          "coverage": "Assessed from Year 6.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://hamptonschool.org.uk/admissions/admissions-process/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Merchant Taylors' School": {
+      "summary": "11+ MTS bespoke written + online",
+      "cardLabel": "11+ MTS bespoke written + online",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "MTS bespoke",
+          "format": "3 written papers + online assessment",
+          "timing": "English 45m; Maths 45m; General Paper 45m; online Maths 20m + VR 10m",
+          "subjects": [
+            "English",
+            "Maths",
+            "General Paper",
+            "VR"
+          ],
+          "coverage": "Unique General Paper tests creativity/lateral thinking.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "none",
+          "label": "13+ new applications closed",
+          "format": "No new 13+ intake under current route",
+          "timing": "—",
+          "subjects": [],
+          "coverage": "Current external entry is Year 7/Sixth Form.",
+          "status": "closed"
+        }
+      },
+      "sourceUrl": "https://www.mtsn.org.uk/admissions/joining-at-11/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Mill Hill School": {
+      "summary": "13+ Quest / Atom · pathway-dependent",
+      "cardLabel": "13+ Quest / Atom · pathway-dependent",
+      "routes": {
+        "13+ deferred (Y6)": {
+          "providerKey": "quest",
+          "label": "Quest (formerly Atom)",
+          "format": "Computer Maths/English/NVR/VR + group interview",
+          "timing": "1h10 computer assessment",
+          "subjects": [
+            "Maths",
+            "English",
+            "NVR",
+            "VR"
+          ],
+          "coverage": "Deferred pathway tested in Year 6.",
+          "status": "current"
+        },
+        "13+ direct (Y8)": {
+          "providerKey": "quest",
+          "label": "Atom / Quest pathway",
+          "format": "Computer test + creative learning task + interviews",
+          "timing": "Not stated",
+          "subjects": [
+            "Maths",
+            "English",
+            "NVR",
+            "VR"
+          ],
+          "coverage": "Current pages use both Atom and Quest wording.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.millhill.org.uk/admissions/admission-dates",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "John Lyon School": {
+      "summary": "11+/13+ John Lyon written papers",
+      "cardLabel": "11+/13+ John Lyon written papers",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "John Lyon school-written",
+          "format": "Written sample-paper style assessment",
+          "timing": "See current instructions",
+          "subjects": [
+            "English",
+            "Maths"
+          ],
+          "coverage": "Official sample papers with answers.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "school",
+          "label": "John Lyon school-written",
+          "format": "Written subject papers",
+          "timing": "See current instructions",
+          "subjects": [
+            "English",
+            "Maths",
+            "Science",
+            "French"
+          ],
+          "coverage": "Official sample papers in four subjects.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.johnlyon.org/admissions/sample-papers/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Winchester College": {
+      "summary": "13+ Winchester GAT + writing + interview",
+      "cardLabel": "13+ Winchester GAT + writing + interview",
+      "routes": {
+        "13+": {
+          "providerKey": "school",
+          "label": "Winchester General Ability Testing",
+          "format": "Online GAT + writing + interview",
+          "timing": "Not stated",
+          "subjects": [
+            "General ability",
+            "Writing"
+          ],
+          "coverage": "References, GAT, writing and interview form the initial selection.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Aldenham School": {
+      "summary": "11+/13+ Quest online · 70m",
+      "cardLabel": "11+/13+ Quest online · 70m",
+      "routes": {
+        "11+": {
+          "providerKey": "quest",
+          "label": "Quest Assessments",
+          "format": "Online; Maths/NVR/VR adaptive, English non-adaptive",
+          "timing": "70m: Maths 20, NVR 10, English 30, VR 10",
+          "subjects": [
+            "Maths",
+            "NVR",
+            "English",
+            "VR"
+          ],
+          "coverage": "Aligned to KS2.",
+          "status": "current"
+        },
+        "13+": {
+          "providerKey": "quest",
+          "label": "Quest Assessments",
+          "format": "Online assessment",
+          "timing": "70m under current FAQ",
+          "subjects": [
+            "Maths",
+            "NVR",
+            "English",
+            "VR"
+          ],
+          "coverage": "Current policy identifies Quest.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://aldenham.com/admissions/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Dame Alice Owen's School": {
+      "summary": "11+ DAO academic test · provider under review",
+      "cardLabel": "11+ DAO academic test · provider under review",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "DAO academic selection",
+          "format": "Academic selection test",
+          "timing": "Check target-year policy",
+          "subjects": [
+            "Reasoning",
+            "English",
+            "Maths"
+          ],
+          "coverage": "Provider/detail to be re-verified for 2028.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://damealiceowens.herts.sch.uk/admissions/secondary-transfer/",
+      "checked": "2026-09-30",
+      "confidence": "review",
+      "note": "Do not infer GL/CEM until target-year policy confirms it."
+    },
+    "Westminster School": {
+      "summary": "13+ ISEB → Westminster written",
+      "cardLabel": "13+ ISEB → Westminster written",
+      "routes": {
+        "13+": {
+          "providerKey": "iseb",
+          "label": "ISEB + Westminster written",
+          "format": "ISEB then further tests/interview",
+          "timing": "ISEB 2h15; further Maths 40m + English 40m",
+          "subjects": [
+            "English",
+            "Maths",
+            "Reasoning"
+          ],
+          "coverage": "ISEB pre-interview; shortlisted candidates sit school-written tests.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.westminster.org.uk/admissions/13-entry-westminster-school/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Harrow School": {
+      "summary": "13+ ISEB → Harrow Test",
+      "cardLabel": "13+ ISEB → Harrow Test",
+      "routes": {
+        "13+": {
+          "providerKey": "iseb",
+          "label": "ISEB + Harrow Test",
+          "format": "ISEB then Harrow Test",
+          "timing": "ISEB 2h15; Harrow: interview 20m + computer English/Maths 60m + group 20m",
+          "subjects": [
+            "English",
+            "Maths",
+            "VR",
+            "NVR"
+          ],
+          "coverage": "ISEB first screen then Harrow's own assessment.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.harrowschool.org.uk/admissions/year-9-entry",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Queen Elizabeth's School, Barnet": {
+      "summary": "11+ QE own test · English + Maths",
+      "cardLabel": "11+ QE own test · English + Maths",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "QE school test",
+          "format": "One session, two multiple-choice papers",
+          "timing": "Timings sent to candidates",
+          "subjects": [
+            "English",
+            "Maths"
+          ],
+          "coverage": "One round; official sample papers available.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.qebarnet.co.uk/admissions-information/secondary-transfer-entrance-test-faqs/",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Parmiter's School": {
+      "summary": "11+ SW Herts Consortium · VR + Maths",
+      "cardLabel": "11+ SW Herts Consortium · VR + Maths",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "SW Herts Consortium",
+          "format": "Shared academic tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "VR",
+            "Maths"
+          ],
+          "coverage": "Optional unless applying under academic criterion.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.parmiters.herts.sch.uk/page/?pid=60&title=Secondary+Transfer+to+Year+7",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Watford Grammar School for Boys": {
+      "summary": "11+ SW Herts Consortium · VR + Maths",
+      "cardLabel": "11+ SW Herts Consortium · VR + Maths",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "SW Herts Consortium",
+          "format": "Shared academic tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "VR",
+            "Maths"
+          ],
+          "coverage": "Provider not asserted unless official specification names it.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.swhertsschools.org.uk/",
+      "checked": "2026-09-30",
+      "confidence": "mixed",
+      "note": ""
+    },
+    "Queens' School": {
+      "summary": "11+ SW Herts Consortium · VR + Maths",
+      "cardLabel": "11+ SW Herts Consortium · VR + Maths",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "SW Herts Consortium",
+          "format": "Shared academic tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "VR",
+            "Maths"
+          ],
+          "coverage": "Official admissions material confirms VR and Maths.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.queens.herts.sch.uk/about-us/admissions",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "St Clement Danes School": {
+      "summary": "11+ SW Herts Consortium · VR + Maths",
+      "cardLabel": "11+ SW Herts Consortium · VR + Maths",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "SW Herts Consortium",
+          "format": "Shared academic tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "VR",
+            "Maths"
+          ],
+          "coverage": "Provider not inferred.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.swhertsschools.org.uk/",
+      "checked": "2026-09-30",
+      "confidence": "mixed",
+      "note": ""
+    },
+    "Rickmansworth School": {
+      "summary": "11+ SW Herts Consortium · VR + Maths",
+      "cardLabel": "11+ SW Herts Consortium · VR + Maths",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "SW Herts Consortium",
+          "format": "Shared academic tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "VR",
+            "Maths"
+          ],
+          "coverage": "Provider not inferred.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.swhertsschools.org.uk/",
+      "checked": "2026-09-30",
+      "confidence": "mixed",
+      "note": ""
+    },
+    "Sutton Grammar School": {
+      "summary": "11+ Sutton SET → second stage",
+      "cardLabel": "11+ Sutton SET → second stage",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "Sutton selective tests",
+          "format": "SET then second-stage tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "English",
+            "Maths"
+          ],
+          "coverage": "Shared Sutton eligibility route.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.sutton.gov.uk/schools-and-learning/school-admissions/apply-start-secondary-school/secondary-school-tests-assessments-and-supplementary-forms",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Wilson's School": {
+      "summary": "11+ Sutton SET → second stage",
+      "cardLabel": "11+ Sutton SET → second stage",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "Sutton selective tests",
+          "format": "SET then second-stage tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "English",
+            "Maths"
+          ],
+          "coverage": "Provider not guessed as GL/CEM.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.sutton.gov.uk/schools-and-learning/school-admissions/apply-start-secondary-school/secondary-school-tests-assessments-and-supplementary-forms",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "Wallington County Grammar School": {
+      "summary": "11+ Sutton SET → second stage",
+      "cardLabel": "11+ Sutton SET → second stage",
+      "routes": {
+        "11+": {
+          "providerKey": "consortium",
+          "label": "Sutton selective tests",
+          "format": "SET then second-stage tests",
+          "timing": "Check current instructions",
+          "subjects": [
+            "English",
+            "Maths"
+          ],
+          "coverage": "Provider not guessed as GL/CEM.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.sutton.gov.uk/schools-and-learning/school-admissions/apply-start-secondary-school/secondary-school-tests-assessments-and-supplementary-forms",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    },
+    "St Olave's Grammar School": {
+      "summary": "11+ St Olave's own two-stage test",
+      "cardLabel": "11+ St Olave's own two-stage test",
+      "routes": {
+        "11+": {
+          "providerKey": "school",
+          "label": "St Olave's SET + Stage 2",
+          "format": "Stage 1 multiple choice; Stage 2 written",
+          "timing": "Stage 1 ~60m; Stage 2 English 60m + Maths 60m",
+          "subjects": [
+            "English",
+            "Maths",
+            "VR",
+            "NVR"
+          ],
+          "coverage": "Stage 1 ~60 questions; shortlisted candidates sit written Stage 2.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.saintolaves.net/112/entrance-test-information",
+      "checked": "2026-09-30",
+      "confidence": "mixed",
+      "note": "Re-check target-year policy."
+    },
+    "Beths Grammar School": {
+      "summary": "11+ Quest · Bexley Selection Test",
+      "cardLabel": "11+ Quest · Bexley Selection Test",
+      "routes": {
+        "11+": {
+          "providerKey": "quest",
+          "label": "Quest · Bexley Selection Test",
+          "format": "Two non-adaptive paper assessments; OMR answers",
+          "timing": "~50m per paper",
+          "subjects": [
+            "Verbal/English",
+            "Numerical/NVR"
+          ],
+          "coverage": "Official Quest/Bexley familiarisation available.",
+          "status": "current"
+        }
+      },
+      "sourceUrl": "https://www.questassessments.com/parent-guidance-consortium/bexley-selection-test",
+      "checked": "2026-09-30",
+      "confidence": "official",
+      "note": ""
+    }
+  }
+}
