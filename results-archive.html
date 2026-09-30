@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <title>School Results Archive · Openday</title>
+  <link rel="stylesheet" href="results-archive.css?v=2.17.0">
+</head>
+<body>
+<header>
+  <div><p class="eyebrow">Openday · source archive</p><h1>School results archive</h1></div>
+  <nav><a href="performance.html">Performance</a><a href="./">Open days</a></nav>
+</header>
+<main>
+  <section class="intro">
+    <h2>Archived school-published results</h2>
+    <p>Structured snapshots of examination data published by schools, preserving subject-level figures and the original source link so historical comparisons remain inspectable if the school later changes its website.</p>
+    <div class="archive-controls">
+      <label>School <select id="archiveSchool"><option value="">All archived schools</option></select></label>
+      <label>Year <select id="archiveYear"><option value="">All years</option></select></label>
+      <label>Qualification <select id="archiveKind"><option value="">GCSE & A-level</option><option value="gcse">GCSE / IGCSE</option><option value="alevel">A-level</option></select></label>
+    </div>
+  </section>
+  <section id="archiveList" class="archive-list" aria-live="polite"></section>
+  <p id="archiveEmpty" class="empty" hidden>No archived snapshot matches these filters.</p>
+</main>
+<script src="results-archive.js?v=2.17.0" defer></script>
+</body>
+</html>
