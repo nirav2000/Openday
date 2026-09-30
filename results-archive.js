@@ -41,9 +41,14 @@
     const rows=(archive.snapshots||[]).filter(s=>(!school||s.school===school)&&(!year||s.year===year)&&(!kind||s[kind]));
     $('#archiveList').innerHTML=rows.map(card).join('');$('#archiveEmpty').hidden=rows.length>0;
   }
-  fetch('data/school-results-archive.json',{cache:'no-store'}).then(r=>r.json()).then(x=>{
-    archive=x;
-    const schools=[...new Set(x.snapshots.map(s=>s.school))].sort(),years=[...new Set(x.snapshots.map(s=>s.year))].sort().reverse();
+  Promise.all([
+    fetch('data/school-results-archive.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({snapshots:[]})),
+    fetch('data/dfe-results-archive-2024-25.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({snapshots:[]}))
+  ]).then(([schoolArchive,dfeArchive])=>{
+    const schoolKeys=new Set((schoolArchive.snapshots||[]).map(s=>s.school+'|'+s.year));
+    const dfeFallback=(dfeArchive.snapshots||[]).filter(s=>!schoolKeys.has(s.school+'|'+s.year));
+    archive={snapshots:[...(schoolArchive.snapshots||[]),...dfeFallback]};
+    const schools=[...new Set(archive.snapshots.map(s=>s.school))].sort(),years=[...new Set(archive.snapshots.map(s=>s.year))].sort().reverse();
     $('#archiveSchool').innerHTML='<option value="">All archived schools</option>'+schools.map(s=>'<option>'+esc(s)+'</option>').join('');
     $('#archiveYear').innerHTML='<option value="">All years</option>'+years.map(y=>'<option>'+esc(y)+'</option>').join('');
     if(schoolParam&&schools.includes(schoolParam))$('#archiveSchool').value=schoolParam;
