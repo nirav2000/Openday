@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29",
-  "note": "Structured snapshots of school-published examination data. Preserve source URLs and subject-level figures so historical school data remains inspectable even if school webpages later change.",
+  "generatedAt": "2026-09-30",
+  "note": "Historical examination snapshots. School-published full tables are preferred; school-published highlights are layered over official DfE subject data where a school does not publish a complete table. Source type and URLs are retained explicitly.",
   "snapshots": [
     {
       "id": "st-paul-s-school-2024-25",
@@ -1489,6 +1489,3534 @@
             }
           }
         ]
+      }
+    },
+    {
+      "id": "mill-hill-school-2024-25",
+      "school": "Mill Hill School",
+      "year": "2024/25",
+      "capturedAt": "2026-09-30",
+      "sourceType": "school-published-pdf",
+      "sourceUrls": {
+        "gcse": "https://cdn.sanity.io/files/3pju7pmr/production/4c35843c6c908027a982f4fa9a656c2fa9be0722.pdf",
+        "alevel": "https://cdn.sanity.io/files/3pju7pmr/production/ed3cada5e033d7681f041513119198912528581a.pdf",
+        "resultsPage": "https://www.millhill.org.uk/about-us/results-and-destinations"
+      },
+      "sourceDocument": {
+        "title": "Mill Hill School 2025 GCSE and A Level subject result tables",
+        "notes": "Full school-published subject breakdowns captured from Mill Hill's linked 2025 PDF tables."
+      },
+      "gcse": {
+        "cohort": 169,
+        "totalGradeAwards": 1590,
+        "subjectDetails": [
+          {
+            "subject": "Art",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 7,
+              "7": 8,
+              "8": 8,
+              "9": 4,
+              "U": 0,
+              "Total exam entries": 27
+            }
+          },
+          {
+            "subject": "Biology",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 4,
+              "7": 13,
+              "8": 24,
+              "9": 36,
+              "U": 0,
+              "Total exam entries": 77
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 2,
+              "6": 4,
+              "7": 11,
+              "8": 28,
+              "9": 32,
+              "U": 0,
+              "Total exam entries": 77
+            }
+          },
+          {
+            "subject": "Chinese",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 4,
+              "U": 0,
+              "Total exam entries": 4
+            }
+          },
+          {
+            "subject": "Classical Civilisation",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 1,
+              "5": 3,
+              "6": 8,
+              "7": 2,
+              "8": 5,
+              "9": 1,
+              "U": 0,
+              "Total exam entries": 21
+            }
+          },
+          {
+            "subject": "Combined Science 1",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 6,
+              "6": 11,
+              "7": 31,
+              "8": 21,
+              "9": 20,
+              "U": 0,
+              "Total exam entries": 91
+            }
+          },
+          {
+            "subject": "Combined Science 2",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 5,
+              "5": 7,
+              "6": 30,
+              "7": 17,
+              "8": 24,
+              "9": 8,
+              "U": 0,
+              "Total exam entries": 91
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 6,
+              "6": 10,
+              "7": 9,
+              "8": 11,
+              "9": 6,
+              "U": 0,
+              "Total exam entries": 44
+            }
+          },
+          {
+            "subject": "Design Technology",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 1,
+              "7": 3,
+              "8": 13,
+              "9": 7,
+              "U": 0,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "Drama",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 3,
+              "6": 11,
+              "7": 9,
+              "8": 8,
+              "9": 2,
+              "U": 0,
+              "Total exam entries": 34
+            }
+          },
+          {
+            "subject": "English as a Second Language",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 2,
+              "8": 2,
+              "9": 5,
+              "U": 0,
+              "Total exam entries": 9
+            }
+          },
+          {
+            "subject": "English Language",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1,
+              "6": 26,
+              "7": 31,
+              "8": 56,
+              "9": 55,
+              "U": 0,
+              "Total exam entries": 169
+            }
+          },
+          {
+            "subject": "English Literature",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 6,
+              "6": 25,
+              "7": 30,
+              "8": 54,
+              "9": 54,
+              "U": 0,
+              "Total exam entries": 169
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 5,
+              "4": 9,
+              "5": 10,
+              "6": 4,
+              "7": 22,
+              "8": 14,
+              "9": 25,
+              "U": 1,
+              "Total exam entries": 90
+            }
+          },
+          {
+            "subject": "Further Mathematics",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 1,
+              "9": 0,
+              "U": 0,
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Geography",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 4,
+              "6": 10,
+              "7": 16,
+              "8": 24,
+              "9": 12,
+              "U": 0,
+              "Total exam entries": 66
+            }
+          },
+          {
+            "subject": "German",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 2,
+              "5": 4,
+              "6": 0,
+              "7": 4,
+              "8": 6,
+              "9": 7,
+              "U": 0,
+              "Total exam entries": 23
+            }
+          },
+          {
+            "subject": "Hebrew",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 1,
+              "U": 0,
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "History",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 6,
+              "6": 5,
+              "7": 13,
+              "8": 27,
+              "9": 46,
+              "U": 0,
+              "Total exam entries": 98
+            }
+          },
+          {
+            "subject": "Information Technology",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 3,
+              "5": 9,
+              "6": 6,
+              "7": 1,
+              "8": 10,
+              "9": 7,
+              "U": 0,
+              "Total exam entries": 37
+            }
+          },
+          {
+            "subject": "Latin",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 2,
+              "5": 1,
+              "6": 2,
+              "7": 2,
+              "8": 0,
+              "9": 3,
+              "U": 0,
+              "Total exam entries": 11
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 10,
+              "5": 20,
+              "6": 41,
+              "7": 36,
+              "8": 41,
+              "9": 20,
+              "U": 0,
+              "Total exam entries": 169
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 2,
+              "6": 5,
+              "7": 3,
+              "8": 2,
+              "9": 3,
+              "U": 0,
+              "Total exam entries": 16
+            }
+          },
+          {
+            "subject": "Persian",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 2,
+              "U": 0,
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Physical Education",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 3,
+              "6": 6,
+              "7": 8,
+              "8": 6,
+              "9": 9,
+              "U": 0,
+              "Total exam entries": 32
+            }
+          },
+          {
+            "subject": "Physics",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 2,
+              "6": 5,
+              "7": 9,
+              "8": 31,
+              "9": 31,
+              "U": 0,
+              "Total exam entries": 78
+            }
+          },
+          {
+            "subject": "Polish",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 1,
+              "U": 0,
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1,
+              "6": 8,
+              "7": 16,
+              "8": 23,
+              "9": 26,
+              "U": 0,
+              "Total exam entries": 74
+            }
+          },
+          {
+            "subject": "Religious Studies AQA",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 1,
+              "7": 0,
+              "8": 0,
+              "9": 1,
+              "U": 0,
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Russian",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 7,
+              "U": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "school-published GCSE / IGCSE",
+            "grades": {
+              "1": 0,
+              "2": 0,
+              "3": 3,
+              "4": 5,
+              "5": 7,
+              "6": 7,
+              "7": 9,
+              "8": 4,
+              "9": 10,
+              "U": 0,
+              "Total exam entries": 45
+            }
+          }
+        ],
+        "headline": {
+          "grade9Percent": 28,
+          "grade98Percent": 56,
+          "grade97Percent": 75
+        }
+      },
+      "alevel": {
+        "cohort": null,
+        "totalEntries": 547,
+        "subjectDetails": [
+          {
+            "subject": "Art",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 4,
+              "A": 2,
+              "B": 2,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Biology",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 1,
+              "A": 5,
+              "B": 5,
+              "C": 4,
+              "D": 3,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 18
+            }
+          },
+          {
+            "subject": "Business",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 7,
+              "A": 10,
+              "B": 25,
+              "C": 13,
+              "D": 2,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 57
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 2,
+              "A": 3,
+              "B": 8,
+              "C": 3,
+              "D": 5,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 21
+            }
+          },
+          {
+            "subject": "Chinese",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 5,
+              "A": 0,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Classical Civilisation",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 1,
+              "A": 2,
+              "B": 3,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 11,
+              "A": 2,
+              "B": 3,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 17
+            }
+          },
+          {
+            "subject": "Design Technology",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 0,
+              "A": 3,
+              "B": 1,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 4
+            }
+          },
+          {
+            "subject": "Digital Media",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 1,
+              "A": 1,
+              "B": 1,
+              "C": 5,
+              "D": 2,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 10
+            }
+          },
+          {
+            "subject": "Drama",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 2,
+              "A": 0,
+              "B": 2,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Economics",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 7,
+              "A": 9,
+              "B": 5,
+              "C": 5,
+              "D": 1,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 27
+            }
+          },
+          {
+            "subject": "English Literature",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 4,
+              "A": 4,
+              "B": 1,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 11
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 1,
+              "A": 3,
+              "B": 2,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Further Mathematics",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 3,
+              "A": 4,
+              "B": 1,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 9
+            }
+          },
+          {
+            "subject": "Geography",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 7,
+              "A": 11,
+              "B": 9,
+              "C": 6,
+              "D": 1,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 34
+            }
+          },
+          {
+            "subject": "German",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 1,
+              "A": 1,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "History",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 10,
+              "A": 17,
+              "B": 19,
+              "C": 11,
+              "D": 1,
+              "E": 1,
+              "U": 0,
+              "Total exam entries": 59
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 14,
+              "A": 8,
+              "B": 22,
+              "C": 12,
+              "D": 5,
+              "E": 2,
+              "U": 0,
+              "Total exam entries": 63
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 0,
+              "A": 0,
+              "B": 1,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Persian",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 2,
+              "A": 1,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Physical Education",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 0,
+              "A": 2,
+              "B": 6,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 10
+            }
+          },
+          {
+            "subject": "Physics",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 4,
+              "A": 6,
+              "B": 8,
+              "C": 3,
+              "D": 1,
+              "E": 2,
+              "U": 0,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "Politics",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 10,
+              "A": 10,
+              "B": 11,
+              "C": 3,
+              "D": 1,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 35
+            }
+          },
+          {
+            "subject": "Psychology",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 5,
+              "A": 15,
+              "B": 17,
+              "C": 5,
+              "D": 2,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 44
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 5,
+              "A": 13,
+              "B": 7,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 27
+            }
+          },
+          {
+            "subject": "Russian",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 7,
+              "A": 0,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 1,
+              "A": 2,
+              "B": 5,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 10
+            }
+          },
+          {
+            "subject": "EPQ",
+            "qualification": "school-published A-level",
+            "grades": {
+              "A*": 4,
+              "A": 4,
+              "B": 4,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "U": 0,
+              "Total exam entries": 13
+            }
+          }
+        ],
+        "headline": {
+          "astarPercent": 25,
+          "astarAPercent": 50
+        }
+      }
+    },
+    {
+      "id": "john-lyon-school-2024-25",
+      "school": "John Lyon School",
+      "year": "2024/25",
+      "capturedAt": "2026-09-30",
+      "sourceType": "school-published-highlights + official-dfe",
+      "sourceUrls": {
+        "school": "https://www.johnlyon.org/strong-gcse-results-at-john-lyon-school-following-record-a-level-success/",
+        "dfe": "https://www.gov.uk/school-performance-tables"
+      },
+      "sourceDocument": {
+        "title": "2024/25 subject performance snapshot",
+        "notes": "DfE subject rows preserved for completeness. John Lyon's own 2025 subject highlights are layered over the DfE table where the school published them."
+      },
+      "gcse": {
+        "cohort": 92,
+        "subjectDetails": [
+          {
+            "subject": "Art and Design",
+            "qualification": "GCSE",
+            "discountCode": "JA2",
+            "subjectGroup": "Art & Design",
+            "pupils": 92,
+            "grades": {
+              "3": 2,
+              "4": 3,
+              "5": 4,
+              "6": 3,
+              "7": 3,
+              "8": 1,
+              "9": 3,
+              "Total exam entries": 19
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "qualification": "GCSE",
+            "discountCode": "CK1",
+            "subjectGroup": "Computer Science",
+            "pupils": 92,
+            "grades": {
+              "2": 1,
+              "3": 1,
+              "4": 4,
+              "5": 6,
+              "6": 2,
+              "7": 7,
+              "8": 6,
+              "9": 5,
+              "Total exam entries": 32
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "GCSE",
+            "discountCode": "FKF",
+            "subjectGroup": "French Language",
+            "pupils": 92,
+            "grades": {
+              "5": 7,
+              "6": 3,
+              "7": 4,
+              "8": 8,
+              "9": 4,
+              "Total exam entries": 26
+            }
+          },
+          {
+            "subject": "Latin",
+            "qualification": "GCSE",
+            "discountCode": "F1L",
+            "subjectGroup": "Latin",
+            "pupils": 92,
+            "grades": {
+              "2": 1,
+              "5": 1,
+              "6": 4,
+              "7": 2,
+              "8": 2,
+              "9": 1,
+              "Total exam entries": 11
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "GCSE",
+            "discountCode": "LF1",
+            "subjectGroup": "Music Studies (General)",
+            "pupils": 92,
+            "grades": {
+              "3": 1,
+              "4": 2,
+              "5": 1,
+              "6": 2,
+              "7": 3,
+              "8": 5,
+              "9": 2,
+              "Total exam entries": 16
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 6 Performing Arts Graded Examination",
+            "discountCode": "LH1",
+            "subjectGroup": "Music Performance: Group",
+            "pupils": 92,
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 7 Performing Arts Graded Examination",
+            "discountCode": "LH1",
+            "subjectGroup": "Music Performance: Group",
+            "pupils": 92,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKM",
+            "subjectGroup": "Arabic",
+            "pupils": 92,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "GCSE",
+            "discountCode": "DD1",
+            "subjectGroup": "Religious Studies",
+            "pupils": 92,
+            "grades": {
+              "2": 1,
+              "3": 2,
+              "4": 2,
+              "5": 7,
+              "6": 5,
+              "7": 10,
+              "8": 7,
+              "9": 8,
+              "Total exam entries": 42
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "GCSE",
+            "discountCode": "FKS",
+            "subjectGroup": "Spanish",
+            "pupils": 92,
+            "grades": {
+              "3": 1,
+              "4": 1,
+              "5": 5,
+              "6": 6,
+              "7": 9,
+              "8": 14,
+              "9": 4,
+              "Total exam entries": 40
+            }
+          }
+        ],
+        "subjectHighlights": [
+          {
+            "subject": "Mathematics",
+            "grade98Percent": 52
+          },
+          {
+            "subject": "English Language",
+            "grade98Percent": 45
+          },
+          {
+            "subject": "Biology",
+            "grade98Percent": 39
+          },
+          {
+            "subject": "Chemistry",
+            "grade98Percent": 38
+          },
+          {
+            "subject": "Physics",
+            "grade98Percent": 38
+          },
+          {
+            "subject": "History",
+            "grade98Percent": 50
+          },
+          {
+            "subject": "Geography",
+            "grade98Percent": 63
+          }
+        ],
+        "headline": {
+          "grade9Percent": 17,
+          "grade98Percent": 41,
+          "grade97Percent": 62
+        }
+      },
+      "alevel": {
+        "cohort": 46,
+        "subjectDetails": [
+          {
+            "subject": "Biology",
+            "grades": {
+              "A*": 0,
+              "A": 3,
+              "B": 2,
+              "C": 8,
+              "D": 1,
+              "E": 0,
+              "Fail": 1,
+              "Total exam entries": 15
+            }
+          },
+          {
+            "subject": "Business Studies",
+            "grades": {
+              "A*": 1,
+              "A": 2,
+              "B": 1,
+              "C": 3,
+              "D": 0,
+              "E": 0,
+              "Fail": 1,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "grades": {
+              "A*": 2,
+              "A": 3,
+              "B": 1,
+              "C": 6,
+              "D": 1,
+              "E": 1,
+              "Total exam entries": 14
+            }
+          },
+          {
+            "subject": "Classical Civilisation",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Drama and Theatre Studies",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Economics",
+            "grades": {
+              "A*": 3,
+              "A": 11,
+              "B": 7,
+              "C": 2,
+              "D": 4,
+              "E": 0,
+              "Total exam entries": 27
+            }
+          },
+          {
+            "subject": "English Literature",
+            "grades": {
+              "A*": 1,
+              "A": 2,
+              "B": 1,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "Fine Art",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "French",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Geography",
+            "grades": {
+              "A*": 4,
+              "A": 7,
+              "B": 2,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 13
+            }
+          },
+          {
+            "subject": "Government and Politics",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "History",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Logic / Philosophy",
+            "grades": {
+              "A*": 0,
+              "A": 1,
+              "B": 2,
+              "C": 2,
+              "D": 1,
+              "E": 0,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "grades": {
+              "A*": 2,
+              "A": 8,
+              "B": 5,
+              "C": 5,
+              "D": 5,
+              "E": 2,
+              "Total exam entries": 27
+            }
+          },
+          {
+            "subject": "Mathematics (Further)",
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Music Technology",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Physics",
+            "grades": {
+              "A*": 0,
+              "A": 1,
+              "B": 2,
+              "C": 0,
+              "D": 2,
+              "E": 1,
+              "Total exam entries": 6
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": null
+      }
+    },
+    {
+      "id": "pinner-high-school-2024-25",
+      "school": "Pinner High School",
+      "year": "2024/25",
+      "capturedAt": "2026-09-30",
+      "sourceType": "school-published-highlights + official-dfe",
+      "sourceUrls": {
+        "school": "https://www.pinnerhighschool.org/about-us/examination-results/",
+        "dfe": "https://www.gov.uk/school-performance-tables"
+      },
+      "sourceDocument": {
+        "title": "2024/25 subject performance snapshot",
+        "notes": "Pinner's school page publishes subject-level 9-7 headline percentages for English, Maths and Science; the full subject grade-count table is the official DfE snapshot."
+      },
+      "gcse": {
+        "cohort": 175,
+        "subjectDetails": [
+          {
+            "subject": "Art and Design",
+            "qualification": "GCSE",
+            "discountCode": "JA2",
+            "subjectGroup": "Art & Design",
+            "pupils": 175,
+            "grades": {
+              "3": 9,
+              "4": 10,
+              "5": 8,
+              "6": 7,
+              "7": 7,
+              "8": 7,
+              "9": 4,
+              "Total exam entries": 52
+            }
+          },
+          {
+            "subject": "Biology",
+            "qualification": "GCSE",
+            "discountCode": "RH3",
+            "subjectGroup": "Biology",
+            "pupils": 175,
+            "grades": {
+              "1": 1,
+              "2": 1,
+              "3": 2,
+              "4": 7,
+              "5": 10,
+              "6": 14,
+              "7": 16,
+              "8": 13,
+              "9": 12,
+              "Total exam entries": 76
+            }
+          },
+          {
+            "subject": "Business",
+            "qualification": "GCSE",
+            "discountCode": "AA3",
+            "subjectGroup": "Business Studies",
+            "pupils": 175,
+            "grades": {
+              "1": 2,
+              "2": 6,
+              "3": 8,
+              "4": 6,
+              "5": 18,
+              "6": 21,
+              "7": 12,
+              "8": 3,
+              "9": 3,
+              "Total exam entries": 79
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "qualification": "GCSE",
+            "discountCode": "RD1",
+            "subjectGroup": "Chemistry (General)",
+            "pupils": 175,
+            "grades": {
+              "3": 1,
+              "4": 3,
+              "5": 10,
+              "6": 19,
+              "7": 8,
+              "8": 16,
+              "9": 16,
+              "Total exam entries": 74,
+              "U": 1
+            }
+          },
+          {
+            "subject": "Combined Science",
+            "qualification": "GCSE",
+            "discountCode": "RA1E",
+            "subjectGroup": "Science Double Award",
+            "pupils": 175,
+            "grades": {
+              "11": 3,
+              "21": 3,
+              "22": 3,
+              "32": 1,
+              "33": 8,
+              "43": 13,
+              "44": 6,
+              "54": 7,
+              "55": 10,
+              "65": 11,
+              "66": 5,
+              "76": 10,
+              "77": 4,
+              "87": 4,
+              "98": 1,
+              "99": 5,
+              "Total exam entries": 95,
+              "U": 1
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "qualification": "GCSE",
+            "discountCode": "CK1",
+            "subjectGroup": "Computer Science",
+            "pupils": 175,
+            "grades": {
+              "2": 1,
+              "3": 7,
+              "4": 2,
+              "5": 8,
+              "6": 11,
+              "7": 5,
+              "8": 8,
+              "9": 10,
+              "Total exam entries": 52
+            }
+          },
+          {
+            "subject": "Drama",
+            "qualification": "GCSE",
+            "discountCode": "LC11",
+            "subjectGroup": "Speech & Drama",
+            "pupils": 175,
+            "grades": {
+              "1": 3,
+              "3": 1,
+              "4": 4,
+              "6": 4,
+              "7": 5,
+              "8": 4,
+              "9": 3,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "Economics",
+            "qualification": "GCSE",
+            "discountCode": "EB",
+            "subjectGroup": "Economics",
+            "pupils": 175,
+            "grades": {
+              "1": 2,
+              "3": 4,
+              "4": 1,
+              "5": 3,
+              "6": 7,
+              "7": 4,
+              "8": 5,
+              "9": 4,
+              "Total exam entries": 30
+            }
+          },
+          {
+            "subject": "English Language",
+            "qualification": "GCSE",
+            "discountCode": "FK2B",
+            "subjectGroup": "English Language",
+            "pupils": 175,
+            "grades": {
+              "1": 2,
+              "2": 6,
+              "3": 20,
+              "4": 18,
+              "5": 31,
+              "6": 47,
+              "7": 29,
+              "8": 14,
+              "9": 5,
+              "Total exam entries": 175,
+              "U": 1,
+              "X": 2
+            }
+          },
+          {
+            "subject": "English Literature",
+            "qualification": "GCSE",
+            "discountCode": "FC4",
+            "subjectGroup": "English Literature",
+            "pupils": 175,
+            "grades": {
+              "1": 2,
+              "2": 2,
+              "3": 11,
+              "4": 17,
+              "5": 32,
+              "6": 41,
+              "7": 27,
+              "8": 20,
+              "9": 15,
+              "Total exam entries": 169,
+              "U": 2
+            }
+          },
+          {
+            "subject": "Food Preparation & Nutrition",
+            "qualification": "GCSE",
+            "discountCode": "NH6",
+            "subjectGroup": "Food Technology",
+            "pupils": 175,
+            "grades": {
+              "3": 2,
+              "4": 3,
+              "5": 4,
+              "6": 7,
+              "7": 3,
+              "8": 6,
+              "9": 6,
+              "Total exam entries": 31
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "GCSE",
+            "discountCode": "FKF",
+            "subjectGroup": "French Language",
+            "pupils": 175,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Geography",
+            "qualification": "GCSE",
+            "discountCode": "RF4",
+            "subjectGroup": "Geography",
+            "pupils": 175,
+            "grades": {
+              "1": 3,
+              "2": 7,
+              "3": 10,
+              "4": 10,
+              "5": 12,
+              "6": 14,
+              "7": 8,
+              "8": 10,
+              "9": 13,
+              "Total exam entries": 88,
+              "U": 1
+            }
+          },
+          {
+            "subject": "History",
+            "qualification": "GCSE",
+            "discountCode": "DB",
+            "subjectGroup": "History",
+            "pupils": 175,
+            "grades": {
+              "1": 1,
+              "2": 8,
+              "3": 8,
+              "4": 4,
+              "5": 11,
+              "6": 13,
+              "7": 14,
+              "8": 11,
+              "9": 19,
+              "Total exam entries": 91,
+              "U": 2
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "GCSE",
+            "discountCode": "RB1",
+            "subjectGroup": "Maths (General)",
+            "pupils": 175,
+            "grades": {
+              "1": 8,
+              "2": 6,
+              "3": 11,
+              "4": 17,
+              "5": 26,
+              "6": 27,
+              "7": 23,
+              "8": 29,
+              "9": 23,
+              "Total exam entries": 175,
+              "U": 3,
+              "X": 2
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "GCSE",
+            "discountCode": "LF1",
+            "subjectGroup": "Music Studies (General)",
+            "pupils": 175,
+            "grades": {
+              "2": 1,
+              "3": 6,
+              "4": 4,
+              "5": 3,
+              "6": 3,
+              "7": 1,
+              "8": 1,
+              "Total exam entries": 19
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKC",
+            "subjectGroup": "Chinese",
+            "pupils": 175,
+            "grades": {
+              "1": 1,
+              "2": 2,
+              "3": 2,
+              "4": 1,
+              "5": 6,
+              "6": 5,
+              "7": 6,
+              "8": 5,
+              "9": 4,
+              "Total exam entries": 32
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKP",
+            "subjectGroup": "Portuguese",
+            "pupils": 175,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKI",
+            "subjectGroup": "Gujarati",
+            "pupils": 175,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKM",
+            "subjectGroup": "Arabic",
+            "pupils": 175,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKR",
+            "subjectGroup": "Russian",
+            "pupils": 175,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Physical Education",
+            "qualification": "GCSE",
+            "discountCode": "MA1",
+            "subjectGroup": "Sports Studies",
+            "pupils": 175,
+            "grades": {
+              "1": 3,
+              "2": 2,
+              "3": 9,
+              "4": 5,
+              "5": 8,
+              "6": 6,
+              "7": 2,
+              "8": 2,
+              "9": 4,
+              "Total exam entries": 41
+            }
+          },
+          {
+            "subject": "Physics",
+            "qualification": "GCSE",
+            "discountCode": "RC1",
+            "subjectGroup": "Physics (General)",
+            "pupils": 175,
+            "grades": {
+              "1": 1,
+              "3": 2,
+              "4": 7,
+              "5": 10,
+              "6": 16,
+              "7": 14,
+              "8": 8,
+              "9": 17,
+              "Total exam entries": 75
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "GCSE",
+            "discountCode": "DD1",
+            "subjectGroup": "Religious Studies",
+            "pupils": 175,
+            "grades": {
+              "2": 2,
+              "3": 1,
+              "5": 6,
+              "6": 6,
+              "7": 7,
+              "8": 1,
+              "9": 2,
+              "Total exam entries": 26,
+              "U": 1
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "GCSE",
+            "discountCode": "FKS",
+            "subjectGroup": "Spanish",
+            "pupils": 175,
+            "grades": {
+              "1": 4,
+              "2": 14,
+              "3": 16,
+              "4": 13,
+              "5": 21,
+              "6": 13,
+              "7": 5,
+              "8": 6,
+              "9": 1,
+              "Total exam entries": 95,
+              "U": 2
+            }
+          },
+          {
+            "subject": "Statistics",
+            "qualification": "GCSE",
+            "discountCode": "RB71",
+            "subjectGroup": "Statistics",
+            "pupils": 175,
+            "grades": {
+              "Total exam entries": 2
+            }
+          }
+        ],
+        "subjectHighlights": [
+          {
+            "subject": "English Language",
+            "grade97Percent": 44
+          },
+          {
+            "subject": "Mathematics",
+            "grade97Percent": 44
+          },
+          {
+            "subject": "Combined Science",
+            "grade97Percent": 38
+          }
+        ],
+        "headline": {
+          "grade97Percent": 34
+        }
+      },
+      "alevel": {
+        "cohort": 133,
+        "subjectDetails": [
+          {
+            "subject": "3D Studies",
+            "grades": {
+              "A*": 1,
+              "A": 5,
+              "B": 0,
+              "C": 1,
+              "D": 0,
+              "E": 1,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Art and Design",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Biology",
+            "grades": {
+              "A*": 2,
+              "A": 2,
+              "B": 8,
+              "C": 5,
+              "D": 12,
+              "E": 9,
+              "Fail": 3,
+              "No result / X": 1,
+              "Total exam entries": 42
+            }
+          },
+          {
+            "subject": "Business Studies",
+            "grades": {
+              "A*": 0,
+              "A": 3,
+              "B": 13,
+              "C": 3,
+              "D": 5,
+              "E": 0,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "grades": {
+              "A*": 1,
+              "A": 0,
+              "B": 6,
+              "C": 6,
+              "D": 11,
+              "E": 9,
+              "Fail": 1,
+              "Total exam entries": 34
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "grades": {
+              "A*": 2,
+              "A": 3,
+              "B": 2,
+              "C": 2,
+              "D": 3,
+              "E": 0,
+              "Fail": 1,
+              "Total exam entries": 13
+            }
+          },
+          {
+            "subject": "Drama and Theatre Studies",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Economics",
+            "grades": {
+              "A*": 2,
+              "A": 5,
+              "B": 9,
+              "C": 4,
+              "D": 2,
+              "E": 0,
+              "Total exam entries": 22
+            }
+          },
+          {
+            "subject": "English Language and Literature",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "English Literature",
+            "grades": {
+              "A*": 2,
+              "A": 2,
+              "B": 4,
+              "C": 5,
+              "D": 2,
+              "E": 0,
+              "Total exam entries": 15
+            }
+          },
+          {
+            "subject": "Fine Art",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Geography",
+            "grades": {
+              "A*": 3,
+              "A": 3,
+              "B": 6,
+              "C": 2,
+              "D": 1,
+              "E": 1,
+              "Total exam entries": 16
+            }
+          },
+          {
+            "subject": "Government and Politics",
+            "grades": {
+              "A*": 0,
+              "A": 5,
+              "B": 3,
+              "C": 2,
+              "D": 1,
+              "E": 0,
+              "Total exam entries": 11
+            }
+          },
+          {
+            "subject": "History",
+            "grades": {
+              "A*": 2,
+              "A": 5,
+              "B": 8,
+              "C": 8,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 23
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "grades": {
+              "A*": 5,
+              "A": 13,
+              "B": 26,
+              "C": 20,
+              "D": 17,
+              "E": 7,
+              "Fail": 4,
+              "No result / X": 1,
+              "Total exam entries": 93
+            }
+          },
+          {
+            "subject": "Mathematics (Further)",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Music",
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Physical Education / Sports Studies",
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Physics",
+            "grades": {
+              "A*": 0,
+              "A": 5,
+              "B": 3,
+              "C": 3,
+              "D": 11,
+              "E": 6,
+              "Total exam entries": 28
+            }
+          },
+          {
+            "subject": "Psychology",
+            "grades": {
+              "A*": 2,
+              "A": 7,
+              "B": 9,
+              "C": 7,
+              "D": 4,
+              "E": 8,
+              "Fail": 1,
+              "Total exam entries": 38
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Sociology",
+            "grades": {
+              "A*": 1,
+              "A": 0,
+              "B": 4,
+              "C": 6,
+              "D": 3,
+              "E": 0,
+              "Total exam entries": 14
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": null
+      }
+    },
+    {
+      "id": "aldenham-school-2024-25",
+      "school": "Aldenham School",
+      "year": "2024/25",
+      "capturedAt": "2026-09-30",
+      "sourceType": "school-published-headline + official-dfe",
+      "sourceUrls": {
+        "school": "https://aldenham.com/gcse-results-2025/",
+        "dfe": "https://www.gov.uk/school-performance-tables"
+      },
+      "sourceDocument": {
+        "title": "2024/25 subject performance snapshot",
+        "notes": "Aldenham published 2025 headline GCSE percentages but no complete subject table located. Subject grade counts are from the official DfE snapshot."
+      },
+      "gcse": {
+        "cohort": 105,
+        "subjectDetails": [
+          {
+            "subject": "Art and Design",
+            "qualification": "GCSE",
+            "discountCode": "JA2",
+            "subjectGroup": "Art & Design",
+            "pupils": 105,
+            "grades": {
+              "3": 1,
+              "4": 3,
+              "5": 4,
+              "6": 8,
+              "7": 8,
+              "8": 2,
+              "9": 4,
+              "Total exam entries": 30
+            }
+          },
+          {
+            "subject": "Biology",
+            "qualification": "GCSE",
+            "discountCode": "RH3",
+            "subjectGroup": "Biology",
+            "pupils": 105,
+            "grades": {
+              "5": 7,
+              "6": 6,
+              "7": 11,
+              "8": 10,
+              "9": 8,
+              "Total exam entries": 42
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "qualification": "GCSE",
+            "discountCode": "RD1",
+            "subjectGroup": "Chemistry (General)",
+            "pupils": 105,
+            "grades": {
+              "4": 2,
+              "5": 4,
+              "6": 8,
+              "7": 5,
+              "8": 8,
+              "9": 14,
+              "Total exam entries": 41
+            }
+          },
+          {
+            "subject": "Classical Civilisation",
+            "qualification": "GCSE",
+            "discountCode": "DB2B",
+            "subjectGroup": "Classical Civilisation",
+            "pupils": 105,
+            "grades": {
+              "3": 1,
+              "4": 1,
+              "5": 4,
+              "6": 4,
+              "7": 3,
+              "9": 2,
+              "Total exam entries": 15
+            }
+          },
+          {
+            "subject": "Combined Science",
+            "qualification": "GCSE",
+            "discountCode": "RA1E",
+            "subjectGroup": "Science Double Award",
+            "pupils": 105,
+            "grades": {
+              "33": 2,
+              "43": 1,
+              "44": 6,
+              "54": 2,
+              "55": 7,
+              "65": 6,
+              "66": 11,
+              "76": 12,
+              "77": 5,
+              "87": 4,
+              "88": 2,
+              "98": 4,
+              "Total exam entries": 62
+            }
+          },
+          {
+            "subject": "Dance",
+            "qualification": "GCSE",
+            "discountCode": "LB1",
+            "subjectGroup": "Dance: General",
+            "pupils": 105,
+            "grades": {
+              "4": 1,
+              "5": 1,
+              "6": 3,
+              "7": 1,
+              "8": 1,
+              "9": 1,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Design & Technology",
+            "qualification": "GCSE",
+            "discountCode": "VF1",
+            "subjectGroup": "D & T",
+            "pupils": 105,
+            "grades": {
+              "2": 1,
+              "3": 1,
+              "4": 2,
+              "5": 3,
+              "6": 13,
+              "7": 4,
+              "8": 6,
+              "Total exam entries": 30
+            }
+          },
+          {
+            "subject": "Drama",
+            "qualification": "GCSE",
+            "discountCode": "LC11",
+            "subjectGroup": "Speech & Drama",
+            "pupils": 105,
+            "grades": {
+              "5": 1,
+              "6": 2,
+              "7": 4,
+              "8": 5,
+              "9": 12,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "GCSE",
+            "discountCode": "FKF",
+            "subjectGroup": "French Language",
+            "pupils": 105,
+            "grades": {
+              "3": 1,
+              "4": 3,
+              "5": 5,
+              "6": 5,
+              "7": 7,
+              "8": 2,
+              "9": 1,
+              "Total exam entries": 26,
+              "U": 2
+            }
+          },
+          {
+            "subject": "Latin",
+            "qualification": "GCSE",
+            "discountCode": "F1L",
+            "subjectGroup": "Latin",
+            "pupils": 105,
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "GCSE",
+            "discountCode": "RB1",
+            "subjectGroup": "Maths (General)",
+            "pupils": 105,
+            "grades": {
+              "2": 1,
+              "4": 4,
+              "5": 30,
+              "6": 27,
+              "7": 18,
+              "8": 18,
+              "9": 6,
+              "Total exam entries": 104
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "GCSE",
+            "discountCode": "LF1",
+            "subjectGroup": "Music Studies (General)",
+            "pupils": 105,
+            "grades": {
+              "4": 2,
+              "5": 2,
+              "6": 4,
+              "7": 1,
+              "8": 5,
+              "Total exam entries": 14
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 7 Performing Arts Graded Examination",
+            "discountCode": "LH1",
+            "subjectGroup": "Music Performance: Group",
+            "pupils": 105,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKC",
+            "subjectGroup": "Chinese",
+            "pupils": 105,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKR",
+            "subjectGroup": "Russian",
+            "pupils": 105,
+            "grades": {
+              "Total exam entries": 4
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKK",
+            "subjectGroup": "Greek",
+            "pupils": 105,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Physical Education",
+            "qualification": "GCSE",
+            "discountCode": "MA1",
+            "subjectGroup": "Sports Studies",
+            "pupils": 105,
+            "grades": {
+              "4": 4,
+              "5": 4,
+              "6": 6,
+              "7": 3,
+              "8": 5,
+              "9": 2,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "Physics",
+            "qualification": "GCSE",
+            "discountCode": "RC1",
+            "subjectGroup": "Physics (General)",
+            "pupils": 105,
+            "grades": {
+              "4": 1,
+              "5": 5,
+              "6": 5,
+              "7": 11,
+              "8": 12,
+              "9": 6,
+              "Total exam entries": 40
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "GCSE",
+            "discountCode": "DD1",
+            "subjectGroup": "Religious Studies",
+            "pupils": 105,
+            "grades": {
+              "5": 7,
+              "6": 5,
+              "7": 4,
+              "8": 7,
+              "9": 1,
+              "Total exam entries": 24
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "GCSE",
+            "discountCode": "FKS",
+            "subjectGroup": "Spanish",
+            "pupils": 105,
+            "grades": {
+              "3": 1,
+              "4": 6,
+              "5": 6,
+              "6": 3,
+              "7": 4,
+              "8": 1,
+              "9": 1,
+              "Total exam entries": 22
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": {
+          "grade97Percent": 45
+        }
+      },
+      "alevel": {
+        "cohort": 95,
+        "subjectDetails": [
+          {
+            "subject": "Biology",
+            "grades": {
+              "A*": 1,
+              "A": 2,
+              "B": 3,
+              "C": 2,
+              "D": 2,
+              "E": 3,
+              "Total exam entries": 13
+            }
+          },
+          {
+            "subject": "Business Studies",
+            "grades": {
+              "A*": 0,
+              "A": 3,
+              "B": 9,
+              "C": 13,
+              "D": 3,
+              "E": 2,
+              "Total exam entries": 30
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "grades": {
+              "A*": 3,
+              "A": 2,
+              "B": 2,
+              "C": 2,
+              "D": 1,
+              "E": 2,
+              "Total exam entries": 12
+            }
+          },
+          {
+            "subject": "Chinese",
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Classical Civilisation",
+            "grades": {
+              "A*": 0,
+              "A": 1,
+              "B": 4,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "grades": {
+              "A*": 0,
+              "A": 2,
+              "B": 2,
+              "C": 3,
+              "D": 1,
+              "E": 1,
+              "Total exam entries": 9
+            }
+          },
+          {
+            "subject": "Design and Technology (Product Design)",
+            "grades": {
+              "A*": 1,
+              "A": 0,
+              "B": 3,
+              "C": 4,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Drama and Theatre Studies",
+            "grades": {
+              "A*": 1,
+              "A": 3,
+              "B": 5,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 10
+            }
+          },
+          {
+            "subject": "Economics",
+            "grades": {
+              "A*": 0,
+              "A": 1,
+              "B": 7,
+              "C": 1,
+              "D": 2,
+              "E": 2,
+              "Total exam entries": 13
+            }
+          },
+          {
+            "subject": "English Literature",
+            "grades": {
+              "A*": 1,
+              "A": 1,
+              "B": 4,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Fine Art",
+            "grades": {
+              "A*": 2,
+              "A": 1,
+              "B": 2,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "French",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Government and Politics",
+            "grades": {
+              "A*": 0,
+              "A": 0,
+              "B": 6,
+              "C": 3,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 9
+            }
+          },
+          {
+            "subject": "History",
+            "grades": {
+              "A*": 0,
+              "A": 2,
+              "B": 5,
+              "C": 4,
+              "D": 2,
+              "E": 0,
+              "Total exam entries": 13
+            }
+          },
+          {
+            "subject": "Latin",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Logic / Philosophy",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "grades": {
+              "A*": 2,
+              "A": 6,
+              "B": 5,
+              "C": 3,
+              "D": 2,
+              "E": 1,
+              "Total exam entries": 19
+            }
+          },
+          {
+            "subject": "Music",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Music Technology",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Physical Education / Sports Studies",
+            "grades": {
+              "A*": 0,
+              "A": 1,
+              "B": 4,
+              "C": 5,
+              "D": 1,
+              "E": 0,
+              "Total exam entries": 11
+            }
+          },
+          {
+            "subject": "Physics",
+            "grades": {
+              "A*": 1,
+              "A": 0,
+              "B": 5,
+              "C": 1,
+              "D": 2,
+              "E": 0,
+              "Fail": 1,
+              "Total exam entries": 10
+            }
+          },
+          {
+            "subject": "Psychology",
+            "grades": {
+              "A*": 0,
+              "A": 0,
+              "B": 9,
+              "C": 11,
+              "D": 15,
+              "E": 5,
+              "Fail": 2,
+              "Total exam entries": 42
+            }
+          },
+          {
+            "subject": "Russian",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Sociology",
+            "grades": {
+              "A*": 0,
+              "A": 0,
+              "B": 2,
+              "C": 1,
+              "D": 3,
+              "E": 0,
+              "Total exam entries": 6
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": null
+      }
+    },
+    {
+      "id": "winchester-college-2024-25",
+      "school": "Winchester College",
+      "year": "2024/25",
+      "capturedAt": "2026-09-30",
+      "sourceType": "school-published-headline + official-dfe",
+      "sourceUrls": {
+        "school": "https://www.winchestercollege.org/learning/exam-results-destinations/",
+        "dfe": "https://www.gov.uk/school-performance-tables"
+      },
+      "sourceDocument": {
+        "title": "2024/25 subject performance snapshot",
+        "notes": "Winchester publishes headline examination outcomes; the subject-level table preserved here is the official DfE snapshot."
+      },
+      "gcse": {
+        "cohort": 156,
+        "subjectDetails": [
+          {
+            "subject": "Art and Design",
+            "qualification": "GCSE",
+            "discountCode": "JA2",
+            "subjectGroup": "Art & Design",
+            "pupils": 156,
+            "grades": {
+              "5": 1,
+              "6": 1,
+              "7": 4,
+              "8": 3,
+              "9": 3,
+              "Total exam entries": 12
+            }
+          },
+          {
+            "subject": "Classical Greek",
+            "qualification": "GCSE",
+            "discountCode": "F1K",
+            "subjectGroup": "Greek (Classic)",
+            "pupils": 156,
+            "grades": {
+              "6": 1,
+              "7": 1,
+              "8": 2,
+              "9": 13,
+              "Total exam entries": 17
+            }
+          },
+          {
+            "subject": "Design & Technology",
+            "qualification": "GCSE",
+            "discountCode": "VF1",
+            "subjectGroup": "D & T",
+            "pupils": 156,
+            "grades": {
+              "7": 2,
+              "8": 7,
+              "9": 1,
+              "Total exam entries": 10
+            }
+          },
+          {
+            "subject": "English Language",
+            "qualification": "GCSE",
+            "discountCode": "FK2B",
+            "subjectGroup": "English Language",
+            "pupils": 156,
+            "grades": {
+              "5": 2,
+              "6": 10,
+              "7": 35,
+              "8": 51,
+              "9": 34,
+              "Total exam entries": 132
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "GCSE",
+            "discountCode": "FKF",
+            "subjectGroup": "French Language",
+            "pupils": 156,
+            "grades": {
+              "6": 1,
+              "7": 8,
+              "8": 27,
+              "9": 73,
+              "Total exam entries": 109
+            }
+          },
+          {
+            "subject": "German",
+            "qualification": "GCSE",
+            "discountCode": "FKG",
+            "subjectGroup": "German",
+            "pupils": 156,
+            "grades": {
+              "6": 6,
+              "7": 6,
+              "8": 4,
+              "9": 13,
+              "Total exam entries": 29
+            }
+          },
+          {
+            "subject": "Latin",
+            "qualification": "GCSE",
+            "discountCode": "F1L",
+            "subjectGroup": "Latin",
+            "pupils": 156,
+            "grades": {
+              "5": 1,
+              "6": 1,
+              "7": 10,
+              "8": 33,
+              "9": 39,
+              "Total exam entries": 84
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "GCSE",
+            "discountCode": "RB1",
+            "subjectGroup": "Maths (General)",
+            "pupils": 156,
+            "grades": {
+              "4": 1,
+              "5": 2,
+              "6": 5,
+              "7": 11,
+              "8": 57,
+              "9": 56,
+              "Total exam entries": 132
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "FSMQ",
+            "discountCode": "RB1C",
+            "subjectGroup": "Additional Maths (FSMQ)",
+            "pupils": 156,
+            "grades": {
+              "A": 59,
+              "B": 6,
+              "C": 4,
+              "D": 1,
+              "E": 1,
+              "Total exam entries": 72,
+              "X": 1
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "GCSE",
+            "discountCode": "LF1",
+            "subjectGroup": "Music Studies (General)",
+            "pupils": 156,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 6 Performing Arts Graded Examination",
+            "discountCode": "LFTM",
+            "subjectGroup": "Theory of Music",
+            "pupils": 156,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 6 Performing Arts Graded Examination",
+            "discountCode": "LH1",
+            "subjectGroup": "Music Performance: Group",
+            "pupils": 156,
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 7 Performing Arts Graded Examination",
+            "discountCode": "LH1",
+            "subjectGroup": "Music Performance: Group",
+            "pupils": 156,
+            "grades": {
+              "Distinction": 3,
+              "Merit": 4,
+              "Pass": 1,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Music",
+            "qualification": "Grade 8 Performing Arts Graded Examination",
+            "discountCode": "LH1",
+            "subjectGroup": "Music Performance: Group",
+            "pupils": 156,
+            "grades": {
+              "Distinction": 4,
+              "Merit": 1,
+              "Pass": 1,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKR",
+            "subjectGroup": "Russian",
+            "pupils": 156,
+            "grades": {
+              "8": 1,
+              "9": 16,
+              "Total exam entries": 17
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKC",
+            "subjectGroup": "Chinese",
+            "pupils": 156,
+            "grades": {
+              "8": 2,
+              "9": 9,
+              "Total exam entries": 11
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "GCSE",
+            "discountCode": "DD1",
+            "subjectGroup": "Religious Studies",
+            "pupils": 156,
+            "grades": {
+              "5": 1,
+              "6": 7,
+              "7": 6,
+              "8": 17,
+              "9": 8,
+              "Total exam entries": 39
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "GCSE",
+            "discountCode": "FKS",
+            "subjectGroup": "Spanish",
+            "pupils": 156,
+            "grades": {
+              "5": 1,
+              "6": 1,
+              "7": 6,
+              "8": 15,
+              "9": 15,
+              "Total exam entries": 38
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": {
+          "grade9Percent": 62,
+          "grade98Percent": 84,
+          "grade97Percent": 95
+        }
+      },
+      "alevel": {
+        "cohort": 157,
+        "subjectDetails": [
+          {
+            "subject": "Ancient History",
+            "grades": {
+              "A*": 0,
+              "A": 3,
+              "B": 3,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "Biology",
+            "grades": {
+              "A*": 9,
+              "A": 8,
+              "B": 7,
+              "C": 2,
+              "D": 1,
+              "E": 1,
+              "Fail": 1,
+              "Total exam entries": 29
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "grades": {
+              "A*": 19,
+              "A": 14,
+              "B": 9,
+              "C": 6,
+              "D": 0,
+              "E": 1,
+              "Total exam entries": 49
+            }
+          },
+          {
+            "subject": "Chinese",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Classical Greek",
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Computer Science",
+            "grades": {
+              "A*": 5,
+              "A": 6,
+              "B": 6,
+              "C": 0,
+              "D": 1,
+              "E": 0,
+              "No result / X": 1,
+              "Total exam entries": 19
+            }
+          },
+          {
+            "subject": "Design and Technology (Product Design)",
+            "grades": {
+              "Total exam entries": 3
+            }
+          },
+          {
+            "subject": "Economics",
+            "grades": {
+              "A*": 17,
+              "A": 11,
+              "B": 12,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 41
+            }
+          },
+          {
+            "subject": "English Literature",
+            "grades": {
+              "A*": 7,
+              "A": 4,
+              "B": 1,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 14
+            }
+          },
+          {
+            "subject": "Fine Art",
+            "grades": {
+              "Total exam entries": 4
+            }
+          },
+          {
+            "subject": "French",
+            "grades": {
+              "A*": 8,
+              "A": 6,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 14
+            }
+          },
+          {
+            "subject": "Geography",
+            "grades": {
+              "A*": 6,
+              "A": 15,
+              "B": 4,
+              "C": 2,
+              "D": 0,
+              "E": 1,
+              "Total exam entries": 28
+            }
+          },
+          {
+            "subject": "German",
+            "grades": {
+              "A*": 3,
+              "A": 1,
+              "B": 0,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "History",
+            "grades": {
+              "A*": 7,
+              "A": 8,
+              "B": 6,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 21
+            }
+          },
+          {
+            "subject": "History of Art",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Latin",
+            "grades": {
+              "A*": 6,
+              "A": 5,
+              "B": 1,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 13
+            }
+          },
+          {
+            "subject": "Logic / Philosophy",
+            "grades": {
+              "A*": 6,
+              "A": 4,
+              "B": 6,
+              "C": 2,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 18
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "grades": {
+              "A*": 62,
+              "A": 37,
+              "B": 17,
+              "C": 7,
+              "D": 3,
+              "E": 1,
+              "Total exam entries": 127
+            }
+          },
+          {
+            "subject": "Mathematics (Further)",
+            "grades": {
+              "A*": 33,
+              "A": 11,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 12,
+              "No result / X": 1
+            }
+          },
+          {
+            "subject": "Music",
+            "grades": {
+              "A*": 4,
+              "A": 2,
+              "B": 1,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Physics",
+            "grades": {
+              "A*": 33,
+              "A": 19,
+              "B": 6,
+              "C": 4,
+              "D": 1,
+              "E": 1,
+              "Total exam entries": 64
+            }
+          },
+          {
+            "subject": "Russian",
+            "grades": {
+              "A*": 6,
+              "A": 0,
+              "B": 0,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 6
+            }
+          },
+          {
+            "subject": "Spanish",
+            "grades": {
+              "A*": 3,
+              "A": 6,
+              "B": 2,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "No result / X": 1,
+              "Total exam entries": 12
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": null
+      }
+    },
+    {
+      "id": "michaela-community-school-2024-25",
+      "school": "Michaela Community School",
+      "year": "2024/25",
+      "capturedAt": "2026-09-30",
+      "sourceType": "official-dfe",
+      "sourceUrls": {
+        "school": "https://michaela.education/home/secondary-school-wembley/gcse-results-wembley/",
+        "dfe": "https://www.gov.uk/school-performance-tables"
+      },
+      "sourceDocument": {
+        "title": "2024/25 subject performance snapshot",
+        "notes": "Michaela's own GCSE-results page directs readers to the Department for Education performance tables. This archive preserves that official subject-level dataset."
+      },
+      "gcse": {
+        "cohort": 117,
+        "subjectDetails": [
+          {
+            "subject": "Art and Design",
+            "qualification": "GCSE",
+            "discountCode": "KJ1",
+            "subjectGroup": "Photography",
+            "pupils": 117,
+            "grades": {
+              "4": 2,
+              "5": 17,
+              "6": 6,
+              "Total exam entries": 25
+            }
+          },
+          {
+            "subject": "Biology",
+            "qualification": "GCSE",
+            "discountCode": "RH3",
+            "subjectGroup": "Biology",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "qualification": "GCSE",
+            "discountCode": "RD1",
+            "subjectGroup": "Chemistry (General)",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Combined Science",
+            "qualification": "GCSE",
+            "discountCode": "RA1E",
+            "subjectGroup": "Science Double Award",
+            "pupils": 117,
+            "grades": {
+              "43": 1,
+              "44": 1,
+              "54": 4,
+              "55": 6,
+              "65": 1,
+              "66": 6,
+              "76": 9,
+              "77": 5,
+              "87": 5,
+              "88": 11,
+              "98": 19,
+              "99": 46,
+              "Total exam entries": 114
+            }
+          },
+          {
+            "subject": "English Language",
+            "qualification": "GCSE",
+            "discountCode": "FK2B",
+            "subjectGroup": "English Language",
+            "pupils": 117,
+            "grades": {
+              "3": 3,
+              "4": 4,
+              "5": 11,
+              "6": 18,
+              "7": 30,
+              "8": 24,
+              "9": 26,
+              "Total exam entries": 116
+            }
+          },
+          {
+            "subject": "English Literature",
+            "qualification": "GCSE",
+            "discountCode": "FC4",
+            "subjectGroup": "English Literature",
+            "pupils": 117,
+            "grades": {
+              "4": 3,
+              "5": 1,
+              "6": 7,
+              "7": 23,
+              "8": 41,
+              "9": 41,
+              "Total exam entries": 116
+            }
+          },
+          {
+            "subject": "French",
+            "qualification": "GCSE",
+            "discountCode": "FKF",
+            "subjectGroup": "French Language",
+            "pupils": 117,
+            "grades": {
+              "5": 13,
+              "6": 2,
+              "7": 21,
+              "8": 27,
+              "9": 47,
+              "Total exam entries": 110
+            }
+          },
+          {
+            "subject": "Geography",
+            "qualification": "GCSE",
+            "discountCode": "RF4",
+            "subjectGroup": "Geography",
+            "pupils": 117,
+            "grades": {
+              "4": 2,
+              "5": 1,
+              "6": 2,
+              "7": 18,
+              "8": 31,
+              "9": 7,
+              "Total exam entries": 61
+            }
+          },
+          {
+            "subject": "History",
+            "qualification": "GCSE",
+            "discountCode": "DB",
+            "subjectGroup": "History",
+            "pupils": 117,
+            "grades": {
+              "9": 28,
+              "Total exam entries": 28
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "qualification": "GCSE",
+            "discountCode": "RB1",
+            "subjectGroup": "Maths (General)",
+            "pupils": 117,
+            "grades": {
+              "4": 1,
+              "5": 13,
+              "7": 12,
+              "8": 33,
+              "9": 57,
+              "Total exam entries": 116
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKM",
+            "subjectGroup": "Arabic",
+            "pupils": 117,
+            "grades": {
+              "8": 3,
+              "9": 5,
+              "Total exam entries": 8
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKI",
+            "subjectGroup": "Gujarati",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "F1P",
+            "subjectGroup": "Persian Language",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKP",
+            "subjectGroup": "Portuguese",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKX",
+            "subjectGroup": "Italian",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Other Modern Languages",
+            "qualification": "GCSE",
+            "discountCode": "FKO",
+            "subjectGroup": "Polish",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Physics",
+            "qualification": "GCSE",
+            "discountCode": "RC1",
+            "subjectGroup": "Physics (General)",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "qualification": "GCSE",
+            "discountCode": "DD1",
+            "subjectGroup": "Religious Studies",
+            "pupils": 117,
+            "grades": {
+              "4": 1,
+              "5": 1,
+              "6": 5,
+              "7": 9,
+              "8": 23,
+              "9": 77,
+              "Total exam entries": 116
+            }
+          },
+          {
+            "subject": "Spanish",
+            "qualification": "GCSE",
+            "discountCode": "FKS",
+            "subjectGroup": "Spanish",
+            "pupils": 117,
+            "grades": {
+              "Total exam entries": 1
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": null
+      },
+      "alevel": {
+        "cohort": 64,
+        "subjectDetails": [
+          {
+            "subject": "Arabic",
+            "grades": {
+              "Total exam entries": 1
+            }
+          },
+          {
+            "subject": "Biology",
+            "grades": {
+              "A*": 5,
+              "A": 7,
+              "B": 4,
+              "C": 3,
+              "D": 1,
+              "E": 0,
+              "Total exam entries": 20
+            }
+          },
+          {
+            "subject": "Chemistry",
+            "grades": {
+              "A*": 7,
+              "A": 7,
+              "B": 7,
+              "C": 4,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 25
+            }
+          },
+          {
+            "subject": "Economics",
+            "grades": {
+              "A*": 3,
+              "A": 5,
+              "B": 6,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 14
+            }
+          },
+          {
+            "subject": "English Literature",
+            "grades": {
+              "Total exam entries": 5
+            }
+          },
+          {
+            "subject": "Government and Politics",
+            "grades": {
+              "Total exam entries": 2
+            }
+          },
+          {
+            "subject": "History",
+            "grades": {
+              "A*": 0,
+              "A": 5,
+              "B": 2,
+              "C": 0,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 7
+            }
+          },
+          {
+            "subject": "Mathematics",
+            "grades": {
+              "A*": 19,
+              "A": 20,
+              "B": 10,
+              "C": 4,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 53
+            }
+          },
+          {
+            "subject": "Mathematics (Further)",
+            "grades": {
+              "A*": 4,
+              "A": 13,
+              "B": 0,
+              "C": 1,
+              "D": 1,
+              "E": 0,
+              "Total exam entries": 19
+            }
+          },
+          {
+            "subject": "Physics",
+            "grades": {
+              "A*": 2,
+              "A": 8,
+              "B": 3,
+              "C": 3,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 16
+            }
+          },
+          {
+            "subject": "Psychology",
+            "grades": {
+              "A*": 3,
+              "A": 9,
+              "B": 6,
+              "C": 1,
+              "D": 0,
+              "E": 0,
+              "Total exam entries": 19
+            }
+          },
+          {
+            "subject": "Religious Studies",
+            "grades": {
+              "Total exam entries": 3
+            }
+          }
+        ],
+        "subjectHighlights": [],
+        "headline": null
       }
     }
   ]
