@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.11.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.19.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -94,6 +94,10 @@ Cross-device saves use a **three-way merge** against the device's last known clo
 
 When a visit note changes, its school ID is added to a small device-local pending list. This list survives reloads but causes no Firestore traffic. While any notes are pending, the main page shows a green pending cloud save bar and the sync indicator gently pulses. **Save all to cloud** performs the same transactional private-state save as the school-level save action. Because the private state contains all notes, one successful write saves every pending note on that device, not just the currently open school. The pending list is cleared only after Openday receives a confirmed cloud-write success event.
 
+
+## 11+ / 13+ assessment formats and paper library
+
+Openday keeps admissions-test information in `data/assessments.json`, separate from examination-performance data. Cards and Performance use the same record. `assessments.html` explains formats, timings, subjects and curriculum coverage; `data/assessment-resources.json` indexes official familiarisation, school sample papers and labelled third-party resources. The library is link-and-metadata first rather than copying copyrighted/commercial papers without clear redistribution rights.
 
 ## Academic performance comparison
 
