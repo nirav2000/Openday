@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-09-30",
   "note": "School-published examination results used where DfE performance-table coverage is incomplete or where the school has published newer 2025/26 outcomes. DfE data remains separately available in data/performance.json.",
   "schools": {
     "St Paul's School": {
@@ -874,6 +874,121 @@
         "sources": {
           "gcse": "https://www.mtsn.org.uk/merchant-taylors-gcse-success/",
           "alevel": "https://www.mtsn.org.uk/academic-excellence/exam-results/"
+        }
+      }
+    },
+    "John Lyon School": {
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 17,
+          "grade98Percent": 41,
+          "grade97Percent": 62,
+          "subjectHighlights": [
+            {
+              "subject": "Mathematics",
+              "grade98Percent": 52
+            },
+            {
+              "subject": "English Language",
+              "grade98Percent": 45
+            },
+            {
+              "subject": "Biology",
+              "grade98Percent": 39
+            },
+            {
+              "subject": "Chemistry",
+              "grade98Percent": 38
+            },
+            {
+              "subject": "Physics",
+              "grade98Percent": 38
+            },
+            {
+              "subject": "History",
+              "grade98Percent": 50
+            },
+            {
+              "subject": "Geography",
+              "grade98Percent": 63
+            }
+          ],
+          "note": "2025 school-published headline and subject-highlight percentages. Full subject entry counts are not published on this page; the Results Archive combines these highlights with the official DfE subject table."
+        },
+        "sources": {
+          "gcse": "https://www.johnlyon.org/strong-gcse-results-at-john-lyon-school-following-record-a-level-success/"
+        }
+      }
+    },
+    "Mill Hill School": {
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 28,
+          "grade98Percent": 56,
+          "grade97Percent": 75,
+          "note": "2025 school-published headline results. Full subject counts are preserved in the Results Archive from Mill Hill's linked GCSE results PDF."
+        },
+        "alevel": {
+          "astarPercent": 25,
+          "astarAPercent": 50
+        },
+        "sources": {
+          "gcse": "https://www.millhill.org.uk/news/mill-hill-school-record-breaking-gcse-results-2025",
+          "alevel": "https://www.millhill.org.uk/news/mill-hill-school-a-level-results-2025"
+        }
+      }
+    },
+    "Pinner High School": {
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade97Percent": 34,
+          "subjectHighlights": [
+            {
+              "subject": "English Language",
+              "grade97Percent": 44
+            },
+            {
+              "subject": "Mathematics",
+              "grade97Percent": 44
+            },
+            {
+              "subject": "Combined Science",
+              "grade97Percent": 38
+            }
+          ],
+          "note": "Pinner's school page publishes 2025 headline and core-subject 9-7 percentages. Full subject grade counts remain the official DfE table in the Results Archive."
+        },
+        "sources": {
+          "gcse": "https://www.pinnerhighschool.org/about-us/examination-results/"
+        }
+      }
+    },
+    "Aldenham School": {
+      "2024/25": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade97Percent": 45,
+          "note": "Aldenham's 2025 school-published page states 45% of grades were 7 or above and over a quarter were grades 8-9; no complete school subject table was located."
+        },
+        "sources": {
+          "gcse": "https://aldenham.com/gcse-results-2025/"
+        }
+      }
+    },
+    "Winchester College": {
+      "2025/26": {
+        "sourceType": "school-published",
+        "gcse": {
+          "grade9Percent": 62,
+          "grade98Percent": 84,
+          "grade97Percent": 95,
+          "note": "Winchester's current exam-results page publishes 2025/26 headline GCSE percentages. Subject-level historical detail in the archive remains the official 2024/25 DfE snapshot."
+        },
+        "sources": {
+          "gcse": "https://www.winchestercollege.org/learning/exam-results-destinations/"
         }
       }
     }
