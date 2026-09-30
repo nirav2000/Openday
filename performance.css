@@ -185,3 +185,14 @@ button.school-state-icon.on.reject{color:#b94444}
   .school-state-icon{font-size:1.08rem;min-width:28px;height:28px}
   .school-icons{gap:1px}
 }
+
+
+/* v2.17 results archive + drag affordances */
+.header-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.archive-link{display:inline-block;margin-top:4px;color:var(--blue);font-size:.62rem;font-weight:850;text-decoration:none}
+.archive-link:hover{text-decoration:underline}
+.subject-compare-row[draggable="true"]>th{cursor:grab}
+.subject-compare-row.dragging{opacity:.45}
+.compare-detail-table th[data-subject-school]{cursor:grab;user-select:none}
+.compare-detail-table th[data-subject-school]:active,.subject-compare-row[draggable="true"]>th:active{cursor:grabbing}
+.compare-detail-table th.dragging{opacity:.45}
