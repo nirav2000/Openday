@@ -61,6 +61,7 @@
     eventOverrides:data?.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},
     performanceSchoolSets:data?.performanceSchoolSets&&typeof data.performanceSchoolSets==='object'?cleanForFirestore(data.performanceSchoolSets):{},
     performanceCompareOrder:Array.isArray(data?.performanceCompareOrder)?data.performanceCompareOrder.map(String):[],
+    performanceSubjectOrder:data?.performanceSubjectOrder&&typeof data.performanceSubjectOrder==='object'?cleanForFirestore(data.performanceSubjectOrder):{gcse:[],alevel:[]},
     mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?cleanForFirestore(data.mergeConflicts):{},
     updatedAt:asIso(data?.updatedAt)
   });
@@ -104,6 +105,7 @@
       eventOverrides:mergeMap('eventOverrides',a.eventOverrides,b.eventOverrides),
       performanceSchoolSets:mergeMap('performanceSchoolSets',a.performanceSchoolSets,b.performanceSchoolSets),
       performanceCompareOrder:aNewer?a.performanceCompareOrder:b.performanceCompareOrder,
+      performanceSubjectOrder:aNewer?a.performanceSubjectOrder:b.performanceSubjectOrder,
       mergeConflicts:conflicts,
       updatedAt:new Date(Math.max(at,bt)||Date.now()).toISOString()
     };
@@ -181,6 +183,10 @@
       performanceSchoolSets:mergeMap('performanceSchoolSets',base.performanceSchoolSets,local.performanceSchoolSets,remote.performanceSchoolSets),
       performanceCompareOrder:(()=>{
         const b=base.performanceCompareOrder||[],l=local.performanceCompareOrder||[],r=remote.performanceCompareOrder||[];
+        const lc=!same(l,b),rc=!same(r,b);return lc&&!rc?l:!lc&&rc?r:lc&&rc?l:r;
+      })(),
+      performanceSubjectOrder:(()=>{
+        const b=base.performanceSubjectOrder||{gcse:[],alevel:[]},l=local.performanceSubjectOrder||{gcse:[],alevel:[]},r=remote.performanceSubjectOrder||{gcse:[],alevel:[]};
         const lc=!same(l,b),rc=!same(r,b);return lc&&!rc?l:!lc&&rc?r:lc&&rc?l:r;
       })(),
       mergeConflicts:conflicts,
