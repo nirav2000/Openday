@@ -6,6 +6,19 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.17.0 — 2026-09-30
+
+- Added a **School Results Archive** containing structured snapshots of school-published examination data, with original source links and subject-level figures preserved for historical inspection.
+- Seeded the archive with the school-published 2024/25 data already held for St Paul's and Haberdashers' Boys, plus a full Merchant Taylors 2025 snapshot transcribed from the school's Results Summary 2025 PDF.
+- Merchant Taylors' 2025 archive now includes the full GCSE/IGCSE table, including Mathematics **111 Grade 9s / 170 entries** and French **35 Grade 9s / 103 entries**, plus the full A-level table.
+- Performance now prefers archived school-published subject tables over incomplete DfE subject extracts, while retaining genuinely separate qualifications such as **Additional Mathematics / FSMQ** alongside ordinary Mathematics.
+- The separate Additional Mathematics / FSMQ row is placed directly after Mathematics (with Statistics after it) in the default GCSE subject order.
+- Added **Snapshot ↗** links beneath school headers in qualification comparison tables where an archived school-published snapshot exists.
+- Added a dedicated **Results archive** screen with school/year/qualification filters and subject-level grade tables.
+- Added drag-and-drop reordering of **school columns inside the Subjects as the comparison metrics view**; the same school order is reused by the rest of the side-by-side comparison.
+- Added drag-and-drop reordering of **subject rows** in the subject comparison table. Custom GCSE/A-level subject orders are stored in private Openday state and synced between connected devices.
+- Existing rolled-up subject expansions continue to show source subjects as rows and schools as columns, so provenance remains comparison-friendly.
+
 ## 2.16.0 — 2026-09-29
 
 - Replaced the text sorting labels with compact triangle indicators: **▴▾** when a column is sortable but inactive, **▴** for ascending and **▾** for descending.
