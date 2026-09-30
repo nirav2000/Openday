@@ -1,6 +1,6 @@
 {
-  "version": "2.18.0",
+  "version": "2.19.0",
   "released": "2026-09-30",
   "channel": "main",
-  "summary": "Expand school results archives across tracked schools and move Version Lab preview behaviour into the shared Apps library."
+  "summary": "Add 11+/13+ assessment formats across cards and comparisons, plus provider guide and paper/reference library."
 }
