@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-09-28",
+    "updated": "2026-09-30",
     "entryYear": 2028,
     "note": "Times and booking availability can change. Always re-check the school page before travelling.",
     "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page.",
@@ -2619,6 +2619,53 @@
         "detail": "Competitive test ranking and the school’s oversubscription policy apply. A numerical cutoff for the selected cohort’s cycle is not verified. Do not treat a previous cohort’s score or a CAT result as a guaranteed offer.",
         "sourceUrl": "https://beths.bexley.sch.uk/year-7-admissions/",
         "checked": "2026-09-16"
+      }
+    },
+    {
+      "id": "whitmore-high",
+      "name": "Whitmore High School",
+      "type": "state",
+      "area": "Harrow",
+      "journey": 15,
+      "priority": 5,
+      "entry": "11+",
+      "event": "Year 7 open evening / visit",
+      "start": null,
+      "end": null,
+      "status": "tbc",
+      "bookingRequired": null,
+      "infoUrl": "https://www.whitmore.harrow.sch.uk/",
+      "bookingUrl": "https://www.whitmore.harrow.sch.uk/",
+      "note": "Added for academic comparison and open-day tracking. Current visit date not yet verified.",
+      "admission": {
+        "route": "11+ · September 2028 entry",
+        "deadline": "2027-10-31",
+        "summary": "31 Oct 2027 — submit Harrow secondary application",
+        "status": "rule-based",
+        "url": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "note": "Applications open September 2027."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-30",
+          "status": "unverified"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-30",
+          "status": "unverified"
+        },
+        "admission": {
+          "checked": "2026-09-30",
+          "status": "retrieved"
+        }
+      },
+      "academic": {
+        "summary": "No academic pass score — non-selective entry",
+        "kind": "non-selective",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "A CAT score is not an entrance requirement for ordinary Year 7 entry. Places depend on the admissions policy, including sibling and distance priorities.",
+        "sourceUrl": "https://www.harrow.gov.uk/schools-learning/apply-secondary-school-place",
+        "checked": "2026-09-30"
       }
     }
   ]
