@@ -33,33 +33,38 @@ const schoolListHas=(field,s)=>{const list=Array.isArray(state[field])?state[fie
 const schoolDecisionValues=s=>{const key=schoolStateKey(s),values=[...(Array.isArray(state.schoolDecisions?.[key])?state.schoolDecisions[key]:(state.schoolDecisions?.[key]?[state.schoolDecisions[key]]:[]))];for(const x of schoolGroup(s)){const legacy=state.schoolDecisions?.[x.id];for(const v of (Array.isArray(legacy)?legacy:(legacy?[legacy]:[])))if(v&&!values.includes(v))values.push(v)}return values};
 const schoolNote=s=>{const key=schoolStateKey(s);if(state.notes?.[key]!==undefined)return state.notes[key];for(const x of schoolGroup(s))if(String(state.notes?.[x.id]||'').trim())return state.notes[x.id];return''};
 const migrationDate=s=>s?.start?new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric'}).format(dateObj(s.start)):'date unknown';
-function migrateSchoolScopedState(catalog=allKnownSchools()){
+function canonicaliseSchoolScopedData(input,catalog=allKnownSchools()){
+  const out={...(input||{})};
+  for(const field of ['saved','watchBooking','visitedSchools','shortlistedSchools','rejectedSchools'])out[field]=Array.isArray(input?.[field])?[...input[field]]:[];
+  out.notes={...(input?.notes||{})};out.schoolDecisions=normaliseDecisionMap(input?.schoolDecisions);
   const groups=new Map();for(const s of catalog){const key=schoolStateKey(s);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(s)}
-  let changed=false;
   for(const [key,group] of groups){
-    const ids=group.map(s=>s.id);
+    const ids=new Set(group.map(s=>s.id));
     for(const field of ['saved','watchBooking','visitedSchools','shortlistedSchools','rejectedSchools']){
-      const list=Array.isArray(state[field])?state[field]:[],present=list.includes(key)||ids.some(id=>list.includes(id));
-      const next=list.filter(v=>v!==key&&!ids.includes(v));if(present)next.push(key);
-      if(JSON.stringify(next)!==JSON.stringify(list)){state[field]=[...new Set(next)];changed=true}
+      const list=out[field],present=list.includes(key)||list.some(v=>ids.has(v));
+      out[field]=[...new Set(list.filter(v=>v!==key&&!ids.has(v)).concat(present?[key]:[]))].sort();
     }
-    const decisions=[...(Array.isArray(state.schoolDecisions?.[key])?state.schoolDecisions[key]:(state.schoolDecisions?.[key]?[state.schoolDecisions[key]]:[]))];
-    for(const id of ids){const legacy=state.schoolDecisions?.[id];for(const v of (Array.isArray(legacy)?legacy:(legacy?[legacy]:[])))if(v&&!decisions.includes(v))decisions.push(v)}
-    if(decisions.length&&JSON.stringify(state.schoolDecisions?.[key])!==JSON.stringify(decisions)){state.schoolDecisions[key]=decisions;changed=true}
-    for(const id of ids)if(Object.prototype.hasOwnProperty.call(state.schoolDecisions||{},id)){delete state.schoolDecisions[id];changed=true}
-    const existing=String(state.notes?.[key]||'').trim(),legacyNotes=group.map(s=>({s,text:String(state.notes?.[s.id]||'').trim()})).filter(x=>x.text);
+    const decisions=[...(Array.isArray(out.schoolDecisions[key])?out.schoolDecisions[key]:[])];
+    for(const id of ids){for(const v of (Array.isArray(out.schoolDecisions[id])?out.schoolDecisions[id]:[]))if(v&&!decisions.includes(v))decisions.push(v);delete out.schoolDecisions[id]}
+    if(decisions.length)out.schoolDecisions[key]=decisions.sort();else delete out.schoolDecisions[key];
+    const existing=String(out.notes[key]||'').trim(),legacyNotes=group.map(s=>({s,text:String(out.notes[s.id]||'').trim()})).filter(x=>x.text);
     const unique=[];for(const item of legacyNotes)if(!unique.some(x=>x.text===item.text))unique.push(item);
     let merged=existing;
     if(!merged&&unique.length===1)merged=unique[0].text;
     else if(!merged&&unique.length>1)merged=unique.map(x=>`[${x.s.event||'Visit'} — ${migrationDate(x.s)}]\n${x.text}`).join('\n\n');
     else if(merged){for(const x of unique)if(x.text!==merged&&!merged.includes(x.text))merged+=`\n\n[Imported from ${x.s.event||'visit'} — ${migrationDate(x.s)}]\n${x.text}`}
-    if(merged&&state.notes?.[key]!==merged){state.notes[key]=merged;changed=true}
-    for(const id of ids)if(Object.prototype.hasOwnProperty.call(state.notes||{},id)){delete state.notes[id];changed=true}
+    if(merged)out.notes[key]=merged;else delete out.notes[key];
+    for(const id of ids)delete out.notes[id];
   }
-  if(changed)saveState();
-  return changed;
+  return out;
 }
-window.OpenDaySchoolState={key:schoolStateKey,group:schoolGroup,note:schoolNote,listHas:schoolListHas,decisionValues:schoolDecisionValues,migrate:()=>migrateSchoolScopedState(allKnownSchools())};
+function migrateSchoolScopedState(catalog=allKnownSchools()){
+  const canonical=canonicaliseSchoolScopedData(state,catalog),before=JSON.stringify(state),after=JSON.stringify(canonical);
+  if(before===after)return false;
+  for(const key of Object.keys(state))delete state[key];
+  Object.assign(state,canonical);saveState();return true;
+}
+window.OpenDaySchoolState={key:schoolStateKey,group:schoolGroup,note:schoolNote,listHas:schoolListHas,decisionValues:schoolDecisionValues,canonicaliseData:data=>canonicaliseSchoolScopedData(data,allKnownSchools()),migrate:()=>migrateSchoolScopedState(allKnownSchools())};
 const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
 const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${origin()}`:null;
 const inPrimaryRadius=s=>schoolPhase!=='primary'||primaryDistance===0||(Number.isFinite(s.distanceMiles)&&s.distanceMiles<=primaryDistance);
