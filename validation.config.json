@@ -1,0 +1,92 @@
+{
+  "ignore": [
+    "version-lab/snapshots",
+    "artifacts"
+  ],
+  "requireVersionInIndex": true,
+  "jsonSchemas": [
+    {
+      "file": "data/schools.json",
+      "path": [
+        "schools"
+      ],
+      "type": "array",
+      "minItems": 1
+    },
+    {
+      "file": "data/primary-schools.json",
+      "path": [
+        "schools"
+      ],
+      "type": "array",
+      "minItems": 1
+    },
+    {
+      "file": "data/performance.json",
+      "path": [
+        "schools"
+      ],
+      "type": "array",
+      "minItems": 1
+    },
+    {
+      "file": "data/assessments.json",
+      "path": [
+        "schools"
+      ],
+      "type": "object",
+      "minKeys": 1
+    },
+    {
+      "file": "data/assessment-resources.json",
+      "path": [
+        "resources"
+      ],
+      "type": "array",
+      "minItems": 1
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "readySelector": "#list .card",
+      "minCount": 1,
+      "assertions": [
+        {
+          "type": "count",
+          "selector": "#list .card",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "path": "/performance.html",
+      "readySelector": ".school-row",
+      "minCount": 1,
+      "assertions": [
+        {
+          "type": "count",
+          "selector": ".school-row",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "path": "/assessments.html",
+      "readySelector": "#schoolRows tr",
+      "minCount": 1,
+      "assertions": [
+        {
+          "type": "count",
+          "selector": "#schoolRows tr",
+          "min": 1
+        },
+        {
+          "type": "count",
+          "selector": "#resourceGrid .resource-card",
+          "min": 1
+        }
+      ]
+    }
+  ]
+}
