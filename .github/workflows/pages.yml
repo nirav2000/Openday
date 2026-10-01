@@ -11,7 +11,12 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  validate:
+    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@main
+    with:
+      config: validation.config.json
   deploy:
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -21,24 +26,6 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/configure-pages@v5
-      - name: Validate JavaScript
-        run: |
-          node --check app.js
-          node --check integrations.js
-          node --check version-lab/lab.js
-          node --check performance.js
-          node --check results-archive.js
-          node --check plugins/app-platform.js
-          node --check plugins/autosave.js
-          node --check plugins/firebase-token-sync.js
-          node --check plugins/developer-notes.js
-          node --check plugins/version-lab.js
-          node --check plugins/firebase-auth.js
-          node --check plugins/personal-updates.js
-          node --check plugins/public-overrides.js
-          node --check scripts/build-version-lab.mjs
-          python3 -m py_compile scripts/build-performance-data.py
-          node -e "JSON.parse(require('fs').readFileSync('data/schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/primary-schools.json','utf8'));JSON.parse(require('fs').readFileSync('data/enhancements.json','utf8'));JSON.parse(require('fs').readFileSync('data/performance.json','utf8'));JSON.parse(require('fs').readFileSync('data/published-results.json','utf8'));JSON.parse(require('fs').readFileSync('data/school-results-archive.json','utf8'));JSON.parse(require('fs').readFileSync('data/dfe-results-archive-2024-25.json','utf8'));JSON.parse(require('fs').readFileSync('version-lab/releases.json','utf8'));"
       - name: Validate semantic version
         run: |
           node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('version.json','utf8')).version;if(!/^\\d+\\.\\d+\\.\\d+$/.test(v))throw Error('version.json must contain SemVer x.y.z');const html=fs.readFileSync('index.html','utf8');if(!html.includes('v'+v)||!html.includes('?v='+v))throw Error('index.html version/cache bust does not match version.json');console.log('Release',v)"
