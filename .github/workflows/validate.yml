@@ -1,0 +1,16 @@
+name: Validate app
+
+on:
+  push:
+    branches: [main, validation/preflight]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  shared-validation:
+    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@main
+    with:
+      config: validation.config.json
