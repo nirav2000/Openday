@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.19.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.19.2**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -104,6 +104,10 @@ For candidate releases, use `validation/preflight` first. Promote the exact comm
 ## 11+ / 13+ assessment formats and paper library
 
 Openday keeps admissions-test information in `data/assessments.json`, separate from examination-performance data. Cards and Performance use the same record. `assessments.html` explains formats, timings, subjects and curriculum coverage; `data/assessment-resources.json` indexes official familiarisation, school sample papers and labelled third-party resources. The library is link-and-metadata first rather than copying copyrighted/commercial papers without clear redistribution rights.
+
+## School-level versus visit-level personal state
+
+Multiple open-day records can represent different dates for the same school. Openday therefore stores opinion/relationship fields against a canonical school key rather than an event ID. Notes, Saved, Visited, Shortlist/Rejected, Booking Watch and My View are school-level; Booked remains visit-level because a family may book one date but not another. Legacy event-scoped state is migrated automatically and conflicting legacy notes are preserved by combining them with event/date labels.
 
 ## Academic performance comparison
 
