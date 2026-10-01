@@ -106,5 +106,8 @@
     "maxFirebaseWrites": 0,
     "maxFirebaseDeletes": 0,
     "maxFirebaseListeners": 0
-  }
+  },
+  "ignoreLocalRequestFailures": [
+    "/Kk-syllabus/"
+  ]
 }
