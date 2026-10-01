@@ -6,6 +6,17 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.19.2 — 2026-10-01
+
+- Added a canonical **school-level state key** so several open-day cards for the same school share the same personal state.
+- **Notes, Saved, Visited, Shortlist/Rejected, Booking Watch and My View / What do we think?** are now shared across all event cards for that school.
+- **Booked this visit** deliberately remains event/date-specific.
+- Existing event-scoped values are migrated automatically. If different old event cards contain different notes, Openday combines them into the new shared school note with the original event/date labels rather than discarding either note.
+- Cloud-state refreshes re-run the migration so an older device cannot silently recreate separate per-event notes or decisions.
+- Notes/autosave now writes to the canonical school key, and the Notes view resolves canonical keys back to the school name.
+- Performance filters recognise both the new school key and legacy event IDs during transition.
+- Ark Academy's four Wembley open-day event IDs now resolve to one shared school state.
+
 ## 2.19.1 — 2026-10-01
 
 - Changed **My View → What do we think?** from single-choice to multi-select.
