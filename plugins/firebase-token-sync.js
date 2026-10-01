@@ -502,6 +502,6 @@
 
   const status=()=>({connected:isConnected(),ownerConnected:ownerConnected(),tokenConnected:tokenConnected(),hasRememberedToken:!!rememberedToken(),accessMode:accessMode(),live:!!unsubscribeRemote,lastSyncAt,lastError});
   const api={connect,push,schedule,refresh,status,isConnected,ownerConnected,tokenConnected,currentUser:()=>auth?.currentUser||null,loginUrl:cfg.loginUrl,ownerUid:()=>OWNER_UID,getToken,hasToken,setupLink,setMemorableToken,resetMemorableToken,forgetToken,deriveTokenHash,mergeStates,mergeThreeWay,normalise,readLocal};
-  if(window.__RELEASE_GATE__?.active)api.__test={applyRemote,comparableJSON,canonicaliseSchoolState};
+  if(window.__RELEASE_GATE__?.active)api.__test={applyRemote,comparableJSON,canonicaliseSchoolState,shouldWrite:(local,remote)=>comparableJSON(local)!==comparableJSON(remote)};
   window.OpenDaySync=api;window.AppPlatform?.register?.('firebase-token-sync',api);boot().catch(error=>emit('error',friendly(error)));
 })();
