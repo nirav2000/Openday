@@ -100,7 +100,8 @@
   const mergedFromChoices=(segments,choices)=>{let change=0;return segments.map(seg=>seg.type==='same'?seg.text:(choices[change++]==='cloud'?seg.cloud:seg.local)).join('')};
   function localSchoolName(id){
     const sets=typeof schoolSets!=='undefined'?schoolSets:{};const all=[...(sets.senior||[]),...(sets.primary||[]),...(typeof schools!=='undefined'?schools:[])];
-    return all.find(s=>s.id===id)?.name||id;
+    const byId=all.find(s=>s.id===id);if(byId)return byId.name;
+    const bySchoolKey=all.find(s=>window.OpenDaySchoolState?.key?.(s)===id);return bySchoolKey?.name||id;
   }
   function ensureLocalNotesDialog(){
     let d=document.querySelector('#localNotesDialog');if(d)return d;
@@ -299,7 +300,7 @@
     }
   }
   window.addEventListener('openday:sync-status',e=>updateSyncStatus(e.detail));
-  window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));updateConflictIndicator();nativeRender?.()}});
+  window.addEventListener('openday:cloud-state',e=>{if(typeof state==='object'&&e.detail){Object.assign(state,e.detail);localStorage.setItem('openDayState',JSON.stringify(state));const migrated=window.OpenDaySchoolState?.migrate?.();if(migrated)window.OpenDaySync?.schedule?.();updateConflictIndicator();nativeRender?.()}});
   window.addEventListener('openday:sync-write-success',()=>clearPendingNotes());
 
   function identifyOpenSchool(){const name=document.querySelector('#detailBody h2')?.textContent;if(!name||typeof schools==='undefined')return null;const dateText=document.querySelector('#detailBody .bigdate')?.textContent;return schools.find(s=>s.name===name&&(!dateText||fmtDate(s.start)===dateText))||schools.find(s=>s.name===name)||null}
@@ -312,9 +313,11 @@
     note.after(status);
     if(saveButton)saveButton.textContent=sync?.isConnected?.()?'Save note to cloud':'Save note';
     const persistLocal=()=>{
-      state.notes[school.id]=note.value;
+      const key=window.OpenDaySchoolState?.key?.(school)||school.id;
+      state.notes[key]=note.value;
+      for(const sibling of (window.OpenDaySchoolState?.group?.(school)||[]))delete state.notes[sibling.id];
       saveState();
-      markNotePending(school.id);
+      markNotePending(key);
       status.className='autosave-status';
       status.textContent=sync?.isConnected?.()?'Saved on device · not yet synced':'Saved on device · cloud not connected';
     };
