@@ -95,6 +95,12 @@ Cross-device saves use a **three-way merge** against the device's last known clo
 When a visit note changes, its school ID is added to a small device-local pending list. This list survives reloads but causes no Firestore traffic. While any notes are pending, the main page shows a green pending cloud save bar and the sync indicator gently pulses. **Save all to cloud** performs the same transactional private-state save as the school-level save action. Because the private state contains all notes, one successful write saves every pending note on that device, not just the currently open school. The pending list is cleared only after Openday receives a confirmed cloud-write success event.
 
 
+## Shared release validation
+
+Openday is the reference consumer of the shared Apps validator at `nirav2000/Apps/validation/`. `validation.config.json` defines its dataset and browser-smoke expectations. The validator recursively parses JavaScript/JSON, compiles Python, checks local HTML asset references and release-version consistency, then opens the main, Performance and Assessments pages in Playwright and requires real rendered data.
+
+For candidate releases, use `validation/preflight` first. Promote the exact commit that passed validation to `main`; the Pages workflow repeats the shared validation and will not deploy unless it passes. This keeps testing separate from production while avoiding a second, untested rebuild.
+
 ## 11+ / 13+ assessment formats and paper library
 
 Openday keeps admissions-test information in `data/assessments.json`, separate from examination-performance data. Cards and Performance use the same record. `assessments.html` explains formats, timings, subjects and curriculum coverage; `data/assessment-resources.json` indexes official familiarisation, school sample papers and labelled third-party resources. The library is link-and-metadata first rather than copying copyrighted/commercial papers without clear redistribution rights.
