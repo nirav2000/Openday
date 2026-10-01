@@ -6,6 +6,16 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.19.3 — 2026-10-01
+
+- Fixed the sync feedback loop visible as **Cloud change received → Saving to cloud → Saved, merged & synced → Cloud change received** repeating.
+- School-level state canonicalisation is now deterministic and reusable by the sync layer, so legacy event IDs cannot keep being reintroduced during a merge.
+- Sync compares substantive state while ignoring timestamp-only differences, so Firestore metadata/timestamp changes no longer look like user-data changes.
+- Live snapshots no longer rewrite local state when the only difference is `updatedAt`.
+- Added a no-op guard before Firestore writes: if local substantive state already matches the last cloud state, queued saves return as already synced instead of writing again.
+- Preserved the v2.19.2 migration behaviour for Ark Academy and other schools with multiple event cards.
+- Bumped the service-worker cache so iPhone/iPad browsers fetch the corrected sync code.
+
 ## 2.19.2 — 2026-10-01
 
 - Added a canonical **school-level state key** so several open-day cards for the same school share the same personal state.
