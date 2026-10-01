@@ -9,3 +9,6 @@
 .badge.shortlist{background:#e2f4ec;color:#11694e}.badge.rejected{background:#fbe8e8;color:#9e3939}.application-status{background:#f3f8f5;border-color:#cfe3d8}.application-status .decision-options button.reject.selected{background:#fbe8e8;color:#9e3939;border-color:#e4b4b4}
 
 .assessment-summary{margin:5px 0 0;color:var(--blue);font-size:.79rem;line-height:1.35;font-weight:750}.assessment-panel{margin:14px 0;padding:14px;border:1px solid #cfe0ee;border-radius:13px;background:#f6fbff}.assessment-panel small{color:var(--blue);font-weight:850;letter-spacing:.07em}.assessment-panel h3{margin:5px 0 6px!important}
+
+/* v2.19.1 multi-select My View */
+.decision-help{margin:0 0 8px;color:var(--muted);font-size:.78rem}.decision-options{display:flex;flex-wrap:wrap;gap:8px}.decision-options button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 11px;font-weight:750}.decision-options button.selected{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 0 0 2px #102a4312}.decision-options button[data-decision="not-for-us"].selected{background:#fbe8e8;color:#9e3939;border-color:#e4b4b4}.decision-options button[data-decision=""].selected{background:#eef2f5;color:var(--muted);border-color:#d7e0e7}
