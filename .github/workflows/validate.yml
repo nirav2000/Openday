@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: openday-validate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   shared-validation:
     uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@main
