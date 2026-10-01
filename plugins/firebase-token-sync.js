@@ -287,8 +287,10 @@
   function stopRemoteListener(){try{unsubscribeRemote?.()}catch{}unsubscribeRemote=null}
   function startRemoteListener(target=tokenRef){
     stopRemoteListener();if(!target)return;
+    window.FirebaseUsageMonitor?.listener(1,'token-state-live-listener','openday','kk-syllabus','(default)');
     unsubscribeRemote=FStore.onSnapshot(target,{includeMetadataChanges:true},snap=>{
       if(!snap.exists()||snap.metadata?.hasPendingWrites)return;
+      if(!snap.metadata?.fromCache)window.FirebaseUsageMonitor?.read(1,'token-live-snapshot-read','openday','kk-syllabus','(default)');
       const data=snap.data()||{};
       if(target===tokenRef&&(data.app!=='openday'||data.active!==true))return;
       const before=comparableJSON(readLocal());applyRemote(data.state||{});lastSyncAt=new Date().toISOString();lastError='';
