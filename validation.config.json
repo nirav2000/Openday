@@ -88,5 +88,17 @@
         }
       ]
     }
-  ]
+  ],
+  "releaseGate": {
+    "enabled": true,
+    "scenarioModule": "validation/openday-release-gate.mjs",
+    "path": "/",
+    "readySelector": "#list .card",
+    "allowExternalNetwork": false,
+    "maxExternalRequests": 12,
+    "quietMs": 400,
+    "timeoutMs": 3000,
+    "maxStateTransitions": 2,
+    "failOnPageErrors": true
+  }
 }
