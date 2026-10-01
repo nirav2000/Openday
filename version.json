@@ -1,6 +1,6 @@
 {
-  "version": "2.19.1",
+  "version": "2.19.2",
   "released": "2026-10-01",
   "channel": "main",
-  "summary": "Allow multiple simultaneous selections in My View / What do we think? while preserving legacy single-choice data."
+  "summary": "Share school-level notes, saved state, visited status, shortlist/reject, booking watch and My View across multiple open-day event cards; keep visit bookings date-specific."
 }
