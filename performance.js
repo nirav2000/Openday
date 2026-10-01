@@ -90,10 +90,12 @@
   };
   const compactYear=y=>String(y||'').replace('/','');
   const yearNumber=y=>Number(String(y||'').replace(/\D/g,''))||0;
-  const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));
+  const schoolSlug=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const schoolStateKey=school=>`school:${schoolSlug(school?.name)}:${schoolSlug(school?.area)}`;
+  const eventFlag=(school,set)=>set.has(schoolStateKey(school))||school.eventIds.some(id=>set.has(id));
   const assessmentFor=s=>assessmentDoc.schools?.[s.name]||null;
   const assessmentText=s=>assessmentFor(s)?.summary||'Format being checked';
-  const decisionFlag=(school,value)=>school.eventIds.some(id=>(decisions[id]||[]).includes(value));
+  const decisionFlag=(school,value)=>(decisions[schoolStateKey(school)]||[]).includes(value)||school.eventIds.some(id=>(decisions[id]||[]).includes(value));
   const metricForYear=(obj,field)=>{
     if(selectedYear==='latest')return latest(obj,field);
     const key=compactYear(selectedYear),row=obj?.[key];
