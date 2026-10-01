@@ -370,6 +370,16 @@
     writeLocal(local);
     if(!tokenRef&&ownerConnected())await recoverActiveTokenChannel();
     if(!tokenRef&&!ownerConnected()){lastLocal=JSON.stringify(local);emit('local','Saved on device · not connected');return false}
+    if(lastRemote){
+      try{
+        const prior=JSON.parse(lastRemote);
+        if(comparableJSON(local)===comparableJSON(prior)){
+          lastLocal=JSON.stringify(local);lastSyncAt=new Date().toISOString();lastError='';
+          emit('synced','Connected & synced · no changes to upload');
+          return true;
+        }
+      }catch{}
+    }
     emit('syncing','Saving to cloud…');
     try{
       const target=tokenRef||ref;
