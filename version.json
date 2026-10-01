@@ -1,6 +1,6 @@
 {
-  "version": "2.19.0",
-  "released": "2026-09-30",
+  "version": "2.19.1",
+  "released": "2026-10-01",
   "channel": "main",
-  "summary": "Add 11+/13+ assessment formats across cards and comparisons, plus provider guide and paper/reference library."
+  "summary": "Allow multiple simultaneous selections in My View / What do we think? while preserving legacy single-choice data."
 }
