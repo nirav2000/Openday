@@ -261,7 +261,7 @@ Promise.all([
   fetch('data/primary-schools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load primary school data');return r.json()}),
   fetch('data/enhancements.json',{cache:'no-store'}).then(r=>r.ok?r.json():({meta:{},schools:{}})),fetch('data/assessments.json',{cache:'no-store'}).then(r=>r.ok?r.json():({schools:{}})).catch(()=>({schools:{}}))
 ]).then(([senior,primary,e,assessments])=>{
-  schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;assessmentDoc=assessments||{schools:{}};const migrated=migrateSchoolScopedState(allKnownSchools());syncPrimaryDistanceUi();resetCalendarCursor();if(migrated)window.OpenDaySync?.push?.();
+  schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;assessmentDoc=assessments||{schools:{}};const migrated=migrateSchoolScopedState(allKnownSchools());syncPrimaryDistanceUi();resetCalendarCursor();if(migrated)void window.OpenDaySync?.push?.().catch?.(()=>{});
   if(window.OpenDayCatalog)applyCloudCatalog(window.OpenDayCatalog);else render();checkBookingNotifications();
   const oldest=[senior.meta?.updated,primary.meta?.updated].filter(Boolean).sort()[0];if(oldest&&new Date()-new Date(oldest)>30*864e5){$('#notice').hidden=false;$('#notice').textContent='Some school details were last reviewed over 30 days ago. Re-check dates before making plans.'}
 }).catch(e=>{$('#list').innerHTML=`<p class="empty">${e.message}. Please refresh.</p>`});
