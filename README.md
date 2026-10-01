@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.19.3**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.20.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -82,6 +82,8 @@ Openday is deliberately local-first and low-read/write:
 
 This keeps typing, scrolling, filtering and browsing out of Firestore billing.
 
+
+For the staged cleanup/refactor plan, see [`ARCHITECTURE_SIMPLIFICATION.md`](ARCHITECTURE_SIMPLIFICATION.md).
 
 ## Release safety gate
 
