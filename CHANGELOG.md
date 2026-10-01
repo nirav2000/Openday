@@ -6,6 +6,19 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.20.0 — 2026-10-01
+
+- Adopted the shared **Apps Release Gate & App Validation** framework rather than hard-coding release tooling into OpenDay.
+- Added an OpenDay-specific isolated regression scenario covering Ark Academy's four-event migration, school-level state preservation, multi-select My View state, event-specific booking, note preservation and UI display.
+- Added **sync quiescence** checks: equivalent legacy snapshots must cause zero local cloud-change events and zero scheduled writes; one substantive remote change must apply once and then become a no-op.
+- Added per-release request/payload and Firebase-operation budgets plus a machine-readable `release-gate-report.json` CI artifact.
+- Added automatic `validation/preflight` → shared gate → exact-SHA fast-forward to `main`; `main` repeats the gate before Pages deployment.
+- Hardened local-first sync so unavailable Firebase cannot surface unhandled migration/scheduled-sync failures.
+- Instrumented live Firestore listener creation and server-delivered listener snapshots through the shared Firebase Usage Monitor.
+- Added the shared safe load-test harness for bounded staging/local concurrency tests; production targets require explicit opt-in.
+- Added `ARCHITECTURE_SIMPLIFICATION.md` with a staged cleanup plan. No structural refactor is included in this release.
+- Updated the runtime documentation to reflect the current live-listener sync model and monitoring layers.
+
 ## 2.19.3 — 2026-10-01
 
 - Fixed the sync feedback loop visible as **Cloud change received → Saving to cloud → Saved, merged & synced → Cloud change received** repeating.
