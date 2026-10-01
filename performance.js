@@ -27,7 +27,8 @@
     a8:'Attainment 8',engmath5:'Eng & maths 5+',p8:'P8 latest',alevel:'A-level',fsm:'FSM',wholeEal:'EAL',sen:'SEN support',ehcp:'EHCP',absence:'Absence',persistent:'PA'
   };
   const COLUMN_HELP={
-    school:'School name and area. Click to sort alphabetically; drag another heading to move that column.',\n    assessment:'Current published admissions assessment route; descriptive admissions data, not a performance score.',
+    school:'School name and area. Click to sort alphabetically; drag another heading to move that column.',
+    assessment:'Current published admissions assessment route; descriptive admissions data, not a performance score.',
     gcseYear:'The academic year used for the GCSE top-grade figures shown in this row. “Latest” can differ by school because publication dates differ.',
     grade9pct:'Percentage of all covered GCSE / IGCSE grade awards that are grade 9. This is awards, not pupils.',
     grade9count:'Number of grade 9 awards in the covered result set. One pupil normally takes several GCSEs, so one pupil can contribute several grade 9 awards.',
@@ -89,7 +90,9 @@
   };
   const compactYear=y=>String(y||'').replace('/','');
   const yearNumber=y=>Number(String(y||'').replace(/\D/g,''))||0;
-  const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));\n  const assessmentFor=s=>assessmentDoc.schools?.[s.name]||null;\n  const assessmentText=s=>assessmentFor(s)?.summary||'Format being checked';
+  const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));
+  const assessmentFor=s=>assessmentDoc.schools?.[s.name]||null;
+  const assessmentText=s=>assessmentFor(s)?.summary||'Format being checked';
   const decisionFlag=(school,value)=>school.eventIds.some(id=>decisions[id]===value);
   const metricForYear=(obj,field)=>{
     if(selectedYear==='latest')return latest(obj,field);
@@ -317,7 +320,8 @@
   function metricCell(id,s,m){
     const profile=s.gcseGradeProfile||{};
     let html='—';
-    if(id==='assessment')html='<span class="assessment-cell"><b>'+esc(assessmentText(s))+'</b><span>'+(assessmentFor(s)?.checked?'checked '+esc(assessmentFor(s).checked):'research pending')+'</span></span>';\n    else if(id==='gcseYear'){
+    if(id==='assessment')html='<span class="assessment-cell"><b>'+esc(assessmentText(s))+'</b><span>'+(assessmentFor(s)?.checked?'checked '+esc(assessmentFor(s).checked):'research pending')+'</span></span>';
+    else if(id==='gcseYear'){
       const year=yearLabel(m.grade9pct?.year||m.grade97pct?.year||m.a8?.year||profile.year||''),cohort=gcseCohort(s,year);
       html='<span class="gcse-year-cell"><b>'+esc(year||'—')+'</b><span title="'+esc(cohort?.source||'Cohort size not published in the available source')+'">'+(cohort?(cohort.inferred?'≈':'')+fmt(cohort.value)+' pupils':'cohort —')+'</span></span>';
     }
