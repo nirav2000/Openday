@@ -74,7 +74,7 @@ Openday is deliberately local-first and low-read/write:
 - school catalogues are deployed JSON and are loaded once when the app opens;
 - a remembered-token session reads its single private state document once when connecting;
 - global reported date/time corrections are fetched once when the app opens;
-- there are no realtime Firestore listeners;
+- one realtime listener is used only for the single active private-state capability document while cross-device sync is connected; listener creation and each server-delivered snapshot are attributed to the shared Firebase Usage Monitor;
 - **Refresh cloud data** performs an explicit read without making a change;
 - visit notes save locally while typing; changed notes are tracked persistently as pending, shown on the main page, and **any deliberate private-state cloud save sends all pending notes together**;
 - every deliberate private-state cloud save performs one transactional read of the latest private state and one write of the merged result (with automatic transaction retries only if another write races it);
@@ -82,6 +82,37 @@ Openday is deliberately local-first and low-read/write:
 
 This keeps typing, scrolling, filtering and browsing out of Firestore billing.
 
+
+## Release safety gate
+
+OpenDay is the reference consumer of the shared `nirav2000/Apps/validation/` release gate. The reusable engine lives in the Apps repository; OpenDay keeps only its own scenario/config in `validation.config.json` and `validation/openday-release-gate.mjs`.
+
+A candidate release must pass:
+
+- recursive JavaScript/JSON/Python validation;
+- browser smoke tests for the main, Performance and Assessments pages;
+- legacy-state migration/data-preservation checks;
+- the four-event Ark Academy school-identity regression fixture;
+- multi-select My View persistence;
+- sync convergence and **quiescence**: repeated equivalent snapshots must produce no further state changes or scheduled writes;
+- a one-change convergence test: one real remote change applies once, then repeated identical snapshots are no-ops;
+- request/payload budgets and zero live Firebase activity in the isolated test;
+- release-gate report generation.
+
+Future application changes should use the automated `validation/preflight` route. The exact candidate SHA is promoted to `main` only after the shared gate passes; `main` then runs the gate again before GitHub Pages deployment.
+
+Release tests use isolated browser storage and blocked external networking. They must never use or mutate production Firestore/user data.
+
+## Runtime monitoring and load
+
+OpenDay already uses the shared Apps monitoring layers:
+
+- **App Monitor** records app/session/device activity and distinguishes foreground from background tabs.
+- **Firebase Usage Monitor** attributes Firestore reads, writes, deletes and listener activity by app/project/device. OpenDay's transaction reads/writes, live-listener creation and server-delivered listener snapshots are instrumented.
+- **Release Gate metrics** record local request count, local payload bytes, attempted external requests, state transitions and test-time Firebase operations per CI run.
+- **Shared bounded load-test harness** lives in `Apps/validation/load-test.mjs` / `safe-load-test.yml`. It is staging/local-first and refuses an unapproved production target.
+
+The load-test harness should be used against a preview/staging backend before deliberate concurrency testing. Production private data is not a load-test fixture.
 
 ## Local notes and lossless merge recovery
 
