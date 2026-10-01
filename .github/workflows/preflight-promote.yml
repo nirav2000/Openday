@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   actions: write
+  pages: write
 
 concurrency:
   group: openday-preflight-promote
@@ -28,6 +29,11 @@ jobs:
         with:
           ref: validation/preflight
           fetch-depth: 0
+
+      - name: Enforce workflow-only Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${{ github.repository }}/pages" -f build_type=workflow >/dev/null
 
       - name: Fast-forward exact tested SHA to main
         run: |
