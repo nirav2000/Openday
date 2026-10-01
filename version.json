@@ -1,6 +1,6 @@
 {
-  "version": "2.19.2",
+  "version": "2.19.3",
   "released": "2026-10-01",
   "channel": "main",
-  "summary": "Share school-level notes, saved state, visited status, shortlist/reject, booking watch and My View across multiple open-day event cards; keep visit bookings date-specific."
+  "summary": "Fix repeated cloud-sync feedback loop caused by school-state migration and timestamp-only Firestore snapshots."
 }
