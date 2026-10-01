@@ -24,6 +24,41 @@ const statusClass=s=>historical(s)?'historical':(s.status||'research');
 const schoolExtra=s=>enhancements.schools?.[s.id]||{};
 const schoolAssessment=s=>assessmentDoc.schools?.[s.name]||null;
 const assessmentCompact=s=>schoolPhase==='primary'?'':(schoolAssessment(s)?.cardLabel||schoolAssessment(s)?.summary||'Assessment format being checked');
+const schoolSlug=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const schoolStateKey=s=>`school:${schoolSlug(s?.name)}:${schoolSlug(s?.area)}`;
+const allKnownSchools=()=>[...(schoolSets.senior||[]),...(schoolSets.primary||[])];
+const sameSchool=(a,b)=>schoolStateKey(a)===schoolStateKey(b);
+const schoolGroup=s=>allKnownSchools().filter(x=>sameSchool(x,s));
+const schoolListHas=(field,s)=>{const list=Array.isArray(state[field])?state[field]:[];return list.includes(schoolStateKey(s))||schoolGroup(s).some(x=>list.includes(x.id))};
+const schoolDecisionValues=s=>{const key=schoolStateKey(s),values=[...(Array.isArray(state.schoolDecisions?.[key])?state.schoolDecisions[key]:(state.schoolDecisions?.[key]?[state.schoolDecisions[key]]:[]))];for(const x of schoolGroup(s)){const legacy=state.schoolDecisions?.[x.id];for(const v of (Array.isArray(legacy)?legacy:(legacy?[legacy]:[])))if(v&&!values.includes(v))values.push(v)}return values};
+const schoolNote=s=>{const key=schoolStateKey(s);if(state.notes?.[key]!==undefined)return state.notes[key];for(const x of schoolGroup(s))if(String(state.notes?.[x.id]||'').trim())return state.notes[x.id];return''};
+const migrationDate=s=>s?.start?new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric'}).format(dateObj(s.start)):'date unknown';
+function migrateSchoolScopedState(catalog=allKnownSchools()){
+  const groups=new Map();for(const s of catalog){const key=schoolStateKey(s);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(s)}
+  let changed=false;
+  for(const [key,group] of groups){
+    const ids=group.map(s=>s.id);
+    for(const field of ['saved','watchBooking','visitedSchools','shortlistedSchools','rejectedSchools']){
+      const list=Array.isArray(state[field])?state[field]:[],present=list.includes(key)||ids.some(id=>list.includes(id));
+      const next=list.filter(v=>v!==key&&!ids.includes(v));if(present)next.push(key);
+      if(JSON.stringify(next)!==JSON.stringify(list)){state[field]=[...new Set(next)];changed=true}
+    }
+    const decisions=[...(Array.isArray(state.schoolDecisions?.[key])?state.schoolDecisions[key]:(state.schoolDecisions?.[key]?[state.schoolDecisions[key]]:[]))];
+    for(const id of ids){const legacy=state.schoolDecisions?.[id];for(const v of (Array.isArray(legacy)?legacy:(legacy?[legacy]:[])))if(v&&!decisions.includes(v))decisions.push(v)}
+    if(decisions.length&&JSON.stringify(state.schoolDecisions?.[key])!==JSON.stringify(decisions)){state.schoolDecisions[key]=decisions;changed=true}
+    for(const id of ids)if(Object.prototype.hasOwnProperty.call(state.schoolDecisions||{},id)){delete state.schoolDecisions[id];changed=true}
+    const existing=String(state.notes?.[key]||'').trim(),legacyNotes=group.map(s=>({s,text:String(state.notes?.[s.id]||'').trim()})).filter(x=>x.text);
+    const unique=[];for(const item of legacyNotes)if(!unique.some(x=>x.text===item.text))unique.push(item);
+    let merged=existing;
+    if(!merged&&unique.length===1)merged=unique[0].text;
+    else if(!merged&&unique.length>1)merged=unique.map(x=>`[${x.s.event||'Visit'} — ${migrationDate(x.s)}]\n${x.text}`).join('\n\n');
+    else if(merged){for(const x of unique)if(x.text!==merged&&!merged.includes(x.text))merged+=`\n\n[Imported from ${x.s.event||'visit'} — ${migrationDate(x.s)}]\n${x.text}`}
+    if(merged&&state.notes?.[key]!==merged){state.notes[key]=merged;changed=true}
+    for(const id of ids)if(Object.prototype.hasOwnProperty.call(state.notes||{},id)){delete state.notes[id];changed=true}
+  }
+  if(changed)saveState();
+  return changed;
+}
 const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
 const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${origin()}`:null;
 const inPrimaryRadius=s=>schoolPhase!=='primary'||primaryDistance===0||(Number.isFinite(s.distanceMiles)&&s.distanceMiles<=primaryDistance);
@@ -37,9 +72,9 @@ function filteredSchools(){
     const text=`${s.name} ${s.area} ${s.event} ${s.type} ${s.admission?.summary||''} ${s.admission?.route||''} ${extra.travel?.transitText||''}`.toLowerCase();
     if(q&&!text.includes(q))return false;
     if(!inPrimaryRadius(s))return false;
-    if(filter==='shortlist')return (state.shortlistedSchools||[]).includes(s.id);
-    if(filter==='rejected')return (state.rejectedSchools||[]).includes(s.id);
-    if(filter==='saved')return state.saved.includes(s.id);
+    if(filter==='shortlist')return schoolListHas('shortlistedSchools',s);
+    if(filter==='rejected')return schoolListHas('rejectedSchools',s);
+    if(filter==='saved')return schoolListHas('saved',s);
     if(filter==='upcoming'){const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}
     if(filter==='tbc')return isTbcSchool(s);
     if(['state','grammar','independent'].includes(filter))return filter==='state'?['state','part-selective'].includes(s.type):s.type===filter;
@@ -94,34 +129,36 @@ function card(s){
   if(historical(s)){const warning=document.createElement('p');warning.className='historical-note';warning.textContent='Previous-year date — use as a planning guide only.';event.after(warning)}
   if(s.admission){const deadline=document.createElement('p');deadline.className='deadline';deadline.textContent=`Apply: ${s.admission.summary}`;event.after(deadline)}
   if(s.academic){const score=document.createElement('p');score.className='score-summary';score.textContent=s.academic.summary;event.after(score)}
-  const badges=n.querySelector('.badges');badges.innerHTML=`<span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span>${(state.shortlistedSchools||[]).includes(s.id)?'<span class="badge shortlist">shortlist</span>':''}${(state.rejectedSchools||[]).includes(s.id)?'<span class="badge rejected">rejected</span>':''}${state.watchBooking.includes(s.id)?'<span class="badge watch">watching booking</span>':''}`;
-  const save=n.querySelector('.save');save.textContent=state.saved.includes(s.id)?'♥':'♡';save.classList.toggle('on',state.saved.includes(s.id));save.onclick=()=>toggleSave(s.id);
+  const badges=n.querySelector('.badges');badges.innerHTML=`<span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span>${schoolListHas('shortlistedSchools',s)?'<span class="badge shortlist">shortlist</span>':''}${schoolListHas('rejectedSchools',s)?'<span class="badge rejected">rejected</span>':''}${schoolListHas('watchBooking',s)?'<span class="badge watch">watching booking</span>':''}`;
+  const save=n.querySelector('.save');save.textContent=schoolListHas('saved',s)?'♥':'♡';save.classList.toggle('on',schoolListHas('saved',s));save.onclick=()=>toggleSave(s);
   n.querySelector('.details').onclick=()=>showDetail(s);
   const book=n.querySelector('.book');if(s.bookingUrl){book.href=s.bookingUrl;book.textContent=s.bookingRequired===false?'Info ↗':s.bookingRequired===true?'Book ↗':'Check event ↗'}else book.remove();
   if(extra.bookingWatch?.status==='user-reported-unavailable'&&book){book.textContent='Check spaces ↗'}
   return n;
 }
 
-function toggleSave(id){state.saved=state.saved.includes(id)?state.saved.filter(x=>x!==id):[...state.saved,id];saveState();window.OpenDaySync?.push?.();render()}
-function setSchoolDecision(id,value){
-  const current=new Set(Array.isArray(state.schoolDecisions?.[id])?state.schoolDecisions[id]:(state.schoolDecisions?.[id]?[state.schoolDecisions[id]]:[]));
+function toggleSchoolMembership(field,s){
+  const key=schoolStateKey(s),ids=new Set(schoolGroup(s).map(x=>x.id)),list=Array.isArray(state[field])?state[field]:[],on=schoolListHas(field,s);
+  state[field]=[...new Set(list.filter(x=>x!==key&&!ids.has(x)).concat(on?[]:[key]))];
+}
+function toggleSave(s){toggleSchoolMembership('saved',s);saveState();window.OpenDaySync?.push?.();render()}
+function setSchoolDecision(s,value){
+  const key=schoolStateKey(s),current=new Set(schoolDecisionValues(s));
   if(!value)current.clear();else if(current.has(value))current.delete(value);else current.add(value);
-  if(current.size)state.schoolDecisions[id]=[...current];else delete state.schoolDecisions[id];
-  saveState();window.OpenDaySync?.push?.();showDetail(schools.find(s=>s.id===id));render();
+  for(const x of schoolGroup(s))delete state.schoolDecisions[x.id];
+  if(current.size)state.schoolDecisions[key]=[...current];else delete state.schoolDecisions[key];
+  saveState();window.OpenDaySync?.push?.();showDetail(s);render();
 }
-function toggleVisited(id){
-  state.visitedSchools=Array.isArray(state.visitedSchools)?state.visitedSchools:[];
-  state.visitedSchools=state.visitedSchools.includes(id)?state.visitedSchools.filter(x=>x!==id):[...state.visitedSchools,id];
-  saveState();window.OpenDaySync?.push?.();showDetail(schools.find(s=>s.id===id));render();
+function toggleVisited(s){
+  toggleSchoolMembership('visitedSchools',s);
+  saveState();window.OpenDaySync?.push?.();showDetail(s);render();
 }
-function setApplicationStatus(id,status){
-  state.shortlistedSchools=Array.isArray(state.shortlistedSchools)?state.shortlistedSchools:[];
-  state.rejectedSchools=Array.isArray(state.rejectedSchools)?state.rejectedSchools:[];
-  state.shortlistedSchools=state.shortlistedSchools.filter(x=>x!==id);
-  state.rejectedSchools=state.rejectedSchools.filter(x=>x!==id);
-  if(status==='shortlist')state.shortlistedSchools.push(id);
-  if(status==='rejected')state.rejectedSchools.push(id);
-  saveState();window.OpenDaySync?.push?.();showDetail(schools.find(s=>s.id===id));render();
+function setApplicationStatus(s,status){
+  const key=schoolStateKey(s),ids=new Set(schoolGroup(s).map(x=>x.id));
+  for(const field of ['shortlistedSchools','rejectedSchools'])state[field]=(Array.isArray(state[field])?state[field]:[]).filter(x=>x!==key&&!ids.has(x));
+  if(status==='shortlist')state.shortlistedSchools.push(key);
+  if(status==='rejected')state.rejectedSchools.push(key);
+  saveState();window.OpenDaySync?.push?.();showDetail(s);render();
 }
 function toggleWatch(id){
   state.watchBooking=state.watchBooking.includes(id)?state.watchBooking.filter(x=>x!==id):[...state.watchBooking,id];
@@ -129,7 +166,7 @@ function toggleWatch(id){
   if(state.watchBooking.includes(id)&&'Notification'in window&&Notification.permission==='default')Notification.requestPermission();
   showDetail(schools.find(s=>s.id===id)); render();
 }
-function updateCounts(){const today=startOfToday(),scoped=schools.filter(inPrimaryRadius);$('#upcomingCount').textContent=scoped.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).length;$('#savedCount').textContent=state.saved.filter(id=>scoped.some(s=>s.id===id)).length;$('#bookedCount').textContent=scoped.filter(s=>state.booked[s.id]).length}
+function updateCounts(){const today=startOfToday(),scoped=schools.filter(inPrimaryRadius);$('#upcomingCount').textContent=scoped.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).length;$('#savedCount').textContent=new Set(scoped.filter(s=>schoolListHas('saved',s)).map(schoolStateKey)).size;$('#bookedCount').textContent=scoped.filter(s=>state.booked[s.id]).length}
 
 function alternateRows(s){
   const extra=schoolExtra(s);
@@ -149,22 +186,22 @@ function travelHtml(s){
 }
 function bookingWatchHtml(s){
   const w=schoolExtra(s).bookingWatch;if(!w)return'';
-  const watching=state.watchBooking.includes(s.id);
+  const watching=schoolListHas('watchBooking',s);
   return `<section class="watch-panel"><small>BOOKING WATCH</small><h3>${w.label||'Watch booking'}</h3><p>${w.message||''}</p><div class="modal-actions"><button id="watchBooking" class="${watching?'watching':''}">${watching?'Watching ✓':'Watch booking'}</button>${w.url?`<a href="${w.url}" target="_blank" rel="noopener">Check booking page ↗</a>`:''}</div><p class="sources">The app can remember this watch and alert when refreshed data says booking is open. Background monitoring requires an external scheduled checker.</p></section>`;
 }
 
 function showDetail(s){
   if(!s)return;
-  const booked=!!state.booked[s.id],visited=(state.visitedSchools||[]).includes(s.id);
+  const booked=!!state.booked[s.id],visited=schoolListHas('visitedSchools',s),decisionValues=schoolDecisionValues(s),sharedKey=schoolStateKey(s);
   const shown=displayStart(s),dateNote=historical(s)?`<p class="historical-note">This is the most recent previous-year date we have. The current-year date is still being checked.</p>`:'';
-  $('#detailBody').innerHTML=`<div class="detail-inner"><div class="badges"><span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span></div><h2>${s.name}</h2><p class="meta">${s.area}${s.postcode?` · ${s.postcode}`:''} · ${s.entry} entry</p><p class="bigdate">${historical(s)?'Last known: ':''}${fmtDate(shown)}</p>${dateNote}<p>${s.event} · ${s.start?fmtTime(s.start,s.end):historical(s)?'Current time/date not yet verified':'Current date and time being checked'}</p>${travelHtml(s)}${schoolPhase==='senior'?`<section class="assessment-panel"><small>11+ / 13+ ASSESSMENT</small><h3>${assessmentCompact(s)}</h3><div class="admission-links">${schoolAssessment(s)?.sourceUrl?`<a href="${schoolAssessment(s).sourceUrl}" target="_blank" rel="noopener">Assessment source ↗</a>`:''}<a href="assessments.html">Format, timings & papers →</a></div></section>`:''}<section class="other-dates"><small>OTHER VISITS</small><h3>Other dates & visit options</h3>${alternatesHtml(s)}</section>${bookingWatchHtml(s)}${s.admission?`<section class="admission"><small>ENTRY ROUTE</small><h3>${s.admission.route}</h3><p><b>${s.admission.summary}</b></p><p>${s.admission.note}</p><div class="admission-links"><a href="${s.admission.url}" target="_blank" rel="noopener">Official admission page ↗</a>${s.admission.secondary?`<a href="${s.admission.secondary.url}" target="_blank" rel="noopener">${s.admission.secondary.label} ↗</a>`:''}</div></section>`:''}<div class="detail-grid"><div><small>Booking</small><b>${s.bookingRequired===true?'Required':s.bookingRequired===false?'Not required':'Check school'}</b></div><div><small>Priority</small><b>${'★'.repeat(s.priority)}${'☆'.repeat(5-s.priority)}</b></div></div><p>${s.note}</p><section class="decision-panel application-status"><small>APPLICATION STATUS</small><h3>Keep track of the school</h3><div class="decision-options"><button type="button" data-application-status="shortlist" class="${(state.shortlistedSchools||[]).includes(s.id)?'selected':''}">Shortlist</button><button type="button" data-application-status="rejected" class="${(state.rejectedSchools||[]).includes(s.id)?'selected reject':''}">Reject</button><button type="button" data-application-status="" class="${!(state.shortlistedSchools||[]).includes(s.id)&&!(state.rejectedSchools||[]).includes(s.id)?'selected':''}">No status</button></div></section><section class="decision-panel"><small>MY VIEW</small><h3>What do we think?</h3><p class="decision-help">Select as many as apply.</p><div class="decision-options"><button type="button" aria-pressed="${(state.schoolDecisions?.[s.id]||[]).includes('visit-again')}" data-decision="visit-again" class="${(state.schoolDecisions?.[s.id]||[]).includes('visit-again')?'selected':''}">Want to visit again</button><button type="button" aria-pressed="${(state.schoolDecisions?.[s.id]||[]).includes('liked')}" data-decision="liked" class="${(state.schoolDecisions?.[s.id]||[]).includes('liked')?'selected':''}">Liked</button><button type="button" aria-pressed="${(state.schoolDecisions?.[s.id]||[]).includes('try-for')}" data-decision="try-for" class="${(state.schoolDecisions?.[s.id]||[]).includes('try-for')?'selected':''}">Want to try for</button><button type="button" aria-pressed="${(state.schoolDecisions?.[s.id]||[]).includes('not-for-us')}" data-decision="not-for-us" class="${(state.schoolDecisions?.[s.id]||[]).includes('not-for-us')?'selected':''}">Not for us</button><button type="button" aria-pressed="${!(state.schoolDecisions?.[s.id]||[]).length}" data-decision="" class="${!(state.schoolDecisions?.[s.id]||[]).length?'selected':''}">Undecided</button></div></section><label class="check"><input id="visited" type="checkbox" ${visited?'checked':''}> I visited this school</label><label class="check"><input id="booked" type="checkbox" ${booked?'checked':''}> I have booked this visit</label><h3>Visit notes</h3><textarea id="note" class="note" placeholder="Questions to ask, impressions, travel notes…">${state.notes[s.id]||''}</textarea><div class="modal-actions"><a class="primary" href="${s.infoUrl}" target="_blank" rel="noopener">School information ↗</a><a href="performance.html#school=${encodeURIComponent(s.id)}">Performance ↗</a>${s.bookingUrl?`<a href="${s.bookingUrl}" target="_blank" rel="noopener">Booking page ↗</a>`:''}${s.start?'<button id="calendar">Add this visit</button>':''}<button id="saveNote">Save notes</button></div><p class="sources">Dates and booking availability can change. Check the school page before travelling.</p></div>`;
-  $('#visited').onchange=()=>toggleVisited(s.id);
+  $('#detailBody').innerHTML=`<div class="detail-inner"><div class="badges"><span class="badge">${s.type.replace('-',' ')}</span><span class="badge ${statusClass(s)}">${statusLabel(s)}</span></div><h2>${s.name}</h2><p class="meta">${s.area}${s.postcode?` · ${s.postcode}`:''} · ${s.entry} entry</p><p class="bigdate">${historical(s)?'Last known: ':''}${fmtDate(shown)}</p>${dateNote}<p>${s.event} · ${s.start?fmtTime(s.start,s.end):historical(s)?'Current time/date not yet verified':'Current date and time being checked'}</p>${travelHtml(s)}${schoolPhase==='senior'?`<section class="assessment-panel"><small>11+ / 13+ ASSESSMENT</small><h3>${assessmentCompact(s)}</h3><div class="admission-links">${schoolAssessment(s)?.sourceUrl?`<a href="${schoolAssessment(s).sourceUrl}" target="_blank" rel="noopener">Assessment source ↗</a>`:''}<a href="assessments.html">Format, timings & papers →</a></div></section>`:''}<section class="other-dates"><small>OTHER VISITS</small><h3>Other dates & visit options</h3>${alternatesHtml(s)}</section>${bookingWatchHtml(s)}${s.admission?`<section class="admission"><small>ENTRY ROUTE</small><h3>${s.admission.route}</h3><p><b>${s.admission.summary}</b></p><p>${s.admission.note}</p><div class="admission-links"><a href="${s.admission.url}" target="_blank" rel="noopener">Official admission page ↗</a>${s.admission.secondary?`<a href="${s.admission.secondary.url}" target="_blank" rel="noopener">${s.admission.secondary.label} ↗</a>`:''}</div></section>`:''}<div class="detail-grid"><div><small>Booking</small><b>${s.bookingRequired===true?'Required':s.bookingRequired===false?'Not required':'Check school'}</b></div><div><small>Priority</small><b>${'★'.repeat(s.priority)}${'☆'.repeat(5-s.priority)}</b></div></div><p>${s.note}</p><section class="decision-panel application-status"><small>APPLICATION STATUS</small><h3>Keep track of the school</h3><div class="decision-options"><button type="button" data-application-status="shortlist" class="${schoolListHas('shortlistedSchools',s)?'selected':''}">Shortlist</button><button type="button" data-application-status="rejected" class="${schoolListHas('rejectedSchools',s)?'selected reject':''}">Reject</button><button type="button" data-application-status="" class="${!schoolListHas('shortlistedSchools',s)&&!schoolListHas('rejectedSchools',s)?'selected':''}">No status</button></div></section><section class="decision-panel"><small>MY VIEW</small><h3>What do we think?</h3><p class="decision-help">Select as many as apply.</p><div class="decision-options"><button type="button" aria-pressed="${decisionValues.includes('visit-again')}" data-decision="visit-again" class="${decisionValues.includes('visit-again')?'selected':''}">Want to visit again</button><button type="button" aria-pressed="${decisionValues.includes('liked')}" data-decision="liked" class="${decisionValues.includes('liked')?'selected':''}">Liked</button><button type="button" aria-pressed="${decisionValues.includes('try-for')}" data-decision="try-for" class="${decisionValues.includes('try-for')?'selected':''}">Want to try for</button><button type="button" aria-pressed="${decisionValues.includes('not-for-us')}" data-decision="not-for-us" class="${decisionValues.includes('not-for-us')?'selected':''}">Not for us</button><button type="button" aria-pressed="${!decisionValues.length}" data-decision="" class="${!decisionValues.length?'selected':''}">Undecided</button></div></section><label class="check"><input id="visited" type="checkbox" ${visited?'checked':''}> I visited this school</label><label class="check"><input id="booked" type="checkbox" ${booked?'checked':''}> I have booked this visit</label><h3>School notes</h3><p class="shared-state-help">Shared across every open-day card for this school.</p><textarea id="note" class="note" placeholder="Questions to ask, impressions, travel notes…">${schoolNote(s)}</textarea><div class="modal-actions"><a class="primary" href="${s.infoUrl}" target="_blank" rel="noopener">School information ↗</a><a href="performance.html#school=${encodeURIComponent(s.id)}">Performance ↗</a>${s.bookingUrl?`<a href="${s.bookingUrl}" target="_blank" rel="noopener">Booking page ↗</a>`:''}${s.start?'<button id="calendar">Add this visit</button>':''}<button id="saveNote">Save notes</button></div><p class="sources">Dates and booking availability can change. Check the school page before travelling.</p></div>`;
+  $('#visited').onchange=()=>toggleVisited(s);
   $('#booked').onchange=e=>{state.booked[s.id]=e.target.checked;saveState();window.OpenDaySync?.push?.();updateCounts()};
-  document.querySelectorAll('#detailBody [data-application-status]').forEach(b=>b.onclick=()=>setApplicationStatus(s.id,b.dataset.applicationStatus));
-  document.querySelectorAll('#detailBody [data-decision]').forEach(b=>b.onclick=()=>setSchoolDecision(s.id,b.dataset.decision));
-  $('#saveNote').onclick=()=>{state.notes[s.id]=$('#note').value;saveState();$('#saveNote').textContent='Saved ✓'};
+  document.querySelectorAll('#detailBody [data-application-status]').forEach(b=>b.onclick=()=>setApplicationStatus(s,b.dataset.applicationStatus));
+  document.querySelectorAll('#detailBody [data-decision]').forEach(b=>b.onclick=()=>setSchoolDecision(s,b.dataset.decision));
+  $('#saveNote').onclick=()=>{state.notes[sharedKey]=$('#note').value;for(const x of schoolGroup(s))delete state.notes[x.id];saveState();$('#saveNote').textContent='Saved ✓'};
   if(s.start)$('#calendar').onclick=()=>downloadICS(s);
-  if($('#watchBooking'))$('#watchBooking').onclick=()=>toggleWatch(s.id);
+  if($('#watchBooking'))$('#watchBooking').onclick=()=>toggleWatch(s);
   appendAdmissionEvidence(s);$('#detail').showModal();
 }
 
@@ -199,7 +236,7 @@ function setPhase(phase){schoolPhase=phase;tbcExpanded=false;schools=schoolSets[
 function applyCloudCatalog(detail={}){let changed=false;if(detail.senior?.schools){schoolSets.senior=detail.senior.schools;schoolMeta.senior=detail.senior.meta||schoolMeta.senior;changed=true}if(detail.primary?.schools){schoolSets.primary=detail.primary.schools;schoolMeta.primary=detail.primary.meta||schoolMeta.primary;changed=true}if(detail.enhancements?.schools){enhancements=detail.enhancements;changed=true}if(changed){schools=schoolSets[schoolPhase]||[];render()}}
 window.addEventListener('openday:catalog-state',e=>applyCloudCatalog(e.detail));
 function openSubscribe(){const https=`${location.origin}${location.pathname.replace(/[^/]*$/,'')}calendar.ics`;$('#icsLink').href=https;$('#webcalLink').href=https.replace(/^https?:/,'webcal:');$('#subscribeDialog').showModal()}
-function checkBookingNotifications(){if(!('Notification'in window)||Notification.permission!=='granted')return;for(const id of state.watchBooking){const w=enhancements.schools?.[id]?.bookingWatch;if(w?.status==='open')new Notification('School booking is open',{body:`${schools.find(s=>s.id===id)?.name||'School'} booking now appears open.`,tag:`booking-${id}`})}}
+function checkBookingNotifications(){if(!('Notification'in window)||Notification.permission!=='granted')return;for(const key of state.watchBooking){const group=allKnownSchools().filter(s=>key===schoolStateKey(s)||s.id===key);const school=group[0];const watchedEvent=group.find(s=>enhancements.schools?.[s.id]?.bookingWatch)||school;const w=watchedEvent?enhancements.schools?.[watchedEvent.id]?.bookingWatch:null;if(w?.status==='open')new Notification('School booking is open',{body:`${school?.name||'School'} booking now appears open.`,tag:`booking-${school?schoolStateKey(school):key}`})}}
 
 $('#chips').onclick=e=>{if(!e.target.dataset.filter)return;filter=e.target.dataset.filter;tbcExpanded=false;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===e.target));render()};
 $('#search').oninput=render;$('#sort').onchange=render;
@@ -218,7 +255,7 @@ Promise.all([
   fetch('data/primary-schools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load primary school data');return r.json()}),
   fetch('data/enhancements.json',{cache:'no-store'}).then(r=>r.ok?r.json():({meta:{},schools:{}})),fetch('data/assessments.json',{cache:'no-store'}).then(r=>r.ok?r.json():({schools:{}})).catch(()=>({schools:{}}))
 ]).then(([senior,primary,e,assessments])=>{
-  schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;assessmentDoc=assessments||{schools:{}};syncPrimaryDistanceUi();resetCalendarCursor();
+  schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;assessmentDoc=assessments||{schools:{}};const migrated=migrateSchoolScopedState(allKnownSchools());syncPrimaryDistanceUi();resetCalendarCursor();if(migrated)window.OpenDaySync?.push?.();
   if(window.OpenDayCatalog)applyCloudCatalog(window.OpenDayCatalog);else render();checkBookingNotifications();
   const oldest=[senior.meta?.updated,primary.meta?.updated].filter(Boolean).sort()[0];if(oldest&&new Date()-new Date(oldest)>30*864e5){$('#notice').hidden=false;$('#notice').textContent='Some school details were last reviewed over 30 days ago. Re-check dates before making plans.'}
 }).catch(e=>{$('#list').innerHTML=`<p class="empty">${e.message}. Please refresh.</p>`});
