@@ -417,7 +417,7 @@
 
   const schedule=()=>{
     clearTimeout(timer);
-    timer=setTimeout(()=>void push(),900);
+    timer=setTimeout(()=>{void push().catch(error=>{lastError=friendly(error);emit('error',lastError)})},900);
   };
 
   async function connect(token){
