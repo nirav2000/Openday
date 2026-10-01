@@ -1,0 +1,38 @@
+name: Preflight and promote
+
+on:
+  push:
+    branches: [validation/preflight]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: openday-preflight-promote
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@main
+    with:
+      config: validation.config.json
+
+  promote:
+    needs: gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact tested candidate
+        uses: actions/checkout@v4
+        with:
+          ref: validation/preflight
+          fetch-depth: 0
+
+      - name: Fast-forward exact tested SHA to main
+        run: |
+          git fetch origin main validation/preflight
+          git merge-base --is-ancestor origin/main HEAD || {
+            echo "main moved after this candidate was created; refusing non-fast-forward promotion."
+            exit 1
+          }
+          git push origin HEAD:main
