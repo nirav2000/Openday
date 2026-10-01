@@ -6,6 +6,15 @@ Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 - **MINOR**: backwards-compatible feature release.
 - **PATCH**: backwards-compatible bug/data correction.
 
+## 2.19.1 — 2026-10-01
+
+- Changed **My View → What do we think?** from single-choice to multi-select.
+- Opinions can now be combined, e.g. **Liked + Want to try for + Want to visit again**.
+- Tapping a selected opinion toggles it off; **Undecided** clears all selected opinions.
+- Existing legacy single-choice values are automatically normalised into one-item arrays, so prior data is preserved.
+- Updated Firebase memorable-token sync and Performance filters to understand both legacy scalar values and new arrays.
+- Added clear selected-state styling and refreshed the service-worker cache.
+
 ## 2.19.0 — 2026-09-30
 
 - Added structured **11+ / 13+ assessment data** separate from examination-performance data.
