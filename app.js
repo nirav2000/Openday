@@ -19,7 +19,9 @@ const fmtShortDate=s=>s?new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'nu
 const fmtTime=(s,e)=>{if(!s||dateOnly(s))return'Time not published';const f=x=>new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit'}).format(dateObj(x));return e?`${f(s)}–${f(e)}`:`${f(s)} · finish time not published`};
 const statusLabel=s=>historical(s)?'previous-year date':s.status==='confirmed'?'verified':s.status==='reported'?'reported':s.status==='past'?'past':s.status==='research'?'checking date':'check details';
 const statusClass=s=>historical(s)?'historical':(s.status||'research');
-const schoolExtra=s=>enhancements.schools?.[s.id]||{};\nconst schoolAssessment=s=>assessmentDoc.schools?.[s.name]||null;\nconst assessmentCompact=s=>schoolPhase==='primary'?'':(schoolAssessment(s)?.cardLabel||schoolAssessment(s)?.summary||'Assessment format being checked');
+const schoolExtra=s=>enhancements.schools?.[s.id]||{};
+const schoolAssessment=s=>assessmentDoc.schools?.[s.name]||null;
+const assessmentCompact=s=>schoolPhase==='primary'?'':(schoolAssessment(s)?.cardLabel||schoolAssessment(s)?.summary||'Assessment format being checked');
 const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
 const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${origin()}`:null;
 const inPrimaryRadius=s=>schoolPhase!=='primary'||primaryDistance===0||(Number.isFinite(s.distanceMiles)&&s.distanceMiles<=primaryDistance);
@@ -83,7 +85,8 @@ function card(s){
   n.querySelector('.datebox .dow').textContent=d?new Intl.DateTimeFormat('en-GB',{weekday:'short'}).format(d):'';
   n.querySelector('.datebox .mon').textContent=d?new Intl.DateTimeFormat('en-GB',{month:'short'}).format(d):'CHECK';
   n.querySelector('h2').textContent=s.name;
-  n.querySelector('.meta').textContent=`${s.area} · ${travelSummary(s)} · ${s.entry}`;\n  const assessment=assessmentCompact(s);if(assessment){const p=document.createElement('p');p.className='assessment-summary';p.textContent='Assessment: '+assessment;n.querySelector('.meta').after(p)}
+  n.querySelector('.meta').textContent=`${s.area} · ${travelSummary(s)} · ${s.entry}`;
+  const assessment=assessmentCompact(s);if(assessment){const p=document.createElement('p');p.className='assessment-summary';p.textContent='Assessment: '+assessment;n.querySelector('.meta').after(p)}
   const event=n.querySelector('.event');
   event.textContent=historical(s)?`Last known: ${fmtShortDate(s.lastKnownStart)} · ${s.event} · current-year date not verified`:s.start?`${fmtShortDate(s.start)} · ${s.event} · ${fmtTime(s.start,s.end)}`:`Current date being checked · ${s.event}`;
   if(historical(s)){const warning=document.createElement('p');warning.className='historical-note';warning.textContent='Previous-year date — use as a planning guide only.';event.after(warning)}
