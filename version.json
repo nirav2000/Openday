@@ -1,6 +1,6 @@
 {
-  "version": "2.19.3",
+  "version": "2.20.0",
   "released": "2026-10-01",
   "channel": "main",
-  "summary": "Fix repeated cloud-sync feedback loop caused by school-state migration and timestamp-only Firestore snapshots."
+  "summary": "Introduce the shared release safety gate with data-preservation and sync-quiescence tests, resource/Firebase budgets, gated preflight promotion, runtime sync instrumentation, and a staged simplification plan."
 }
