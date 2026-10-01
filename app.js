@@ -59,6 +59,7 @@ function migrateSchoolScopedState(catalog=allKnownSchools()){
   if(changed)saveState();
   return changed;
 }
+window.OpenDaySchoolState={key:schoolStateKey,group:schoolGroup,note:schoolNote,listHas:schoolListHas,decisionValues:schoolDecisionValues,migrate:()=>migrateSchoolScopedState(allKnownSchools())};
 const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
 const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${origin()}`:null;
 const inPrimaryRadius=s=>schoolPhase!=='primary'||primaryDistance===0||(Number.isFinite(s.distanceMiles)&&s.distanceMiles<=primaryDistance);
@@ -160,11 +161,11 @@ function setApplicationStatus(s,status){
   if(status==='rejected')state.rejectedSchools.push(key);
   saveState();window.OpenDaySync?.push?.();showDetail(s);render();
 }
-function toggleWatch(id){
-  state.watchBooking=state.watchBooking.includes(id)?state.watchBooking.filter(x=>x!==id):[...state.watchBooking,id];
+function toggleWatch(s){
+  toggleSchoolMembership('watchBooking',s);
   saveState();window.OpenDaySync?.push?.();
-  if(state.watchBooking.includes(id)&&'Notification'in window&&Notification.permission==='default')Notification.requestPermission();
-  showDetail(schools.find(s=>s.id===id)); render();
+  if(schoolListHas('watchBooking',s)&&'Notification'in window&&Notification.permission==='default')Notification.requestPermission();
+  showDetail(s);render();
 }
 function updateCounts(){const today=startOfToday(),scoped=schools.filter(inPrimaryRadius);$('#upcomingCount').textContent=scoped.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).length;$('#savedCount').textContent=new Set(scoped.filter(s=>schoolListHas('saved',s)).map(schoolStateKey)).size;$('#bookedCount').textContent=scoped.filter(s=>state.booked[s.id]).length}
 
@@ -233,7 +234,7 @@ function setView(view){currentView=view;$('#listViewBtn').classList.toggle('acti
 function resetCalendarCursor(){const today=startOfToday(),upcoming=schools.filter(s=>{const start=effectiveCurrentStart(s);return start&&dateObj(start)>=today}).sort((a,b)=>dateObj(effectiveCurrentStart(a))-dateObj(effectiveCurrentStart(b)));const d=upcoming[0]?dateObj(effectiveCurrentStart(upcoming[0])):new Date();calendarCursor=new Date(d.getFullYear(),d.getMonth(),1)}
 function syncPrimaryDistanceUi(){const bar=$('#primaryDistanceBar');if(bar)bar.hidden=schoolPhase!=='primary';document.querySelectorAll('#primaryDistanceFilters [data-distance]').forEach(b=>b.classList.toggle('active',primaryDistance===Number(b.dataset.distance)));const clear=$('#clearPrimaryDistance');if(clear)clear.classList.toggle('active',primaryDistance===0)}
 function setPhase(phase){schoolPhase=phase;tbcExpanded=false;schools=schoolSets[phase]||[];$('#seniorPhaseBtn')?.classList.toggle('active',phase==='senior');$('#primaryPhaseBtn')?.classList.toggle('active',phase==='primary');const hint=$('#phaseHint');if(hint)hint.textContent=phase==='senior'?'Senior / secondary open days':`Primary / Reception · from ${schoolMeta.primary?.travelOrigin||'UB5 6QX'}`;syncPrimaryDistanceUi();resetCalendarCursor();render()}
-function applyCloudCatalog(detail={}){let changed=false;if(detail.senior?.schools){schoolSets.senior=detail.senior.schools;schoolMeta.senior=detail.senior.meta||schoolMeta.senior;changed=true}if(detail.primary?.schools){schoolSets.primary=detail.primary.schools;schoolMeta.primary=detail.primary.meta||schoolMeta.primary;changed=true}if(detail.enhancements?.schools){enhancements=detail.enhancements;changed=true}if(changed){schools=schoolSets[schoolPhase]||[];render()}}
+function applyCloudCatalog(detail={}){let changed=false;if(detail.senior?.schools){schoolSets.senior=detail.senior.schools;schoolMeta.senior=detail.senior.meta||schoolMeta.senior;changed=true}if(detail.primary?.schools){schoolSets.primary=detail.primary.schools;schoolMeta.primary=detail.primary.meta||schoolMeta.primary;changed=true}if(detail.enhancements?.schools){enhancements=detail.enhancements;changed=true}if(changed){schools=schoolSets[schoolPhase]||[];migrateSchoolScopedState(allKnownSchools());render()}}
 window.addEventListener('openday:catalog-state',e=>applyCloudCatalog(e.detail));
 function openSubscribe(){const https=`${location.origin}${location.pathname.replace(/[^/]*$/,'')}calendar.ics`;$('#icsLink').href=https;$('#webcalLink').href=https.replace(/^https?:/,'webcal:');$('#subscribeDialog').showModal()}
 function checkBookingNotifications(){if(!('Notification'in window)||Notification.permission!=='granted')return;for(const key of state.watchBooking){const group=allKnownSchools().filter(s=>key===schoolStateKey(s)||s.id===key);const school=group[0];const watchedEvent=group.find(s=>enhancements.schools?.[s.id]?.bookingWatch)||school;const w=watchedEvent?enhancements.schools?.[watchedEvent.id]?.bookingWatch:null;if(w?.status==='open')new Notification('School booking is open',{body:`${school?.name||'School'} booking now appears open.`,tag:`booking-${school?schoolStateKey(school):key}`})}}
