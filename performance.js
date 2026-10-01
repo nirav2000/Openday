@@ -18,7 +18,7 @@
     window.OpenDaySync?.schedule?.();
   };
   const visited=new Set(state.visitedSchools||[]),saved=new Set(state.saved||[]),booked=state.booked||{};
-  const decisions=state.schoolDecisions||{};
+  const decisions=Object.fromEntries(Object.entries(state.schoolDecisions||{}).map(([id,value])=>[id,Array.isArray(value)?value:(value?[value]:[])]));
   const shortlisted=new Set(state.shortlistedSchools||[]),rejected=new Set(state.rejectedSchools||[]);
   const layoutKey='openday.performance.columns.v1';
   const DEFAULT_COLUMNS=['school','assessment','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
@@ -93,7 +93,7 @@
   const eventFlag=(school,set)=>school.eventIds.some(id=>set.has(id));
   const assessmentFor=s=>assessmentDoc.schools?.[s.name]||null;
   const assessmentText=s=>assessmentFor(s)?.summary||'Format being checked';
-  const decisionFlag=(school,value)=>school.eventIds.some(id=>decisions[id]===value);
+  const decisionFlag=(school,value)=>school.eventIds.some(id=>(decisions[id]||[]).includes(value));
   const metricForYear=(obj,field)=>{
     if(selectedYear==='latest')return latest(obj,field);
     const key=compactYear(selectedYear),row=obj?.[key];
