@@ -57,7 +57,7 @@
     visitedSchools:Array.isArray(data?.visitedSchools)?data.visitedSchools:[],
     shortlistedSchools:Array.isArray(data?.shortlistedSchools)?data.shortlistedSchools:[],
     rejectedSchools:Array.isArray(data?.rejectedSchools)?data.rejectedSchools:[],
-    schoolDecisions:data?.schoolDecisions&&typeof data.schoolDecisions==='object'?data.schoolDecisions:{},
+    schoolDecisions:Object.fromEntries(Object.entries(data?.schoolDecisions&&typeof data.schoolDecisions==='object'?data.schoolDecisions:{}).map(([id,value])=>[id,[...new Set((Array.isArray(value)?value:[value]).filter(Boolean).map(String))]]).filter(([,values])=>values.length)),
     eventOverrides:data?.eventOverrides&&typeof data.eventOverrides==='object'?data.eventOverrides:{},
     performanceSchoolSets:data?.performanceSchoolSets&&typeof data.performanceSchoolSets==='object'?cleanForFirestore(data.performanceSchoolSets):{},
     performanceCompareOrder:Array.isArray(data?.performanceCompareOrder)?data.performanceCompareOrder.map(String):[],
