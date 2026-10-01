@@ -49,7 +49,10 @@
   async function durableTokenDelete(){
     try{const dbx=await tokenDb();if(!dbx)return;await new Promise(resolve=>{const tx=dbx.transaction('kv','readwrite');tx.objectStore('kv').delete('sync-token');tx.oncomplete=()=>resolve();tx.onerror=()=>resolve()})}catch{}
   }
-  const normalise=data=>({
+  const canonicaliseSchoolState=data=>{
+    try{return window.OpenDaySchoolState?.canonicaliseData?.(data||{})||data||{}}catch{return data||{}}
+  };
+  const normaliseBase=data=>({
     saved:Array.isArray(data?.saved)?data.saved:[],
     booked:data?.booked||{},
     notes:data?.notes||{},
@@ -65,6 +68,15 @@
     mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?cleanForFirestore(data.mergeConflicts):{},
     updatedAt:asIso(data?.updatedAt)
   });
+  const normalise=data=>normaliseBase(canonicaliseSchoolState(data));
+  const stableValue=value=>{
+    if(Array.isArray(value))return value.map(stableValue);
+    if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().map(k=>[k,stableValue(value[k])]));
+    return value;
+  };
+  const comparableJSON=data=>{
+    const n=normalise(data),copy={...n};delete copy.updatedAt;return JSON.stringify(stableValue(copy));
+  };
   const mergeStates=(aInput,bInput)=>{
     const a=normalise(aInput),b=normalise(bInput);
     const at=Date.parse(a.updatedAt||0)||0,bt=Date.parse(b.updatedAt||0)||0,aNewer=at>=bt;
@@ -249,14 +261,17 @@
     if(lastRemote){
       try{merged=normalise(mergeThreeWay(JSON.parse(lastRemote),local,cleanRemote))}catch{merged=normalise(mergeStates(local,cleanRemote))}
     }else merged=normalise(mergeStates(local,cleanRemote));
-    const mergedJSON=JSON.stringify(merged),remoteJSON=JSON.stringify(cleanRemote);
-    if(JSON.stringify(local)!==mergedJSON){
-      writeLocal(merged);
-      window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:merged}));
+    const localChanged=comparableJSON(local)!==comparableJSON(merged);
+    const cloudChanged=comparableJSON(cleanRemote)!==comparableJSON(merged);
+    const applied=localChanged?merged:local;
+    const mergedJSON=JSON.stringify(applied),remoteJSON=JSON.stringify(cleanRemote);
+    if(localChanged){
+      writeLocal(applied);
+      window.dispatchEvent(new CustomEvent('openday:cloud-state',{detail:applied}));
     }
     lastLocal=mergedJSON;
     lastRemote=remoteJSON;
-    return {merged,mergedJSON,remoteJSON,needsCloudWrite:mergedJSON!==remoteJSON};
+    return {merged:applied,mergedJSON,remoteJSON,needsCloudWrite:cloudChanged};
   }
 
   async function readTokenOnce(refToRead=tokenRef){
@@ -276,8 +291,8 @@
       if(!snap.exists()||snap.metadata?.hasPendingWrites)return;
       const data=snap.data()||{};
       if(target===tokenRef&&(data.app!=='openday'||data.active!==true))return;
-      const before=localJSON();applyRemote(data.state||{});lastSyncAt=new Date().toISOString();lastError='';
-      emit('synced',before===localJSON()?'Connected & synced · live updates on':'Cloud change received · this device updated');
+      const before=comparableJSON(readLocal());applyRemote(data.state||{});lastSyncAt=new Date().toISOString();lastError='';
+      emit('synced',before===comparableJSON(readLocal())?'Connected & synced · live updates on':'Cloud change received · this device updated');
     },error=>{lastError=friendly(error);emit('error',lastError)});
   }
 
