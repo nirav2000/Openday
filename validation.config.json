@@ -99,6 +99,12 @@
     "quietMs": 400,
     "timeoutMs": 3000,
     "maxStateTransitions": 2,
-    "failOnPageErrors": true
+    "failOnPageErrors": true,
+    "maxLocalRequests": 80,
+    "maxLocalBytes": 5000000,
+    "maxFirebaseReads": 0,
+    "maxFirebaseWrites": 0,
+    "maxFirebaseDeletes": 0,
+    "maxFirebaseListeners": 0
   }
 }
