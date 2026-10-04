@@ -95,7 +95,7 @@
     "path": "/",
     "readySelector": "#list .card",
     "allowExternalNetwork": false,
-    "maxExternalRequests": 12,
+    "maxExternalRequests": 14,
     "quietMs": 400,
     "timeoutMs": 3000,
     "maxStateTransitions": 2,
