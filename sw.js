@@ -1,9 +1,7 @@
-const CACHE='open-days-v2.20.0';
-const ASSETS=[
-  './','./index.html','./styles.css','./app.js','./integrations.js','./version.json','./performance.html','./performance.css','./performance.js',
-  './plugins/app-platform.js','./plugins/autosave.js','./plugins/firebase-token-sync.js','./plugins/developer-notes.js','./plugins/version-lab.js','./plugins/public-overrides.js','./plugins/personal-updates.js',
-  './assessments.html','./assessments.css','./assessments.js','./data/assessments.json','./data/assessment-resources.json','./results-archive.html','./results-archive.css','./results-archive.js','./data/school-results-archive.json','./data/dfe-results-archive-2024-25.json','./data/schools.json','./data/primary-schools.json','./data/enhancements.json','./data/performance.json','./data/published-results.json','./version-lab/index.html','./version-lab/lab.css','./version-lab/lab.js','./version-lab/releases.json','./calendar.ics','./manifest.webmanifest','./icon.svg'
-];
-self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
-self.addEventListener('activate',e=>{e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))]))});
-self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).then(r=>{const x=r.clone();caches.open(CACHE).then(c=>c.put(e.request,x));return r}).catch(()=>caches.match(e.request))));
+self.APPS_PWA_CONFIG={
+  cacheName:'open-days-shared-v1',
+  cachePrefix:'open-days-',
+  defaultStrategy:'network-first',
+  precache:['./','./index.html','./styles.css','./app.js','./integrations.js','./version.json','./performance.html','./performance.css','./performance.js','./plugins/app-platform.js','./plugins/autosave.js','./plugins/firebase-token-sync.js','./plugins/developer-notes.js','./plugins/version-lab.js','./plugins/public-overrides.js','./plugins/personal-updates.js','./assessments.html','./assessments.css','./assessments.js','./data/assessments.json','./data/assessment-resources.json','./results-archive.html','./results-archive.css','./results-archive.js','./data/school-results-archive.json','./data/dfe-results-archive-2024-25.json','./data/schools.json','./data/primary-schools.json','./data/enhancements.json','./data/performance.json','./data/published-results.json','./version-lab/index.html','./version-lab/lab.css','./version-lab/lab.js','./version-lab/releases.json','./calendar.ics','./manifest.webmanifest','./icon.svg']
+};
+importScripts('https://nirav2000.github.io/Apps/pwa/v1/service-worker.js');
