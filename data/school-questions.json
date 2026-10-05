@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "updated": "2026-10-05",
+    "purpose": "Reusable questions for school visits, heads and departments. Personal additions and answers are stored in private Openday state."
+  },
+  "questions": [
+    {
+      "id": "progress-8-lift",
+      "category": "Academic outcomes",
+      "ask": "What is your current Progress 8 score? In practical terms, how many grade points does the school tend to lift pupils by compared with their starting points?",
+      "why": "Separates raw attainment from the progress pupils make while at the school.",
+      "askWho": [
+        "Head",
+        "Academic deputy",
+        "Admissions"
+      ]
+    },
+    {
+      "id": "parent-feedback",
+      "category": "Teaching & mastery",
+      "ask": "What information do you give parents about academic progress, and how detailed is it? Do reports break progress down by topic or skill and identify specific areas where a pupil has difficulty or has not yet achieved mastery?",
+      "why": "Tests whether reporting is actionable rather than just a termly grade.",
+      "askWho": [
+        "Head",
+        "Academic deputy",
+        "Head of department"
+      ]
+    },
+    {
+      "id": "timetable-copy",
+      "category": "Curriculum",
+      "ask": "Could I see a sample timetable for a pupil in this year group? How many lessons per week or fortnight does each subject receive?",
+      "why": "Shows the real curriculum weighting and what pupils actually experience.",
+      "askWho": [
+        "Admissions",
+        "Academic deputy"
+      ]
+    },
+    {
+      "id": "playtime-free-play",
+      "category": "School day & childhood",
+      "ask": "How much break and lunchtime do pupils have? What is structured or supervised, and how much genuinely free play or unstructured time is there?",
+      "why": "Reveals how much breathing space and independence exists in the school day.",
+      "askWho": [
+        "Head",
+        "Pastoral lead",
+        "Pupils"
+      ]
+    },
+    {
+      "id": "why-this-school",
+      "category": "Ethos & outcomes",
+      "ask": "Why should a child and their parents choose this school? What should they reasonably expect the school to deliver, and what do you believe a pupil should get out of the whole school experience by the time they leave?",
+      "why": "Forces a clear statement of the school's promise and priorities.",
+      "askWho": [
+        "Head"
+      ]
+    },
+    {
+      "id": "mastery-response",
+      "category": "Teaching & mastery",
+      "ask": "When assessment shows that a pupil has not mastered a topic, what happens next? How quickly is it identified, retaught and checked again?",
+      "why": "Distinguishes data collection from an actual intervention loop.",
+      "askWho": [
+        "Academic deputy",
+        "Head of department"
+      ]
+    },
+    {
+      "id": "stretch-top-end",
+      "category": "Teaching & mastery",
+      "ask": "How do you identify and stretch pupils who already understand the core material without simply giving them more of the same work?",
+      "why": "Tests depth, challenge and differentiation.",
+      "askWho": [
+        "Head of department"
+      ]
+    },
+    {
+      "id": "homework-load",
+      "category": "School day & childhood",
+      "ask": "What is the typical homework load in Year 7, and how coordinated is it across subjects so several large tasks do not land together?",
+      "why": "Makes workload expectations concrete.",
+      "askWho": [
+        "Head",
+        "Pupils",
+        "Pastoral lead"
+      ]
+    },
+    {
+      "id": "behaviour-reality",
+      "category": "Pastoral & behaviour",
+      "ask": "What does your behaviour system look like on an ordinary day? What are the most common sanctions, and what happens when a normally well-behaved pupil makes a mistake?",
+      "why": "Gets beyond slogans to the lived behaviour culture.",
+      "askWho": [
+        "Head",
+        "Pastoral lead",
+        "Pupils"
+      ]
+    },
+    {
+      "id": "pupil-voice",
+      "category": "Pastoral & behaviour",
+      "ask": "If a pupil is unhappy with a teacher, lesson or pastoral issue, how can they raise it and how do you make sure quieter children are heard?",
+      "why": "Checks psychological safety and routes for escalation.",
+      "askWho": [
+        "Pastoral lead",
+        "Pupils"
+      ]
+    },
+    {
+      "id": "music-opportunity",
+      "category": "Music & co-curricular",
+      "ask": "For an enthusiastic orchestral instrumentalist who is still developing, what ensembles, lessons, performance opportunities and scholarship pathways are realistically available from Year 7?",
+      "why": "Separates opportunities for developing musicians from provision aimed only at already-advanced performers.",
+      "askWho": [
+        "Director of Music"
+      ]
+    },
+    {
+      "id": "scholarship-expectation",
+      "category": "Music & co-curricular",
+      "ask": "For music scholarships, what standard do successful applicants actually tend to be at, how do you weigh potential and instrument scarcity, and what commitment is expected after an award?",
+      "why": "Published minimums often do not reveal the real competitive standard or ongoing workload.",
+      "askWho": [
+        "Director of Music",
+        "Admissions"
+      ]
+    },
+    {
+      "id": "leavers-definition-success",
+      "category": "Ethos & outcomes",
+      "ask": "Apart from examination results, what outcomes do you track or care about when deciding whether the school has done a good job for a child?",
+      "why": "Surfaces priorities around independence, character, wellbeing and destinations.",
+      "askWho": [
+        "Head"
+      ]
+    },
+    {
+      "id": "parent-problems",
+      "category": "Parent partnership",
+      "ask": "What do parents most often complain about, and what has the school changed in response to parent feedback in the last couple of years?",
+      "why": "A concrete way to test openness and capacity to improve.",
+      "askWho": [
+        "Head",
+        "Admissions",
+        "Current parents"
+      ]
+    }
+  ]
+}
