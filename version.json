@@ -1,6 +1,6 @@
 {
-  "version": "2.22.0",
+  "version": "2.22.1",
   "released": "2026-10-05",
   "channel": "main",
-  "summary": "Expand scholarships and bursaries across all tracked independent senior schools with award-value, realistic-standard, availability and compatibility comparison."
+  "summary": "Fix notification activation so consumers get an Openday opt-in followed by the native iPhone permission prompt, never Firebase developer setup."
 }
