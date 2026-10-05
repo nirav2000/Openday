@@ -7,7 +7,7 @@ X-WR-CALNAME:School Open Days
 X-WR-CALDESC:Public school open days and admissions visits tracked in Openday
 BEGIN:VEVENT
 UID:rooks-heath@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260909T160000Z
 DTEND:20260909T183000Z
 SUMMARY:Rooks Heath School — Open Evening
@@ -17,7 +17,7 @@ DESCRIPTION:Local state-school benchmark. https://www.rooksheath.harrow.sch.uk/
 END:VEVENT
 BEGIN:VEVENT
 UID:rgs-high-wycombe@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260915T163000Z
 DTEND:20260915T190000Z
 SUMMARY:Royal Grammar School High Wycombe — Open Evening
@@ -27,7 +27,7 @@ DESCRIPTION:Bucks residence priorities matter\; verify realistic admission route
 END:VEVENT
 BEGIN:VEVENT
 UID:jfs-morning@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260916T080000Z
 DTEND:20260916T100000Z
 SUMMARY:JFS — Open Morning
@@ -37,7 +37,7 @@ DESCRIPTION:Jewish faith admissions criteria apply. https://www.jfs.brent.sch.uk
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-general@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260917T080000Z
 DTEND:20260917T103000Z
 SUMMARY:Haberdashers' Boys' School — General Open Morning
@@ -47,7 +47,7 @@ DESCRIPTION:Particularly practical from Harrow\; covers both 11+ and 13+. https:
 END:VEVENT
 BEGIN:VEVENT
 UID:challoners@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260917T160000Z
 DTEND:20260917T190000Z
 SUMMARY:Dr Challoner's Grammar School — Open Evening
@@ -57,7 +57,7 @@ DESCRIPTION:Head talks reported at 17:00\, 17:30\, 18:30 and 19:00. Bucks priori
 END:VEVENT
 BEGIN:VEVENT
 UID:park-high@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260917T170000Z
 DTEND:20260917T190000Z
 SUMMARY:Park High School — Open Evening
@@ -67,7 +67,7 @@ DESCRIPTION:Additional mornings reported for 22\, 23\, 24 and 30 September and 7
 END:VEVENT
 BEGIN:VEVENT
 UID:claremont@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260917T160000Z
 DTEND:20260917T183000Z
 SUMMARY:Claremont High School — Open Evening
@@ -77,7 +77,7 @@ DESCRIPTION:Head talks reported at 17:15\, 18:15 and 19:15. https://www.claremon
 END:VEVENT
 BEGIN:VEVENT
 UID:berkhamsted@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260918T120000Z
 SUMMARY:Berkhamsted Boys — Senior School Open Event
 LOCATION:Berkhamsted
@@ -86,7 +86,7 @@ DESCRIPTION:School describes this as an afternoon event\; exact time should be c
 END:VEVENT
 BEGIN:VEVENT
 UID:st-pauls@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260919T080000Z
 SUMMARY:St Paul's School — 13+ Open Day
 LOCATION:Barnes
@@ -95,7 +95,7 @@ DESCRIPTION:Confirmed date\; precise start time is not published on the page. Hi
 END:VEVENT
 BEGIN:VEVENT
 UID:st-margarets@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260919T080000Z
 SUMMARY:St Margaret's School — Whole School Open Day
 LOCATION:Bushey
@@ -104,7 +104,7 @@ DESCRIPTION:Confirmed date\; exact time not published. One-to-one tours are avai
 END:VEVENT
 BEGIN:VEVENT
 UID:hampton@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260919T080000Z
 SUMMARY:Hampton School — Open Event
 LOCATION:Hampton
@@ -113,7 +113,7 @@ DESCRIPTION:Longer journey\; check current event session before booking. https:/
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-taster-sep@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260922T080000Z
 DTEND:20260922T103000Z
 SUMMARY:Haberdashers' Boys' School — 11+ Taster Morning
@@ -123,7 +123,7 @@ DESCRIPTION:For prospective 11+ families. https://www.habselstree.org.uk/boys/ad
 END:VEVENT
 BEGIN:VEVENT
 UID:harrow-high@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260923T160000Z
 SUMMARY:Harrow High School — Open Evening
 LOCATION:Harrow
@@ -132,7 +132,7 @@ DESCRIPTION:Date reported in school calendar\; confirm time on school page. http
 END:VEVENT
 BEGIN:VEVENT
 UID:sutton-grammar@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260923T154500Z
 DTEND:20260923T190000Z
 SUMMARY:Sutton Grammar School — Open Evening
@@ -142,7 +142,7 @@ DESCRIPTION:Some places are open-score places\, but the daily journey is substan
 END:VEVENT
 BEGIN:VEVENT
 UID:alperton@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260924T150000Z
 DTEND:20260924T183000Z
 SUMMARY:Alperton Community School — Open Evening
@@ -152,7 +152,7 @@ DESCRIPTION:Reported as explicitly welcoming Year 5 as well as Year 6. https://w
 END:VEVENT
 BEGIN:VEVENT
 UID:preston-manor@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260924T170000Z
 DTEND:20260924T193000Z
 SUMMARY:Preston Manor School — Open Evening
@@ -162,7 +162,7 @@ DESCRIPTION:Open mornings also reported for 29 September\, 6 and 13 October. htt
 END:VEVENT
 BEGIN:VEVENT
 UID:mts@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260926T080000Z
 SUMMARY:Merchant Taylors' School — Open Morning
 LOCATION:Northwood
@@ -171,7 +171,7 @@ DESCRIPTION:Core nearby independent option. Exact session time to confirm. https
 END:VEVENT
 BEGIN:VEVENT
 UID:mill-hill@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260926T080000Z
 SUMMARY:Mill Hill School — Open Morning
 LOCATION:Mill Hill
@@ -180,7 +180,7 @@ DESCRIPTION:Practical geographically\; exact time to confirm. https://www.millhi
 END:VEVENT
 BEGIN:VEVENT
 UID:john-lyon@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260927T080000Z
 SUMMARY:John Lyon School — Whole School Open Day
 LOCATION:Harrow
@@ -189,7 +189,7 @@ DESCRIPTION:Very convenient local independent option\; check available sessions.
 END:VEVENT
 BEGIN:VEVENT
 UID:ark-morning-2026-09-28@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260928T080000Z
 SUMMARY:Ark Academy — Monday Open Morning
 LOCATION:Wembley
@@ -198,7 +198,7 @@ DESCRIPTION:Official Ark Academy admissions page lists this Secondary Open Morni
 END:VEVENT
 BEGIN:VEVENT
 UID:ark-morning-2026-09-29@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260929T080000Z
 SUMMARY:Ark Academy — Tuesday Open Morning
 LOCATION:Wembley
@@ -207,7 +207,7 @@ DESCRIPTION:Official Ark Academy admissions page lists this Secondary Open Morni
 END:VEVENT
 BEGIN:VEVENT
 UID:ark-morning-2026-09-30@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260930T080000Z
 SUMMARY:Ark Academy — Wednesday Open Morning
 LOCATION:Wembley
@@ -216,7 +216,7 @@ DESCRIPTION:Official Ark Academy admissions page lists this Secondary Open Morni
 END:VEVENT
 BEGIN:VEVENT
 UID:ark-evening@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261001T160000Z
 SUMMARY:Ark Academy — Open Evening
 LOCATION:Wembley
@@ -225,7 +225,7 @@ DESCRIPTION:Official Ark Academy admissions page lists Open Evening on Thursday 
 END:VEVENT
 BEGIN:VEVENT
 UID:salvatorian@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260929T160000Z
 SUMMARY:Salvatorian College — Year 7 Open Evening
 LOCATION:Harrow
@@ -234,7 +234,7 @@ DESCRIPTION:Catholic admissions criteria may apply\; guided tours can also be ar
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-high@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261001T150000Z
 DTEND:20261001T183000Z
 SUMMARY:Pinner High School — Open Evening
@@ -244,7 +244,7 @@ DESCRIPTION:Open Morning also reported for 5 October at 09:00 and 11:00. https:/
 END:VEVENT
 BEGIN:VEVENT
 UID:winchester-oct@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261003T081500Z
 DTEND:20261003T123000Z
 SUMMARY:Winchester College — 13+ Open Day
@@ -254,7 +254,7 @@ DESCRIPTION:Boarding makes the longer journey less relevant day-to-day. https://
 END:VEVENT
 BEGIN:VEVENT
 UID:aldenham@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261003T090000Z
 SUMMARY:Aldenham School — Open Morning
 LOCATION:Elstree
@@ -263,7 +263,7 @@ DESCRIPTION:Doors reported at 10:00\; Head talks at 10:30 and 11:30. https://ald
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-whole@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261010T080000Z
 SUMMARY:Haberdashers' Boys' School — Whole School Open Day
 LOCATION:Elstree
@@ -272,7 +272,7 @@ DESCRIPTION:Exact session time to confirm. https://www.habselstree.org.uk/boys/a
 END:VEVENT
 BEGIN:VEVENT
 UID:dao@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261013T080000Z
 DTEND:20261015T110000Z
 SUMMARY:Dame Alice Owen's School — School in Action (13–15 Oct)
@@ -282,7 +282,7 @@ DESCRIPTION:Academic and music selection routes. Select one session\; exact time
 END:VEVENT
 BEGIN:VEVENT
 UID:jfs-evening@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261015T153000Z
 DTEND:20261015T190000Z
 SUMMARY:JFS — Prospective Parents Evening
@@ -292,7 +292,7 @@ DESCRIPTION:Head talks reported at 17:00\, 18:00 and 19:00. Jewish faith criteri
 END:VEVENT
 BEGIN:VEVENT
 UID:habs-taster-nov@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261104T090000Z
 DTEND:20261104T113000Z
 SUMMARY:Haberdashers' Boys' School — 11+ Taster Morning
@@ -302,7 +302,7 @@ DESCRIPTION:For prospective 11+ families. https://www.habselstree.org.uk/boys/ad
 END:VEVENT
 BEGIN:VEVENT
 UID:winchester-nov@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261112T100000Z
 DTEND:20261112T124500Z
 SUMMARY:Winchester College — 13+ Open Morning
@@ -312,7 +312,7 @@ DESCRIPTION:Good alternative to the Saturday open day. https://www.winchestercol
 END:VEVENT
 BEGIN:VEVENT
 UID:winchester-dec@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261204T100000Z
 DTEND:20261204T124500Z
 SUMMARY:Winchester College — 13+ Open Morning
@@ -322,7 +322,7 @@ DESCRIPTION:Latest published 2026 13+ visit. https://www.winchestercollege.org/a
 END:VEVENT
 BEGIN:VEVENT
 UID:michaela@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260928T160000Z
 SUMMARY:Michaela Community School — Year 7 Open Evening
 LOCATION:Wembley
@@ -331,7 +331,7 @@ DESCRIPTION:Monday 28 September 2026 at 17:00 has been reported for the Year 7 O
 END:VEVENT
 BEGIN:VEVENT
 UID:qe-boys@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260702T080000Z
 SUMMARY:Queen Elizabeth's School\, Barnet — Annual Open Day
 LOCATION:Barnet
@@ -340,7 +340,7 @@ DESCRIPTION:Genuine no-catchment selection by test score. Watch from May 2027 fo
 END:VEVENT
 BEGIN:VEVENT
 UID:parmiters@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260625T150000Z
 DTEND:20260625T190000Z
 SUMMARY:Parmiter's School — Annual Open Day
@@ -350,7 +350,7 @@ DESCRIPTION:SW Herts academic/music selection. Watch June 2027. https://www.parm
 END:VEVENT
 BEGIN:VEVENT
 UID:st-clement-danes@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260927
 SUMMARY:St Clement Danes School — Open Day
@@ -359,8 +359,115 @@ CATEGORIES:Senior
 DESCRIPTION:Open Day date taken from the school's current calendar. Exact event time is not stored yet\; check the calendar before travelling. SW Herts academic/music selection route. https://www.stclementdanes.org.uk/admissions/
 END:VEVENT
 BEGIN:VEVENT
+UID:habs-scholarship-evening-oct@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261006T160000Z
+DTEND:20261006T183000Z
+SUMMARY:Haberdashers' Boys' School — 11+ / 13+ Scholarship Information Evening
+LOCATION:Elstree
+CATEGORIES:Senior
+DESCRIPTION:Admissions event focused on scholarship routes. Particularly useful for discussing music scholarship expectations. https://www.habselstree.org.uk/boys/admissions/book-a-visit/
+END:VEVENT
+BEGIN:VEVENT
+UID:michaela-open-oct-check@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261006T153000Z
+DTEND:20261006T170000Z
+SUMMARY:Michaela Community School — Year 7 Open Event — council listing\, confirm with school
+LOCATION:Wembley
+CATEGORIES:Senior
+DESCRIPTION:Brent's 2026 open-events listing gives 6 October\, 16:30–18:00\, but labels 6 October as Monday (it is Tuesday in 2026). Confirm directly with Michaela before travelling. https://michaela.education/
+END:VEVENT
+BEGIN:VEVENT
+UID:jfk-open-oct@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261006T170000Z
+DTEND:20261006T200000Z
+SUMMARY:John F Kennedy Catholic School — Open Evening
+LOCATION:Hemel Hempstead
+CATEGORIES:Senior
+DESCRIPTION:Wider Hertfordshire benchmark\; verify faith/admissions criteria and event details on the school page. https://www.jfk.herts.sch.uk/page/?pid=41&title=Admissions+Policy
+END:VEVENT
+BEGIN:VEVENT
+UID:st-joan-open-tour-oct6@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261006T081500Z
+SUMMARY:St Joan of Arc Catholic School — Open Event Tour
+LOCATION:Rickmansworth
+CATEGORIES:Senior
+DESCRIPTION:Official admissions page lists bookable open-event tours on 6\, 7 and 8 October at 09:15 and 11:30. https://www.joa.herts.sch.uk/2283/admissions-1
+END:VEVENT
+BEGIN:VEVENT
+UID:st-joan-open-tour-oct7@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261007T081500Z
+SUMMARY:St Joan of Arc Catholic School — Open Event Tour
+LOCATION:Rickmansworth
+CATEGORIES:Senior
+DESCRIPTION:Official admissions page lists morning tours at 09:15 and 11:30\; this card anchors the day\, with the second time available on the booking page. https://www.joa.herts.sch.uk/2283/admissions-1
+END:VEVENT
+BEGIN:VEVENT
+UID:canons-open-oct@openday
+DTSTAMP:20261005T090618Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Canons High School — Open Evening
+LOCATION:Edgware
+CATEGORIES:Senior
+DESCRIPTION:Local Harrow-area open evening. Time should be confirmed on the school page before travelling. https://www.canons.harrow.sch.uk/
+END:VEVENT
+BEGIN:VEVENT
+UID:herschel-open-oct@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261007T160000Z
+DTEND:20261007T190000Z
+SUMMARY:Herschel Grammar School — Open Evening
+LOCATION:Slough
+CATEGORIES:Senior
+DESCRIPTION:Selective grammar option\; verify current admissions catchment/eligibility and event booking requirements. https://www.herschel.slough.sch.uk/
+END:VEVENT
+BEGIN:VEVENT
+UID:st-joan-open-tour-oct8@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261008T081500Z
+SUMMARY:St Joan of Arc Catholic School — Open Event Tour
+LOCATION:Rickmansworth
+CATEGORIES:Senior
+DESCRIPTION:Official admissions page lists morning tours at 09:15 and 11:30\; this card anchors the day\, with the second time available on the booking page. https://www.joa.herts.sch.uk/2283/admissions-1
+END:VEVENT
+BEGIN:VEVENT
+UID:kings-langley-open-oct@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261008T163000Z
+DTEND:20261008T190000Z
+SUMMARY:Kings Langley School — Open Evening
+LOCATION:Kings Langley
+CATEGORIES:Senior
+DESCRIPTION:Official page gives 5:30–8:00pm with Headteacher presentations at 5:45pm and 6:45pm. https://kls.herts.sch.uk/home/about-us/open-events/
+END:VEVENT
+BEGIN:VEVENT
+UID:aldenham-tour-oct8@openday
+DTSTAMP:20261005T090618Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Aldenham School — Senior School Tour
+LOCATION:Elstree
+CATEGORIES:Senior
+DESCRIPTION:Aldenham offers bookable Senior School tours\, typically on Thursday mornings. Confirm the available 8 October slot before travelling. https://asevents.aldenham.com/appointment/3
+END:VEVENT
+BEGIN:VEVENT
+UID:john-lyon-school-action-oct9@openday
+DTSTAMP:20261005T090618Z
+DTSTART:20261009T073000Z
+DTEND:20261009T090000Z
+SUMMARY:John Lyon School — Senior School in Action
+LOCATION:Harrow-on-the-Hill
+CATEGORIES:Senior
+DESCRIPTION:Working-school visit with pupil-led tour and senior leadership / Head content\; confirm the live booking before travelling. https://www.johnlyon.org/admissions/visit-us/
+END:VEVENT
+BEGIN:VEVENT
 UID:earlsmead-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261008T083000Z
 SUMMARY:Earlsmead Primary School — Reception 2027 school tour
 LOCATION:South Harrow
@@ -369,7 +476,7 @@ DESCRIPTION:Official Reception 2027 page lists three school tours: 8 Oct 2026 at
 END:VEVENT
 BEGIN:VEVENT
 UID:earlsmead-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261110T134500Z
 SUMMARY:Earlsmead Primary School — Reception 2027 school tour
 LOCATION:South Harrow
@@ -378,7 +485,7 @@ DESCRIPTION:Tuesday 10 November · 1:45pm https://www.earlsmeadprimaryschool.co.
 END:VEVENT
 BEGIN:VEVENT
 UID:earlsmead-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20270112T093000Z
 SUMMARY:Earlsmead Primary School — Reception 2027 school tour
 LOCATION:South Harrow
@@ -387,7 +494,7 @@ DESCRIPTION:Tuesday 12 January · 9:30am https://www.earlsmeadprimaryschool.co.u
 END:VEVENT
 BEGIN:VEVENT
 UID:roxeth-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260929T080000Z
 SUMMARY:Roxeth Primary School — Open House school tour (Tuesdays)
 LOCATION:Harrow
@@ -396,7 +503,7 @@ DESCRIPTION:Official admissions page says visitors are welcome to a guided Open 
 END:VEVENT
 BEGIN:VEVENT
 UID:vaughan-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261002T080000Z
 SUMMARY:Vaughan Primary School — Reception 2027 school tour
 LOCATION:West Harrow
@@ -405,7 +512,7 @@ DESCRIPTION:Official admissions page lists Headteacher-led tours at 9:00am\, las
 END:VEVENT
 BEGIN:VEVENT
 UID:vaughan-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261016T080000Z
 SUMMARY:Vaughan Primary School — Reception 2027 school tour
 LOCATION:West Harrow
@@ -414,7 +521,7 @@ DESCRIPTION:Friday 16 October · 9:00am https://www.vaughan.harrow.sch.uk/admiss
 END:VEVENT
 BEGIN:VEVENT
 UID:vaughan-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261106T090000Z
 SUMMARY:Vaughan Primary School — Reception 2027 school tour
 LOCATION:West Harrow
@@ -423,7 +530,7 @@ DESCRIPTION:Friday 6 November · 9:00am https://www.vaughan.harrow.sch.uk/admiss
 END:VEVENT
 BEGIN:VEVENT
 UID:vaughan-primary-alt-2@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261120T090000Z
 SUMMARY:Vaughan Primary School — Reception 2027 school tour
 LOCATION:West Harrow
@@ -432,7 +539,7 @@ DESCRIPTION:Friday 20 November · 9:00am https://www.vaughan.harrow.sch.uk/admis
 END:VEVENT
 BEGIN:VEVENT
 UID:vaughan-primary-alt-3@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20270108T090000Z
 SUMMARY:Vaughan Primary School — Reception 2027 school tour
 LOCATION:West Harrow
@@ -441,7 +548,7 @@ DESCRIPTION:Friday 8 January · 9:00am https://www.vaughan.harrow.sch.uk/admissi
 END:VEVENT
 BEGIN:VEVENT
 UID:st-john-fisher-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261001T083000Z
 DTEND:20261001T093000Z
 SUMMARY:St John Fisher Catholic Primary School — Reception 2027 open morning
@@ -451,7 +558,7 @@ DESCRIPTION:Official School Tours page lists Thursday open mornings at 9:30am fo
 END:VEVENT
 BEGIN:VEVENT
 UID:st-john-fisher-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261008T083000Z
 DTEND:20261008T093000Z
 SUMMARY:St John Fisher Catholic Primary School — Reception 2027 open morning
@@ -461,7 +568,7 @@ DESCRIPTION:Thursday 8 October · 9:30am https://www.stjohnfisherschool.co.uk/sc
 END:VEVENT
 BEGIN:VEVENT
 UID:st-john-fisher-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261015T083000Z
 DTEND:20261015T093000Z
 SUMMARY:St John Fisher Catholic Primary School — Reception 2027 open morning
@@ -471,7 +578,7 @@ DESCRIPTION:Thursday 15 October · 9:30am https://www.stjohnfisherschool.co.uk/s
 END:VEVENT
 BEGIN:VEVENT
 UID:st-john-fisher-primary-alt-2@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261105T093000Z
 DTEND:20261105T103000Z
 SUMMARY:St John Fisher Catholic Primary School — Reception 2027 open morning
@@ -481,7 +588,7 @@ DESCRIPTION:Thursday 5 November · 9:30am https://www.stjohnfisherschool.co.uk/s
 END:VEVENT
 BEGIN:VEVENT
 UID:st-john-fisher-primary-alt-3@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261119T093000Z
 DTEND:20261119T103000Z
 SUMMARY:St John Fisher Catholic Primary School — Reception 2027 open morning
@@ -491,7 +598,7 @@ DESCRIPTION:Thursday 19 November · 9:30am https://www.stjohnfisherschool.co.uk/
 END:VEVENT
 BEGIN:VEVENT
 UID:st-john-fisher-primary-alt-4@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261126T093000Z
 DTEND:20261126T103000Z
 SUMMARY:St John Fisher Catholic Primary School — Reception 2027 open morning
@@ -501,7 +608,7 @@ DESCRIPTION:Thursday 26 November · 9:30am https://www.stjohnfisherschool.co.uk/
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261006T081500Z
 DTEND:20261006T093000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -511,7 +618,7 @@ DESCRIPTION:Official School Tours page lists parent tours from 9:15–10:30am. T
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261020T081500Z
 DTEND:20261020T093000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -521,7 +628,7 @@ DESCRIPTION:Tuesday 20 October · 9:15–10:30am https://www.westlodge.harrow.sc
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261112T091500Z
 DTEND:20261112T103000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -531,7 +638,7 @@ DESCRIPTION:12 November · 9:15–10:30am https://www.westlodge.harrow.sch.uk/sc
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary-alt-2@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261117T091500Z
 DTEND:20261117T103000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -541,7 +648,7 @@ DESCRIPTION:17 November · 9:15–10:30am https://www.westlodge.harrow.sch.uk/sc
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary-alt-3@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261126T091500Z
 DTEND:20261126T103000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -551,7 +658,7 @@ DESCRIPTION:Thursday 26 November · 9:15–10:30am https://www.westlodge.harrow.
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary-alt-4@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261203T091500Z
 DTEND:20261203T103000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -561,7 +668,7 @@ DESCRIPTION:Thursday 3 December · 9:15–10:30am https://www.westlodge.harrow.s
 END:VEVENT
 BEGIN:VEVENT
 UID:west-lodge-primary-alt-5@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261208T091500Z
 DTEND:20261208T103000Z
 SUMMARY:West Lodge Primary School — Parent school tour
@@ -571,7 +678,7 @@ DESCRIPTION:Tuesday 8 December · 9:15–10:30am https://www.westlodge.harrow.sc
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261006T081500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -580,7 +687,7 @@ DESCRIPTION:Official admissions page lists Reception 2027 tours at 9:15am. Earli
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261012T081500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -589,7 +696,7 @@ DESCRIPTION:Monday 12 October · 9:15am https://pinnerpark.harrow.sch.uk/admissi
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261104T091500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -598,7 +705,7 @@ DESCRIPTION:Wednesday 4 November · 9:15am https://pinnerpark.harrow.sch.uk/admi
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary-alt-2@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261119T091500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -607,7 +714,7 @@ DESCRIPTION:Thursday 19 November · 9:15am https://pinnerpark.harrow.sch.uk/admi
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary-alt-3@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261125T091500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -616,7 +723,7 @@ DESCRIPTION:Wednesday 25 November · 9:15am https://pinnerpark.harrow.sch.uk/adm
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary-alt-4@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20270107T091500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -625,7 +732,7 @@ DESCRIPTION:Thursday 7 January · 9:15am https://pinnerpark.harrow.sch.uk/admiss
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-park-primary-alt-5@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20270111T091500Z
 SUMMARY:Pinner Park Primary School — Reception 2027 school tour
 LOCATION:Pinner
@@ -634,7 +741,7 @@ DESCRIPTION:Monday 11 January · 9:15am https://pinnerpark.harrow.sch.uk/admissi
 END:VEVENT
 BEGIN:VEVENT
 UID:st-jerome-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261006T081500Z
 DTEND:20261006T093000Z
 SUMMARY:St Jerome Church of England Bilingual School — Reception 2027 open day
@@ -644,7 +751,7 @@ DESCRIPTION:School-organised Eventbrite listing confirms an open day at St Jerom
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-wood-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261005T090000Z
 SUMMARY:Pinner Wood School — Prospective family school tour
 LOCATION:Pinner
@@ -653,7 +760,7 @@ DESCRIPTION:Official Come & Visit Us page lists Autumn 2026 school tours at 10:0
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-wood-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261019T090000Z
 SUMMARY:Pinner Wood School — Prospective family school tour
 LOCATION:Pinner
@@ -662,7 +769,7 @@ DESCRIPTION:Monday 19 October · 10:00am https://www.pinnerwood.harrow.sch.uk/pa
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-wood-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261104T100000Z
 SUMMARY:Pinner Wood School — Prospective family school tour
 LOCATION:Pinner
@@ -671,7 +778,7 @@ DESCRIPTION:Wednesday 4 November · 10:00am https://www.pinnerwood.harrow.sch.uk
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-wood-primary-alt-2@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261109T100000Z
 SUMMARY:Pinner Wood School — Prospective family school tour
 LOCATION:Pinner
@@ -680,7 +787,7 @@ DESCRIPTION:Monday 9 November · 10:00am https://www.pinnerwood.harrow.sch.uk/pa
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-wood-primary-alt-3@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261118T100000Z
 SUMMARY:Pinner Wood School — Prospective family school tour
 LOCATION:Pinner
@@ -689,7 +796,7 @@ DESCRIPTION:Wednesday 18 November · 10:00am https://www.pinnerwood.harrow.sch.u
 END:VEVENT
 BEGIN:VEVENT
 UID:pinner-wood-primary-alt-4@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261123T100000Z
 SUMMARY:Pinner Wood School — Prospective family school tour
 LOCATION:Pinner
@@ -698,7 +805,7 @@ DESCRIPTION:Monday 23 November · 10:00am https://www.pinnerwood.harrow.sch.uk/p
 END:VEVENT
 BEGIN:VEVENT
 UID:cedars-manor-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260930T080000Z
 SUMMARY:Cedars Manor School — School tour (Wednesdays)
 LOCATION:Harrow
@@ -707,7 +814,7 @@ DESCRIPTION:Official admissions page says school tours are held every Wednesday 
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261014T083000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -716,7 +823,7 @@ DESCRIPTION:Tours begin at 9:30am. The school asks families to contact the schoo
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261016T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -725,7 +832,7 @@ DESCRIPTION:Friday 16 October · tour begins 9:30am https://www.wembleyprimary.c
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261020T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -734,7 +841,7 @@ DESCRIPTION:Tuesday 20 October · tour begins 9:30am https://www.wembleyprimary.
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-2@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261022T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -743,7 +850,7 @@ DESCRIPTION:Thursday 22 October · tour begins 9:30am https://www.wembleyprimary
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-3@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261104T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -752,7 +859,7 @@ DESCRIPTION:Wednesday 4 November · tour begins 9:30am https://www.wembleyprimar
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-4@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261106T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -761,7 +868,7 @@ DESCRIPTION:Friday 6 November · tour begins 9:30am https://www.wembleyprimary.c
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-5@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261117T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -770,7 +877,7 @@ DESCRIPTION:Tuesday 17 November · tour begins 9:30am https://www.wembleyprimary
 END:VEVENT
 BEGIN:VEVENT
 UID:wembley-primary-alt-6@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261119T093000Z
 SUMMARY:Wembley Primary School — EYFS Open Day
 LOCATION:Wembley
@@ -779,7 +886,7 @@ DESCRIPTION:Thursday 19 November · tour begins 9:30am https://www.wembleyprimar
 END:VEVENT
 BEGIN:VEVENT
 UID:priestmead-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20270112T090000Z
 DTEND:20270112T100000Z
 SUMMARY:Priestmead Primary School and Nursery — Prospective parent/carer tour
@@ -789,7 +896,7 @@ DESCRIPTION:Official admissions page lists Monday tours from 9–10am. All liste
 END:VEVENT
 BEGIN:VEVENT
 UID:priestmead-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20270202T090000Z
 DTEND:20270202T100000Z
 SUMMARY:Priestmead Primary School and Nursery — Prospective parent/carer tour
@@ -799,7 +906,7 @@ DESCRIPTION:Monday 2 February · 9–10am https://www.priestmead.theppt.co.uk/ad
 END:VEVENT
 BEGIN:VEVENT
 UID:weald-rise-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Weald Rise Primary School — School tour / open event
@@ -809,7 +916,7 @@ DESCRIPTION:Official Open Event Experience page lists 2026 school tours on 17 Se
 END:VEVENT
 BEGIN:VEVENT
 UID:weald-rise-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Weald Rise Primary School — School tour / open event
@@ -819,7 +926,7 @@ DESCRIPTION:Thursday 12 November · time not published https://www.wealdrise.har
 END:VEVENT
 BEGIN:VEVENT
 UID:stanburn-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261001T080000Z
 SUMMARY:Stanburn Primary School — Prospective Reception school tour
 LOCATION:Stanmore
@@ -828,7 +935,7 @@ DESCRIPTION:Official School Tours page says prospective Reception parents can to
 END:VEVENT
 BEGIN:VEVENT
 UID:whitchurch-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261013T081500Z
 DTEND:20261013T091500Z
 SUMMARY:Whitchurch Primary School — Nursery/Reception 2027 open day & school tour
@@ -838,7 +945,7 @@ DESCRIPTION:Official Open Days and School Tours page lists three 2027-entry tour
 END:VEVENT
 BEGIN:VEVENT
 UID:whitchurch-primary-alt-0@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261020T081500Z
 DTEND:20261020T091500Z
 SUMMARY:Whitchurch Primary School — Nursery/Reception 2027 open day & school tour
@@ -848,7 +955,7 @@ DESCRIPTION:Tuesday 20 October · 9:15–10:15am https://www.whitchurchprimary.h
 END:VEVENT
 BEGIN:VEVENT
 UID:whitchurch-primary-alt-1@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20261109T091500Z
 DTEND:20261109T101500Z
 SUMMARY:Whitchurch Primary School — Nursery/Reception 2027 open day & school tour
@@ -858,7 +965,7 @@ DESCRIPTION:Monday 9 November · 9:15–10:15am https://www.whitchurchprimary.ha
 END:VEVENT
 BEGIN:VEVENT
 UID:st-johns-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260929T083000Z
 SUMMARY:St John's C of E School — School tour (Tuesdays)
 LOCATION:Stanmore
@@ -867,7 +974,7 @@ DESCRIPTION:Official admissions page says regular school tours run on Tuesdays a
 END:VEVENT
 BEGIN:VEVENT
 UID:st-teresas-primary@openday
-DTSTAMP:20260930T074448Z
+DTSTAMP:20261005T090618Z
 DTSTART:20260929T083000Z
 SUMMARY:St Teresa's Catholic Primary & Nursery School — School Tour for Prospective Parents
 LOCATION:Harrow Weald
