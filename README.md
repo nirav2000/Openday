@@ -2,7 +2,7 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.20.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.21.0**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
@@ -11,6 +11,10 @@ Current app version: **2.20.0**. Openday follows Semantic Versioning; see [`vers
 
 - filters for date status and school type
 - list and calendar views
+- wider admissions-event coverage: open evenings, school-in-action visits, tours and scholarship information events
+- scholarship / means-tested bursary database with music criteria and deadlines
+- reusable school-visit question bank with private custom questions and school-specific answer notes
+- shared Notifications v1.1 in-app inbox and preferences; browser push remains setup-required until a trusted Openday server transport is added
 - separate school-information and booking links
 - favourites, booked status and visit notes
 - notes autosave while typing
