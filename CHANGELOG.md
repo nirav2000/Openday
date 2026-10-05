@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.23.0 — 2026-10-05
+
+- Connected Openday notification activation to shared Notifications v1.3 consumer push registration.
+- Enabling notifications now performs the native permission flow, FCM device registration and trusted shared-backend subscription registration.
+- Openday users never need a Google/Firebase account and cannot access provider configuration.
+- Stored local notification state now records whether this device has completed remote registration.
+
 ## 2.22.1 — 2026-10-05
 
 - Fixed consumer notification activation: provider/Firebase setup controls are no longer exposed to Openday users.
