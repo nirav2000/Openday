@@ -208,7 +208,7 @@ function showDetail(s){
   $('#saveNote').onclick=()=>{state.notes[sharedKey]=$('#note').value;for(const x of schoolGroup(s))delete state.notes[x.id];saveState();$('#saveNote').textContent='Saved ✓'};
   if(s.start)$('#calendar').onclick=()=>downloadICS(s);
   if($('#watchBooking'))$('#watchBooking').onclick=()=>toggleWatch(s);
-  appendAdmissionEvidence(s);$('#detail').showModal();
+  appendAdmissionEvidence(s);appendPlanningLinks(s);$('#detail').showModal();
 }
 
 function downloadICS(s){
@@ -267,6 +267,13 @@ Promise.all([
 }).catch(e=>{$('#list').innerHTML=`<p class="empty">${e.message}. Please refresh.</p>`});
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 
+function appendPlanningLinks(s){
+  const body=$('#detailBody .detail-inner');if(!body||schoolPhase!=='senior')return;
+  const box=document.createElement('section');box.className='admission planning-panel';
+  const q=new URL('questions.html',location.href);q.searchParams.set('school',s.name);
+  box.innerHTML='<small>VISIT PREP</small><h3>Questions, scholarships & bursaries</h3><p>Use the reusable question checklist while you visit, and check any scholarship or means-tested bursary routes.</p><div class="admission-links"><a href="'+q.pathname+q.search+'">Questions for this school →</a><a href="scholarships.html">Scholarships & bursaries →</a></div>';
+  const anchor=body.querySelector('.other-dates');if(anchor)anchor.after(box);else body.append(box);
+}
 function appendAdmissionEvidence(s){
   const body=$('#detailBody .detail-inner');
   if(s.academic){const a=s.academic,box=document.createElement('section');box.className='admission score-panel';const title=document.createElement('h3');title.textContent='Academic entry / CAT guidance';box.append(title);for(const text of [a.summary,`${a.kind} · ${a.cycle}`,a.detail,'CAT4 scores are not interchangeable with entrance-test scores. A qualifying score or historical cutoff is not a guaranteed place.']){const p=document.createElement('p');p.textContent=text;box.append(p)}const link=document.createElement('a');link.href=a.sourceUrl;link.target='_blank';link.rel='noopener';link.textContent='Official score / admissions source ↗';box.append(link);const anchor=body.querySelector('.admission');if(anchor)anchor.after(box);else body.append(box)}

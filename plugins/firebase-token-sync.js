@@ -65,6 +65,9 @@
     performanceSchoolSets:data?.performanceSchoolSets&&typeof data.performanceSchoolSets==='object'?cleanForFirestore(data.performanceSchoolSets):{},
     performanceCompareOrder:Array.isArray(data?.performanceCompareOrder)?data.performanceCompareOrder.map(String):[],
     performanceSubjectOrder:data?.performanceSubjectOrder&&typeof data.performanceSubjectOrder==='object'?cleanForFirestore(data.performanceSubjectOrder):{gcse:[],alevel:[]},
+    questionBank:data?.questionBank&&typeof data.questionBank==='object'?cleanForFirestore(data.questionBank):{},
+    questionAnswers:data?.questionAnswers&&typeof data.questionAnswers==='object'?cleanForFirestore(data.questionAnswers):{},
+    notificationState:data?.notificationState&&typeof data.notificationState==='object'?cleanForFirestore(data.notificationState):{},
     mergeConflicts:data?.mergeConflicts&&typeof data.mergeConflicts==='object'?cleanForFirestore(data.mergeConflicts):{},
     updatedAt:asIso(data?.updatedAt)
   });
@@ -118,6 +121,9 @@
       performanceSchoolSets:mergeMap('performanceSchoolSets',a.performanceSchoolSets,b.performanceSchoolSets),
       performanceCompareOrder:aNewer?a.performanceCompareOrder:b.performanceCompareOrder,
       performanceSubjectOrder:aNewer?a.performanceSubjectOrder:b.performanceSubjectOrder,
+      questionBank:mergeMap('questionBank',a.questionBank,b.questionBank),
+      questionAnswers:mergeMap('questionAnswers',a.questionAnswers,b.questionAnswers),
+      notificationState:mergeMap('notificationState',a.notificationState,b.notificationState),
       mergeConflicts:conflicts,
       updatedAt:new Date(Math.max(at,bt)||Date.now()).toISOString()
     };
@@ -201,6 +207,9 @@
         const b=base.performanceSubjectOrder||{gcse:[],alevel:[]},l=local.performanceSubjectOrder||{gcse:[],alevel:[]},r=remote.performanceSubjectOrder||{gcse:[],alevel:[]};
         const lc=!same(l,b),rc=!same(r,b);return lc&&!rc?l:!lc&&rc?r:lc&&rc?l:r;
       })(),
+      questionBank:mergeMap('questionBank',base.questionBank,local.questionBank,remote.questionBank),
+      questionAnswers:mergeMap('questionAnswers',base.questionAnswers,local.questionAnswers,remote.questionAnswers),
+      notificationState:mergeMap('notificationState',base.notificationState,local.notificationState,remote.notificationState),
       mergeConflicts:conflicts,
       updatedAt:now
     };
