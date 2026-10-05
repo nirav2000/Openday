@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "updated": "2026-10-05",
+    "purpose": "Scholarship and means-tested bursary planning for tracked senior schools. Verify official pages before applying because criteria and deadlines can change.",
+    "entryFocus": "11+ / 13+",
+    "provenance": "Official school sources unless a record explicitly says otherwise."
+  },
+  "schools": [
+    {
+      "id": "habs-boys",
+      "name": "Haberdashers' Boys' School",
+      "area": "Elstree",
+      "type": "independent",
+      "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/scholarships/",
+      "checked": "2026-10-05",
+      "scholarships": {
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "types": [
+          "Academic",
+          "Art",
+          "Design Technology",
+          "Drama",
+          "Music",
+          "Sport"
+        ],
+        "music": {
+          "availableAt": [
+            "11+",
+            "13+",
+            "16+"
+          ],
+          "publishedStandard": "No single grade threshold is stated on the general scholarship page; use the scholarship form and Director of Music guidance.",
+          "selection": "Scholarship application plus the school's admissions process; current forms are published on the scholarship page.",
+          "note": "Ask specifically how orchestral-instrument need and potential are weighted."
+        },
+        "deadline": "2026-11-06",
+        "deadlineLabel": "11+ / 13+ scholarship application deadline"
+      },
+      "bursary": {
+        "available": true,
+        "meansTested": true,
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "deadline": "2026-11-19",
+        "deadlineLabel": "11+ bursary application deadline",
+        "value": "Awards can cover 50%–100% of fees; additional proportional help can include coach travel, lunches, educational trips and one instrument's music lessons.",
+        "sourceUrl": "https://www.habselstree.org.uk/boys/admissions/fee-assistance/"
+      },
+      "events": [
+        {
+          "date": "2026-10-06",
+          "label": "11+ and 13+ Scholarship Information Evening",
+          "time": "17:00–19:30",
+          "url": "https://www.habselstree.org.uk/boys/admissions/book-a-visit/"
+        },
+        {
+          "date": "2026-10-14",
+          "label": "Bursary Information Zoom",
+          "time": "17:30–18:30",
+          "url": "https://www.habselstree.org.uk/boys/admissions/book-a-visit/"
+        }
+      ]
+    },
+    {
+      "id": "aldenham",
+      "name": "Aldenham School",
+      "area": "Elstree",
+      "type": "independent",
+      "sourceUrl": "https://aldenham.com/admissions/scholarship-and-bursaries/",
+      "checked": "2026-10-05",
+      "scholarships": {
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "types": [
+          "Academic",
+          "Art",
+          "Dance",
+          "Design & Technology",
+          "Drama",
+          "Music",
+          "Sport",
+          "Textiles"
+        ],
+        "music": {
+          "availableAt": [
+            "11+",
+            "13+"
+          ],
+          "publishedStandard": "Around Grade 3 on two different orchestral instruments/voice, or a higher standard if offering only one.",
+          "selection": "Application and reference; selected candidates audition/interview with the Director of Music in January, performing one piece on each instrument (or two contrasting pieces on one), plus sight-reading, aural and interview.",
+          "note": "The current brochure explicitly says awards consider both ability and potential and expects substantial involvement in ensembles, orchestras, choirs or bands.",
+          "sourceUrl": "https://aldenham.com/wp-content/uploads/2026/05/Aldenham-Scholarship-Information-2025-FINALHD-May-2026.pdf"
+        },
+        "deadline": null,
+        "deadlineLabel": "Current brochure says indicate scholarship interest on registration; confirm the current application/reference deadline with Admissions."
+      },
+      "bursary": {
+        "available": true,
+        "meansTested": true,
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "deadline": null,
+        "deadlineLabel": "Financial assistance should be declared on registration; contact the school before formally registering if support is essential.",
+        "value": "Limited means-tested awards; assessed by an independent third party and reviewed annually.",
+        "sourceUrl": "https://aldenham.com/admissions/scholarship-and-bursaries/"
+      }
+    },
+    {
+      "id": "mill-hill-belmont",
+      "name": "Belmont / Mill Hill School",
+      "area": "Mill Hill",
+      "type": "independent",
+      "sourceUrl": "https://belmont.millhill.org.uk/admissions/scholarships-%26-bursaries",
+      "checked": "2026-10-05",
+      "scholarships": {
+        "entryPoints": [
+          "11+",
+          "13+"
+        ],
+        "types": [
+          "Academic",
+          "Art",
+          "Drama",
+          "Music",
+          "Sport",
+          "other creative awards"
+        ],
+        "music": {
+          "availableAt": [
+            "11+"
+          ],
+          "publishedStandard": "Approximately Grade 4 on the first-study instrument; a second study and/or voice is often offered but is not required.",
+          "selection": "Two contrasting first-study pieces, optional second-study piece, sight-reading, aural tests and discussion of theory/musical interests.",
+          "note": "Belmont awards run through Years 7–8; pupils can re-apply for Mill Hill awards at 13+.",
+          "sourceUrl": "https://belmont.millhill.org.uk/admissions/scholarships-%26-bursaries/music-scholarships"
+        },
+        "deadline": "2027-01-08",
+        "deadlineLabel": "Published deadline for Creative and Sport applications for September 2027 entry; check whether Music follows the creative deadline on the current admissions calendar."
+      },
+      "bursary": {
+        "available": true,
+        "meansTested": true,
+        "entryPoints": [
+          "11+",
+          "13+"
+        ],
+        "deadline": null,
+        "deadlineLabel": "Contact the Foundation bursary team for the 2027–28 timeline.",
+        "value": "May provide up to 100% of tuition fees. At Belmont, bursaries are awarded to outstanding pupils who have also received a scholarship.",
+        "sourceUrl": "https://belmont.millhill.org.uk/admissions/scholarships-%26-bursaries"
+      }
+    },
+    {
+      "id": "john-lyon",
+      "name": "John Lyon School",
+      "area": "Harrow-on-the-Hill",
+      "type": "independent",
+      "sourceUrl": "https://www.johnlyon.org/admissions/scholarships/",
+      "checked": "2026-10-05",
+      "scholarships": {
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "types": [
+          "Academic",
+          "Music",
+          "Drama",
+          "Sport",
+          "STEAM",
+          "Art"
+        ],
+        "music": {
+          "availableAt": [
+            "11+",
+            "13+"
+          ],
+          "publishedStandard": "No grade threshold is stated on the current general scholarship page.",
+          "selection": "Separate application; candidates meet the Head of Department and complete an assessment. Music assessment is scheduled in the January scholarship week.",
+          "note": "Academic scholarships require no separate form; 11+/13+ candidates are considered through the entrance process."
+        },
+        "deadline": "2026-10-31T16:00:00",
+        "deadlineLabel": "Music, Drama, Sport, STEAM and Art applications due by 4pm"
+      },
+      "bursary": {
+        "available": true,
+        "meansTested": true,
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "deadline": "2026-10-31T12:00:00",
+        "deadlineLabel": "September 2027 bursary application deadline: 12pm",
+        "value": "Means-tested support for local families who could not otherwise afford fees.",
+        "sourceUrl": "https://www.johnlyon.org/admissions/bursaries/"
+      }
+    },
+    {
+      "id": "st-pauls",
+      "name": "St Paul's School / St Paul's Prep",
+      "area": "Barnes",
+      "type": "independent",
+      "sourceUrl": "https://www.stpaulsschool.org.uk/admissions/music-scholarships/",
+      "checked": "2026-10-05",
+      "scholarships": {
+        "entryPoints": [
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "types": [
+          "Academic",
+          "Music",
+          "Art",
+          "other school awards"
+        ],
+        "music": {
+          "availableAt": [
+            "11+",
+            "13+",
+            "16+"
+          ],
+          "publishedStandard": "At 11+, applicants are encouraged when working above Grade 5 on first study (Grade 6+ for piano) with a similar standard on a second instrument. At 13+, candidates are normally around Grade 6+ but the school stresses potential and notes instrument-specific differences.",
+          "selection": "Performance plus musical assessments appropriate to entry point; 13+ includes quick study, aural tests, a short written paper and interview.",
+          "note": "Scholarships are honorary with free tuition on two instruments; exhibitions provide free tuition on one."
+        },
+        "deadline": null,
+        "deadlineLabel": "13+ music entries normally close in mid-January; verify the cycle-specific date."
+      },
+      "bursary": {
+        "available": true,
+        "meansTested": true,
+        "entryPoints": [
+          "7+",
+          "11+",
+          "13+",
+          "16+"
+        ],
+        "deadline": null,
+        "deadlineLabel": "Apply through the admissions process and cycle-specific bursary timetable.",
+        "value": "Founder's Awards can cover fees and a matching proportion of extras including uniform, trips, transport and music lessons/instrument loan.",
+        "sourceUrl": "https://www.stpaulsschool.org.uk/admissions/founders-awards-bursaries/"
+      }
+    },
+    {
+      "id": "harrow",
+      "name": "Harrow School",
+      "area": "Harrow-on-the-Hill",
+      "type": "independent",
+      "sourceUrl": "https://www.harrowschool.org.uk/admissions/scholarships",
+      "checked": "2026-10-05",
+      "scholarships": {
+        "entryPoints": [
+          "13+"
+        ],
+        "types": [
+          "Academic",
+          "Music",
+          "Art",
+          "Design Technology & Engineering",
+          "Drama",
+          "Sport"
+        ],
+        "music": {
+          "availableAt": [
+            "13+"
+          ],
+          "publishedStandard": "Contact the Head of Music for suitability; the public scholarship overview does not state a single grade threshold.",
+          "selection": "Subject-head approval is required before scholarship registration.",
+          "note": "Harrow's normal main entry is 13+."
+        },
+        "deadline": null,
+        "deadlineLabel": "Scholarship dates are published in the school's 2026/27 scholarship timetable; eligibility/approval should be discussed with the relevant Head of Subject."
+      },
+      "bursary": {
+        "available": true,
+        "meansTested": true,
+        "entryPoints": [
+          "13+"
+        ],
+        "deadline": null,
+        "deadlineLabel": "Follow the 13+ admissions and financial-assistance timetable.",
+        "value": "Means-tested bursary support is available; verify the current award scale and deadlines with Admissions.",
+        "sourceUrl": "https://www.harrowschool.org.uk/admissions"
+      }
+    }
+  ]
+}
