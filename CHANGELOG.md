@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.22.0 — 2026-10-05
+
+- Expanded Scholarships & bursaries across all independent senior schools currently tracked by Openday, with Belmont retained separately for the Mill Hill 11+ route.
+- Added scholarship monetary value/benefit, published music standard, separate planning standard, award availability/count where published, bursary compatibility and deadline fields.
+- Added a horizontal comparison-table view so schools can be compared on the same fields rather than only read as cards.
+- Kept unpublished information explicitly marked rather than estimating award counts or fee remission.
+- Kept state grammar schools outside the bursary table because they charge no tuition fees.
+
 ## 2.21.0 — 2026-10-05
 
 - Widened the open-event model beyond headline Open Days to include open evenings, school-in-action visits, tours and scholarship information events, with a fresh October research pass.
