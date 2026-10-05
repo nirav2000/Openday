@@ -1,6 +1,6 @@
 {
-  "version": "2.22.1",
+  "version": "2.23.0",
   "released": "2026-10-05",
   "channel": "main",
-  "summary": "Fix notification activation so consumers get an Openday opt-in followed by the native iPhone permission prompt, never Firebase developer setup."
+  "summary": "Connect Openday consumer notifications to the shared Notifications v1.3 remote device registry."
 }

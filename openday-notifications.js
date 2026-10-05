@@ -1,6 +1,6 @@
-import {createNotifications,mountNotificationInbox,notificationStyles} from 'https://nirav2000.github.io/Apps/notifications/v1/index.js';
+import {createNotifications,mountNotificationInbox,notificationStyles,registerConsumerWebPush,webPushPublicConfig} from 'https://nirav2000.github.io/Apps/notifications/v1/index.js';
 
-const APP='openday',SCOPE='planning',USER='planner';
+const APP='openday',SCOPE='planning',USER='planner',PUSH_API='https://apps-monitor-api.nirav2000-github.workers.dev';
 const EVENT_TYPES=[
   {id:'open_event.new',label:'New open day / visit found'},
   {id:'open_event.changed',label:'Open event date or time changed'},
@@ -74,19 +74,22 @@ async function enableNotifications(){
     status.textContent='This browser does not support web notifications for this app.';
     saveActivation({choice:'unsupported',permission:'unsupported'});return
   }
-  let permission=pushPermission();
-  if(permission==='default')permission=await Notification.requestPermission();
-  const {value}=notificationState();
-  value.preferences.channels.web_push=permission==='granted';
-  value.activation={...value.activation,choice:permission==='granted'?'enabled':permission==='denied'?'denied':'dismissed',permission};
-  saveValue(value);
-  if(permission==='granted'){
-    status.textContent='iPhone notification permission is enabled. Sending a test notification…';
-    const shown=await showTestNotification();
-    status.textContent=shown?'Enabled ✓ A test notification has been sent.':'Permission enabled ✓';
-  }else if(permission==='denied') status.textContent='Notifications are blocked for Openday in iPhone settings.';
-  else status.textContent='Notification permission was not enabled.';
-  await mount()
+  try{
+    status.textContent='Requesting notification permission…';
+    const config=await webPushPublicConfig(PUSH_API+'/notifications/public-config?app='+encodeURIComponent(APP));
+    if(!config?.consumerRegistration||!config?.webPush?.configured){status.textContent='Openday remote notifications are not available from the shared service yet.';return}
+    const enabledEvents=EVENT_TYPES.filter(x=>notificationState().value.preferences.events?.[x.id]!==false).map(x=>x.id);
+    const result=await registerConsumerWebPush({apiBase:PUSH_API,app:APP,eventTypes:enabledEvents,firebaseConfig:config.webPush.firebaseConfig,vapidKey:config.webPush.vapidKey});
+    if(!result.ok){status.textContent='Push was not enabled: '+String(result.reason||'registration failed');return}
+    const {value}=notificationState();value.preferences.channels.web_push=true;value.preferences.destinations=value.preferences.destinations||{};value.preferences.destinations.fcmInstallationId=result.installationId;value.activation={...value.activation,choice:'enabled',permission:'granted',remoteRegistered:true,registeredAt:new Date().toISOString()};saveValue(value);
+    status.textContent='Enabled ✓ This iPhone is registered with the Openday notification service.';
+    await mount();
+  }catch(error){status.textContent='Could not enable remote notifications: '+String(error?.message||error)}
+}
+async function sendRemoteTest(){
+  const status=document.getElementById('notificationActivationStatus');
+  status.textContent='Your device is registered for remote push. A remote test must be sent by the trusted notification backend; the app itself cannot send notifications to subscribers.';
+  return false
 }
 function activationHtml(){
   const {value}=notificationState(),a=value.activation,permission=pushPermission();
@@ -105,7 +108,7 @@ async function renderConsumerPreferences(root){
   root.innerHTML=activationHtml()+'<h3>Notify me about</h3><div class="notification-event-list">'+EVENT_TYPES.map(item=>'<label class="notification-event-row"><span>'+item.label+'</span><input type="checkbox" data-event="'+item.id+'" '+(prefs.events?.[item.id]!==false?'checked':'')+'></label>').join('')+'</div>';
   root.querySelector('#enableNotifications')?.addEventListener('click',enableNotifications);
   root.querySelector('#notNowNotifications')?.addEventListener('click',()=>{saveActivation({choice:'not-now'});document.getElementById('notificationActivationStatus').textContent='You can enable notifications later from the bell.'});
-  root.querySelector('#sendNotificationTest')?.addEventListener('click',showTestNotification);
+  root.querySelector('#sendNotificationTest')?.addEventListener('click',sendRemoteTest);
   root.querySelector('#notificationInstallHelp')?.addEventListener('click',()=>{document.getElementById('notificationActivationStatus').textContent='In Safari: Share → Add to Home Screen. Then open Openday from its Home Screen icon.'});
   root.querySelectorAll('[data-event]').forEach(box=>box.addEventListener('change',async()=>{const next=await client.preferences(SCOPE,USER);next.events[box.dataset.event]=box.checked;await client.savePreferences(SCOPE,USER,next)}));
 }
@@ -118,7 +121,7 @@ async function mount(){
   const prefs=document.getElementById('notificationPreferences'),inbox=document.getElementById('notificationInbox'),status=document.getElementById('notificationReadiness');
   await renderConsumerPreferences(prefs);
   await mountNotificationInbox(inbox,{client,scopeId:SCOPE,userId:USER,onUnreadChange:()=>refresh()});
-  status.textContent='No Google or Firebase account is required to enable notifications as an Openday user.';
+  status.textContent='No Google or Firebase account is required. When enabled, this device is registered with the shared Openday push service.';
 }
 function maybePromptOnOpen(){
   const {value}=notificationState(),a=value.activation;
