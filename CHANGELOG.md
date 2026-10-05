@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.21.0 — 2026-10-05
+
+- Widened the open-event model beyond headline Open Days to include open evenings, school-in-action visits, tours and scholarship information events, with a fresh October research pass.
+- Added structured scholarship and means-tested bursary data, including music-scholarship expectations and deadlines where published.
+- Added a reusable school-question bank plus private custom questions and school-specific answer notes.
+- Installed shared Notifications v1.1 as a thin Openday consumer with an in-app private-state inbox and event preferences. Browser push remains visibly setup-required until an authenticated Openday server transport is provided.
+- Added Awards and Questions navigation and school-detail links into the new planning tools.
+
 Openday uses Semantic Versioning (`MAJOR.MINOR.PATCH`).
 
 - **MAJOR**: incompatible change to the app/data model or a fundamental workflow change.
