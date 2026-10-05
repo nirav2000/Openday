@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.22.1 — 2026-10-05
+
+- Fixed consumer notification activation: provider/Firebase setup controls are no longer exposed to Openday users.
+- On the first app open where notification choice has never been presented, Openday now shows a consumer opt-in explaining the alerts available.
+- Tapping Enable notifications requests the browser/iOS native notification permission from a user gesture and sends an immediate test notification when permission is granted.
+- On iPhone outside standalone/Home Screen mode, Openday explains the Apple Home Screen requirement rather than presenting a broken provider setup route.
+- The notification bell remains the place to change event preferences, retry activation or send a test notification.
+
 ## 2.22.0 — 2026-10-05
 
 - Expanded Scholarships & bursaries across all independent senior schools currently tracked by Openday, with Belmont retained separately for the Mill Hill 11+ route.
