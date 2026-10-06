@@ -1,6 +1,6 @@
 {
-  "version": "2.23.0",
-  "released": "2026-10-05",
+  "version": "2.24.0",
+  "released": "2026-10-06",
   "channel": "main",
-  "summary": "Connect Openday consumer notifications to the shared Notifications v1.3 remote device registry."
+  "summary": "Add Bursaries & Fee Assistance hub with assessor reuse, strategy and planner views."
 }
