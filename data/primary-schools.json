@@ -1,12 +1,12 @@
 {
   "meta": {
-    "updated": "2026-09-29",
+    "updated": "2026-10-09",
     "phase": "primary",
     "coverage": "Existing researched primary catalogue plus open Reception-capable London primary/all-through schools within 5 miles of UB5 6QX.",
     "sourceUrl": "https://www.harrow.gov.uk/downloads/file/33318/Primary_Schools_Guide_2025_26_29_Aug.pdf",
     "note": "The primary catalogue is centred on UB5 6QX. Nearby schools are added by radius even when they cross borough boundaries; open-event dates continue to be researched from each school’s own admissions/tours pages.",
     "travelOrigin": "UB5 6QX",
-    "radiusMiles": 5.0,
+    "radiusMiles": 5,
     "distanceMethod": "Straight-line distance from the postcode centroid using OS National Grid eastings/northings; use live route links for road/public-transport journey distance.",
     "originCoordinates": {
       "easting": 511287,
@@ -14,7 +14,16 @@
       "latitude": 51.545427,
       "longitude": -0.396527
     },
-    "locationSource": "Greater London Authority London Schools map service / DfE establishment attributes."
+    "locationSource": "Greater London Authority London Schools map service / DfE establishment attributes.",
+    "admissionsReview": {
+      "postcode": "UB5 6QX",
+      "reviewed": "2026-10-09",
+      "note": "Distance alone does not establish admission eligibility. Faith, sibling, priority radius and other oversubscription criteria must be checked against current published policy."
+    },
+    "performanceReview": {
+      "reviewed": "2026-10-09",
+      "note": "Progress 8 applies to secondary schools, not primary. Primary KS2 attainment and Ofsted evidence require dated official records; no unsupported ratings are inferred."
+    }
   },
   "schools": [
     {
@@ -37,7 +46,14 @@
       "bookingRequired": null,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 0.47 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "Added from the London school-location register because it is approximately 0.47 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website.",
+      "admissionReview": {
+        "checked": "2026-10-09",
+        "postcode": "UB5 6QX",
+        "status": "priority-radius-verification-needed",
+        "note": "Hillingdon priority radius and exact home-to-school measurement must be checked; outside priority does not necessarily mean ineligible.",
+        "sourceUrl": "https://www.bourneprimary.org.uk/"
+      }
     },
     {
       "id": "primary-134369",
@@ -81,7 +97,14 @@
       "bookingRequired": null,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 0.71 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "Added from the London school-location register because it is approximately 0.71 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website.",
+      "admissionReview": {
+        "checked": "2026-10-09",
+        "postcode": "UB5 6QX",
+        "status": "faith-and-catchment-verification-needed",
+        "note": "Catholic admissions criteria and published area require separate eligibility check; postcode proximity alone is insufficient.",
+        "sourceUrl": "https://www.st-raphaels.org/admissions/"
+      }
     },
     {
       "id": "primary-101902",
@@ -224,7 +247,7 @@
       "distanceMiles": 1.17,
       "distanceFromPostcode": "UB5 6QX",
       "infoUrl": "https://www.giffordprimaryschool.co.uk/",
-      "bookingUrl": "https://www.giffordprimaryschool.co.uk/",
+      "bookingUrl": "https://www.giffordprimaryschool.co.uk/admissions/",
       "type": "state",
       "entry": "Reception",
       "event": "Reception open day / school tour",
@@ -235,7 +258,13 @@
       "bookingRequired": null,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 1.17 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "Official admissions page advertises Nursery/Reception 2027 open days; exact session dates require confirmation. School visit can be arranged with admissions office. Checked 9 October 2026.",
+      "admissionReview": {
+        "checked": "2026-10-09",
+        "postcode": "UB5 6QX",
+        "status": "distance-priority-not-verified",
+        "sourceUrl": "https://www.giffordprimaryschool.co.uk/admissions/"
+      }
     },
     {
       "id": "primary-102421",
@@ -527,19 +556,34 @@
       "urn": "101896",
       "distanceMiles": 1.76,
       "distanceFromPostcode": "UB5 6QX",
-      "infoUrl": "https://www.durdans-park.co.uk",
-      "bookingUrl": "https://www.durdans-park.co.uk",
+      "infoUrl": "https://durdans-park.co.uk/admissions/",
+      "bookingUrl": "https://durdans-park.co.uk/admissions/",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception 2027 open morning",
+      "start": "2026-10-19",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 1.76 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "School confirms 19 October and 30 November 2026 Reception open days; contact school office to register. Times not published. Source checked 9 October 2026.",
+      "alternateVisits": [
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2026-11-30",
+          "status": "confirmed",
+          "bookingUrl": "https://durdans-park.co.uk/admissions/"
+        }
+      ],
+      "admissionReview": {
+        "checked": "2026-10-09",
+        "postcode": "UB5 6QX",
+        "status": "requires-policy-distance-check",
+        "note": "Ealing Reception places allocated under published oversubscription criteria; straight-line proximity is not a catchment guarantee.",
+        "sourceUrl": "https://durdans-park.co.uk/admissions/"
+      }
     },
     {
       "id": "primary-141718",
@@ -3802,7 +3846,7 @@
       "area": "London",
       "postcode": "W5 4EA",
       "urn": "101904",
-      "distanceMiles": 5.0,
+      "distanceMiles": 5,
       "distanceFromPostcode": "UB5 6QX",
       "infoUrl": "http://www.littleealing.com/",
       "bookingUrl": "http://www.littleealing.com/",
