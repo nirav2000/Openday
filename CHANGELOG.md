@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.25.0 — 2026-10-09
+
+- Updated primary open-day catalogue with Durdans Park dates and admissions links.
+- Added dated UB5 6QX admissions review records for nearby schools.
+- Full school performance and catchment verification remains outstanding; no unverified ratings added.
+
 ## 2.23.0 — 2026-10-05
 
 - Connected Openday notification activation to shared Notifications v1.3 consumer push registration.
