@@ -1,6 +1,6 @@
 {
-  "version": "2.25.0",
-  "released": "2026-10-09",
+  "version": "2.25.1",
+  "released": "2026-10-15",
   "channel": "main",
-  "summary": "Refresh primary open-day catalogue and UB5 6QX admissions review metadata."
+  "summary": "Add University College School to senior school catalogue"
 }
