@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-10-05",
+    "updated": "2026-10-15",
     "entryYear": 2028,
     "note": "Times and booking availability can change. Always re-check the school page before travelling. The 5 Oct 2026 research pass widened event types to include open evenings, school-in-action visits, tours and scholarship information events.",
     "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page.",
@@ -2870,6 +2870,40 @@
       "infoUrl": "https://www.johnlyon.org/admissions/visit-us/",
       "bookingUrl": "https://www.johnlyon.org/admissions/visit-us/",
       "note": "Working-school visit with pupil-led tour and senior leadership / Head content; confirm the live booking before travelling."
+    },
+    {
+      "id": "university-college-school",
+      "name": "University College School (UCS)",
+      "type": "independent",
+      "area": "Hampstead, London",
+      "postcode": "NW3 6XH",
+      "urn": "100065",
+      "journey": null,
+      "priority": 3,
+      "entry": "11+ / 13+ / sixth form",
+      "event": "Senior School open evening / visit",
+      "start": null,
+      "end": null,
+      "lastKnownStart": null,
+      "status": "research",
+      "bookingRequired": null,
+      "infoUrl": "https://www.ucs.org.uk/",
+      "bookingUrl": "https://www.ucs.org.uk/",
+      "note": "Independent boys' senior school (coeducational sixth form), Frognal, Hampstead. Open evening date for 2027/2028 entry not yet verified; contact admissions or check official website. No fixed state-school catchment or Progress 8 rating is applicable. Verified school identity and address 15 Oct 2026.",
+      "academic": {
+        "summary": "Independent entrance assessment; confirm admissions process directly",
+        "kind": "independent-selective",
+        "cycle": "September 2028 entry planning",
+        "detail": "School's own admissions and assessment arrangements apply; entrance thresholds and open-evening schedule not verified for this entry cycle.",
+        "sourceUrl": "https://www.ucs.org.uk/",
+        "checked": "2026-10-15"
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-10-15",
+          "status": "official-homepage"
+        }
+      }
     }
   ]
 }
