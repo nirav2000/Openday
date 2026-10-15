@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.25.1 — 2026-10-15
+
+- Added University College School (UCS), Hampstead, to the senior-school catalogue.
+- Linked official school information and flagged unverified open-event dates rather than inventing them.
+
 ## 2.25.0 — 2026-10-09
 
 - Updated primary open-day catalogue with Durdans Park dates and admissions links.
