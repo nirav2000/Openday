@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T16:54:01.561051+00:00",
+  "generatedAt": "2026-10-15T21:30:28.897888+00:00",
   "methodology": {
     "gcse": "DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.",
     "gcseSubjects": "DfE 2024/25 institution-level subject entries and grades. For independent schools, these files can omit IGCSE/non-performance-table qualifications, so they must not be assumed to represent the whole curriculum.",
@@ -42736,6 +42736,82 @@
             "aabPercent": 4.5,
             "retainedPercent": 88.9
           }
+        }
+      ]
+    },
+    {
+      "name": "University College School (UCS)",
+      "eventIds": [
+        "university-college-school"
+      ],
+      "type": "independent",
+      "area": "Hampstead, London",
+      "journey": null,
+      "urn": null,
+      "officialName": null,
+      "gcse": {},
+      "alevel": {},
+      "ks4Eal": {},
+      "gcseSubjects": [],
+      "alevelSubjects": [],
+      "context": {
+        "pupilCharacteristics": {},
+        "sen": {},
+        "absence": {}
+      },
+      "coverage": {
+        "gcse": "Official DfE institution data currently exposed for 2022/23–2024/25.",
+        "alevel": "Official DfE institution data currently exposed for 2021/22–2024/25.",
+        "context": "Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25."
+      },
+      "gcseGradeProfile": {
+        "year": "2024/25",
+        "grade9Count": 0,
+        "grade9Percent": null,
+        "grade97Count": 0,
+        "grade97Percent": null,
+        "totalGradeAwards": 0,
+        "hasSuppressedGrades": false,
+        "method": "Derived from DfE 2024/25 subject-level GCSE grade counts. The denominator uses total published exam entries (Combined Science counts as two awards); suppressed top-grade cells are not estimated, so derived percentages can be a small underestimate where suppression occurs."
+      },
+      "gcseFiveYearWindow": [
+        {
+          "year": "2020/21",
+          "status": "No comparable GCSE school-performance series; pandemic grading/disruption."
+        },
+        {
+          "year": "2021/22",
+          "status": "Legacy school-level series not included in the current DfE institution API; backfill separately if needed."
+        },
+        {
+          "year": "2022/23",
+          "data": null
+        },
+        {
+          "year": "2023/24",
+          "data": null
+        },
+        {
+          "year": "2024/25",
+          "data": null
+        }
+      ],
+      "alevelWindow": [
+        {
+          "year": "2021/22",
+          "data": null
+        },
+        {
+          "year": "2022/23",
+          "data": null
+        },
+        {
+          "year": "2023/24",
+          "data": null
+        },
+        {
+          "year": "2024/25",
+          "data": null
         }
       ]
     }
