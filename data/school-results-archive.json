@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30",
-  "note": "Historical examination snapshots. School-published full tables are preferred; school-published highlights are layered over official DfE subject data where a school does not publish a complete table. Source type and URLs are retained explicitly.",
+  "generatedAt": "2026-10-16",
+  "note": "Historical examination snapshots. School-published full tables are preferred; school-published highlights are layered over official DfE subject data where a school does not publish a complete table. Source type and URLs are retained explicitly. 2025/26 school-published headlines are separately dated; older snapshots are retained unchanged. No missing 9–7 metric is estimated.",
   "snapshots": [
     {
       "id": "st-paul-s-school-2024-25",
@@ -5017,6 +5017,123 @@
         ],
         "subjectHighlights": [],
         "headline": null
+      }
+    },
+    {
+      "id": "st-paul-s-school-2025-26",
+      "school": "St Paul's School",
+      "year": "2025/26",
+      "capturedAt": "2026-10-16",
+      "publishedAt": "2026-08-20",
+      "sourceType": "school-published",
+      "sourceUrls": {
+        "gcse": "https://www.stpaulsschool.org.uk/gcse-results-2026/",
+        "alevel": "https://www.stpaulsschool.org.uk/a-level-results-2026/"
+      },
+      "gcse": {
+        "headline": {
+          "grade9Percent": 72,
+          "grade98Percent": 93,
+          "grade97Percent": 99
+        },
+        "subjectHighlights": [],
+        "note": "Headline 2026 school-published results. Full subject table is due from the school in October 2026."
+      },
+      "alevel": {
+        "headline": {
+          "astarPercent": 60,
+          "astarAPercent": 91.5
+        },
+        "cohort": 212
+      }
+    },
+    {
+      "id": "haberdashers-boys-school-2025-26",
+      "school": "Haberdashers' Boys' School",
+      "year": "2025/26",
+      "capturedAt": "2026-10-16",
+      "publishedAt": "2026-08-20",
+      "sourceType": "school-published",
+      "sourceUrls": {
+        "gcse": "https://www.habselstree.org.uk/boys/whats-on/our-news/gcse-results-2026-celebrating-record-breaking-success-and-exciting-opportunities-ahead/",
+        "alevel": "https://www.habselstree.org.uk/boys/whats-on/our-news/a-level-results-2026-achievement-character-and-impact/"
+      },
+      "gcse": {
+        "headline": {
+          "grade9Percent": 56.2,
+          "grade98Percent": 80.1
+        },
+        "subjectHighlights": [
+          {
+            "subject": "Mathematics",
+            "grade9Percent": 82,
+            "grade98Percent": 93
+          },
+          {
+            "subject": "Sciences and Geography",
+            "grade98Percent": 90
+          },
+          {
+            "subject": "Computer Science",
+            "grade98Percent": 86
+          },
+          {
+            "subject": "History",
+            "grade98Percent": 84
+          },
+          {
+            "subject": "Design & Technology",
+            "grade98Percent": 80
+          },
+          {
+            "subject": "Physics",
+            "grade9Percent": 74
+          },
+          {
+            "subject": "Chemistry",
+            "grade9Percent": 72
+          }
+        ],
+        "note": "Headline 2026 school-published results; full subject counts have not yet been published on the result page."
+      },
+      "alevel": {
+        "headline": {
+          "astarPercent": 51,
+          "astarAPercent": 83
+        }
+      }
+    },
+    {
+      "id": "merchant-taylors-school-2025-26",
+      "school": "Merchant Taylors' School",
+      "year": "2025/26",
+      "capturedAt": "2026-10-16",
+      "publishedAt": "2026-08-20",
+      "sourceType": "school-published",
+      "sourceUrls": {
+        "gcse": "https://www.mtsn.org.uk/merchant-taylors-pupils-excel-in-2026-gcse-results/",
+        "alevel": "https://www.mtsn.org.uk/academic-excellence/exam-results/"
+      },
+      "gcse": {
+        "headline": {
+          "grade9Percent": 45.9,
+          "grade98Percent": 72.9,
+          "grade97Percent": 90.2
+        },
+        "subjectHighlights": [
+          {
+            "subject": "Mathematics",
+            "grade98Percent": 86,
+            "grade97Percent": 98
+          }
+        ],
+        "note": "Headline 2026 school-published results. The school published Mathematics 9–8 and 9–7 percentages but not a Mathematics Grade 9 percentage on the cited results page."
+      },
+      "alevel": {
+        "headline": {
+          "astarPercent": 44.9,
+          "astarAPercent": 75.6
+        }
       }
     }
   ]
