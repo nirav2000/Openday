@@ -8,6 +8,9 @@ schools_doc=json.loads((ROOT/'data/schools.json').read_text())
 events=schools_doc.get('schools',[])
 published_path=ROOT/'data/published-results.json'
 published_doc=json.loads(published_path.read_text()) if published_path.exists() else {'schools':{}}
+previous_path=ROOT/'data/performance.json'
+previous_doc=json.loads(previous_path.read_text()) if previous_path.exists() else {'schools':[]}
+previous_by_name={s['name']:s for s in previous_doc.get('schools',[])}
 
 ALIASES={
   "Royal Grammar School High Wycombe":["The Royal Grammar School, High Wycombe","Royal Grammar School, High Wycombe","The Royal Grammar School"],
@@ -37,8 +40,8 @@ URN_OVERRIDES={
 URN_TO_TRACKED={urn:name for name,urn in URN_OVERRIDES.items()}
 
 DATASETS={
-  'ks4_performance': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv',
-  'ks4_subjects': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/49abed18-1c61-489f-afc0-11f501335da1/csv',
+  'ks4_performance': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/bf138f04-daa2-4759-b950-937a17a4c675/csv',
+  'ks4_subjects': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5278712e-8e5a-4868-96be-4cd03ef66bdb/csv',
   'alevel_performance': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/eb2322e3-5976-42f2-ae83-900f26e92bd9/csv',
   'alevel_subjects': 'https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/9a275c77-4325-4ac8-aa9e-b1a2bd3ab63b/csv',
   'characteristics': 'https://content.explore-education-statistics.service.gov.uk/api/releases/420ab305-b770-4dfa-89a0-ac899f34ac46/files/3d6359e3-0733-4a4c-a829-66aec003966d',
@@ -80,7 +83,7 @@ results={g['name']:{
   'name':g['name'],'eventIds':g['eventIds'],'type':g['type'],'area':g['area'],'journey':g['journey'],
   'urn':URN_OVERRIDES.get(g['name']),'officialName':None,'gcse':{},'alevel':{},'ks4Eal':{},'gcseSubjects':[],'alevelSubjects':[],
   'context':{'pupilCharacteristics':{},'sen':{},'absence':{}},
-  'coverage':{'gcse':'Official DfE institution data currently exposed for 2022/23–2024/25.','alevel':'Official DfE institution data currently exposed for 2021/22–2024/25.','context':'Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25.'}
+  'coverage':{'gcse':'Official DfE institution data through provisional 2025/26; earlier years preserved.','alevel':'Official DfE institution data currently exposed for 2021/22–2024/25.','context':'Whole-school pupil characteristics and SEN use the 2025/26 January census; absence uses full academic-year school-level data through 2024/25.'}
 } for g in groups}
 
 def open_csv(url):
@@ -157,7 +160,7 @@ for (tracked,_,_,_),rec in subject_acc.items():
 for item in results.values():
     item['gcseSubjects'].sort(key=lambda x:x['subject'])
 
-# Derive an easy-to-scan latest GCSE grade profile from the published 2024/25
+# Derive an easy-to-scan latest GCSE grade profile from the published 2025/26
 # subject grade counts. Combined Science double grades (e.g. 9-8, 8-8)
 # are split into their two GCSE grade awards before calculating percentages.
 for item in results.values():
@@ -195,7 +198,7 @@ for item in results.values():
         if visible_awards < expected:
             suppressed_possible=True
     item['gcseGradeProfile']={
-      'year':'2024/25',
+      'year':'2025/26',
       'grade9Count':grade9,
       'grade9Percent':round(100*grade9/total_awards,1) if total_awards else None,
       'grade97Count':grade97,
@@ -316,6 +319,15 @@ for row in open_csv(DATASETS['absence']):
       'severeAbsencePercent':n(row.get('enrolments_pa_50_exact_percent')),
     }
 
+# Preserve all historical performance years; never let a new DfE release erase previous figures.
+for school_name,item in results.items():
+    old=previous_by_name.get(school_name,{})
+    for field in ('gcse','alevel','ks4Eal'):
+        for year,record in (old.get(field) or {}).items():
+            item[field].setdefault(year,record)
+    for year,record in (old.get('context',{}).get('absence') or {}).items():
+        item['context']['absence'].setdefault(year,record)
+
 # Merge verified school-published exam results after the DfE build. This is especially important for independent schools using IGCSEs or other qualifications that can be absent from DfE performance-table subject files. The DfE records remain intact alongside these results for transparency.
 for school_name,year_map in (published_doc.get('schools') or {}).items():
     if school_name in results:
@@ -330,6 +342,7 @@ for item in results.values():
       {'year':'2022/23','data':item['gcse'].get('202223')},
       {'year':'2023/24','data':item['gcse'].get('202324')},
       {'year':'2024/25','data':item['gcse'].get('202425')},
+      {'year':'2025/26','data':item['gcse'].get('202526')},
     ]
     item['alevelWindow']=[
       {'year':'2021/22','data':item['alevel'].get('202122')},
@@ -341,8 +354,8 @@ for item in results.values():
 out={
   'generatedAt':datetime.now(timezone.utc).isoformat(),
   'methodology':{
-    'gcse':'DfE Explore Education Statistics, Key stage 4 institution-level schools performance; official school data from 2022/23 to 2024/25.',
-    'gcseSubjects':'DfE 2024/25 institution-level subject entries and grades. For independent schools, these files can omit IGCSE/non-performance-table qualifications, so they must not be assumed to represent the whole curriculum.',
+    'gcse':'DfE Explore Education Statistics 2025/26 provisional Key stage 4 institution-level school performance; historical official results retained.',
+    'gcseSubjects':'DfE 2025/26 provisional institution-level subject entries and grades. For independent schools, these files can omit IGCSE/non-performance-table qualifications, so they must not be assumed to represent the whole curriculum.',
     'schoolPublished':'Where a school publishes newer or more complete exam results, Openday stores those verified figures separately and prefers them for the matching year while retaining the DfE record for auditability.',
     'topGrades':'For schools without a verified school-published override, Grade 9 and Grades 9–7 headline figures are derived from DfE subject-grade counts. Combined Science paired grades count as two GCSE awards. Incomplete independent-school DfE extracts are not presented as whole-school top-grade profiles when a verified school source is available.',
     'alevel':'DfE Explore Education Statistics, 16–18 institution performance, A level cohort, 2021/22 to 2024/25.',
