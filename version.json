@@ -1,6 +1,6 @@
 {
-  "version": "2.25.1",
-  "released": "2026-10-15",
+  "version": "2.25.2",
+  "released": "2026-10-16",
   "channel": "main",
-  "summary": "Add University College School to senior school catalogue"
+  "summary": "Archive 2026 independent-school GCSE grade profiles without replacing historical snapshots"
 }
