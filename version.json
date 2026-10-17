@@ -1,6 +1,6 @@
 {
-  "version": "2.25.3",
+  "version": "2.25.4",
   "released": "2026-10-17",
   "channel": "main",
-  "summary": "Show historical EBacc entry and APS across school performance comparisons, preserving existing results"
+  "summary": "Unify school journey origin to HA1 3PU and show live route links without unsourced travel estimates"
 }

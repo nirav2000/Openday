@@ -8,7 +8,7 @@ const normaliseDecisionMap=map=>Object.fromEntries(Object.entries(map&&typeof ma
 const state={saved:[],booked:{},notes:{},watchBooking:[],visitedSchools:[],shortlistedSchools:[],rejectedSchools:[],schoolDecisions:{},...savedRaw};
 state.schoolDecisions=normaliseDecisionMap(state.schoolDecisions);
 const saveState=()=>localStorage.setItem('openDayState',JSON.stringify(state));
-const origin=()=>schoolPhase==='primary'?(schoolMeta.primary?.travelOrigin||'UB5 6QX'):(enhancements.meta?.travelOrigin||'Harrow');
+const origin=()=>enhancements.meta?.travelOrigin||'HA1 3PU';
 const dateOnly=v=>typeof v==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(v);
 const dateObj=v=>v?new Date(dateOnly(v)?`${v}T12:00:00`:v):null;
 const startOfToday=()=>{const d=new Date();d.setHours(0,0,0,0);return d};
@@ -65,10 +65,10 @@ function migrateSchoolScopedState(catalog=allKnownSchools()){
   Object.assign(state,canonical);saveState();return true;
 }
 window.OpenDaySchoolState={key:schoolStateKey,group:schoolGroup,note:schoolNote,listHas:schoolListHas,decisionValues:schoolDecisionValues,canonicaliseData:data=>canonicaliseSchoolScopedData(data,allKnownSchools()),migrate:()=>migrateSchoolScopedState(allKnownSchools())};
-const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
-const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${origin()}`:null;
+const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||s.postcode||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
+const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${s.distanceFromPostcode||'UB5 6QX'} (not ${origin()})`:null;
 const inPrimaryRadius=s=>schoolPhase!=='primary'||primaryDistance===0||(Number.isFinite(s.distanceMiles)&&s.distanceMiles<=primaryDistance);
-const travelSummary=s=>distanceSummary(s)||schoolExtra(s).travel?.driveText||(Number.isFinite(s.journey)?`Approx. ${s.journey} min drive from ${origin()} · check live traffic`:`Live journey from ${origin()}`);
+const travelSummary=s=>schoolExtra(s).travel?.driveText||`Live journey from ${origin()} (tap for current times)`;
 const sortDate=s=>{if(s.start)return dateObj(s.start);if(s.lastKnownStart){const d=dateObj(s.lastKnownStart),now=new Date(),p=new Date(now.getFullYear(),d.getMonth(),d.getDate(),12);if(p<new Date(now.getTime()-30*864e5))p.setFullYear(p.getFullYear()+1);return p}return new Date('2099-01-01')};
 
 function filteredSchools(){
@@ -188,7 +188,7 @@ function alternatesHtml(s){
 }
 function travelHtml(s){
   const t=schoolExtra(s).travel||{};
-  return `<section class="travel-panel"><small>FROM ${origin()}</small><h3>Getting there</h3>${distanceSummary(s)?`<p class="travel-extra"><b>${distanceSummary(s)}</b> · radius filters use straight-line distance; use the live route for actual road/public-transport distance.</p>`:''}<div class="travel-row"><div><b>🚗 Car</b><span>${t.driveText||(Number.isFinite(s.journey)?`Approx. ${s.journey} min; traffic dependent`:'Open live route for current journey time')}</span></div><a href="${mapsUrl(s,'driving')}" target="_blank" rel="noopener">Live drive ↗</a></div><div class="travel-row"><div><b>🚆 Public transport</b><span>${t.transitText||'Open a live public-transport route for current options and timings.'}</span></div><a href="${mapsUrl(s,'transit')}" target="_blank" rel="noopener">Live transit ↗</a></div>${t.railUrl?`<div class="travel-links"><a href="${t.railUrl}" target="_blank" rel="noopener">Rail journey planner ↗</a>${t.sourceUrl?`<a href="${t.sourceUrl}" target="_blank" rel="noopener">Timetable source ↗</a>`:''}</div>`:''}${t.extra?`<p class="travel-extra">${t.extra}</p>`:''}</section>`;
+  return `<section class="travel-panel"><small>FROM ${origin()}</small><h3>Getting there</h3>${distanceSummary(s)?`<p class="travel-extra"><b>${distanceSummary(s)}</b> · radius filters use straight-line distance; use the live route for actual road/public-transport distance.</p>`:''}<div class="travel-row"><div><b>🚗 Car</b><span>${t.driveText||'Open live route for current journey time; no verified estimate stored'}</span></div><a href="${mapsUrl(s,'driving')}" target="_blank" rel="noopener">Live drive ↗</a></div><div class="travel-row"><div><b>🚆 Public transport</b><span>${t.transitText||'Open a live public-transport route for current options and timings.'}</span></div><a href="${mapsUrl(s,'transit')}" target="_blank" rel="noopener">Live transit ↗</a></div>${t.railUrl?`<div class="travel-links"><a href="${t.railUrl}" target="_blank" rel="noopener">Rail journey planner ↗</a>${t.sourceUrl?`<a href="${t.sourceUrl}" target="_blank" rel="noopener">Timetable source ↗</a>`:''}</div>`:''}${t.extra?`<p class="travel-extra">${t.extra}</p>`:''}</section>`;
 }
 function bookingWatchHtml(s){
   const w=schoolExtra(s).bookingWatch;if(!w)return'';
