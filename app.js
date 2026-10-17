@@ -1,5 +1,5 @@
 const $ = s => document.querySelector(s);
-let schools = [], schoolSets={senior:[],primary:[]}, schoolMeta={senior:{},primary:{}}, enhancements = {meta:{},schools:{}}, assessmentDoc={schools:{}}, filter='upcoming', deferredPrompt;
+let schools = [], schoolSets={senior:[],primary:[]}, schoolMeta={senior:{},primary:{}}, enhancements = {meta:{},schools:{}}, assessmentDoc={schools:{}}, journeyBackfill={schools:{}}, filter='upcoming', deferredPrompt;
 let currentView='list', schoolPhase='senior', tbcExpanded=false;
 let primaryDistance=Number(localStorage.getItem('openday.primary.distance.v1')||5);if(![1,2,3,5,0].includes(primaryDistance))primaryDistance=5;
 let calendarCursor=new Date(); calendarCursor.setDate(1);
@@ -22,6 +22,7 @@ const fmtTime=(s,e)=>{if(!s||dateOnly(s))return'Time not published';const f=x=>n
 const statusLabel=s=>historical(s)?'previous-year date':s.status==='confirmed'?'verified':s.status==='reported'?'reported':s.status==='past'?'past':s.status==='research'?'checking date':'check details';
 const statusClass=s=>historical(s)?'historical':(s.status||'research');
 const schoolExtra=s=>enhancements.schools?.[s.id]||{};
+const sourcedJourney=s=>journeyBackfill.schools?.[s.name]||{};
 const schoolAssessment=s=>assessmentDoc.schools?.[s.name]||null;
 const assessmentCompact=s=>schoolPhase==='primary'?'':(schoolAssessment(s)?.cardLabel||schoolAssessment(s)?.summary||'Assessment format being checked');
 const schoolSlug=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -68,7 +69,7 @@ window.OpenDaySchoolState={key:schoolStateKey,group:schoolGroup,note:schoolNote,
 const mapsUrl=(s,mode='driving')=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(schoolExtra(s).destination||s.postcode||`${s.name}, ${s.area}, UK`)}&travelmode=${mode}`;
 const distanceSummary=s=>schoolPhase==='primary'&&Number.isFinite(s.distanceMiles)?`${s.distanceMiles.toFixed(s.distanceMiles<10?1:0)} mi straight-line from ${s.distanceFromPostcode||'UB5 6QX'} (not ${origin()})`:null;
 const inPrimaryRadius=s=>schoolPhase!=='primary'||primaryDistance===0||(Number.isFinite(s.distanceMiles)&&s.distanceMiles<=primaryDistance);
-const travelSummary=s=>schoolExtra(s).travel?.driveText||`Live journey from ${origin()} (tap for current times)`;
+const travelSummary=s=>schoolExtra(s).travel?.driveText||(sourcedJourney(s).driveMinutes!=null?`Approx. ${sourcedJourney(s).driveMinutes} min drive from ${origin()} · no traffic model`:`Live journey from ${origin()} (tap for current times)`);
 const sortDate=s=>{if(s.start)return dateObj(s.start);if(s.lastKnownStart){const d=dateObj(s.lastKnownStart),now=new Date(),p=new Date(now.getFullYear(),d.getMonth(),d.getDate(),12);if(p<new Date(now.getTime()-30*864e5))p.setFullYear(p.getFullYear()+1);return p}return new Date('2099-01-01')};
 
 function filteredSchools(){
@@ -188,7 +189,7 @@ function alternatesHtml(s){
 }
 function travelHtml(s){
   const t=schoolExtra(s).travel||{};
-  return `<section class="travel-panel"><small>FROM ${origin()}</small><h3>Getting there</h3>${distanceSummary(s)?`<p class="travel-extra"><b>${distanceSummary(s)}</b> · radius filters use straight-line distance; use the live route for actual road/public-transport distance.</p>`:''}<div class="travel-row"><div><b>🚗 Car</b><span>${t.driveText||'Open live route for current journey time; no verified estimate stored'}</span></div><a href="${mapsUrl(s,'driving')}" target="_blank" rel="noopener">Live drive ↗</a></div><div class="travel-row"><div><b>🚆 Public transport</b><span>${t.transitText||'Open a live public-transport route for current options and timings.'}</span></div><a href="${mapsUrl(s,'transit')}" target="_blank" rel="noopener">Live transit ↗</a></div>${t.railUrl?`<div class="travel-links"><a href="${t.railUrl}" target="_blank" rel="noopener">Rail journey planner ↗</a>${t.sourceUrl?`<a href="${t.sourceUrl}" target="_blank" rel="noopener">Timetable source ↗</a>`:''}</div>`:''}${t.extra?`<p class="travel-extra">${t.extra}</p>`:''}</section>`;
+  return `<section class="travel-panel"><small>FROM ${origin()}</small><h3>Getting there</h3>${distanceSummary(s)?`<p class="travel-extra"><b>${distanceSummary(s)}</b> · radius filters use straight-line distance; use the live route for actual road/public-transport distance.</p>`:''}<div class="travel-row"><div><b>🚗 Car</b><span>${t.driveText||(sourcedJourney(s).driveMinutes!=null?`Approx. ${sourcedJourney(s).driveMinutes} min (${sourcedJourney(s).distanceKm} km), baseline routing only; allow extra time for traffic`:'Open live route for current journey time; no verified estimate stored')}</span></div><a href="${mapsUrl(s,'driving')}" target="_blank" rel="noopener">Live drive ↗</a></div><div class="travel-row"><div><b>🚆 Public transport</b><span>${t.transitText||'Open a live public-transport route for current options and timings.'}</span></div><a href="${mapsUrl(s,'transit')}" target="_blank" rel="noopener">Live transit ↗</a></div>${t.railUrl?`<div class="travel-links"><a href="${t.railUrl}" target="_blank" rel="noopener">Rail journey planner ↗</a>${t.sourceUrl?`<a href="${t.sourceUrl}" target="_blank" rel="noopener">Timetable source ↗</a>`:''}</div>`:''}${t.extra?`<p class="travel-extra">${t.extra}</p>`:''}</section>`;
 }
 function bookingWatchHtml(s){
   const w=schoolExtra(s).bookingWatch;if(!w)return'';
@@ -259,9 +260,9 @@ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPro
 Promise.all([
   fetch('data/schools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load senior school data');return r.json()}),
   fetch('data/primary-schools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Could not load primary school data');return r.json()}),
-  fetch('data/enhancements.json',{cache:'no-store'}).then(r=>r.ok?r.json():({meta:{},schools:{}})),fetch('data/assessments.json',{cache:'no-store'}).then(r=>r.ok?r.json():({schools:{}})).catch(()=>({schools:{}}))
-]).then(([senior,primary,e,assessments])=>{
-  schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;assessmentDoc=assessments||{schools:{}};const migrated=migrateSchoolScopedState(allKnownSchools());syncPrimaryDistanceUi();resetCalendarCursor();if(migrated)void window.OpenDaySync?.push?.().catch?.(()=>{});
+  fetch('data/enhancements.json',{cache:'no-store'}).then(r=>r.ok?r.json():({meta:{},schools:{}})),fetch('data/assessments.json',{cache:'no-store'}).then(r=>r.ok?r.json():({schools:{}})).catch(()=>({schools:{}})),fetch('data/journey-backfill.json',{cache:'no-store'}).then(r=>r.ok?r.json():({schools:{}})).catch(()=>({schools:{}}))
+]).then(([senior,primary,e,assessments,journeys])=>{
+  schoolSets={senior:senior.schools||[],primary:primary.schools||[]};schoolMeta={senior:senior.meta||{},primary:primary.meta||{}};schools=schoolSets.senior;enhancements=e;assessmentDoc=assessments||{schools:{}};journeyBackfill=journeys||{schools:{}};const migrated=migrateSchoolScopedState(allKnownSchools());syncPrimaryDistanceUi();resetCalendarCursor();if(migrated)void window.OpenDaySync?.push?.().catch?.(()=>{});
   if(window.OpenDayCatalog)applyCloudCatalog(window.OpenDayCatalog);else render();checkBookingNotifications();
   const oldest=[senior.meta?.updated,primary.meta?.updated].filter(Boolean).sort()[0];if(oldest&&new Date()-new Date(oldest)>30*864e5){$('#notice').hidden=false;$('#notice').textContent='Some school details were last reviewed over 30 days ago. Re-check dates before making plans.'}
 }).catch(e=>{$('#list').innerHTML=`<p class="empty">${e.message}. Please refresh.</p>`});

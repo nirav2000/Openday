@@ -1,6 +1,6 @@
 {
-  "version": "2.25.4",
+  "version": "2.25.5",
   "released": "2026-10-17",
   "channel": "main",
-  "summary": "Unify school journey origin to HA1 3PU and show live route links without unsourced travel estimates"
+  "summary": "Historical EBacc backfill automation and sourced HA1 3PU driving estimates in school details"
 }
