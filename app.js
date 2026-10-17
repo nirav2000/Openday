@@ -140,7 +140,7 @@ function card(s){
   const save=n.querySelector('.save');save.textContent=schoolListHas('saved',s)?'♥':'♡';save.classList.toggle('on',schoolListHas('saved',s));save.onclick=()=>toggleSave(s);
   n.querySelector('.details').onclick=()=>showDetail(s);
   const book=n.querySelector('.book');if(s.bookingUrl){book.href=s.bookingUrl;book.textContent=s.bookingRequired===false?'Info ↗':s.bookingRequired===true?'Book ↗':'Check event ↗'}else book.remove();
-  if(extra.bookingWatch?.status==='user-reported-unavailable'&&book){book.textContent='Check spaces ↗'}
+  if(book&&visitPast(s)){book.textContent='Original information ↗';book.href=s.infoUrl||s.bookingUrl}if(extra.bookingWatch?.status==='user-reported-unavailable'&&book&&!visitPast(s)){book.textContent='Check spaces ↗'}
   return n;
 }
 
@@ -182,10 +182,25 @@ function alternateRows(s){
     if(a.start&&b.start)return dateObj(a.start)-dateObj(b.start); if(a.start)return-1;if(b.start)return 1;return 0;
   });
 }
+function visitPast(v){const d=dateObj(v.end||v.start);return !!d&&d.getTime()<Date.now()}
+function visitStatus(v){
+  if(visitPast(v))return 'Past event';
+  if(v.status==='cancelled')return 'Cancelled';
+  if(v.bookingStatus==='sold-out'||v.availability==='sold-out')return 'Sold out';
+  if(v.bookingStatus==='waitlist'||v.availability==='waitlist')return 'Waiting list';
+  return '';
+}
+function visitRowHtml(v){
+  const past=visitPast(v),status=visitStatus(v),url=past?(v.infoUrl||v.sourceUrl||v.bookingUrl):(v.bookingUrl||v.infoUrl||v.sourceUrl);
+  const action=past?'Original information':status==='Sold out'?'Event details':status==='Waiting list'?'Join waiting list':v.start?'Book / check':'Arrange / check';
+  const eligibility=[v.eligibleYearGroup,v.entryYear?String(v.entryYear)+' entry':'',v.eligibility].filter(Boolean).join(' · ');
+  return `<div class="alternate ${past?'past-visit':''}"><div><b>${v.start?fmtDate(v.start):v.event}</b>${status?` <span class="badge">${status}</span>`:''}<span>${v.start?`${v.event} · ${fmtTime(v.start,v.end)}`:(v.note||'Flexible visit option')}</span>${eligibility?`<span>${eligibility}</span>`:''}</div>${url?`<a href="${url}" target="_blank" rel="noopener">${action} ↗</a>`:''}</div>`;
+}
 function alternatesHtml(s){
   const rows=alternateRows(s);
   if(!rows.length)return '<p class="sources">No other published visit date is currently stored. Use the school’s open-events page to check for newly released dates.</p>';
-  return `<div class="alternate-list">${rows.map(v=>`<div class="alternate"><div><b>${v.start?fmtDate(v.start):v.event}</b><span>${v.start?`${v.event} · ${fmtTime(v.start,v.end)}`:(v.note||'Flexible visit option')}</span></div>${v.bookingUrl?`<a href="${v.bookingUrl}" target="_blank" rel="noopener">${v.start?'Book':'Arrange'} ↗</a>`:''}</div>`).join('')}</div>`;
+  const upcoming=rows.filter(v=>!visitPast(v)),past=rows.filter(visitPast);
+  return `<div class="alternate-list">${upcoming.map(visitRowHtml).join('')||'<p class="sources">No upcoming dates currently recorded.</p>'}${past.length?`<details class="past-visits"><summary>Past visits (${past.length})</summary>${past.map(visitRowHtml).join('')}</details>`:''}</div>`;
 }
 function travelHtml(s){
   const t=schoolExtra(s).travel||{};
