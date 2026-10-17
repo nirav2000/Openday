@@ -1,0 +1,44 @@
+name: Backfill historical EBacc and HA1 3PU journey estimates
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 8 * * 2'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/backfill-evidence.py'
+      - '.github/workflows/backfill-evidence.yml'
+permissions:
+  contents: write
+concurrency:
+  group: openday-evidence-backfill
+  cancel-in-progress: false
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect additive source-attributed historical evidence
+        run: python3 scripts/backfill-evidence.py
+      - name: Validate output
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          eb=json.loads(Path('data/ebacc-history.json').read_text())
+          tr=json.loads(Path('data/journey-backfill.json').read_text())
+          assert eb['schemaVersion']==1
+          assert tr['origin']=='HA1 3PU'
+          assert tr['coverage']['schools']>=30
+          assert all(0 < s['driveMinutes'] < 600 for s in tr['schools'].values() if s.get('driveMinutes') is not None)
+          PY
+      - name: Commit generated evidence to main
+        run: |
+          git add data/ebacc-history.json data/journey-backfill.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'data: preserve historical EBacc and backfill school journey estimates'
+          git pull --rebase origin main
+          git push origin HEAD:main
