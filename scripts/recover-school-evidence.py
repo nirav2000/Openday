@@ -76,9 +76,9 @@ def main():
  for name,g in groups.items():
   if loc['schools'].get(name,{}).get('postcode'):continue
   official=addresses.get(str(g['urn']),{})
-  postcode=g['postcode'] or next((v for k,v in official.items() if 'postcode' in k.lower() and v and re.fullmatch(r'[A-Za-z]{1,2}[0-9][A-Za-z0-9]?\\s*[0-9][A-Za-z]{2}',v.strip())),None)
+  postcode=g['postcode'] or next((v for k,v in official.items() if ('postcode' in k.lower() or k=='full_address') and v and re.search(r'[A-Za-z]{1,2}[0-9][A-Za-z0-9]?[ ]*[0-9][A-Za-z]{2}',v.strip())),None)
   if postcode:
-   compact=re.sub(r'\\s+','',postcode.upper())
+   compact=''.join(postcode.upper().split())
    loc['schools'][name]={'postcode':compact[:-3]+' '+compact[-3:],'urn':g['urn'],'sourceUrl':GIAS if official else 'data/schools.json','retrievedAt':STAMP}
   else:loc['schools'][name]={'status':'postcode-unverified','urn':g['urn']}
  write('data/school-locations.json',loc)
