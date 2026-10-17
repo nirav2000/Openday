@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102a43">
+<title>Understanding GCSE school measures · OpenDay</title>
+<link rel="stylesheet" href="measures.css?v=2.25.8">
+</head>
+<body>
+<header class="topbar">
+  <div><p class="eyebrow">OPENDAY · LEARN THE METRICS</p><h1>What do the school scores actually mean?</h1><p class="subtitle">Attainment 8, Progress 8, EBacc and GCSE averages—explained with the subjects, rules and working.</p></div>
+  <nav aria-label="OpenDay pages"><a href="./">Open days</a><a href="performance.html">Compare results</a><a href="results-archive.html">Results archive</a></nav>
+</header>
+<main>
+  <section class="notice"><strong>Which rules?</strong> Calculators use the published <strong>2024/25 English KS4 accountability methodology</strong> as an educational model. The DfE removed EBacc headline and additional measures from 2025/26; we preserve historical EBacc scores. A replacement Attainment 8 / Progress 8 structure has been proposed, but it is <em>not</em> applied to these examples.</section>
+  <nav class="contents" aria-label="On this page"><a href="#overview">At a glance</a><a href="#attainment">Attainment 8</a><a href="#progress">Progress 8</a><a href="#ebacc">EBacc</a><a href="#aps">APS / sixth form</a><a href="#calculator">Try grades</a><a href="#pitfalls">Interpretation</a></nav>
+  <section id="overview">
+    <p class="eyebrow">01 · THE DIFFERENCES</p><h2>Four scores that answer different questions</h2>
+    <div class="metric-cards">
+      <article><strong>Attainment 8</strong><span>How many eligible GCSE grade-points did pupils earn in designated slots?</span><b>Usually 0–90*</b></article>
+      <article><strong>Progress 8</strong><span>How much better or worse did pupils do than peers with similar KS2 starting scores?</span><b>Centred around 0</b></article>
+      <article><strong>EBacc APS</strong><span>What were grades across English, maths, two science positions, humanities and language?</span><b>Usually 0–9*</b></article>
+      <article><strong>Sixth-form GCSE APS</strong><span>What was the average of the applicant's GCSE/IGCSE grades?</span><b>Usually 0–9*</b></article>
+    </div>
+    <p class="small">*For ordinary grade 9–1 GCSEs. Other approved qualifications, including some level 3 qualifications, may yield different accountability points. These are not all interchangeable forms of APS.</p>
+  </section>
+
+  <section id="attainment">
+    <p class="eyebrow">02 · ATTAINMENT</p><h2>Attainment 8: eight qualification slots, ten weighted grade positions</h2>
+    <p>English and mathematics occupy one subject slot each but normally contribute <strong>double points</strong>. Three slots are reserved for eligible EBacc subjects (science, computer science, history, geography or languages); three are <strong>open</strong> slots for other eligible GCSEs or approved qualifications. Any unused slot adds zero. The three EBacc slots <em>do not</em> require a language or humanities subject.</p>
+    <div class="buckets" aria-label="Attainment 8 buckets">
+      <div><span>English × 2</span><strong>18</strong><small>Best English grade, double if both Language and Literature taken</small></div>
+      <div><span>Maths × 2</span><strong>18</strong><small>Eligible GCSE Maths grade doubled</small></div>
+      <div><span>3 EBacc slots</span><strong>27</strong><small>Three best eligible science, language and humanities grades</small></div>
+      <div><span>3 open slots</span><strong>27</strong><small>Three best other approved qualifications, potentially including second English</small></div>
+    </div>
+    <p><strong>Example:</strong> English Language 7, English Literature 8, Maths 8, Biology 9, Chemistry 8, Physics 8, History 7, French 6, Religious Studies 9 and Music 8. English = 16; Maths = 16; EBacc subjects = 25 (Biology 9, Chemistry 8, Physics 8); open = 24 (RE 9, Music 8, English Language 7). <strong>Attainment 8 = 81</strong>.</p>
+    <p>Religious Education does <strong>not</strong> qualify for an EBacc subject slot but can contribute a full nine points in an Attainment 8 open slot. This is how a strong RE result can help Michaela's Attainment 8 without affecting its EBacc APS. A language is not mandatory for Attainment 8 if the EBacc slots can be filled with other qualifying subjects.</p>
+    <p class="small">Detailed official rules cover combined-science point averaging, discounting/overlapping subjects, early entry, technical qualifications and non-GCSE points. Our calculator models ordinary numbered GCSE grades, excluding discounting and AS-level exceptions.</p>
+  </section>
+
+  <section id="progress">
+    <p class="eyebrow">03 · PROGRESS</p><h2>Progress 8: achievement relative to similar starting points</h2>
+    <p>DfE groups pupils by their <strong>KS2 English reading and maths starting attainment</strong>, finds the national Attainment 8 average for comparable pupils, and compares each pupil's Attainment 8 result with that benchmark. The difference is divided by 10 (the ten weighted grade positions). A school's score is the average of individual pupil scores, with official technical adjustments.</p>
+    <div class="equation">(Pupil Attainment 8 − national expected Attainment 8 for comparable KS2 attainment) ÷ 10</div>
+    <div class="simple-calc">
+      <label>Achieved Attainment 8 <input id="p8Score" type="number" min="0" max="110" step="0.5" value="72"></label>
+      <label>Illustrative national starting-point benchmark <input id="p8Benchmark" type="number" min="0" max="110" step="0.5" value="60"></label>
+      <div class="calc-output"><span>Illustrative Progress 8</span><strong id="p8Demo">1.2</strong></div>
+      <button id="p8AutoFill" type="button">Use my Attainment 8 result from below</button>
+    </div>
+    <p class="warning">This is a <strong>demonstration, not an official Progress 8 prediction</strong>: actual national benchmarks depend on a child's KS2 results, examination cohort and official adjustments. Progress 8 was not calculated for 2024/25 or 2025/26 because the relevant KS2 tests were cancelled during the pandemic. An unavailable value is <strong>not zero progress</strong>.</p>
+    <p><strong>How to read it:</strong> 0 = in line with similarly prepared pupils nationally; +0.5 = roughly half a GCSE grade above expectation per weighted grade position; −0.5 = below. Comparisons should also consider official confidence intervals and the composition of the cohort.</p>
+  </section>
+
+  <section id="ebacc">
+    <p class="eyebrow">04 · SUBJECT COMBINATIONS</p><h2>EBacc: five subject areas, six grade positions</h2>
+    <p>The English Baccalaureate is <strong>not a separate examination or certificate</strong>. Historically the DfE reported the share of pupils taking its prescribed combination, the share meeting achievement thresholds and an Average Point Score (APS).</p>
+    <div class="table-wrap"><table><thead><tr><th>Area</th><th>Entry pattern</th><th>APS positions</th></tr></thead><tbody>
+      <tr><td>English</td><td><strong>Both</strong> English Language and Literature</td><td>Better grade of the two, <strong>only when both entered</strong></td></tr>
+      <tr><td>Maths</td><td>Approved Mathematics GCSE</td><td>One Maths grade</td></tr>
+      <tr><td>Science</td><td>Combined Science double award <em>or</em> eligible set of three separate sciences (Biology, Chemistry, Physics, Computer Science)</td><td>Two Combined Science grade positions <em>or</em> best two separate-science grades, subject to the three-science entry rule</td></tr>
+      <tr><td>Humanities</td><td>History or Geography</td><td>Better eligible grade</td></tr>
+      <tr><td>Language</td><td>French, Spanish, German, Latin or another approved language</td><td>Best eligible language grade</td></tr>
+    </tbody></table></div>
+    <p>That can mean <strong>seven GCSE qualifications</strong> with Combined Science (English Language and Literature, Maths, two Combined Science grades, humanities and language) but only <strong>six APS grade positions</strong>. A three-separate-science route involves even more GCSE entries. The EBacc APS divides the six component points by six. <strong>English and Maths are not double weighted</strong> here.</p>
+    <div class="equation">(English + Maths + Science grade 1 + Science grade 2 + Humanities + Language) ÷ 6</div>
+    <p><strong>Example:</strong> English best grade 8, Maths 8, Biology 9, Chemistry 8, History 7 and French 6: (8 + 8 + 9 + 8 + 7 + 6) ÷ 6 = <strong>7.67 EBacc APS</strong> (with a valid separate-science entry set). Missing a language contributes <strong>zero</strong> to that pillar, even if RE is grade 9.</p>
+    <p class="warning">The DfE removed EBacc headline and additional measures from the <strong>2025/26</strong> accountability release. Historical results for 2022/23–2024/25 remain relevant for comparing past cohorts; they must be labelled by year. Published subject entries and individual subject grades may still be available, but a new official school EBacc APS is not produced in that same way.</p>
+  </section>
+
+  <section id="aps">
+    <p class="eyebrow">05 · THE OTHER APS</p><h2>APS is not one universally defined score</h2>
+    <p><strong>APS simply means Average Point Score</strong>. Always check <em>which grades are included and how they are weighted</em>. An EBacc APS is a DfE historical accountability measure; a sixth-form GCSE APS is an admissions calculation; A-level APS is a different system using post-16 qualifications.</p>
+    <p>For example, St Dominic's Sixth Form College's admissions approach averages the numeric grades of <strong>all GCSEs/IGCSEs counted under its policy</strong>, without double weighting English or Maths. Ten grades adding to 78 yield a GCSE APS of <strong>7.8</strong>. English, Maths and the number of grade 5+ subjects still matter independently, as do subject-specific course requirements and oversubscription arrangements. <strong>It is not Attainment 8 ÷ 10.</strong></p>
+    <div class="equation">St Dominic's-style GCSE APS = sum of eligible GCSE/IGCSE numeric grades ÷ number of grades</div>
+    <p class="small">The example calculator below uses the subject selections on this page; for real applications confirm current admissions year, treatment of resits, equivalents and every requested A-level's subject requirements with the college.</p>
+  </section>
+
+  <section id="calculator" class="calculator">
+    <div class="section-heading"><div><p class="eyebrow">06 · INTERACTIVE</p><h2>Try your own GCSE grades</h2><p>Change or remove a grade to see how each measure responds. The same pupil can have a high Attainment 8 score but a much lower EBacc APS if they do not take a language.</p></div><button id="resetGrades" type="button">Reset example</button></div>
+    <div id="gradesGrid" class="grades-grid"></div>
+    <p class="small">Choose either separate sciences or Combined Science; entering one clears the other. This teaching model covers the listed GCSEs and approved ordinary-grade combinations, not all GCSE subjects, IGCSE recognition rules or discounted awards.</p>
+    <div class="results-grid" aria-live="polite">
+      <article><p class="eyebrow">ATTAINMENT 8</p><div class="headline-number"><strong id="a8Total">—</strong><span>typically / 90</span></div>
+      <dl><div><dt>English</dt><dd id="a8English">—</dd></div><div><dt>Maths</dt><dd id="a8Maths">—</dd></div><div><dt>3 EBacc slots</dt><dd id="a8Ebacc">—</dd></div><div><dt>3 open slots</dt><dd id="a8Open">—</dd></div><div><dt>Unfilled subject slots</dt><dd id="a8Missing">—</dd></div></dl>
+      <h3>Chosen EBacc slots</h3><ul id="ebaccSubjects"></ul><h3>Chosen open slots</h3><ul id="openSubjects"></ul></article>
+      <article><p class="eyebrow">HISTORICAL EBACC APS</p><div class="headline-number"><strong id="ebaccAPS">—</strong><span>typically / 9</span></div><p id="ebaccEntry" class="status-note"></p>
+      <dl><div><dt>English</dt><dd id="ebaccEnglish">—</dd></div><div><dt>Maths</dt><dd id="ebaccMaths">—</dd></div><div><dt>Science grades</dt><dd id="ebaccScience">—</dd></div><div><dt>Humanities</dt><dd id="ebaccHumanities">—</dd></div><div><dt>Language</dt><dd id="ebaccLanguage">—</dd></div></dl></article>
+      <article><p class="eyebrow">ST DOMINIC'S-STYLE GCSE APS</p><div class="headline-number"><strong id="admissionAPS">—</strong><span>unweighted average</span></div>
+      <dl><div><dt>GCSE grade entries</dt><dd id="admissionCount">—</dd></div><div><dt>Grades 5 or above</dt><dd id="admission5">—</dd></div></dl><p id="admissionMin" class="status-note"></p><p class="small">An illustrative academic minimum check only—not an offer or subject eligibility decision.</p></article>
+    </div>
+  </section>
+  <section id="pitfalls"><p class="eyebrow">07 · WHAT TO WATCH</p><h2>Comparing schools fairly</h2>
+    <div class="tip-grid"><article><h3>Missing ≠ zero</h3><p>Progress 8 may be unavailable because KS2 baseline tests were cancelled. A blank score should not be treated as weak performance.</p></article>
+    <article><h3>IGCSE recognition</h3><p>Independent schools may use IGCSE courses that are not recognised in DfE school accountability calculations. Their published grade 9–7 results and DfE Attainment 8 are not always directly comparable.</p></article>
+    <article><h3>RE counts differently</h3><p>RE and Music can score in the Attainment 8 open bucket, but neither counts towards historical EBacc APS or EBacc entry.</p></article>
+    <article><h3>Three different denominators</h3><p>Attainment 8 averages weighted points across school cohorts; EBacc APS uses six subject positions; sixth-form GCSE APS uses the applicant's counted GCSE grades.</p></article></div>
+  </section>
+  <section class="sources"><h2>Official sources &amp; further reading</h2><p><a href="https://www.gov.uk/government/publications/progress-8-school-performance-measure/secondary-accountability-measures-2025-guidance-for-maintained-secondary-schools-academies-and-free-schools" target="_blank" rel="noopener">DfE 2024/25 secondary accountability guidance</a> · <a href="https://check-performance-data.education.gov.uk/guidance/all-guidance-on-one-page" target="_blank" rel="noopener">DfE 2025/26 measures guidance</a> · <a href="https://www.gov.uk/government/publications/curriculum-and-assessment-review-final-report-government-response" target="_blank" rel="noopener">Curriculum and Assessment Review response</a> · <a href="https://www.stdoms.ac.uk/apply-now/admissions/" target="_blank" rel="noopener">St Dominic's admissions</a></p><p class="small">Last reviewed 17 October 2026. This explainer and its calculators are for planning and learning, not official pupil performance statements.</p></section>
+</main>
+<footer><a href="performance.html">← Compare actual school results</a><span>OpenDay v2.25.8</span></footer>
+<script src="measures.js?v=2.25.8" defer></script>
+</body></html>

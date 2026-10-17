@@ -1,6 +1,6 @@
 {
-  "version": "2.25.7",
+  "version": "2.25.8",
   "released": "2026-10-17",
   "channel": "main",
-  "summary": "Complete EBacc history and HA1 3PU driving and TfL journey estimates for all 214 schools"
+  "summary": "Standalone school measure explanations and interactive Attainment 8, Progress 8, EBacc and GCSE APS calculators"
 }
