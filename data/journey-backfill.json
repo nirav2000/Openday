@@ -3626,8 +3626,27 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "The read operation timed out"
+      "transitStatus": "scheduled-itinerary",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209AN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:17:00",
+      "transitArrival": "2026-10-19T08:00:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 21
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Warrender Primary School": {
       "phase": "primary",
@@ -4371,8 +4390,31 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "The read operation timed out"
+      "transitStatus": "scheduled-itinerary",
+      "transitMinutes": 37,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%202HX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:38:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Bishop Winnington-Ingram CofE Primary School": {
       "phase": "primary",
@@ -5081,8 +5123,39 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "The read operation timed out"
+      "transitStatus": "scheduled-itinerary",
+      "transitMinutes": 59,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205JT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Clifton Primary School": {
       "phase": "primary",
@@ -8411,8 +8484,27 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "The read operation timed out"
+      "transitStatus": "scheduled-itinerary",
+      "transitMinutes": 53,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%205RU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:14:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 39
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Aylward Primary School": {
       "phase": "primary",
@@ -8539,11 +8631,10 @@
   "coverage": {
     "schools": 214,
     "drivingBackfilled": 214,
-    "publicTransportBackfilled": 210,
+    "publicTransportBackfilled": 214,
     "missingVerifiedPostcode": 0,
     "transitStatuses": {
-      "scheduled-itinerary": 210,
-      "lookup-failed": 4
+      "scheduled-itinerary": 214
     }
   },
   "transitNote": "TfL journey planner itinerary to arrive 08:30 on the next weekday; may include walking legs. Check live service changes."
