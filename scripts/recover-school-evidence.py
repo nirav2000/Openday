@@ -31,6 +31,9 @@ def main():
  out=read('data/ebacc-evidence.json',{'schemaVersion':1,'schools':{}})
  byurn={str(s.get('urn')):s['name'] for s in perf if s.get('urn')}
  byname={s['name']:s for s in perf}
+ byurn.update({'137914':'St Joan of Arc Catholic School','100065':'University College School (UCS)'})
+ byname.setdefault('St Joan of Arc Catholic School',{'name':'St Joan of Arc Catholic School','urn':'137914','type':'state'})
+ byname.setdefault('University College School (UCS)',{'name':'University College School (UCS)','urn':'100065','type':'independent'})
  selected={}
  reader=rows(EBACC)
  assert all(f in reader.fieldnames for f in FIELDS.values()),reader.fieldnames
