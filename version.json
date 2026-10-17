@@ -1,6 +1,6 @@
 {
-  "version": "2.25.5",
+  "version": "2.25.6",
   "released": "2026-10-17",
   "channel": "main",
-  "summary": "Historical EBacc backfill automation and sourced HA1 3PU driving estimates in school details"
+  "summary": "Preserve 2022-25 EBacc results and add verified postcode driving and public transport journeys"
 }
