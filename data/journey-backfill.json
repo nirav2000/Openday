@@ -2161,8 +2161,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 31,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206HW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Downe Manor Primary School": {
       "phase": "primary",
@@ -2177,8 +2197,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206NW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "Belmore Primary Academy": {
       "phase": "primary",
@@ -2193,8 +2233,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 36,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%209LF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Deanesfield Primary School": {
       "phase": "primary",
@@ -2209,8 +2269,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 24,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%200LR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:42:00",
+      "transitArrival": "2026-10-19T08:06:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Brookside Primary School": {
       "phase": "primary",
@@ -2225,8 +2305,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 34,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%209LW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:20:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Gifford Primary School": {
       "phase": "primary",
@@ -2241,8 +2341,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206BU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:28:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "St Swithun Wells Catholic Primary School": {
       "phase": "primary",
@@ -2257,8 +2381,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 28,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209HS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:32:00",
+      "transitArrival": "2026-10-19T08:00:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Earlsmead Primary School": {
       "phase": "primary",
@@ -2273,8 +2417,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 24,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%208PW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:01:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Charville Academy": {
       "phase": "primary",
@@ -2289,8 +2453,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 58,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208LF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "Field End Infant School": {
       "phase": "primary",
@@ -2305,8 +2493,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 31,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209PQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:51:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 17
+        }
+      ]
     },
     "Ruislip Gardens Primary School": {
       "phase": "primary",
@@ -2321,8 +2529,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 39,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206PD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:42:00",
+      "transitArrival": "2026-10-19T08:21:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 19
+        }
+      ]
     },
     "Ravenor Primary School": {
       "phase": "primary",
@@ -2337,8 +2565,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 49,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209TT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:30:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 21
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Hayes Park School": {
       "phase": "primary",
@@ -2353,8 +2605,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 50,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208BE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:06:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Grange Park Infant and Nursery School": {
       "phase": "primary",
@@ -2369,8 +2645,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 49,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208SF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:05:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Petts Hill Primary School": {
       "phase": "primary",
@@ -2385,8 +2685,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 15,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204HB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:01:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Yeading Infant and Nursery School": {
       "phase": "primary",
@@ -2401,8 +2721,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 39,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200NR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Heathland School": {
       "phase": "primary",
@@ -2417,8 +2757,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 16,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209AG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:00:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Roxbourne Primary School": {
       "phase": "primary",
@@ -2433,8 +2793,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 25,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209QF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:54:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Durdans Park Primary School": {
       "phase": "primary",
@@ -2449,8 +2829,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 48,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202PQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Ryefield Primary School": {
       "phase": "primary",
@@ -2465,8 +2869,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 40,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%209DE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:38:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 14
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Lady Bankes Primary School": {
       "phase": "primary",
@@ -2481,8 +2909,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 30,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209SF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:42:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Lady Margaret Primary School": {
       "phase": "primary",
@@ -2497,8 +2945,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 46,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202NH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Newton Farm Nursery, Infant and Junior School": {
       "phase": "primary",
@@ -2513,8 +2985,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 20,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209JU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:56:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Glebe Primary School": {
       "phase": "primary",
@@ -2530,8 +3022,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 31,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%208PH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T07:46:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Sacred Heart Catholic Primary School": {
       "phase": "primary",
@@ -2546,8 +3066,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 35,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206EZ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:38:00",
+      "transitArrival": "2026-10-19T08:13:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "Newnham Infant and Nursery School": {
       "phase": "primary",
@@ -2562,8 +3102,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 26,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209RW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:03:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "The Welldon Park Academy": {
       "phase": "primary",
@@ -2578,8 +3138,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 11,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%208LS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:08:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Greenwood Primary School": {
       "phase": "primary",
@@ -2594,8 +3174,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 19,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204QG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:08:00",
+      "transitArrival": "2026-10-19T08:27:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Dr Triplett's CofE Primary School": {
       "phase": "primary",
@@ -2610,8 +3210,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 53,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202JQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:26:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 27
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Wood End Primary School": {
       "phase": "primary",
@@ -2626,8 +3250,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 17,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204LB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:55:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Coston Primary School": {
       "phase": "primary",
@@ -2642,8 +3286,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 39,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209JU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:28:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "The Edward Betham Church of England Primary School": {
       "phase": "primary",
@@ -2658,8 +3322,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 39,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209JU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:28:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Stanhope Primary School": {
       "phase": "primary",
@@ -2674,8 +3358,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209EG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:17:00",
+      "transitArrival": "2026-10-19T07:59:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 21
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Tudor Primary School": {
       "phase": "primary",
@@ -2690,8 +3394,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 53,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201NX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 27
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Hewens Primary School": {
       "phase": "primary",
@@ -2706,8 +3434,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208JP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 15
+        },
+        {
+          "mode": "bus",
+          "minutes": 16
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Allenby Primary School": {
       "phase": "primary",
@@ -2722,8 +3474,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 58,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202HX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 25
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "Oldfield Primary School": {
       "phase": "primary",
@@ -2738,8 +3510,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 31,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%208PR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:28:00",
+      "transitArrival": "2026-10-19T07:59:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Highfield Primary School": {
       "phase": "primary",
@@ -2754,8 +3546,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200DB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 15
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Rosedale Primary School": {
       "phase": "primary",
@@ -2770,8 +3586,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202SE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 34
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Our Lady of the Visitation Catholic Primary School": {
       "phase": "primary",
@@ -2787,7 +3627,7 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitLookupError": "The read operation timed out"
     },
     "Warrender Primary School": {
       "phase": "primary",
@@ -2802,8 +3642,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 32,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%208QG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:42:00",
+      "transitArrival": "2026-10-19T08:14:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "St Bernadette Catholic Primary School": {
       "phase": "primary",
@@ -2818,8 +3678,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 44,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200EH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:08:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 15
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Minet Infant and Nursery School": {
       "phase": "primary",
@@ -2834,8 +3718,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 50,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%203NR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:26:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 27
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "North Primary School": {
       "phase": "primary",
@@ -2850,8 +3754,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 49,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202JE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:05:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 27
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Cannon Lane Primary School": {
       "phase": "primary",
@@ -2866,8 +3794,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 28,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201TS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:44:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Grange Primary School": {
       "phase": "primary",
@@ -2883,8 +3831,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 17,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200RY?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:04:00",
+      "transitArrival": "2026-10-19T08:21:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Hillingdon Primary School": {
       "phase": "primary",
@@ -2899,8 +3867,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 47,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200PH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:11:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 15
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Guru Nanak Sikh Academy": {
       "phase": "primary",
@@ -2915,8 +3907,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200LT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 36
+        },
+        {
+          "mode": "walking",
+          "minutes": 17
+        }
+      ]
     },
     "Nanaksar Primary School": {
       "phase": "primary",
@@ -2931,8 +3943,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200LT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 36
+        },
+        {
+          "mode": "walking",
+          "minutes": 17
+        }
+      ]
     },
     "Horsenden Primary School": {
       "phase": "primary",
@@ -2947,8 +3979,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 27,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%200PB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:55:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Lake Farm Park Academy": {
       "phase": "primary",
@@ -2963,8 +4015,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%201JA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:00:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 34
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Dormers Wells Primary School": {
       "phase": "primary",
@@ -2979,8 +4055,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%203HX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:00:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 25
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Wood End Park Academy": {
       "phase": "primary",
@@ -2995,8 +4091,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 58,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202PD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 20
+        },
+        {
+          "mode": "bus",
+          "minutes": 15
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Blair Peach Primary School": {
       "phase": "primary",
@@ -3011,8 +4131,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 56,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201DD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:02:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 27
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Beaconsfield Primary and Nursery School": {
       "phase": "primary",
@@ -3027,8 +4171,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 56,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201DR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:20:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Hambrough Primary School": {
       "phase": "primary",
@@ -3043,8 +4215,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 53,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201SF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Longfield Primary School": {
       "phase": "primary",
@@ -3059,8 +4259,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 21,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%207NZ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:54:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Mayfield Primary School": {
       "phase": "primary",
@@ -3075,8 +4295,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 52,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%203RT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:17:00",
+      "transitArrival": "2026-10-19T08:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 24
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Selborne Primary School": {
       "phase": "primary",
@@ -3091,8 +4331,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%208JD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 17
+        }
+      ]
     },
     "Coteford Infant School": {
       "phase": "primary",
@@ -3108,7 +4372,7 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitLookupError": "The read operation timed out"
     },
     "Bishop Winnington-Ingram CofE Primary School": {
       "phase": "primary",
@@ -3123,8 +4387,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%207LW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:42:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 19
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Brentside Primary School": {
       "phase": "primary",
@@ -3139,8 +4427,40 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 57,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%201JL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:21:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Botwell House Catholic Primary School": {
       "phase": "primary",
@@ -3155,8 +4475,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 45,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202AB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:01:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 34
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Roxeth Primary School": {
       "phase": "primary",
@@ -3171,8 +4511,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 16,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200JA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:13:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "The Breakspear School": {
       "phase": "primary",
@@ -3187,8 +4547,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%208JA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:38:00",
+      "transitArrival": "2026-10-19T08:20:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 19
+        }
+      ]
     },
     "Vaughan Primary School": {
       "phase": "primary",
@@ -3203,8 +4583,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 30,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%204EL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:56:00",
+      "transitArrival": "2026-10-19T08:26:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "St George's Catholic Primary School": {
       "phase": "primary",
@@ -3219,8 +4619,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 24,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%203SB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:02:00",
+      "transitArrival": "2026-10-19T08:26:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "St Anselm's Catholic Primary School": {
       "phase": "primary",
@@ -3236,8 +4656,40 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 55,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204DH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 1
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Colham Manor Primary School": {
       "phase": "primary",
@@ -3252,8 +4704,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 52,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%203PT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Whiteheath Infant & Nursery School": {
       "phase": "primary",
@@ -3268,8 +4744,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 39,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%207RF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:02:00",
+      "transitArrival": "2026-10-19T07:41:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 19
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Dairy Meadow Primary School": {
       "phase": "primary",
@@ -3284,8 +4784,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204RP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 16
+        }
+      ]
     },
     "Havelock Primary School, Nursery & Arp": {
       "phase": "primary",
@@ -3300,8 +4828,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 59,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204PA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "John Locke Academy": {
       "phase": "primary",
@@ -3316,8 +4872,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 44,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200FW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:08:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "St John Fisher Catholic Primary School": {
       "phase": "primary",
@@ -3333,8 +4909,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 36,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205RA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:41:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "West Lodge Primary School": {
       "phase": "primary",
@@ -3349,8 +4949,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 33,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201AF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:34:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Hobbayne Primary School": {
       "phase": "primary",
@@ -3365,8 +4985,44 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 50,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%201HA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:12:00",
+      "transitArrival": "2026-10-19T08:02:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 2
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Woodlands Academy": {
       "phase": "primary",
@@ -3381,8 +5037,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200DH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:28:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "tube",
+          "minutes": 2
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Featherstone Primary and Nursery School": {
       "phase": "primary",
@@ -3398,7 +5082,7 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitLookupError": "The read operation timed out"
     },
     "Clifton Primary School": {
       "phase": "primary",
@@ -3413,8 +5097,40 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 57,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205QP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:21:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Hermitage Primary School": {
       "phase": "primary",
@@ -3429,8 +5145,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 40,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%201RB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "St Andrew's C of E Primary School": {
       "phase": "primary",
@@ -3445,8 +5181,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202BX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Three Bridges Primary School": {
       "phase": "primary",
@@ -3461,8 +5217,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 72,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204HT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:01:00",
+      "transitArrival": "2026-10-19T08:13:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 19
+        }
+      ]
     },
     "Sudbury Primary School": {
       "phase": "primary",
@@ -3477,8 +5257,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 30,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203EY?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:56:00",
+      "transitArrival": "2026-10-19T08:26:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "St Joseph's Catholic Primary School": {
       "phase": "primary",
@@ -3494,8 +5294,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 50,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%203HU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:14:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Harlyn Primary School": {
       "phase": "primary",
@@ -3510,8 +5338,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%202DR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:34:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 24
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Wolf Fields Primary School": {
       "phase": "primary",
@@ -3526,8 +5374,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 59,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204JS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 39
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Norbury School": {
       "phase": "primary",
@@ -3542,8 +5414,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 23,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%201QQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:04:00",
+      "transitArrival": "2026-10-19T08:27:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Cranford Park Academy": {
       "phase": "primary",
@@ -3558,8 +5450,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 59,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%204LQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:05:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 37
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "St Mark's Primary School": {
       "phase": "primary",
@@ -3574,8 +5490,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%202NR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "bus",
+          "minutes": 16
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Khalsa Primary School": {
       "phase": "primary",
@@ -3590,8 +5530,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 64,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204LA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:20:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 39
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "North Ealing Primary School": {
       "phase": "primary",
@@ -3606,8 +5570,40 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 53,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%201RP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Whitehall Infant School": {
       "phase": "primary",
@@ -3622,8 +5618,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202LX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:28:00",
+      "transitArrival": "2026-10-19T08:10:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "tube",
+          "minutes": 14
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Norwood Green Infant and Nursery School": {
       "phase": "primary",
@@ -3638,8 +5662,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 69,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205RN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:57:00",
+      "transitArrival": "2026-10-19T08:06:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 38
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Perivale Primary School": {
       "phase": "primary",
@@ -3654,8 +5702,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 31,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%207AP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Drayton Green Primary School": {
       "phase": "primary",
@@ -3670,8 +5742,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 52,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200LA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:12:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 2
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Pinkwell Primary School": {
       "phase": "primary",
@@ -3686,8 +5786,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%201PG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 37
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "St Mary's Church of England Primary Norwood Green": {
       "phase": "primary",
@@ -3702,8 +5826,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 69,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204LE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:57:00",
+      "transitArrival": "2026-10-19T08:06:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 41
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Vicar's Green Primary School": {
       "phase": "primary",
@@ -3718,8 +5866,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 32,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%201DP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Cowley St Laurence CofE Primary School": {
       "phase": "primary",
@@ -3734,8 +5906,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 52,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%203TH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Rabbsfarm Primary School": {
       "phase": "primary",
@@ -3750,8 +5946,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 57,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%208AH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Barham Primary School": {
       "phase": "primary",
@@ -3766,8 +5986,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 33,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204RQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "St John's Primary School": {
       "phase": "primary",
@@ -3782,8 +6030,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 48,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200SE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "St Mary's Catholic Primary School": {
       "phase": "primary",
@@ -3798,8 +6070,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202UA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Marlborough Primary School": {
       "phase": "primary",
@@ -3815,8 +6107,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 30,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%201UJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:39:00",
+      "transitArrival": "2026-10-19T08:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Pinner Park Primary School": {
       "phase": "primary",
@@ -3831,8 +6147,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 37,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205TL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:37:00",
+      "transitArrival": "2026-10-19T08:14:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "St Jerome Church of England Bilingual School": {
       "phase": "primary",
@@ -3847,8 +6187,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 27,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%202DJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:02:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Oaklands Primary School": {
       "phase": "primary",
@@ -3863,8 +6227,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%202DP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:10:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "St Matthew's CofE Primary School": {
       "phase": "primary",
@@ -3879,8 +6271,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 56,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207QJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:11:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "East Lane Primary School": {
       "phase": "primary",
@@ -3895,8 +6311,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 37,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203NT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Pinner Wood School": {
       "phase": "primary",
@@ -3911,8 +6355,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%203RA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:05:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 24
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Byron Court Primary School": {
       "phase": "primary",
@@ -3927,8 +6391,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203SF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:41:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "West Drayton Academy": {
       "phase": "primary",
@@ -3943,8 +6427,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 62,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%209EA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "The Rosary Catholic Primary School": {
       "phase": "primary",
@@ -3959,8 +6467,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 71,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200RL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:27:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 47
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "St Gregory's Catholic Primary School": {
       "phase": "primary",
@@ -3975,8 +6507,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 44,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%201SL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:08:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Berkeley Academy": {
       "phase": "primary",
@@ -3991,8 +6547,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 74,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%209HQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:09:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 13
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "William Byrd Primary Academy": {
       "phase": "primary",
@@ -4007,8 +6591,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%205EW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:06:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 45
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Montpelier Primary School": {
       "phase": "primary",
@@ -4023,8 +6627,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%202QT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:05:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Cherry Lane Primary School": {
       "phase": "primary",
@@ -4039,8 +6667,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 65,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%209DL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:48:00",
+      "transitArrival": "2026-10-19T07:53:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 18
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Heston Primary School": {
       "phase": "primary",
@@ -4055,8 +6707,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200QR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 13
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Hillside Infant School": {
       "phase": "primary",
@@ -4071,8 +6751,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 46,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%201RX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:37:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "Whitefriars School": {
       "phase": "primary",
@@ -4087,8 +6795,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 38,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%205RQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:47:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 24
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Elmgrove Primary School and Nursery": {
       "phase": "primary",
@@ -4103,8 +6831,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 36,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%208LU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:47:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 15
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Springwell School": {
       "phase": "primary",
@@ -4119,8 +6867,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 76,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%209EF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:09:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 13
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Westbrook Primary School": {
       "phase": "primary",
@@ -4135,8 +6911,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 66,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200NB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:30:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Fielding Primary School": {
       "phase": "primary",
@@ -4151,8 +6955,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 51,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%209TE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Park Lane Primary School": {
       "phase": "primary",
@@ -4167,8 +6995,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 38,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%207RY?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:24:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Christ the Saviour Church of England Primary School": {
       "phase": "primary",
@@ -4183,8 +7039,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%202AA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:06:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "St Teresa's Catholic Primary School and Nursery": {
       "phase": "primary",
@@ -4199,8 +7079,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 34,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:30:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Preston Park Primary School": {
       "phase": "primary",
@@ -4215,8 +7119,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%208RJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "St Catherine Catholic Primary School": {
       "phase": "primary",
@@ -4231,8 +7163,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 69,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207NX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:24:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 21
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Cedars Manor School": {
       "phase": "primary",
@@ -4247,8 +7203,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 36,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:30:00",
+      "transitArrival": "2026-10-19T08:06:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Wembley Primary School": {
       "phase": "primary",
@@ -4263,8 +7243,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 40,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%207NW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:26:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Laurel Lane Primary School": {
       "phase": "primary",
@@ -4279,8 +7283,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 70,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207TX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Edison Primary School": {
       "phase": "primary",
@@ -4295,8 +7323,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 66,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200AQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:30:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        }
+      ]
     },
     "Lyon Park Primary School": {
       "phase": "primary",
@@ -4311,8 +7367,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 32,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204HH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T07:56:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "Mount Stewart Infant School": {
       "phase": "primary",
@@ -4327,8 +7403,40 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200JX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "St Martin's Church of England Primary School": {
       "phase": "primary",
@@ -4343,8 +7451,40 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 68,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207UF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:24:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "elizabeth-line",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Grimsdyke School": {
       "phase": "primary",
@@ -4359,8 +7499,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 48,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%204QE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:14:00",
+      "transitArrival": "2026-10-19T08:02:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 30
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Heathrow Primary School": {
       "phase": "primary",
@@ -4375,8 +7535,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 71,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%200JQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:15:00",
+      "transitArrival": "2026-10-19T08:26:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 32
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "St Joseph's Catholic Infant School": {
       "phase": "primary",
@@ -4391,8 +7575,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%206TA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:27:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Elsley Primary School": {
       "phase": "primary",
@@ -4407,8 +7619,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 45,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%206HT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:34:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 28
+        }
+      ]
     },
     "Frithwood Primary School": {
       "phase": "primary",
@@ -4423,8 +7655,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 47,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%203NJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:37:00",
+      "transitArrival": "2026-10-19T08:24:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Belmont School": {
       "phase": "primary",
@@ -4439,8 +7699,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 46,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%207JT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:33:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Nishkam School West London": {
       "phase": "primary",
@@ -4455,8 +7739,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 63,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW7%205PN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:46:00",
+      "transitArrival": "2026-10-19T07:49:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Priestmead Primary School and Nursery": {
       "phase": "primary",
@@ -4471,8 +7783,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%208SZ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:33:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 17
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "West Twyford Primary School": {
       "phase": "primary",
@@ -4487,8 +7823,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 31,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW10%207DN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T07:55:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Cranford Primary School": {
       "phase": "primary",
@@ -4503,8 +7863,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 74,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW4%206LB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:30:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Wellington Primary School": {
       "phase": "primary",
@@ -4519,8 +7907,36 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 60,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW3%203BD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:24:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "bus",
+          "minutes": 1
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Uxendon Manor Primary School": {
       "phase": "primary",
@@ -4535,8 +7951,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 45,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200UX?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:37:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Little Ealing Primary School": {
       "phase": "primary",
@@ -4551,8 +7991,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 46,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%204EA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:24:00",
+      "transitArrival": "2026-10-19T08:10:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Weald Rise Primary School": {
       "phase": "primary",
@@ -4567,8 +8031,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 48,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%207DH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:37:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 26
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "Hujjat Primary School": {
       "phase": "primary",
@@ -4583,8 +8067,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 40,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206RR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:37:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 28
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Kenmore Park Infant and Nursery School": {
       "phase": "primary",
@@ -4599,8 +8103,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209JA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:03:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 28
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Kenmore Park Junior School": {
       "phase": "primary",
@@ -4615,8 +8139,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209JA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:03:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 28
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "St Bernadette's Catholic Nursery & Primary School": {
       "phase": "primary",
@@ -4631,8 +8175,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 41,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209NS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:48:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Stanburn Primary School": {
       "phase": "primary",
@@ -4647,8 +8215,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 52,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%202PJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:12:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "bus",
+          "minutes": 24
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Whitchurch Primary School": {
       "phase": "primary",
@@ -4663,8 +8255,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 58,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%202EQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "bus",
+          "minutes": 26
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Camrose Primary School and Nursery": {
       "phase": "primary",
@@ -4679,8 +8295,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 55,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206JH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:12:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 35
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Avanti House Primary School": {
       "phase": "primary",
@@ -4695,8 +8335,28 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 49,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%203JB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:20:00",
+      "transitArrival": "2026-10-19T08:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 39
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "St John's C of E School": {
       "phase": "primary",
@@ -4711,8 +8371,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 58,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%203FD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:26:00",
+      "transitArrival": "2026-10-19T08:24:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 26
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Stag Lane Primary School and Nursery": {
       "phase": "primary",
@@ -4728,7 +8412,7 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitLookupError": "The read operation timed out"
     },
     "Aylward Primary School": {
       "phase": "primary",
@@ -4743,8 +8427,32 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 62,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%204RE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:26:00",
+      "transitArrival": "2026-10-19T08:28:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 31
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Krishna Avanti Primary School": {
       "phase": "primary",
@@ -4759,8 +8467,32 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.280711,51.604099?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 53,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206ES?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:12:00",
+      "transitArrival": "2026-10-19T08:05:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 35
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "St Teresa's Catholic Primary & Nursery School": {
       "phase": "primary",
@@ -4775,19 +8507,43 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.355408,51.604217?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "transitStatus": "lookup-failed",
-      "transitLookupError": "HTTP Error 429: Too Many Requests"
+      "transitStatus": "scheduled-itinerary",
+      "transitLookupError": "HTTP Error 429: Too Many Requests",
+      "transitMinutes": 34,
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:30:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     }
   },
   "note": "Car baseline from OSRM using postcode centroids; not live traffic. Missing means not verified. Primary catchment distances still use UB5 6QX.",
   "coverage": {
     "schools": 214,
     "drivingBackfilled": 214,
-    "publicTransportBackfilled": 50,
+    "publicTransportBackfilled": 210,
     "missingVerifiedPostcode": 0,
     "transitStatuses": {
-      "scheduled-itinerary": 50,
-      "lookup-failed": 164
+      "scheduled-itinerary": 210,
+      "lookup-failed": 4
     }
   },
   "transitNote": "TfL journey planner itinerary to arrive 08:30 on the next weekday; may include walking legs. Check live service changes."
