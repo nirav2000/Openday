@@ -8,7 +8,34 @@
         "rooks-heath"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA2 9AH",
+      "driveMinutes": 4,
+      "distanceKm": 1.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.371783,51.562279?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 13,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209AH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:10:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Royal Grammar School High Wycombe": {
       "phase": "senior",
@@ -16,7 +43,50 @@
         "rgs-high-wycombe"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HP13 6QT",
+      "driveMinutes": 35,
+      "distanceKm": 37.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.738786,51.641107?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 88,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP13%206QT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:39:00",
+      "transitArrival": "2026-10-19T08:07:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        },
+        {
+          "mode": "bus",
+          "minutes": 27
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "JFS": {
       "phase": "senior",
@@ -25,7 +95,46 @@
         "jfs-evening"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA3 9TE",
+      "driveMinutes": 12,
+      "distanceKm": 7.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.281047,51.58103?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 46,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209TE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:26:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 4
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Haberdashers' Boys' School": {
       "phase": "senior",
@@ -37,7 +146,58 @@
         "habs-scholarship-evening-oct"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD6 3AF",
+      "driveMinutes": 21,
+      "distanceKm": 13.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.312309,51.65657?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 98,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD6%203AF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:24:00",
+      "transitArrival": "2026-10-19T08:02:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "tube",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        },
+        {
+          "mode": "bus",
+          "minutes": 19
+        },
+        {
+          "mode": "walking",
+          "minutes": 25
+        }
+      ]
     },
     "Dr Challoner's Grammar School": {
       "phase": "senior",
@@ -45,7 +205,42 @@
         "challoners"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HP6 5HA",
+      "driveMinutes": 31,
+      "distanceKm": 29.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.610496,51.676068?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 54,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP6%205HA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:10:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 23
+        },
+        {
+          "mode": "walking",
+          "minutes": 8
+        }
+      ]
     },
     "Park High School": {
       "phase": "senior",
@@ -53,7 +248,38 @@
         "park-high"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA7 1PL",
+      "driveMinutes": 13,
+      "distanceKm": 7.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.302211,51.59988?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 57,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%201PL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:02:00",
+      "transitArrival": "2026-10-19T07:59:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 31
+        },
+        {
+          "mode": "bus",
+          "minutes": 1
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "Claremont High School": {
       "phase": "senior",
@@ -61,7 +287,38 @@
         "claremont"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA3 0UH",
+      "driveMinutes": 11,
+      "distanceKm": 6.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.293305,51.585165?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 40,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200UH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:48:00",
+      "transitArrival": "2026-10-19T08:28:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Berkhamsted Boys": {
       "phase": "senior",
@@ -69,7 +326,38 @@
         "berkhamsted"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HP4 2DJ",
+      "driveMinutes": 38,
+      "distanceKm": 30.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.561936,51.75938?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 72,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP4%202DJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:07:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 21
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "St Paul's School": {
       "phase": "senior",
@@ -77,7 +365,34 @@
         "st-pauls"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SW13 9JT",
+      "driveMinutes": 36,
+      "distanceKm": 21.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.237417,51.487697?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 55,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SW13%209JT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:11:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 25
+        },
+        {
+          "mode": "walking",
+          "minutes": 20
+        }
+      ]
     },
     "St Margaret's School": {
       "phase": "senior",
@@ -85,7 +400,34 @@
         "st-margarets"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD23 1DT",
+      "driveMinutes": 18,
+      "distanceKm": 11.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.362029,51.638103?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 63,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD23%201DT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:07:00",
+      "transitArrival": "2026-10-19T08:10:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 45
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Hampton School": {
       "phase": "senior",
@@ -93,7 +435,42 @@
         "hampton"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "TW12 3HD",
+      "driveMinutes": 32,
+      "distanceKm": 20.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.371214,51.428645?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 86,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW12%203HD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:46:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "tube",
+          "minutes": 13
+        },
+        {
+          "mode": "bus",
+          "minutes": 33
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Harrow High School": {
       "phase": "senior",
@@ -101,7 +478,34 @@
         "harrow-high"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA1 2JG",
+      "driveMinutes": 6,
+      "distanceKm": 3.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.327652,51.579895?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 23,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%202JG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:54:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 1
+        }
+      ]
     },
     "Sutton Grammar School": {
       "phase": "senior",
@@ -109,7 +513,46 @@
         "sutton-grammar"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SM1 4AS",
+      "driveMinutes": 57,
+      "distanceKm": 34.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.189736,51.365083?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 97,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM1%204AS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:46:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 30
+        },
+        {
+          "mode": "tube",
+          "minutes": 18
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 12
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Alperton Community School": {
       "phase": "senior",
@@ -117,7 +560,34 @@
         "alperton"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA0 4JE",
+      "driveMinutes": 12,
+      "distanceKm": 6.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.293217,51.543214?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 27,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204JE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:34:00",
+      "transitArrival": "2026-10-19T08:01:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Preston Manor School": {
       "phase": "senior",
@@ -132,7 +602,36 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.288986,51.566048?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitMinutes": 43,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%208NA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:19:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "Merchant Taylors' School": {
       "phase": "senior",
@@ -140,7 +639,42 @@
         "mts"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA6 2HT",
+      "driveMinutes": 20,
+      "distanceKm": 11.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.422796,51.63399?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 56,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%202HT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:26:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 20
+        }
+      ]
     },
     "Mill Hill School": {
       "phase": "senior",
@@ -148,7 +682,38 @@
         "mill-hill"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "NW7 1QS",
+      "driveMinutes": 23,
+      "distanceKm": 14.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.230426,51.618981?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 76,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW7%201QS?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:12:00",
+      "transitArrival": "2026-10-19T08:28:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 51
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "John Lyon School": {
       "phase": "senior",
@@ -157,7 +722,34 @@
         "john-lyon-school-action-oct9"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA2 0HN",
+      "driveMinutes": 3,
+      "distanceKm": 1.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.343964,51.571089?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 15,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200HN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:13:00",
+      "transitArrival": "2026-10-19T08:28:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Ark Academy": {
       "phase": "senior",
@@ -168,7 +760,42 @@
         "ark-evening"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA9 9JR",
+      "driveMinutes": 12,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.279951,51.56534?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 36,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%209JR?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:22:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Salvatorian College": {
       "phase": "senior",
@@ -176,7 +803,34 @@
         "salvatorian"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA3 5DY",
+      "driveMinutes": 9,
+      "distanceKm": 5.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.339144,51.599968?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 38,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%205DY?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:47:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 24
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Pinner High School": {
       "phase": "senior",
@@ -184,7 +838,34 @@
         "pinner-high"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA5 1NB",
+      "driveMinutes": 8,
+      "distanceKm": 4.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.386992,51.579296?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 24,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201NB?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:56:00",
+      "transitArrival": "2026-10-19T08:20:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Winchester College": {
       "phase": "senior",
@@ -194,7 +875,38 @@
         "winchester-dec"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SO23 9NA",
+      "driveMinutes": 80,
+      "distanceKm": 101.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-1.31264,51.058367?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 142,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SO23%209NA?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-18T21:55:00",
+      "transitArrival": "2026-10-19T00:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 35
+        },
+        {
+          "mode": "coach",
+          "minutes": 70
+        },
+        {
+          "mode": "walking",
+          "minutes": 17
+        }
+      ]
     },
     "Aldenham School": {
       "phase": "senior",
@@ -203,7 +915,50 @@
         "aldenham-tour-oct8"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD6 3AJ",
+      "driveMinutes": 21,
+      "distanceKm": 14.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.327894,51.663268?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 88,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD6%203AJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:15:00",
+      "transitArrival": "2026-10-19T07:43:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 16
+        },
+        {
+          "mode": "walking",
+          "minutes": 25
+        }
+      ]
     },
     "Dame Alice Owen's School": {
       "phase": "senior",
@@ -211,7 +966,50 @@
         "dao"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "EN6 2DU",
+      "driveMinutes": 32,
+      "distanceKm": 24.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.206835,51.69085?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 99,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/EN6%202DU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:39:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 16
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 13
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 27
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "Westminster School": {
       "phase": "senior",
@@ -219,7 +1017,38 @@
         "westminster"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SW1P 3PF",
+      "driveMinutes": 39,
+      "distanceKm": 21.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.127884,51.498688?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 64,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SW1P%203PF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:20:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 30
+        },
+        {
+          "mode": "tube",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Harrow School": {
       "phase": "senior",
@@ -227,7 +1056,34 @@
         "harrow-school"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA1 3HP",
+      "driveMinutes": 4,
+      "distanceKm": 1.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337383,51.572282?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 16,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%203HP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:02:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Michaela Community School": {
       "phase": "senior",
@@ -236,7 +1092,42 @@
         "michaela-open-oct-check"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA9 0UU",
+      "driveMinutes": 12,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.278146,51.562337?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 35,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%200UU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:21:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Wembley High Technology College": {
       "phase": "senior",
@@ -244,7 +1135,42 @@
         "wembley-high"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA0 3NT",
+      "driveMinutes": 8,
+      "distanceKm": 4.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.310418,51.563175?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 37,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203NT?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:46:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Nower Hill High School": {
       "phase": "senior",
@@ -252,7 +1178,38 @@
         "nower-hill"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA5 5RP",
+      "driveMinutes": 7,
+      "distanceKm": 4.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.365087,51.591268?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 35,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205RP?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:41:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Queen Elizabeth's School, Barnet": {
       "phase": "senior",
@@ -260,7 +1217,46 @@
         "qe-boys"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "EN5 4DQ",
+      "driveMinutes": 27,
+      "distanceKm": 17.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.213333,51.65586?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 85,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/EN5%204DQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:39:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 30
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        },
+        {
+          "mode": "bus",
+          "minutes": 26
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Parmiter's School": {
       "phase": "senior",
@@ -268,7 +1264,46 @@
         "parmiters"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD25 0UU",
+      "driveMinutes": 28,
+      "distanceKm": 20.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.389417,51.703243?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 79,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD25%200UU?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:39:00",
+      "transitArrival": "2026-10-19T07:58:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 16
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Watford Grammar School for Boys": {
       "phase": "senior",
@@ -276,7 +1311,42 @@
         "watford-boys"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD18 7JF",
+      "driveMinutes": 21,
+      "distanceKm": 13.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.414302,51.655025?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 56,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD18%207JF?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:17:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 10
+        }
+      ]
     },
     "Queens' School": {
       "phase": "senior",
@@ -284,7 +1354,50 @@
         "queens-bushey"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD23 2TY",
+      "driveMinutes": 19,
+      "distanceKm": 12.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.369014,51.658487?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 60,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD23%202TY?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:45:00",
+      "transitArrival": "2026-10-19T07:45:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "St Clement Danes School": {
       "phase": "senior",
@@ -292,7 +1405,46 @@
         "st-clement-danes"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD3 6EW",
+      "driveMinutes": 28,
+      "distanceKm": 28.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.514048,51.66354?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 67,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%206EW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T05:34:00",
+      "transitArrival": "2026-10-19T06:41:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 12
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        },
+        {
+          "mode": "bus",
+          "minutes": 4
+        },
+        {
+          "mode": "walking",
+          "minutes": 11
+        }
+      ]
     },
     "Rickmansworth School": {
       "phase": "senior",
@@ -300,7 +1452,50 @@
         "rickmansworth"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD3 3AQ",
+      "driveMinutes": 26,
+      "distanceKm": 15.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.455384,51.644925?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 56,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%203AQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:12:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 7
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        }
+      ]
     },
     "Wilson's School": {
       "phase": "senior",
@@ -308,7 +1503,62 @@
         "wilsons"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SM6 9JW",
+      "driveMinutes": 60,
+      "distanceKm": 35.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.12806,51.358845?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 111,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM6%209JW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:27:00",
+      "transitArrival": "2026-10-19T08:18:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 12
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 12
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 6
+        },
+        {
+          "mode": "walking",
+          "minutes": 4
+        },
+        {
+          "mode": "bus",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 2
+        }
+      ]
     },
     "Wallington County Grammar School": {
       "phase": "senior",
@@ -316,7 +1566,42 @@
         "wallington"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SM6 7PH",
+      "driveMinutes": 58,
+      "distanceKm": 34.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.149167,51.369018?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 111,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM6%207PH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:36:00",
+      "transitArrival": "2026-10-19T08:27:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 25
+        },
+        {
+          "mode": "tube",
+          "minutes": 15
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 25
+        },
+        {
+          "mode": "walking",
+          "minutes": 21
+        }
+      ]
     },
     "St Olave's Grammar School": {
       "phase": "senior",
@@ -324,7 +1609,58 @@
         "st-olaves"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "BR6 9SH",
+      "driveMinutes": 76,
+      "distanceKm": 96.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;0.104052,51.36685?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 104,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/BR6%209SH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:45:00",
+      "transitArrival": "2026-10-19T08:29:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 12
+        },
+        {
+          "mode": "tube",
+          "minutes": 17
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 15
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        },
+        {
+          "mode": "bus",
+          "minutes": 2
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "Beths Grammar School": {
       "phase": "senior",
@@ -332,7 +1668,50 @@
         "beths"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "DA5 1NE",
+      "driveMinutes": 75,
+      "distanceKm": 60.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;0.150774,51.44656?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 111,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/DA5%201NE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T06:18:00",
+      "transitArrival": "2026-10-19T08:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "tube",
+          "minutes": 28
+        },
+        {
+          "mode": "tube",
+          "minutes": 9
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 29
+        },
+        {
+          "mode": "bus",
+          "minutes": 3
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "Whitmore High School": {
       "phase": "senior",
@@ -340,7 +1719,34 @@
         "whitmore-high"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA2 0AD",
+      "driveMinutes": 5,
+      "distanceKm": 2.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.352848,51.573597?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 20,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200AD?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:56:00",
+      "transitArrival": "2026-10-19T08:16:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        }
+      ]
     },
     "John F Kennedy Catholic School": {
       "phase": "senior",
@@ -348,7 +1754,50 @@
         "jfk-open-oct"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HP1 2PH",
+      "driveMinutes": 38,
+      "distanceKm": 28.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.499654,51.759564?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 72,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP1%202PH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T05:49:00",
+      "transitArrival": "2026-10-19T07:01:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 5
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 20
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        }
+      ]
     },
     "St Joan of Arc Catholic School": {
       "phase": "senior",
@@ -358,7 +1807,42 @@
         "st-joan-open-tour-oct8"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD3 1HG",
+      "driveMinutes": 24,
+      "distanceKm": 15.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.465059,51.640061?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 46,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%201HG?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:02:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Canons High School": {
       "phase": "senior",
@@ -366,7 +1850,34 @@
         "canons-open-oct"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA8 6AN",
+      "driveMinutes": 14,
+      "distanceKm": 8.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.287454,51.599504?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 53,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206AN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:21:00",
+      "transitArrival": "2026-10-19T08:14:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 32
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Herschel Grammar School": {
       "phase": "senior",
@@ -374,7 +1885,38 @@
         "herschel-open-oct"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "SL1 3BW",
+      "driveMinutes": 30,
+      "distanceKm": 25.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.611269,51.519814?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 80,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SL1%203BW?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T05:49:00",
+      "transitArrival": "2026-10-19T07:09:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 19
+        },
+        {
+          "mode": "bus",
+          "minutes": 39
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Kings Langley School": {
       "phase": "senior",
@@ -382,7 +1924,46 @@
         "kings-langley-open-oct"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "WD4 9HN",
+      "driveMinutes": 31,
+      "distanceKm": 21.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.46086,51.716665?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitMinutes": 70,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD4%209HN?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:13:00",
+      "transitArrival": "2026-10-19T08:23:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 21
+        },
+        {
+          "mode": "national-rail",
+          "minutes": 13
+        },
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 9
+        },
+        {
+          "mode": "walking",
+          "minutes": 3
+        }
+      ]
     },
     "University College School (UCS)": {
       "phase": "senior",
@@ -396,7 +1977,36 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.181082,51.553508?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitMinutes": 48,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW3%206XH?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:16:00",
+      "transitArrival": "2026-10-19T08:04:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 8
+        },
+        {
+          "mode": "walking",
+          "minutes": 6
+        },
+        {
+          "mode": "tube",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 15
+        }
+      ]
     },
     "Bourne Primary School": {
       "phase": "primary",
@@ -410,7 +2020,28 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.394489,51.553339?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitMinutes": 29,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206UJ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:42:00",
+      "transitArrival": "2026-10-19T08:11:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 7
+        },
+        {
+          "mode": "bus",
+          "minutes": 10
+        },
+        {
+          "mode": "walking",
+          "minutes": 12
+        }
+      ]
     },
     "Alec Reed Academy": {
       "phase": "primary",
@@ -424,7 +2055,28 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.383967,51.544166?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitMinutes": 33,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%205LQ?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:41:00",
+      "transitArrival": "2026-10-19T08:14:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 14
+        }
+      ]
     },
     "St Raphael's Catholic Primary School": {
       "phase": "primary",
@@ -438,7 +2090,28 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.402757,51.535944?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitMinutes": 39,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206NL?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T07:36:00",
+      "transitArrival": "2026-10-19T08:15:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 18
+        },
+        {
+          "mode": "walking",
+          "minutes": 13
+        }
+      ]
     },
     "Willow Tree Primary School": {
       "phase": "primary",
@@ -452,7 +2125,28 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.377969,51.550207?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitMinutes": 24,
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-10-19",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%205FE?date=20261019&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-10-17",
+      "transitDeparture": "2026-10-19T08:01:00",
+      "transitArrival": "2026-10-19T08:25:00",
+      "transitLegs": [
+        {
+          "mode": "walking",
+          "minutes": 8
+        },
+        {
+          "mode": "bus",
+          "minutes": 11
+        },
+        {
+          "mode": "walking",
+          "minutes": 5
+        }
+      ]
     },
     "Viking Primary School": {
       "phase": "primary",
@@ -466,7 +2160,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.392874,51.532832?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Downe Manor Primary School": {
       "phase": "primary",
@@ -480,7 +2176,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.403568,51.534192?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Belmore Primary Academy": {
       "phase": "primary",
@@ -494,7 +2192,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.401519,51.531773?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Deanesfield Primary School": {
       "phase": "primary",
@@ -508,7 +2208,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.3907,51.55933?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Brookside Primary School": {
       "phase": "primary",
@@ -522,7 +2224,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.396357,51.530569?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Gifford Primary School": {
       "phase": "primary",
@@ -536,7 +2240,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.37598,51.535963?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Swithun Wells Catholic Primary School": {
       "phase": "primary",
@@ -550,7 +2256,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.392045,51.56415?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Earlsmead Primary School": {
       "phase": "primary",
@@ -564,7 +2272,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.372879,51.557034?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Charville Academy": {
       "phase": "primary",
@@ -578,7 +2288,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.428637,51.536024?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Field End Infant School": {
       "phase": "primary",
@@ -592,7 +2304,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.388226,51.566454?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Ruislip Gardens Primary School": {
       "phase": "primary",
@@ -606,7 +2320,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.419189,51.562307?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Ravenor Primary School": {
       "phase": "primary",
@@ -620,7 +2336,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.364836,51.532292?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hayes Park School": {
       "phase": "primary",
@@ -634,7 +2352,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.420961,51.528673?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Grange Park Infant and Nursery School": {
       "phase": "primary",
@@ -648,7 +2368,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.417567,51.526766?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Petts Hill Primary School": {
       "phase": "primary",
@@ -662,7 +2384,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.362008,51.55325?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Yeading Infant and Nursery School": {
       "phase": "primary",
@@ -676,7 +2400,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.39859,51.522381?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Heathland School": {
       "phase": "primary",
@@ -690,7 +2416,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.369266,51.563656?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Roxbourne Primary School": {
       "phase": "primary",
@@ -704,7 +2432,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.383259,51.568193?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Durdans Park Primary School": {
       "phase": "primary",
@@ -718,7 +2448,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.376053,51.523375?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Ryefield Primary School": {
       "phase": "primary",
@@ -732,7 +2464,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.437531,51.542392?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Lady Bankes Primary School": {
       "phase": "primary",
@@ -746,7 +2480,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.406452,51.57092?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Lady Margaret Primary School": {
       "phase": "primary",
@@ -760,7 +2496,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374083,51.52404?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Newton Farm Nursery, Infant and Junior School": {
       "phase": "primary",
@@ -774,7 +2512,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.37494,51.56922?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Glebe Primary School": {
       "phase": "primary",
@@ -789,7 +2529,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.437286,51.558791?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Sacred Heart Catholic Primary School": {
       "phase": "primary",
@@ -803,7 +2545,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.424555,51.567766?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Newnham Infant and Nursery School": {
       "phase": "primary",
@@ -817,7 +2561,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.393224,51.573654?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "The Welldon Park Academy": {
       "phase": "primary",
@@ -831,7 +2577,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.355657,51.560966?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Greenwood Primary School": {
       "phase": "primary",
@@ -845,7 +2593,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.350305,51.554165?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Dr Triplett's CofE Primary School": {
       "phase": "primary",
@@ -859,7 +2609,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.416152,51.51726?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Wood End Primary School": {
       "phase": "primary",
@@ -873,7 +2625,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.350526,51.552837?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Coston Primary School": {
       "phase": "primary",
@@ -887,7 +2641,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35151,51.534381?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "The Edward Betham Church of England Primary School": {
       "phase": "primary",
@@ -901,7 +2657,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35151,51.534381?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Stanhope Primary School": {
       "phase": "primary",
@@ -915,7 +2673,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35546,51.527215?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Tudor Primary School": {
       "phase": "primary",
@@ -929,7 +2689,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.384544,51.513591?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hewens Primary School": {
       "phase": "primary",
@@ -943,7 +2705,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.439953,51.528936?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Allenby Primary School": {
       "phase": "primary",
@@ -957,7 +2721,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.365373,51.520124?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Oldfield Primary School": {
       "phase": "primary",
@@ -971,7 +2737,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.348268,51.537518?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Highfield Primary School": {
       "phase": "primary",
@@ -985,7 +2753,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.445138,51.534571?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Rosedale Primary School": {
       "phase": "primary",
@@ -999,7 +2769,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.429189,51.519989?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Our Lady of the Visitation Catholic Primary School": {
       "phase": "primary",
@@ -1013,7 +2785,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35176,51.523476?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Warrender Primary School": {
       "phase": "primary",
@@ -1027,7 +2801,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.41355,51.576772?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Bernadette Catholic Primary School": {
       "phase": "primary",
@@ -1041,7 +2817,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.451209,51.539642?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Minet Infant and Nursery School": {
       "phase": "primary",
@@ -1055,7 +2833,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.409053,51.511696?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "North Primary School": {
       "phase": "primary",
@@ -1069,7 +2849,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374137,51.513232?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Cannon Lane Primary School": {
       "phase": "primary",
@@ -1083,7 +2865,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.389166,51.581511?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Grange Primary School": {
       "phase": "primary",
@@ -1098,7 +2882,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.359244,51.571124?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hillingdon Primary School": {
       "phase": "primary",
@@ -1112,7 +2898,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.451681,51.531259?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Guru Nanak Sikh Academy": {
       "phase": "primary",
@@ -1126,7 +2914,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.398045,51.508768?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Nanaksar Primary School": {
       "phase": "primary",
@@ -1140,7 +2930,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.398045,51.508768?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Horsenden Primary School": {
       "phase": "primary",
@@ -1154,7 +2946,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.335194,51.550427?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Lake Farm Park Academy": {
       "phase": "primary",
@@ -1168,7 +2962,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.425838,51.51266?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Dormers Wells Primary School": {
       "phase": "primary",
@@ -1182,7 +2978,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.364214,51.514236?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Wood End Park Academy": {
       "phase": "primary",
@@ -1196,7 +2994,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.438523,51.517623?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Blair Peach Primary School": {
       "phase": "primary",
@@ -1210,7 +3010,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.390302,51.508473?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Beaconsfield Primary and Nursery School": {
       "phase": "primary",
@@ -1224,7 +3026,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.382994,51.507725?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hambrough Primary School": {
       "phase": "primary",
@@ -1238,7 +3042,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.378219,51.508279?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Longfield Primary School": {
       "phase": "primary",
@@ -1252,7 +3058,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.370667,51.580159?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Mayfield Primary School": {
       "phase": "primary",
@@ -1266,7 +3074,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.347527,51.520953?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Selborne Primary School": {
       "phase": "primary",
@@ -1280,7 +3090,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.335403,51.537184?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Coteford Infant School": {
       "phase": "primary",
@@ -1294,7 +3106,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.410423,51.584085?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Bishop Winnington-Ingram CofE Primary School": {
       "phase": "primary",
@@ -1308,7 +3122,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.433656,51.577123?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Brentside Primary School": {
       "phase": "primary",
@@ -1322,7 +3138,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.339414,51.525245?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Botwell House Catholic Primary School": {
       "phase": "primary",
@@ -1336,7 +3154,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.419491,51.507422?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Roxeth Primary School": {
       "phase": "primary",
@@ -1350,7 +3170,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.343841,51.569298?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "The Breakspear School": {
       "phase": "primary",
@@ -1364,7 +3186,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.451651,51.569925?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Vaughan Primary School": {
       "phase": "primary",
@@ -1378,7 +3202,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.354979,51.580929?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St George's Catholic Primary School": {
       "phase": "primary",
@@ -1392,7 +3218,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.331379,51.562081?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Anselm's Catholic Primary School": {
       "phase": "primary",
@@ -1407,7 +3235,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.380961,51.501663?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Colham Manor Primary School": {
       "phase": "primary",
@@ -1421,7 +3251,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.457511,51.523?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Whiteheath Infant & Nursery School": {
       "phase": "primary",
@@ -1435,7 +3267,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.441036,51.581169?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Dairy Meadow Primary School": {
       "phase": "primary",
@@ -1449,7 +3283,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.373285,51.501943?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Havelock Primary School, Nursery & Arp": {
       "phase": "primary",
@@ -1463,7 +3299,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374819,51.500958?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "John Locke Academy": {
       "phase": "primary",
@@ -1477,7 +3315,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.467858,51.546227?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St John Fisher Catholic Primary School": {
       "phase": "primary",
@@ -1492,7 +3332,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.37097,51.589848?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "West Lodge Primary School": {
       "phase": "primary",
@@ -1506,7 +3348,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.387409,51.591972?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hobbayne Primary School": {
       "phase": "primary",
@@ -1520,7 +3364,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337397,51.516098?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Woodlands Academy": {
       "phase": "primary",
@@ -1534,7 +3380,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.328736,51.522764?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Featherstone Primary and Nursery School": {
       "phase": "primary",
@@ -1548,7 +3396,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.394124,51.498139?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Clifton Primary School": {
       "phase": "primary",
@@ -1562,7 +3412,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.382055,51.498414?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hermitage Primary School": {
       "phase": "primary",
@@ -1576,7 +3428,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473426,51.549654?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Andrew's C of E Primary School": {
       "phase": "primary",
@@ -1590,7 +3444,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.474873,51.542605?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Three Bridges Primary School": {
       "phase": "primary",
@@ -1604,7 +3460,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.363221,51.500535?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Sudbury Primary School": {
       "phase": "primary",
@@ -1618,7 +3476,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.320235,51.559485?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Joseph's Catholic Primary School": {
       "phase": "primary",
@@ -1633,7 +3493,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337785,51.5106?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Harlyn Primary School": {
       "phase": "primary",
@@ -1647,7 +3509,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.401002,51.596268?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Wolf Fields Primary School": {
       "phase": "primary",
@@ -1661,7 +3525,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.375716,51.496806?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Norbury School": {
       "phase": "primary",
@@ -1675,7 +3541,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.339002,51.583285?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Cranford Park Academy": {
       "phase": "primary",
@@ -1689,7 +3557,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.419659,51.495483?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Mark's Primary School": {
       "phase": "primary",
@@ -1703,7 +3573,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.341829,51.507591?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Khalsa Primary School": {
       "phase": "primary",
@@ -1717,7 +3589,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.370406,51.495024?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "North Ealing Primary School": {
       "phase": "primary",
@@ -1731,7 +3605,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.318011,51.525911?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Whitehall Infant School": {
       "phase": "primary",
@@ -1745,7 +3621,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.481421,51.539552?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Norwood Green Infant and Nursery School": {
       "phase": "primary",
@@ -1759,7 +3637,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.378767,51.493234?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Perivale Primary School": {
       "phase": "primary",
@@ -1773,7 +3653,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.310139,51.536832?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Drayton Green Primary School": {
       "phase": "primary",
@@ -1787,7 +3669,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.323415,51.515359?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Pinkwell Primary School": {
       "phase": "primary",
@@ -1801,7 +3685,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.439709,51.498539?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Mary's Church of England Primary Norwood Green": {
       "phase": "primary",
@@ -1815,7 +3701,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.365659,51.495228?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Vicar's Green Primary School": {
       "phase": "primary",
@@ -1829,7 +3717,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.309351,51.53513?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Cowley St Laurence CofE Primary School": {
       "phase": "primary",
@@ -1843,7 +3733,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.479504,51.526129?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Rabbsfarm Primary School": {
       "phase": "primary",
@@ -1857,7 +3749,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473347,51.516688?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Barham Primary School": {
       "phase": "primary",
@@ -1871,7 +3765,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.305235,51.548892?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St John's Primary School": {
       "phase": "primary",
@@ -1885,7 +3781,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.323095,51.51192?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Mary's Catholic Primary School": {
       "phase": "primary",
@@ -1899,7 +3797,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.486847,51.543767?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Marlborough Primary School": {
       "phase": "primary",
@@ -1914,7 +3814,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.340804,51.588894?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Pinner Park Primary School": {
       "phase": "primary",
@@ -1928,7 +3830,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.358708,51.596817?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Jerome Church of England Bilingual School": {
       "phase": "primary",
@@ -1942,7 +3846,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.331984,51.58573?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Oaklands Primary School": {
       "phase": "primary",
@@ -1956,7 +3862,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.332168,51.504594?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Matthew's CofE Primary School": {
       "phase": "primary",
@@ -1970,7 +3878,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473562,51.512833?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "East Lane Primary School": {
       "phase": "primary",
@@ -1984,7 +3894,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.310418,51.563175?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Pinner Wood School": {
       "phase": "primary",
@@ -1998,7 +3910,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.395299,51.602836?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Byron Court Primary School": {
       "phase": "primary",
@@ -2012,7 +3926,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.312358,51.569246?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "West Drayton Academy": {
       "phase": "primary",
@@ -2026,7 +3942,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.466467,51.50525?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "The Rosary Catholic Primary School": {
       "phase": "primary",
@@ -2040,7 +3958,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.372706,51.487475?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Gregory's Catholic Primary School": {
       "phase": "primary",
@@ -2054,7 +3974,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.307799,51.524101?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Berkeley Academy": {
       "phase": "primary",
@@ -2068,7 +3990,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.388309,51.484085?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "William Byrd Primary Academy": {
       "phase": "primary",
@@ -2082,7 +4006,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.436579,51.490647?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Montpelier Primary School": {
       "phase": "primary",
@@ -2096,7 +4022,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.300966,51.523337?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Cherry Lane Primary School": {
       "phase": "primary",
@@ -2110,7 +4038,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.460846,51.497164?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Heston Primary School": {
       "phase": "primary",
@@ -2124,7 +4054,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.36939,51.483922?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hillside Infant School": {
       "phase": "primary",
@@ -2138,7 +4070,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.410726,51.607641?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Whitefriars School": {
       "phase": "primary",
@@ -2152,7 +4086,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.340664,51.59829?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Elmgrove Primary School and Nursery": {
       "phase": "primary",
@@ -2166,7 +4102,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.323935,51.588718?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Springwell School": {
       "phase": "primary",
@@ -2180,7 +4118,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.385698,51.482574?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Westbrook Primary School": {
       "phase": "primary",
@@ -2194,7 +4134,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.375261,51.482052?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Fielding Primary School": {
       "phase": "primary",
@@ -2208,7 +4150,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.320873,51.501403?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Park Lane Primary School": {
       "phase": "primary",
@@ -2222,7 +4166,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.293825,51.555885?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Christ the Saviour Church of England Primary School": {
       "phase": "primary",
@@ -2236,7 +4182,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.304595,51.514118?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Teresa's Catholic Primary School and Nursery": {
       "phase": "primary",
@@ -2250,7 +4198,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.355408,51.604217?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Preston Park Primary School": {
       "phase": "primary",
@@ -2264,7 +4214,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.300597,51.571953?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Catherine Catholic Primary School": {
       "phase": "primary",
@@ -2278,7 +4230,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.478832,51.503882?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Cedars Manor School": {
       "phase": "primary",
@@ -2292,7 +4246,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.351897,51.605462?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Wembley Primary School": {
       "phase": "primary",
@@ -2306,7 +4262,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.294906,51.561683?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Laurel Lane Primary School": {
       "phase": "primary",
@@ -2320,7 +4278,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.471826,51.49925?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Edison Primary School": {
       "phase": "primary",
@@ -2334,7 +4294,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.381798,51.480461?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Lyon Park Primary School": {
       "phase": "primary",
@@ -2348,7 +4310,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.288473,51.543955?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Mount Stewart Infant School": {
       "phase": "primary",
@@ -2362,7 +4326,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.300814,51.578143?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Martin's Church of England Primary School": {
       "phase": "primary",
@@ -2376,7 +4342,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473659,51.497017?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Grimsdyke School": {
       "phase": "primary",
@@ -2390,7 +4358,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374599,51.613135?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Heathrow Primary School": {
       "phase": "primary",
@@ -2404,7 +4374,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.459262,51.489904?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Joseph's Catholic Infant School": {
       "phase": "primary",
@@ -2418,7 +4390,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.287687,51.551821?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Elsley Primary School": {
       "phase": "primary",
@@ -2432,7 +4406,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.287028,51.549023?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Frithwood Primary School": {
       "phase": "primary",
@@ -2446,7 +4422,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.418243,51.613659?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Belmont School": {
       "phase": "primary",
@@ -2460,7 +4438,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.327458,51.599685?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Nishkam School West London": {
       "phase": "primary",
@@ -2474,7 +4454,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337138,51.48525?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Priestmead Primary School and Nursery": {
       "phase": "primary",
@@ -2488,7 +4470,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.315405,51.596077?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "West Twyford Primary School": {
       "phase": "primary",
@@ -2502,7 +4486,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.28273,51.534087?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Cranford Primary School": {
       "phase": "primary",
@@ -2516,7 +4502,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.411664,51.475555?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Wellington Primary School": {
       "phase": "primary",
@@ -2530,7 +4518,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.378319,51.472149?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Uxendon Manor Primary School": {
       "phase": "primary",
@@ -2544,7 +4534,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.297948,51.58338?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Little Ealing Primary School": {
       "phase": "primary",
@@ -2558,7 +4550,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.308362,51.498049?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Weald Rise Primary School": {
       "phase": "primary",
@@ -2572,7 +4566,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.332187,51.607387?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Hujjat Primary School": {
       "phase": "primary",
@@ -2586,7 +4582,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.338118,51.613037?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Kenmore Park Infant and Nursery School": {
       "phase": "primary",
@@ -2600,7 +4598,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.299215,51.594279?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Kenmore Park Junior School": {
       "phase": "primary",
@@ -2614,7 +4614,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.299215,51.594279?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Bernadette's Catholic Nursery & Primary School": {
       "phase": "primary",
@@ -2628,7 +4630,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.289064,51.587774?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Stanburn Primary School": {
       "phase": "primary",
@@ -2642,7 +4646,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.308902,51.60789?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Whitchurch Primary School": {
       "phase": "primary",
@@ -2656,7 +4662,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.303745,51.608301?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Camrose Primary School and Nursery": {
       "phase": "primary",
@@ -2670,7 +4678,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.288203,51.60339?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Avanti House Primary School": {
       "phase": "primary",
@@ -2684,7 +4694,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337872,51.628051?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St John's C of E School": {
       "phase": "primary",
@@ -2698,7 +4710,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.318949,51.621307?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Stag Lane Primary School and Nursery": {
       "phase": "primary",
@@ -2712,7 +4726,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.279886,51.599933?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Aylward Primary School": {
       "phase": "primary",
@@ -2726,7 +4742,9 @@
       "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.297722,51.616424?overview=false",
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
-      "status": "modelled"
+      "status": "modelled",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "Krishna Avanti Primary School": {
       "phase": "primary",
@@ -2734,7 +4752,15 @@
         "krishna-avanti-primary"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA8 6ES",
+      "driveMinutes": 15,
+      "distanceKm": 8.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.280711,51.604099?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     },
     "St Teresa's Catholic Primary & Nursery School": {
       "phase": "primary",
@@ -2742,13 +4768,27 @@
         "st-teresas-primary"
       ],
       "origin": "HA1 3PU",
-      "status": "postcode-not-verified"
+      "status": "modelled",
+      "postcode": "HA3 6LE",
+      "driveMinutes": 9,
+      "distanceKm": 5.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.355408,51.604217?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "transitStatus": "lookup-failed",
+      "transitLookupError": "HTTP Error 429: Too Many Requests"
     }
   },
   "note": "Car baseline from OSRM using postcode centroids; not live traffic. Missing means not verified. Primary catchment distances still use UB5 6QX.",
   "coverage": {
     "schools": 214,
-    "drivingBackfilled": 168,
-    "missingVerifiedPostcode": 46
-  }
+    "drivingBackfilled": 214,
+    "publicTransportBackfilled": 50,
+    "missingVerifiedPostcode": 0,
+    "transitStatuses": {
+      "scheduled-itinerary": 50,
+      "lookup-failed": 164
+    }
+  },
+  "transitNote": "TfL journey planner itinerary to arrive 08:30 on the next weekday; may include walking legs. Check live service changes."
 }
