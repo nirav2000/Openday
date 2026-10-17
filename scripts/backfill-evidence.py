@@ -25,9 +25,9 @@ def write(path, data):
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
 
-def get(url):
+def get(url, timeout=8):
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=8) as response:
+    with urllib.request.urlopen(req, timeout=timeout) as response:
         return json.load(response)
 
 def postcode_location(postcode):
@@ -134,11 +134,12 @@ def main():
         url = "https://api.tfl.gov.uk/Journey/JourneyResults/" + urllib.parse.quote(ORIGIN) + "/to/" + urllib.parse.quote(postcode) + "?" + params
         try:
             time.sleep(2.3)  # TfL unauthenticated API rate-limit protection
-            journeys = get(url).get("journeys",[])
+            journeys = get(url, timeout=25).get("journeys",[])
             valid = [j for j in journeys if any(leg.get("mode",{}).get("id") not in ("walking","cycle","cycle-hire") for leg in j.get("legs",[]))]
             if valid:
                 j = min(valid,key=lambda x:x["duration"])
                 if 0 < j["duration"] < 600:
+                    row.pop("transitLookupError",None)
                     row.update({"transitMinutes":j["duration"],"transitStatus":"scheduled-itinerary","transitArrivalDate":day.isoformat(),"transitSourceUrl":url,"transitRetrievedAt":STAMP,"transitDeparture":j.get("startDateTime"),"transitArrival":j.get("arrivalDateTime"),"transitLegs":[{"mode":leg.get("mode",{}).get("id"),"minutes":leg.get("duration")} for leg in j.get("legs",[])]})
             elif journeys:
                 row["walkMinutes"] = min(j["duration"] for j in journeys)
