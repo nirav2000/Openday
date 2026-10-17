@@ -1,0 +1,1781 @@
+{
+  "schemaVersion": 1,
+  "schools": {
+    "Rooks Heath School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 76.5,
+          "ebaccAPS": 4.15,
+          "ebacc4Plus": 37.8,
+          "ebacc5Plus": 23.5,
+          "pupils": 196.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 50.5,
+          "ebaccAPS": 3.67,
+          "ebacc4Plus": 25.2,
+          "ebacc5Plus": 19.2,
+          "pupils": 214.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 60.2,
+          "ebaccAPS": 4.38,
+          "ebacc4Plus": 36.4,
+          "ebacc5Plus": 23.8,
+          "pupils": 206.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "137198",
+      "independent": false,
+      "status": "available"
+    },
+    "Royal Grammar School High Wycombe": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 88.7,
+          "ebaccAPS": 7.39,
+          "ebacc4Plus": 87.2,
+          "ebacc5Plus": 81.8,
+          "pupils": 203.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 94.7,
+          "ebaccAPS": 7.18,
+          "ebacc4Plus": 89.4,
+          "ebacc5Plus": 76.3,
+          "pupils": 207.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 86.6,
+          "ebaccAPS": 7.23,
+          "ebacc4Plus": 80.2,
+          "ebacc5Plus": 71.8,
+          "pupils": 202.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136484",
+      "independent": false,
+      "status": "available"
+    },
+    "JFS": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 67.4,
+          "ebaccAPS": 5.93,
+          "ebacc4Plus": 50.9,
+          "ebacc5Plus": 42.5,
+          "pupils": 285.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 63.3,
+          "ebaccAPS": 6.01,
+          "ebacc4Plus": 55.8,
+          "ebacc5Plus": 48.9,
+          "pupils": 319.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 65.0,
+          "ebaccAPS": 5.88,
+          "ebacc4Plus": 55.8,
+          "ebacc5Plus": 46.0,
+          "pupils": 274.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "133724",
+      "independent": false,
+      "status": "available"
+    },
+    "Haberdashers' Boys' School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.5,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 176.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.68,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 156.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.61,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 163.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "117648",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Dr Challoner's Grammar School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 87.5,
+          "ebaccAPS": 7.4,
+          "ebacc4Plus": 79.3,
+          "ebacc5Plus": 69.6,
+          "pupils": 184.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 87.4,
+          "ebaccAPS": 7.12,
+          "ebacc4Plus": 78.6,
+          "ebacc5Plus": 68.7,
+          "pupils": 182.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 88.2,
+          "ebaccAPS": 7.51,
+          "ebacc4Plus": 85.5,
+          "ebacc5Plus": 78.5,
+          "pupils": 186.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136419",
+      "independent": false,
+      "status": "available"
+    },
+    "Park High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 59.4,
+          "ebaccAPS": 4.31,
+          "ebacc4Plus": 27.2,
+          "ebacc5Plus": 17.6,
+          "pupils": 261.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 73.2,
+          "ebaccAPS": 4.61,
+          "ebacc4Plus": 37.5,
+          "ebacc5Plus": 26.8,
+          "pupils": 261.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 51.4,
+          "ebaccAPS": 4.51,
+          "ebacc4Plus": 24.5,
+          "ebacc5Plus": 15.0,
+          "pupils": 253.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "137075",
+      "independent": false,
+      "status": "available"
+    },
+    "Claremont High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 77.2,
+          "ebaccAPS": 5.24,
+          "ebacc4Plus": 51.5,
+          "ebacc5Plus": 38.6,
+          "pupils": 272.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 81.3,
+          "ebaccAPS": 5.31,
+          "ebacc4Plus": 54.8,
+          "ebacc5Plus": 38.2,
+          "pupils": 272.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 85.7,
+          "ebaccAPS": 5.39,
+          "ebacc4Plus": 60.9,
+          "ebacc5Plus": 42.9,
+          "pupils": 266.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136656",
+      "independent": false,
+      "status": "available"
+    },
+    "Berkhamsted Boys": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.2,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 195.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.17,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 203.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.14,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 205.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "117604",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "St Paul's School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.4,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 197.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.3,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 201.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.24,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 198.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "102942",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "St Margaret's School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 4.31,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 82.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 31.7,
+          "ebaccAPS": 4.88,
+          "ebacc4Plus": 31.7,
+          "ebacc5Plus": 25.0,
+          "pupils": 60.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 31.3,
+          "ebaccAPS": 4.96,
+          "ebacc4Plus": 29.9,
+          "ebacc5Plus": 25.4,
+          "pupils": 67.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "117606",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Hampton School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.46,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 194.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.41,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 204.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.58,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 192.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "102946",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Harrow High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 44.2,
+          "ebaccAPS": 4.0,
+          "ebacc4Plus": 22.1,
+          "ebacc5Plus": 16.9,
+          "pupils": 172.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 60.9,
+          "ebaccAPS": 4.35,
+          "ebacc4Plus": 35.5,
+          "ebacc5Plus": 21.9,
+          "pupils": 169.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 51.1,
+          "ebaccAPS": 4.41,
+          "ebacc4Plus": 28.6,
+          "ebacc5Plus": 16.5,
+          "pupils": 182.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "137177",
+      "independent": false,
+      "status": "available"
+    },
+    "Sutton Grammar School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 47.4,
+          "ebaccAPS": 7.1,
+          "ebacc4Plus": 45.2,
+          "ebacc5Plus": 39.3,
+          "pupils": 135.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 59.4,
+          "ebaccAPS": 7.46,
+          "ebacc4Plus": 58.6,
+          "ebacc5Plus": 55.6,
+          "pupils": 133.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 36.3,
+          "ebaccAPS": 7.33,
+          "ebacc4Plus": 35.6,
+          "ebacc5Plus": 34.8,
+          "pupils": 135.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136787",
+      "independent": false,
+      "status": "available"
+    },
+    "Alperton Community School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 57.4,
+          "ebaccAPS": 4.62,
+          "ebacc4Plus": 31.1,
+          "ebacc5Plus": 24.0,
+          "pupils": 312.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 43.5,
+          "ebaccAPS": 4.4,
+          "ebacc4Plus": 23.1,
+          "ebacc5Plus": 18.2,
+          "pupils": 324.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 36.4,
+          "ebaccAPS": 4.6,
+          "ebacc4Plus": 26.6,
+          "ebacc5Plus": 22.1,
+          "pupils": 308.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "138610",
+      "independent": false,
+      "status": "available"
+    },
+    "Preston Manor School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 70.2,
+          "ebaccAPS": 4.06,
+          "ebacc4Plus": 29.0,
+          "ebacc5Plus": 16.5,
+          "pupils": 248.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 47.2,
+          "ebaccAPS": 4.23,
+          "ebacc4Plus": 34.8,
+          "ebacc5Plus": 22.8,
+          "pupils": 250.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 60.6,
+          "ebaccAPS": 4.31,
+          "ebacc4Plus": 30.5,
+          "ebacc5Plus": 21.1,
+          "pupils": 246.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "139319",
+      "independent": false,
+      "status": "available"
+    },
+    "Merchant Taylors' School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.22,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 173.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 1.22,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 171.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.27,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 163.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "117616",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Mill Hill School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 25.0,
+          "ebaccAPS": 4.14,
+          "ebacc4Plus": 21.9,
+          "ebacc5Plus": 15.0,
+          "pupils": 260.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 4.07,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 225.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 30.9,
+          "ebaccAPS": 4.46,
+          "ebacc4Plus": 27.0,
+          "ebacc5Plus": 23.8,
+          "pupils": 256.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "101367",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "John Lyon School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.71,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 94.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.82,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 92.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 0.64,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 92.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "102247",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Ark Academy": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 79.3,
+          "ebaccAPS": 5.17,
+          "ebacc4Plus": 53.7,
+          "ebacc5Plus": 37.2,
+          "pupils": 164.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 83.3,
+          "ebaccAPS": 4.92,
+          "ebacc4Plus": 51.8,
+          "ebacc5Plus": 35.7,
+          "pupils": 168.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 82.3,
+          "ebaccAPS": 5.01,
+          "ebacc4Plus": 50.3,
+          "ebacc5Plus": 32.0,
+          "pupils": 181.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "135600",
+      "independent": false,
+      "status": "available"
+    },
+    "Salvatorian College": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 73.1,
+          "ebaccAPS": 5.23,
+          "ebacc4Plus": 53.8,
+          "ebacc5Plus": 43.6,
+          "pupils": 78.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 40.7,
+          "ebaccAPS": 4.72,
+          "ebacc4Plus": 22.0,
+          "ebacc5Plus": 17.9,
+          "pupils": 123.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 52.5,
+          "ebaccAPS": 4.84,
+          "ebacc4Plus": 28.4,
+          "ebacc5Plus": 17.7,
+          "pupils": 141.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "138458",
+      "independent": false,
+      "status": "available"
+    },
+    "Pinner High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 82.0,
+          "ebaccAPS": 5.46,
+          "ebacc4Plus": 48.3,
+          "ebacc5Plus": 29.2,
+          "pupils": 178.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 70.9,
+          "ebaccAPS": 5.31,
+          "ebacc4Plus": 45.1,
+          "ebacc5Plus": 34.9,
+          "pupils": 175.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 84.0,
+          "ebaccAPS": 5.42,
+          "ebacc4Plus": 45.9,
+          "ebacc5Plus": 31.5,
+          "pupils": 181.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "142864",
+      "independent": false,
+      "status": "available"
+    },
+    "Winchester College": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 3.7,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 143.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.37,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 156.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.57,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 157.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "116532",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Aldenham School": {
+      "years": {
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 3.66,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 105.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 3.8,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 119.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 3.63,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 109.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "117602",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Dame Alice Owen's School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 82.1,
+          "ebaccAPS": 6.81,
+          "ebacc4Plus": 73.3,
+          "ebacc5Plus": 66.2,
+          "pupils": 195.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 73.5,
+          "ebaccAPS": 6.96,
+          "ebacc4Plus": 68.0,
+          "ebacc5Plus": 64.5,
+          "pupils": 200.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 77.1,
+          "ebaccAPS": 7.04,
+          "ebacc4Plus": 74.3,
+          "ebacc5Plus": 71.0,
+          "pupils": 210.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136554",
+      "independent": false,
+      "status": "available"
+    },
+    "Westminster School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.67,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 119.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.92,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 122.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.76,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 128.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "101162",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Harrow School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 1.73,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 168.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 1.91,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 166.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 0.0,
+          "ebaccAPS": 2.06,
+          "ebacc4Plus": 0.0,
+          "ebacc5Plus": 0.0,
+          "pupils": 161.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "102245",
+      "independent": true,
+      "status": "coverage-caution"
+    },
+    "Michaela Community School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 76.9,
+          "ebaccAPS": 7.05,
+          "ebacc4Plus": 74.4,
+          "ebacc5Plus": 71.1,
+          "pupils": 121.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 74.4,
+          "ebaccAPS": 7.5,
+          "ebacc4Plus": 74.4,
+          "ebacc5Plus": 72.6,
+          "pupils": 117.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 81.0,
+          "ebaccAPS": 7.73,
+          "ebacc4Plus": 80.2,
+          "ebacc5Plus": 80.2,
+          "pupils": 116.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "140862",
+      "independent": false,
+      "status": "available"
+    },
+    "Wembley High Technology College": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 90.1,
+          "ebaccAPS": 5.81,
+          "ebacc4Plus": 61.0,
+          "ebacc5Plus": 47.9,
+          "pupils": 213.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 92.8,
+          "ebaccAPS": 6.17,
+          "ebacc4Plus": 77.5,
+          "ebacc5Plus": 66.0,
+          "pupils": 306.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 92.3,
+          "ebaccAPS": 6.34,
+          "ebacc4Plus": 83.7,
+          "ebacc5Plus": 71.2,
+          "pupils": 208.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "138457",
+      "independent": false,
+      "status": "available"
+    },
+    "Nower Hill High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 50.6,
+          "ebaccAPS": 5.17,
+          "ebacc4Plus": 34.5,
+          "ebacc5Plus": 26.7,
+          "pupils": 322.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 50.9,
+          "ebaccAPS": 5.32,
+          "ebacc4Plus": 40.6,
+          "ebacc5Plus": 33.1,
+          "pupils": 320.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 49.7,
+          "ebaccAPS": 5.23,
+          "ebacc4Plus": 40.4,
+          "ebacc5Plus": 29.8,
+          "pupils": 322.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "137028",
+      "independent": false,
+      "status": "available"
+    },
+    "Queen Elizabeth's School, Barnet": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 100.0,
+          "ebaccAPS": 8.5,
+          "ebacc4Plus": 100.0,
+          "ebacc5Plus": 97.4,
+          "pupils": 190.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 99.5,
+          "ebaccAPS": 8.55,
+          "ebacc4Plus": 99.5,
+          "ebacc5Plus": 97.9,
+          "pupils": 193.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 100.0,
+          "ebaccAPS": 8.67,
+          "ebacc4Plus": 100.0,
+          "ebacc5Plus": 98.9,
+          "pupils": 188.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136290",
+      "independent": false,
+      "status": "available"
+    },
+    "Parmiter's School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 74.3,
+          "ebaccAPS": 6.04,
+          "ebacc4Plus": 65.0,
+          "ebacc5Plus": 53.9,
+          "pupils": 206.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 78.8,
+          "ebaccAPS": 6.39,
+          "ebacc4Plus": 65.4,
+          "ebacc5Plus": 55.3,
+          "pupils": 208.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 73.0,
+          "ebaccAPS": 6.44,
+          "ebacc4Plus": 62.1,
+          "ebacc5Plus": 51.2,
+          "pupils": 211.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136899",
+      "independent": false,
+      "status": "available"
+    },
+    "Watford Grammar School for Boys": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 96.5,
+          "ebaccAPS": 6.75,
+          "ebacc4Plus": 85.0,
+          "ebacc5Plus": 71.4,
+          "pupils": 227.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 95.9,
+          "ebaccAPS": 6.8,
+          "ebacc4Plus": 77.9,
+          "ebacc5Plus": 72.5,
+          "pupils": 222.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 95.9,
+          "ebaccAPS": 6.54,
+          "ebacc4Plus": 76.1,
+          "ebacc5Plus": 66.2,
+          "pupils": 222.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136276",
+      "independent": false,
+      "status": "available"
+    },
+    "Queens' School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 40.5,
+          "ebaccAPS": 4.96,
+          "ebacc4Plus": 29.5,
+          "ebacc5Plus": 22.7,
+          "pupils": 264.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 83.5,
+          "ebaccAPS": 5.41,
+          "ebacc4Plus": 47.9,
+          "ebacc5Plus": 33.3,
+          "pupils": 267.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 51.1,
+          "ebaccAPS": 4.89,
+          "ebacc4Plus": 39.1,
+          "ebacc5Plus": 30.1,
+          "pupils": 266.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136877",
+      "independent": false,
+      "status": "available"
+    },
+    "St Clement Danes School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 73.1,
+          "ebaccAPS": 6.1,
+          "ebacc4Plus": 57.6,
+          "ebacc5Plus": 46.6,
+          "pupils": 238.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 65.3,
+          "ebaccAPS": 6.07,
+          "ebacc4Plus": 53.4,
+          "ebacc5Plus": 49.6,
+          "pupils": 236.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 63.8,
+          "ebaccAPS": 5.96,
+          "ebacc4Plus": 56.3,
+          "ebacc5Plus": 47.5,
+          "pupils": 240.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136901",
+      "independent": false,
+      "status": "available"
+    },
+    "Rickmansworth School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 71.5,
+          "ebaccAPS": 5.78,
+          "ebacc4Plus": 61.1,
+          "ebacc5Plus": 43.0,
+          "pupils": 221.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 72.6,
+          "ebaccAPS": 5.76,
+          "ebacc4Plus": 57.1,
+          "ebacc5Plus": 45.6,
+          "pupils": 226.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 72.5,
+          "ebaccAPS": 5.45,
+          "ebacc4Plus": 53.6,
+          "ebacc5Plus": 43.2,
+          "pupils": 222.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136606",
+      "independent": false,
+      "status": "available"
+    },
+    "Wilson's School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 100.0,
+          "ebaccAPS": 8.56,
+          "ebacc4Plus": 100.0,
+          "ebacc5Plus": 98.9,
+          "pupils": 184.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 100.0,
+          "ebaccAPS": 8.66,
+          "ebacc4Plus": 100.0,
+          "ebacc5Plus": 100.0,
+          "pupils": 186.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 98.4,
+          "ebaccAPS": 8.51,
+          "ebacc4Plus": 98.4,
+          "ebacc5Plus": 98.4,
+          "pupils": 190.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136621",
+      "independent": false,
+      "status": "available"
+    },
+    "Wallington County Grammar School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 61.3,
+          "ebaccAPS": 6.99,
+          "ebacc4Plus": 59.3,
+          "ebacc5Plus": 54.7,
+          "pupils": 150.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 68.0,
+          "ebaccAPS": 7.25,
+          "ebacc4Plus": 67.3,
+          "ebacc5Plus": 62.7,
+          "pupils": 150.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 68.7,
+          "ebaccAPS": 7.2,
+          "ebacc4Plus": 62.6,
+          "ebacc5Plus": 60.5,
+          "pupils": 147.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136798",
+      "independent": false,
+      "status": "available"
+    },
+    "St Olave's Grammar School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 96.8,
+          "ebaccAPS": 8.37,
+          "ebacc4Plus": 96.8,
+          "ebacc5Plus": 96.0,
+          "pupils": 125.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 93.8,
+          "ebaccAPS": 8.22,
+          "ebacc4Plus": 91.4,
+          "ebacc5Plus": 89.1,
+          "pupils": 128.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 95.2,
+          "ebaccAPS": 8.45,
+          "ebacc4Plus": 93.7,
+          "ebacc5Plus": 92.9,
+          "pupils": 126.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "101676",
+      "independent": false,
+      "status": "available"
+    },
+    "Beths Grammar School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 52.4,
+          "ebaccAPS": 6.61,
+          "ebacc4Plus": 52.4,
+          "ebacc5Plus": 47.1,
+          "pupils": 191.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 55.0,
+          "ebaccAPS": 6.51,
+          "ebacc4Plus": 53.4,
+          "ebacc5Plus": 45.5,
+          "pupils": 191.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 47.1,
+          "ebaccAPS": 6.42,
+          "ebacc4Plus": 44.5,
+          "ebacc5Plus": 38.2,
+          "pupils": 191.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "136334",
+      "independent": false,
+      "status": "available"
+    },
+    "Whitmore High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 93.2,
+          "ebaccAPS": 5.33,
+          "ebacc4Plus": 46.0,
+          "ebacc5Plus": 35.1,
+          "pupils": 265.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 91.4,
+          "ebaccAPS": 5.11,
+          "ebacc4Plus": 46.1,
+          "ebacc5Plus": 30.5,
+          "pupils": 269.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 90.7,
+          "ebaccAPS": 5.09,
+          "ebacc4Plus": 43.7,
+          "ebacc5Plus": 30.4,
+          "pupils": 270.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "102239",
+      "independent": false,
+      "status": "available"
+    },
+    "John F Kennedy Catholic School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 24.4,
+          "ebaccAPS": 4.14,
+          "source": "DfE KS4 via data/performance.json",
+          "sourceType": "preserved-legacy"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 16.9,
+          "ebaccAPS": 3.96,
+          "ebacc4Plus": 15.2,
+          "ebacc5Plus": 10.1,
+          "pupils": 178.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 17.4,
+          "ebaccAPS": 4.21,
+          "ebacc4Plus": 14.0,
+          "ebacc5Plus": 10.1,
+          "pupils": 178.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "149743",
+      "independent": false,
+      "status": "available"
+    },
+    "St Joan of Arc Catholic School": {
+      "years": {},
+      "urn": null,
+      "independent": false,
+      "status": "not-found"
+    },
+    "Canons High School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 19.8,
+          "ebaccAPS": 3.66,
+          "ebacc4Plus": 10.4,
+          "ebacc5Plus": 7.5,
+          "pupils": 212.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 34.7,
+          "ebaccAPS": 3.4,
+          "ebacc4Plus": 9.3,
+          "ebacc5Plus": 5.7,
+          "pupils": 193.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 16.1,
+          "ebaccAPS": 4.0,
+          "ebacc4Plus": 9.8,
+          "ebacc5Plus": 6.3,
+          "pupils": 205.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "137199",
+      "independent": false,
+      "status": "available"
+    },
+    "Herschel Grammar School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 81.6,
+          "ebaccAPS": 7.26,
+          "ebacc4Plus": 75.7,
+          "ebacc5Plus": 71.7,
+          "pupils": 152.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 78.0,
+          "ebaccAPS": 7.25,
+          "ebacc4Plus": 73.3,
+          "ebacc5Plus": 64.7,
+          "pupils": 150.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 82.5,
+          "ebaccAPS": 7.21,
+          "ebacc4Plus": 72.7,
+          "ebacc5Plus": 64.3,
+          "pupils": 154.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "137726",
+      "independent": false,
+      "status": "available"
+    },
+    "Kings Langley School": {
+      "years": {
+        "202223": {
+          "year": "202223",
+          "ebaccEntry": 43.7,
+          "ebaccAPS": 4.35,
+          "ebacc4Plus": 31.7,
+          "ebacc5Plus": 21.0,
+          "pupils": 167.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202425": {
+          "year": "202425",
+          "ebaccEntry": 50.8,
+          "ebaccAPS": 4.45,
+          "ebacc4Plus": 34.1,
+          "ebacc5Plus": 21.2,
+          "pupils": 179.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        },
+        "202324": {
+          "year": "202324",
+          "ebaccEntry": 36.6,
+          "ebaccAPS": 4.23,
+          "ebacc4Plus": 26.9,
+          "ebacc5Plus": 15.6,
+          "pupils": 186.0,
+          "sourceType": "official-dfe",
+          "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+          "retrievedAt": "2026-10-17T09:30:01+00:00"
+        }
+      },
+      "urn": "139036",
+      "independent": false,
+      "status": "available"
+    },
+    "University College School (UCS)": {
+      "years": {},
+      "urn": null,
+      "independent": true,
+      "status": "coverage-caution"
+    }
+  },
+  "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/5b3d308c-da72-467f-b2ef-ab77d576a455/csv",
+  "lastReportingYear": "202425",
+  "coverage": {
+    "202223": 44,
+    "202324": 44,
+    "202425": 44
+  },
+  "note": "EBacc measures are historical; independent school DfE coverage may exclude IGCSE. Missing is not zero."
+}

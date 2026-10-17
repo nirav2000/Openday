@@ -1,0 +1,1283 @@
+{
+  "schemaVersion": 1,
+  "schools": {
+    "Rooks Heath School": {
+      "postcode": "EASTCOTELANE,SOUTHHARROW,HARROW,HA2 9AH",
+      "urn": "137198",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Royal Grammar School High Wycombe": {
+      "postcode": "AMERSHAMROAD,HIGHWYCOMBE,HP13 6QT",
+      "urn": "136484",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "JFS": {
+      "postcode": "KENTON,THEMALL,HARROW,HA3 9TE",
+      "urn": "133724",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Haberdashers' Boys' School": {
+      "postcode": "BUTTERFLYLANE,ELSTREE,HERTFORDSHIRE,WD6 3AF",
+      "urn": "117648",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Dr Challoner's Grammar School": {
+      "postcode": "CHESHAMROAD,AMERSHAM,HP6 5HA",
+      "urn": "136419",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Park High School": {
+      "postcode": "THISTLECROFTGARDENS,STANMORE,HA7 1PL",
+      "urn": "137075",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Claremont High School": {
+      "postcode": "CLAREMONTAVENUE,KENTON,HARROW,HA3 0UH",
+      "urn": "136656",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Berkhamsted Boys": {
+      "postcode": "OVERTONHOUSE,133HIGHSTREET,BERKHAMSTED,HP4 2DJ",
+      "urn": "117604",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Paul's School": {
+      "postcode": "LONSDALEROAD,BARNES,LONDON,SW13 9JT",
+      "urn": "102942",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Margaret's School": {
+      "postcode": "MERRYHILLROAD,BUSHEY,WD23 1DT",
+      "urn": "117606",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hampton School": {
+      "postcode": "HANWORTHROAD,HAMPTON,TW12 3HD",
+      "urn": "102946",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Harrow High School": {
+      "postcode": "GAYTONROAD,HARROW,HA1 2JG",
+      "urn": "137177",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Sutton Grammar School": {
+      "postcode": "MANORLANE,SUTTON,SM1 4AS",
+      "urn": "136787",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Alperton Community School": {
+      "postcode": "STANLEYAVENUE,WEMBLEY,HA0 4JE",
+      "urn": "138610",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Preston Manor School": {
+      "postcode": "CARLTONAVENUEEAST,WEMBLEY,HA9 8NA",
+      "urn": "139319",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Merchant Taylors' School": {
+      "postcode": "SANDYLODGE,NORTHWOOD,MIDDLESEX,NORTHWOOD,HA6 2HT",
+      "urn": "117616",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Mill Hill School": {
+      "postcode": "THERIDGEWAY,MILLHILLVILLAGE,LONDON,NW7 1QS",
+      "urn": "101367",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "John Lyon School": {
+      "postcode": "MIDDLEROAD,HARROW-ON-THE-HILL,HA2 0HN",
+      "urn": "102247",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Ark Academy": {
+      "postcode": "FORTYAVENUE,WEMBLEY,HA9 9JR",
+      "urn": "135600",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Salvatorian College": {
+      "postcode": "HIGHROAD,HARROWWEALD,HARROW,HA3 5DY",
+      "urn": "138458",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Pinner High School": {
+      "postcode": "BEAULIEUDRIVE,PINNER,HA5 1NB",
+      "urn": "142864",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Winchester College": {
+      "postcode": "COLLEGESTREET,WINCHESTER,SO23 9NA",
+      "urn": "116532",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Aldenham School": {
+      "postcode": "ELSTREE,ELSTREE,WD6 3AJ",
+      "urn": "117602",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Dame Alice Owen's School": {
+      "postcode": "DUGDALEHILLLANE,POTTERSBAR,EN6 2DU",
+      "urn": "136554",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Westminster School": {
+      "postcode": "LITTLEDEAN'SYARD,LONDON,SW1P 3PF",
+      "urn": "101162",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Harrow School": {
+      "postcode": "5HIGHSTREET,HARROW-ON-THE-HILL,HA1 3HP",
+      "urn": "102245",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Michaela Community School": {
+      "postcode": "NORTHENDROAD,WEMBLEY,LONDON,HA9 0UU",
+      "urn": "140862",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wembley High Technology College": {
+      "postcode": "EASTLANE,NORTHWEMBLEY,HA0 3NT",
+      "urn": "138457",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Nower Hill High School": {
+      "postcode": "GEORGEVAVENUE,PINNER,HA5 5RP",
+      "urn": "137028",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Queen Elizabeth's School, Barnet": {
+      "postcode": "QUEEN'SROAD,BARNET,EN5 4DQ",
+      "urn": "136290",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Parmiter's School": {
+      "postcode": "HIGHELMSLANE,GARSTON,WATFORD,WD25 0UU",
+      "urn": "136899",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Watford Grammar School for Boys": {
+      "postcode": "RICKMANSWORTHROAD,WATFORD,WD18 7JF",
+      "urn": "136276",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Queens' School": {
+      "postcode": "ALDENHAMROAD,BUSHEY,WD23 2TY",
+      "urn": "136877",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Clement Danes School": {
+      "postcode": "CHENIESROAD,CHORLEYWOOD,RICKMANSWORTH,WD3 6EW",
+      "urn": "136901",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Rickmansworth School": {
+      "postcode": "SCOTSHILL,RICKMANSWORTH,WD3 3AQ",
+      "urn": "136606",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wilson's School": {
+      "postcode": "MOLLISONDRIVE,WALLINGTON,SM6 9JW",
+      "urn": "136621",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wallington County Grammar School": {
+      "postcode": "CROYDONROAD,WALLINGTON,SM6 7PH",
+      "urn": "136798",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Olave's Grammar School": {
+      "postcode": "GODDINGTONLANE,ORPINGTON,BR6 9SH",
+      "urn": "101676",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Beths Grammar School": {
+      "postcode": "HARTFORDROAD,BEXLEY,DA5 1NE",
+      "urn": "136334",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Whitmore High School": {
+      "postcode": "PORLOCKAVENUE,HARROW,HA2 0AD",
+      "urn": "102239",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "John F Kennedy Catholic School": {
+      "postcode": "HOLLYBUSHLANE,HEMELHEMPSTEAD,HP1 2PH",
+      "urn": "149743",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Joan of Arc Catholic School": {
+      "status": "postcode-unverified",
+      "urn": null
+    },
+    "Canons High School": {
+      "postcode": "SHALDONROAD,EDGWARE,HA8 6AN",
+      "urn": "137199",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Herschel Grammar School": {
+      "postcode": "NORTHAMPTONAVENUE,SLOUGH,SL1 3BW",
+      "urn": "137726",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Kings Langley School": {
+      "postcode": "LOVELANE,KINGSLANGLEY,WD4 9HN",
+      "urn": "139036",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "University College School (UCS)": {
+      "postcode": "NW3 6XH",
+      "urn": "100065",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Bourne Primary School": {
+      "postcode": "HA4 6UJ",
+      "urn": "102368",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Alec Reed Academy": {
+      "postcode": "UB5 5LQ",
+      "urn": "134369",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Raphael's Catholic Primary School": {
+      "postcode": "UB5 6NL",
+      "urn": "101925",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Willow Tree Primary School": {
+      "postcode": "UB5 5FE",
+      "urn": "101902",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Viking Primary School": {
+      "postcode": "UB5 6HW",
+      "urn": "101908",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Downe Manor Primary School": {
+      "postcode": "UB5 6NW",
+      "urn": "101880",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Belmore Primary Academy": {
+      "postcode": "UB4 9LF",
+      "urn": "138983",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Deanesfield Primary School": {
+      "postcode": "HA4 0LR",
+      "urn": "102377",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Brookside Primary School": {
+      "postcode": "UB4 9LW",
+      "urn": "139117",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Gifford Primary School": {
+      "postcode": "UB5 6BU",
+      "urn": "101898",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Swithun Wells Catholic Primary School": {
+      "postcode": "HA4 9HS",
+      "urn": "102421",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Earlsmead Primary School": {
+      "postcode": "HA2 8PW",
+      "urn": "144883",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Charville Academy": {
+      "postcode": "UB4 8LF",
+      "urn": "139609",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Field End Infant School": {
+      "postcode": "HA4 9PQ",
+      "urn": "102379",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Ruislip Gardens Primary School": {
+      "postcode": "HA4 6PD",
+      "urn": "102416",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Ravenor Primary School": {
+      "postcode": "UB6 9TT",
+      "urn": "101885",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hayes Park School": {
+      "postcode": "UB4 8BE",
+      "urn": "102439",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Grange Park Infant and Nursery School": {
+      "postcode": "UB4 8SF",
+      "urn": "102433",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Petts Hill Primary School": {
+      "postcode": "UB5 4HB",
+      "urn": "134217",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Yeading Infant and Nursery School": {
+      "postcode": "UB4 0NR",
+      "urn": "102404",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Heathland School": {
+      "postcode": "HA2 9AG",
+      "urn": "141054",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Roxbourne Primary School": {
+      "postcode": "HA2 9QF",
+      "urn": "102213",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Durdans Park Primary School": {
+      "postcode": "UB1 2PQ",
+      "urn": "101896",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Ryefield Primary School": {
+      "postcode": "UB10 9DE",
+      "urn": "141718",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Lady Bankes Primary School": {
+      "postcode": "HA4 9SF",
+      "urn": "102388",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Lady Margaret Primary School": {
+      "postcode": "UB1 2NH",
+      "urn": "101903",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Newton Farm Nursery, Infant and Junior School": {
+      "postcode": "HA2 9JU",
+      "urn": "102181",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Glebe Primary School": {
+      "postcode": "UB10 8PH",
+      "urn": "102380",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Sacred Heart Catholic Primary School": {
+      "postcode": "HA4 6EZ",
+      "urn": "102426",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Newnham Infant and Nursery School": {
+      "postcode": "HA4 9RW",
+      "urn": "102394",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "The Welldon Park Academy": {
+      "postcode": "HA2 8LS",
+      "urn": "146782",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Greenwood Primary School": {
+      "postcode": "UB5 4QG",
+      "urn": "101899",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Dr Triplett's CofE Primary School": {
+      "postcode": "UB3 2JQ",
+      "urn": "102420",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wood End Primary School": {
+      "postcode": "UB5 4LB",
+      "urn": "136737",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Coston Primary School": {
+      "postcode": "UB6 9JU",
+      "urn": "101879",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "The Edward Betham Church of England Primary School": {
+      "postcode": "UB6 9JU",
+      "urn": "101927",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Stanhope Primary School": {
+      "postcode": "UB6 9EG",
+      "urn": "101907",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Tudor Primary School": {
+      "postcode": "UB1 1NX",
+      "urn": "101913",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hewens Primary School": {
+      "postcode": "UB4 8JP",
+      "urn": "139909",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Allenby Primary School": {
+      "postcode": "UB1 2HX",
+      "urn": "101891",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Oldfield Primary School": {
+      "postcode": "UB6 8PR",
+      "urn": "101869",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Highfield Primary School": {
+      "postcode": "UB10 0DB",
+      "urn": "102407",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Rosedale Primary School": {
+      "postcode": "UB3 2SE",
+      "urn": "141561",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Our Lady of the Visitation Catholic Primary School": {
+      "postcode": "UB6 9AN",
+      "urn": "101920",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Warrender Primary School": {
+      "postcode": "HA4 8QG",
+      "urn": "102409",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Bernadette Catholic Primary School": {
+      "postcode": "UB10 0EH",
+      "urn": "102423",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Minet Infant and Nursery School": {
+      "postcode": "UB3 3NR",
+      "urn": "102392",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "North Primary School": {
+      "postcode": "UB1 2JE",
+      "urn": "101884",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Cannon Lane Primary School": {
+      "postcode": "HA5 1TS",
+      "urn": "102204",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Grange Primary School": {
+      "postcode": "HA2 0RY",
+      "urn": "102202",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hillingdon Primary School": {
+      "postcode": "UB10 0PH",
+      "urn": "141055",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Guru Nanak Sikh Academy": {
+      "postcode": "UB4 0LT",
+      "urn": "136329",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Nanaksar Primary School": {
+      "postcode": "UB4 0LT",
+      "urn": "139926",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Horsenden Primary School": {
+      "postcode": "UB6 0PB",
+      "urn": "101901",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Lake Farm Park Academy": {
+      "postcode": "UB3 1JA",
+      "urn": "140391",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Dormers Wells Primary School": {
+      "postcode": "UB1 3HX",
+      "urn": "145406",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wood End Park Academy": {
+      "postcode": "UB3 2PD",
+      "urn": "138621",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Blair Peach Primary School": {
+      "postcode": "UB1 1DD",
+      "urn": "101892",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Beaconsfield Primary and Nursery School": {
+      "postcode": "UB1 1DR",
+      "urn": "101878",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hambrough Primary School": {
+      "postcode": "UB1 1SF",
+      "urn": "101887",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Longfield Primary School": {
+      "postcode": "HA2 7NZ",
+      "urn": "102199",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Mayfield Primary School": {
+      "postcode": "W7 3RT",
+      "urn": "101877",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Selborne Primary School": {
+      "postcode": "UB6 8JD",
+      "urn": "101886",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Coteford Infant School": {
+      "postcode": "HA5 2HX",
+      "urn": "102375",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Bishop Winnington-Ingram CofE Primary School": {
+      "postcode": "HA4 7LW",
+      "urn": "102417",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Brentside Primary School": {
+      "postcode": "W7 1JL",
+      "urn": "139488",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Botwell House Catholic Primary School": {
+      "postcode": "UB3 2AB",
+      "urn": "102422",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Roxeth Primary School": {
+      "postcode": "HA2 0JA",
+      "urn": "102185",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "The Breakspear School": {
+      "postcode": "UB10 8JA",
+      "urn": "102369",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Vaughan Primary School": {
+      "postcode": "HA1 4EL",
+      "urn": "102223",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St George's Catholic Primary School": {
+      "postcode": "HA1 3SB",
+      "urn": "146176",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Anselm's Catholic Primary School": {
+      "postcode": "UB2 4DH",
+      "urn": "101922",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Colham Manor Primary School": {
+      "postcode": "UB8 3PT",
+      "urn": "102373",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Whiteheath Infant & Nursery School": {
+      "postcode": "HA4 7RF",
+      "urn": "102413",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Dairy Meadow Primary School": {
+      "postcode": "UB2 4RP",
+      "urn": "101894",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Havelock Primary School, Nursery & Arp": {
+      "postcode": "UB2 4PA",
+      "urn": "101900",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "John Locke Academy": {
+      "postcode": "UB10 0FW",
+      "urn": "140387",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St John Fisher Catholic Primary School": {
+      "postcode": "HA5 5RA",
+      "urn": "146178",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "West Lodge Primary School": {
+      "postcode": "HA5 1AF",
+      "urn": "102216",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hobbayne Primary School": {
+      "postcode": "W7 1HA",
+      "urn": "101888",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Woodlands Academy": {
+      "postcode": "W13 0DH",
+      "urn": "143118",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Featherstone Primary and Nursery School": {
+      "postcode": "UB2 5JT",
+      "urn": "101910",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Clifton Primary School": {
+      "postcode": "UB2 5QP",
+      "urn": "101893",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hermitage Primary School": {
+      "postcode": "UB8 1RB",
+      "urn": "148775",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Andrew's C of E Primary School": {
+      "postcode": "UB8 2BX",
+      "urn": "102438",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Three Bridges Primary School": {
+      "postcode": "UB2 4HT",
+      "urn": "101911",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Sudbury Primary School": {
+      "postcode": "HA0 3EY",
+      "urn": "138608",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Joseph's Catholic Primary School": {
+      "postcode": "W7 3HU",
+      "urn": "101924",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Harlyn Primary School": {
+      "postcode": "HA5 2DR",
+      "urn": "102383",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wolf Fields Primary School": {
+      "postcode": "UB2 4JS",
+      "urn": "101909",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Norbury School": {
+      "postcode": "HA1 1QQ",
+      "urn": "102222",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Cranford Park Academy": {
+      "postcode": "UB3 4LQ",
+      "urn": "138613",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Mark's Primary School": {
+      "postcode": "W7 2NR",
+      "urn": "101874",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Khalsa Primary School": {
+      "postcode": "UB2 4LA",
+      "urn": "135482",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "North Ealing Primary School": {
+      "postcode": "W5 1RP",
+      "urn": "101870",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Whitehall Infant School": {
+      "postcode": "UB8 2LX",
+      "urn": "102411",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Norwood Green Infant and Nursery School": {
+      "postcode": "UB2 5RN",
+      "urn": "102496",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Perivale Primary School": {
+      "postcode": "UB6 7AP",
+      "urn": "101906",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Drayton Green Primary School": {
+      "postcode": "W13 0LA",
+      "urn": "101881",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Pinkwell Primary School": {
+      "postcode": "UB3 1PG",
+      "urn": "140671",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Mary's Church of England Primary Norwood Green": {
+      "postcode": "UB2 4LE",
+      "urn": "140963",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Vicar's Green Primary School": {
+      "postcode": "HA0 1DP",
+      "urn": "101916",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Cowley St Laurence CofE Primary School": {
+      "postcode": "UB8 3TH",
+      "urn": "139306",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Rabbsfarm Primary School": {
+      "postcode": "UB7 8AH",
+      "urn": "102408",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Barham Primary School": {
+      "postcode": "HA0 4RQ",
+      "urn": "101515",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St John's Primary School": {
+      "postcode": "W13 0SE",
+      "urn": "101873",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Mary's Catholic Primary School": {
+      "postcode": "UB8 2UA",
+      "urn": "102425",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Marlborough Primary School": {
+      "postcode": "HA1 1UJ",
+      "urn": "102186",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Pinner Park Primary School": {
+      "postcode": "HA5 5TL",
+      "urn": "102207",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Jerome Church of England Bilingual School": {
+      "postcode": "HA1 2DJ",
+      "urn": "142904",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Oaklands Primary School": {
+      "postcode": "W7 2DP",
+      "urn": "101905",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Matthew's CofE Primary School": {
+      "postcode": "UB7 7QJ",
+      "urn": "139302",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "East Lane Primary School": {
+      "postcode": "HA0 3NT",
+      "urn": "144794",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Pinner Wood School": {
+      "postcode": "HA5 3RA",
+      "urn": "131577",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Byron Court Primary School": {
+      "postcode": "HA0 3SF",
+      "urn": "101497",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "West Drayton Academy": {
+      "postcode": "UB7 9EA",
+      "urn": "145041",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "The Rosary Catholic Primary School": {
+      "postcode": "TW5 0RL",
+      "urn": "135261",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Gregory's Catholic Primary School": {
+      "postcode": "W5 1SL",
+      "urn": "101923",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Berkeley Academy": {
+      "postcode": "TW5 9HQ",
+      "urn": "144097",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "William Byrd Primary Academy": {
+      "postcode": "UB3 5EW",
+      "urn": "144473",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Montpelier Primary School": {
+      "postcode": "W5 2QT",
+      "urn": "101912",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Cherry Lane Primary School": {
+      "postcode": "UB7 9DL",
+      "urn": "131638",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Heston Primary School": {
+      "postcode": "TW5 0QR",
+      "urn": "136191",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hillside Infant School": {
+      "postcode": "HA6 1RX",
+      "urn": "102434",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Whitefriars School": {
+      "postcode": "HA3 5RQ",
+      "urn": "141071",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Elmgrove Primary School and Nursery": {
+      "postcode": "HA3 8LU",
+      "urn": "102211",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Springwell School": {
+      "postcode": "TW5 9EF",
+      "urn": "146822",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Westbrook Primary School": {
+      "postcode": "TW5 0NB",
+      "urn": "139889",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Fielding Primary School": {
+      "postcode": "W13 9TE",
+      "urn": "101897",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Park Lane Primary School": {
+      "postcode": "HA9 7RY",
+      "urn": "101509",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Christ the Saviour Church of England Primary School": {
+      "postcode": "W5 2AA",
+      "urn": "136445",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Teresa's Catholic Primary School and Nursery": {
+      "postcode": "HA3 6LE",
+      "urn": "102231",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Preston Park Primary School": {
+      "postcode": "HA9 8RJ",
+      "urn": "101510",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Catherine Catholic Primary School": {
+      "postcode": "UB7 7NX",
+      "urn": "102424",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Cedars Manor School": {
+      "postcode": "HA3 6LS",
+      "urn": "135211",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wembley Primary School": {
+      "postcode": "HA9 7NW",
+      "urn": "130095",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Laurel Lane Primary School": {
+      "postcode": "UB7 7TX",
+      "urn": "139275",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Edison Primary School": {
+      "postcode": "TW5 0AQ",
+      "urn": "142889",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Lyon Park Primary School": {
+      "postcode": "HA0 4HH",
+      "urn": "101506",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Mount Stewart Infant School": {
+      "postcode": "HA3 0JX",
+      "urn": "101501",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Martin's Church of England Primary School": {
+      "postcode": "UB7 7UF",
+      "urn": "140484",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Grimsdyke School": {
+      "postcode": "HA5 4QE",
+      "urn": "102187",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Heathrow Primary School": {
+      "postcode": "UB7 0JQ",
+      "urn": "102385",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Joseph's Catholic Infant School": {
+      "postcode": "HA9 6TA",
+      "urn": "101546",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Elsley Primary School": {
+      "postcode": "HA9 6HT",
+      "urn": "101519",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Frithwood Primary School": {
+      "postcode": "HA6 3NJ",
+      "urn": "102414",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Belmont School": {
+      "postcode": "HA3 7JT",
+      "urn": "102189",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Nishkam School West London": {
+      "postcode": "TW7 5PN",
+      "urn": "139720",
+      "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Priestmead Primary School and Nursery": {
+      "postcode": "HA3 8SZ",
+      "urn": "146750",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "West Twyford Primary School": {
+      "postcode": "NW10 7DN",
+      "urn": "101875",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Cranford Primary School": {
+      "postcode": "TW4 6LB",
+      "urn": "136809",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Wellington Primary School": {
+      "postcode": "TW3 3BD",
+      "urn": "102505",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Uxendon Manor Primary School": {
+      "postcode": "HA3 0UX",
+      "urn": "101502",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Little Ealing Primary School": {
+      "postcode": "W5 4EA",
+      "urn": "101904",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Weald Rise Primary School": {
+      "postcode": "HA3 7DH",
+      "urn": "102215",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Hujjat Primary School": {
+      "postcode": "HA3 6RR",
+      "urn": "143925",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Kenmore Park Infant and Nursery School": {
+      "postcode": "HA3 9JA",
+      "urn": "102212",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Kenmore Park Junior School": {
+      "postcode": "HA3 9JA",
+      "urn": "102193",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St Bernadette's Catholic Nursery & Primary School": {
+      "postcode": "HA3 9NS",
+      "urn": "142558",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Stanburn Primary School": {
+      "postcode": "HA7 2PJ",
+      "urn": "102214",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Whitchurch Primary School": {
+      "postcode": "HA7 2EQ",
+      "urn": "131316",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Camrose Primary School and Nursery": {
+      "postcode": "HA8 6JH",
+      "urn": "102188",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Avanti House Primary School": {
+      "postcode": "HA7 3JB",
+      "urn": "145142",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "St John's C of E School": {
+      "postcode": "HA7 3FD",
+      "urn": "134929",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Stag Lane Primary School and Nursery": {
+      "postcode": "HA8 5RU",
+      "urn": "102209",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Aylward Primary School": {
+      "postcode": "HA7 4RE",
+      "urn": "140657",
+      "sourceUrl": "data/schools.json",
+      "retrievedAt": "2026-10-17T09:30:01+00:00"
+    },
+    "Krishna Avanti Primary School": {
+      "status": "postcode-unverified",
+      "urn": null
+    },
+    "St Teresa's Catholic Primary & Nursery School": {
+      "status": "postcode-unverified",
+      "urn": null
+    }
+  }
+}
