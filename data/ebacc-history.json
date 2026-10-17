@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "schools": {
+    "Rooks Heath School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 76.5,
+        "ebaccAPS": 4.15,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Royal Grammar School High Wycombe": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 88.7,
+        "ebaccAPS": 7.39,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "JFS": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 67.4,
+        "ebaccAPS": 5.93,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Haberdashers' Boys' School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 2.5,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Dr Challoner's Grammar School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 87.5,
+        "ebaccAPS": 7.4,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Park High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 59.4,
+        "ebaccAPS": 4.31,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Claremont High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 77.2,
+        "ebaccAPS": 5.24,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Berkhamsted Boys": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 0.2,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "St Paul's School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 0.06,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "St Margaret's School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 4.31,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Hampton School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 0.46,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Harrow High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 44.2,
+        "ebaccAPS": 4.0,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Sutton Grammar School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 47.4,
+        "ebaccAPS": 7.1,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Alperton Community School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 57.4,
+        "ebaccAPS": 4.62,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Preston Manor School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 70.2,
+        "ebaccAPS": 4.06,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Merchant Taylors' School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 2.22,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Mill Hill School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 25.0,
+        "ebaccAPS": 4.14,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "John Lyon School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 0.71,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Ark Academy": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 79.3,
+        "ebaccAPS": 5.17,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Salvatorian College": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 73.1,
+        "ebaccAPS": 5.23,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Pinner High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 82.0,
+        "ebaccAPS": 5.46,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Winchester College": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 3.7,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Aldenham School": {},
+    "Dame Alice Owen's School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 82.1,
+        "ebaccAPS": 6.81,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Westminster School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 2.67,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Harrow School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 0.0,
+        "ebaccAPS": 1.73,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Michaela Community School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 76.9,
+        "ebaccAPS": 7.05,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Wembley High Technology College": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 90.1,
+        "ebaccAPS": 5.81,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Nower Hill High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 50.6,
+        "ebaccAPS": 5.17,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Queen Elizabeth's School, Barnet": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 100.0,
+        "ebaccAPS": 8.5,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Parmiter's School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 74.3,
+        "ebaccAPS": 6.04,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Watford Grammar School for Boys": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 96.5,
+        "ebaccAPS": 6.75,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Queens' School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 40.5,
+        "ebaccAPS": 4.96,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "St Clement Danes School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 73.1,
+        "ebaccAPS": 6.1,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Rickmansworth School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 71.5,
+        "ebaccAPS": 5.78,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Wilson's School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 100.0,
+        "ebaccAPS": 8.56,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Wallington County Grammar School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 61.3,
+        "ebaccAPS": 6.99,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "St Olave's Grammar School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 96.8,
+        "ebaccAPS": 8.37,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Beths Grammar School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 52.4,
+        "ebaccAPS": 6.61,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Whitmore High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 93.2,
+        "ebaccAPS": 5.33,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "John F Kennedy Catholic School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 24.4,
+        "ebaccAPS": 4.14,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "St Joan of Arc Catholic School": {},
+    "Canons High School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 19.8,
+        "ebaccAPS": 3.66,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Herschel Grammar School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 81.6,
+        "ebaccAPS": 7.26,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "Kings Langley School": {
+      "202223": {
+        "year": "202223",
+        "ebaccEntry": 43.7,
+        "ebaccAPS": 4.35,
+        "source": "DfE KS4 via data/performance.json"
+      }
+    },
+    "University College School (UCS)": {}
+  },
+  "note": "Historical DfE EBacc measures only (last year 2024/25). Never interpret missing as zero.",
+  "source": "data/performance.json (official DfE KS4 records)"
+}

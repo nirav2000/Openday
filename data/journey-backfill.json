@@ -1,0 +1,2754 @@
+{
+  "schemaVersion": 1,
+  "origin": "HA1 3PU",
+  "schools": {
+    "Rooks Heath School": {
+      "phase": "senior",
+      "eventIds": [
+        "rooks-heath"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Royal Grammar School High Wycombe": {
+      "phase": "senior",
+      "eventIds": [
+        "rgs-high-wycombe"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "JFS": {
+      "phase": "senior",
+      "eventIds": [
+        "jfs-morning",
+        "jfs-evening"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Haberdashers' Boys' School": {
+      "phase": "senior",
+      "eventIds": [
+        "habs-general",
+        "habs-taster-sep",
+        "habs-whole",
+        "habs-taster-nov",
+        "habs-scholarship-evening-oct"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Dr Challoner's Grammar School": {
+      "phase": "senior",
+      "eventIds": [
+        "challoners"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Park High School": {
+      "phase": "senior",
+      "eventIds": [
+        "park-high"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Claremont High School": {
+      "phase": "senior",
+      "eventIds": [
+        "claremont"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Berkhamsted Boys": {
+      "phase": "senior",
+      "eventIds": [
+        "berkhamsted"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "St Paul's School": {
+      "phase": "senior",
+      "eventIds": [
+        "st-pauls"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "St Margaret's School": {
+      "phase": "senior",
+      "eventIds": [
+        "st-margarets"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Hampton School": {
+      "phase": "senior",
+      "eventIds": [
+        "hampton"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Harrow High School": {
+      "phase": "senior",
+      "eventIds": [
+        "harrow-high"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Sutton Grammar School": {
+      "phase": "senior",
+      "eventIds": [
+        "sutton-grammar"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Alperton Community School": {
+      "phase": "senior",
+      "eventIds": [
+        "alperton"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Preston Manor School": {
+      "phase": "senior",
+      "eventIds": [
+        "preston-manor",
+        "primary-139319"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA9 8NA",
+      "driveMinutes": 11,
+      "distanceKm": 6.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.288986,51.566048?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Merchant Taylors' School": {
+      "phase": "senior",
+      "eventIds": [
+        "mts"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Mill Hill School": {
+      "phase": "senior",
+      "eventIds": [
+        "mill-hill"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "John Lyon School": {
+      "phase": "senior",
+      "eventIds": [
+        "john-lyon",
+        "john-lyon-school-action-oct9"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Ark Academy": {
+      "phase": "senior",
+      "eventIds": [
+        "ark-morning-2026-09-28",
+        "ark-morning-2026-09-29",
+        "ark-morning-2026-09-30",
+        "ark-evening"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Salvatorian College": {
+      "phase": "senior",
+      "eventIds": [
+        "salvatorian"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Pinner High School": {
+      "phase": "senior",
+      "eventIds": [
+        "pinner-high"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Winchester College": {
+      "phase": "senior",
+      "eventIds": [
+        "winchester-oct",
+        "winchester-nov",
+        "winchester-dec"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Aldenham School": {
+      "phase": "senior",
+      "eventIds": [
+        "aldenham",
+        "aldenham-tour-oct8"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Dame Alice Owen's School": {
+      "phase": "senior",
+      "eventIds": [
+        "dao"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Westminster School": {
+      "phase": "senior",
+      "eventIds": [
+        "westminster"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Harrow School": {
+      "phase": "senior",
+      "eventIds": [
+        "harrow-school"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Michaela Community School": {
+      "phase": "senior",
+      "eventIds": [
+        "michaela",
+        "michaela-open-oct-check"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Wembley High Technology College": {
+      "phase": "senior",
+      "eventIds": [
+        "wembley-high"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Nower Hill High School": {
+      "phase": "senior",
+      "eventIds": [
+        "nower-hill"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Queen Elizabeth's School, Barnet": {
+      "phase": "senior",
+      "eventIds": [
+        "qe-boys"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Parmiter's School": {
+      "phase": "senior",
+      "eventIds": [
+        "parmiters"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Watford Grammar School for Boys": {
+      "phase": "senior",
+      "eventIds": [
+        "watford-boys"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Queens' School": {
+      "phase": "senior",
+      "eventIds": [
+        "queens-bushey"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "St Clement Danes School": {
+      "phase": "senior",
+      "eventIds": [
+        "st-clement-danes"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Rickmansworth School": {
+      "phase": "senior",
+      "eventIds": [
+        "rickmansworth"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Wilson's School": {
+      "phase": "senior",
+      "eventIds": [
+        "wilsons"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Wallington County Grammar School": {
+      "phase": "senior",
+      "eventIds": [
+        "wallington"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "St Olave's Grammar School": {
+      "phase": "senior",
+      "eventIds": [
+        "st-olaves"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Beths Grammar School": {
+      "phase": "senior",
+      "eventIds": [
+        "beths"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Whitmore High School": {
+      "phase": "senior",
+      "eventIds": [
+        "whitmore-high"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "John F Kennedy Catholic School": {
+      "phase": "senior",
+      "eventIds": [
+        "jfk-open-oct"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "St Joan of Arc Catholic School": {
+      "phase": "senior",
+      "eventIds": [
+        "st-joan-open-tour-oct6",
+        "st-joan-open-tour-oct7",
+        "st-joan-open-tour-oct8"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Canons High School": {
+      "phase": "senior",
+      "eventIds": [
+        "canons-open-oct"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Herschel Grammar School": {
+      "phase": "senior",
+      "eventIds": [
+        "herschel-open-oct"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "Kings Langley School": {
+      "phase": "senior",
+      "eventIds": [
+        "kings-langley-open-oct"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "University College School (UCS)": {
+      "phase": "senior",
+      "eventIds": [
+        "university-college-school"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "NW3 6XH",
+      "driveMinutes": 26,
+      "distanceKm": 16.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.181082,51.553508?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Bourne Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102368"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 6UJ",
+      "driveMinutes": 9,
+      "distanceKm": 4.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.394489,51.553339?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Alec Reed Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-134369"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 5LQ",
+      "driveMinutes": 9,
+      "distanceKm": 4.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.383967,51.544166?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Raphael's Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101925"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 6NL",
+      "driveMinutes": 14,
+      "distanceKm": 6.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.402757,51.535944?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Willow Tree Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101902"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 5FE",
+      "driveMinutes": 9,
+      "distanceKm": 4.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.377969,51.550207?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Viking Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101908"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 6HW",
+      "driveMinutes": 12,
+      "distanceKm": 5.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.392874,51.532832?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Downe Manor Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101880"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 6NW",
+      "driveMinutes": 14,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.403568,51.534192?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Belmore Primary Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-138983"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 9LF",
+      "driveMinutes": 13,
+      "distanceKm": 6.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.401519,51.531773?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Deanesfield Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102377"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 0LR",
+      "driveMinutes": 7,
+      "distanceKm": 3.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.3907,51.55933?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Brookside Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139117"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 9LW",
+      "driveMinutes": 13,
+      "distanceKm": 6.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.396357,51.530569?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Gifford Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101898"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 6BU",
+      "driveMinutes": 13,
+      "distanceKm": 6.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.37598,51.535963?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Swithun Wells Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102421"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 9HS",
+      "driveMinutes": 7,
+      "distanceKm": 3.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.392045,51.56415?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Earlsmead Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "earlsmead-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 8PW",
+      "driveMinutes": 5,
+      "distanceKm": 2.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.372879,51.557034?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Charville Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139609"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 8LF",
+      "driveMinutes": 17,
+      "distanceKm": 8.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.428637,51.536024?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Field End Infant School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102379"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 9PQ",
+      "driveMinutes": 7,
+      "distanceKm": 3.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.388226,51.566454?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Ruislip Gardens Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102416"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 6PD",
+      "driveMinutes": 11,
+      "distanceKm": 6.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.419189,51.562307?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Ravenor Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101885"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 9TT",
+      "driveMinutes": 12,
+      "distanceKm": 5.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.364836,51.532292?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hayes Park School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102439"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 8BE",
+      "driveMinutes": 16,
+      "distanceKm": 7.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.420961,51.528673?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Grange Park Infant and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102433"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 8SF",
+      "driveMinutes": 16,
+      "distanceKm": 8.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.417567,51.526766?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Petts Hill Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-134217"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 4HB",
+      "driveMinutes": 4,
+      "distanceKm": 2.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.362008,51.55325?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Yeading Infant and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102404"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 0NR",
+      "driveMinutes": 14,
+      "distanceKm": 7.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.39859,51.522381?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Heathland School": {
+      "phase": "primary",
+      "eventIds": [
+        "heathland-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 9AG",
+      "driveMinutes": 4,
+      "distanceKm": 1.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.369266,51.563656?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Roxbourne Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "roxbourne-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 9QF",
+      "driveMinutes": 6,
+      "distanceKm": 3.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.383259,51.568193?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Durdans Park Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101896"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 2PQ",
+      "driveMinutes": 13,
+      "distanceKm": 6.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.376053,51.523375?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Ryefield Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-141718"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 9DE",
+      "driveMinutes": 16,
+      "distanceKm": 10.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.437531,51.542392?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Lady Bankes Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102388"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 9SF",
+      "driveMinutes": 10,
+      "distanceKm": 5.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.406452,51.57092?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Lady Margaret Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101903"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 2NH",
+      "driveMinutes": 13,
+      "distanceKm": 6.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374083,51.52404?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Newton Farm Nursery, Infant and Junior School": {
+      "phase": "primary",
+      "eventIds": [
+        "newton-farm-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 9JU",
+      "driveMinutes": 6,
+      "distanceKm": 2.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.37494,51.56922?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Glebe Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102380",
+        "glebe-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 8PH",
+      "driveMinutes": 17,
+      "distanceKm": 11.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.437286,51.558791?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Sacred Heart Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102426"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 6EZ",
+      "driveMinutes": 12,
+      "distanceKm": 6.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.424555,51.567766?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Newnham Infant and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102394"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 9RW",
+      "driveMinutes": 8,
+      "distanceKm": 4.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.393224,51.573654?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "The Welldon Park Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "welldon-park-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 8LS",
+      "driveMinutes": 3,
+      "distanceKm": 1.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.355657,51.560966?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Greenwood Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101899"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 4QG",
+      "driveMinutes": 5,
+      "distanceKm": 2.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.350305,51.554165?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Dr Triplett's CofE Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102420"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 2JQ",
+      "driveMinutes": 16,
+      "distanceKm": 9.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.416152,51.51726?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Wood End Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-136737"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB5 4LB",
+      "driveMinutes": 5,
+      "distanceKm": 2.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.350526,51.552837?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Coston Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101879"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 9JU",
+      "driveMinutes": 10,
+      "distanceKm": 6.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35151,51.534381?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "The Edward Betham Church of England Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101927"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 9JU",
+      "driveMinutes": 10,
+      "distanceKm": 6.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35151,51.534381?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Stanhope Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101907"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 9EG",
+      "driveMinutes": 11,
+      "distanceKm": 7.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35546,51.527215?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Tudor Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101913"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 1NX",
+      "driveMinutes": 16,
+      "distanceKm": 8.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.384544,51.513591?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hewens Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139909"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 8JP",
+      "driveMinutes": 19,
+      "distanceKm": 11.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.439953,51.528936?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Allenby Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101891"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 2HX",
+      "driveMinutes": 14,
+      "distanceKm": 8.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.365373,51.520124?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Oldfield Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101869"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 8PR",
+      "driveMinutes": 10,
+      "distanceKm": 5.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.348268,51.537518?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Highfield Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102407"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 0DB",
+      "driveMinutes": 18,
+      "distanceKm": 11.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.445138,51.534571?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Rosedale Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-141561"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 2SE",
+      "driveMinutes": 18,
+      "distanceKm": 10.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.429189,51.519989?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Our Lady of the Visitation Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101920"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 9AN",
+      "driveMinutes": 13,
+      "distanceKm": 7.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.35176,51.523476?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Warrender Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102409"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 8QG",
+      "driveMinutes": 12,
+      "distanceKm": 6.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.41355,51.576772?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Bernadette Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102423"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 0EH",
+      "driveMinutes": 15,
+      "distanceKm": 10.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.451209,51.539642?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Minet Infant and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102392"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 3NR",
+      "driveMinutes": 16,
+      "distanceKm": 9.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.409053,51.511696?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "North Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101884"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 2JE",
+      "driveMinutes": 15,
+      "distanceKm": 7.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374137,51.513232?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Cannon Lane Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "cannon-lane-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 1TS",
+      "driveMinutes": 9,
+      "distanceKm": 4.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.389166,51.581511?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Grange Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "grange-primary",
+        "primary-131144"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 0RY",
+      "driveMinutes": 4,
+      "distanceKm": 1.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.359244,51.571124?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hillingdon Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-141055"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 0PH",
+      "driveMinutes": 17,
+      "distanceKm": 11.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.451681,51.531259?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Guru Nanak Sikh Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-136329"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 0LT",
+      "driveMinutes": 16,
+      "distanceKm": 8.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.398045,51.508768?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Nanaksar Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139926"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB4 0LT",
+      "driveMinutes": 16,
+      "distanceKm": 8.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.398045,51.508768?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Horsenden Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101901"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 0PB",
+      "driveMinutes": 7,
+      "distanceKm": 4.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.335194,51.550427?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Lake Farm Park Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-140391"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 1JA",
+      "driveMinutes": 18,
+      "distanceKm": 10.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.425838,51.51266?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Dormers Wells Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-145406"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 3HX",
+      "driveMinutes": 16,
+      "distanceKm": 8.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.364214,51.514236?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Wood End Park Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-138621"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 2PD",
+      "driveMinutes": 19,
+      "distanceKm": 11.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.438523,51.517623?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Blair Peach Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101892"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 1DD",
+      "driveMinutes": 16,
+      "distanceKm": 9.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.390302,51.508473?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Beaconsfield Primary and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101878"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 1DR",
+      "driveMinutes": 17,
+      "distanceKm": 9.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.382994,51.507725?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hambrough Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101887"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB1 1SF",
+      "driveMinutes": 16,
+      "distanceKm": 8.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.378219,51.508279?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Longfield Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "longfield-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 7NZ",
+      "driveMinutes": 7,
+      "distanceKm": 3.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.370667,51.580159?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Mayfield Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101877"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W7 3RT",
+      "driveMinutes": 15,
+      "distanceKm": 8.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.347527,51.520953?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Selborne Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101886"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 8JD",
+      "driveMinutes": 12,
+      "distanceKm": 7.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.335403,51.537184?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Coteford Infant School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102375"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 2HX",
+      "driveMinutes": 11,
+      "distanceKm": 6.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.410423,51.584085?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Bishop Winnington-Ingram CofE Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102417"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 7LW",
+      "driveMinutes": 14,
+      "distanceKm": 8.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.433656,51.577123?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Brentside Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139488"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W7 1JL",
+      "driveMinutes": 14,
+      "distanceKm": 7.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.339414,51.525245?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Botwell House Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102422"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 2AB",
+      "driveMinutes": 17,
+      "distanceKm": 10.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.419491,51.507422?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Roxeth Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "roxeth-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA2 0JA",
+      "driveMinutes": 3,
+      "distanceKm": 1.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.343841,51.569298?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "The Breakspear School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102369"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 8JA",
+      "driveMinutes": 17,
+      "distanceKm": 11.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.451651,51.569925?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Vaughan Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "vaughan-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA1 4EL",
+      "driveMinutes": 6,
+      "distanceKm": 3.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.354979,51.580929?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St George's Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "st-georges-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA1 3SB",
+      "driveMinutes": 5,
+      "distanceKm": 2.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.331379,51.562081?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Anselm's Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101922",
+        "st-anselms-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4DH",
+      "driveMinutes": 19,
+      "distanceKm": 9.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.380961,51.501663?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Colham Manor Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102373"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB8 3PT",
+      "driveMinutes": 19,
+      "distanceKm": 13.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.457511,51.523?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Whiteheath Infant & Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102413"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA4 7RF",
+      "driveMinutes": 16,
+      "distanceKm": 8.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.441036,51.581169?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Dairy Meadow Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101894"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4RP",
+      "driveMinutes": 21,
+      "distanceKm": 10.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.373285,51.501943?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Havelock Primary School, Nursery & Arp": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101900"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4PA",
+      "driveMinutes": 20,
+      "distanceKm": 9.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374819,51.500958?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "John Locke Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-140387"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB10 0FW",
+      "driveMinutes": 17,
+      "distanceKm": 12.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.467858,51.546227?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St John Fisher Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "st-john-fisher-primary",
+        "primary-101921"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 5RA",
+      "driveMinutes": 8,
+      "distanceKm": 5.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.37097,51.589848?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "West Lodge Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "west-lodge-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 1AF",
+      "driveMinutes": 10,
+      "distanceKm": 5.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.387409,51.591972?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hobbayne Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101888"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W7 1HA",
+      "driveMinutes": 16,
+      "distanceKm": 8.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337397,51.516098?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Woodlands Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-143118"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W13 0DH",
+      "driveMinutes": 15,
+      "distanceKm": 8.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.328736,51.522764?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Featherstone Primary and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101910"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 5JT",
+      "driveMinutes": 17,
+      "distanceKm": 10.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.394124,51.498139?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Clifton Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101893"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 5QP",
+      "driveMinutes": 19,
+      "distanceKm": 9.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.382055,51.498414?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hermitage Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-148775"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB8 1RB",
+      "driveMinutes": 15,
+      "distanceKm": 11.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473426,51.549654?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Andrew's C of E Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102438"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB8 2BX",
+      "driveMinutes": 18,
+      "distanceKm": 13.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.474873,51.542605?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Three Bridges Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101911"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4HT",
+      "driveMinutes": 20,
+      "distanceKm": 10.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.363221,51.500535?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Sudbury Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-138608"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA0 3EY",
+      "driveMinutes": 7,
+      "distanceKm": 3.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.320235,51.559485?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Joseph's Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101924",
+        "st-josephs-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W7 3HU",
+      "driveMinutes": 17,
+      "distanceKm": 9.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337785,51.5106?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Harlyn Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102383"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 2DR",
+      "driveMinutes": 12,
+      "distanceKm": 6.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.401002,51.596268?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Wolf Fields Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101909"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4JS",
+      "driveMinutes": 21,
+      "distanceKm": 10.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.375716,51.496806?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Norbury School": {
+      "phase": "primary",
+      "eventIds": [
+        "norbury-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA1 1QQ",
+      "driveMinutes": 6,
+      "distanceKm": 3.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.339002,51.583285?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Cranford Park Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-138613"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 4LQ",
+      "driveMinutes": 18,
+      "distanceKm": 10.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.419659,51.495483?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Mark's Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101874"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W7 2NR",
+      "driveMinutes": 20,
+      "distanceKm": 10.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.341829,51.507591?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Khalsa Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-135482"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4LA",
+      "driveMinutes": 21,
+      "distanceKm": 10.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.370406,51.495024?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "North Ealing Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101870"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W5 1RP",
+      "driveMinutes": 15,
+      "distanceKm": 8.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.318011,51.525911?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Whitehall Infant School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102411"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB8 2LX",
+      "driveMinutes": 18,
+      "distanceKm": 13.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.481421,51.539552?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Norwood Green Infant and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102496"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 5RN",
+      "driveMinutes": 20,
+      "distanceKm": 12.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.378767,51.493234?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Perivale Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101906"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB6 7AP",
+      "driveMinutes": 14,
+      "distanceKm": 8.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.310139,51.536832?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Drayton Green Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101881"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W13 0LA",
+      "driveMinutes": 17,
+      "distanceKm": 9.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.323415,51.515359?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Pinkwell Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-140671"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 1PG",
+      "driveMinutes": 20,
+      "distanceKm": 12.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.439709,51.498539?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Mary's Church of England Primary Norwood Green": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-140963"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB2 4LE",
+      "driveMinutes": 22,
+      "distanceKm": 11.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.365659,51.495228?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Vicar's Green Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101916"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA0 1DP",
+      "driveMinutes": 12,
+      "distanceKm": 7.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.309351,51.53513?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Cowley St Laurence CofE Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139306"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB8 3TH",
+      "driveMinutes": 20,
+      "distanceKm": 15.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.479504,51.526129?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Rabbsfarm Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102408"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 8AH",
+      "driveMinutes": 22,
+      "distanceKm": 14.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473347,51.516688?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Barham Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101515"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA0 4RQ",
+      "driveMinutes": 10,
+      "distanceKm": 5.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.305235,51.548892?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St John's Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101873"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W13 0SE",
+      "driveMinutes": 20,
+      "distanceKm": 10.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.323095,51.51192?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Mary's Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102425"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB8 2UA",
+      "driveMinutes": 17,
+      "distanceKm": 13.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.486847,51.543767?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Marlborough Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102186",
+        "marlborough-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA1 1UJ",
+      "driveMinutes": 6,
+      "distanceKm": 3.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.340804,51.588894?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Pinner Park Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "pinner-park-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 5TL",
+      "driveMinutes": 9,
+      "distanceKm": 5.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.358708,51.596817?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Jerome Church of England Bilingual School": {
+      "phase": "primary",
+      "eventIds": [
+        "st-jerome-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA1 2DJ",
+      "driveMinutes": 6,
+      "distanceKm": 3.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.331984,51.58573?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Oaklands Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101905"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W7 2DP",
+      "driveMinutes": 21,
+      "distanceKm": 11.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.332168,51.504594?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Matthew's CofE Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139302"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 7QJ",
+      "driveMinutes": 23,
+      "distanceKm": 16.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473562,51.512833?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "East Lane Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-144794"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA0 3NT",
+      "driveMinutes": 8,
+      "distanceKm": 4.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.310418,51.563175?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Pinner Wood School": {
+      "phase": "primary",
+      "eventIds": [
+        "pinner-wood-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 3RA",
+      "driveMinutes": 12,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.395299,51.602836?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Byron Court Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101497"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA0 3SF",
+      "driveMinutes": 9,
+      "distanceKm": 4.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.312358,51.569246?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "West Drayton Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-145041"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 9EA",
+      "driveMinutes": 22,
+      "distanceKm": 15.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.466467,51.50525?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "The Rosary Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-135261"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW5 0RL",
+      "driveMinutes": 23,
+      "distanceKm": 13.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.372706,51.487475?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Gregory's Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101923"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W5 1SL",
+      "driveMinutes": 16,
+      "distanceKm": 9.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.307799,51.524101?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Berkeley Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-144097"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW5 9HQ",
+      "driveMinutes": 21,
+      "distanceKm": 12.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.388309,51.484085?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "William Byrd Primary Academy": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-144473"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB3 5EW",
+      "driveMinutes": 19,
+      "distanceKm": 12.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.436579,51.490647?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Montpelier Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101912"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W5 2QT",
+      "driveMinutes": 15,
+      "distanceKm": 8.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.300966,51.523337?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Cherry Lane Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-131638"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 9DL",
+      "driveMinutes": 22,
+      "distanceKm": 15.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.460846,51.497164?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Heston Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-136191"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW5 0QR",
+      "driveMinutes": 24,
+      "distanceKm": 13.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.36939,51.483922?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hillside Infant School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102434"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA6 1RX",
+      "driveMinutes": 14,
+      "distanceKm": 7.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.410726,51.607641?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Whitefriars School": {
+      "phase": "primary",
+      "eventIds": [
+        "whitefriars-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 5RQ",
+      "driveMinutes": 9,
+      "distanceKm": 5.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.340664,51.59829?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Elmgrove Primary School and Nursery": {
+      "phase": "primary",
+      "eventIds": [
+        "elmgrove-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 8LU",
+      "driveMinutes": 10,
+      "distanceKm": 5.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.323935,51.588718?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Springwell School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-146822"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW5 9EF",
+      "driveMinutes": 22,
+      "distanceKm": 13.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.385698,51.482574?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Westbrook Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139889"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW5 0NB",
+      "driveMinutes": 22,
+      "distanceKm": 15.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.375261,51.482052?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Fielding Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101897"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W13 9TE",
+      "driveMinutes": 20,
+      "distanceKm": 10.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.320873,51.501403?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Park Lane Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101509"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA9 7RY",
+      "driveMinutes": 10,
+      "distanceKm": 6.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.293825,51.555885?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Christ the Saviour Church of England Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-136445"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W5 2AA",
+      "driveMinutes": 17,
+      "distanceKm": 10.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.304595,51.514118?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Teresa's Catholic Primary School and Nursery": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102231"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 6LE",
+      "driveMinutes": 9,
+      "distanceKm": 5.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.355408,51.604217?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Preston Park Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101510"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA9 8RJ",
+      "driveMinutes": 13,
+      "distanceKm": 7.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.300597,51.571953?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Catherine Catholic Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102424"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 7NX",
+      "driveMinutes": 24,
+      "distanceKm": 16.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.478832,51.503882?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Cedars Manor School": {
+      "phase": "primary",
+      "eventIds": [
+        "cedars-manor-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 6LS",
+      "driveMinutes": 10,
+      "distanceKm": 5.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.351897,51.605462?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Wembley Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "wembley-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA9 7NW",
+      "driveMinutes": 10,
+      "distanceKm": 5.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.294906,51.561683?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Laurel Lane Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139275"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 7TX",
+      "driveMinutes": 22,
+      "distanceKm": 16.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.471826,51.49925?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Edison Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-142889"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW5 0AQ",
+      "driveMinutes": 21,
+      "distanceKm": 14.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.381798,51.480461?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Lyon Park Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101506"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA0 4HH",
+      "driveMinutes": 12,
+      "distanceKm": 7.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.288473,51.543955?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Mount Stewart Infant School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101501"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 0JX",
+      "driveMinutes": 10,
+      "distanceKm": 5.8,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.300814,51.578143?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Martin's Church of England Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-140484"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 7UF",
+      "driveMinutes": 23,
+      "distanceKm": 16.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.473659,51.497017?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Grimsdyke School": {
+      "phase": "primary",
+      "eventIds": [
+        "grimsdyke-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA5 4QE",
+      "driveMinutes": 13,
+      "distanceKm": 7.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.374599,51.613135?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Heathrow Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102385"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "UB7 0JQ",
+      "driveMinutes": 21,
+      "distanceKm": 15.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.459262,51.489904?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Joseph's Catholic Infant School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101546"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA9 6TA",
+      "driveMinutes": 12,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.287687,51.551821?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Elsley Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101519"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA9 6HT",
+      "driveMinutes": 13,
+      "distanceKm": 7.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.287028,51.549023?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Frithwood Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102414"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA6 3NJ",
+      "driveMinutes": 15,
+      "distanceKm": 8.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.418243,51.613659?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Belmont School": {
+      "phase": "primary",
+      "eventIds": [
+        "belmont-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 7JT",
+      "driveMinutes": 11,
+      "distanceKm": 6.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.327458,51.599685?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Nishkam School West London": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-139720"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW7 5PN",
+      "driveMinutes": 24,
+      "distanceKm": 12.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337138,51.48525?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Priestmead Primary School and Nursery": {
+      "phase": "primary",
+      "eventIds": [
+        "priestmead-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 8SZ",
+      "driveMinutes": 10,
+      "distanceKm": 6.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.315405,51.596077?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "West Twyford Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101875"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "NW10 7DN",
+      "driveMinutes": 14,
+      "distanceKm": 8.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.28273,51.534087?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Cranford Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-136809"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW4 6LB",
+      "driveMinutes": 20,
+      "distanceKm": 13.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.411664,51.475555?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Wellington Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-102505"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "TW3 3BD",
+      "driveMinutes": 22,
+      "distanceKm": 14.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.378319,51.472149?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Uxendon Manor Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101502"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 0UX",
+      "driveMinutes": 11,
+      "distanceKm": 6.2,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.297948,51.58338?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Little Ealing Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "primary-101904"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "W5 4EA",
+      "driveMinutes": 21,
+      "distanceKm": 12.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.308362,51.498049?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Weald Rise Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "weald-rise-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 7DH",
+      "driveMinutes": 11,
+      "distanceKm": 6.4,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.332187,51.607387?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Hujjat Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "hujjat-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 6RR",
+      "driveMinutes": 12,
+      "distanceKm": 6.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.338118,51.613037?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Kenmore Park Infant and Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "kenmore-park-infant"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 9JA",
+      "driveMinutes": 12,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.299215,51.594279?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Kenmore Park Junior School": {
+      "phase": "primary",
+      "eventIds": [
+        "kenmore-park-junior"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 9JA",
+      "driveMinutes": 12,
+      "distanceKm": 6.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.299215,51.594279?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St Bernadette's Catholic Nursery & Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "st-bernadettes-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA3 9NS",
+      "driveMinutes": 11,
+      "distanceKm": 6.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.289064,51.587774?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Stanburn Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "stanburn-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA7 2PJ",
+      "driveMinutes": 13,
+      "distanceKm": 7.3,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.308902,51.60789?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Whitchurch Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "whitchurch-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA7 2EQ",
+      "driveMinutes": 14,
+      "distanceKm": 7.6,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.303745,51.608301?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Camrose Primary School and Nursery": {
+      "phase": "primary",
+      "eventIds": [
+        "camrose-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA8 6JH",
+      "driveMinutes": 15,
+      "distanceKm": 8.5,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.288203,51.60339?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Avanti House Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "avanti-house-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA7 3JB",
+      "driveMinutes": 14,
+      "distanceKm": 8.7,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.337872,51.628051?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "St John's C of E School": {
+      "phase": "primary",
+      "eventIds": [
+        "st-johns-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA7 3FD",
+      "driveMinutes": 16,
+      "distanceKm": 9.1,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.318949,51.621307?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Stag Lane Primary School and Nursery": {
+      "phase": "primary",
+      "eventIds": [
+        "stag-lane-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA8 5RU",
+      "driveMinutes": 16,
+      "distanceKm": 9.0,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.279886,51.599933?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Aylward Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "aylward-primary"
+      ],
+      "origin": "HA1 3PU",
+      "postcode": "HA7 4RE",
+      "driveMinutes": 15,
+      "distanceKm": 8.9,
+      "sourceUrl": "https://router.project-osrm.org/route/v1/driving/-0.348341,51.56259;-0.297722,51.616424?overview=false",
+      "method": "OSRM baseline; excludes congestion, parking and school-run delays",
+      "verifiedAt": "2026-10-17",
+      "status": "modelled"
+    },
+    "Krishna Avanti Primary School": {
+      "phase": "primary",
+      "eventIds": [
+        "krishna-avanti-primary"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    },
+    "St Teresa's Catholic Primary & Nursery School": {
+      "phase": "primary",
+      "eventIds": [
+        "st-teresas-primary"
+      ],
+      "origin": "HA1 3PU",
+      "status": "postcode-not-verified"
+    }
+  },
+  "note": "Car baseline from OSRM using postcode centroids; not live traffic. Missing means not verified. Primary catchment distances still use UB5 6QX.",
+  "coverage": {
+    "schools": 214,
+    "drivingBackfilled": 168,
+    "missingVerifiedPostcode": 46
+  }
+}
