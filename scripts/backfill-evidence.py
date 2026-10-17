@@ -5,6 +5,8 @@ Existing examination records and hand-researched journeys are never overwritten.
 Absent/suppressed data stays absent, never zero. External lookups can fail safely.
 """
 import json, math, os, re, time, urllib.parse, urllib.request
+from collections import Counter
+from datetime import timedelta
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -66,6 +68,7 @@ def main():
     senior = read("data/schools.json", {"schools":[]}).get("schools",[])
     primary = read("data/primary-schools.json", {"schools":[]}).get("schools",[])
     enhancements = read("data/enhancements.json", {"schools":{}}).get("schools",{})
+    locations = read("data/school-locations.json", {"schools":{}}).get("schools",{})
     travel = read("data/journey-backfill.json", {"schemaVersion":1,"origin":ORIGIN,"schools":{}})
     travel["origin"] = ORIGIN
     travel["note"] = "Car baseline from OSRM using postcode centroids; not live traffic. Missing means not verified. Primary catchment distances still use UB5 6QX."
@@ -87,9 +90,10 @@ def main():
         row = dict(old)
         row.update({"phase":school["phase"],"eventIds":school["ids"],"origin":ORIGIN})
         if row.get("driveMinutes") is not None:
+            row["postcode"] = postcode = locations.get(name,{}).get("postcode") or school.get("postcode")
             travel["schools"][name] = row
             continue
-        postcode = school.get("postcode")
+        postcode = locations.get(name,{}).get("postcode") or school.get("postcode")
         if not postcode:
             # Never guess an address from a school name.
             row["status"] = "postcode-not-verified"
@@ -114,6 +118,38 @@ def main():
                           "drivingBackfilled":sum(x.get("driveMinutes") is not None for x in travel["schools"].values()),
                           "missingVerifiedPostcode":len(missing)}
     write("data/journey-backfill.json", travel)
+    # Transit journeys are independently dated. Keep every previous good estimate.
+    travel["transitNote"] = "TfL journey planner itinerary to arrive 08:30 on the next weekday; may include walking legs. Check live service changes."
+    today = datetime.now(timezone.utc).date()
+    day = today + timedelta(days=1)
+    while day.weekday() > 4: day += timedelta(days=1)
+    for idx,(name,school) in enumerate(all_schools.items()):
+        row = travel["schools"][name]
+        postcode = locations.get(name,{}).get("postcode") or school.get("postcode")
+        if not postcode: continue
+        if row.get("transitMinutes") is not None and row.get("transitArrivalDate") == day.isoformat(): continue
+        params = urllib.parse.urlencode({"date":day.strftime("%Y%m%d"),"time":"0830","timeIs":"Arriving","nationalSearch":"true"})
+        url = "https://api.tfl.gov.uk/Journey/JourneyResults/" + urllib.parse.quote(ORIGIN) + "/to/" + urllib.parse.quote(postcode) + "?" + params
+        try:
+            journeys = get(url).get("journeys",[])
+            valid = [j for j in journeys if any(leg.get("mode",{}).get("id") not in ("walking","cycle","cycle-hire") for leg in j.get("legs",[]))]
+            if valid:
+                j = min(valid,key=lambda x:x["duration"])
+                if 0 < j["duration"] < 600:
+                    row.update({"transitMinutes":j["duration"],"transitStatus":"scheduled-itinerary","transitArrivalDate":day.isoformat(),"transitSourceUrl":url,"transitRetrievedAt":STAMP,"transitDeparture":j.get("startDateTime"),"transitArrival":j.get("arrivalDateTime"),"transitLegs":[{"mode":leg.get("mode",{}).get("id"),"minutes":leg.get("duration")} for leg in j.get("legs",[])]})
+            elif journeys:
+                row["walkMinutes"] = min(j["duration"] for j in journeys)
+                row["transitStatus"] = "walking-only"
+            else: row["transitStatus"] = "no-itinerary-returned"
+        except Exception as exc:
+            row["transitStatus"] = "lookup-failed" if row.get("transitMinutes") is None else "previous-estimate-preserved"
+            row["transitLookupError"] = str(exc)[:160]
+        if idx % 20 == 0:
+            write("data/journey-backfill.json",travel)
+        time.sleep(1.1)
+    travel["coverage"] = {"schools":len(all_schools),"drivingBackfilled":sum(x.get("driveMinutes") is not None for x in travel["schools"].values()),"publicTransportBackfilled":sum(x.get("transitMinutes") is not None for x in travel["schools"].values()),"missingVerifiedPostcode":sum(not locations.get(name,{}).get("postcode") for name in all_schools),"transitStatuses":dict(Counter(x.get("transitStatus") for x in travel["schools"].values()))}
+    write("data/journey-backfill.json",travel)
+    print("Transit coverage:",travel["coverage"],flush=True)
     print("EBacc history schools:",sum(bool(v) for v in ebacc["schools"].values()))
     print("Journey coverage:",travel["coverage"])
 
