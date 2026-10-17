@@ -21,10 +21,10 @@
   const decisions=Object.fromEntries(Object.entries(state.schoolDecisions||{}).map(([id,value])=>[id,Array.isArray(value)?value:(value?[value]:[])]));
   const shortlisted=new Set(state.shortlistedSchools||[]),rejected=new Set(state.rejectedSchools||[]);
   const layoutKey='openday.performance.columns.v1';
-  const DEFAULT_COLUMNS=['school','assessment','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
+  const DEFAULT_COLUMNS=['school','assessment','gcseYear','grade9pct','grade9count','grade97pct','grade97count','a8','ebaccEntry','ebaccAPS','engmath5','p8','alevel','fsm','wholeEal','sen','ehcp','absence','persistent'];
   const COLUMN_LABELS={
     school:'School',assessment:'11+/13+ assessment',gcseYear:'GCSE year',grade9pct:'Grade 9 %',grade9count:'Grade 9 #',grade97pct:'Grades 9–7 %',grade97count:'Grades 9–7 #',
-    a8:'Attainment 8',engmath5:'Eng & maths 5+',p8:'P8 latest',alevel:'A-level',fsm:'FSM',wholeEal:'EAL',sen:'SEN support',ehcp:'EHCP',absence:'Absence',persistent:'PA'
+    a8:'Attainment 8',ebaccEntry:'EBacc entry %',ebaccAPS:'EBacc APS',engmath5:'Eng & maths 5+',p8:'P8 latest',alevel:'A-level',fsm:'FSM',wholeEal:'EAL',sen:'SEN support',ehcp:'EHCP',absence:'Absence',persistent:'PA'
   };
   const COLUMN_HELP={
     school:'School name and area. Click to sort alphabetically; drag another heading to move that column.',
@@ -35,6 +35,8 @@
     grade97pct:'Percentage of covered GCSE / IGCSE grade awards at grades 9–7 (roughly A*–A on the old scale).',
     grade97count:'Number of GCSE / IGCSE grade awards at grades 9–7. This is not the number of pupils.',
     a8:'Attainment 8: average points across eight qualifying GCSE subjects. Mainly a DfE state-school performance-table measure; independent-school coverage can be incomplete.',
+    ebaccEntry:'Historical DfE percentage entering all five EBacc pillars. Not an achievement rate. Last published data may be older than other columns.',
+    ebaccAPS:'Historical DfE EBacc average points score, maximum 9. English and maths are NOT double weighted in this measure. Not comparable to Attainment 8.',
     engmath5:'Percentage achieving grade 5 or above in both English and mathematics in the DfE performance tables.',
     p8:'Progress 8: progress relative to pupils nationally with similar KS2 starting points. Not published for cohorts without usable KS2 baselines.',
     alevel:'Latest A-level outcome available for the selected year. School-published A*/A percentages are used when they are newer or more complete than DfE data.',
@@ -144,6 +146,8 @@
       a8:independentPublished?null:metricForYear(s.gcse,'attainment8'),
       em:independentPublished?null:metricForYear(s.gcse,'englishMaths5Plus'),
       p8:independentPublished?null:metricForYear(s.gcse,'progress8'),
+      ebaccEntry:independentPublished?null:metricForYear(Object.fromEntries(Object.entries(s.gcse||{}).filter(([y])=>Number(y)<=202425)),'ebaccEntry'),
+      ebaccAPS:independentPublished?null:metricForYear(Object.fromEntries(Object.entries(s.gcse||{}).filter(([y])=>Number(y)<=202425)),'ebaccAPS'),
       ks4Eal:metricForYear(s.ks4Eal||{},null),
       al:metricForYear(s.alevel,'aps'),
       alPub,
@@ -192,6 +196,8 @@
     if(key==='gcseYear')return Number(String(m.a8?.year||s.gcseGradeProfile?.year||'0').replace(/\D/g,''))||0;
     if(key==='grade97pct')return m.grade97pct?.value??-Infinity;
     if(key==='attainment8')return m.a8?.value??-Infinity;
+    if(key==='ebaccEntry')return m.ebaccEntry?.value??-Infinity;
+    if(key==='ebaccAPS')return m.ebaccAPS?.value??-Infinity;
     if(key==='engmath5')return m.em?.value??-Infinity;
     if(key==='progress8')return m.p8?.value??-Infinity;
     if(key==='alevel')return m.alPub?.row?.astarAPercent??m.al?.value??-Infinity;
@@ -332,6 +338,8 @@
     else if(id==='grade97pct')html=m.grade97pct?'<span class="headline-grade grade-chip tone-high"><span class="grade-label">9–7</span><span class="grade-count">'+pct(m.grade97pct.value)+'</span></span>':'—';
     else if(id==='grade97count')html=m.grade97count?fmt(m.grade97count.value):'—';
     else if(id==='a8')html=m.a8?fmt(m.a8.value):'—';
+    else if(id==='ebaccEntry')html=m.ebaccEntry?pct(m.ebaccEntry.value)+' <span class="muted">('+yearLabel(m.ebaccEntry.year)+')</span>':'—';
+    else if(id==='ebaccAPS')html=m.ebaccAPS?fmt(m.ebaccAPS.value)+' <span class="muted">('+yearLabel(m.ebaccAPS.year)+')</span>':'—';
     else if(id==='engmath5')html=m.em?(s.type==='independent'&&Number(m.em.value)===0?'n/a†':pct(m.em.value)):'—';
     else if(id==='p8')html=m.p8?fmt(m.p8.value)+' <span class="muted">('+yearLabel(m.p8.year)+')</span>':'—';
     else if(id==='alevel')html=m.alPub
@@ -425,11 +433,12 @@
         '<td>'+(d?(s.type==='independent'&&Number(d.englishMaths5Plus)===0?'n/a†':pct(d.englishMaths5Plus)):'—')+'</td>'+
         '<td>'+(d&&d.progress8!==null&&d.progress8!==undefined?fmt(d.progress8):'—')+'</td>'+
         '<td>'+(d?pct(d.ebaccEntry):'—')+'</td>'+
+        '<td>'+(d&&d.ebaccAPS!==null&&d.ebaccAPS!==undefined?fmt(d.ebaccAPS):'—')+'</td>'+ 
         '<td>'+(s.ks4Eal?.[key]!==undefined?pct(s.ks4Eal[key]):'—')+'</td>'+
         '</tr>';
     }).join('');
     const independentNote=s.type==='independent'?'<p class="warning"><b>Independent-school caution:</b> DfE performance measures only count qualifications approved for the performance tables. Schools using IGCSEs or other non-counting qualifications can therefore show artificially low or zero KS4 headline measures. Use the subject detail and school-published results alongside these DfE figures.</p>':'';
-    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Pupils</th><th>A8</th><th>Eng/math 5+</th><th>P8</th><th>EBacc entry</th><th>KS4 EAL</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+    return '<div class="subject-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Pupils</th><th>A8</th><th>Eng/math 5+</th><th>P8</th><th>EBacc entry</th><th>EBacc APS</th><th>KS4 EAL</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
       independentNote+
       '<p class="warning">2020/21 has no comparable exam series. The current DfE institution API exposes school-level KS4 performance from 2022/23; 2021/22 is left as a transparent gap rather than silently substituting another series.</p>';
   }
@@ -922,7 +931,7 @@
 
   function renderMethodology(){
     const m=doc.methodology||{};
-    $('#methodology').innerHTML='<h2>Data coverage and caveats</h2><ul>'+Object.values(m).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+    $('#methodology').innerHTML='<h2>Data coverage and caveats</h2><p>EBacc entry and EBacc APS are historical DfE measures (shown with their own years), not Attainment 8. EBacc APS averages six grade positions without double-weighting English or maths. Independent-school IGCSE coverage may be incomplete. EBacc measures have been removed from 2025/26 performance reporting; retain earlier years rather than showing zero.</p><ul>'+Object.values(m).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
   }
   function populateYearSelect(){
     const select=$('#perfYear');if(!select)return;

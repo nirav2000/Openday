@@ -1,6 +1,6 @@
 {
-  "version": "2.25.2",
-  "released": "2026-10-16",
+  "version": "2.25.3",
+  "released": "2026-10-17",
   "channel": "main",
-  "summary": "Archive 2026 independent-school GCSE grade profiles without replacing historical snapshots"
+  "summary": "Show historical EBacc entry and APS across school performance comparisons, preserving existing results"
 }
