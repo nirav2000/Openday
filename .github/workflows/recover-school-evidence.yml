@@ -1,0 +1,26 @@
+name: Recover historical EBacc and school postcodes
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/recover-school-evidence.py
+      - .github/workflows/recover-school-evidence.yml
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -u scripts/recover-school-evidence.py
+      - name: Commit dated evidence without replacing original data
+        run: |
+          git add data/ebacc-evidence.json data/school-locations.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'data: restore historical EBacc years and verified school postcodes'
+          git pull --rebase origin main
+          git push origin HEAD:main
