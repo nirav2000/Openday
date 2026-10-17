@@ -73,14 +73,26 @@ def main():
  for row in source:
   urn=str(row.get(urnkey) or '')
   if urn:addresses[urn]=row
+ pins={'St Joan of Arc Catholic School':('WD3 1HG','137914'),'Krishna Avanti Primary School':('HA8 6ES','138688'),"St Teresa's Catholic Primary & Nursery School":('HA3 6LE','102231')}
+ postcode_re=re.compile(r'[A-Z]{1,2}[0-9][A-Z0-9]?[ ]*[0-9][A-Z]{2}')
  for name,g in groups.items():
-  if loc['schools'].get(name,{}).get('postcode'):continue
-  official=addresses.get(str(g['urn']),{})
-  postcode=g['postcode'] or next((m.group(0) for k,v in official.items() if ('postcode' in k.lower() or k=='full_address') and v for m in [re.search(r'[A-Za-z]{1,2}[0-9][A-Za-z0-9]?[ ]*[0-9][A-Za-z]{2}',v.strip())] if m),None)
+  existing=loc['schools'].get(name,{})
+  if existing.get('postcode') and postcode_re.fullmatch(existing['postcode']):continue
+  if name in pins:
+   postcode,urn=pins[name]
+   sourceurl='https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/'+urn
+  else:
+   official=addresses.get(str(g['urn']),{})
+   raw=g['postcode'] or official.get('full_address','')
+   matches=postcode_re.findall(raw.upper())
+   postcode=matches[-1] if matches else None
+   urn=g['urn']
+   sourceurl=GIAS if official else 'data/primary-schools.json'
   if postcode:
    compact=''.join(postcode.upper().split())
-   loc['schools'][name]={'postcode':compact[:-3]+' '+compact[-3:],'urn':g['urn'],'sourceUrl':GIAS if official else 'data/schools.json','retrievedAt':STAMP}
-  else:loc['schools'][name]={'status':'postcode-unverified','urn':g['urn']}
+   loc['schools'][name]={'postcode':compact[:-3]+' '+compact[-3:],'urn':urn,'sourceUrl':sourceurl,'retrievedAt':STAMP}
+  else:loc['schools'][name]={'status':'postcode-unverified','urn':urn}
+ assert all(postcode_re.fullmatch(x['postcode']) for x in loc['schools'].values() if x.get('postcode'))
  write('data/school-locations.json',loc)
  print('POSTCODES',sum(bool(x.get('postcode')) for x in loc['schools'].values()),'OF',len(groups),flush=True)
 if __name__=='__main__':main()
