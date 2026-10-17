@@ -133,6 +133,7 @@ def main():
         params = urllib.parse.urlencode({"date":day.strftime("%Y%m%d"),"time":"0830","timeIs":"Arriving","nationalSearch":"true"})
         url = "https://api.tfl.gov.uk/Journey/JourneyResults/" + urllib.parse.quote(ORIGIN) + "/to/" + urllib.parse.quote(postcode) + "?" + params
         try:
+            time.sleep(2.3)  # TfL unauthenticated API rate-limit protection
             journeys = get(url).get("journeys",[])
             valid = [j for j in journeys if any(leg.get("mode",{}).get("id") not in ("walking","cycle","cycle-hire") for leg in j.get("legs",[]))]
             if valid:
@@ -147,7 +148,7 @@ def main():
             row["transitStatus"] = "lookup-failed" if row.get("transitMinutes") is None else "previous-estimate-preserved"
             row["transitLookupError"] = str(exc)[:160]
         return name,row
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=1) as pool:
         for idx,(name,row) in enumerate(pool.map(lookup_transit,all_schools.items())):
             travel["schools"][name]=row
             if idx%20==0: print("Transit processed",idx+1,"of",len(all_schools),flush=True)
