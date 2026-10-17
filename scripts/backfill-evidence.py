@@ -6,6 +6,7 @@ Absent/suppressed data stays absent, never zero. External lookups can fail safel
 """
 import json, math, os, re, time, urllib.parse, urllib.request
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from datetime import timedelta
 from datetime import datetime, timezone
 from pathlib import Path
@@ -26,7 +27,7 @@ def write(path, data):
 
 def get(url):
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=22) as response:
+    with urllib.request.urlopen(req, timeout=8) as response:
         return json.load(response)
 
 def postcode_location(postcode):
@@ -123,11 +124,12 @@ def main():
     today = datetime.now(timezone.utc).date()
     day = today + timedelta(days=1)
     while day.weekday() > 4: day += timedelta(days=1)
-    for idx,(name,school) in enumerate(all_schools.items()):
-        row = travel["schools"][name]
+    def lookup_transit(item):
+        name, school = item
+        row = dict(travel["schools"][name])
         postcode = locations.get(name,{}).get("postcode") or school.get("postcode")
-        if not postcode: continue
-        if row.get("transitMinutes") is not None and row.get("transitArrivalDate") == day.isoformat(): continue
+        if not postcode: return name,row
+        if row.get("transitMinutes") is not None and row.get("transitArrivalDate") == day.isoformat(): return name,row
         params = urllib.parse.urlencode({"date":day.strftime("%Y%m%d"),"time":"0830","timeIs":"Arriving","nationalSearch":"true"})
         url = "https://api.tfl.gov.uk/Journey/JourneyResults/" + urllib.parse.quote(ORIGIN) + "/to/" + urllib.parse.quote(postcode) + "?" + params
         try:
@@ -144,9 +146,11 @@ def main():
         except Exception as exc:
             row["transitStatus"] = "lookup-failed" if row.get("transitMinutes") is None else "previous-estimate-preserved"
             row["transitLookupError"] = str(exc)[:160]
-        if idx % 20 == 0:
-            write("data/journey-backfill.json",travel)
-        time.sleep(1.1)
+        return name,row
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for idx,(name,row) in enumerate(pool.map(lookup_transit,all_schools.items())):
+            travel["schools"][name]=row
+            if idx%20==0: print("Transit processed",idx+1,"of",len(all_schools),flush=True)
     travel["coverage"] = {"schools":len(all_schools),"drivingBackfilled":sum(x.get("driveMinutes") is not None for x in travel["schools"].values()),"publicTransportBackfilled":sum(x.get("transitMinutes") is not None for x in travel["schools"].values()),"missingVerifiedPostcode":sum(not locations.get(name,{}).get("postcode") for name in all_schools),"transitStatuses":dict(Counter(x.get("transitStatus") for x in travel["schools"].values()))}
     write("data/journey-backfill.json",travel)
     print("Transit coverage:",travel["coverage"],flush=True)
