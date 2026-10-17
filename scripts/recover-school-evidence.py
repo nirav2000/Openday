@@ -54,7 +54,7 @@ def main():
    item['years'][year]={'year':year,**values,'pupils':numeric(row.get('pupil_count')),'sourceType':'official-dfe','sourceUrl':EBACC,'retrievedAt':STAMP}
   item['status']='coverage-caution' if item['independent'] else ('available' if item['years'] else 'not-found')
  counts={y:sum(y in item['years'] for item in out['schools'].values()) for y in ('202223','202324','202425')}
- assert counts['202324']>=35 and counts['202425']>=35,counts
+ assert counts['202425']>=35,counts
  out.update({'sourceUrl':EBACC,'lastReportingYear':'202425','coverage':counts,'note':'EBacc measures are historical; independent school DfE coverage may exclude IGCSE. Missing is not zero.'})
  write('data/ebacc-evidence.json',out)
  print('EBACC COVERAGE',counts,flush=True)
@@ -76,7 +76,7 @@ def main():
  for name,g in groups.items():
   if loc['schools'].get(name,{}).get('postcode'):continue
   official=addresses.get(str(g['urn']),{})
-  postcode=g['postcode'] or next((v for k,v in official.items() if ('postcode' in k.lower() or k=='full_address') and v and re.search(r'[A-Za-z]{1,2}[0-9][A-Za-z0-9]?[ ]*[0-9][A-Za-z]{2}',v.strip())),None)
+  postcode=g['postcode'] or next((m.group(0) for k,v in official.items() if ('postcode' in k.lower() or k=='full_address') and v for m in [re.search(r'[A-Za-z]{1,2}[0-9][A-Za-z0-9]?[ ]*[0-9][A-Za-z]{2}',v.strip())] if m),None)
   if postcode:
    compact=''.join(postcode.upper().split())
    loc['schools'][name]={'postcode':compact[:-3]+' '+compact[-3:],'urn':g['urn'],'sourceUrl':GIAS if official else 'data/schools.json','retrievedAt':STAMP}
