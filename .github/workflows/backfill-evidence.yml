@@ -30,16 +30,16 @@ jobs:
           tr=json.loads(Path('data/journey-backfill.json').read_text())
           assert eb['schemaVersion']==1
           assert tr['origin']=='HA1 3PU'
-          assert tr['coverage']['schools'] == 214
-          assert tr['coverage']['drivingBackfilled'] == 214
+          assert tr['coverage']['schools'] >= 214
+          assert tr['coverage']['drivingBackfilled'] == tr['coverage']['schools']
           assert tr['coverage']['missingVerifiedPostcode'] == 0
-          assert tr['coverage']['publicTransportBackfilled'] >= 50
+          assert tr['coverage']['publicTransportBackfilled'] == tr['coverage']['schools']
           assert all(0 < s['driveMinutes'] < 600 for s in tr['schools'].values())
           assert all(0 < s['transitMinutes'] < 600 for s in tr['schools'].values() if s.get('transitMinutes') is not None)
           history=json.loads(Path('data/ebacc-evidence.json').read_text())
           assert all(history['coverage'][year] >= 46 for year in ('202223','202324','202425'))
           locations=json.loads(Path('data/school-locations.json').read_text())
-          assert len(locations['schools']) == 214
+          assert len(locations['schools']) == tr['coverage']['schools']
           assert all(s.get('postcode') for s in locations['schools'].values())
           PY
       - name: Commit generated evidence to main
