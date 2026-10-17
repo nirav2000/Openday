@@ -2,269 +2,273 @@
   "schemaVersion": 1,
   "schools": {
     "Rooks Heath School": {
-      "postcode": "EASTCOTELANE,SOUTHHARROW,HARROW,HA2 9AH",
+      "postcode": "HA2 9AH",
       "urn": "137198",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Royal Grammar School High Wycombe": {
-      "postcode": "AMERSHAMROAD,HIGHWYCOMBE,HP13 6QT",
+      "postcode": "HP13 6QT",
       "urn": "136484",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "JFS": {
-      "postcode": "KENTON,THEMALL,HARROW,HA3 9TE",
+      "postcode": "HA3 9TE",
       "urn": "133724",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Haberdashers' Boys' School": {
-      "postcode": "BUTTERFLYLANE,ELSTREE,HERTFORDSHIRE,WD6 3AF",
+      "postcode": "WD6 3AF",
       "urn": "117648",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Dr Challoner's Grammar School": {
-      "postcode": "CHESHAMROAD,AMERSHAM,HP6 5HA",
+      "postcode": "HP6 5HA",
       "urn": "136419",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Park High School": {
-      "postcode": "THISTLECROFTGARDENS,STANMORE,HA7 1PL",
+      "postcode": "HA7 1PL",
       "urn": "137075",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Claremont High School": {
-      "postcode": "CLAREMONTAVENUE,KENTON,HARROW,HA3 0UH",
+      "postcode": "HA3 0UH",
       "urn": "136656",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Berkhamsted Boys": {
-      "postcode": "OVERTONHOUSE,133HIGHSTREET,BERKHAMSTED,HP4 2DJ",
+      "postcode": "HP4 2DJ",
       "urn": "117604",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "St Paul's School": {
-      "postcode": "LONSDALEROAD,BARNES,LONDON,SW13 9JT",
+      "postcode": "SW13 9JT",
       "urn": "102942",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "St Margaret's School": {
-      "postcode": "MERRYHILLROAD,BUSHEY,WD23 1DT",
+      "postcode": "WD23 1DT",
       "urn": "117606",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Hampton School": {
-      "postcode": "HANWORTHROAD,HAMPTON,TW12 3HD",
+      "postcode": "TW12 3HD",
       "urn": "102946",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Harrow High School": {
-      "postcode": "GAYTONROAD,HARROW,HA1 2JG",
+      "postcode": "HA1 2JG",
       "urn": "137177",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Sutton Grammar School": {
-      "postcode": "MANORLANE,SUTTON,SM1 4AS",
+      "postcode": "SM1 4AS",
       "urn": "136787",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Alperton Community School": {
-      "postcode": "STANLEYAVENUE,WEMBLEY,HA0 4JE",
+      "postcode": "HA0 4JE",
       "urn": "138610",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Preston Manor School": {
-      "postcode": "CARLTONAVENUEEAST,WEMBLEY,HA9 8NA",
+      "postcode": "HA9 8NA",
       "urn": "139319",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Merchant Taylors' School": {
-      "postcode": "SANDYLODGE,NORTHWOOD,MIDDLESEX,NORTHWOOD,HA6 2HT",
+      "postcode": "HA6 2HT",
       "urn": "117616",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Mill Hill School": {
-      "postcode": "THERIDGEWAY,MILLHILLVILLAGE,LONDON,NW7 1QS",
+      "postcode": "NW7 1QS",
       "urn": "101367",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "John Lyon School": {
-      "postcode": "MIDDLEROAD,HARROW-ON-THE-HILL,HA2 0HN",
+      "postcode": "HA2 0HN",
       "urn": "102247",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Ark Academy": {
-      "postcode": "FORTYAVENUE,WEMBLEY,HA9 9JR",
+      "postcode": "HA9 9JR",
       "urn": "135600",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Salvatorian College": {
-      "postcode": "HIGHROAD,HARROWWEALD,HARROW,HA3 5DY",
+      "postcode": "HA3 5DY",
       "urn": "138458",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Pinner High School": {
-      "postcode": "BEAULIEUDRIVE,PINNER,HA5 1NB",
+      "postcode": "HA5 1NB",
       "urn": "142864",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Winchester College": {
-      "postcode": "COLLEGESTREET,WINCHESTER,SO23 9NA",
+      "postcode": "SO23 9NA",
       "urn": "116532",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Aldenham School": {
-      "postcode": "ELSTREE,ELSTREE,WD6 3AJ",
+      "postcode": "WD6 3AJ",
       "urn": "117602",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Dame Alice Owen's School": {
-      "postcode": "DUGDALEHILLLANE,POTTERSBAR,EN6 2DU",
+      "postcode": "EN6 2DU",
       "urn": "136554",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Westminster School": {
-      "postcode": "LITTLEDEAN'SYARD,LONDON,SW1P 3PF",
+      "postcode": "SW1P 3PF",
       "urn": "101162",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Harrow School": {
-      "postcode": "5HIGHSTREET,HARROW-ON-THE-HILL,HA1 3HP",
+      "postcode": "HA1 3HP",
       "urn": "102245",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Michaela Community School": {
-      "postcode": "NORTHENDROAD,WEMBLEY,LONDON,HA9 0UU",
+      "postcode": "HA9 0UU",
       "urn": "140862",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Wembley High Technology College": {
-      "postcode": "EASTLANE,NORTHWEMBLEY,HA0 3NT",
+      "postcode": "HA0 3NT",
       "urn": "138457",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Nower Hill High School": {
-      "postcode": "GEORGEVAVENUE,PINNER,HA5 5RP",
+      "postcode": "HA5 5RP",
       "urn": "137028",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Queen Elizabeth's School, Barnet": {
-      "postcode": "QUEEN'SROAD,BARNET,EN5 4DQ",
+      "postcode": "EN5 4DQ",
       "urn": "136290",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Parmiter's School": {
-      "postcode": "HIGHELMSLANE,GARSTON,WATFORD,WD25 0UU",
+      "postcode": "WD25 0UU",
       "urn": "136899",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Watford Grammar School for Boys": {
-      "postcode": "RICKMANSWORTHROAD,WATFORD,WD18 7JF",
+      "postcode": "WD18 7JF",
       "urn": "136276",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Queens' School": {
-      "postcode": "ALDENHAMROAD,BUSHEY,WD23 2TY",
+      "postcode": "WD23 2TY",
       "urn": "136877",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "St Clement Danes School": {
-      "postcode": "CHENIESROAD,CHORLEYWOOD,RICKMANSWORTH,WD3 6EW",
+      "postcode": "WD3 6EW",
       "urn": "136901",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Rickmansworth School": {
-      "postcode": "SCOTSHILL,RICKMANSWORTH,WD3 3AQ",
+      "postcode": "WD3 3AQ",
       "urn": "136606",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Wilson's School": {
-      "postcode": "MOLLISONDRIVE,WALLINGTON,SM6 9JW",
+      "postcode": "SM6 9JW",
       "urn": "136621",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Wallington County Grammar School": {
-      "postcode": "CROYDONROAD,WALLINGTON,SM6 7PH",
+      "postcode": "SM6 7PH",
       "urn": "136798",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "St Olave's Grammar School": {
-      "postcode": "GODDINGTONLANE,ORPINGTON,BR6 9SH",
+      "postcode": "BR6 9SH",
       "urn": "101676",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Beths Grammar School": {
-      "postcode": "HARTFORDROAD,BEXLEY,DA5 1NE",
+      "postcode": "DA5 1NE",
       "urn": "136334",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Whitmore High School": {
-      "postcode": "PORLOCKAVENUE,HARROW,HA2 0AD",
+      "postcode": "HA2 0AD",
       "urn": "102239",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "John F Kennedy Catholic School": {
-      "postcode": "HOLLYBUSHLANE,HEMELHEMPSTEAD,HP1 2PH",
+      "postcode": "HP1 2PH",
       "urn": "149743",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "St Joan of Arc Catholic School": {
       "status": "postcode-unverified",
-      "urn": null
+      "urn": "137914",
+      "postcode": "WD3 1HG",
+      "sourceUrl": "https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/137914",
+      "sourceType": "official-gias",
+      "retrievedAt": "2026-10-17"
     },
     "Canons High School": {
-      "postcode": "SHALDONROAD,EDGWARE,HA8 6AN",
+      "postcode": "HA8 6AN",
       "urn": "137199",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Herschel Grammar School": {
-      "postcode": "NORTHAMPTONAVENUE,SLOUGH,SL1 3BW",
+      "postcode": "SL1 3BW",
       "urn": "137726",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
     },
     "Kings Langley School": {
-      "postcode": "LOVELANE,KINGSLANGLEY,WD4 9HN",
+      "postcode": "WD4 9HN",
       "urn": "139036",
       "sourceUrl": "https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/467bf0c7-a003-44fe-8aa6-b51c49812c7d/csv",
       "retrievedAt": "2026-10-17T09:30:01+00:00"
@@ -1273,11 +1277,19 @@
     },
     "Krishna Avanti Primary School": {
       "status": "postcode-unverified",
-      "urn": null
+      "urn": "138688",
+      "postcode": "HA8 6ES",
+      "sourceUrl": "https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/138688",
+      "sourceType": "official-gias",
+      "retrievedAt": "2026-10-17"
     },
     "St Teresa's Catholic Primary & Nursery School": {
       "status": "postcode-unverified",
-      "urn": null
+      "urn": "102231",
+      "postcode": "HA3 6LE",
+      "sourceUrl": "https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/102231",
+      "sourceType": "official-gias",
+      "retrievedAt": "2026-10-17"
     }
   }
 }
