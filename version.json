@@ -1,6 +1,6 @@
 {
-  "version": "2.25.6",
+  "version": "2.25.7",
   "released": "2026-10-17",
   "channel": "main",
-  "summary": "Preserve 2022-25 EBacc results and add verified postcode driving and public transport journeys"
+  "summary": "Complete EBacc history and HA1 3PU driving and TfL journey estimates for all 214 schools"
 }
