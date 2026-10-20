@@ -329,6 +329,30 @@
             "selector": "#list .card"
           }
         ]
+      },
+      {
+        "name": "primary-sparkline-and-cohort-context",
+        "path": "/primary-performance.html?school=Pinner%20Wood%20School",
+        "steps": [
+          {
+            "action": "visible",
+            "selector": "#detail .spark-wrap svg"
+          },
+          {
+            "action": "text",
+            "selector": "#detail .trend-summary",
+            "contains": "Weighted combined expected"
+          },
+          {
+            "action": "visible",
+            "selector": "#rows .spark-wrap svg"
+          },
+          {
+            "action": "count",
+            "selector": "#rows .spark-wrap svg",
+            "min": 1
+          }
+        ]
       }
     ]
   }
