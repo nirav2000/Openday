@@ -250,7 +250,7 @@
           {
             "action": "fill",
             "selector": "#search",
-            "value": "Park"
+            "value": "Park Lane Primary School"
           },
           {
             "action": "count",
@@ -259,7 +259,7 @@
           },
           {
             "action": "click",
-            "selector": "#rows button:first-child"
+            "selector": "#rows tr:first-child button"
           },
           {
             "action": "visible",
