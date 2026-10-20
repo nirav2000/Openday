@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "updated": "2026-10-20",
+    "note": "Historical KS2 snapshots keyed by URN and academic year; missing values are unknown, not zero. Pinner Wood figures require independent source verification before being treated as official."
+  },
+  "schools": {
+    "131577": {
+      "name": "Pinner Wood School",
+      "years": {
+        "2024/25": {
+          "combinedExpected": 86,
+          "combinedHigher": 6,
+          "readingExpected": 92,
+          "mathsExpected": 92,
+          "sourceUrl": "https://www.pinnerwood.harrow.sch.uk/page/performance-tables-and-results/124724",
+          "verification": "school-published figures; verification pending"
+        },
+        "2023/24": {
+          "combinedExpected": 74,
+          "combinedHigher": 20,
+          "sourceUrl": "https://www.pinnerwood.harrow.sch.uk/page/performance-tables-and-results/124724",
+          "verification": "verification pending"
+        },
+        "2022/23": {
+          "combinedExpected": 73,
+          "combinedHigher": 15,
+          "sourceUrl": "https://www.pinnerwood.harrow.sch.uk/page/performance-tables-and-results/124724",
+          "verification": "verification pending"
+        }
+      }
+    }
+  }
+}
