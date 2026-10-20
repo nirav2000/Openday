@@ -68,6 +68,14 @@
       ],
       "type": "object",
       "minKeys": 1
+    },
+    {
+      "file": "data/primary-cohort-context.json",
+      "path": [
+        "schools"
+      ],
+      "type": "object",
+      "minKeys": 0
     }
   ],
   "pages": [

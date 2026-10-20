@@ -1,6 +1,6 @@
 {
-  "version": "2.25.12",
+  "version": "2.25.13",
   "released": "2026-10-20",
   "channel": "main",
-  "summary": "Explain primary KS2 scores, national comparisons and tracked-school ranges"
+  "summary": "Redesigned primary performance dashboard with cohort and pupil intake context"
 }
