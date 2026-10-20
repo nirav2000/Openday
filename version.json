@@ -1,6 +1,6 @@
 {
-  "version": "2.25.9",
-  "released": "2026-10-17",
+  "version": "2.25.10",
+  "released": "2026-10-20",
   "channel": "main",
-  "summary": "Automatically mark past visits, collapse historical events and retain source links"
+  "summary": "School-scoped performance links and primary KS2 results"
 }
