@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   validate:
-    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@6b41ff6fb44719759f55bf2d6c467fb6cd8a9ef4
+    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@5c63f05cce303b9f268f06cbb0b9cec69dab5b97
     with:
       config: validation.config.json
 
@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: nirav2000/Apps
-          ref: 6b41ff6fb44719759f55bf2d6c467fb6cd8a9ef4
+          ref: 5c63f05cce303b9f268f06cbb0b9cec69dab5b97
           path: shared-apps
       - uses: actions/setup-node@v4
         with:
@@ -85,7 +85,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: nirav2000/Apps
-          ref: 6b41ff6fb44719759f55bf2d6c467fb6cd8a9ef4
+          ref: 5c63f05cce303b9f268f06cbb0b9cec69dab5b97
           path: shared-apps
       - uses: actions/setup-node@v4
         with:

@@ -2,7 +2,7 @@
   "module": "shared-release-safeguards",
   "version": "2.0.0",
   "source": "nirav2000/Apps",
-  "pinnedCommit": "6b41ff6fb44719759f55bf2d6c467fb6cd8a9ef4",
+  "pinnedCommit": "5c63f05cce303b9f268f06cbb0b9cec69dab5b97",
   "status": "Installed",
   "installedAt": "2026-10-20",
   "consumer": "nirav2000/Openday",

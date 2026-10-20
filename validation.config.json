@@ -202,7 +202,7 @@
   ],
   "codeQuality": {
     "version": "2.0.0",
-    "sharedCommit": "6b41ff6fb44719759f55bf2d6c467fb6cd8a9ef4",
+    "sharedCommit": "5c63f05cce303b9f268f06cbb0b9cec69dab5b97",
     "include": [
       "primary-performance.js"
     ],
@@ -210,7 +210,7 @@
   },
   "interactionTests": {
     "version": "2.0.0",
-    "sharedCommit": "6b41ff6fb44719759f55bf2d6c467fb6cd8a9ef4",
+    "sharedCommit": "5c63f05cce303b9f268f06cbb0b9cec69dab5b97",
     "profiles": [
       {
         "name": "desktop",
