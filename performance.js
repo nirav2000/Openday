@@ -1016,7 +1016,12 @@
       if(hash){
         const s=doc.schools.find(x=>x.eventIds.includes(hash));
         if(s){
+          // Deep links must restrict the result set to the chosen school, not just expand a hidden row.
+          $('#perfSearch').value=s.name;
+          activeSchoolSet='';
+          filter='all';
           expanded=s.name;
+          document.querySelectorAll('#perfChips [data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter==='all'));
           render();
           setTimeout(()=>document.querySelector('[data-school="'+CSS.escape(s.name)+'"]')?.scrollIntoView({block:'center'}),0);
         }
