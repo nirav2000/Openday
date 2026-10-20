@@ -1,6 +1,6 @@
 {
-  "version": "2.25.14",
+  "version": "2.25.15",
   "released": "2026-10-20",
   "channel": "main",
-  "summary": "Repair primary live search and school-click regression; add browser interaction checks"
+  "summary": "Adopt pinned shared release safeguards and gated desktop/mobile interaction verification"
 }

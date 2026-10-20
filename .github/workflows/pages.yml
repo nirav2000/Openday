@@ -12,11 +12,47 @@ concurrency:
   cancel-in-progress: true
 jobs:
   validate:
-    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@main
+    uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@3da1251a6ae53f4afccdb58b59da790d346d5db1
     with:
       config: validation.config.json
+
+  release-safeguards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: app
+      - uses: actions/checkout@v4
+        with:
+          repository: nirav2000/Apps
+          ref: 3da1251a6ae53f4afccdb58b59da790d346d5db1
+          path: shared-apps
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned ESLint and Playwright
+        run: npm install --prefix shared-apps/validation/release-v2 --no-save --ignore-scripts eslint@9.39.1 playwright@1.55.0
+      - name: Install browser engine
+        run: npx --prefix shared-apps/validation/release-v2 playwright install --with-deps chromium
+      - name: Enforce browser API naming and static code quality
+        run: node shared-apps/validation/release-v2/quality.mjs app validation.config.json
+      - name: Exercise real user journeys on desktop and mobile
+        run: node shared-apps/validation/release-v2/browser.mjs app validation.config.json
+      - name: Upload versioned release safeguard reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openday-release-safeguards
+          path: |
+            app/artifacts/code-quality-report.json
+            app/artifacts/interaction-report.json
+            app/artifacts/browser-journeys/
+          if-no-files-found: warn
+          retention-days: 30
+
   deploy:
-    needs: validate
+    needs: [validate, release-safeguards]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -28,7 +64,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Validate semantic version
         run: |
-          node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('version.json','utf8')).version;if(!/^\\d+\\.\\d+\\.\\d+$/.test(v))throw Error('version.json must contain SemVer x.y.z');const html=fs.readFileSync('index.html','utf8');if(!html.includes('v'+v)||!html.includes('?v='+v))throw Error('index.html version/cache bust does not match version.json');console.log('Release',v)"
+          node -e "const fs=require('fs');const v=JSON.parse(fs.readFileSync('version.json','utf8')).version;if(!/^\d+\.\d+\.\d+$/.test(v))throw Error('version.json must contain SemVer x.y.z');const html=fs.readFileSync('index.html','utf8');if(!html.includes('v'+v)||!html.includes('?v='+v))throw Error('index.html version/cache bust does not match version.json');console.log('Release',v)"
       - name: Build exact Version Lab snapshots
         run: node scripts/build-version-lab.mjs
       - uses: actions/upload-pages-artifact@v3
@@ -37,3 +73,48 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+  verify-live:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: app
+      - uses: actions/checkout@v4
+        with:
+          repository: nirav2000/Apps
+          ref: 3da1251a6ae53f4afccdb58b59da790d346d5db1
+          path: shared-apps
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned browser runner
+        run: npm install --prefix shared-apps/validation/release-v2 --no-save --ignore-scripts playwright@1.55.0 eslint@9.39.1
+      - name: Install Chromium
+        run: npx --prefix shared-apps/validation/release-v2 playwright install --with-deps chromium
+      - name: Verify exact live version and critical user journeys
+        env:
+          RELEASE_TEST_BASE_URL: https://nirav2000.github.io/Openday
+        run: |
+          set -eu
+          expected=$(node -p "require('./app/version.json').version")
+          for attempt in 1 2 3 4 5 6; do
+            actual=$(curl --fail --silent --show-error -H 'Cache-Control: no-cache' "https://nirav2000.github.io/Openday/version.json?verify=${GITHUB_SHA}-${attempt}" | node -pe "JSON.parse(require('fs').readFileSync(0,'utf8')).version") || actual=unavailable
+            if [ "$actual" = "$expected" ]; then break; fi
+            echo "Live version $actual, expected $expected; retry $attempt"
+            sleep 15
+          done
+          [ "$actual" = "$expected" ] || { echo 'Live version mismatch'; exit 1; }
+          node shared-apps/validation/release-v2/browser.mjs app validation.config.json
+      - name: Upload live verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openday-live-verification
+          path: |
+            app/artifacts/interaction-report.json
+            app/artifacts/browser-journeys/
+          if-no-files-found: warn
+          retention-days: 30

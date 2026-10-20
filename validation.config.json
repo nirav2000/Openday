@@ -199,5 +199,137 @@
   },
   "ignoreLocalRequestFailures": [
     "/Kk-syllabus/"
-  ]
+  ],
+  "codeQuality": {
+    "version": "2.0.0",
+    "sharedCommit": "3da1251a6ae53f4afccdb58b59da790d346d5db1",
+    "include": [
+      "primary-performance.js"
+    ],
+    "nodeFiles": []
+  },
+  "interactionTests": {
+    "version": "2.0.0",
+    "sharedCommit": "3da1251a6ae53f4afccdb58b59da790d346d5db1",
+    "profiles": [
+      {
+        "name": "desktop",
+        "width": 1365,
+        "height": 900
+      },
+      {
+        "name": "mobile-touch",
+        "width": 390,
+        "height": 844,
+        "touch": true
+      }
+    ],
+    "scenarios": [
+      {
+        "name": "primary-deeplink-and-search",
+        "path": "/primary-performance.html?school=Pinner%20Wood%20School",
+        "steps": [
+          {
+            "action": "visible",
+            "selector": "#detail .result-grid"
+          },
+          {
+            "action": "text",
+            "selector": "#detail h2",
+            "contains": "Pinner Wood"
+          },
+          {
+            "action": "focus",
+            "selector": "#search"
+          },
+          {
+            "action": "value",
+            "selector": "#search",
+            "value": ""
+          },
+          {
+            "action": "fill",
+            "selector": "#search",
+            "value": "Park"
+          },
+          {
+            "action": "count",
+            "selector": "#rows button",
+            "min": 1
+          },
+          {
+            "action": "click",
+            "selector": "#rows button:first-child"
+          },
+          {
+            "action": "visible",
+            "selector": "#detail .result-grid"
+          },
+          {
+            "action": "url",
+            "param": "school",
+            "value": "Park Lane Primary School"
+          },
+          {
+            "action": "text",
+            "selector": "#detail h2",
+            "contains": "Park Lane"
+          },
+          {
+            "action": "click",
+            "selector": "#clearSearch"
+          },
+          {
+            "action": "value",
+            "selector": "#search",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "name": "primary-year-switch",
+        "path": "/primary-performance.html?school=Pinner%20Wood%20School",
+        "steps": [
+          {
+            "action": "visible",
+            "selector": "#detail .result-grid"
+          },
+          {
+            "action": "select",
+            "selector": "#year-picker",
+            "value": "2023/24"
+          },
+          {
+            "action": "text",
+            "selector": "#detail .detail-meta",
+            "contains": "2023/24"
+          },
+          {
+            "action": "visible",
+            "selector": "#detail .result-card"
+          }
+        ]
+      },
+      {
+        "name": "secondary-performance-load",
+        "path": "/performance.html",
+        "steps": [
+          {
+            "action": "visible",
+            "selector": ".school-row"
+          }
+        ]
+      },
+      {
+        "name": "home-and-assessments",
+        "path": "/",
+        "steps": [
+          {
+            "action": "visible",
+            "selector": "#list .card"
+          }
+        ]
+      }
+    ]
+  }
 }
