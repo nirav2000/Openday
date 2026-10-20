@@ -1,0 +1,21 @@
+name: Primary interaction regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'primary-performance.js'
+      - 'primary-performance.html'
+      - 'tests/primary-performance.test.cjs'
+      - '.github/workflows/primary-interactions.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  primary-interactions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript syntax
+        run: node --check primary-performance.js
+      - name: Run primary search and selection regression
+        run: node tests/primary-performance.test.cjs

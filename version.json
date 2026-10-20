@@ -1,6 +1,6 @@
 {
-  "version": "2.25.13",
+  "version": "2.25.14",
   "released": "2026-10-20",
   "channel": "main",
-  "summary": "Redesigned primary performance dashboard with cohort and pupil intake context"
+  "summary": "Repair primary live search and school-click regression; add browser interaction checks"
 }
