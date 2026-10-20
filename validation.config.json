@@ -60,6 +60,14 @@
       ],
       "type": "array",
       "minItems": 1
+    },
+    {
+      "file": "data/primary-performance.json",
+      "path": [
+        "schools"
+      ],
+      "type": "object",
+      "minKeys": 1
     }
   ],
   "pages": [
@@ -142,6 +150,18 @@
           "type": "count",
           "selector": "#list .card",
           "min": 1
+        }
+      ]
+    },
+    {
+      "path": "/primary-performance.html?school=Pinner%20Wood%20School",
+      "readySelector": "#detail .metrics",
+      "minCount": 1,
+      "assertions": [
+        {
+          "type": "text",
+          "selector": "#detail h2",
+          "contains": "Pinner Wood"
         }
       ]
     }
