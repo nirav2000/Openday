@@ -44,8 +44,9 @@ async function test(){
  assert.equal(input.value,'','clear button works');
  assert.equal(rows.buttons.length,2,'clear restores all school rows');
  assert.match(node('#status').textContent,/2 of 2/);
+ rows.buttons.find(b=>b.dataset.id==='primary-131577').onclick();
  node('#year-picker').value='2023/24';
- node('#year-picker').onchange();
+ node('#year-picker').onchange({target:{value:'2023/24'}});
  assert.match(details.innerHTML,/2023\/24/,'year switching shows selected year');
  console.log('Primary school search, click, deep link and year regression passed');
 }

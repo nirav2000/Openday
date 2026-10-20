@@ -163,13 +163,18 @@
     },
     {
       "path": "/primary-performance.html?school=Pinner%20Wood%20School",
-      "readySelector": "#detail .metrics",
+      "readySelector": "#detail .result-grid",
       "minCount": 1,
       "assertions": [
         {
           "type": "text",
           "selector": "#detail h2",
           "contains": "Pinner Wood"
+        },
+        {
+          "type": "count",
+          "selector": "#detail .result-card",
+          "min": 2
         }
       ]
     }
