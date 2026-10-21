@@ -224,7 +224,7 @@ function showDetail(s){
   $('#saveNote').onclick=()=>{state.notes[sharedKey]=$('#note').value;for(const x of schoolGroup(s))delete state.notes[x.id];saveState();$('#saveNote').textContent='Saved ✓'};
   if(s.start)$('#calendar').onclick=()=>downloadICS(s);
   if($('#watchBooking'))$('#watchBooking').onclick=()=>toggleWatch(s);
-  appendAdmissionEvidence(s);appendPlanningLinks(s);$('#detail').showModal();
+  appendAdmissionEvidence(s);appendPlanningLinks(s);if(schoolPhase==='senior'&&/michaela/i.test(s.name)){const hub=document.createElement('section');hub.className='admission planning-panel';hub.innerHTML='<small>SCHOOL RESEARCH</small><h3>Michaela research hub</h3><p>Historical teachers, curriculum, admissions, critical perspectives, books and home-learning ideas.</p><div class="admission-links"><a href="schools/michaela/">Explore Michaela →</a></div>';$('#detailBody .detail-inner')?.append(hub)}$('#detail').showModal();
 }
 
 function downloadICS(s){
