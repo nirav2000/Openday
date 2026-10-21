@@ -1,11 +1,11 @@
 'use strict';
 (() => {
   const page = document.body.dataset.page || 'index';
-  const titles = {index:'Research overview',staff:'Historical teacher register',results:'Results & context',curriculum:'Curriculum & timetable',concerns:'Concerns & trade-offs',books:'Books & resources',history:'Website history',alternatives:'Admissions & alternatives','home-learning':'Learning at home'};
+  const titles = {index:'Research overview',staff:'Historical teacher register',results:'Results & context',curriculum:'Curriculum & timetable',concerns:'Concerns & trade-offs',books:'Books & resources',history:'Website history',alternatives:'Admissions & alternatives','home-learning':'Learning at home','research-checks':'Evidence checks'};
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const link = (title, url) => `<a href="${esc(url)}"${/^https?:/.test(url) ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(title)}</a>`;
   const links = list => `<div class="links">${(list || []).map(item => link(item[0],item[1])).join('')}</div>`;
-  const get = async url => { const response = await fetch(url); if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`); return response.json(); };
+  const get = async url => { const response = await fetch(url, {cache:'no-cache'}); if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`); return response.json(); };
   const main = document.getElementById('content');
   document.getElementById('navigation').innerHTML = Object.entries(titles).map(([id,title]) => `<a href="${id === 'index' ? './' : id+'.html'}"${id === page ? ' aria-current="page"' : ''}>${esc(title)}</a>`).join('');
   document.getElementById('pageTitle').textContent = titles[page] || titles.index;
@@ -21,7 +21,10 @@
     const records = base.records.map(row => Object.assign(Object.fromEntries(base.columns.map((key,index) => [key,row[index] || ''])),changes.records[row[0]] || {}));
     if (records.length !== 85 || new Set(records.map(r => r.id)).size !== records.length) throw new Error('The restored 85-entry register failed its integrity check');
     const sources = {...base.sources,...changes.sources};
-    for (const record of records) for (const id of record.sources.split(' ').filter(Boolean)) if (!sources[id]) throw new Error(`Missing source ${id} for ${record.id}`);
+    for (const record of records) {
+      record.sources = [...new Set(record.sources.split(' ').filter(Boolean))].join(' ');
+      for (const id of record.sources.split(' ').filter(Boolean)) if (!sources[id]) throw new Error(`Missing source ${id} for ${record.id}`);
+    }
     return {records,sources};
   }
   function personCard(p, sources) {
@@ -66,21 +69,21 @@
       const grades=s.grades || {}, entries=grades['Total exam entries'];
       const combined=s.subject === 'Combined Science';
       const cells=Object.entries(grades).filter(([key,value])=>/^[0-9]{1,2}$/.test(key) && Number.isFinite(value));
-      const accounted=cells.reduce((sum,[,value])=>sum+value,0);
-      const suppressed=Number.isFinite(entries) && accounted < entries;
+      const accounted=Object.entries(grades).filter(([key,value])=>/^(?:[0-9]{1,2}|U|UU)$/.test(key) && Number.isFinite(value)).reduce((sum,[,value])=>sum+value,0);
+      const suppressed=!Number.isFinite(entries) || accounted < entries;
       const grade9=cells.reduce((sum,[key,value])=>sum+value*[...key].filter(n=>n==='9').length,0);
       const grade97=cells.reduce((sum,[key,value])=>sum+value*[...key].filter(n=>Number(n)>=7).length,0);
       const awards=entries*(combined ? 2 : 1);
-      const countLabel=n=>suppressed ? (n ? n+'+ (suppressed cells)' : 'Suppressed / not published') : String(n);
+      const countLabel=n=>suppressed ? (n ? n+'+ (unpublished cells)' : 'Not fully published') : String(n);
       return [s.subject+(s.subjectGroup && s.subjectGroup!==s.subject ? ' - '+s.subjectGroup : ''),number(entries),combined ? 'Double award' : 'Single award',countLabel(grade9),countLabel(grade97),Number.isFinite(awards) ? String(awards) : 'Unknown'];
     });
     const target=document.getElementById('resultData');
     target.innerHTML=`<section class="panel"><div class="status-line">Existing Openday DfE dataset; generated ${esc(doc.generatedAt || 'date not recorded')}</div><h2>GCSE outcomes by exam year</h2>${table(['Exam year','Pupils','Attainment 8','Progress 8'],rows)}<p class="meta">Progress 8 is unavailable for the 2024/25 and 2025/26 cohorts because their usual KS2 baseline was unavailable. It is not zero. Results from different exam years are retained, not overwritten.</p></section><section class="panel"><h2>Top-grade profile: ${esc(g.year || 'see source dataset')}</h2><div class="tiles"><div class="tile"><b>${esc(g.grade9Percent ?? 'Unknown')}%</b><span>Grade 9 awards</span></div><div class="tile"><b>${esc(g.grade97Percent ?? 'Unknown')}%</b><span>Grades 9-7 awards</span></div><div class="tile"><b>${esc(g.totalGradeAwards ?? 'Unknown')}</b><span>Grade-award denominator</span></div><div class="tile"><b>${esc(g.grade9Count ?? 'Unknown')}</b><span>Published grade 9 count</span></div></div><p>These are percentages of grade awards, not percentages of children getting all 9s. Combined Science counts as two awards. Suppressed grade cells are not guessed; ${g.hasSuppressedGrades ? 'some cells are suppressed in this profile.' : 'check the dataset for cell-level suppression.'}</p>${links([['Full subject breakdown and school context','../../performance.html#school=michaela'],['How Attainment 8 and Progress 8 work','../../measures.html'],['Underlying retained dataset','../../data/performance.json']])}</section>`;
     if(subjects.length)target.insertAdjacentHTML('beforeend',`<section class="panel"><h2>Subject-level awards: ${esc(g.year || 'see dataset')}</h2><p>Published counts only. For Combined Science, a 9-9 contributes two grade 9 awards, while 9-8 contributes one. Missing cells are not silently converted to zero. Small language entries can reflect individual candidates, not a whole-class subject option.</p>${table(['Subject / group','Exam entries','Award type','Grade 9 awards','Grades 9-7 awards','Award denominator'],subjects)}${links([['DfE subject dataset',doc.sources.ks4_subjects],['All retained performance measures','../../performance.html#school=michaela']])}</section>`);
-
   }
   async function start() {
     if(page==='staff'){const [base,patch]=await Promise.all([get('staff.json'),get('staff-corrections.json')]);staffView(readStaff(base,patch));return;}
+    if(page==='research-checks'){const audit=await get('audit.json');main.innerHTML=`<p class="lede">${esc(audit.intro)}</p>${audit.blocks.map(section).join('')}`;return;}
     const research=await get('research.json');
     const entry=research.pages[page];if(!entry)throw new Error('Unknown research page');
     if(page==='results'){await resultsView(entry);return;}
