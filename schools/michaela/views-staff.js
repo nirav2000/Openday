@@ -19,8 +19,10 @@ window.MichaelaViews.staff=async main=>{
  let filtered=[];
  function stateUrl(){const u=new URL(location.href);for(const [id,key]of [['staffSearch','q'],['subjectFilter','subject'],['statusFilter','status'],['kindFilter','kind'],['searchScope','scope']]){const v=input(id).value;(v&&!(key==='scope'&&v==='names'))?u.searchParams.set(key,v):u.searchParams.delete(key);}if(u.hash&&!filtered.some(p=>'#'+p.id===u.hash))u.hash='';window.history.replaceState(null,'',u);}
  function saveOpen(){try{sessionStorage.setItem('michaela.expanded.v1',JSON.stringify([...expanded]));}catch{/* Render without persistence. */}}
+ function rememberOpen(){main.querySelectorAll('.person').forEach(el=>{el.open?expanded.add(el.id):expanded.delete(el.id);});saveOpen();}
  function render(){
-  main.querySelectorAll('.person').forEach(el=>{el.open?expanded.add(el.id):expanded.delete(el.id);});
+  // Persist synchronously before replacing nodes; native toggle events are queued.
+  rememberOpen();
   const q=input('staffSearch').value.toLowerCase().trim(),subject=input('subjectFilter').value,status=input('statusFilter').value,kind=input('kindFilter').value;
   filtered=records.filter(p=>{const aliases=(String(p.notes).match(/Aliases?[^.]+/gi)||[]).join(' ');const text=input('searchScope').value==='all'?Object.values(p).filter(v=>typeof v==='string').join(' '):p.name+' '+aliases;return (!q||text.toLowerCase().includes(q))&&(!subject||p.subjectsCanonical.includes(subject))&&(!status||(status==='at-school'?['current','recent'].includes(p.status.value):p.status.value===status))&&(!kind||p.kind===kind);});
   input('staffCount').textContent=`${filtered.length} of ${records.length} entries`;
@@ -38,9 +40,10 @@ window.MichaelaViews.staff=async main=>{
  input('printSelected').onclick=()=>{printRows([...selected].map(id=>names.get(id)).filter(Boolean));window.print();};
  window.addEventListener('beforeprint',()=>{if(!document.getElementById('printView').innerHTML)printRows(filtered);});
  window.addEventListener('afterprint',()=>document.getElementById('printView').replaceChildren());
+ window.addEventListener('pagehide',rememberOpen);
  function tab(v){input('staffRows').hidden=v;input('departmentRows').hidden=!v;input('profilesTab').setAttribute('aria-pressed',String(!v));input('departmentsTab').setAttribute('aria-pressed',String(v));}
  input('profilesTab').onclick=()=>tab(false);input('departmentsTab').onclick=()=>tab(true);
- function anchor(){const id=location.hash.slice(1);if(!names.has(id))return;expanded.add(id);if(!document.getElementById(id)){['staffSearch','subjectFilter','statusFilter','kindFilter'].forEach(k=>input(k).value='');render();}tab(false);const el=document.getElementById(id);el.open=true;el.scrollIntoView({block:'start'});}
+ function anchor(){const id=location.hash.slice(1);if(!names.has(id))return;expanded.add(id);if(!document.getElementById(id)){['staffSearch','subjectFilter','statusFilter','kindFilter'].forEach(k=>input(k).value='');render();}tab(false);const el=document.getElementById(id);el.open=true;saveOpen();el.scrollIntoView({block:'start'});}
  const initialHash=location.hash;render();if(initialHash&&names.has(initialHash.slice(1))){window.history.replaceState(null,'',location.pathname+location.search+initialHash);}anchor();window.addEventListener('hashchange',anchor);
 };
 })();
