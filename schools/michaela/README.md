@@ -1,23 +1,15 @@
-# Michaela evidence hub - research edition 2.0.1
+# Michaela decision hub - edition 3.0.0
 
-Published in Openday 2.26.1. Independent research, not the official school site.
+Openday 2.27.0. Independent research, not the official school website.
 
-## Pages
+Thirteen question-led pages cover overview, admission, results/context, daily life, staff, comparison, curriculum, home learning, concerns, books, changes/sources, private follow-up and audit coverage.
 
-The Michaela school card links to index.html. staff.html renders all 85 historical entries. Other pages cover results, curriculum, concerns, books, website history, admissions/alternatives, home learning and research checks.
+The original staff.json, correction history and root data are retained. core.js merges claims and statuses into the same records used by search, department view, printing and CSV. Baseline IDs are preserved while permitting sourced additions. Current listings, recent dated observations, documented departures and unknown status are separate.
 
-## Evidence and data
+Results derive known-award rates and conservative bounds from the retained grade cells. Combined Science is double-weighted. Fully unpublished subject grades are not displayed as observed zero. Comparisons use a chosen exam year and distinguish school-published and DfE coverage; independent-school Attainment 8 is not ranked against state schools.
 
-staff.json preserves the original checkpoint. staff-corrections.json applies dated field-level corrections by stable ID and adds sources. The merged register has 85 entries, 58 with academic details, 32 with training details and 70 source records. These are coverage counts, not independent credential checks or 85 distinct/current teachers. Four fellows, thirteen incomplete names and two potential duplicate pairs remain flagged.
+The planner uses only openday.michaela.private-planner.v1 in browser storage. It does not send notes to GitHub or Firebase. Existing Openday question answers retain their keys and sync settings; links focus a specific question without changing its answer.
 
-Every profile/search/CSV export uses the corrected records. Source references are deduplicated before rendering. Archived evidence comes from recovered earlier extractions, not a claimed fresh visit to every capture. A first/last observation is not an employment date. Unknown does not mean unqualified or unemployed. Degree, training and honours are separate. Same-name candidates are not silently merged.
+Run node --test tests/michaela-core.test.cjs and node tests/michaela-browser.mjs . (Playwright module path configurable). All shared validation and release gates remain. GitHub Pages repeats the dedicated browser checks against live after verifying the release version.
 
-research.json holds the original sourced sections; audit.json adds the follow-up checks and unresolved questions. The results view reads the existing root performance dataset without modifying it. Suppressed/unpublished cells are not guessed; published ungraded entries contribute to coverage checking but not to top-grade counts.
-
-## Implementation and validation
-
-Main only. Read ../../AGENTS.md and ../../docs/GITHUB_ACCESS_RUNBOOK.md for the proven connected-tool route, atomic updates, lease checks and full live verification. Root app/cache markers and hub asset editions must remain aligned.
-
-This update passed 20 local offline HTML/JSON rendering checks at desktop/mobile widths, plus filtering and 85-row merged CSV checks. Local network navigation was blocked by the container environment; real network and school-card navigation checks remain mandatory in CI and the live verification job. Do not claim them passed merely because the local fixture rendered.
-
-The complete current Year 7 timetable, full schemes, 2028 admissions policy and many exact job dates remain unverified. The evidence-checks page lists them with a ready school enquiry. No full commercial books or third-party websites are mirrored. Public content contains no pupil identifiers or private household notes. Existing root datasets and private app state are untouched.
+Some exact job dates, current subject schemes, weekly timetable, subgroup outcomes and future admissions policy remain unverified. These are research gaps with explicit next questions, not invented facts. Read ../../docs/GITHUB_ACCESS_RUNBOOK.md for the proven authenticated publishing route. A tree is not a commit or deployment.

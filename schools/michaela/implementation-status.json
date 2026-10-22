@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-22",
+  "release": "2.27.0",
+  "edition": "3.0.0",
+  "scope": "Implementation coverage. Missing external school facts are not marked as established. Verify release status in GitHub Actions.",
+  "items": [
+    {"id":"A01","title":"Published-count rates, missing awards and mathematical bounds shown with headlines","files":"core.js; views-results.js"},
+    {"id":"A02","title":"Dated pupil/SEND/absence context and separate sixth-form results surfaced","files":"views-results.js"},
+    {"id":"A03","title":"Entry-year planner, labelled historical priority order and next actions","files":"decision.json; views-decision.js"},
+    {"id":"A04","title":"Same-year school comparison separates route feasibility from educational evidence","files":"views-compare.js"},
+    {"id":"A05","title":"Current, recently observed, departed and unknown staff status with dated evidence","files":"staff-insights.json; views-staff.js"},
+    {"id":"A06","title":"Compact navigation and first-screen staff search","files":"decision.css"},
+    {"id":"A07","title":"Canonical subject filters and name-first search separate from editorial notes","files":"core.js; views-staff.js"},
+    {"id":"A08","title":"Book, admission and school-day findings visible on their topic pages","files":"decision.json; views-decision.js"},
+    {"id":"A09","title":"Original IDs preserved while permitting sourced additional records","files":"core.js; tests/michaela-core.test.cjs"},
+    {"id":"A10","title":"Printable filtered or selected profiles include complete details and sources","files":"views-staff.js; decision.css"},
+    {"id":"A11","title":"Expansion survives filters; filter state has shareable URLs","files":"views-staff.js"},
+    {"id":"A12","title":"Claim-level source annotations supported and populated where established; unmapped evidence explicitly labelled","files":"staff-insights.json; views-staff.js"},
+    {"id":"A13","title":"Private local follow-up planner and precise school/question links preserving existing note keys","files":"views-decision.js; questions.js"},
+    {"id":"A14","title":"Daily-life and subject/year evidence grids distinguish knowns and unanswered questions","files":"decision.json; views-decision.js"},
+    {"id":"A15","title":"Dated before/after change summaries include decision impact and sources","files":"decision.json; views-decision.js"},
+    {"id":"A16","title":"Question-led overview and concise answers precede research and methodology","files":"hub.js; views-decision.js"},
+    {"id":"A17","title":"Self-contained home lessons include prerequisites, explanation, practice, answers, checks and source maps","files":"decision.json; views-decision.js"}
+  ]
+}

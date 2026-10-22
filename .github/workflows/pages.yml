@@ -15,7 +15,6 @@ jobs:
     uses: nirav2000/Apps/.github/workflows/static-app-validation.yml@5c63f05cce303b9f268f06cbb0b9cec69dab5b97
     with:
       config: validation.config.json
-
   release-safeguards:
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -37,8 +36,12 @@ jobs:
         run: npx --prefix shared-apps/validation/release-v2 playwright install --with-deps chromium
       - name: Enforce browser API naming and static code quality
         run: node shared-apps/validation/release-v2/quality.mjs app validation.config.json
+      - name: Check Michaela data contracts and preserved records
+        run: node --test app/tests/michaela-core.test.cjs
       - name: Exercise real user journeys on desktop and mobile
         run: node shared-apps/validation/release-v2/browser.mjs app validation.config.json
+      - name: Audit decision workflows, print and private-state isolation
+        run: node app/tests/michaela-browser.mjs app
       - name: Upload versioned release safeguard reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -48,9 +51,10 @@ jobs:
             app/artifacts/code-quality-report.json
             app/artifacts/interaction-report.json
             app/artifacts/browser-journeys/
+            app/artifacts/michaela-audit.json
+            app/artifacts/michaela-qa/
           if-no-files-found: warn
           retention-days: 30
-
   deploy:
     needs: [validate, release-safeguards]
     environment:
@@ -73,7 +77,6 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-
   verify-live:
     needs: deploy
     runs-on: ubuntu-latest
@@ -108,6 +111,7 @@ jobs:
           done
           [ "$actual" = "$expected" ] || { echo 'Live version mismatch'; exit 1; }
           node shared-apps/validation/release-v2/browser.mjs app validation.config.json
+          node app/tests/michaela-browser.mjs app
       - name: Upload live verification evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -116,5 +120,7 @@ jobs:
           path: |
             app/artifacts/interaction-report.json
             app/artifacts/browser-journeys/
+            app/artifacts/michaela-audit.json
+            app/artifacts/michaela-qa/
           if-no-files-found: warn
           retention-days: 30

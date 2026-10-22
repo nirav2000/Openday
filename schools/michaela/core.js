@@ -13,10 +13,15 @@ function mergeStaff(base,patch,insights={}){
  const required=insights.baselineIds||original.map(p=>p.id);
  if(required.some(id=>!records.some(p=>p.id===id)))throw Error('A preserved staff record is missing');
  const sources={...base.sources,...patch.sources,...insights.sources};
+ for(const id of Object.keys(patch.records||{}))if(!records.some(p=>p.id===id))throw Error('Correction has no staff record: '+id);
+ for(const id of Object.keys(insights.records||{}))if(!records.some(p=>p.id===id))throw Error('Annotation has no staff record: '+id);
  return {sources,records:records.map(p=>{
-  p.sources=[...new Set(String(p.sources||'').split(/\s+/).filter(Boolean))].join(' ');
-  for(const id of p.sources.split(' ').filter(Boolean))if(!sources[id])throw Error('Missing source '+id);
+  if(!p.id||!p.name)throw Error('Staff ID and name required');
   const detail=insights.records?.[p.id]||{};
+  const annotations=[...(detail.status?.sourceIds||[]),...Object.values(detail.claims||{}).flatMap(x=>x.sourceIds||[])];
+  p.sources=[...new Set([...String(p.sources||'').split(/\s+/).filter(Boolean),...annotations])].join(' ');
+  if(!p.sources)throw Error('A staff record needs evidence: '+p.id);
+  for(const id of p.sources.split(' '))if(!sources[id])throw Error('Missing source '+id);
   return {...p,subjectsCanonical:detail.subjects||canonicalSubjects(p.subjects),status:detail.status||{value:'unknown',date:p.lastEvidence,reason:'No sufficiently recent school evidence or explicit departure verified. Absence from a roster is not departure.',sourceIds:[]},claims:detail.claims||{}};
  })};
 }
