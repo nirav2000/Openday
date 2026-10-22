@@ -32,7 +32,13 @@ jobs:
           node-version: '22'
       - name: Install pinned ESLint and Playwright
         run: npm install --prefix shared-apps/validation/release-v2 --no-save --ignore-scripts eslint@9.39.1 playwright@1.55.0
+      - name: Cache pinned browser binaries
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: openday-playwright-${{ runner.os }}-1.55.0
       - name: Install browser engine
+        timeout-minutes: 6
         run: npx --prefix shared-apps/validation/release-v2 playwright install --with-deps chromium
       - name: Enforce browser API naming and static code quality
         run: node shared-apps/validation/release-v2/quality.mjs app validation.config.json
@@ -95,7 +101,13 @@ jobs:
           node-version: '22'
       - name: Install pinned browser runner
         run: npm install --prefix shared-apps/validation/release-v2 --no-save --ignore-scripts playwright@1.55.0 eslint@9.39.1
+      - name: Cache pinned browser binaries
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: openday-playwright-${{ runner.os }}-1.55.0
       - name: Install Chromium
+        timeout-minutes: 6
         run: npx --prefix shared-apps/validation/release-v2 playwright install --with-deps chromium
       - name: Verify exact live version and critical user journeys
         env:
