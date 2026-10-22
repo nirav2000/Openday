@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 const C=window.MichaelaCore,e=C.escape;
-const link=(title,url)=>{const u=String(url||'');return /^(?:https?:\/\/|(?:\.\.?\/)?[\w#?])/.test(u)?`<a href="${e(u)}"${/^https?:/.test(u)?' target="_blank" rel="noopener noreferrer"':''}>${e(title)}</a>`:e(title);};
+const link=(title,url)=>{const u=String(url||'');try{if(!u||!['https:','http:'].includes(new URL(u,location.href).protocol))return e(title);}catch{return e(title);}return `<a href="${e(u)}"${/^https?:/.test(u)?' target="_blank" rel="noopener noreferrer"':''}>${e(title)}</a>`;};
 const links=items=>`<div class="links">${(items||[]).map(a=>link(a[0],a[1])).join('')}</div>`;
 const table=(headers,rows,caption='')=>`<div class="table-wrap" tabindex="0" role="region" aria-label="${e(caption||headers.join(', '))}"><table>${caption?`<caption>${e(caption)}</caption>`:''}<thead><tr>${headers.map(h=>`<th scope="col">${e(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${e(v??'Not established')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const panel=(title,body,id='')=>`<section class="panel"${id?` id="${e(id)}"`:''}><h2>${e(title)}</h2>${body}</section>`;
