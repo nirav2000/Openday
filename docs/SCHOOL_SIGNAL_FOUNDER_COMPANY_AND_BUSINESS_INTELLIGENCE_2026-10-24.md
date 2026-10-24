@@ -349,3 +349,112 @@ Indexable page       ->  Return + referral   ->  Outcome tracking
 6. Bring the most valuable **cross-product repeated patterns** back into an OpenDay implementation experiment, with baseline, outcome and shared app release gate.
 
 **Research conclusions are durable; all further tasks remain unimplemented.** This report should be updated as dated addenda, not silently overwritten with later promotional claims. Document generated for internal competitive analysis from publicly available sources, not for contact targeting or personal profiling.
+
+
+---
+
+## 11. Corporate address, staff, director appointments and newly identified products
+
+> **Follow-up verification — 24 October 2026.** This section supplements and corrects the product coverage above. In particular, we have verified **two additional KK London digital products, DivePlnr and healthplnr**, that were absent from the original seven-site mapping. Distinguish current companies from historic appointments, legal registered offices from actual staffed premises and directors from employees.
+
+### 11.1 Where is the business?
+
+| Place | What is verified | What is *not* established |
+|---|---|---|
+| **East Hanney, Wantage, Oxfordshire, OX12 0GG** | Current **registered office** of **KK London (Designs & Fashion) Limited (12968488)** and legally published School Signal contact address. Official [Companies House](https://find-and-update.company-information.service.gov.uk/company/12968488), [School Signal terms](https://www.schoolsignal.co.uk/terms). | Whether it is a dedicated workplace, has a public reception, or employs an on-site development team. |
+| **Beaconsfield, Buckinghamshire** | The registered office moved **from Beaconsfield to East Hanney in September 2025**. The [ICO register](https://ico.org.uk/ESDWebPages/Entry/ZB889879) still shows the earlier Beaconsfield correspondence location. | A present trading office. |
+| **Bentima House, Old Street, London EC1V 9BP** | Separate **FINN Partners London office**, relevant to Alexis's FINN role. [FINN offices](https://www.finnpartners.com/emea/). | **Not** School Signal or KK London's verified current office. |
+| **Historical London MintTwist/PR addresses** | Entries appear in old officer records and directories. | Historical correspondence is not evidence of current staff premises. |
+
+For privacy and accuracy, this research documents places and links to the public corporate register, rather than repeating a potentially residential street address as an unverified *office*.
+
+### 11.2 How many employees?
+
+- **School Signal specific:** **no verified headcount** or independently identified employed software team. Its [About](https://www.schoolsignal.co.uk/about) states it is **“built and run by Alexis Pratsides”**. That describes operational responsibility; it does **not** prove exactly one employee or exclude contractors.
+- **KK London design/retail studio:** the company's own [About Us](https://www.kkdesignslondon.com/en-us/pages/about-us) explicitly describes it as a **“two-person studio”**, Amy and Alexis. It does not give a certified group-wide payroll count for all SaaS brands.
+- **KK London accounts:** [Companies House](https://find-and-update.company-information.service.gov.uk/company/12968488) identifies latest **2025 micro-entity accounts**. Micro-entity classification cannot on its own establish employee numbers; no contemporaneous, verified **actual employee count** was found.
+- **MintTwist at 2021 acquisition:** independent [Provoke Media](https://www.provokemedia.com/latest/article/finn-partners-acquires-digital-marketing-agency-minttwist) describes a **25-member** agency. The 2024 [Agency Giants interview](https://podcasts.apple.com/us/podcast/from-35-to-1-300-employees-navigating-a-major/id1755717870?i=1000674210579) describes a **35-person** agency in its retrospective framing. Neither count describes employees of School Signal.
+- **FINN Partners:** a multinational employer, **not** the staffing of KK London. Never add FINN staff to the School Signal headcount.
+
+**Most precise defensible answer:** there are **two publicly identified owner-operators**, and School Signal says Alexis runs it; **actual employed headcount is unknown**.
+
+### 11.3 Complete confirmed KK London website inventory
+
+| Product | Site | Independent evidence tying to **12968488** | Category |
+|---|---|---|---|
+| School Signal | [schoolsignal.co.uk](https://www.schoolsignal.co.uk/) | [Terms](https://www.schoolsignal.co.uk/terms) | Schools, admission, results, open days |
+| Planning Signal | [planningsignal.co.uk](https://www.planningsignal.co.uk/) | [API terms](https://www.planningsignal.co.uk/api-terms) | Planning data and local contractor leads |
+| TenderSignal | [tendersignal.co.uk](https://www.tendersignal.co.uk/) | [API terms](https://www.tendersignal.co.uk/api-terms) | Procurement, tender discovery and reminders |
+| NewcoSignal | [newcosignal.co.uk](https://www.newcosignal.co.uk/) | [API terms](https://www.newcosignal.co.uk/api-terms) | Corporate data and B2B prospecting |
+| CollectionPlnr | [collectionplnr.com](https://www.collectionplnr.com/) | [Terms](https://www.collectionplnr.com/terms) | Comics, cards, LEGO and collectibles |
+| **DivePlnr (new finding)** | [diveplnr.com](https://www.diveplnr.com/) | [About](https://www.diveplnr.com/about) | Diving sites, species and travel data; affiliates |
+| **healthplnr (new finding)** | [healthplnr.com](https://www.healthplnr.com/) | [Privacy](https://www.healthplnr.com/privacy) | AI wellness planning, logging, subscription |
+| KK Designs London | [kkdesignslondon.com](https://www.kkdesignslondon.com/) | [About](https://www.kkdesignslondon.com/en-us/pages/about-us) | Consumer print-on-demand cases |
+| KK Automotive Art | [kkautomotiveart.com](https://www.kkautomotiveart.com/) | [Alexis page](https://www.kkautomotiveart.com/pages/alexis-pratsides) | Automotive and F1 artwork, prints, phone cases |
+
+**Alias:** [newcohunter.co.uk](https://www.newcohunter.co.uk/) **redirects to NewcoSignal** as of 24 October 2026; historical name, **not a tenth independent product**. No claim that the table is absolutely exhaustive of every dormant or unindexed property.
+
+**Related personal/professional business — *not* another KK London trading website by proven common company number:**
+- [pratsides.com](https://pratsides.com/) is **Amy Pratsides' PR / communications consultancy website**. The former company **PRATSIDES & CO LIMITED (10573148)** appears **dissolved** in [Amy's Companies House appointments](https://find-and-update.company-information.service.gov.uk/officers/r5XXvU2DrGgogpqKgFFNf5mJkLI/appointments); current trading entity/structure is not verified solely from a live website.
+- [minttwist.com](https://www.minttwist.com/) is the historic **MintTwist** brand under **FINN Partners**, **not** one of KK London's 12968488 trading brands. The original **MINTTWIST LIMITED (05261672)** was **dissolved 7 April 2026**, despite the brand remaining on [FINN's site](https://www.finnpartners.com/brand/minttwist/). [Official Companies House](https://find-and-update.company-information.service.gov.uk/company/05261672).
+- **Unrelated name-matches:** [KK LONDON GROUP LTD (12596411)](https://find-and-update.company-information.service.gov.uk/company/12596411), and [DESIGNS BY KK LTD (13185503)](https://find-and-update.company-information.service.gov.uk/company/13185503) are **different legal identities** with different officers. Do not attribute their LinkedIn employee counts or office locations to School Signal.
+
+### 11.4 Officer histories and other directorships — primary register
+
+**Alexis Pratsides:** [Companies House personal appointments](https://find-and-update.company-information.service.gov.uk/officers/wDMElkDGMaGv5uY7C7ROc2RSs2c/appointments) records **seven appointments at six distinct legal entities**. MintTwist is counted twice because he held director *and* secretary roles.
+
+| Company | Company number | Public appointment | Latest register status / qualification |
+|---|---:|---|---|
+| KK London (Designs & Fashion) Limited | 12968488 | **Current director**, from 10 September 2021 | Active |
+| MintTwist Limited | 05261672 | Director from 8 May 2007; former secretary from 2007 to 2021 | **Dissolved 7 April 2026**; ongoing FINN brand is distinct |
+| Wurk Rocks Ltd | 10509537 | Director from 5 December 2016 | Dissolved; not a current active role |
+| Wurk Rocks Ltd | 11399580 | Director from 5 June 2018 | Dissolved; separate company with same name |
+| Radlab Ventures Limited | 10000275 | Director from 11 February 2016 | Dissolved 27 July 2021 |
+| Fanslide Limited | 10650788 | Director 18 September 2017 – **resigned 28 August 2020** | Entity active with **proposal to strike off** as checked 24 Oct 2026; former office only |
+
+**Amy Lesley Pratsides:** [Companies House personal appointments](https://find-and-update.company-information.service.gov.uk/officers/r5XXvU2DrGgogpqKgFFNf5mJkLI/appointments) records **two legal-entity appointments**.
+
+| Company | Company number | Public appointment | Latest register status |
+|---|---:|---|---|
+| KK London (Designs & Fashion) Limited | 12968488 | **Current director**, since 15 April 2021 | Active |
+| Pratsides & Co Limited | 10573148 | Director from 19 January 2017 | Dissolved; live PR brand website does not itself establish current incorporated structure |
+
+**Do not infer** that every old directorship means continued equity ownership, ongoing work, a present group company or any shared employees. The lists are verifiable appointment histories, not a corporate family tree of School Signal subsidiaries.
+
+### 11.5 Other work and careers (cross-checked)
+
+**Alexis:**
+- **1993–1996** Software Engineering at University of Hertfordshire, as recorded on [public LinkedIn](https://uk.linkedin.com/in/alexispratsides).
+- Before agency founding, senior programming/database work at **MRM** and a direct-marketing agency, including customer-data management applications; described in his own [FINN biography](https://www.finnpartners.com/bio/alexis-pratsides/) and [BIMA profile](https://bima.co.uk/users/alexis-pratsides/).
+- **2002** co-founded MintTwist with Elliott King; expanded web development into search, PPC, content and agency operations; business acquired by **FINN Partners in April 2021**, verified by [industry press](https://www.provokemedia.com/latest/article/finn-partners-acquires-digital-marketing-agency-minttwist).
+- FINN [presently describes him as **Managing Partner**](https://www.finnpartners.com/bio/alexis-pratsides/); [BIMA](https://bima.co.uk/users/alexis-pratsides/) says **Global Head of Digital**. This is **a separate professional role**, not another employment under KK London.
+- **East Hanney Parish Council**, [current councillors roster](https://easthanneyparish.gov.uk/people/) confirms Alexis Pratsides (council page truncates surname as “Pratside”); village newsletter said **joined in November 2025**. This is a **civic position**, not corporate employment. Do not draw political-party conclusions.
+- Excellent extended [Agency Giants podcast interview, 23 October 2024, 72 minutes](https://podcasts.apple.com/us/podcast/from-35-to-1-300-employees-navigating-a-major/id1755717870?i=1000674210579) on acquisition, scaling, business risk and staff management.
+
+**Amy:**
+- [KK London biography](https://www.kkdesignslondon.com/pages/amy-pratsides): **Creative Director and CMO**, with a professional background in **fashion recruitment** including ~five years as Group Resourcing Manager for **Jaeger and Aquascutum**.
+- [LinkedIn](https://uk.linkedin.com/in/amydawkins) describes **business consultancy in PR, social media, marketing and recruitment**.
+- Runs/publicly advertises [Pratsides & Co](https://pratsides.com/) services in PR, influencer relations, content creation, social media and events. The historical **Limited company is dissolved**; no unverified legal form assigned to current website.
+- **No verified School Signal-specific operational role** was located beyond co-directorship of operating company KK London; her documented involvement is brand/design and PR for the wider business.
+
+### 11.6 Operational inferences, carefully constrained
+
+The combination of **one named School Signal founder, a self-described two-person retail studio, a broader cross-domain subscription portfolio, technical/marketing executive experience, AI-drafted DivePlnr content, and a separate PR/creative operator** is compatible with a small owner-led digital product studio using automation and contractors.
+
+But this **does not prove**:
+- that they have only two employees across the whole operator;
+- that the same programmers maintain nine sites;
+- that all sites are profitable or have paying customers;
+- that the FINN team builds or funds School Signal;
+- that the registered postal location has staffed offices;
+- any private employment/contractor arrangements or shareholding beyond disclosed records.
+
+**Interesting verified technical clue:** [DivePlnr editorial policy](https://www.diveplnr.com/editorial-policy) explicitly says descriptive pages are drafted with **Google Gemini** from structured source data and checked by automated rules, without individually being reviewed by diving professionals. [healthplnr privacy](https://www.healthplnr.com/privacy) identifies **Hetzner**, **Cloudflare**, **Stripe** and **Resend**. These disclosures demonstrate technical approaches at those two brands only; do not extrapolate to School Signal without direct evidence.
+
+### 11.7 Implications for OpenDay
+
+The most useful benchmark is a founder/operator system: source data → searchable pages → evidence-backed descriptions and updates → alert/retention loops → premium plans, with expert SEO/PR and efficient production. OpenDay's counter-position remains **higher evidence quality for admissions events and policies**, reinforced by repeatable shared data ingestion and strong public presentation.
+
+**Next research validation:** original KK London 2025 accounts for employee disclosure if any; founder interview and current commercial headcount clarification if voluntarily disclosed; firm-specific public technology fingerprint and named enterprise clients; independent evidence that new brands are actively used beyond having public landing pages.
+
+*End of dated follow-up appendix.*
