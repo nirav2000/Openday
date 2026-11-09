@@ -43,6 +43,9 @@ test('Winchester November/December 2026 history is retained without incorrectly 
     assert.ok(lookup(senior,id).start.startsWith(date));
   }
   assert.match(lookup(senior,'winchester-2027-feb11').eligibility,/overseas/i);
+  assert.ok((lookup(senior,'aldenham').alternateVisits||[]).some(v=>v.start.startsWith('2027-05-15')));
+  assert.ok((lookup(senior,'aldenham').alternateVisits||[]).some(v=>v.start.startsWith('2027-10-09')));
+  assert.ok((lookup(senior,'mts').alternateVisits||[]).some(v=>v.start.startsWith('2027-05-08')));
 });
 test('Reception 2027 dates are sourced and old-year mistakes are withdrawn', () => {
   for (const [id, date] of [
