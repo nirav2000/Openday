@@ -301,13 +301,19 @@
       "officialSources": [
         "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
         "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/",
-        "https://www.millhill.org.uk/admissions/open-days-and-visits"
+        "https://www.millhill.org.uk/admissions/open-days-and-visits",
+        "https://aldenham.com/the-school/visit-us/open-mornings/",
+        "https://www.mtsn.org.uk/admissions/joining-at-11/"
       ],
       "historicallyPublishedButNoLongerListed": [
         "winchester-nov: 2026-11-12 10:00-12:45",
         "winchester-dec: 2026-12-04 10:00-12:45"
       ],
-      "verifiedHistoricalSource": "School's own prior indexed 13+ Open Events page showed all three dates; live page was replaced with 2027 sessions."
+      "verifiedHistoricalSource": "School's own prior indexed 13+ Open Events page showed all three dates; live page was replaced with 2027 sessions.",
+      "additionalSeniorDatedVisits": [
+        "Aldenham 15 May and 9 October 2027",
+        "Merchant Taylors' 8 May 2027"
+      ]
     }
   },
   "schools": [
@@ -1089,7 +1095,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.mtsn.org.uk/admissions/book-a-visit/",
       "bookingUrl": "https://www.mtsn.org.uk/admissions/book-a-visit/",
-      "note": "Core nearby independent option. Exact session time to confirm. Official school page offers individual term-time tours through its booking form. Next whole-school 11+ open morning date not confirmed in the current source.",
+      "note": "Core nearby independent option. Exact session time to confirm. Official school page offers individual term-time tours through its booking form. Next whole-school 11+ open morning date not confirmed in the current source. Official 11+ admissions page lists next Open Morning on Saturday 8 May 2027; exact start time not specified on the timeline.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": "2027-10-31",
@@ -1119,6 +1125,22 @@
         "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
         "sourceUrl": "https://www.mtsn.org.uk/admissions/joining-at-11/",
         "checked": "2026-09-16"
+      },
+      "alternateVisits": [
+        {
+          "event": "11+ Open Morning",
+          "start": "2027-05-08",
+          "end": null,
+          "status": "confirmed",
+          "bookingUrl": "https://www.mtsn.org.uk/admissions/book-a-visit/",
+          "note": "School-published Saturday 8 May 2027 Open Day for prospective Year 7/11+ families; exact time not published on admissions timeline."
+        }
+      ],
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.mtsn.org.uk/admissions/joining-at-11/",
+        "detail": "School's 11+ admissions page lists Saturday 8 May 2027 as its next Open Day."
       }
     },
     {
@@ -1569,7 +1591,7 @@
       "bookingRequired": true,
       "infoUrl": "https://aldenham.com/the-school/visit-us/open-mornings/",
       "bookingUrl": "https://aldenham.com/the-school/visit-us/open-mornings/",
-      "note": "Doors reported at 10:00; Head talks at 10:30 and 11:30.",
+      "note": "Doors reported at 10:00; Head talks at 10:30 and 11:30. Next Senior School Open Morning: Saturday 15 May 2027, 10:00–12:30; booking opens March 2027. Further Open Morning scheduled 9 October 2027.",
       "admission": {
         "route": "11+ or 13+ · September 2028/2030",
         "deadline": null,
@@ -1600,6 +1622,31 @@
         "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
         "sourceUrl": "https://aldenham.com/admissions/",
         "checked": "2026-09-16"
+      },
+      "alternateVisits": [
+        {
+          "event": "Senior School Open Morning",
+          "start": "2027-05-15T10:00:00+01:00",
+          "end": "2027-05-15T12:30:00+01:00",
+          "status": "confirmed",
+          "bookingUrl": "https://aldenham.com/the-school/visit-us/open-mornings/",
+          "bookingStatus": "not-yet-open",
+          "note": "Official next Open Morning Saturday 15 May 2027, 10:00–12:30. School says booking opens March 2027."
+        },
+        {
+          "event": "Senior School Open Morning",
+          "start": "2027-10-09T10:00:00+01:00",
+          "end": "2027-10-09T12:30:00+01:00",
+          "status": "confirmed",
+          "bookingUrl": "https://aldenham.com/the-school/visit-us/open-mornings/",
+          "note": "Saturday 9 October 2027, 10:00–12:30, confirmed in the school's published 2027/28 term dates."
+        }
+      ],
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://aldenham.com/the-school/visit-us/open-mornings/",
+        "detail": "The school's Open Mornings page lists 15 May 2027; its published term dates list 9 October 2027."
       }
     },
     {
