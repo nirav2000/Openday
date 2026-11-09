@@ -49,7 +49,7 @@
       "withdrawnDates": [
         "priestmead-primary: 2027-01-12, 2027-02-02",
         "wembley-primary: 2026-11-19",
-        "whitchurch-primary: 2026-11-09"
+        "whitchurch-primary: 2026-11-09 previously listed, replaced by 2026-11-30 on current page"
       ]
     }
   },
@@ -4161,7 +4161,7 @@
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official 2027-entry tours are 13 Oct (full), 20 Oct and Monday 30 Nov 2026, 09:15–10:15. An earlier 9 Nov listing was a transcription error and has been corrected.",
+      "note": "For Reception 2027 the latest official tours page lists 13 October (full), 20 October and Monday 30 November 2026 at 09:15–10:15. An earlier indexed school page gave 9 November; the newer page now lists 30 November. Confirm directly if holding an earlier booking.",
       "alternateVisits": [
         {
           "event": "Nursery/Reception 2027 open day & school tour",
@@ -4188,7 +4188,10 @@
         "checked": "2026-11-09",
         "level": "date-on-official-school-page",
         "sourceUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours",
-        "detail": "Nov 9 replaced by school's stated Nov 30 date."
+        "detail": "Current official 2027-entry page lists Monday 30 Nov 2026; prior indexed page mentioned 9 Nov. Old date remains source-history only, not a currently verified booking.",
+        "previouslyPublished": [
+          "2026-11-09T09:15:00+00:00"
+        ]
       }
     },
     {
