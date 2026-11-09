@@ -44,6 +44,8 @@ jobs:
         run: node shared-apps/validation/release-v2/quality.mjs app validation.config.json
       - name: Check Michaela data contracts and preserved records
         run: node --test app/tests/michaela-core.test.cjs
+      - name: Verify open-day date evidence and upcoming alternate visits
+        run: node --test app/tests/open-day-dates.test.cjs
       - name: Exercise real user journeys on desktop and mobile
         run: node shared-apps/validation/release-v2/browser.mjs app validation.config.json
       - name: Audit decision workflows, print and private-state isolation
