@@ -149,6 +149,7 @@ function card(s){
   const book=n.querySelector('.book'),visitUrl=visit.bookingUrl||s.bookingUrl;if(visitUrl){book.href=visitUrl;book.textContent=s.bookingRequired===false?'Info ↗':s.bookingRequired===true?'Book ↗':'Check event ↗'}else book.remove();
   if(isUnlistedHistorical(s)&&visitUrl){book.textContent='Check with school ↗';book.href=s.infoUrl||visitUrl}
   else if(visitUrl&&visit.availability==='sold-out')book.textContent='Sold out ↗';
+  else if(visitUrl&&visit.bookingStatus==='not-yet-open')book.textContent='Booking opens later ↗';
   else if(visitUrl&&visitPast(visit)){book.textContent='Original information ↗';book.href=s.infoUrl||visitUrl}
   if(extra.bookingWatch?.status==='user-reported-unavailable'&&visitUrl&&!visitPast(visit)){book.textContent='Check spaces ↗'}
   return n;
@@ -197,12 +198,13 @@ function visitStatus(v){
   if(visitPast(v))return 'Past event';
   if(v.status==='cancelled')return 'Cancelled';
   if(v.bookingStatus==='sold-out'||v.availability==='sold-out')return 'Sold out';
+  if(v.bookingStatus==='not-yet-open'||v.availability==='not-yet-open')return 'Booking not yet open';
   if(v.bookingStatus==='waitlist'||v.availability==='waitlist')return 'Waiting list';
   return '';
 }
 function visitRowHtml(v){
   const past=visitPast(v),status=visitStatus(v),url=past?(v.infoUrl||v.sourceUrl||v.bookingUrl):(v.bookingUrl||v.infoUrl||v.sourceUrl);
-  const action=past?'Original information':status==='Sold out'?'Event details':status==='Waiting list'?'Join waiting list':v.start?'Book / check':'Arrange / check';
+  const action=past?'Original information':status==='Sold out'?'Event details':status==='Booking not yet open'?'Check opening date':status==='Waiting list'?'Join waiting list':v.start?'Book / check':'Arrange / check';
   const eligibility=[v.eligibleYearGroup,v.entryYear?String(v.entryYear)+' entry':'',v.eligibility].filter(Boolean).join(' · ');
   return `<div class="alternate ${past?'past-visit':''}"><div><b>${v.start?fmtDate(v.start):v.event}</b>${status?` <span class="badge">${status}</span>`:''}<span>${v.start?`${v.event} · ${fmtTime(v.start,v.end)}`:(v.note||'Flexible visit option')}</span>${eligibility?`<span>${eligibility}</span>`:''}</div>${url?`<a href="${url}" target="_blank" rel="noopener">${action} ↗</a>`:''}</div>`;
 }
