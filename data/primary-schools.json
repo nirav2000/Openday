@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-10-09",
+    "updated": "2026-11-09",
     "phase": "primary",
     "coverage": "Existing researched primary catalogue plus open Reception-capable London primary/all-through schools within 5 miles of UB5 6QX.",
     "sourceUrl": "https://www.harrow.gov.uk/downloads/file/33318/Primary_Schools_Guide_2025_26_29_Aug.pdf",
@@ -23,6 +23,31 @@
     "performanceReview": {
       "reviewed": "2026-10-09",
       "note": "Progress 8 applies to secondary schools, not primary. Primary KS2 attainment and Ofsted evidence require dated official records; no unsupported ratings are inferred."
+    },
+    "eventAudit": {
+      "reviewed": "2026-11-09",
+      "scope": "Priority upcoming and near-origin sites, plus all stored upcoming alternate visits. Undated schools remain research/TBC until official dated evidence is found.",
+      "rule": "Do not infer a new-year event from a previous-year timetable; show the next future alternate visit on Upcoming",
+      "verifiedSchoolIds": [
+        "primary-139117",
+        "aylward-primary",
+        "primary-138983",
+        "whitchurch-primary",
+        "wembley-primary",
+        "st-john-fisher-primary",
+        "earlsmead-primary",
+        "pinner-wood-primary",
+        "west-lodge-primary",
+        "pinner-park-primary",
+        "vaughan-primary",
+        "weald-rise-primary",
+        "primary-101896"
+      ],
+      "withdrawnDates": [
+        "priestmead-primary: 2027-01-12, 2027-02-02",
+        "wembley-primary: 2026-11-19",
+        "whitchurch-primary: 2026-11-09"
+      ]
     }
   },
   "schools": [
@@ -180,19 +205,25 @@
       "urn": "138983",
       "distanceMiles": 0.97,
       "distanceFromPostcode": "UB5 6QX",
-      "infoUrl": "http://www.belmore.school",
-      "bookingUrl": "http://www.belmore.school",
+      "infoUrl": "https://belmore.school/Open-Events/",
+      "bookingUrl": "https://belmore.school/Open-Events/",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception 2027 open morning",
+      "start": "2026-11-25T09:30:00+00:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 0.97 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "School homepage explicitly advertises Wednesday 25 November 2026, 09:30 for September 2027 Reception entrants; follow booking link to reserve a place.",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://belmore.school/",
+        "detail": "Homepage Open Mornings announcement names 25 Nov 2026 at 09:30; booking page provides form."
+      }
     },
     {
       "id": "primary-102377",
@@ -224,19 +255,35 @@
       "urn": "139117",
       "distanceMiles": 1.02,
       "distanceFromPostcode": "UB5 6QX",
-      "infoUrl": "https://www.brooksideprimarysch.co.uk/",
-      "bookingUrl": "https://www.brooksideprimarysch.co.uk/",
+      "infoUrl": "https://www.brooksideprimarysch.co.uk/brookside-primary-school-open-days",
+      "bookingUrl": "https://www.brooksideprimarysch.co.uk/brookside-primary-school-open-days",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception open morning",
+      "start": "2026-11-10T10:00:00+00:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 1.02 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "School-published Tuesday 10 November 2026 open morning at 10:00; Tuesday 12 January 2027 open afternoon at 16:00. Regular guided tours every Friday at 11:00, by booking.",
+      "alternateVisits": [
+        {
+          "event": "Reception open afternoon",
+          "start": "2027-01-12T16:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Tuesday 12 January 2027 · 16:00",
+          "bookingUrl": "https://www.brooksideprimarysch.co.uk/brookside-primary-school-open-days"
+        }
+      ],
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.brooksideprimarysch.co.uk/brookside-primary-school-open-days",
+        "detail": "School's dedicated 2026/27 open days page lists both dates."
+      }
     },
     {
       "id": "primary-101898",
@@ -292,8 +339,8 @@
       "id": "earlsmead-primary",
       "name": "Earlsmead Primary School",
       "area": "South Harrow",
-      "infoUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027",
-      "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027",
+      "infoUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2026",
+      "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2026",
       "type": "state",
       "entry": "Reception",
       "event": "Reception 2027 school tour",
@@ -312,7 +359,7 @@
           "end": null,
           "status": "confirmed",
           "note": "Tuesday 10 November · 1:45pm",
-          "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027"
+          "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2026"
         },
         {
           "event": "Reception 2027 school tour",
@@ -320,13 +367,19 @@
           "end": null,
           "status": "confirmed",
           "note": "Tuesday 12 January · 9:30am",
-          "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2027"
+          "bookingUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2026"
         }
       ],
       "urn": "144883",
       "postcode": "HA2 8PW",
       "distanceMiles": 1.34,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.earlsmeadprimaryschool.co.uk/page/?pid=255&title=New+Reception+Intake+2026",
+        "detail": "Despite the page URL ending in Intake+2026, its heading and content explicitly say Reception 2027 and list 10 Nov and 12 Jan."
+      }
     },
     {
       "id": "primary-139609",
@@ -583,6 +636,12 @@
         "status": "requires-policy-distance-check",
         "note": "Ealing Reception places allocated under published oversubscription criteria; straight-line proximity is not a catchment guarantee.",
         "sourceUrl": "https://durdans-park.co.uk/admissions/"
+      },
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://durdans-park.co.uk/admissions/",
+        "detail": "Previously stored current programme dates rechecked on the school's official website."
       }
     },
     {
@@ -751,11 +810,11 @@
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official admissions page says Reception tours run on Tuesdays at 9:30am, while the school's Welcome page says Mondays at 9:30am. Because the two official pages conflict, Openday is not inventing a date; contact the office to confirm the current weekly tour day.",
+      "note": "Official admissions page says Reception tours run on Tuesdays at 9:30am, while the school's Welcome page says Mondays at 9:30am. Because the two official pages conflict, Openday is not inventing a date; contact the office to confirm the current weekly tour day. No fixed currently published visit date; tour-by-arrangement availability is not equivalent to a confirmed open-day date.",
       "urn": "146782",
       "postcode": "HA2 8LS",
       "distanceMiles": 2.06,
@@ -1651,7 +1710,13 @@
       "urn": "102223",
       "postcode": "HA1 4EL",
       "distanceMiles": 2.99,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.vaughan.harrow.sch.uk/admissions",
+        "detail": "Previously stored current programme dates rechecked on the school's official website."
+      }
     },
     {
       "id": "st-georges-primary",
@@ -1775,11 +1840,11 @@
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official admissions page confirms 2027–28 prospective-parent tours and links to Eventbrite. The school page does not expose the tour dates in its page text, so the exact next date remains to be pulled from the booking listing.",
+      "note": "Official admissions page confirms 2027–28 prospective-parent tours and links to Eventbrite. The school page does not expose the tour dates in its page text, so the exact next date remains to be pulled from the booking listing. No fixed currently published visit date; tour-by-arrangement availability is not equivalent to a confirmed open-day date.",
       "urn": "102230",
       "postcode": "HA1 3BE",
       "distanceMiles": 3.18,
@@ -1845,7 +1910,7 @@
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official School Tours page lists Thursday open mornings at 9:30am for September 2027 starters; tours last about one hour and require email confirmation.",
+      "note": "School's tours page marks 19 and 26 Nov 2026 fully booked; next scheduled tour 7 Jan 2027 at 09:30 (about one hour). Email preferred date and wait for confirmation.",
       "alternateVisits": [
         {
           "event": "Reception 2027 open morning",
@@ -1876,22 +1941,38 @@
           "start": "2026-11-19T09:30:00+00:00",
           "end": "2026-11-19T10:30:00+00:00",
           "status": "confirmed",
-          "note": "Thursday 19 November · 9:30am",
-          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
+          "note": "Thursday 19 November · 9:30am · Fully booked on official school website",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/",
+          "availability": "sold-out"
         },
         {
           "event": "Reception 2027 open morning",
           "start": "2026-11-26T09:30:00+00:00",
           "end": "2026-11-26T10:30:00+00:00",
           "status": "confirmed",
-          "note": "Thursday 26 November · 9:30am",
+          "note": "Thursday 26 November · 9:30am · Fully booked on official school website",
+          "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/",
+          "availability": "sold-out"
+        },
+        {
+          "event": "Reception 2027 open morning",
+          "start": "2027-01-07T09:30:00+00:00",
+          "end": "2027-01-07T10:30:00+00:00",
+          "status": "confirmed",
+          "note": "Thursday 7 January 2027 · 09:30–about 10:30",
           "bookingUrl": "https://www.stjohnfisherschool.co.uk/school-tours/"
         }
       ],
       "urn": "146178",
       "postcode": "HA5 5RA",
       "distanceMiles": 3.21,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.stjohnfisherschool.co.uk/school-tours/",
+        "detail": "19/26 November fully booked; 7 January 2027 added."
+      }
     },
     {
       "id": "west-lodge-primary",
@@ -1963,7 +2044,13 @@
       "urn": "102216",
       "postcode": "HA5 1AF",
       "distanceMiles": 3.21,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.westlodge.harrow.sch.uk/school-tours",
+        "detail": "Previously stored current programme dates rechecked on the school's official website."
+      }
     },
     {
       "id": "primary-101888",
@@ -2695,7 +2782,13 @@
       "urn": "102207",
       "postcode": "HA5 5TL",
       "distanceMiles": 3.91,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://pinnerpark.harrow.sch.uk/admissions.html",
+        "detail": "Previously stored current programme dates rechecked on the school's official website."
+      }
     },
     {
       "id": "st-jerome-primary",
@@ -2847,7 +2940,13 @@
       "urn": "131577",
       "postcode": "HA5 3RA",
       "distanceMiles": 4.02,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.pinnerwood.harrow.sch.uk/page/come-visit-us/125127",
+        "detail": "Previously stored current programme dates rechecked on the school's official website."
+      }
     },
     {
       "id": "primary-101497",
@@ -3081,11 +3180,11 @@
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "The official Primary page currently advertises bookable Open Morning Tours, but the public page text does not expose the session dates. Openday keeps this as a confirmed visit option without inventing a date.",
+      "note": "The official Primary page currently advertises bookable Open Morning Tours, but the public page text does not expose the session dates. Openday keeps this as a confirmed visit option without inventing a date. No fixed currently published visit date; tour-by-arrangement availability is not equivalent to a confirmed open-day date.",
       "urn": "141071",
       "postcode": "HA3 5RQ",
       "distanceMiles": 4.35,
@@ -3103,11 +3202,11 @@
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "The official admissions page says parents can make an appointment through the school office to attend an Open Morning for a school tour. No fixed current Reception 2027 date is published on that page.",
+      "note": "The official admissions page says parents can make an appointment through the school office to attend an Open Morning for a school tour. No fixed current Reception 2027 date is published on that page. No fixed currently published visit date; tour-by-arrangement availability is not equivalent to a confirmed open-day date.",
       "urn": "102211",
       "postcode": "HA3 8LU",
       "distanceMiles": 4.37,
@@ -3326,7 +3425,7 @@
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Tours begin at 9:30am. The school asks families to contact the school office to book.",
+      "note": "Tours begin at 9:30am. The school asks families to contact the school office to book. School's 2027 Reception open-days page ends with Tuesday 17 November 2026; 19 November was not listed and has been removed.",
       "alternateVisits": [
         {
           "event": "EYFS Open Day",
@@ -3375,20 +3474,18 @@
           "status": "confirmed",
           "note": "Tuesday 17 November · tour begins 9:30am",
           "bookingUrl": "https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027"
-        },
-        {
-          "event": "EYFS Open Day",
-          "start": "2026-11-19T09:30:00+00:00",
-          "end": null,
-          "status": "confirmed",
-          "note": "Thursday 19 November · tour begins 9:30am",
-          "bookingUrl": "https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027"
         }
       ],
       "urn": "130095",
       "postcode": "HA9 7NW",
       "distanceMiles": 4.57,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.wembleyprimary.co.uk/parents/new-reception-parents-2027",
+        "detail": "Nov 17 confirmed; Nov 19 unsupported and removed."
+      }
     },
     {
       "id": "primary-139275",
@@ -3706,29 +3803,26 @@
       "bookingUrl": "https://www.priestmead.theppt.co.uk/admissions-join-us/",
       "type": "state",
       "entry": "Reception",
-      "event": "Prospective parent/carer tour",
-      "start": "2027-01-12T09:00:00+00:00",
-      "end": "2027-01-12T10:00:00+00:00",
+      "event": "Prospective parent/carer tours — 2027 dates not published",
+      "start": null,
+      "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official admissions page lists Monday tours from 9–10am. All listed autumn 2026 dates are currently marked full; Monday 12 January has limited availability and Monday 2 February is also listed.",
-      "alternateVisits": [
-        {
-          "event": "Prospective parent/carer tour",
-          "start": "2027-02-02T09:00:00+00:00",
-          "end": "2027-02-02T10:00:00+00:00",
-          "status": "confirmed",
-          "note": "Monday 2 February · 9–10am",
-          "bookingUrl": "https://www.priestmead.theppt.co.uk/admissions-join-us/"
-        }
-      ],
+      "note": "Official tour list is from the September 2026 Reception intake (Mondays 12 January and 2 February were in 2026, not 2027). Earlier purported 12 Jan/2 Feb 2027 entries have been withdrawn. Ask school about current 2027-intake tour dates.",
+      "alternateVisits": [],
       "urn": "146750",
       "postcode": "HA3 8SZ",
       "distanceMiles": 4.94,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "old-year-page-not-current-date-evidence",
+        "sourceUrl": "https://www.priestmead.theppt.co.uk/admissions-join-us/",
+        "detail": "12 Jan and 2 Feb on page are Mondays in 2026, Tuesdays in 2027; page describes September 2026 Reception applications."
+      }
     },
     {
       "id": "primary-101875",
@@ -3892,7 +3986,13 @@
       "urn": "102215",
       "postcode": "HA3 7DH",
       "distanceMiles": 5.12,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.wealdrise.harrow.sch.uk/Open-Event-Experience/",
+        "detail": "Previously stored current programme dates rechecked on the school's official website."
+      }
     },
     {
       "id": "hujjat-primary",
@@ -3950,11 +4050,11 @@
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "The school's official home page says prospective families are welcome to look around and should phone the office (020 8204 6294) to arrange a visit. No fixed 2027 Year 3 open-event date is currently published.",
+      "note": "The school's official home page says prospective families are welcome to look around and should phone the office (020 8204 6294) to arrange a visit. No fixed 2027 Year 3 open-event date is currently published. No fixed currently published visit date; tour-by-arrangement availability is not equivalent to a confirmed open-day date.",
       "urn": "102193",
       "postcode": "HA3 9JA",
       "distanceMiles": 5.44,
@@ -4020,7 +4120,7 @@
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official Open Days and School Tours page lists three 2027-entry tours, each from 9:15–10:15am.",
+      "note": "Official 2027-entry tours are 13 Oct (full), 20 Oct and Monday 30 Nov 2026, 09:15–10:15. An earlier 9 Nov listing was a transcription error and has been corrected.",
       "alternateVisits": [
         {
           "event": "Nursery/Reception 2027 open day & school tour",
@@ -4032,17 +4132,23 @@
         },
         {
           "event": "Nursery/Reception 2027 open day & school tour",
-          "start": "2026-11-09T09:15:00+00:00",
-          "end": "2026-11-09T10:15:00+00:00",
+          "start": "2026-11-30T09:15:00+00:00",
+          "end": "2026-11-30T10:15:00+00:00",
           "status": "confirmed",
-          "note": "Monday 9 November · 9:15–10:15am",
+          "note": "Monday 30 November · 09:15–10:15, from school's 2027-entry open days page",
           "bookingUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours"
         }
       ],
       "urn": "131316",
       "postcode": "HA7 2EQ",
       "distanceMiles": 5.89,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.whitchurchprimary.harrow.sch.uk/page/open-days-and-school-tours",
+        "detail": "Nov 9 replaced by school's stated Nov 30 date."
+      }
     },
     {
       "id": "camrose-primary",
@@ -4078,11 +4184,11 @@
       "start": null,
       "end": null,
       "lastKnownStart": null,
-      "status": "confirmed",
+      "status": "research",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "The official school homepage invites prospective families to book a visit or attend an open day. No exact current Reception 2027 session date is exposed in the indexed page, so Openday does not invent one.",
+      "note": "The official school homepage invites prospective families to book a visit or attend an open day. No exact current Reception 2027 session date is exposed in the indexed page, so Openday does not invent one. No fixed currently published visit date; tour-by-arrangement availability is not equivalent to a confirmed open-day date.",
       "urn": "145142",
       "postcode": "HA7 3JB",
       "distanceMiles": 6.19,
@@ -4136,23 +4242,39 @@
       "id": "aylward-primary",
       "name": "Aylward Primary School",
       "area": "Stanmore",
-      "infoUrl": "https://www.aylwardschool.org.uk/admissions/",
-      "bookingUrl": "https://www.aylwardschool.org.uk/admissions/",
+      "infoUrl": "https://www.aylwardschool.org.uk/school-tours/",
+      "bookingUrl": "https://www.aylwardschool.org.uk/school-tours/",
       "type": "state",
       "entry": "Reception",
-      "event": "School tour by arrangement",
-      "start": null,
-      "end": null,
+      "event": "Prospective families open morning",
+      "start": "2026-11-17T09:30:00+00:00",
+      "end": "2026-11-17T12:00:00+00:00",
       "lastKnownStart": null,
       "status": "confirmed",
       "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Official 2027 admissions page confirms school tours are available; contact the school office or use the admissions form to arrange a visit. No fixed public tour date is listed.",
+      "note": "Official Open Morning Tuesday 17 Nov 2026 09:30–12:00; a further school tour is listed Tuesday 1 Dec 2026 at 09:30 (available).",
       "urn": "140657",
       "postcode": "HA7 4RE",
       "distanceMiles": 6.54,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "alternateVisits": [
+        {
+          "event": "Prospective family school tour",
+          "start": "2026-12-01T09:30:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Tuesday 1 December · 09:30, available when checked; finish time not published",
+          "bookingUrl": "https://www.aylwardschool.org.uk/school-tours/"
+        }
+      ],
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.aylwardschool.org.uk/school-tours/",
+        "detail": "Both November open morning and December tour on the school tours page."
+      }
     },
     {
       "id": "glebe-primary",
