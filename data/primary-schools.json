@@ -27,7 +27,7 @@
     "eventAudit": {
       "reviewed": "2026-11-09",
       "scope": "Priority upcoming and near-origin sites, plus all stored upcoming alternate visits. Undated schools remain research/TBC until official dated evidence is found.",
-      "rule": "Do not infer a new-year event from a previous-year timetable; show the next future alternate visit on Upcoming",
+      "rule": "Use exact published dates only; historical school page not enough to assert current booking availability; conflicting published year labels remain unverified.",
       "verifiedSchoolIds": [
         "primary-139117",
         "aylward-primary",
@@ -41,7 +41,10 @@
         "pinner-park-primary",
         "vaughan-primary",
         "weald-rise-primary",
-        "primary-101896"
+        "primary-101896",
+        "primary-139909",
+        "primary-141561",
+        "cannon-lane-primary"
       ],
       "withdrawnDates": [
         "priestmead-primary: 2027-01-12, 2027-02-02",
@@ -982,19 +985,35 @@
       "urn": "139909",
       "distanceMiles": 2.2,
       "distanceFromPostcode": "UB5 6QX",
-      "infoUrl": "https://www.hewensprimaryschool.co.uk/",
-      "bookingUrl": "https://www.hewensprimaryschool.co.uk/",
+      "infoUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days",
+      "bookingUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception open morning",
+      "start": "2026-11-19T10:00:00+00:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 2.2 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "Trust official 2026–27 Open Days lists Hewens Primary Thursday 19 November 2026 at 10am and Monday 18 January 2027 at 4pm.",
+      "alternateVisits": [
+        {
+          "event": "Reception open afternoon",
+          "start": "2027-01-18T16:00:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Monday 18 January 2027 · 16:00",
+          "bookingUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days"
+        }
+      ],
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-academy-trust-page",
+        "sourceUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days",
+        "detail": "Both 19 Nov 2026 and 18 Jan 2027 sessions published."
+      }
     },
     {
       "id": "primary-101891",
@@ -1070,19 +1089,25 @@
       "urn": "141561",
       "distanceMiles": 2.25,
       "distanceFromPostcode": "UB5 6QX",
-      "infoUrl": "https://www.therosedalehewensacademytrust.co.uk/",
-      "bookingUrl": "https://www.therosedalehewensacademytrust.co.uk/",
+      "infoUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days",
+      "bookingUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception open morning",
+      "start": "2026-11-09T09:30:00+00:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Added from the London school-location register because it is approximately 2.25 miles straight-line from UB5 6QX. Current Reception 2027 tour/open-event details are being researched on the school website."
+      "note": "Trust official schedule lists Monday 9 November 2026, 09:30. Other dates on the same trust page have contradictory year/weekday text and are not treated as confirmed.",
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-academy-trust-page",
+        "sourceUrl": "https://www.therosedalehewensacademytrust.co.uk/visit-us-on-our-open-days",
+        "detail": "Monday 9 Nov 2026 confirmed; source contains inconsistencies on other dates."
+      }
     },
     {
       "id": "primary-101920",
@@ -1198,23 +1223,39 @@
       "id": "cannon-lane-primary",
       "name": "Cannon Lane Primary School",
       "area": "Pinner",
-      "infoUrl": "https://www.cannonlaneprimary.org",
-      "bookingUrl": "https://www.cannonlaneprimary.org",
+      "infoUrl": "https://www.cannonlaneprimary.org/admissions/",
+      "bookingUrl": "https://www.cannonlaneprimary.org/admissions/",
       "type": "state",
       "entry": "Reception",
-      "event": "Reception open day / school tour",
-      "start": null,
+      "event": "Reception 2027 open day",
+      "start": "2026-11-10T09:30:00+00:00",
       "end": null,
       "lastKnownStart": null,
-      "status": "research",
-      "bookingRequired": null,
+      "status": "confirmed",
+      "bookingRequired": true,
       "priority": 3,
       "journey": null,
-      "note": "Current open-event date is being checked daily. If the current year's date is not published, the tracker will show the most recent previous-year date once found.",
+      "note": "School officially lists Tuesday 10 November 2026 at 09:30 and 13:45. Booking links are on the school admissions page; do not use a generic forms.gle link.",
       "urn": "102204",
       "postcode": "HA5 1TS",
       "distanceMiles": 2.47,
-      "distanceFromPostcode": "UB5 6QX"
+      "distanceFromPostcode": "UB5 6QX",
+      "alternateVisits": [
+        {
+          "event": "Reception 2027 open day",
+          "start": "2026-11-10T13:45:00+00:00",
+          "end": null,
+          "status": "confirmed",
+          "note": "Tuesday 10 November 2026 · 13:45, separate official booking form accessible on the school website",
+          "bookingUrl": "https://www.cannonlaneprimary.org/admissions/"
+        }
+      ],
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.cannonlaneprimary.org/admissions/",
+        "detail": "Two Tuesday Nov 10 2026 sessions 09:30 and 13:45; 2027 Reception intake."
+      }
     },
     {
       "id": "grange-primary",
