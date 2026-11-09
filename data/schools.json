@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-10-15",
+    "updated": "2026-11-09",
     "entryYear": 2028,
     "note": "Times and booking availability can change. Always re-check the school page before travelling. The 5 Oct 2026 research pass widened event types to include open evenings, school-in-action visits, tours and scholarship information events.",
     "admissionNote": "Dates labelled not published are planning windows, not confirmed deadlines. Re-check the linked official page.",
@@ -292,7 +292,21 @@
       "entry13Plus": "September 2030"
     },
     "searchOrigin": "Harrow",
-    "privacyNote": "Anonymous example profile: Year 5 in 2026/27. Harrow is the search origin, not a stored residential address. No child name or current school is stored."
+    "privacyNote": "Anonymous example profile: Year 5 in 2026/27. Harrow is the search origin, not a stored residential address. No child name or current school is stored.",
+    "eventAudit": {
+      "reviewed": "2026-11-09",
+      "scope": "Upcoming dates and selected school-published event pages; historic dates not comprehensively revalidated",
+      "rule": "Confirmed requires a date displayed on the school site, not just a reachable generic admissions link",
+      "removedUnsubstantiatedEvents": [
+        "winchester-nov: 2026-11-12",
+        "winchester-dec: 2026-12-04"
+      ],
+      "officialSources": [
+        "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+        "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/",
+        "https://www.millhill.org.uk/admissions/open-days-and-visits"
+      ]
+    }
   },
   "schools": [
     {
@@ -690,7 +704,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/",
       "bookingUrl": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/",
-      "note": "Confirmed date; precise start time is not published on the page. High Master talk and pupil-led tour.",
+      "note": "Confirmed date; precise start time is not published on the page. High Master talk and pupil-led tour. As at 9 Nov 2026, the school says the next 13+ Open Day is in September 2027 (exact date not yet published); Spring/Summer 2027 weekday visit bookings are expected to open early 2027.",
       "admission": {
         "route": "13+ · September 2030 entry",
         "deadline": null,
@@ -721,7 +735,9 @@
         "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
         "sourceUrl": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/important-dates/",
         "checked": "2026-09-16"
-      }
+      },
+      "nextOpenDayWindow": "2027-09",
+      "nextOpenDaySourceUrl": "https://www.stpaulsschool.org.uk/admissions/entry-to-st-pauls-13/open-days/"
     },
     {
       "id": "st-margarets",
@@ -1071,7 +1087,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.mtsn.org.uk/admissions/book-a-visit/",
       "bookingUrl": "https://www.mtsn.org.uk/admissions/book-a-visit/",
-      "note": "Core nearby independent option. Exact session time to confirm.",
+      "note": "Core nearby independent option. Exact session time to confirm. Official school page offers individual term-time tours through its booking form. Next whole-school 11+ open morning date not confirmed in the current source.",
       "admission": {
         "route": "11+ · September 2028 entry",
         "deadline": "2027-10-31",
@@ -1118,7 +1134,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.millhill.org.uk/admissions/open-days-and-visits",
       "bookingUrl": "https://www.millhill.org.uk/admissions/open-days-and-visits",
-      "note": "Practical geographically; exact time to confirm.",
+      "note": "Practical geographically; exact time to confirm. School's next Open Morning is in May 2027, but no fixed date is published. Midweek Tour & Talks run 09:15–approximately 11:00 by booking.",
       "admission": {
         "route": "13+ · September 2030 entry",
         "deadline": null,
@@ -1149,7 +1165,9 @@
         "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
         "sourceUrl": "https://www.millhill.org.uk/admissions/",
         "checked": "2026-09-16"
-      }
+      },
+      "nextOpenDayWindow": "2027-05",
+      "nextOpenDaySourceUrl": "https://www.millhill.org.uk/admissions/open-days-and-visits"
     },
     {
       "id": "john-lyon",
@@ -1492,11 +1510,11 @@
       "event": "13+ Open Day",
       "start": "2026-10-03T09:15:00+01:00",
       "end": "2026-10-03T13:30:00+01:00",
-      "status": "confirmed",
+      "status": "reported",
       "bookingRequired": true,
       "infoUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
       "bookingUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
-      "note": "Boarding makes the longer journey less relevant day-to-day.",
+      "note": "Historical 3 October 2026 event: date-specific official evidence not retrieved in the 9 Nov 2026 review. Do not present as verified.",
       "admission": {
         "route": "13+ · September 2030 entry",
         "deadline": "2027-10-01",
@@ -1526,6 +1544,11 @@
         "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
         "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
         "checked": "2026-09-16"
+      },
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "not-confirmed-retrospectively",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/"
       }
     },
     {
@@ -1772,100 +1795,6 @@
       }
     },
     {
-      "id": "winchester-nov",
-      "name": "Winchester College",
-      "type": "independent",
-      "area": "Winchester",
-      "journey": 95,
-      "priority": 4,
-      "entry": "13+",
-      "event": "13+ Open Morning",
-      "start": "2026-11-12T10:00:00Z",
-      "end": "2026-11-12T12:45:00Z",
-      "status": "confirmed",
-      "bookingRequired": true,
-      "infoUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
-      "bookingUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
-      "note": "Good alternative to the Saturday open day.",
-      "admission": {
-        "route": "13+ · September 2030 entry",
-        "deadline": "2027-10-01",
-        "summary": "Before 1 Oct 2027 — recommended registration",
-        "status": "published-rule",
-        "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
-        "note": "Winchester encourages families to register before 1 October of Year 6."
-      },
-      "linkChecks": {
-        "infoUrl": {
-          "checked": "2026-09-16",
-          "status": "retrieved"
-        },
-        "bookingUrl": {
-          "checked": "2026-09-16",
-          "status": "retrieved"
-        },
-        "admission": {
-          "checked": "2026-09-16",
-          "status": "search-confirmed"
-        }
-      },
-      "academic": {
-        "summary": "CAT / numerical cutoff not verified",
-        "kind": "not-published-or-unverified",
-        "cycle": "Check the policy for the selected cohort’s entry year",
-        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
-        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
-        "checked": "2026-09-16"
-      }
-    },
-    {
-      "id": "winchester-dec",
-      "name": "Winchester College",
-      "type": "independent",
-      "area": "Winchester",
-      "journey": 95,
-      "priority": 4,
-      "entry": "13+",
-      "event": "13+ Open Morning",
-      "start": "2026-12-04T10:00:00Z",
-      "end": "2026-12-04T12:45:00Z",
-      "status": "confirmed",
-      "bookingRequired": true,
-      "infoUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
-      "bookingUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
-      "note": "Latest published 2026 13+ visit.",
-      "admission": {
-        "route": "13+ · September 2030 entry",
-        "deadline": "2027-10-01",
-        "summary": "Before 1 Oct 2027 — recommended registration",
-        "status": "published-rule",
-        "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
-        "note": "Winchester encourages families to register before 1 October of Year 6."
-      },
-      "linkChecks": {
-        "infoUrl": {
-          "checked": "2026-09-16",
-          "status": "retrieved"
-        },
-        "bookingUrl": {
-          "checked": "2026-09-16",
-          "status": "retrieved"
-        },
-        "admission": {
-          "checked": "2026-09-16",
-          "status": "search-confirmed"
-        }
-      },
-      "academic": {
-        "summary": "CAT / numerical cutoff not verified",
-        "kind": "not-published-or-unverified",
-        "cycle": "Check the policy for the selected cohort’s entry year",
-        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
-        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
-        "checked": "2026-09-16"
-      }
-    },
-    {
       "id": "westminster",
       "name": "Westminster School",
       "type": "independent",
@@ -1928,7 +1857,7 @@
       "bookingRequired": true,
       "infoUrl": "https://www.harrowschool.org.uk/admissions/year-9-entry",
       "bookingUrl": "https://www.harrowschool.org.uk/admissions/book-an-open-morning",
-      "note": "Open mornings are normally 09:00–13:00. Register by 1 July of Year 5 for standard 13+ route; for the applicant, check 1 July 2027.",
+      "note": "Open mornings are normally 09:00–13:00. Register by 1 July of Year 5 for standard 13+ route; for the applicant, check 1 July 2027. Official Harrow School site offers 12 open mornings per academic year, 09:00–13:00. No specific future date was verified in this research pass.",
       "admission": {
         "route": "13+ · September 2030 entry",
         "deadline": "2027-07-01",
@@ -2903,6 +2832,166 @@
           "checked": "2026-10-15",
           "status": "official-homepage"
         }
+      }
+    },
+    {
+      "id": "winchester-2027-jan21",
+      "name": "Winchester College",
+      "type": "independent",
+      "area": "Winchester",
+      "journey": 95,
+      "priority": 4,
+      "entry": "13+",
+      "event": "13+ Open Morning",
+      "start": "2027-01-21T09:30:00+00:00",
+      "end": "2027-01-21T12:00:00+00:00",
+      "status": "confirmed",
+      "bookingRequired": true,
+      "infoUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+      "bookingUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+      "note": "Official 13+ Open Morning; booking through the school's visit form.",
+      "admission": {
+        "route": "13+ · September 2030 entry",
+        "deadline": "2027-10-01",
+        "summary": "Before 1 Oct 2027 — recommended registration",
+        "status": "published-rule",
+        "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "note": "Winchester encourages families to register before 1 October of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "checked": "2026-09-16"
+      },
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+        "detail": "School-published upcoming 13+ event"
+      }
+    },
+    {
+      "id": "winchester-2027-feb11",
+      "name": "Winchester College",
+      "type": "independent",
+      "area": "Winchester",
+      "journey": 95,
+      "priority": 4,
+      "entry": "13+",
+      "event": "13+ Open Day — families overseas",
+      "start": "2027-02-11",
+      "end": null,
+      "status": "confirmed",
+      "bookingRequired": true,
+      "infoUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+      "bookingUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+      "note": "School explicitly states this event is for families with children at schools overseas. Session hours were not separately confirmed; verify suitability and timing.",
+      "admission": {
+        "route": "13+ · September 2030 entry",
+        "deadline": "2027-10-01",
+        "summary": "Before 1 Oct 2027 — recommended registration",
+        "status": "published-rule",
+        "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "note": "Winchester encourages families to register before 1 October of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "checked": "2026-09-16"
+      },
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+        "detail": "School-published upcoming 13+ event"
+      },
+      "eligibility": "For families with children at school overseas"
+    },
+    {
+      "id": "winchester-2027-mar6",
+      "name": "Winchester College",
+      "type": "independent",
+      "area": "Winchester",
+      "journey": 95,
+      "priority": 4,
+      "entry": "13+",
+      "event": "13+ Open Morning",
+      "start": "2027-03-06T09:30:00+00:00",
+      "end": "2027-03-06T12:00:00+00:00",
+      "status": "confirmed",
+      "bookingRequired": true,
+      "infoUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+      "bookingUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+      "note": "Official 13+ Open Morning; booking through the school's visit form.",
+      "admission": {
+        "route": "13+ · September 2030 entry",
+        "deadline": "2027-10-01",
+        "summary": "Before 1 Oct 2027 — recommended registration",
+        "status": "published-rule",
+        "url": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "note": "Winchester encourages families to register before 1 October of Year 6."
+      },
+      "linkChecks": {
+        "infoUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "bookingUrl": {
+          "checked": "2026-09-16",
+          "status": "retrieved"
+        },
+        "admission": {
+          "checked": "2026-09-16",
+          "status": "search-confirmed"
+        }
+      },
+      "academic": {
+        "summary": "CAT / numerical cutoff not verified",
+        "kind": "not-published-or-unverified",
+        "cycle": "Check the policy for the selected cohort’s entry year",
+        "detail": "No reliable published CAT minimum or fixed entrance-test percentage was established in this review. Ask admissions about the relevant 11+ or 13+ route; tests, interviews and school reports may be considered. A suggested CAT target is not a school pass mark.",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/joining-in-year-9-13/",
+        "checked": "2026-09-16"
+      },
+      "dateVerification": {
+        "checked": "2026-11-09",
+        "level": "date-on-official-school-page",
+        "sourceUrl": "https://www.winchestercollege.org/admissions/visit-us/book-a-13-open-event/",
+        "detail": "School-published upcoming 13+ event"
       }
     }
   ]
