@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.27.1 — 2026-11-09
+
+- Audited both senior and primary event catalogues, including recorded alternate visits, against available official school evidence. Missing dates remain unknown instead of being guessed.
+- Winchester College: recovered its historical official dates for 3 October, 12 November and 4 December 2026. Restored November/December event IDs and recorded their dates as previously published but no longer listed for booking (without assuming cancellation). Added the school-published 21 January, 11 February (overseas families), and 6 March 2027 visits.
+- Added official 2026/27 visits for Cannon Lane, Brookside, Aylward, Belmore, Hewens and Rosedale primary schools. Corrected mistakes at Whitchurch, Wembley and Priestmead, and rechecked other upcoming primary tours.
+- The Upcoming list, school cards and monthly calendar now include a school's future alternative dates after its first stored visit has passed, rather than hiding the school. Calendar downloads use the selected session and a date-qualified UID.
+- Show dated source provenance on each reviewed school visit; label sold-out sessions in the booking card. Preserve existing school-level notes and historical event IDs.
+- Added release-gate regression tests for dates, official evidence, school IDs, prior-year mistakes and future alternate-visit rendering.
+
 ## 2.25.1 — 2026-10-15
 
 - Added University College School (UCS), Hampstead, to the senior-school catalogue.
