@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.27.2 — 2026-11-10
+
+- Added direct primary school comparison for two to five selected schools with shareable deep links and a nearest-five quick start.
+- Added academic-year-matched KS2 attainment, subject breakdowns, historical figures, cohort sizes, disadvantaged/EAL/SEN context, distance and source links; missing and suppressed values remain unavailable.
+- Enabled year-specific sorting on the 175-school primary performance table and surfaced verification-pending records.
+- Added the published 2025/26 provisional national benchmarks (63% expected, 9% higher), with a clear warning that individual 2025/26 school results are scheduled for December 2026.
+- Linked the comparison from the primary schools open-day view and added desktop/mobile release-gate coverage.
+
+
 ## 2.27.1 — 2026-11-09
 
 - Audited both senior and primary event catalogues, including recorded alternate visits, against available official school evidence. Missing dates remain unknown instead of being guessed.

@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s);
 const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const percent=v=>Number.isFinite(v)?v+'%':'—';
-const NATIONAL={'2024/25':{combinedExpected:62,combinedHigher:8,readingExpected:75,writingExpected:72,mathsExpected:74,gpsExpected:73,scienceExpected:82},'2023/24':{combinedExpected:61,combinedHigher:8}};
+const NATIONAL={'2025/26':{combinedExpected:63,combinedHigher:9,readingExpected:75,writingExpected:73,mathsExpected:75,gpsExpected:74,scienceExpected:82},'2024/25':{combinedExpected:62,combinedHigher:8,readingExpected:75,writingExpected:72,mathsExpected:74,gpsExpected:73,scienceExpected:82},'2023/24':{combinedExpected:61,combinedHigher:8}};
 const HELP={combinedExpected:'Percentage of Year 6 pupils who met the expected standard in reading, writing AND maths. Reading and maths require scaled score 100+; writing uses teacher assessment.',combinedHigher:'Percentage meeting higher standard in reading and maths (110+) and greater depth in writing.',readingExpected:'Percentage achieving a scaled score of at least 100 in reading.',writingExpected:'Percentage assessed at expected standard or greater depth in writing.',mathsExpected:'Percentage achieving a scaled score of at least 100 in maths.'};
 let schools=[],schoolResults={},context={},chosen=null,selectedYear=null;
 const query=new URLSearchParams(location.search).get('school')||'';
@@ -38,6 +38,49 @@ function detail(s){chosen=s;const all=years(s),year=all.includes(selectedYear)?s
 const subjects=[['Reading','readingExpected'],['Writing','writingExpected'],['Maths','mathsExpected'],['Grammar & spelling','gpsExpected'],['Science','scienceExpected']].map(([name,key])=>'<div class="subject-card"><span>'+escapeHTML(name)+'</span><strong>'+percent(v[key])+'</strong><small>'+escapeHTML(deltaText(v[key],key,year))+'</small></div>').join('');
 $('#detail').innerHTML='<article class="school-detail"><div class="detail-heading"><div><span class="eyebrow">SCHOOL PROFILE · '+escapeHTML(s.area||'ENGLAND')+'</span><h2>'+escapeHTML(s.name)+'</h2><div class="detail-meta">URN '+escapeHTML(s.urn||'Not recorded')+' · '+escapeHTML(year||'No published assessment year')+'</div></div><label>Academic year <select id="year-picker" class="year-picker">'+all.map(y=>'<option value="'+escapeHTML(y)+'" '+(y===year?'selected':'')+'>'+escapeHTML(y)+'</option>').join('')+'</select></label></div><div class="result-grid">'+scoreCard('COMBINED EXPECTED','combinedExpected',year,v,true)+scoreCard('COMBINED HIGHER','combinedHigher',year,v,false)+'</div><div class="detail-columns"><section class="detail-panel"><h3>Year 6 cohort & pupil intake</h3><p>For the same academic year, where official information is available.</p><div class="context-grid">'+contextCard('Eligible Year 6 pupils',Number.isFinite(cohort)?cohort:'—')+contextCard('Disadvantaged pupils',percent(disadv))+contextCard('English as additional language',percent(eal))+contextCard('SEN support',percent(sen))+contextCard('Education, health & care plan',percent(ehcp))+contextCard('Whole school pupils',Number.isFinite(ctx.wholeSchoolPupils)?ctx.wholeSchoolPupils:'—')+'</div><p class="context-note">'+(Number.isFinite(cohort)?'In this cohort, one pupil represents approximately '+(100/cohort).toFixed(1)+' percentage points.':'Cohort size has not yet been published in the imported data.')+' Pupil characteristics are context, not adjusted school scores or judgements about children.</p>'+(ctx.sourceUrl?'<a href="'+escapeHTML(ctx.sourceUrl)+'" target="_blank" rel="noopener">Official cohort source ↗</a>':'<small>Official cohort backfill pending or unavailable.</small>')+'</section><section class="detail-panel"><h3>How results have changed</h3><p>Combined expected standard across available years. Small cohorts can cause larger swings.</p>'+sparkline(s)+'<p class="context-note">Direction uses a ±5 percentage-point visual threshold; it is not a statistical significance test.</p>'+cohortTrend(s)+historyChart(s)+'<p class="context-note">'+escapeHTML(rankingText||'No comparable school-group ranking available for this year.')+'</p></section></div><div class="subheading">Results by subject</div><div class="subject-grid">'+subjects+'</div><details class="explain"><summary>How to interpret these results and sources</summary><p>Percentages show the proportion of eligible Year 6 pupils meeting the standard, not an individual pupil’s test mark. Expected reading/maths means scaled score 100+; higher means 110+. Writing is teacher-assessed. Combined scores require all three subjects. Compare like-for-like years and consider cohort size, deprivation, EAL and SEN alongside outcomes; none of these alone determines school quality. DfE suppression codes and unavailable fields are not zeros.</p>'+sources.map(url=>'<p><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener">View published source ↗</a></p>').join('')+'</details></article>';
 const select=$('#year-picker');if(select)select.onchange=next=>{selectedYear=next.target.value;detail(s)};}
-function render(){const q=$('#search').value.toLowerCase().trim();const matches=schools.filter(s=>(s.name+' '+s.area+' '+s.urn).toLowerCase().includes(q));$('#status').textContent=matches.length+' of '+schools.length+' tracked primary schools · '+schools.filter(s=>years(s).length).length+' with recorded results';$('#rows').innerHTML=matches.map(s=>{const {year,value}=latest(s),ctx=schoolContext(s,year);const delta=difference(value.combinedExpected,'combinedExpected',year);return '<tr><td><button data-id="'+escapeHTML(s.id)+'">'+escapeHTML(s.name)+'</button></td><td>'+escapeHTML(s.area||'—')+'</td><td>'+escapeHTML(year||'—')+'</td><td><b>'+percent(value.combinedExpected)+'</b><small class="'+(delta!==null&&delta<0?'negative':'positive')+'">'+escapeHTML(deltaText(value.combinedExpected,'combinedExpected',year))+'</small></td><td><b>'+percent(value.combinedHigher)+'</b></td><td>'+escapeHTML(Number.isFinite(ctx.eligibleYear6)?ctx.eligibleYear6:'—')+'</td><td>'+sparkline(s,'combinedExpected',true)+'</td></tr>'}).join('');$('#rows').querySelectorAll('button').forEach(btn=>btn.onclick=()=>{const s=schools.find(x=>x.id===btn.dataset.id);if(!s)return;selectedYear=null;window.history.replaceState(null,'','?school='+encodeURIComponent(s.name));detail(s);$('#detail').scrollIntoView({block:'start',behavior:'smooth'})})}
-Promise.all([fetch('data/primary-schools.json').then(r=>{if(!r.ok)throw Error('School list unavailable');return r.json()}),fetch('data/primary-performance.json').then(r=>{if(!r.ok)throw Error('KS2 results unavailable');return r.json()}),fetch('data/primary-cohort-context.json').then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}}))]).then(([catalog,results,cohorts])=>{schools=catalog.schools||[];schoolResults=results.schools||{};context=cohorts.schools||{};if(query){const s=schools.find(x=>x.name.toLowerCase()===query.toLowerCase()||x.id===query||String(x.urn)===query);if(s){$('#search').value=s.name;render();detail(s);return}}render()}).catch(error=>{$('#status').textContent='Unable to load school data: '+error.message});const search=$('#search');const clear=$('#clearSearch');function resetSearch(){if(!search.value)return;search.value='';render();}search.addEventListener('focus',resetSearch);search.addEventListener('input',render);clear.addEventListener('click',()=>{resetSearch();search.focus();});
+function render(){
+ const year=$('#primaryYear')?.value||'2024/25';
+ const sort=$('#primarySort')?.value||'distance';
+ const q=$('#search').value.toLowerCase().trim();
+ const matches=schools.filter(s=>(s.name+' '+s.area+' '+s.urn).toLowerCase().includes(q));
+ const score=(s,key)=>record(s).years?.[year]?.[key];
+ matches.sort((a,b)=>{
+  if(sort==='name')return a.name.localeCompare(b.name);
+  if(sort==='distance'){
+   const da=Number.isFinite(a.distanceMiles)?a.distanceMiles:Infinity;
+   const db=Number.isFinite(b.distanceMiles)?b.distanceMiles:Infinity;
+   return da-db||a.name.localeCompare(b.name);
+  }
+  const key=sort==='expected'?'combinedExpected':sort==='higher'?'combinedHigher':'eligibleYear6';
+  const av=key==='eligibleYear6'?schoolContext(a,year).eligibleYear6:score(a,key);
+  const bv=key==='eligibleYear6'?schoolContext(b,year).eligibleYear6:score(b,key);
+  return (Number.isFinite(bv)?bv:-Infinity)-(Number.isFinite(av)?av:-Infinity)||a.name.localeCompare(b.name);
+ });
+ const covered=schools.filter(s=>years(s).length).length;
+ $('#status').textContent=matches.length+' of '+schools.length+' tracked primary schools · '+covered+' with recorded results · showing '+year+' only';
+ $('#rows').innerHTML=matches.map(s=>{
+  const value=record(s).years?.[year]||{},ctx=schoolContext(s,year);
+  const delta=difference(value.combinedExpected,'combinedExpected',year);
+  const schoolId=String(s.urn||s.id);
+  const canCompare=years(s).length>0;
+  const isChecked=window.OpenDayPrimaryCompare?.isSelected(schoolId)||false;
+  const dist=Number.isFinite(s.distanceMiles)?s.distanceMiles.toFixed(2)+' mi':'—';
+  const verify=String(value.verification||'').toLowerCase().includes('pending')?'<small class="verification-note">Verification pending</small>':'';
+  return '<tr><td class="choose-cell"><input type="checkbox" data-compare="'+escapeHTML(schoolId)+'" aria-label="Compare '+escapeHTML(s.name)+'" '+(isChecked?'checked ':'')+(canCompare?'':'disabled title="No KS2 data available"')+'></td><td><button data-id="'+escapeHTML(s.id)+'">'+escapeHTML(s.name)+'</button>'+verify+'</td><td>'+escapeHTML(s.area||'—')+'</td><td>'+escapeHTML(dist)+'</td><td>'+escapeHTML(year)+'</td><td><b>'+percent(value.combinedExpected)+'</b><small class="'+(delta!==null&&delta<0?'negative':'positive')+'">'+escapeHTML(deltaText(value.combinedExpected,'combinedExpected',year))+'</small></td><td><b>'+percent(value.combinedHigher)+'</b></td><td>'+escapeHTML(Number.isFinite(ctx.eligibleYear6)?ctx.eligibleYear6:'—')+'</td><td>'+sparkline(s,'combinedExpected',true)+'</td></tr>';
+ }).join('');
+ $('#rows').querySelectorAll('button[data-id]').forEach(btn=>btn.onclick=()=>{
+  const s=schools.find(x=>x.id===btn.dataset.id);
+  if(!s)return;
+  selectedYear=year;
+  window.history.replaceState(null,'','?school='+encodeURIComponent(s.name));
+  detail(s);
+  $('#detail').scrollIntoView({block:'start',behavior:'smooth'});
+ });
+ $('#rows').querySelectorAll('input[data-compare]').forEach(input=>input.addEventListener('change',()=>{
+  window.OpenDayPrimaryCompare?.toggle(input.dataset.compare,input.checked);
+ }));
+}
+$('#primaryYear')?.addEventListener('change',render);
+$('#primarySort')?.addEventListener('change',render);
+Promise.all([fetch('data/primary-schools.json').then(r=>{if(!r.ok)throw Error('School list unavailable');return r.json()}),fetch('data/primary-performance.json').then(r=>{if(!r.ok)throw Error('KS2 results unavailable');return r.json()}),fetch('data/primary-cohort-context.json').then(r=>r.ok?r.json():{schools:{}}).catch(()=>({schools:{}}))]).then(([catalog,results,cohorts])=>{schools=catalog.schools||[];schoolResults=results.schools||{};context=cohorts.schools||{};window.OpenDayPrimaryData={schools,schoolResults,context,national:NATIONAL};document.dispatchEvent(new Event('openday-primary-loaded'));if(query){const s=schools.find(x=>x.name.toLowerCase()===query.toLowerCase()||x.id===query||String(x.urn)===query);if(s){$('#search').value=s.name;render();detail(s);return}}render()}).catch(error=>{$('#status').textContent='Unable to load school data: '+error.message});const search=$('#search');const clear=$('#clearSearch');function resetSearch(){if(!search.value)return;search.value='';render();}search.addEventListener('focus',resetSearch);search.addEventListener('input',render);clear.addEventListener('click',()=>{resetSearch();search.focus();});
 })();

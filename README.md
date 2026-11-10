@@ -2,12 +2,13 @@
 
 A mobile-first, installable tracker for secondary-school open days and visits. School/event content lives in `data/schools.json`; personal saves, booking status and notes save locally first.
 
-Current app version: **2.27.1**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
+Current app version: **2.27.2**. Openday follows Semantic Versioning; see [`version.json`](version.json) and [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Features
 
 - **Upcoming** is the default filter and keeps today's events visible until the day ends
 - **TBC / no date** has its own compact summary view with expandable school cards
+- Primary KS2 results: select 2–5 schools, compare their 2024/25, 2023/24 or 2022/23 attainment and Year 6 context side by side, sort all 175 tracked schools by one matched year, and open a shareable comparison link. The 2025/26 national provisional outcome is shown separately because 2026 individual school outcomes are not published until December 2026.
 
 - filters for date status and school type
 - list and calendar views
