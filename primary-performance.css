@@ -59,3 +59,5 @@
 .primary-compare-bar span{display:block;height:100%;background:#32907b;border-radius:6px}
 .primary-no-value{color:#8d9c99}
 @media(max-width:600px){.primary-compare-toolbar{align-items:stretch}.primary-compare-filters{width:100%}.primary-compare-filters label{flex:1;min-width:126px;display:flex;flex-direction:column;align-items:flex-start}.primary-compare-filters select{width:100%}.primary-compare-nearest{width:100%}.primary-compare-dialog{width:100vw;max-height:94dvh;border-radius:14px 14px 0 0}.primary-compare-dialog-inner{max-height:94dvh;padding:16px}.primary-compare-table th:first-child{min-width:145px;max-width:145px}.primary-compare-table th,.primary-compare-table td{min-width:145px;padding:10px}.primary-compare-tray{align-items:stretch}.primary-compare-actions{justify-content:flex-end}}
+
+.primary-compare-copy{border:0;background:transparent;color:var(--teal);text-decoration:underline;font:inherit;font-weight:750;cursor:pointer}

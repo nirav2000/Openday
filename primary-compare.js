@@ -23,7 +23,7 @@ function updateUrl(){
  url.searchParams.set('year',year);
  history.replaceState(null,'',url.pathname+url.search+url.hash);
  const link=$('#primaryCompareLink');
- if(link)link.href=url.href;
+ if(link)link.dataset.url=url.href;
 }
 function syncSelection(){
  document.querySelectorAll('#rows [data-compare]').forEach(el=>{el.checked=selected.has(el.dataset.compare);});
@@ -138,6 +138,7 @@ function handleLoaded(){
  ready=true;
  [...selected].forEach(id=>{if(!schools.some(s=>key(s)===id&&Object.keys(source(s).years||{}).length))selected.delete(id);});
  $('#primaryYear').value=year;
+ $('#primaryYear').dispatchEvent(new Event('change'));
  syncSelection();
  if(selected.size>=2)open();
 }
@@ -146,6 +147,17 @@ $('#openCompare').addEventListener('click',open);
 $('#closeCompare').addEventListener('click',close);
 $('#clearCompare').addEventListener('click',()=>{selected.clear();setMessage('Comparison cleared.');syncSelection();});
 $('#compareNearest').addEventListener('click',chooseNearest);
+$('#primaryCompareLink').addEventListener('click',async()=>{
+ const button=$('#primaryCompareLink');
+ const url=button.dataset.url||location.href;
+ try{
+  if(!navigator.clipboard?.writeText)throw new Error('Clipboard API unavailable');
+  await navigator.clipboard.writeText(url);
+  button.textContent='Link copied';
+ }catch{
+  button.textContent='Copy from address bar';
+ }
+});
 $('#primaryYear').addEventListener('change',event=>{year=event.target.value;updateUrl();setMessage('Comparison year: '+year+'.');});
 $('#compareYear').addEventListener('change',event=>{year=event.target.value;$('#primaryYear').value=year;$('#primaryYear').dispatchEvent(new Event('change'));renderDialog();});
 document.addEventListener('openday-primary-loaded',handleLoaded);
