@@ -17,11 +17,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 13,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209AH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:10:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209AH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:10:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -52,11 +52,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 88,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP13%206QT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:39:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP13%206QT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:39:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -104,11 +104,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 46,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209TE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209TE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:26:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -155,11 +155,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 98,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD6%203AF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:24:00",
-      "transitArrival": "2026-11-11T08:02:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD6%203AF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:24:00",
+      "transitArrival": "2026-11-18T08:02:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -214,11 +214,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 54,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP6%205HA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:10:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP6%205HA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:10:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -257,11 +257,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 57,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%201PL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:02:00",
-      "transitArrival": "2026-11-11T07:59:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%201PL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:02:00",
+      "transitArrival": "2026-11-18T07:59:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -296,11 +296,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 40,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200UH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:48:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200UH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:48:00",
+      "transitArrival": "2026-11-18T08:28:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -335,11 +335,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 72,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP4%202DJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:07:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP4%202DJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:07:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -374,11 +374,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 55,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SW13%209JT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:11:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SW13%209JT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:11:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -409,11 +409,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 63,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD23%201DT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:07:00",
-      "transitArrival": "2026-11-11T08:10:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD23%201DT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:07:00",
+      "transitArrival": "2026-11-18T08:10:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -444,11 +444,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 86,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW12%203HD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:46:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW12%203HD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:46:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -487,11 +487,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 23,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%202JG?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:54:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%202JG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:54:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -522,11 +522,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 97,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM1%204AS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:46:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM1%204AS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:46:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -569,11 +569,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 27,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204JE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:01:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204JE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:01:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -605,11 +605,11 @@
       "status": "modelled",
       "transitMinutes": 43,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%208NA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%208NA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -648,11 +648,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 56,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%202HT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%202HT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:26:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -691,11 +691,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 76,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW7%201QS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:12:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW7%201QS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:12:00",
+      "transitArrival": "2026-11-18T08:28:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -731,11 +731,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 15,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200HN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:13:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200HN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:13:00",
+      "transitArrival": "2026-11-18T08:28:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -769,11 +769,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 36,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%209JR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%209JR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -812,11 +812,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 38,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%205DY?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:47:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%205DY?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:47:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -847,11 +847,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 24,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201NB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:56:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201NB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:56:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -887,11 +887,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 149,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SO23%209NA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-10T22:23:00",
-      "transitArrival": "2026-11-11T00:52:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SO23%209NA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-17T22:23:00",
+      "transitArrival": "2026-11-18T00:52:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -927,11 +927,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 88,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD6%203AJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:15:00",
-      "transitArrival": "2026-11-11T07:43:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD6%203AJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:15:00",
+      "transitArrival": "2026-11-18T07:43:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -978,11 +978,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 100,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/EN6%202DU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:49:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/EN6%202DU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:49:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1033,11 +1033,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 64,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SW1P%203PF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SW1P%203PF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1072,11 +1072,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 16,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%203HP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:02:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%203HP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:02:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1108,11 +1108,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 35,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%200UU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:21:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%200UU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:21:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1151,11 +1151,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 37,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203NT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203NT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1194,11 +1194,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 35,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205RP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:41:00",
-      "transitArrival": "2026-11-11T08:16:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205RP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:41:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1233,11 +1233,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 85,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/EN5%204DQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:39:00",
-      "transitArrival": "2026-11-11T08:04:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/EN5%204DQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:39:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1280,11 +1280,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 79,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD25%200UU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:39:00",
-      "transitArrival": "2026-11-11T07:58:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD25%200UU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:39:00",
+      "transitArrival": "2026-11-18T07:58:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1327,11 +1327,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 56,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD18%207JF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD18%207JF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1370,11 +1370,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 60,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD23%202TY?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:45:00",
-      "transitArrival": "2026-11-11T07:45:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD23%202TY?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:45:00",
+      "transitArrival": "2026-11-18T07:45:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1421,11 +1421,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 67,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%206EW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T05:34:00",
-      "transitArrival": "2026-11-11T06:41:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%206EW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T05:34:00",
+      "transitArrival": "2026-11-18T06:41:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1468,11 +1468,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 56,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%203AQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%203AQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1496,11 +1496,11 @@
         },
         {
           "mode": "bus",
-          "minutes": 7
+          "minutes": 5
         },
         {
           "mode": "walking",
-          "minutes": 4
+          "minutes": 6
         }
       ]
     },
@@ -1519,11 +1519,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 111,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM6%209JW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:27:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM6%209JW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:27:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1582,11 +1582,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 111,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM6%207PH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:36:00",
-      "transitArrival": "2026-11-11T08:27:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SM6%207PH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:26:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1594,19 +1594,23 @@
         },
         {
           "mode": "tube",
-          "minutes": 25
+          "minutes": 30
         },
         {
           "mode": "tube",
-          "minutes": 15
+          "minutes": 18
         },
         {
-          "mode": "national-rail",
-          "minutes": 25
+          "mode": "tram",
+          "minutes": 16
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
         },
         {
           "mode": "walking",
-          "minutes": 21
+          "minutes": 2
         }
       ]
     },
@@ -1625,11 +1629,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 104,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/BR6%209SH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:45:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/BR6%209SH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:45:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1684,11 +1688,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 111,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/DA5%201NE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:18:00",
-      "transitArrival": "2026-11-11T08:09:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/DA5%201NE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:18:00",
+      "transitArrival": "2026-11-18T08:09:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1735,11 +1739,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 20,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200AD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:56:00",
-      "transitArrival": "2026-11-11T08:16:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200AD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:56:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1770,11 +1774,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 72,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP1%202PH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T05:49:00",
-      "transitArrival": "2026-11-11T07:01:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HP1%202PH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T05:49:00",
+      "transitArrival": "2026-11-18T07:01:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1823,11 +1827,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 46,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%201HG?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:02:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD3%201HG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:02:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1866,11 +1870,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 53,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206AN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:14:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206AN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1901,11 +1905,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 80,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SL1%203BW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T05:49:00",
-      "transitArrival": "2026-11-11T07:09:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/SL1%203BW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T05:49:00",
+      "transitArrival": "2026-11-18T07:09:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1940,11 +1944,11 @@
       "verifiedAt": "2026-10-17",
       "transitMinutes": 70,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD4%209HN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:13:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/WD4%209HN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:13:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -1987,11 +1991,11 @@
       "status": "modelled",
       "transitMinutes": 48,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW3%206XH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:04:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW3%206XH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2030,11 +2034,11 @@
       "status": "modelled",
       "transitMinutes": 29,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206UJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:42:00",
-      "transitArrival": "2026-11-11T08:11:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206UJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:42:00",
+      "transitArrival": "2026-11-18T08:11:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2064,12 +2068,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitMinutes": 33,
-      "transitStatus": "previous-estimate-preserved",
-      "transitArrivalDate": "2026-11-04",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%205LQ?date=20261104&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-03",
-      "transitDeparture": "2026-11-04T07:41:00",
-      "transitArrival": "2026-11-04T08:14:00",
+      "transitStatus": "scheduled-itinerary",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%205LQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:41:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2083,8 +2087,7 @@
           "mode": "walking",
           "minutes": 14
         }
-      ],
-      "transitLookupError": "The read operation timed out"
+      ]
     },
     "St Raphael's Catholic Primary School": {
       "phase": "primary",
@@ -2101,11 +2104,11 @@
       "status": "modelled",
       "transitMinutes": 39,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206NL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206NL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2136,11 +2139,11 @@
       "status": "modelled",
       "transitMinutes": 24,
       "transitStatus": "scheduled-itinerary",
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%205FE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:01:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%205FE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:01:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2171,11 +2174,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 31,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206HW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206HW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2206,11 +2209,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 40,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206NW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:40:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206NW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:40:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2245,11 +2248,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 36,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%209LF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%209LF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2280,11 +2283,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 24,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%200LR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:42:00",
-      "transitArrival": "2026-11-11T08:06:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%200LR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:42:00",
+      "transitArrival": "2026-11-18T08:06:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2315,11 +2318,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 34,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%209LW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%209LW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2350,11 +2353,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 42,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206BU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%206BU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:28:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2389,11 +2392,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 28,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209HS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:32:00",
-      "transitArrival": "2026-11-11T08:00:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209HS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:32:00",
+      "transitArrival": "2026-11-18T08:00:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2424,11 +2427,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 24,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%208PW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:01:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%208PW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:01:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2459,11 +2462,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208LF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:06:00",
-      "transitArrival": "2026-11-11T07:59:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208LF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T07:59:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2502,11 +2505,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 31,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209PQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:51:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209PQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:51:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2537,11 +2540,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 39,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206PD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:42:00",
-      "transitArrival": "2026-11-11T08:21:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206PD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:42:00",
+      "transitArrival": "2026-11-18T08:21:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2572,11 +2575,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 49,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209TT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:10:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209TT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:10:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2611,11 +2614,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208BE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:30:00",
-      "transitArrival": "2026-11-11T08:14:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208BE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:30:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2650,11 +2653,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 43,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208SF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:30:00",
-      "transitArrival": "2026-11-11T08:13:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208SF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:30:00",
+      "transitArrival": "2026-11-18T08:13:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2689,11 +2692,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 15,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204HB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:01:00",
-      "transitArrival": "2026-11-11T08:16:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204HB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:01:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2724,11 +2727,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 39,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200NR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200NR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2757,13 +2760,13 @@
       "method": "OSRM baseline; excludes congestion, parking and school-run delays",
       "verifiedAt": "2026-10-17",
       "status": "modelled",
-      "transitStatus": "previous-estimate-preserved",
+      "transitStatus": "scheduled-itinerary",
       "transitMinutes": 16,
-      "transitArrivalDate": "2026-11-04",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209AG?date=20261104&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-03",
-      "transitDeparture": "2026-11-04T08:00:00",
-      "transitArrival": "2026-11-04T08:16:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209AG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:00:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2777,8 +2780,7 @@
           "mode": "walking",
           "minutes": 6
         }
-      ],
-      "transitLookupError": "The read operation timed out"
+      ]
     },
     "Roxbourne Primary School": {
       "phase": "primary",
@@ -2795,11 +2797,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 25,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209QF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:54:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209QF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:54:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2830,11 +2832,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 48,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202PQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:09:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202PQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:09:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2869,11 +2871,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 40,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%209DE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:38:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%209DE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:38:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2908,11 +2910,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 30,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209SF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:42:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209SF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:42:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2943,11 +2945,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 46,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202NH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202NH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -2982,11 +2984,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 20,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209JU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:56:00",
-      "transitArrival": "2026-11-11T08:16:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%209JU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:56:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3018,11 +3020,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 31,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%208PH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T07:46:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%208PH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T07:46:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3061,11 +3063,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 35,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206EZ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:38:00",
-      "transitArrival": "2026-11-11T08:13:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%206EZ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:38:00",
+      "transitArrival": "2026-11-18T08:13:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3096,11 +3098,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 26,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209RW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:03:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%209RW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:03:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3131,11 +3133,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 11,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%208LS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:08:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%208LS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:08:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3166,11 +3168,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 19,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204QG?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:08:00",
-      "transitArrival": "2026-11-11T08:27:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204QG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:08:00",
+      "transitArrival": "2026-11-18T08:27:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3201,11 +3203,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202JQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202JQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:26:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3240,11 +3242,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 17,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204LB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:55:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB5%204LB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:55:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3275,11 +3277,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209JU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209JU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3318,11 +3320,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209JU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209JU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3361,11 +3363,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209EG?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209EG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3404,11 +3406,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201NX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201NX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3443,11 +3445,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 54,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208JP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%208JP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3482,11 +3484,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 59,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202HX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:09:00",
-      "transitArrival": "2026-11-11T08:08:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202HX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:09:00",
+      "transitArrival": "2026-11-18T08:08:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3521,11 +3523,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 33,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%208PR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%208PR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3564,11 +3566,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 54,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200DB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200DB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3602,12 +3604,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 62,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202SE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitMinutes": 61,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202SE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3615,11 +3617,11 @@
         },
         {
           "mode": "bus",
-          "minutes": 37
+          "minutes": 34
         },
         {
           "mode": "bus",
-          "minutes": 10
+          "minutes": 8
         },
         {
           "mode": "walking",
@@ -3642,11 +3644,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 45,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209AN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:09:00",
-      "transitArrival": "2026-11-11T07:54:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%209AN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:09:00",
+      "transitArrival": "2026-11-18T07:54:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3677,11 +3679,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 32,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%208QG?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:42:00",
-      "transitArrival": "2026-11-11T08:14:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%208QG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:42:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3712,11 +3714,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200EH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:08:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200EH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:08:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3751,11 +3753,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 50,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%203NR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:16:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%203NR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:26:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3786,11 +3788,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 49,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202JE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:05:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%202JE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:05:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3825,11 +3827,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 28,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201TS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:44:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201TS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:44:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3861,11 +3863,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 17,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200RY?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:04:00",
-      "transitArrival": "2026-11-11T08:21:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200RY?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:04:00",
+      "transitArrival": "2026-11-18T08:21:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3896,11 +3898,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 47,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200PH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:11:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200PH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:11:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3935,11 +3937,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 61,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200LT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200LT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -3970,11 +3972,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 61,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200LT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB4%200LT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4005,11 +4007,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 27,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%200PB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:55:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%200PB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:55:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4039,12 +4041,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 55,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%201JA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:21:00",
+      "transitMinutes": 54,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%201JA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T08:00:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4052,11 +4054,11 @@
         },
         {
           "mode": "bus",
-          "minutes": 37
+          "minutes": 34
         },
         {
           "mode": "bus",
-          "minutes": 6
+          "minutes": 4
         },
         {
           "mode": "walking",
@@ -4078,12 +4080,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 57,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%203HX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:09:00",
-      "transitArrival": "2026-11-11T08:06:00",
+      "transitMinutes": 58,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%203HX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4091,7 +4093,7 @@
         },
         {
           "mode": "bus",
-          "minutes": 28
+          "minutes": 29
         },
         {
           "mode": "walking",
@@ -4114,11 +4116,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 58,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202PD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:13:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202PD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4126,15 +4128,15 @@
         },
         {
           "mode": "tube",
-          "minutes": 17
+          "minutes": 20
         },
         {
           "mode": "bus",
-          "minutes": 23
+          "minutes": 15
         },
         {
           "mode": "walking",
-          "minutes": 2
+          "minutes": 5
         }
       ]
     },
@@ -4153,11 +4155,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 56,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201DD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:06:00",
-      "transitArrival": "2026-11-11T08:02:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201DD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T08:02:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4192,11 +4194,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 56,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201DR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201DR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4235,11 +4237,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201SF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB1%201SF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4278,11 +4280,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 21,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%207NZ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:54:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%207NZ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:54:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4313,11 +4315,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%203RT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:27:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%203RT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:27:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4356,11 +4358,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 43,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%208JD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%208JD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4395,11 +4397,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 37,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%202HX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:38:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%202HX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:38:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4434,11 +4436,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%207LW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:42:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%207LW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:42:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4473,11 +4475,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 57,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%201JL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:21:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%201JL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:21:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4519,12 +4521,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202AB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitMinutes": 45,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%202AB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:01:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4532,15 +4534,11 @@
         },
         {
           "mode": "bus",
-          "minutes": 37
-        },
-        {
-          "mode": "bus",
-          "minutes": 0
+          "minutes": 34
         },
         {
           "mode": "walking",
-          "minutes": 6
+          "minutes": 3
         }
       ]
     },
@@ -4559,11 +4557,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 16,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200JA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:13:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA2%200JA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:13:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4594,11 +4592,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 42,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%208JA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:38:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%208JA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:38:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4629,11 +4627,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 30,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%204EL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:56:00",
-      "transitArrival": "2026-11-11T08:26:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%204EL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:56:00",
+      "transitArrival": "2026-11-18T08:26:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4664,11 +4662,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 24,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%203SB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:02:00",
-      "transitArrival": "2026-11-11T08:26:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%203SB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:02:00",
+      "transitArrival": "2026-11-18T08:26:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4699,12 +4697,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 55,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204DH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitMinutes": 56,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204DH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4720,15 +4718,11 @@
         },
         {
           "mode": "elizabeth-line",
-          "minutes": 8
-        },
-        {
-          "mode": "bus",
-          "minutes": 1
+          "minutes": 4
         },
         {
           "mode": "walking",
-          "minutes": 4
+          "minutes": 11
         }
       ]
     },
@@ -4747,11 +4741,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 52,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%203PT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%203PT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4786,11 +4780,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 39,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%207RF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:02:00",
-      "transitArrival": "2026-11-11T07:41:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA4%207RF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:02:00",
+      "transitArrival": "2026-11-18T07:41:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4825,11 +4819,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 61,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204RP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204RP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4868,11 +4862,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 59,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204PA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204PA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4911,11 +4905,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200FW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:08:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB10%200FW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:08:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4947,11 +4941,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 36,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205RA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:44:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205RA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:44:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -4986,11 +4980,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 33,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201AF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%201AF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5021,11 +5015,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 50,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%201HA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:12:00",
-      "transitArrival": "2026-11-11T08:02:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%201HA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:12:00",
+      "transitArrival": "2026-11-18T08:02:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5072,11 +5066,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 42,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200DH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200DH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:28:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5114,32 +5108,24 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 59,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205JT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitMinutes": 62,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205JT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:57:00",
+      "transitArrival": "2026-11-18T07:59:00",
       "transitLegs": [
         {
           "mode": "walking",
-          "minutes": 10
-        },
-        {
-          "mode": "tube",
-          "minutes": 16
-        },
-        {
-          "mode": "tube",
-          "minutes": 4
-        },
-        {
-          "mode": "elizabeth-line",
           "minutes": 8
         },
         {
           "mode": "bus",
-          "minutes": 8
+          "minutes": 36
+        },
+        {
+          "mode": "bus",
+          "minutes": 14
         },
         {
           "mode": "walking",
@@ -5161,32 +5147,24 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 57,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205QP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:21:00",
+      "transitMinutes": 59,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205QP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
-          "minutes": 10
-        },
-        {
-          "mode": "tube",
-          "minutes": 16
-        },
-        {
-          "mode": "tube",
-          "minutes": 4
-        },
-        {
-          "mode": "elizabeth-line",
           "minutes": 8
         },
         {
           "mode": "bus",
-          "minutes": 3
+          "minutes": 9
+        },
+        {
+          "mode": "bus",
+          "minutes": 36
         },
         {
           "mode": "walking",
@@ -5209,11 +5187,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 40,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%201RB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:04:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%201RB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5244,11 +5222,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 43,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202BX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202BX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5278,32 +5256,28 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 74,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204HT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:06:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitMinutes": 72,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204HT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:01:00",
+      "transitArrival": "2026-11-18T08:13:00",
       "transitLegs": [
         {
           "mode": "walking",
-          "minutes": 8
+          "minutes": 10
+        },
+        {
+          "mode": "tube",
+          "minutes": 16
         },
         {
           "mode": "bus",
-          "minutes": 9
-        },
-        {
-          "mode": "bus",
-          "minutes": 32
-        },
-        {
-          "mode": "bus",
-          "minutes": 14
+          "minutes": 23
         },
         {
           "mode": "walking",
-          "minutes": 5
+          "minutes": 19
         }
       ]
     },
@@ -5322,11 +5296,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 30,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203EY?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:59:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203EY?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:59:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5366,11 +5340,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 50,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%203HU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:14:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%203HU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5409,11 +5383,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 43,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%202DR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:34:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%202DR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5444,11 +5418,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 59,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204JS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204JS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5483,11 +5457,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 23,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%201QQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:04:00",
-      "transitArrival": "2026-11-11T08:27:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%201QQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:04:00",
+      "transitArrival": "2026-11-18T08:27:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5518,11 +5492,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 59,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%204LQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:06:00",
-      "transitArrival": "2026-11-11T08:05:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%204LQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T08:05:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5556,12 +5530,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 57,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%202NR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:13:00",
+      "transitMinutes": 51,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%202NR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:01:00",
+      "transitArrival": "2026-11-18T07:52:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5569,19 +5543,15 @@
         },
         {
           "mode": "tube",
-          "minutes": 19
-        },
-        {
-          "mode": "tube",
-          "minutes": 7
+          "minutes": 16
         },
         {
           "mode": "bus",
-          "minutes": 5
+          "minutes": 17
         },
         {
           "mode": "walking",
-          "minutes": 5
+          "minutes": 4
         }
       ]
     },
@@ -5600,11 +5570,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 64,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204LA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204LA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5639,11 +5609,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%201RP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:09:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%201RP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:09:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5686,11 +5656,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 42,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202LX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:28:00",
-      "transitArrival": "2026-11-11T08:10:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202LX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:28:00",
+      "transitArrival": "2026-11-18T08:10:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5729,11 +5699,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 69,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205RN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:57:00",
-      "transitArrival": "2026-11-11T08:06:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%205RN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:57:00",
+      "transitArrival": "2026-11-18T08:06:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5768,11 +5738,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 31,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%207AP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB6%207AP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5807,11 +5777,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 51,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200LA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200LA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5822,16 +5792,12 @@
           "minutes": 16
         },
         {
-          "mode": "tube",
+          "mode": "bus",
           "minutes": 4
         },
         {
-          "mode": "elizabeth-line",
-          "minutes": 3
-        },
-        {
           "mode": "bus",
-          "minutes": 1
+          "minutes": 10
         },
         {
           "mode": "walking",
@@ -5854,11 +5820,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 61,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%201PG?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:06:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%201PG?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5893,11 +5859,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 69,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204LE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:57:00",
-      "transitArrival": "2026-11-11T08:06:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB2%204LE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:57:00",
+      "transitArrival": "2026-11-18T08:06:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5932,11 +5898,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 32,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%201DP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:18:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%201DP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:18:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -5971,11 +5937,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 52,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%203TH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%203TH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6010,11 +5976,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 57,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%208AH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:12:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%208AH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:12:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6049,11 +6015,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 33,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204RQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204RQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6091,12 +6057,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 55,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200SE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:11:00",
+      "transitMinutes": 48,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%200SE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6104,11 +6070,11 @@
         },
         {
           "mode": "tube",
-          "minutes": 14
+          "minutes": 16
         },
         {
           "mode": "bus",
-          "minutes": 15
+          "minutes": 12
         },
         {
           "mode": "walking",
@@ -6131,11 +6097,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 43,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202UA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB8%202UA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6167,11 +6133,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 31,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%201UJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:48:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%201UJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:48:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6206,11 +6172,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 37,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205TL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:37:00",
-      "transitArrival": "2026-11-11T08:14:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%205TL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:37:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6245,11 +6211,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 27,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%202DJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T08:02:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA1%202DJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T08:02:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6284,11 +6250,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 54,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%202DP?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:10:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W7%202DP?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:10:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6327,11 +6293,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 56,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207QJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:11:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207QJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:11:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6366,11 +6332,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 37,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203NT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203NT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6409,11 +6375,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%203RA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:05:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%203RA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:05:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6444,11 +6410,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203SF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:41:00",
-      "transitArrival": "2026-11-11T08:22:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%203SF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:41:00",
+      "transitArrival": "2026-11-18T08:22:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6479,11 +6445,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 62,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%209EA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%209EA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6518,11 +6484,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 71,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200RL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:27:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200RL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:27:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6557,11 +6523,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%201SL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:08:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%201SL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:08:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6596,11 +6562,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 74,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%209HQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:09:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%209HQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:09:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6639,11 +6605,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 61,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%205EW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:06:00",
-      "transitArrival": "2026-11-11T08:07:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB3%205EW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:06:00",
+      "transitArrival": "2026-11-18T08:07:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6674,11 +6640,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%202QT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:05:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%202QT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:05:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6713,11 +6679,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 65,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%209DL?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:48:00",
-      "transitArrival": "2026-11-11T07:53:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%209DL?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:48:00",
+      "transitArrival": "2026-11-18T07:53:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6752,11 +6718,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 61,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200QR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200QR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6795,11 +6761,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 46,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%201RX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:37:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%201RX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:37:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6838,11 +6804,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 38,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%205RQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:47:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%205RQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:47:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6873,11 +6839,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 36,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%208LU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:47:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%208LU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:47:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6908,11 +6874,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 76,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%209EF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:09:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%209EF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:09:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6951,11 +6917,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 66,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200NB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:30:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200NB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:30:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -6994,11 +6960,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 51,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%209TE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:15:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W13%209TE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:15:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7033,11 +6999,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 37,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%207RY?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:23:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%207RY?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:23:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7075,12 +7041,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 43,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%202AA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T07:59:00",
+      "transitMinutes": 42,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%202AA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:06:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7091,12 +7057,12 @@
           "minutes": 16
         },
         {
-          "mode": "tube",
+          "mode": "bus",
           "minutes": 4
         },
         {
           "mode": "walking",
-          "minutes": 9
+          "minutes": 8
         }
       ]
     },
@@ -7115,11 +7081,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 34,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:30:00",
-      "transitArrival": "2026-11-11T08:04:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:30:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7154,11 +7120,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%208RJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:36:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%208RJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:36:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7197,11 +7163,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 69,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207NX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:24:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207NX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:24:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7236,11 +7202,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 36,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:30:00",
-      "transitArrival": "2026-11-11T08:06:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:30:00",
+      "transitArrival": "2026-11-18T08:06:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7275,11 +7241,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 40,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%207NW?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:26:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%207NW?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:26:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7314,11 +7280,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 70,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207TX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207TX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7353,11 +7319,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 66,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200AQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:30:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW5%200AQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:30:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7396,11 +7362,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 30,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204HH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T07:54:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA0%204HH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T07:54:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7435,11 +7401,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200JX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:46:00",
-      "transitArrival": "2026-11-11T08:30:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200JX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:46:00",
+      "transitArrival": "2026-11-18T08:30:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7482,11 +7448,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 68,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207UF?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:24:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%207UF?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:24:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7529,11 +7495,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 48,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%204QE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:14:00",
-      "transitArrival": "2026-11-11T08:02:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA5%204QE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:14:00",
+      "transitArrival": "2026-11-18T08:02:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7564,11 +7530,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 71,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%200JQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:15:00",
-      "transitArrival": "2026-11-11T08:26:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/UB7%200JQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:15:00",
+      "transitArrival": "2026-11-18T08:26:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7602,12 +7568,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 35,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%206TA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T07:59:00",
+      "transitMinutes": 40,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%206TA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:34:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7618,12 +7584,12 @@
           "minutes": 5
         },
         {
-          "mode": "bus",
-          "minutes": 6
+          "mode": "walking",
+          "minutes": 8
         },
         {
           "mode": "bus",
-          "minutes": 3
+          "minutes": 9
         },
         {
           "mode": "walking",
@@ -7646,11 +7612,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 39,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%206HT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:03:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA9%206HT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:03:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7685,11 +7651,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 47,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%203NJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:37:00",
-      "transitArrival": "2026-11-11T08:24:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA6%203NJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:37:00",
+      "transitArrival": "2026-11-18T08:24:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7728,11 +7694,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 46,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%207JT?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:33:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%207JT?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:33:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7767,11 +7733,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 63,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW7%205PN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T06:46:00",
-      "transitArrival": "2026-11-11T07:49:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW7%205PN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T06:46:00",
+      "transitArrival": "2026-11-18T07:49:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7809,12 +7775,12 @@
       "verifiedAt": "2026-10-17",
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
-      "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%208SZ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:33:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitMinutes": 43,
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%208SZ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:33:00",
+      "transitArrival": "2026-11-18T08:16:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7826,11 +7792,11 @@
         },
         {
           "mode": "bus",
-          "minutes": 16
+          "minutes": 17
         },
         {
           "mode": "walking",
-          "minutes": 10
+          "minutes": 8
         }
       ]
     },
@@ -7849,11 +7815,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 31,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW10%207DN?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T07:55:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/NW10%207DN?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T07:55:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7888,11 +7854,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 74,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW4%206LB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:16:00",
-      "transitArrival": "2026-11-11T08:30:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW4%206LB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:16:00",
+      "transitArrival": "2026-11-18T08:30:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7931,11 +7897,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 60,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW3%203BD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:24:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/TW3%203BD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:24:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -7974,11 +7940,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 44,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200UX?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:33:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%200UX?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:33:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8013,11 +7979,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 46,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%204EA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:24:00",
-      "transitArrival": "2026-11-11T08:10:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/W5%204EA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:24:00",
+      "transitArrival": "2026-11-18T08:10:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8052,11 +8018,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 48,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%207DH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:37:00",
-      "transitArrival": "2026-11-11T08:25:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%207DH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:37:00",
+      "transitArrival": "2026-11-18T08:25:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8087,11 +8053,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 40,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206RR?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:37:00",
-      "transitArrival": "2026-11-11T08:17:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206RR?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:37:00",
+      "transitArrival": "2026-11-18T08:17:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8122,11 +8088,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 42,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209JA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:03:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209JA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:03:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8157,11 +8123,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 42,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209JA?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:03:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209JA?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:03:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8192,11 +8158,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 41,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209NS?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:48:00",
-      "transitArrival": "2026-11-11T08:29:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%209NS?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:48:00",
+      "transitArrival": "2026-11-18T08:29:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8231,11 +8197,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 52,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%202PJ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:12:00",
-      "transitArrival": "2026-11-11T08:04:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%202PJ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:12:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8270,11 +8236,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 58,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%202EQ?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:19:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%202EQ?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:19:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8309,11 +8275,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 59,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206JH?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:20:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206JH?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:20:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8348,11 +8314,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 49,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%203JB?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:20:00",
-      "transitArrival": "2026-11-11T08:09:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%203JB?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:20:00",
+      "transitArrival": "2026-11-18T08:09:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8383,11 +8349,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 58,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%203FD?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:24:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%203FD?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:26:00",
+      "transitArrival": "2026-11-18T08:24:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8422,11 +8388,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%205RU?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:21:00",
-      "transitArrival": "2026-11-11T08:14:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%205RU?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:21:00",
+      "transitArrival": "2026-11-18T08:14:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8457,11 +8423,11 @@
       "status": "modelled",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 62,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%204RE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:26:00",
-      "transitArrival": "2026-11-11T08:28:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA7%204RE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:26:00",
+      "transitArrival": "2026-11-18T08:28:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8496,11 +8462,11 @@
       "verifiedAt": "2026-10-17",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 53,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206ES?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:12:00",
-      "transitArrival": "2026-11-11T08:05:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA8%206ES?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:12:00",
+      "transitArrival": "2026-11-18T08:05:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8535,11 +8501,11 @@
       "verifiedAt": "2026-10-17",
       "transitStatus": "scheduled-itinerary",
       "transitMinutes": 34,
-      "transitArrivalDate": "2026-11-11",
-      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LE?date=20261111&time=0830&timeIs=Arriving&nationalSearch=true",
-      "transitRetrievedAt": "2026-11-10",
-      "transitDeparture": "2026-11-11T07:30:00",
-      "transitArrival": "2026-11-11T08:04:00",
+      "transitArrivalDate": "2026-11-18",
+      "transitSourceUrl": "https://api.tfl.gov.uk/Journey/JourneyResults/HA1%203PU/to/HA3%206LE?date=20261118&time=0830&timeIs=Arriving&nationalSearch=true",
+      "transitRetrievedAt": "2026-11-17",
+      "transitDeparture": "2026-11-18T07:30:00",
+      "transitArrival": "2026-11-18T08:04:00",
       "transitLegs": [
         {
           "mode": "walking",
@@ -8567,8 +8533,7 @@
     "publicTransportBackfilled": 214,
     "missingVerifiedPostcode": 0,
     "transitStatuses": {
-      "scheduled-itinerary": 212,
-      "previous-estimate-preserved": 2
+      "scheduled-itinerary": 214
     }
   },
   "transitNote": "TfL journey planner itinerary to arrive 08:30 on the next weekday; may include walking legs. Check live service changes."
